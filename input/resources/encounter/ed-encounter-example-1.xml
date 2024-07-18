@@ -1,0 +1,87 @@
+<Encounter>
+    <id value="ed-encounter-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
+    </meta>
+    <!-- ED Encounter Identifier -->
+    <identifier>
+        <use value="usual"/>
+        <system value="urn:oid:2.16.840.1.113883.19.5.1.698.8"/>
+        <value value="10005104251"/>
+    </identifier>
+    <status value="finished"/>
+    <class>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+        <code value="EMER"/>
+        <display value="emergency"/>
+    </class>
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="50849002"/>
+            <display value="Emergency room admission (procedure)"/>
+        </coding>
+        <text value="Emergency room"/>
+    </type>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <period>
+        <start value="2024-02-01T16:02:00-05:00"/>
+        <end value="2024-02-01T22:00:00-05:00"/>
+    </period>
+    <reasonCode>
+        <coding>
+            <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
+            <code value="R07.9"/>
+            <display value="Chest pain, unspecified"/>
+        </coding>
+        <text value="Angina"/>
+    </reasonCode>
+    <reasonCode>
+        <coding>
+            <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
+            <code value="R61"/>
+            <display value="Generalized hyperhidrosis"/>
+        </coding>
+        <text value="Sweating"/>
+    </reasonCode>
+    <reasonCode>
+        <coding>
+            <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
+            <code value="R00.2"/>
+            <display value="Palpitations"/>
+        </coding>
+        <text value="Palpitations"/>
+    </reasonCode>
+    <diagnosis>
+        <condition>
+            <reference
+                value="Condition/panic-attack-condition-example-1"/>
+            <display value="Panick Attack"/>
+        </condition>
+    </diagnosis>
+    <location>
+        <location>
+            <reference value="Location/"/>
+            <display value=""/>
+        </location>
+        <physicalType>
+            <coding>
+                <system
+                    value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
+                <code value="wa"/>
+                <display value="Ward"/>
+            </coding>
+        </physicalType>
+        <period>
+            <start value="2024-02-01T16:02:00-05:00"/>
+            <end value="2024-02-01T22:02:00-05:00"/>
+        </period>
+    </location>
+    <partOf>
+        <reference value="Encounter/encompassing-encounter-example-1"/>
+    </partOf>
+</Encounter>

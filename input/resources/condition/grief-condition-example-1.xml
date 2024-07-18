@@ -1,0 +1,51 @@
+<Condition>
+    <id value="grief-condition-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"/>
+    </meta>
+    <clinicalStatus>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+        </coding>
+    </clinicalStatus>
+    <verificationStatus>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <version value="4.0.0"/>
+            <code value="confirmed"/>
+            <display value="Confirmed"/>
+        </coding>
+        <text value="Confirmed"/>
+    </verificationStatus>
+    <category>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="encounter-diagnosis"/>
+            <display value="Encounter Diagnosis"/>
+        </coding>
+        <text value="Encounter Diagnosis"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="723914003"/>
+            <display value="Prolonged grief disorder (finding)"/>
+        </coding>
+        <coding>
+            <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
+            <code value="F43.81"/>
+            <display value="Prolonged grief disorder"/>
+        </coding>
+        <text value="Grief"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+</Condition>

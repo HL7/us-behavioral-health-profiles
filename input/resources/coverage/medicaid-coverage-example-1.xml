@@ -1,0 +1,46 @@
+<Coverage xmlns="http://hl7.org/fhir">
+    <id value="medicaid-coverage-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage"/>
+    </meta>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="MB"/>
+                <display value="Member Number"/>
+            </coding>
+        </type>
+        <system value="http://example.org/fhir/memberidentifier"/>
+        <value value="88800933501"/>
+    </identifier>
+    <status value="active"/>
+    <type>
+        <coding>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="212"/>
+            <display value="Medicaid PPO"/>
+        </coding>
+        <text value="Medicaid PPO"/>
+    </type>
+    <subscriberId value="888009335"/>
+    <beneficiary>
+        <reference value="Patient/bh-patient-example"/>
+    </beneficiary>
+    <relationship>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/subscriber-relationship"/>
+            <code value="self"/>
+        </coding>
+        <text value="Self"/>
+    </relationship>
+    <period>
+        <start value="2024-01-01"/>
+    </period>
+    <payor>
+        <reference value="Organization/mass-medicaid-office-example-1"/>
+        <display value="MassHealth Medicaid Plan"/>
+    </payor>
+</Coverage>

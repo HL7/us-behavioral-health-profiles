@@ -1,0 +1,51 @@
+<Condition>
+    <id value="panic-attack-condition-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"/>
+    </meta>
+    <clinicalStatus>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+        </coding>
+    </clinicalStatus>
+    <verificationStatus>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <version value="4.0.0"/>
+            <code value="unconfirmed"/>
+            <display value="Unconfirmed"/>
+        </coding>
+        <text value="Unconfirmed"/>
+    </verificationStatus>
+    <category>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="encounter-diagnosis"/>
+            <display value="Encounter Diagnosis"/>
+        </coding>
+        <text value="Encounter Diagnosis"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="225624000"/>
+            <display value="Panic attack (finding)"/>
+        </coding>
+        <coding>
+            <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
+            <code value="F41.0"/>
+            <display value="Panic disorder [episodic paroxysmal anxiety]"/>
+        </coding>
+        <text value="Panic Attack"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+</Condition>

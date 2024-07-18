@@ -1,0 +1,44 @@
+<AllergyIntolerance xmlns="http://hl7.org/fhir">
+    <id value="peanut-allergy-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"/>
+    </meta>
+    <clinicalStatus>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+            <code value="active"/>
+        </coding>
+    </clinicalStatus>
+    <verificationStatus>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+            <code value="confirmed"/>
+        </coding>
+    </verificationStatus>
+    <category value="food"/>
+    <criticality value="high"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="762952008"/>
+            <display value="Peanut (substance)"/>
+        </coding>
+        <text value="Peanut"/>
+    </code>
+    <patient>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </patient>
+    <reaction>
+        <manifestation>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="39579001"/>
+                <display value="Anaphylaxis (disorder)"/>
+            </coding>
+        </manifestation>
+    </reaction>
+</AllergyIntolerance>

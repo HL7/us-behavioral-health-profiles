@@ -1,0 +1,26 @@
+<CareTeam xmlns="http://hl7.org/fhir">
+    <id value="bh-care-team-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"/>
+    </meta>
+    <status value="active"/>
+    <name value="Example CareTeam"/>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <participant>
+        <role>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="651501000124106"/>
+                <display value=" Pediatric emergency medicine physician (occupation)"/>
+            </coding>
+        </role>
+        <member>
+            <reference value="Practitioner/ed-physician-example-1"/>
+            <display value="Wise Owl, MD"/>
+        </member>
+    </participant>
+</CareTeam>

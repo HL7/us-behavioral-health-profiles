@@ -1,0 +1,51 @@
+<Condition>
+    <id value="depression-condition-example-1"/>
+    <meta>
+        <profile
+            value="http://www.cdc.gov/nhsn/fhirportal/dqm/ig/StructureDefinition/ach-condition"/>
+    </meta>
+    <clinicalStatus>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+        </coding>
+    </clinicalStatus>
+    <verificationStatus>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <version value="4.0.0"/>
+            <code value="confirmed"/>
+            <display value="Confirmed"/>
+        </coding>
+        <text value="Confirmed"/>
+    </verificationStatus>
+    <category>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+            <display value="Problem List Item"/>
+        </coding>
+        <text value="Problem List"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="310496002"/>
+            <display value="Moderate depression (disorder)"/>
+        </coding>
+        <coding>
+            <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
+            <code value="F32.A"/>
+            <display value="Depression, unspecified"/>
+        </coding>
+        <text value="Depression"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+</Condition>

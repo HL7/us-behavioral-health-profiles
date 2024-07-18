@@ -1,0 +1,46 @@
+<MedicationStatement xmlns="http://hl7.org/fhir">
+    <id value="metformin-daily-assertion-example-1"/>
+    <status value="active"/>
+    <medicationCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="776713006"/>
+            <display value="Product containing only metformin (medicinal product)"/>
+        </coding>
+    </medicationCodeableConcept>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <effectiveDateTime value="2020-01-01"/>
+    <dateAsserted value="2024-02-01T18:02:00-05:00"/>
+    <informationSource>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </informationSource>
+    <reasonCode>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="444110003"/>
+            <display value="Type II diabetes mellitus well controlled (finding)"/>
+        </coding>
+    </reasonCode>
+    <dosage>
+        <text value="takes 2000 mg daily"/>
+        <timing>
+            <repeat>
+                <frequency value="1"/>
+                <period value="1"/>
+                <periodUnit value="d"/>
+            </repeat>
+        </timing>
+        <asNeededBoolean value="false"/>
+        <route>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="260548002"/>
+                <display value="Oral"/>
+            </coding>
+        </route>
+    </dosage>
+</MedicationStatement>
