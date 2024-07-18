@@ -59,14 +59,14 @@
     <diagnosis>
         <condition>
             <reference
-                value="Condition/panic-attack-condition-example-1"/>
-            <display value="Panick Attack"/>
+                value="Condition/chest-pain-condition-example-1"/>
+            <display value="Chest Pain"/>
         </condition>
     </diagnosis>
     <location>
         <location>
-            <reference value="Location/"/>
-            <display value=""/>
+            <reference value="Location/ed-location-example-1"/>
+            <display value="Emergency Dept."/>
         </location>
         <physicalType>
             <coding>
@@ -81,7 +81,4 @@
             <end value="2024-02-01T22:02:00-05:00"/>
         </period>
     </location>
-    <partOf>
-        <reference value="Encounter/encompassing-encounter-example-1"/>
-    </partOf>
 </Encounter>

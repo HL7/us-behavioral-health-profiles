@@ -1,0 +1,33 @@
+<Location xmlns="http://hl7.org/fhir">
+    <id value="obs-location-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>
+    </meta>
+    <identifier>
+        <system value="http://www.acme.org/location"/>
+        <value value="30"/>
+    </identifier>
+    <status value="active"/>
+    <name value="Mass General - Observation"/>
+    <description value="Mass General - Observation bed"/>
+    <type>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="HOSP"/>
+            <display value="Hospital"/>
+        </coding>
+        <text value="Hospital bed"/>
+    </type>
+    <telecom>
+        <system value="phone"/>
+        <value value="(+1) 734-677-8888"/>
+    </telecom>
+    <address>
+        <line value="3300 WASHTENAW AVE STE 227"/>
+        <city value="AMHERST"/>
+        <state value="MA"/>
+        <postalCode value="01002"/>
+        <country value="USA"/>
+    </address>
+</Location>
