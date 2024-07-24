@@ -1,0 +1,43 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="provider-preference-observation-example-2"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system
+                value="http://hl7.org/fhir/us/core/CodeSystem/us-core-category"/>
+            <code value="care-experience-preference"/>
+            <display value="Care experience preference"/>
+        </coding>
+        <text value="Care Experience Preference"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="95541-9"/>
+            <display value="Care experience preference"/>
+        </coding>
+        <text value="Care Experience Preference"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <effectiveDateTime value="2024-02-01"/>
+    <performer>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </performer>
+    <valueCodeableConcept>
+        <coding>
+            <system
+                value="http://snomed.info/sct"/>
+            <code value="314434008"/>
+            <display value="Preference for female healthcare professional (finding)"/>
+        </coding>
+        <text value="Prefers Female provider"/>
+    </valueCodeableConcept>
+        </Observation>

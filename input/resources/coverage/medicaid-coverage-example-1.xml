@@ -43,4 +43,16 @@
         <reference value="Organization/mass-medicaid-office-example-1"/>
         <display value="MassHealth Medicaid Plan"/>
     </payor>
+    <class>
+        <type>
+            <coding>
+                <system
+                    value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="group"/>
+                <display value="An employee group"/>
+            </coding>
+            <text value="Group"/>
+        </type>
+       <value value="123"/>
+    </class>
 </Coverage>

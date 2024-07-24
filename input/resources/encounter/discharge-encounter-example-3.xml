@@ -1,5 +1,5 @@
 <Encounter>
-    <id value="obs-encounter-example-2"/>
+    <id value="discharge-encounter-example-3"/>
     <meta>
         <profile
             value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
@@ -7,7 +7,7 @@
     <identifier>
         <use value="usual"/>
         <system value="urn:oid:2.16.840.1.113883.19.5.1.698.8"/>
-        <value value="20005104252"/>
+        <value value="40005104253"/>
     </identifier>
     <status value="finished"/>
     <class>
@@ -28,7 +28,7 @@
         <display value="James Wolff"/>
     </subject>
     <period>
-        <start value="2024-02-01T22:02:00-05:00"/>
+        <start value="2024-02-01T16:02:00-05:00"/>
         <end value="2024-02-02T12:00:00-05:00"/>
     </period>
     <diagnosis>
@@ -38,6 +38,34 @@
             <display value="Panick Attack"/>
         </condition>
     </diagnosis>
+    <hospitalization>
+        <dischargeDisposition>
+            <coding>
+                <system value="https://www.nubc.org/CodeSystem/PatDischargeStatus"/>
+                <code value="01"/>
+                <display value="Discharge to home or self-care (routine discharge)"/>
+            </coding>
+            <text value="Discharged to Home"/>
+        </dischargeDisposition>
+    </hospitalization>
+    <location>
+        <location>
+            <reference value="Location/ed-location-example-1"/>
+            <display value="Emergency Dept."/>
+        </location>
+        <physicalType>
+            <coding>
+                <system
+                    value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
+                <code value="wa"/>
+                <display value="Ward"/>
+            </coding>
+        </physicalType>
+        <period>
+            <start value="2024-02-01T16:02:00-05:00"/>
+            <end value="2024-02-01T22:02:00-05:00"/>
+        </period>
+    </location>
     <location>
         <location>
             <reference value="Location/obs-location-example-1"/>
@@ -56,12 +84,4 @@
             <end value="2024-02-01T22:00:00-05:00"/>
         </period>
     </location>
-    <partOf>
-        <reference value="Encounter/discharge-encounter-example-3"/>
-        <identifier>
-            <use value="usual"/>
-            <system value="urn:oid:2.16.840.1.113883.19.5.1.698.8"/>
-            <value value="40005104253"/>
-        </identifier>
-    </partOf>
 </Encounter>
