@@ -1,0 +1,39 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="pregnancy-status-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+        </coding>
+        <text value="Social History"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="82810-3"/>
+            <display value="Pregnancy status"/>
+        </coding>
+        <text value="Pregnancy Status"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <effectiveDateTime value="2024-02-01T10:39:52Z"/>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/731000124108"/>
+            <code value="60001007"/>
+            <display value="Not pregnant (finding)"/>
+        </coding>
+        <text value="Not pregnant"/>
+    </valueCodeableConcept>
+</Observation>

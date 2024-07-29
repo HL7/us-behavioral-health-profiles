@@ -1,0 +1,243 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="barthel-index-functional-status-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="survey"/>
+            <display value="Survey"/>
+        </coding>
+        <text value="Survey"/>
+    </category>
+    <category>
+        <coding>
+            <system
+                value="http://hl7.org/fhir/us/core/CodeSystem/us-core-category"/>
+            <code value="functional-status"/>
+            <display value="Functional Status"/>
+        </coding>
+        <text value="Functional Status Category"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="96762-0"/>
+            <display value="Barthel index panel"/>
+        </coding>
+        <text value="Barthel index panel"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <effectiveDateTime value="2024-02-01"/>
+    <performer>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </performer>
+    <component>
+        <code>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="83184-2"/>
+                <display value="Feeding"/>
+            </coding>
+            <text value="Feeding"/>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="LA31630-9"/>
+                <display value="Needs help cutting, spreading butter, etc., or requires modified diet"/>
+            </coding>
+            <text value="Needs help cutting, spreading butter, etc., or requires modified diet"/>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="83185-9"/>
+                <display value="Transfer"/>
+            </coding>
+            <text value="Transfer"/>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="LA31634-1"/>
+                <display value="Major help (one or two people, physical), can sit"/>
+            </coding>
+            <text value=""/>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="96767-9"/>
+                <display value="Grooming"/>
+            </coding>
+            <text value="Grooming"/>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="LA31643-2"/>
+                <display value="Needs help with personal care"/>
+            </coding>
+            <text value="Needs help with personal care"/>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="83183-4"/>
+                <display value="Toilet Use"/>
+            </coding>
+            <text value="Toilet Use"/>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="LA31631-7"/>
+                <display value="Needs some help, but can do something alone"/>
+            </coding>
+            <text value="Needs some help, but can do something alone"/>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="83181-8"/>
+                <display value="Bathing"/>
+            </coding>
+            <text value="Bathing"/>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="LA12304-4"/>
+                <display value="Dependent"/>
+            </coding>
+            <text value="Dependent"/>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="83186-7"/>
+                <display value="Mobility"/>
+            </coding>
+            <text value="Mobility"/>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="LA31640-8"/>
+                <display value="Wheelchair independent, including corners, >50 yards"/>
+            </coding>
+            <text value="Wheelchair independent, including corners, >50 yards"/>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="96758-8"/>
+                <display value="Stairs"/>
+            </coding>
+            <text value="Stairs"/>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="LA31629-1"/>
+                <display value="Needs help (verbal, physical, carrying aid)"/>
+            </coding>
+            <text value="Needs help (verbal, physical, carrying aid)"/>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="83182-6"/>
+                <display value="Dressing"/>
+            </coding>
+            <text value="Dressing"/>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="LA31637-4"/>
+                <display value="Needs help but can do about half unaided"/>
+            </coding>
+            <text value="Needs help but can do about half unaided"/>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="96759-6"/>
+                <display value="Bowels"/>
+            </coding>
+            <text value="Bowels"/>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="LA31626-7"/>
+                <display value="Occasional accident"/>
+            </coding>
+            <text value="Occasional accident"/>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="96760-4"/>
+                <display value="Bladder"/>
+            </coding>
+            <text value="Bladder"/>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system
+                    value="http://loinc.org"/>
+                <code value="LA31628-3"/>
+                <display value="Incontinent, or catheterized and unable to manage alone"/>
+            </coding>
+            <text value="Incontinent, or catheterized and unable to manage alone"/>
+        </valueCodeableConcept>
+    </component>
+</Observation>

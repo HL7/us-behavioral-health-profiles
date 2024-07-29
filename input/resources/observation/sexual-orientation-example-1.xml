@@ -1,0 +1,38 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="sexual-orientation-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation|7.0.0"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="76690-7"/>
+            <display value="Sexual orientation"/>
+        </coding>
+        <text value="Sexual orientation"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <effectiveDateTime value="2024-02-01"/>
+    <valueCodeableConcept>
+        <coding>
+            <system
+                value="http://snomed.info/sct"/>
+            <code value="42035005"/>
+            <display value="Bisexual (finding)"/>
+        </coding>
+        <text value="Bisexual"/>
+    </valueCodeableConcept>
+</Observation>

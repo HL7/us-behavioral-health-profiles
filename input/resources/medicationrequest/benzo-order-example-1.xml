@@ -1,4 +1,4 @@
-<MedicationRequest>
+<MedicationRequest xmlns="http://hl7.org/fhir">
     <id value="benzo-order-example-1"/>
     <meta>
         <profile
@@ -11,15 +11,6 @@
     </identifier>
     <status value="completed"/>
     <intent value="order"/>
-    <category>
-        <coding>
-            <system
-                value="http://terminology.hl7.org/CodeSystem/medicationrequest-category"/>
-            <code value="outpatient"/>
-            <display value="Outpatient"/>
-        </coding>
-        <text value="Inpatient"/>
-    </category>
     <medicationReference>
         <reference value="Medication/benzo-medication-example-1"/>
         <display value="lorazepam 2 MG Oral Tablet [Ativan]"/>

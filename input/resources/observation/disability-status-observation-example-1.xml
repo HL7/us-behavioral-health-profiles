@@ -1,0 +1,43 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="disability-status-observation-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="survey"/>
+            <display value="Survey"/>
+        </coding>
+        <text value="Survey"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="89571-4"/>
+            <display value="Disability status [CUBS]"/>
+        </coding>
+        <text value="Disability status [CUBS]"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <effectiveDateTime value="2024-02-01"/>
+    <performer>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </performer>
+    <valueCodeableConcept>
+        <coding>
+            <system
+                value="http://loinc.org"/>
+            <code value="LA29243-5"/>
+            <display value="I'm Vulnerable - I sometimes or periodically have acute or chronic symptoms affecting housing, employment, social interactions, etc."/>
+        </coding>
+        <text value="I'm Vulnerable - I sometimes or periodically have acute or chronic symptoms affecting housing, employment, social interactions, etc."/>
+    </valueCodeableConcept>
+</Observation>

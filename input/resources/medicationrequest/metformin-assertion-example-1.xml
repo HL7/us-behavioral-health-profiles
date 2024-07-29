@@ -1,0 +1,34 @@
+<MedicationRequest xmlns="http://hl7.org/fhir">
+    <id value="metformin-assertion-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"/>
+    </meta>
+    <status value="completed"/>
+    <intent value="proposal"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-category"/>
+            <code value="community"/>
+            <display value="Community"/>
+        </coding>
+    </category>
+    <medicationCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="776713006"/>
+            <display value="Product containing only metformin (medicinal product)"/>
+        </coding>
+    </medicationCodeableConcept>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <encounter>
+        <reference value="Encounter/ed-encounter-example-1"/>
+        <display value="Emergency Department"/>
+    </encounter>
+    <requester>
+        <reference value="Patient/bh-patient-example"/>
+    </requester>
+</MedicationRequest>

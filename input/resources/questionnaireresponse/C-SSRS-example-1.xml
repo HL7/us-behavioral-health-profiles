@@ -1,0 +1,106 @@
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+    <id value="C-SSRS-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|7.0.0"/>
+    </meta>
+    <questionnaire
+        value="http://hl7.org/fhir/us/core/Questionnaire/c-ssrs-example"/>
+    <status value="completed"/>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <authored value="2024-02-01T20:50:32.718Z"/>
+    <author>
+        <reference value="Practitioner/ed-physician-example-1"/>
+    </author>
+    <item>
+        <linkId value="/93246-7"/>
+        <text value="Have you wished you were dead or wished you could go to sleep and not wake up?"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA32-8"/>
+                <display value="No"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/93247-5"/>
+        <text value="Have you actually had any thoughts of killing yourself?"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA32-8"/>
+                <display value="No"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/93248-3"/>
+        <text value="Have you been thinking about how you might do this?"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA32-8"/>
+                <display value="No"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/93249-1"/>
+        <text value="Have you had these thoughts and had some intention of acting on them?"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA32-8"/>
+                <display value="No"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/93250-9"/>
+        <text value="Have you started to work out or worked out the details of how to kill yourself? Do you intend to carry out this plan?"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA32-8"/>
+                <display value="No"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/93267-3"/>
+        <text value="Have you ever done anything, started to do anything, or prepared to do anything to end your life?"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA32-8"/>
+                <display value="No"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/93269-9"/>
+        <text value="Was this within the past 3 months?"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA32-8"/>
+                <display value="No"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/93374-7"/>
+        <text value="Suicide risk level"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA9194-7"/>
+                <display value="Low Risk"/>
+            </valueCoding>
+        </answer>
+    </item>
+</QuestionnaireResponse>

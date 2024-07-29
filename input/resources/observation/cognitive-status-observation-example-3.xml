@@ -1,0 +1,52 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="cognitive-status-observation-example-3"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="survey"/>
+            <display value="Survey"/>
+        </coding>
+        <text value="Survey"/>
+    </category>
+    <category>
+        <coding>
+            <system
+                value="http://hl7.org/fhir/us/core/CodeSystem/us-core-category"/>
+            <code value="cognitive-status"/>
+            <display value="Cognitive Status"/>
+        </coding>
+        <text value="Cognitive Status Category"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="72107-6"/>
+            <display value="Mini-Mental State Examination [MMSE]"/>
+        </coding>
+        <text value="Mini-Mental State Examination [MMSE]"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <effectiveDateTime value="2024-02-01"/>
+    <performer>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </performer>
+    <valueCodeableConcept>
+        <coding>
+            <system
+                value="http://loinc.org"/>
+            <code value="LA33-6"/>
+            <display value="Yes"/>
+        </coding>
+        <text value="Yes"/>
+    </valueCodeableConcept>
+</Observation>

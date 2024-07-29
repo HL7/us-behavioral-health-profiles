@@ -1,0 +1,27 @@
+<Goal xmlns="http://hl7.org/fhir">
+    <id value="social-connection-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal"/>
+    </meta>
+    <lifecycleStatus value="active"/>
+    <achievementStatus>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/goal-achievement"/>
+            <code value="improving"/>
+            <display value="Improving"/>
+        </coding>
+    </achievementStatus>
+    <description>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1230393005"/>
+            <display value="Adequate social participation (finding)"/>
+        </coding>
+    </description>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <statusDate value="2024-02-01"/>
+</Goal>
