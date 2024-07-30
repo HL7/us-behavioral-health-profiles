@@ -1,0 +1,65 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="average-blood-pressure-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|7.0.0"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+        </coding>
+        <text value="Vital Signs"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="96607-7"/>
+            <display value="Blood pressure panel mean systolic and mean diastolic"/>
+        </coding>
+        <text value="Avg Blood pressure systolic and diastolic"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <effectivePeriod>
+        <start value="2024-02-01T01:06:52.480Z"/>
+        <end value="2024-02-01T13:07:01.166Z"/>
+    </effectivePeriod>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="96608-5"/>
+                <display value="Systolic blood pressure mean"/>
+            </coding>
+            <text value="Average systolic blood pressure"/>
+        </code>
+        <valueQuantity>
+            <value value="157"/>
+            <unit value="mm[Hg]"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mm[Hg]"/>
+        </valueQuantity>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="96609-3"/>
+                <display value="Diastolic blood pressure mean"/>
+            </coding>
+            <text value="Average diastolic blood pressure"/>
+        </code>
+        <valueQuantity>
+            <value value="92"/>
+            <unit value="mm[Hg]"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mm[Hg]"/>
+        </valueQuantity>
+    </component>
+</Observation>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="mental-health-clinical-note-types"/>
+    <url value="http://hl7.org/fhir/us/bhp/ValueSet/mental-health-clinical-note-types"/>
+    <version value="0.1.0"/>
+    <name value="MentalHealthClinicalNoteTypes"/>
+    <title value="Mental Health Clinical Note Types"/>
+    <status value="draft"/>
+    <compose>
+        <inactive value="false"/>
+        <include>
+            <system value="http://loinc.org"/>
+            <version value="2.77"/>
+            <concept>
+                <code value="34785-6"/>
+                <display value="Mental Health Consult Note"/>
+            </concept>
+            <concept>
+                <code value="78263-1"/>
+                <display value="Mental Health Discharge Summary Note"/>
+            </concept>
+            <concept>
+                <code value="78306-8"/>
+                <display value="Mental Health History and Physical Note"/>
+            </concept>
+            <concept>
+                <code value="78472-8"/>
+                <display value="Mental Health Procedure Note"/>
+            </concept>
+            <concept>
+                <code value="34904-3"/>
+                <display value="Mental Health Progress Note"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

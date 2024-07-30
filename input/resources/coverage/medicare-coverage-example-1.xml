@@ -1,5 +1,5 @@
 <Coverage xmlns="http://hl7.org/fhir">
-    <id value="medicaid-coverage-example-1"/>
+    <id value="medicare-coverage-example-1"/>
     <meta>
         <profile
             value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage"/>
@@ -19,10 +19,10 @@
     <type>
         <coding>
             <system value="https://nahdo.org/sopt"/>
-            <code value="212"/>
-            <display value="Medicaid PPO"/>
+            <code value="112"/>
+            <display value="Medicare PPO"/>
         </coding>
-        <text value="Medicaid PPO"/>
+        <text value="Medicare PPO"/>
     </type>
     <subscriberId value="888009335"/>
     <beneficiary>
@@ -40,19 +40,7 @@
         <start value="2024-01-01"/>
     </period>
     <payor>
-        <reference value="Organization/fl-medicaid-office-example-1"/>
-        <display value="MyAccess"/>
+        <reference value="Organization/fl-united-example-1"/>
+        <display value="United Health Insurance - Medicare Advantage"/>
     </payor>
-    <class>
-        <type>
-            <coding>
-                <system
-                    value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
-                <code value="group"/>
-                <display value="An employee group"/>
-            </coding>
-            <text value="Group"/>
-        </type>
-       <value value="123"/>
-    </class>
 </Coverage>

@@ -1,0 +1,32 @@
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+    <id value="ekg-impression-report-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note|7.0.0"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="LP29708-2"/>
+            <display value="Cardiology"/>
+        </coding>
+        <text value="Cardiology"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="8601-7"/>
+            <display value="EKG Impression"/>
+        </coding>
+        <text value="EKG Impression"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <effectiveDateTime value="2024-01-01T19:30:46-08:00"/>
+    <result>
+        <reference value="Observation/ekg-observation-example-1"/>
+    </result>
+</DiagnosticReport>

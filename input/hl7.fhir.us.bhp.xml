@@ -2,7 +2,7 @@
 <ImplementationGuide
     xmlns="http://hl7.org/fhir">
     <id value="hl7.fhir.us.bhp"/>
-    <url value="http://hl7.org/fhir/us/fhir/ImplementationGuide/hl7.fhir.us.bhp"/>
+    <url value="http://hl7.org/fhir/us/bhp/ImplementationGuide/hl7.fhir.us.bhp"/>
     <version value="0.1.0"/>
     <name value="USBehavioralHealthProfiles"/>
     <title value="US Behavioral Health Profiles Implementation Guide"/>
@@ -27,15 +27,46 @@
         <packageId value="hl7.fhir.us.core"/>
         <version value="7.0.0"/>
     </dependsOn>
-    <dependsOn id="usnlmvsac">
+    <dependsOn id="hl7fhiruvsdc">
+        <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc#3.0.0"/>
+        <packageId value="hl7.fhir.uv.sdc"/>
+        <version value="3.0.0"/>
+    </dependsOn>
+    <!-- <dependsOn id="usnlmvsac">
         <uri value="http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"/>
         <packageId value="us.nlm.vsac"/>
         <version value="0.11.0"/>
-    </dependsOn>
+    </dependsOn> -->
     <definition>
         <grouping id="examples">
             <name value="Examples"/>
         </grouping>
+        <grouping id="profiles">
+            <name value="Profiles"/>
+        </grouping>
+        <grouping id="tx">
+            <name value="Terminology"/>
+        </grouping>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/mental-health-clinical-notes"/>
+                <display value="Behavioral Health DocumentReference"/>
+            </reference>
+            <name value="Mental Health Clinical Notes Profile"/>
+            <description value="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="profiles"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/mental-health-clinical-note-types"/>
+                <display value="Behavioral Health Clinical Note Types"/>
+            </reference>
+            <name value="Mental Health Clinical Notes Profile"/>
+            <description value="This ValueSet defines the LOINC codes for Mental Health Clinical Note types."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="tx"/>
+        </resource>
         <resource>
             <reference>
                 <reference value="Patient/bh-patient-example"/>
@@ -43,7 +74,7 @@
             </reference>
             <name value="James Wolff - Patient"/>
             <description value="James Wolff - Patient example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -53,7 +84,7 @@
             </reference>
             <name value="peanut-allergy-example-1"/>
             <description value="Peanut Allergy Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -63,7 +94,7 @@
             </reference>
             <name value="penicillin-allergy-example-1"/>
             <description value="James' Penicillin Allergy"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -73,7 +104,17 @@
             </reference>
             <name value="Care Team Example"/>
             <description value="James' Care Team"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Condition/panic-attack-condition-example-1"/>
+                <display value="Panic Attack Condition Example"/>
+            </reference>
+            <name value="panic-attack-condition-example"/>
+            <description value="James' panic attack example"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -83,7 +124,7 @@
             </reference>
             <name value="chest-pain-condition-example"/>
             <description value="James' chest pain example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -93,7 +134,7 @@
             </reference>
             <name value="depression-condition-example"/>
             <description value="James' depression example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -103,7 +144,7 @@
             </reference>
             <name value="diabetes-condition-example"/>
             <description value="James' Diabetes example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -113,17 +154,57 @@
             </reference>
             <name value="grief-condition-example"/>
             <description value="James' history of grief example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
             <reference>
-                <reference value="Coverage/medicaid-coverage-example-1"/>
-                <display value="Medicaid Coverage Example"/>
+                <reference value="Condition/substance-abuse-condition-example-1"/>
+                <display value="Substance Abuse Condition Example"/>
             </reference>
-            <name value="medicaid-coverage-example"/>
-            <description value="Florida Medicaid Coverage"/>
-            <exampleBoolean value="false"/>
+            <name value="substance-abuse-condition-example"/>
+            <description value="James' history of substance abuse example"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Coverage/medicare-coverage-example-1"/>
+                <display value="Medicare (PPO) Coverage Example"/>
+            </reference>
+            <name value="medicare-coverage-example"/>
+            <description value="United Health (PPO) Part C - Medicare Advantage Coverage"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Organization/fl-united-example-1"/>
+                <display value="United Health Insurance (Organization)"/>
+            </reference>
+            <name value="fl-united-example"/>
+            <description value="United Health (PPO) Part C - Organization example"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="DiagnosticReport/ekg-impression-report-example-1"/>
+                <display value="DiagnosticReport - EKG Impression"/>
+            </reference>
+            <name value="ekg-impression-report-example"/>
+            <description value="James' EKG Impression"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="DocumentReference/mental-health-discharge-summary-example-1"/>
+                <display value="DocumentReference - Mental Health Discharge Summary"/>
+            </reference>
+            <name value="mental-health-discharge-summary-example"/>
+            <description value="James' Mental Health Discharge Summary note"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -133,7 +214,7 @@
             </reference>
             <name value="ed-encounter-example"/>
             <description value="Emergency Room Encounter example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -143,7 +224,7 @@
             </reference>
             <name value="obs-encounter-example"/>
             <description value="Observation Encounter Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -153,7 +234,7 @@
             </reference>
             <name value="discharge-encounter-example"/>
             <description value="Discharge Encounter Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -163,7 +244,7 @@
             </reference>
             <name value="food-insecurity-example"/>
             <description value="Food Insecurity (Goal) Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -173,7 +254,7 @@
             </reference>
             <name value="housing-insecurity-example"/>
             <description value="Housing Insecurity (Goal) Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -183,7 +264,7 @@
             </reference>
             <name value="transportation-insecurity-example"/>
             <description value="Transportation Insecurity (Goal) Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -193,7 +274,17 @@
             </reference>
             <name value="social-connection-example-1"/>
             <description value="James' Social Connection Goal Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Immunization/flu-vaccine-example-1"/>
+                <display value="Flu vaccine Immunization"/>
+            </reference>
+            <name value="flu-vaccine-example"/>
+            <description value="James' Flu vaccine (Immunization) Example"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -203,7 +294,7 @@
             </reference>
             <name value="ed-location-example"/>
             <description value="Emergency Dept. Location Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -213,7 +304,7 @@
             </reference>
             <name value="obs-location-example"/>
             <description value="Observation Bed Location Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -223,7 +314,7 @@
             </reference>
             <name value="benzo-medication-example"/>
             <description value="James' Benzo Medication Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -233,7 +324,7 @@
             </reference>
             <name value="benzo-order-example"/>
             <description value="James' Benzo Medication Order from ED setting Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -243,17 +334,57 @@
             </reference>
             <name value="antidepressant-assertion-example"/>
             <description value="James' Self-Reported Anti-depressant medication Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
             <reference>
-                <reference value="MedicationRequest/metformin-assertion-example-1"/>
-                <display value="Metformin (self-reported) Example"/>
+                <reference value="MedicationRequest/metformin-discharge-med-example-1"/>
+                <display value="Metformin (discharge medication order) Example"/>
             </reference>
-            <name value="metformin-assertion-example"/>
-            <description value="James' Self-Reported Metformin medication Example"/>
-            <exampleBoolean value="false"/>
+            <name value="metformin-discharge-med-example"/>
+            <description value="Discharge Medication Order of Metformin Example"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="MedicationRequest/ativan-discharge-med-example-1"/>
+                <display value="Ativan (discharge medication order) Example"/>
+            </reference>
+            <name value="ativan-discharge-med-example"/>
+            <description value="Discharge Medication Order of Ativan Example"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="MedicationRequest/paroxetine-discharge-med-example-1"/>
+                <display value="Paroxetine (discharge medication order) Example"/>
+            </reference>
+            <name value="paroxetine-discharge-med-example"/>
+            <description value="Discharge Medication Order of Paroxetine Example"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="MedicationRequest/bupropion-discharge-med-example-1"/>
+                <display value="Bupropion (discharge medication order) Example"/>
+            </reference>
+            <name value="bupropion-discharge-med-example"/>
+            <description value="Discharge Medication Order of Bupropion Example"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/average-blood-pressure-example-1"/>
+                <display value="Average Blood Pressure Observation Example"/>
+            </reference>
+            <name value="average-blood-pressure-example"/>
+            <description value="James' average blood pressure Example"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -263,7 +394,7 @@
             </reference>
             <name value="ekg-observation-example"/>
             <description value="James' EKG Test Result Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -273,7 +404,7 @@
             </reference>
             <name value="no-morphine-preference-observation-example"/>
             <description value="James' treatment preference for no morphine Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -283,7 +414,7 @@
             </reference>
             <name value="non-smoker-example"/>
             <description value="James' Smoking Status Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -293,17 +424,7 @@
             </reference>
             <name value="provider-preference-observation-example"/>
             <description value="James' Preference for female healthcare provider Example"/>
-            <exampleBoolean value="false"/>
-            <groupingId value="examples"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="Observation/substance-abuse-history-example-1"/>
-                <display value="Substance Abuse History Example"/>
-            </reference>
-            <name value="substance-abuse-history-example"/>
-            <description value="James' Substnace Abuse History Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -313,7 +434,7 @@
             </reference>
             <name value="barthel-index-functional-status-example"/>
             <description value="James' Barthel Index Functional Status (panel) Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -323,7 +444,7 @@
             </reference>
             <name value="cognitive-status-observation-example"/>
             <description value="James' Cognitivie Status Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -333,7 +454,7 @@
             </reference>
             <name value="disability-status-observation-example-1"/>
             <description value="James' Disability Status Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -343,7 +464,7 @@
             </reference>
             <name value="pregnancy-status-example"/>
             <description value="James' Pregnancy Status Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -353,7 +474,17 @@
             </reference>
             <name value="sexual-orientation-example-1"/>
             <description value="James' Sexual Orientation Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="QuestionnaireResponse/BHP-QuestionnaireResponsePRAPAREExample-1"/>
+                <display value="PRAPARE QuestionnaireResponse Example"/>
+            </reference>
+            <name value="PRAPARE-QuestionnaireResponse-Example-1"/>
+            <description value="James' completed PRAPARE form"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -363,7 +494,7 @@
             </reference>
             <name value="phq-9-example"/>
             <description value="James' completed PHQ-9 form Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -373,7 +504,27 @@
             </reference>
             <name value="c-sses-9-example"/>
             <description value="James' completed C-SSES form Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="QuestionnaireResponse/hark-example-1"/>
+                <display value="HARK QuestionnaireResponse Example"/>
+            </reference>
+            <name value="hark-example"/>
+            <description value="James' completed Humiliation, Afraid, Rape, and Kick questionnaire [HARK] assessment form"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="QuestionnaireResponse/ace-example-1"/>
+                <display value="ACE QuestionnaireResponse Example"/>
+            </reference>
+            <name value="ace-example"/>
+            <description value="James' completed Adverse Childhood Experiences [ACE] assessment form"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
@@ -383,7 +534,7 @@
             </reference>
             <name value="adult-child-relatedperson-example"/>
             <description value="James' adult child related person Example"/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         

@@ -1,0 +1,46 @@
+<Condition xmlns="http://hl7.org/fhir">
+    <id value="substance-abuse-condition-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"/>
+    </meta>
+    <clinicalStatus>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+        </coding>
+    </clinicalStatus>
+    <verificationStatus>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <version value="4.0.0"/>
+            <code value="confirmed"/>
+            <display value="Confirmed"/>
+        </coding>
+        <text value="Confirmed"/>
+    </verificationStatus>
+    <category>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="encounter-diagnosis"/>
+            <display value="Encounter Diagnosis"/>
+        </coding>
+        <text value="Encounter Diagnosis"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="371422002"/>
+            <display value="History of substance abuse (situation)"/>
+        </coding>
+        <text value="History of Substance Abuse"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+</Condition>

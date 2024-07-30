@@ -1,23 +1,23 @@
 <MedicationRequest xmlns="http://hl7.org/fhir">
-    <id value="metformin-assertion-example-1"/>
+    <id value="bupropion-discharge-med-example-1"/>
     <meta>
         <profile
             value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"/>
     </meta>
     <status value="completed"/>
-    <intent value="proposal"/>
+    <intent value="order"/>
     <category>
         <coding>
             <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-category"/>
-            <code value="community"/>
-            <display value="Community"/>
+            <code value="discharge"/>
+            <display value="Discharge"/>
         </coding>
     </category>
     <medicationCodeableConcept>
         <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="776713006"/>
-            <display value="Product containing only metformin (medicinal product)"/>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="993532"/>
+            <display value="bupropion hydrochloride 200 MG"/>
         </coding>
     </medicationCodeableConcept>
     <subject>

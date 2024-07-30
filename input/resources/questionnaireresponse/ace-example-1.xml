@@ -1,0 +1,106 @@
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+    <id value="ace-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|7.0.0"/>
+    </meta>
+    <questionnaire
+        value="http://hl7.org/fhir/us/core/Questionnaire/ace-example"/>
+    <status value="completed"/>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <authored value="2024-02-01T20:50:32.718Z"/>
+    <author>
+        <reference value="Practitioner/ed-physician-example-1"/>
+    </author>
+    <item>
+        <linkId value="/82814-5"/>
+        <text value=""/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA33-6"/>
+                <display value="Yes"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/82815-2"/>
+        <text value=""/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA33-6"/>
+                <display value="Yes"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/82816-0"/>
+        <text value=""/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA33-6"/>
+                <display value="Yes"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/82817-8"/>
+        <text value=""/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA33-6"/>
+                <display value="Yes"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/82818-6"/>
+        <text value=""/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA33-6"/>
+                <display value="Yes"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/82820-2"/>
+        <text value=""/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA33-6"/>
+                <display value="Yes"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/82822-8"/>
+        <text value=""/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA33-6"/>
+                <display value="Yes"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/82823-6"/>
+        <text value=""/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA33-6"/>
+                <display value="Yes"/>
+            </valueCoding>
+        </answer>
+    </item>
+</QuestionnaireResponse>
