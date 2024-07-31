@@ -19,7 +19,7 @@
    <name value="USBehavioralHealthProfiles"/>
    <title value="US Behavioral Health Profiles Implementation Guide"/>
    <status value="active"/>
-   <date value="2024-07-30T15:31:44-06:00"/>
+   <date value="2024-07-31T13:51:55-06:00"/>
    <contact>
       <telecom>
          <system value="phone"/>
@@ -274,14 +274,14 @@
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
          <valueCode value="hl7.fhir.uv.tools#0.1.0"/>
       </extension>
-      <grouping id="examples">
-         <name value="Examples"/>
-      </grouping>
       <grouping id="profiles">
          <name value="Profiles"/>
       </grouping>
       <grouping id="tx">
          <name value="Terminology"/>
+      </grouping>
+      <grouping id="examples">
+         <name value="Examples"/>
       </grouping>
       <grouping id="-req-actordefinition">
          <name value="Requirements: Actor Definitions"/>
@@ -1209,6 +1209,158 @@
          </reference>
          <name value="sexual-orientation-example-1"/>
          <description value="James' Sexual Orientation Example"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-temperature-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/temperature-example-1"/>
+            <display value="Body Temperature Example"/>
+         </reference>
+         <name value="temperature-example"/>
+         <description value="James' Body Temperature Example"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-height-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/height-example-1"/>
+            <display value="Body Height Example"/>
+         </reference>
+         <name value="height-example"/>
+         <description value="James' Body Height Example"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-blood-pressure-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/blood-pressure-example-1"/>
+            <display value="Blood Pressure Example"/>
+         </reference>
+         <name value="blood-pressure-example"/>
+         <description value="James' Systolic and Diastolic Blood Pressure measurements Example"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-heart-rate-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/heart-rate-example-1"/>
+            <display value="Heart Rate Example"/>
+         </reference>
+         <name value="heart-rate-example"/>
+         <description value="James' Heart Rate Example"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-oxygen-saturation-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/oxygen-saturation-example-1"/>
+            <display value="Oxygen Saturation Example"/>
+         </reference>
+         <name value="oxygen-saturation-example"/>
+         <description value="James' Oxygen Saturation Example"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-respiratory-rate-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/respiratory-rate-example-1"/>
+            <display value="Respiratory Example"/>
+         </reference>
+         <name value="respiratory-rate-example"/>
+         <description value="James' Respiratory Rate Example"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-weight-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/weight-example-1"/>
+            <display value="Weight Example"/>
+         </reference>
+         <name value="weight-example"/>
+         <description value="James' Sexual Orientation Example"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-odh-usual-work-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/odh-usual-work-example-1"/>
+            <display value="Usual Occupational Data Example"/>
+         </reference>
+         <name value="osh-usual-work-example"/>
+         <description value="James' Usual Occupation as a citrus farm worker"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>

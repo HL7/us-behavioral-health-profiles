@@ -1,0 +1,26 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="odh-usual-work-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/odh/StructureDefinition/odh-UsualWork"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="21843-8"/>
+            <display value="History of Usual occupation"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <valueCodeableConcept>
+        <coding>
+            <system value="urn:oid:2.16.840.1.114222.4.5.314"/>
+            <code value="0205"/>
+            <display value="Farmers, ranchers, and other agricultural managers"/>
+        </coding>
+    </valueCodeableConcept>
+</Observation>

@@ -1,0 +1,42 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="oxygen-saturation-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|7.0.0"/>
+    </meta>
+
+    <status value="final"/>
+    <category>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+        </coding>
+        <text value="Vital Signs"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="2708-6"/>
+            <display value="Oxygen saturation in Arterial blood"/>
+        </coding>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="59408-5"/>
+            <display value="Oxygen saturation in Arterial blood by Pulse oximetry"/>
+        </coding>
+        <text value="oxygen_saturation"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <effectiveDateTime value="2024-02-01"/>
+    <valueQuantity>
+        <value value="97"/>
+        <unit value="%O2"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="%"/>
+    </valueQuantity>
+</Observation>

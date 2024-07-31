@@ -1,0 +1,36 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="heart-rate-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate|7.0.0"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+        </coding>
+        <text value="Vital Signs"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="8867-4"/>
+            <display value="Heart Rate"/>
+        </coding>
+        <text value="heart_rate"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <effectiveDateTime value="2024-02-01"/>
+    <valueQuantity>
+        <value value="110"/>
+        <unit value="beats/min"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="/min"/>
+    </valueQuantity>
+</Observation>
