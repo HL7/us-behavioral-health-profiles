@@ -1,0 +1,27 @@
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="mh-provider-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+    </meta>
+    <active value="true"/>
+    <type>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+            <code value="prov"/>
+            <display value="Healthcare Provider"/>
+        </coding>
+    </type>
+    <name value="Florida Mental Health Provider Associates"/>
+    <telecom>
+        <system value="phone"/>
+        <value value="(+1) 734-677-7777"/>
+    </telecom>
+    <address>
+        <line value="3300 WASHTENAW AVE STE 227"/>
+        <city value="MIAMI"/>
+        <state value="FL"/>
+        <postalCode value="01002"/>
+        <country value="USA"/>
+    </address>
+</Organization>
