@@ -1,0 +1,70 @@
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="program-id"/>
+    <meta>
+        <versionId value="6"/>
+        <lastUpdated value="2024-08-05T17:14:11.055Z"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/bhp/StructureDefinition/program-id"/>
+    <name value="GrantProgramIdAndNumber"/>
+    <title value="Grant Program ID and Number"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Extension"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Extension">
+            <path value="Extension"/>
+        </element>
+        <element id="Extension.extension">
+            <path value="Extension.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <ordered value="false"/>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Extension.extension.url">
+            <path value="Extension.extension.url"/>
+            <fixedUri value="http://hl7.org/fhir/us/bhp/StructureDefinition/program-id"/>
+        </element>
+        <element id="Extension.extension:program_id">
+            <path value="Extension.extension"/>
+            <sliceName value="program_id"/>
+            <type>
+                <code value="Extension"/>
+            </type>
+        </element>
+        <element id="Extension.extension:program_id.url">
+            <path value="Extension.extension.url"/>
+            <fixedUri value="program-id"/>
+        </element>
+        <element id="Extension.extension:program_id.value[x]">
+            <path value="Extension.extension.value[x]"/>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="Extension.extension:grant_number">
+            <path value="Extension.extension"/>
+            <sliceName value="grant_number"/>
+        </element>
+        <element id="Extension.extension:grant_number.url">
+            <path value="Extension.extension.url"/>
+            <fixedUri value="grant-number"/>
+        </element>
+        <element id="Extension.extension:grant_number.value[x]">
+            <path value="Extension.extension.value[x]"/>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>

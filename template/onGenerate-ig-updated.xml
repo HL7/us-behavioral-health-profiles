@@ -19,7 +19,7 @@
    <name value="USBehavioralHealthProfiles"/>
    <title value="US Behavioral Health Profiles Implementation Guide"/>
    <status value="active"/>
-   <date value="2024-08-02T10:37:01-06:00"/>
+   <date value="2024-08-05T15:00:53-06:00"/>
    <contact>
       <telecom>
          <system value="phone"/>
@@ -56,11 +56,6 @@
       <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core#7.0.0"/>
       <packageId value="hl7.fhir.us.core"/>
       <version value="7.0.0"/>
-   </dependsOn>
-   <dependsOn id="hl7fhiruvsdc">
-      <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc#3.0.0"/>
-      <packageId value="hl7.fhir.uv.sdc"/>
-      <version value="3.0.0"/>
    </dependsOn>
    <definition>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -410,6 +405,14 @@
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
             <valueInteger value="999999999"/>
@@ -426,6 +429,44 @@
          </reference>
          <name value="Mental Health Clinical Notes Profile"/>
          <description value="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="profiles"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:complex-type"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-bh-grant-info.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/bh-grant-info"/>
+            <display value="Grant Information Observation"/>
+         </reference>
+         <name value="Grant Information Observation Profile"/>
+         <description value="This profile defines the structure and terminology for Observations related to Program ID, number, and funding type. Feedback is requested throughout this profile, specifically do standard concepts exist for .category, .code, and .value[x]? Also, use of a complex extension to represent both grant number and program ID."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="profiles"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-program-id.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/program-id"/>
+            <display value="Grant Program ID and Number Extension"/>
+         </reference>
+         <name value="Grant Program ID and Number Extension"/>
+         <description value="This complex extension defines the representation of Grant Program ID as well as grant number."/>
          <exampleBoolean value="false"/>
          <groupingId value="profiles"/>
       </resource>
@@ -453,6 +494,44 @@
             <valueInteger value="999999999"/>
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-bh-funding-types.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/bh-funding-types"/>
+            <display value="Behavioral Health Program Funding Types"/>
+         </reference>
+         <name value="Behavioral Health Program Funding Types"/>
+         <description value="This ValueSet defines coded concepts pertaining to a Behavioral Health program/grant."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="tx"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-bh-funding-type-codes.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/bh-funding-type-codes"/>
+            <display value="Behavioral Health Program Funding Type Codes"/>
+         </reference>
+         <name value="Behavioral Health Program Funding Type Codes"/>
+         <description value="This CodeSystem defines coded concepts pertaining to a Behavioral Health program/grant."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="tx"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="Patient"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -464,6 +543,25 @@
          </reference>
          <name value="James Wolff - Patient"/>
          <description value="James Wolff - Patient example"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-ed-physician-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/ed-physician-example-1"/>
+            <display value="Emergency Physician - Practitioner"/>
+         </reference>
+         <name value="ed-physician-example"/>
+         <description value="Emergency Physician - Practitioner example"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -635,6 +733,25 @@
          </reference>
          <name value="substance-abuse-condition-example"/>
          <description value="James' history of substance abuse example"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Consent"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Consent-SDOHCC-ConsentInformationDisclosure-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Consent/SDOHCC-ConsentInformationDisclosure-example-1"/>
+            <display value="HIPAA Consent"/>
+         </reference>
+         <name value="SDOHCC-ConsentInformationDisclosure-example"/>
+         <description value="James' HIPAA Consent form example for Mental Health Providers (custodiam)"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -1045,6 +1162,25 @@
             <valueString value="Observation"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-bh-grant-info-observation-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/bh-grant-info-observation-example-1"/>
+            <display value="Behavioral Health Grant Info Observation Example"/>
+         </reference>
+         <name value="bh-grant-info-observation-example"/>
+         <description value="Program Funding Information (Observation) of Florida Mental Health Provider Associates"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="Observation-average-blood-pressure-example-1.html"/>
          </extension>
          <reference>
@@ -1384,6 +1520,25 @@
             <valueInteger value="999999999"/>
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-mh-provider-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/mh-provider-example-1"/>
+            <display value="Mental Health provider (Orgnaization) Example"/>
+         </reference>
+         <name value="mh-provider-example"/>
+         <description value="James' mental health provider organization"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="QuestionnaireResponse"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -1506,6 +1661,7 @@
             <generation value="markdown"/>
          
          
+         
          </page>
          <page>
             <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -1524,6 +1680,14 @@
             <generation value="markdown"/>
          </page>
          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="full_story.html"/>
+            </extension>
+            <nameUrl value="full_story.html"/>
+            <title value="Full Story"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
             <nameUrl value="artifacts.html"/>
             <title value="Artifacts Summary"/>
             <generation value="html"/>
@@ -1533,13 +1697,38 @@
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="StructureDefinition-bh-grant-info.html"/>
+               <title value="Grant Information Observation Profile"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-program-id.html"/>
+               <title value="Grant Program ID and Number Extension"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="ValueSet-mental-health-clinical-note-types.html"/>
                <title value="Mental Health Clinical Notes Profile"/>
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="ValueSet-bh-funding-types.html"/>
+               <title value="Behavioral Health Program Funding Types"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-bh-funding-type-codes.html"/>
+               <title value="Behavioral Health Program Funding Type Codes"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="Patient-bh-patient-example.html"/>
                <title value="James Wolff - Patient"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Practitioner-ed-physician-example-1.html"/>
+               <title value="ed-physician-example"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1585,6 +1774,11 @@
             <page>
                <nameUrl value="Condition-substance-abuse-condition-example-1.html"/>
                <title value="substance-abuse-condition-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Consent-SDOHCC-ConsentInformationDisclosure-example-1.html"/>
+               <title value="SDOHCC-ConsentInformationDisclosure-example"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1693,6 +1887,11 @@
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="Observation-bh-grant-info-observation-example-1.html"/>
+               <title value="bh-grant-info-observation-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="Observation-average-blood-pressure-example-1.html"/>
                <title value="average-blood-pressure-example"/>
                <generation value="generated"/>
@@ -1780,6 +1979,11 @@
             <page>
                <nameUrl value="Observation-odh-usual-work-example-1.html"/>
                <title value="osh-usual-work-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-mh-provider-example-1.html"/>
+               <title value="mh-provider-example"/>
                <generation value="generated"/>
             </page>
             <page>

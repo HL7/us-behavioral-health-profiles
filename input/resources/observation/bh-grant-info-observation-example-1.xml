@@ -1,0 +1,51 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="bh-grant-info-observation-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|7.0.0"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/us/bhp/StructureDefinition/program-id">
+        <extension url="http://hl7.org/fhir/us/bhp/StructureDefinition/program-id">
+            <valueString value="SP-23-004"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/us/bhp/StructureDefinition/program-id">
+            <valueString value="SP083783-01"/>
+        </extension>
+    </extension>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system
+                value="http://hl7.org/fhir/us/bhp/CodeSystem/bh-funding-type-codes"/>
+            <code value="funding-program-info"/>
+            <display value="Program Funding Information"/>
+        </coding>
+        <text value="Program Funding Information"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://hl7.org/fhir/us/bhp/CodeSystem/bh-funding-type-codes"/>
+            <code value="grant-funding-type"/>
+            <display value="Grant Funding Type"/>
+        </coding>
+        <text value="Behavioral Health Grant Funding Type"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <effectiveDateTime value="2024-02-01"/>
+    <performer>
+        <reference value="Organization/mh-provider-example-1"/>
+        <display value="Florida Mental Health Provider Associates"/>
+    </performer>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://hl7.org/fhir/us/bhp/CodeSystem/bh-funding-type-codes"/>
+            <code value="discretionary"/>
+            <display value="Discretionary Funding"/>
+        </coding>
+        <text
+            value="Discretionary Grant Funding"/>
+    </valueCodeableConcept>
+</Observation>

@@ -1,0 +1,62 @@
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="bh-grant-info"/>
+    <meta>
+        <versionId value="4"/>
+        <lastUpdated value="2024-08-05T17:34:26.085Z"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/bhp/StructureDefinition/bh-grant-info"/>
+    <version value="0.1.0"/>
+    <name value="BehavioralHealthGrantInfo"/>
+    <title value="Behavioral Health Grant Funding Information"/>
+    <status value="active"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="complex-type"/>
+    <abstract value="false"/>
+    <type value="Observation"/>
+    <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Observation">
+            <path value="Observation"/>
+        </element>
+        <element id="Observation.extension">
+            <path value="Observation.extension"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/bhp/StructureDefinition/program-id"/>
+            </type>
+        </element>
+        <element id="Observation.category">
+            <path value="Observation.category"/>
+            <slicing>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Observation.category:bh_funding">
+            <path value="Observation.category"/>
+            <sliceName value="bh_funding"/>
+            <binding>
+                <strength value="required"/>
+                <valueSet value="http://hl7.org/fhir/us/bhp/ValueSet/bh-funding-types"/>
+            </binding>
+        </element>
+        <element id="Observation.performer">
+            <path value="Observation.performer"/>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+            </type>
+        </element>
+        <element id="Observation.value[x]">
+            <path value="Observation.value[x]"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="required"/>
+                <valueSet value="http://hl7.org/fhir/us/bhp/ValueSet/bh-funding-types"/>
+            </binding>
+        </element>
+    </differential>
+</StructureDefinition>
