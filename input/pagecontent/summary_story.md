@@ -37,7 +37,6 @@ At the community mental health provider, James engaged in cognitive behavioral t
 - Referred to a community mental health provider 
 - Care navigator assistance: New PCP appointment, bus vouchers 
 
- 
 
 ##### PCP Encounter (following week): 
 - Discussed feelings of loneliness and lack of motivation 
