@@ -19,7 +19,7 @@
    <name value="USBehavioralHealthProfiles"/>
    <title value="US Behavioral Health Profiles Implementation Guide"/>
    <status value="active"/>
-   <date value="2024-08-05T15:00:53-06:00"/>
+   <date value="2024-08-07T13:53:56-06:00"/>
    <contact>
       <telecom>
          <system value="phone"/>
@@ -278,6 +278,10 @@
       <grouping id="examples">
          <name value="Examples"/>
       </grouping>
+      
+      
+      
+      
       
       
       
@@ -751,7 +755,7 @@
             <display value="HIPAA Consent"/>
          </reference>
          <name value="SDOHCC-ConsentInformationDisclosure-example"/>
-         <description value="James' HIPAA Consent form example for Mental Health Providers (custodiam)"/>
+         <description value="James' HIPAA Consent form example for Mental Health Providers (custodiam). The consent (PDF form) content is base64 encoded within the source element."/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -827,7 +831,83 @@
             <display value="DocumentReference - Mental Health Discharge Summary"/>
          </reference>
          <name value="mental-health-discharge-summary-example"/>
-         <description value="James' Mental Health Discharge Summary note"/>
+         <description value="James' Mental Health Discharge Summary note. Example document content is base64 encoded inline within content.attachment.data."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-mental-health-consult-note-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/mental-health-consult-note-example-1"/>
+            <display value="DocumentReference - Mental Health Consult Note"/>
+         </reference>
+         <name value="mental-health-consult-note-example"/>
+         <description value="James' Mental Health Consult note. Example document content is base64 encoded inline within content.attachment.data."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-mental-health-hx-physical-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/mental-health-hx-physical-example-1"/>
+            <display value="DocumentReference - Mental Health History and Physical"/>
+         </reference>
+         <name value="mental-health-hx-physical-example"/>
+         <description value="James' Mental Health History and Physical. Example document content is base64 encoded inline within content.attachment.data."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-mental-health-procedure-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/mental-health-procedure-example-1"/>
+            <display value="DocumentReference - Mental Health Procedure Note"/>
+         </reference>
+         <name value="mental-health-procedure-example"/>
+         <description value="James' Mental Health Procedure Note. Example document content is base64 encoded inline within content.attachment.data."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-mental-health-progress-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/mental-health-progress-example-1"/>
+            <display value="DocumentReference - Mental Health Progress Note"/>
+         </reference>
+         <name value="mental-health-progress-example"/>
+         <description value="James' Mental Health Progress Note. Example document content is base64 encoded inline within content.attachment.data."/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -1662,6 +1742,7 @@
          
          
          
+         
          </page>
          <page>
             <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -1681,10 +1762,18 @@
          </page>
          <page>
             <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="summary_story.html"/>
+            </extension>
+            <nameUrl value="summary_story.html"/>
+            <title value="Summary Story"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
                <valueUrl value="full_story.html"/>
             </extension>
             <nameUrl value="full_story.html"/>
-            <title value="Full Story"/>
+            <title value="Full Use Case Story"/>
             <generation value="markdown"/>
          </page>
          <page>
@@ -1799,6 +1888,26 @@
             <page>
                <nameUrl value="DocumentReference-mental-health-discharge-summary-example-1.html"/>
                <title value="mental-health-discharge-summary-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="DocumentReference-mental-health-consult-note-example-1.html"/>
+               <title value="mental-health-consult-note-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="DocumentReference-mental-health-hx-physical-example-1.html"/>
+               <title value="mental-health-hx-physical-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="DocumentReference-mental-health-procedure-example-1.html"/>
+               <title value="mental-health-procedure-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="DocumentReference-mental-health-progress-example-1.html"/>
+               <title value="mental-health-progress-example"/>
                <generation value="generated"/>
             </page>
             <page>

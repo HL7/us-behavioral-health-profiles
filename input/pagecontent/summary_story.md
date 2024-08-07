@@ -1,12 +1,9 @@
 # Summarized Story of James 
+Six months ago, James Wolff, a 60-year-old African American male assigned female at birth, visited the emergency department (ED) due to chest pain, sweating, and a racing heart. Diagnosed with a panic attack likely triggered by grief over his partner's recent death, James's medical history includes type 2 diabetes, moderate depression, and past substance abuse. At the ED, he received an anti-anxiety medication and a referral to a community mental health provider. His health challenges were compounded by social isolation, financial strain, and difficulty managing his diabetes and depression without his partner's support. 
 
-James Wolff, a 60-year-old African American male assigned female at birth, visited the emergency department (ED) six months ago due to chest pain, sweating, and a racing heart. Diagnosed with a panic attack likely triggered by grief over his partner's recent death, James's medical history includes type 2 diabetes, moderate depression, and past substance abuse. At the ED, he received an anti-anxiety medication and a referral to a community mental health provider. His health challenges were compounded by social isolation, financial strain, and difficulty managing his diabetes and depression without his partner's support.  
+Upon visiting the community mental health provider, James engaged in cognitive behavioral therapy (CBT) and joined a grief support group. His case manager connected him with community services, including meal delivery and bus vouchers, and helped him apply for disability benefits. Despite initial setbacks like missing CBT sessions due to transportation issues, James gradually improved his diabetes management and reduced his alcohol intake. James reported feeling better and more connected by attending virtual CBT sessions and exploring social activities like Zumba and line dancing. His care team adjusted his medication to minimize side effects and continued to support his mental health and social needs, significantly improving his overall well-being. 
 
- 
-
-At the community mental health provider, James engaged in cognitive behavioral therapy (CBT) and joined a grief support group. His case manager connected him with community services, including meal delivery and bus vouchers, and helped him apply for disability benefits. Despite initial setbacks like missing CBT sessions due to transportation issues, James gradually improved his diabetes management and reduced his alcohol intake. James reported feeling better and more connected by attending virtual CBT sessions and exploring social activities like Zumba and line dancing. His care team adjusted his medication to minimize side effects and continued to support his mental health and social needs, significantly improving his overall well-being. 
-
-### Bulleted Summary  
+### Quick Facts
 
 ##### Patient Information: 
 - Name: James Wolff (prefers to be called James, legal name Jennifer) 
@@ -15,7 +12,6 @@ At the community mental health provider, James engaged in cognitive behavioral t
 - Race: Non-Hispanic African American 
 - Status: Retired, lives alone in Orlando, Florida 
 - Insurance: Medicare 
-- Contact: Provided at ED registration 
 
  
 ##### Medical History: 
@@ -56,7 +52,7 @@ At the community mental health provider, James engaged in cognitive behavioral t
 
  
 
-##### Case Manager Encounter: 
+##### Case Manager Encounter (same day): 
 - Assessed SDOH using PRAPARE tool 
 - Identified needs: Food, reliable transportation, housing security 
 - Connected with community meal service and bus vouchers 
@@ -64,7 +60,7 @@ At the community mental health provider, James engaged in cognitive behavioral t
 
  
 
-##### LPC Follow-Up (four weeks later): 
+##### LPC Follow-Up (one month later): 
 - Reported slight improvement, adherence to medication, and missed CBT sessions due to transportation 
 - Found support group unhelpful, connected with community recreation center for social engagement 
 
@@ -79,7 +75,7 @@ At the community mental health provider, James engaged in cognitive behavioral t
 
  
 
-##### Community Mental Health Center Follow-Up (one month later): 
+##### Second LPC Follow-Up (one month later):
 
 - Reported improved diabetes management and eating habits, reduced alcohol intake 
 - Scored 3 on AUDIT and 12 on PHQ-9 
