@@ -16,4 +16,27 @@
             <display value="Adult child"/>
         </coding>
     </relationship>
+    <name>
+        <use value="official"/>
+        <family value="Wolff"/>
+        <given value="Sarah"/>
+    </name>
+    <telecom>
+        <system value="phone"/>
+        <value value="555-555-5555"/>
+        <use value="home"/>
+    </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="sarah.wolff@example.com"/>
+        <use value="home"/>
+    </telecom>
+    <birthDate value="1996-01-28"/>
+    <address>
+        <use value="home"/>
+        <line value="80A VILLAGE ST"/>
+        <city value="NEW HOLLAND"/>
+        <state value="PA"/>
+        <postalCode value="17557"/>
+    </address>
 </RelatedPerson>
