@@ -1,5 +1,4 @@
-<StructureDefinition
-    xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir">
     <id value="program-id"/>
     <meta>
         <versionId value="6"/>
@@ -11,8 +10,12 @@
     <status value="active"/>
     <experimental value="false"/>
     <fhirVersion value="4.0.1"/>
-    <kind value="resource"/>
+    <kind value="complex-type"/>
     <abstract value="false"/>
+    <context>
+        <type value="element"/>
+        <expression value="Observation"/>
+    </context>
     <type value="Extension"/>
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
     <derivation value="constraint"/>
@@ -31,23 +34,27 @@
                 <rules value="open"/>
             </slicing>
         </element>
-        <element id="Extension.extension.url">
-            <path value="Extension.extension.url"/>
-            <fixedUri value="http://hl7.org/fhir/us/bhp/StructureDefinition/program-id"/>
-        </element>
         <element id="Extension.extension:program_id">
             <path value="Extension.extension"/>
             <sliceName value="program_id"/>
-            <type>
-                <code value="Extension"/>
-            </type>
+            <short
+                value="The program id for a program that that is participating in a designated behavioral health program."/>
+            <definition
+                value="The program id for a program that that is participating in a designated behavioral health program."/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Extension.extension:program_id.extension">
+            <path value="Extension.extension.extension"/>
+            <max value="0"/>
         </element>
         <element id="Extension.extension:program_id.url">
             <path value="Extension.extension.url"/>
-            <fixedUri value="program-id"/>
+            <fixedUri value="program_id"/>
         </element>
         <element id="Extension.extension:program_id.value[x]">
             <path value="Extension.extension.value[x]"/>
+            <min value="1"/>
             <type>
                 <code value="string"/>
             </type>
@@ -55,10 +62,19 @@
         <element id="Extension.extension:grant_number">
             <path value="Extension.extension"/>
             <sliceName value="grant_number"/>
+            <short value="The grant number that the behavioral health service is operating under."/>
+            <definition
+                value="The grant number that the behavioral health service is operating under."/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Extension.extension:grant_number.extension">
+            <path value="Extension.extension.extension"/>
+            <max value="0"/>
         </element>
         <element id="Extension.extension:grant_number.url">
             <path value="Extension.extension.url"/>
-            <fixedUri value="grant-number"/>
+            <fixedUri value="grant_number"/>
         </element>
         <element id="Extension.extension:grant_number.value[x]">
             <path value="Extension.extension.value[x]"/>

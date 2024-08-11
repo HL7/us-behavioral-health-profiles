@@ -1,0 +1,43 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="anxiety-assessment-observation-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="survey"/>
+            <display value="Survey"/>
+        </coding>
+        <text value="Survey"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="71891-6"/>
+            <display value="M3 Checklist - follow-up [M3]"/>
+        </coding>
+        <text value="M3 Checklist"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <effectiveDateTime value="2024-02-01"/>
+    <performer>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </performer>
+    <valueCodeableConcept>
+        <coding>
+            <system
+                value="http://loinc.org"/>
+            <code value="LA10044-8"/>
+            <display value="Often"/>
+        </coding>
+        <text value="Often"/>
+    </valueCodeableConcept>
+</Observation>

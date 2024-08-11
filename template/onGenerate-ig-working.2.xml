@@ -19,7 +19,7 @@
    <name value="USBehavioralHealthProfiles"/>
    <title value="US Behavioral Health Profiles Implementation Guide"/>
    <status value="active"/>
-   <date value="2024-08-07T13:53:56-06:00"/>
+   <date value="2024-08-11T14:42:29-06:00"/>
    <contact>
       <telecom>
          <system value="phone"/>
@@ -53,9 +53,9 @@
       <version value="5.1.0"/>
    </dependsOn>
    <dependsOn id="hl7fhiruscore">
-      <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core#7.0.0"/>
+      <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core#6.1.0"/>
       <packageId value="hl7.fhir.us.core"/>
-      <version value="7.0.0"/>
+      <version value="6.1.0"/>
    </dependsOn>
    <definition>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -547,6 +547,25 @@
             <valueInteger value="999999999"/>
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-pcp-provider-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/pcp-provider-example-1"/>
+            <display value="Priamry Care Physician - Practitioner"/>
+         </reference>
+         <name value="pcp-provider-example"/>
+         <description value="James' PCP - Practitioner example"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="AllergyIntolerance"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -615,6 +634,25 @@
          </reference>
          <name value="panic-attack-condition-example"/>
          <description value="James' panic attack example"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Communication"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Communication-etoh-abuse-prevention-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Communication/etoh-abuse-prevention-example-1"/>
+            <display value="Alcohol Abuse Prevention Education Example"/>
+         </reference>
+         <name value="etoh-abuse-prevention-example"/>
+         <description value="James' Alcohol abuse prevention education (received form his PCP) example"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -946,6 +984,25 @@
             <valueInteger value="999999999"/>
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Encounter"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Encounter-pcp-encounter-example-4.html"/>
+         </extension>
+         <reference>
+            <reference value="Encounter/pcp-encounter-example-4"/>
+            <display value="Primary Care Encounter Example"/>
+         </reference>
+         <name value="pcp-encounter-example"/>
+         <description value="James' follow-up ambulatory encounter with his primary care provider"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="Goal"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -1090,6 +1147,25 @@
          </reference>
          <name value="benzo-medication-example"/>
          <description value="James' Benzo Medication Example"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="MedicationDispense"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="MedicationDispense-bupropion-dispense-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="MedicationDispense/bupropion-dispense-example-1"/>
+            <display value="Bupropion MedicationDispense Example"/>
+         </reference>
+         <name value="bupropion-dispense-example"/>
+         <description value="James' Bupropion dispensed from a community health center pharmacy with instructions to be taken daily"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -1563,8 +1639,27 @@
             <reference value="Observation/odh-usual-work-example-1"/>
             <display value="Usual Occupational Data Example"/>
          </reference>
-         <name value="osh-usual-work-example"/>
+         <name value="odh-usual-work-example"/>
          <description value="James' Usual Occupation as a citrus farm worker"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-anxiety-assessment-observation-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/anxiety-assessment-observation-example-1"/>
+            <display value="Anxiety Assessment - M3 (Observation) Example"/>
+         </reference>
+         <name value="anxiety-assessment-observation-example-1"/>
+         <description value="James' Anxiety Assessment (Observation) - M3 Checklist Example"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>

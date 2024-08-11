@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Communication xmlns="http://hl7.org/fhir">
+    <id value="etoh-abuse-prevention-example-1"/> 
+    <status value="completed"/> 
+    <medium> 
+        <coding> 
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"/> 
+            <code value="FACE"/> 
+            <display value="face-to-face"/> 
+        </coding> 
+        <text value="Face to face"/> 
+    </medium> 
+    <subject> 
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject> 
+    <encounter> 
+        <reference value="Encounter/pcp-encounter-example-4"/> 
+    </encounter> 
+    <recipient> 
+        <reference value="Patient/bh-patient-example"/> 
+    </recipient> 
+    <sender> 
+        <reference value="Practitioner/pcp-provider-example-1"/> 
+    </sender> 
+    <payload> 
+        <contentString value="James received alcohol abuse prevention education "/> 
+    </payload> 
+</Communication> 

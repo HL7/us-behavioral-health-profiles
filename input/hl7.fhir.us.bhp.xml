@@ -139,6 +139,16 @@
         </resource>
         <resource>
             <reference>
+                <reference value="Practitioner/pcp-provider-example-1"/>
+                <display value="Priamry Care Physician - Practitioner"/>
+            </reference>
+            <name value="pcp-provider-example"/>
+            <description value="James' PCP - Practitioner example"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
                 <reference value="AllergyIntolerance/peanut-allergy-example-1"/>
                 <display value="Peanut Allergy Example"/>
             </reference>
@@ -174,6 +184,16 @@
             </reference>
             <name value="panic-attack-condition-example"/>
             <description value="James' panic attack example"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Communication/etoh-abuse-prevention-example-1"/>
+                <display value="Alcohol Abuse Prevention Education Example"/>
+            </reference>
+            <name value="etoh-abuse-prevention-example"/>
+            <description value="James' Alcohol abuse prevention education (received form his PCP) example"/>
             <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
@@ -349,6 +369,16 @@
         </resource>
         <resource>
             <reference>
+                <reference value="Encounter/pcp-encounter-example-4"/>
+                <display value="Primary Care Encounter Example"/>
+            </reference>
+            <name value="pcp-encounter-example"/>
+            <description value="James' follow-up ambulatory encounter with his primary care provider"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
                 <reference value="Goal/food-insecurity-example-1"/>
                 <display value="Food Insecurity Example"/>
             </reference>
@@ -424,6 +454,16 @@
             </reference>
             <name value="benzo-medication-example"/>
             <description value="James' Benzo Medication Example"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="MedicationDispense/bupropion-dispense-example-1"/>
+                <display value="Bupropion MedicationDispense Example"/>
+            </reference>
+            <name value="bupropion-dispense-example"/>
+            <description value="James' Bupropion dispensed from a community health center pharmacy with instructions to be taken daily"/>
             <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
@@ -672,8 +712,18 @@
                 <reference value="Observation/odh-usual-work-example-1"/>
                 <display value="Usual Occupational Data Example"/>
             </reference>
-            <name value="osh-usual-work-example"/>
+            <name value="odh-usual-work-example"/>
             <description value="James' Usual Occupation as a citrus farm worker"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/anxiety-assessment-observation-example-1"/>
+                <display value="Anxiety Assessment - M3 (Observation) Example"/>
+            </reference>
+            <name value="anxiety-assessment-observation-example-1"/>
+            <description value="James' Anxiety Assessment (Observation) - M3 Checklist Example"/>
             <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
