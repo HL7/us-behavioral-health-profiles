@@ -1,0 +1,58 @@
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+    <id value="alcohol-use-identification-test-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|7.0.0"/>
+    </meta>
+    <questionnaire
+        value="http://hl7.org/fhir/us/core/Questionnaire/AUDIT-C"/>
+    <status value="completed"/>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <authored value="2024-02-01T20:50:32.718Z"/>
+    <author>
+        <reference value="Practitioner/ed-physician-example-1"/>
+    </author>
+    <item>
+        <linkId value="/68517-2"/>
+        <text value="How many times in the past year have you have X or more drinks in a day?"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA15695-2"/>
+                <display value="3 or 4"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/68519-8"/>
+        <text value="How many standard drinks containing alcohol do you have on a typical day?"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA15695-2"/>
+                <display value="3 or 4"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/68520-6"/>
+        <text value="How often do you have 6 or more drinks on 1 occasion?"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA18876-5"/>
+                <display value="Monthly"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/76504-0"/>
+        <text value="Total score [AUDIT-C]"/>
+        <answer>
+            <valueQuantity value="4"/>
+        </answer>
+    </item>
+</QuestionnaireResponse>

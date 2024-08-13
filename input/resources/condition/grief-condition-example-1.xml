@@ -25,11 +25,20 @@
     <category>
         <coding>
             <system
-                value="http://terminology.hl7.org/CodeSystem/condition-category"/>
-            <code value="encounter-diagnosis"/>
-            <display value="Encounter Diagnosis"/>
+                value="http://hl7.org/fhir/us/core/CodeSystem/condition-category"/>
+            <code value="health-concern"/>
+            <display value="Health Concern"/>
         </coding>
-        <text value="Encounter Diagnosis"/>
+        <text value="Health Concern"/>
+    </category>
+    <category>
+        <coding>
+            <system
+                value="http://hl7.org/fhir/us/core/CodeSystem/us-core-category"/>
+            <code value="sdoh"/>
+            <display value="SDOH"/>
+        </coding>
+        <text value="Social Determinants Of Health"/>
     </category>
     <code>
         <coding>
