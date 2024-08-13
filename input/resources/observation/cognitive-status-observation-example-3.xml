@@ -40,13 +40,15 @@
         <reference value="Patient/bh-patient-example"/>
         <display value="James Wolff"/>
     </performer>
-    <valueCodeableConcept>
-        <coding>
-            <system
-                value="http://loinc.org"/>
-            <code value="LA33-6"/>
-            <display value="Yes"/>
-        </coding>
-        <text value="Yes"/>
-    </valueCodeableConcept>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="72106-8"/>
+                <display value="Total score [MMSE]"/>
+            </coding>
+            <text value="Total score [MMSE]"/>
+        </code>
+    </component>
+    <valueQuantity value="30"/>
 </Observation>

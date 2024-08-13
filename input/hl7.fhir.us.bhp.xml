@@ -149,6 +149,16 @@
         </resource>
         <resource>
             <reference>
+                <reference value="Practitioner/mental-health-provider-example-1"/>
+                <display value="Mental Health Practitioner"/>
+            </reference>
+            <name value="mental-health-provider-examplee"/>
+            <description value="James' Mental Health Provider - Practitioner example"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
                 <reference value="AdverseEvent/fall-adverse-event-example-1"/>
                 <display value="Fall (AdverseEvent) Example"/>
             </reference>
@@ -194,16 +204,6 @@
             </reference>
             <name value="panic-attack-condition-example"/>
             <description value="James' panic attack example"/>
-            <exampleBoolean value="true"/>
-            <groupingId value="examples"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="Communication/etoh-abuse-prevention-example-1"/>
-                <display value="Alcohol Abuse Prevention Education Example"/>
-            </reference>
-            <name value="etoh-abuse-prevention-example"/>
-            <description value="James' Alcohol abuse prevention education (received form his PCP) example"/>
             <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
@@ -719,11 +719,11 @@
         </resource>
         <resource>
             <reference>
-                <reference value="Observation/odh-usual-work-example-1"/>
+                <reference value="Observation/usual-work-example-1"/>
                 <display value="Usual Occupational Data Example"/>
             </reference>
-            <name value="odh-usual-work-example"/>
-            <description value="James' Usual Occupation as a citrus farm worker"/>
+            <name value="history-of-occupation-example"/>
+            <description value="James' History of Occupation as a farm worker"/>
             <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
@@ -822,7 +822,7 @@
                 <reference value="ServiceRequest/ServiceRequest-peer-mentoring-example-1"/>
                 <display value="Referral (ServiceRequest) Example"/>
             </reference>
-            <name value="alcohol-use-identification-test"/>
+            <name value="Social Connection SDOH Referral"/>
             <description value="Example of a referral to a peer coaching/mentoring program"/>
             <exampleBoolean value="true"/>
             <groupingId value="examples"/>
@@ -834,6 +834,26 @@
             </reference>
             <name value="bh-prevention-education-program-example"/>
             <description value="Example of education service provided to James"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Procedure/alcohol-prevetion-education-example-1"/>
+                <display value="Alcohol Prevention Program (Procedure) Example"/>
+            </reference>
+            <name value="alcohol-prevetion-education-example"/>
+            <description value="Example of James' alcohol cessation education"/>
+            <exampleBoolean value="true"/>
+            <groupingId value="examples"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Procedure/harm-reduction-example-1"/>
+                <display value="Harm Reduction Program (Procedure) Example"/>
+            </reference>
+            <name value="harm-reduction-activities-example"/>
+            <description value="Example of James' alcohol harm reduction program"/>
             <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>

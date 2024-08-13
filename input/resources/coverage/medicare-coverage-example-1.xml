@@ -43,4 +43,15 @@
         <reference value="Organization/fl-united-example-1"/>
         <display value="United Health Insurance - Medicare Advantage"/>
     </payor>
+    <class>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="group"/>
+                <display value="Group"/>
+            </coding>
+            <text value="Group"/>
+        </type>
+        <value value="Farmworkers Union Group Plan"/>
+    </class>
 </Coverage>

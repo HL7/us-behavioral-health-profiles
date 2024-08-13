@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Add an author and date and .category.text to all clinical note examples-->
 <DocumentReference xmlns="http://hl7.org/fhir">
     <id value="mental-health-progress-example-1"/>
     <meta>
@@ -21,12 +22,17 @@
             <code value="clinical-note"/>
             <display value="Clinical Note"/>
         </coding>
-        <text value="Clinical No"/>
+        <text value="Clinical Note"/>
     </category>
     <subject>
         <reference value="Patient/bh-patient-example"/>
         <display value="James Wolff"/>
     </subject>
+    <date value="2024-01-01"/>
+    <author>
+        <reference value="Practitioner/mental-health-provider-example-1"/>
+        <display value="Dr. Lazslo Cravensworth"/>
+    </author>
     <content>
         <attachment>
             <contentType value="text/plain"/>

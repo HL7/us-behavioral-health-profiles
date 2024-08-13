@@ -1,0 +1,21 @@
+<Procedure xmlns="http://hl7.org/fhir">
+    <id value="harm-reduction-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"/>
+    </meta>
+    <status value="completed"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="720175009"/>
+            <display value="Alcohol harm reduction program (regime/therapy)"/>
+        </coding>
+        <text value="Alcohol harm reduction program (regime/therapy)"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <performedDateTime value="2024-03-23"/>
+</Procedure>

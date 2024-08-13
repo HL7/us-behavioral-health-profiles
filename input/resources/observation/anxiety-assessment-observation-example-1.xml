@@ -31,6 +31,16 @@
         <reference value="Patient/bh-patient-example"/>
         <display value="James Wolff"/>
     </performer>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="71891-6"/>
+                <display value="I have attacks of anxiety or panic in the last 2W or more"/>
+            </coding>
+            <text value="I have attacks of anxiety or panic in the last 2W or more"/>
+        </code>
+    </component>
     <valueCodeableConcept>
         <coding>
             <system

@@ -1,15 +1,15 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="odh-usual-work-example-1"/>
+    <id value="usual-work-example-1"/>
     <meta>
         <profile
-            value="http://hl7.org/fhir/us/odh/StructureDefinition/odh-UsualWork"/>
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation"/>
     </meta>
     <status value="final"/>
     <code>
         <coding>
             <system value="http://loinc.org"/>
-            <code value="21843-8"/>
-            <display value="History of Usual occupation"/>
+            <code value="11341-5"/>
+            <display value="History of Occupation"/>
         </coding>
     </code>
     <subject>
@@ -18,9 +18,9 @@
     </subject>
     <valueCodeableConcept>
         <coding>
-            <system value="urn:oid:2.16.840.1.114222.4.5.314"/>
-            <code value="0205"/>
-            <display value="Farmers, ranchers, and other agricultural managers"/>
+            <system value="urn:oid:2.16.840.1.114222.4.5.327"/>
+            <code value="45-2092.02.015820"/>
+            <display value="Farm Worker [Farmworkers and Laborers, Crop]"/>
         </coding>
     </valueCodeableConcept>
 </Observation>

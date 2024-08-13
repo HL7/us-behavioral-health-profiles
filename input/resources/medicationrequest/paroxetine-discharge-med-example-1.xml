@@ -4,6 +4,21 @@
         <profile
             value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"/>
     </meta>
+    <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence">
+        <extension url="medicationAdherence">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="702565001"/>
+                    <display value="Non-compliance of drug therapy (finding)"/>
+                </coding>
+                <text value="Non-compliance of drug therapy (finding)"/>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="dateAsserted">
+            <valueDateTime value="2024-02-01T08:15:49.449Z"/>
+        </extension>
+    </extension>
     <status value="completed"/>
     <intent value="order"/>
     <category>
@@ -29,6 +44,17 @@
         <display value="Emergency Department"/>
     </encounter>
     <requester>
-        <reference value="Patient/bh-patient-example"/>
+        <reference value="Practitioner/mental-health-provider-example-1"/>
+        <display value="Dr. Lazslo Cravensworth"/>
     </requester>
+    <reasonReference>
+        <reference value="Condition/depression-condition-example-1"/>
+    </reasonReference>
+    <dosageInstruction>
+        <text value="Take 1 tablet daily"/>
+    </dosageInstruction>
+    <dispenseRequest>
+        <numberOfRepeatsAllowed value="3"/>
+        <quantity value="30"/>
+    </dispenseRequest>
 </MedicationRequest>
