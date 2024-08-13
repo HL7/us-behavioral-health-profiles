@@ -1,0 +1,24 @@
+<Procedure xmlns="http://hl7.org/fhir">
+    <id value="bh-prevention-education-program-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"/>
+    </meta>
+    <basedOn>
+        <reference value="ServiceRequest/ServiceRequest-peer-mentoring-example-1"/>
+    </basedOn>
+    <status value="completed"/>
+    <code>
+        <coding>
+            <system value="https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"/>
+            <code value="H0025"/>
+            <display value="Behavioral health prevention education service (delivery of services with target population to affect knowledge, attitude and/or behavior)"/>
+        </coding>
+        <text value="Behavioral Health Prevention Education"/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <performedDateTime value="2024-03-23"/>
+</Procedure>
