@@ -1,0 +1,159 @@
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+    <id value="barthel-index-functional-status-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|7.0.0"/>
+    </meta>
+    <questionnaire
+        value="http://hl7.org/fhir/us/core/Questionnaire/barthel-index-panel"/>
+    <status value="completed"/>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <authored value="2024-02-01T20:50:32.718Z"/>
+    <author>
+        <reference value="Practitioner/ed-physician-example-1"/>
+    </author>
+    <item>
+        <linkId value="/83184-2"/>
+        <text value="Feeding or eating ability"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA12302-8
+                    "/>
+                <display value="Independent
+                    "/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/83185-9
+            "/>
+        <text value="Transferring ability
+            "/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA12302-8
+                    "/>
+                <display value="Independent
+                    "/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/83185-9
+            "/>
+        <text value="Grooming ability"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA31644-0
+                    "/>
+                <display value="Independent face/hair/teeth/shaving (implements provided)
+                    "/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/83183-4"/>
+        <text value="Toileting ability"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA31632-5
+                    "/>
+                <display value="Independent (on and off, dressing, wiping)
+                    "/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/83181-8
+            "/>
+        <text value="Bathing ability
+            "/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA31636-6
+                    "/>
+                <display value="Independent (or in shower)
+                    "/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/83186-7
+            "/>
+        <text value="Ambulation ability
+            "/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA31642-4"/>
+                <display value="Independent (but may use any aid; for example, stick) >50 yards
+                    "/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/96758-8"/>
+        <text value="Stairs ability"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA12302-8
+                    "/>
+                <display value="Independent
+                    "/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/83182-6"/>
+        <text value="Dressing ability"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA31638-2
+                    "/>
+                <display value="Independent (including buttons, zips, laces, etc.)
+                    "/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/96759-6
+            "/>
+        <text value="Bowel control ability
+            "/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA31625-9"/>
+                <display value="Continent"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/96760-4"/>
+        <text value="Bladder control ability"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA31625-9"/>
+                <display value="Continent"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/96761-2"/>
+        <text value="Total score Barthel Index"/>
+        <answer>
+            <valueInteger value="100"/>
+        </answer>
+    </item>
+</QuestionnaireResponse>

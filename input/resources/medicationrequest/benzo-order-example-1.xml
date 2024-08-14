@@ -13,7 +13,7 @@
     <intent value="order"/>
     <medicationReference>
         <reference value="Medication/benzo-medication-example-1"/>
-        <display value="lorazepam 2 MG Oral Tablet [Ativan]"/>
+        <display value="lorazepam 0.5 MG Oral Tablet [Ativan]"/>
     </medicationReference>
     <subject>
         <reference value="Patient/bh-patient-example"/>
@@ -26,4 +26,7 @@
     <requester>
         <reference value="Practitioner/ed-physician-example-1"/>
     </requester>
+    <dosageInstruction>  
+        <text value="every 8 hours as needed"/>  
+    </dosageInstruction>
 </MedicationRequest>
