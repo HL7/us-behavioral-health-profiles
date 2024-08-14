@@ -1,0 +1,45 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="serum-glucose-example-1"/>
+    <meta>
+        <profile
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|7.0.0"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+        </coding>
+        <text value="Laboratory"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="4548-4"/>
+            <display value="Hemoglobin A1c/Hemoglobin.total in Blood "/>
+        </coding>
+        <text value="Hemoglobin A1c/Hemoglobin.total in Blood "/>
+    </code>
+    <subject>
+        <reference value="Patient/bh-patient-example"/>
+        <display value="James Wolff"/>
+    </subject>
+    <effectiveDateTime value="2024-02-05"/>
+    <valueQuantity>
+        <value value="6.9"/>
+        <unit value="%"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="%"/>
+    </valueQuantity>
+    <interpretation>
+        <coding>
+            <system
+                value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+            <display value="High"/>
+        </coding>
+        <text value="High"/>
+    </interpretation>
+</Observation>
