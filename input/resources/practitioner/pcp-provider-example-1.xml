@@ -13,11 +13,21 @@
         <given value="Doc"/>
         <prefix value="Dr"/>
     </name>
+    <telecom>
+        <system value="phone"/>
+        <value value="999-999-9999"/>
+        <use value="work"/>
+    </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="doc.family@example.com"/>
+    </telecom>
     <address>
         <use value="work"/>
         <line value="444 Main Street"/>
         <city value="Miami"/>
         <state value="FL"/>
-        <postalCode value="01002"/>
+        <postalCode value="33102"/>
     </address>
+    
 </Practitioner>
