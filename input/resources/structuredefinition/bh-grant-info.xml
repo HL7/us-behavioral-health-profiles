@@ -22,6 +22,13 @@
         </element>
         <element id="Observation.extension">
             <path value="Observation.extension"/>
+        </element>
+        <element id="Observation.extension:program_info">
+            <path value="Observation.extension"/>
+            <sliceName value="program_info"/>
+            <short value="Program information including program ID and grant number"/>
+            <min value="0"/>
+            <max value="*"/>
             <type>
                 <code value="Extension"/>
                 <profile value="http://hl7.org/fhir/us/bhp/StructureDefinition/program-info"/>

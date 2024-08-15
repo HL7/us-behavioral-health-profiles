@@ -4,7 +4,7 @@
         <versionId value="6"/>
         <lastUpdated value="2024-08-05T17:14:11.055Z"/>
     </meta>
-    <url value="http://hl7.org/fhir/us/bhp/StructureDefinition/program-id"/>
+    <url value="http://hl7.org/fhir/us/bhp/StructureDefinition/program-info"/>
     <name value="GrantProgramIdAndNumber"/>
     <title value="Grant Program ID and Number"/>
     <status value="active"/>
@@ -22,6 +22,10 @@
     <differential>
         <element id="Extension">
             <path value="Extension"/>
+            <definition
+                value="Behavioral Health Program and grant information"/>
+            <min value="0"/>
+            <max value="*"/>
         </element>
         <element id="Extension.extension">
             <path value="Extension.extension"/>
@@ -44,12 +48,13 @@
             <max value="1"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Extension.extension:program_id.extension">
-            <path value="Extension.extension.extension"/>
-            <max value="0"/>
-        </element>
         <element id="Extension.extension:program_id.url">
             <path value="Extension.extension.url"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="uri"/>
+            </type>
             <fixedUri value="program_id"/>
         </element>
         <element id="Extension.extension:program_id.value[x]">
@@ -66,14 +71,16 @@
             <definition
                 value="The grant number that the behavioral health service is operating under."/>
             <max value="1"/>
+            <type>
+                <code value="Extension"/>
+            </type>
             <mustSupport value="true"/>
-        </element>
-        <element id="Extension.extension:grant_number.extension">
-            <path value="Extension.extension.extension"/>
-            <max value="0"/>
         </element>
         <element id="Extension.extension:grant_number.url">
             <path value="Extension.extension.url"/>
+            <type>
+                <code value="uri"/>
+            </type>
             <fixedUri value="grant_number"/>
         </element>
         <element id="Extension.extension:grant_number.value[x]">
