@@ -19,7 +19,7 @@
    <name value="USBehavioralHealthProfiles"/>
    <title value="US Behavioral Health Profiles Implementation Guide"/>
    <status value="active"/>
-   <date value="2024-08-15T10:12:41-04:00"/>
+   <date value="2024-08-15T09:41:23-06:00"/>
    <contact>
       <telecom>
          <system value="phone"/>
@@ -474,10 +474,10 @@
             <valueString value="StructureDefinition:extension"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-program-id.html"/>
+            <valueUri value="StructureDefinition-program-info.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/program-id"/>
+            <reference value="StructureDefinition/program-info"/>
             <display value="Grant Program ID and Number Extension"/>
          </reference>
          <name value="Grant Program ID and Number Extension"/>
@@ -835,14 +835,14 @@
             <valueString value="Coverage"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Coverage-medicare-coverage-example-1.html"/>
+            <valueUri value="Coverage-medicaid-coverage-example-1.html"/>
          </extension>
          <reference>
-            <reference value="Coverage/medicare-coverage-example-1"/>
-            <display value="medicare-coverage-example"/>
+            <reference value="Coverage/medicaid-coverage-example-1"/>
+            <display value="medicaid-coverage-example"/>
          </reference>
-         <name value="medicare-coverage-example"/>
-         <description value="Example of united health (ppo) part c - Medicare advantage coverage"/>
+         <name value="medicaid-coverage-example"/>
+         <description value="Example of James' Medicaid coverage in the state of Florida"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -854,14 +854,14 @@
             <valueString value="Organization"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Organization-fl-united-example-1.html"/>
+            <valueUri value="Organization-fl-medicaid-example-1.html"/>
          </extension>
          <reference>
-            <reference value="Organization/fl-united-example-1"/>
-            <display value="fl-united-example"/>
+            <reference value="Organization/fl-medicaid-example-1"/>
+            <display value="fl-medicaid-example"/>
          </reference>
-         <name value="fl-united-example"/>
-         <description value="Example of united health (ppo) part c - organization"/>
+         <name value="fl-medicaid-example"/>
+         <description value="Example of Florida Medicaid (organization) - MyACCESS"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -1466,10 +1466,10 @@
          </extension>
          <reference>
             <reference value="Observation/cognitive-status-observation-example-3"/>
-            <display value="cognitive-status-obs-example"/>
+            <display value="Mini Mental State Examination [MMSE]"/>
          </reference>
-         <name value="cognitive-status-obs-example"/>
-         <description value="Example of a mental/cognitive health status assessment/screening"/>
+         <name value="Mini-Mental State Examination [MMSE]"/>
+         <description value="Example of a MMSE mental/cognitive health status assessment/screening"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -1485,10 +1485,10 @@
          </extension>
          <reference>
             <reference value="Observation/disability-status-observation-example-1"/>
-            <display value="disability-status-obs-example"/>
+            <display value="Comprehensive Universal Behavior Health Screen (CUBS)©"/>
          </reference>
-         <name value="disability-status-obs-example"/>
-         <description value="Example of disability status health status assessment/screening"/>
+         <name value="Comprehensive Universal Behavior Health Screen (CUBS)©"/>
+         <description value="Example of Comprehensive Universal Behavior Health Screen (CUBS)© assessment/screening"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -1789,10 +1789,10 @@
          </extension>
          <reference>
             <reference value="QuestionnaireResponse/C-SSRS-example-1"/>
-            <display value="c-sses-9-example"/>
+            <display value="C-SSRS-example"/>
          </reference>
-         <name value="c-sses-9-example"/>
-         <description value="Example of suicide risk assessment/screening"/>
+         <name value="C-SSRS-example"/>
+         <description value="Example of Columbia Suicide Risk Assessment"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -1808,10 +1808,10 @@
          </extension>
          <reference>
             <reference value="QuestionnaireResponse/hark-example-1"/>
-            <display value="hark-example"/>
+            <display value="Humiliation, Afraid, Rape, and Kick questionnaire (HARK)"/>
          </reference>
-         <name value="hark-example"/>
-         <description value="Example of interpersonal violence assessment/screening"/>
+         <name value="Humiliation, Afraid, Rape, and Kick questionnaire (HARK)"/>
+         <description value="Example of Humiliation, Afraid, Rape, and Kick questionnaire (HARK) QuestionnaireResponse"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -1865,10 +1865,10 @@
          </extension>
          <reference>
             <reference value="QuestionnaireResponse/alcohol-use-identification-test-1"/>
-            <display value="alcohol-use-id-example"/>
+            <display value="Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] example"/>
          </reference>
-         <name value="alcohol-use-id-example"/>
-         <description value="Example of patient alcohol abuse health status assessment/screening"/>
+         <name value="Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]"/>
+         <description value="Example of Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] assessment/screening"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -2029,7 +2029,7 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-program-id.html"/>
+               <nameUrl value="StructureDefinition-program-info.html"/>
                <title value="Grant Program ID and Number Extension"/>
                <generation value="generated"/>
             </page>
@@ -2124,13 +2124,13 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Coverage-medicare-coverage-example-1.html"/>
-               <title value="medicare-coverage-example"/>
+               <nameUrl value="Coverage-medicaid-coverage-example-1.html"/>
+               <title value="medicaid-coverage-example"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Organization-fl-united-example-1.html"/>
-               <title value="fl-united-example"/>
+               <nameUrl value="Organization-fl-medicaid-example-1.html"/>
+               <title value="fl-medicaid-example"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -2290,12 +2290,12 @@
             </page>
             <page>
                <nameUrl value="Observation-cognitive-status-observation-example-3.html"/>
-               <title value="cognitive-status-obs-example"/>
+               <title value="Mini-Mental State Examination [MMSE]"/>
                <generation value="generated"/>
             </page>
             <page>
                <nameUrl value="Observation-disability-status-observation-example-1.html"/>
-               <title value="disability-status-obs-example"/>
+               <title value="Comprehensive Universal Behavior Health Screen (CUBS)©"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -2375,12 +2375,12 @@
             </page>
             <page>
                <nameUrl value="QuestionnaireResponse-C-SSRS-example-1.html"/>
-               <title value="c-sses-9-example"/>
+               <title value="C-SSRS-example"/>
                <generation value="generated"/>
             </page>
             <page>
                <nameUrl value="QuestionnaireResponse-hark-example-1.html"/>
-               <title value="hark-example"/>
+               <title value="Humiliation, Afraid, Rape, and Kick questionnaire (HARK)"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -2395,7 +2395,7 @@
             </page>
             <page>
                <nameUrl value="QuestionnaireResponse-alcohol-use-identification-test-1.html"/>
-               <title value="alcohol-use-id-example"/>
+               <title value="Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]"/>
                <generation value="generated"/>
             </page>
             <page>

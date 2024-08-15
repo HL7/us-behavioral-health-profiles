@@ -152,7 +152,14 @@
         </period>
     </address>
     <communication>
-        <language value="en" />
-        <preferred value="true" />
+        <language>
+            <coding>
+                <system value="urn:ietf:bcp:47"/>
+                <code value="en"/>
+                <display value="English"/>
+            </coding>
+            <text value="English"/>
+        </language>
+        <preferred value="true"/>
     </communication>
 </Patient>

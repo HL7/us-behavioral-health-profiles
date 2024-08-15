@@ -18,6 +18,25 @@
         <extension url="dateAsserted">
             <valueDateTime value="2024-02-01T08:15:49.449Z"/>
         </extension>
+        <extension url="informationSource">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="116154003"/>
+                    <display value="Patient (person)"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="informationSource">
+            <valueCodeableConcept>
+                <coding>
+                    <system
+                        value="https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html"/>
+                    <code value="1179-1"/>
+                    <display value="Pharmacy"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
     </extension>
     <status value="completed"/>
     <intent value="order"/>

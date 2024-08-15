@@ -1,22 +1,18 @@
 <Observation xmlns="http://hl7.org/fhir">
     <id value="bh-grant-info-observation-example-1"/>
     <meta>
-        <profile
-            value="http://hl7.org/fhir/us/bhp/StructureDefinition/bh-grant-info"/>
+        <profile value="http://hl7.org/fhir/us/bhp/StructureDefinition/bh-grant-info"/>
     </meta>
     <extension url="http://hl7.org/fhir/us/bhp/StructureDefinition/program-id">
-        <extension url="http://hl7.org/fhir/us/bhp/StructureDefinition/program-id">
-            <valueString value="SP-23-004"/>
-        </extension>
-        <extension url="http://hl7.org/fhir/us/bhp/StructureDefinition/program-id">
-            <valueString value="SP083783-01"/>
-        </extension>
+        <valueString value="SP-23-004"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/us/bhp/StructureDefinition/grant-number">
+        <valueString value="SP083783-01"/>
     </extension>
     <status value="final"/>
     <category>
         <coding>
-            <system
-                value="http://hl7.org/fhir/us/bhp/CodeSystem/bh-funding-type-codes"/>
+            <system value="http://hl7.org/fhir/us/bhp/CodeSystem/bh-funding-type-codes"/>
             <code value="funding-program-info"/>
             <display value="Program Funding Information"/>
         </coding>
@@ -45,7 +41,6 @@
             <code value="discretionary"/>
             <display value="Discretionary Funding"/>
         </coding>
-        <text
-            value="Discretionary Grant Funding"/>
+        <text value="Discretionary Grant Funding"/>
     </valueCodeableConcept>
 </Observation>
