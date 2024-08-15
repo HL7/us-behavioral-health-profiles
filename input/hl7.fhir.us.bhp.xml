@@ -760,9 +760,9 @@
         <resource>
             <reference>
                 <reference value="QuestionnaireResponse/phq-9-example-1"/>
-                <display value="phq-9-example"/>
+                <display value="Patient Health Questionnaire-9 (PHQ-9)"/>
             </reference>
-            <name value="phq-9-example"/>
+            <name value="Patient Health Questionnaire-9 (PHQ-9)"/>
             <description value="Example of a depression assessment/screening"/>
             <exampleBoolean value="true"/>
             <groupingId value="examples"/>
@@ -770,10 +770,10 @@
         <resource>
             <reference>
                 <reference value="QuestionnaireResponse/C-SSRS-example-1"/>
-                <display value="Columbia - suicide severity rating scale"/>
+                <display value="Columbia-Suicide Severity Rating Scale (C-SSRS)"/>
             </reference>
-            <name value="Columbia - suicide severity rating scale"/>
-            <description value="Example of Columbia Suicide Severity Rating Scale"/>
+            <name value="Columbia-Suicide Severity Rating Scale (C-SSRS)"/>
+            <description value="Example of suicide risk assessment/screening"/>
             <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
@@ -783,16 +783,16 @@
                 <display value="Humiliation, Afraid, Rape, and Kick questionnaire (HARK)"/>
             </reference>
             <name value="Humiliation, Afraid, Rape, and Kick questionnaire (HARK)"/>
-            <description value="Example of Humiliation, Afraid, Rape, and Kick questionnaire (HARK) QuestionnaireResponse"/>
+            <description value="Example of interpersonal violence assessment/screening"/>
             <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
         <resource>
             <reference>
                 <reference value="QuestionnaireResponse/ace-example-1"/>
-                <display value="ace-example"/>
+                <display value="Adverse Childhood Experiences (ACEs) Assessment"/>
             </reference>
-            <name value="ace-example"/>
+            <name value="Adverse Childhood Experiences (ACEs) Assessment"/>
             <description value="Example of a mental trauma or PTSD assessment/screening"/>
             <exampleBoolean value="true"/>
             <groupingId value="examples"/>
@@ -813,7 +813,7 @@
                 <display value="Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] example"/>
             </reference>
             <name value="Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]"/>
-            <description value="Example of Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] assessment/screening"/>
+            <description value="Example of patient alcohol abuse health status assessment/screening"/>
             <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
@@ -889,6 +889,11 @@
             <page>
                 <nameUrl value="bh_to_fhir_examples.html"/>
                 <title value="+BH to FHIR Examples"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="downloads.html"/>
+                <title value="Downloads"/>
                 <generation value="markdown"/>
             </page>
         </page>

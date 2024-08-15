@@ -1,10 +1,26 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li><a href="index.html">IG Home</a></li>
-  <li><a href="uscdi_bh_elements.html">USCDI+ BH Elements</a></li>
-  <li><a href="summary_story.html">Summary Story</a></li>
-  <li><a href="full_story.html">Full Story</a></li>
-  <li><a href="quick_facts.html">Quick Facts</a></li>
-  <li><a href="artifacts.html">Artifact Index</a></li>
-  <li><a href="bh_to_fhir_profiles.html">+BH to FHIR Profiles</a></li>
-  <li><a href="bh_to_fhir_examples.html">+BH to FHIR Examples</a></li>
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Background</a>
+    <ul class="dropdown-menu">
+      <li><a href="uscdi_bh_elements.html">USCDI+ BH Elements</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">User Story</a>
+    <ul class="dropdown-menu">
+      <li><a href="summary_story.html">Summary Story</a></li>
+      <li><a href="full_story.html">Full Story</a></li>
+      <li><a href="quick_facts.html">Quick Facts</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Technical Artifacts</a>
+    <ul class="dropdown-menu">
+      <li><a href="bh_to_fhir_profiles.html">+BH to FHIR Profiles</a></li>
+      <li><a href="bh_to_fhir_examples.html">+BH to FHIR Examples</a></li>
+      <li><a href="artifacts.html">Artifact Index</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
 </ul>

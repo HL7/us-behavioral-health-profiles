@@ -19,7 +19,7 @@
    <name value="USBehavioralHealthProfiles"/>
    <title value="US Behavioral Health Profiles Implementation Guide"/>
    <status value="active"/>
-   <date value="2024-08-15T14:05:36-06:00"/>
+   <date value="2024-08-15T17:30:11-04:00"/>
    <contact>
       <telecom>
          <system value="phone"/>
@@ -1770,9 +1770,9 @@
          </extension>
          <reference>
             <reference value="QuestionnaireResponse/phq-9-example-1"/>
-            <display value="phq-9-example"/>
+            <display value="Patient Health Questionnaire-9 (PHQ-9)"/>
          </reference>
-         <name value="phq-9-example"/>
+         <name value="Patient Health Questionnaire-9 (PHQ-9)"/>
          <description value="Example of a depression assessment/screening"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
@@ -1789,10 +1789,10 @@
          </extension>
          <reference>
             <reference value="QuestionnaireResponse/C-SSRS-example-1"/>
-            <display value="Columbia - suicide severity rating scale"/>
+            <display value="Columbia-Suicide Severity Rating Scale (C-SSRS)"/>
          </reference>
-         <name value="Columbia - suicide severity rating scale"/>
-         <description value="Example of Columbia Suicide Severity Rating Scale"/>
+         <name value="Columbia-Suicide Severity Rating Scale (C-SSRS)"/>
+         <description value="Example of suicide risk assessment/screening"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -1811,7 +1811,7 @@
             <display value="Humiliation, Afraid, Rape, and Kick questionnaire (HARK)"/>
          </reference>
          <name value="Humiliation, Afraid, Rape, and Kick questionnaire (HARK)"/>
-         <description value="Example of Humiliation, Afraid, Rape, and Kick questionnaire (HARK) QuestionnaireResponse"/>
+         <description value="Example of interpersonal violence assessment/screening"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -1827,9 +1827,9 @@
          </extension>
          <reference>
             <reference value="QuestionnaireResponse/ace-example-1"/>
-            <display value="ace-example"/>
+            <display value="Adverse Childhood Experiences (ACEs) Assessment"/>
          </reference>
-         <name value="ace-example"/>
+         <name value="Adverse Childhood Experiences (ACEs) Assessment"/>
          <description value="Example of a mental trauma or PTSD assessment/screening"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
@@ -1868,7 +1868,7 @@
             <display value="Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] example"/>
          </reference>
          <name value="Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]"/>
-         <description value="Example of Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] assessment/screening"/>
+         <description value="Example of patient alcohol abuse health status assessment/screening"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -1965,6 +1965,7 @@
          
          
          
+         
          </page>
          <page>
             <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -2012,6 +2013,14 @@
             </extension>
             <nameUrl value="bh_to_fhir_examples.html"/>
             <title value="+BH to FHIR Examples"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="downloads.html"/>
+            </extension>
+            <nameUrl value="downloads.html"/>
+            <title value="Downloads"/>
             <generation value="markdown"/>
          </page>
          <page>
@@ -2370,12 +2379,12 @@
             </page>
             <page>
                <nameUrl value="QuestionnaireResponse-phq-9-example-1.html"/>
-               <title value="phq-9-example"/>
+               <title value="Patient Health Questionnaire-9 (PHQ-9)"/>
                <generation value="generated"/>
             </page>
             <page>
                <nameUrl value="QuestionnaireResponse-C-SSRS-example-1.html"/>
-               <title value="Columbia - suicide severity rating scale"/>
+               <title value="Columbia-Suicide Severity Rating Scale (C-SSRS)"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -2385,7 +2394,7 @@
             </page>
             <page>
                <nameUrl value="QuestionnaireResponse-ace-example-1.html"/>
-               <title value="ace-example"/>
+               <title value="Adverse Childhood Experiences (ACEs) Assessment"/>
                <generation value="generated"/>
             </page>
             <page>
