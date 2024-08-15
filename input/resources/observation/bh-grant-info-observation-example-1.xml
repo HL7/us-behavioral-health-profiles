@@ -3,11 +3,13 @@
     <meta>
         <profile value="http://hl7.org/fhir/us/bhp/StructureDefinition/bh-grant-info"/>
     </meta>
-    <extension url="http://hl7.org/fhir/us/bhp/StructureDefinition/program-id">
-        <valueString value="SP-23-004"/>
-    </extension>
-    <extension url="http://hl7.org/fhir/us/bhp/StructureDefinition/grant-number">
-        <valueString value="SP083783-01"/>
+    <extension url="http://hl7.org/fhir/us/bhp/StructureDefinition/bh-grant-info">
+        <extension url="http://hl7.org/fhir/us/bhp/StructureDefinition/program-id">
+            <valueString value="SP-23-004"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/us/bhp/StructureDefinition/grant-number">
+            <valueString value="SP083783-01"/>
+        </extension>
     </extension>
     <status value="final"/>
     <category>
