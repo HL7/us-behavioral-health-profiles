@@ -454,7 +454,7 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
     <td class="tg-0lax">Patient Demographics</td>
     <td class="tg-1wig">Email Address</td>
     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
-    <td class="tg-0lax"></td>
+    <td class="tg-0lax">patient.telecom</td>
   </tr>
   <tr>
     <td class="tg-0lax">Patient Demographics</td>
@@ -561,25 +561,25 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   <tr>
     <td class="tg-0lax">Problems</td>
     <td class="tg-1wig">Problems/Conditions</td>
-    <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+    <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
     <td class="tg-0lax">condition.code</td>
   </tr>
   <tr>
     <td class="tg-0lax">Problems</td>
     <td class="tg-1wig">SDOH Problems/Health Concerns</td>
-    <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+    <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
     <td class="tg-0lax">condition.code</td>
   </tr>
   <tr>
     <td class="tg-0lax">Problems</td>
     <td class="tg-1wig">Date of Diagnosis</td>
-    <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+    <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
     <td class="tg-0lax">condition.onset</td>
   </tr>
   <tr>
     <td class="tg-0lax">Problems</td>
     <td class="tg-1wig">Date of Onset</td>
-    <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+    <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
     <td class="tg-0lax">condition.onset</td>
   </tr>
   <tr>
@@ -591,7 +591,7 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   <tr>
     <td class="tg-0lax">Procedures</td>
     <td class="tg-1wig">Harm Reduction Activities</td>
-    <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-procedure.html">US Core Procedures</a></td>
+    <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
     <td class="tg-0lax">procedure.code</td>
   </tr>
   <tr>
@@ -681,7 +681,7 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   <tr>
     <td class="tg-0lax">Vital Signs</td>
     <td class="tg-1wig">Average Blood Pressure</td>
-    <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-average-blood-pressure.html">US Core Average Blood Pressure (v7)</a></td>
+    <td class="tg-zzem"><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-average-blood-pressure.html">US Core Average Blood Pressure (STU7)</a></td>
     <td class="tg-0lax">observation.code</td>
   </tr>
   <tr>
@@ -694,6 +694,6 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
     <td class="tg-0lax">Work Information</td>
     <td class="tg-1wig">Veteran Status</td>
     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
-    <td class="tg-zzem"><a href="https://build.fhir.org/ig/HL7/fhir-military-service/StructureDefinition-military-service-veteran-status.html%20(Patient.extension:USVeteranStatus)">extension</a></td>
+    <td class="tg-zzem">extension</td>
   </tr>
 </tbody></table>

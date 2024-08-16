@@ -76,7 +76,7 @@ The Implementation Guide contains multiple sections to help readers use the IG, 
     <td class="tg-cly1">Technical Artifacts</td>
     <td class="tg-fapl"><a href="bh_to_fhir_examples.html">USCDI+ BH to FHIR Examples</a></td>
     <td class="tg-cly1">This table links USCDI+ behavioral health data elements to their corresponding FHIR elements, with examples and narratives showing their practical application. It ensures accurate and interoperable healthcare data across systems</td>
-    <td class="tg-cly1">Detailed Technical</td>
+    <td class="tg-cly1">Technical</td>
   </tr>
     <tr>
     <td class="tg-cly1">Technical Artifacts</td>
@@ -88,7 +88,7 @@ The Implementation Guide contains multiple sections to help readers use the IG, 
     <td class="tg-cly1">Technical Artifacts</td>
     <td class="tg-fapl"><a href="artifacts.html">FHIR Artifacts</a></td>
     <td class="tg-cly1">An index of the FHIR artifacts include in this implementation guide</td>
-    <td class="tg-cly1">Technical</td>
+    <td class="tg-cly1">Detailed Technical</td>
   </tr>
   <tr>
     <td class="tg-cly1">Specification</td>
@@ -125,7 +125,7 @@ The Implementation Guide contains multiple sections to help readers use the IG, 
   </tr>
   <tr>
     <td class="tg-cly1">JaMor Hairston</td>
-    <td class="tg-cly1">Contributor</td>
+    <td class="tg-cly1">IG Author</td>
             <td class="tg-cly1">Next Level Health Innovations</td>
   </tr>
   <tr>
@@ -215,7 +215,7 @@ This guide contains content from [LOINC](http://loinc.org). LOINC is copyright Â
     <td class="tg-cly1">SDC is the basis for mapping QuestionnaireResponses to Observations and Conditions. SDC also provides guidance around how questionnaires can be created with support for score calculation, conditional behavior, specific rendering expectations, etc.</td>
   </tr>
     <tr>
-    <td class="tg-zzem"><a href="https://hl7.org/fhir/us/sdoh-clinicalcare/STU2.1"/>Gravity SDOH Clinical Care</a></td>
+    <td class="tg-zzem"><a href="https://hl7.org/fhir/us/sdoh-clinicalcare/STU2.1"/>SDOH Clinical Care</a></td>
     <td class="tg-cly1">2.1.0</td>
     <td class="tg-7zrl">In some cases, where profiles could not be derived from US Core, SDOH Clinical Care profiles are referenced.</td>
   </tr>

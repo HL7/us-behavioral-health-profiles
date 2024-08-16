@@ -269,13 +269,13 @@ This table provides a correlation between USCDI+ behavioral health data elements
   <tr>
     <td class="tg-0lax">Health Status Assessments</td>
     <td class="tg-1wig">Depression Assessment</td>
-    <td class="tg-zzem"><a href="QuestionnaireResponse-phq-9-example-1.html">phq-9-example</a></td>
+    <td class="tg-zzem"><a href="QuestionnaireResponse-phq-9-example-1.html">Patient Health Questionnaire-9 (PHQ-9)</a></td>
     <td class="tg-ktyi">Example of a depression assessment/screening</td>
   </tr>
   <tr>
     <td class="tg-0lax">Health Status Assessments</td>
     <td class="tg-1wig">Mental/Cognitive Status</td>
-    <td class="tg-zzem"><a href="Observation-cognitive-status-observation-example-3.html">cognitive-status-obs-example</a></td>
+    <td class="tg-zzem"><a href="Observation-cognitive-status-observation-example-3.html">Mini-Mental State Examination [MMSE]</a></td>
     <td class="tg-ktyi">Example of a mental/cognitive health status assessment/screening</td>
   </tr>
   <tr>
@@ -287,13 +287,13 @@ This table provides a correlation between USCDI+ behavioral health data elements
   <tr>
     <td class="tg-0lax">Health Status Assessments</td>
     <td class="tg-1wig">Alcohol Use</td>
-    <td class="tg-zzem"><a href="QuestionnaireResponse-alcohol-use-identification-test-1.html">alcohol-use-id-example</a></td>
+    <td class="tg-zzem"><a href="QuestionnaireResponse-alcohol-use-identification-test-1.html">Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]</a></td>
     <td class="tg-ktyi">Example of patient alcohol abuse health status assessment/screening</td>
   </tr>
   <tr>
     <td class="tg-0lax">Health Status Assessments</td>
     <td class="tg-1wig">Disability Status</td>
-    <td class="tg-zzem"><a href="Observation-disability-status-observation-example-1.html">disability-status-obs-example</a></td>
+    <td class="tg-zzem"><a href="Observation-disability-status-observation-example-1.html">Comprehensive Universal Behavior Health Screen (CUBS)©</a></td>
     <td class="tg-ktyi">Example of disability status health status assessment/screening</td>
   </tr>
   <tr>
@@ -347,25 +347,25 @@ This table provides a correlation between USCDI+ behavioral health data elements
   <tr>
     <td class="tg-0lax">Health Status Assessments</td>
     <td class="tg-1wig">Suicide Risk Assessment</td>
-    <td class="tg-zzem"><a href="QuestionnaireResponse-C-SSRS-example-1.html">c-sses-9-example</a></td>
+    <td class="tg-zzem"><a href="QuestionnaireResponse-C-SSRS-example-1.html">Columbia-Suicide Severity Rating Scale (C-SSRS)</a></td>
     <td class="tg-ktyi">Example of suicide risk assessment/screening</td>
   </tr>
   <tr>
     <td class="tg-0lax">Health Status Assessments</td>
     <td class="tg-1wig">Interpersonal Violence</td>
-    <td class="tg-zzem"><a href="QuestionnaireResponse-hark-example-1.html">hark-example</a></td>
+    <td class="tg-zzem"><a href="QuestionnaireResponse-hark-example-1.html">Humiliation, Afraid, Rape, and Kick questionnaire (HARK)</a></td>
     <td class="tg-ktyi">Example of Interpersonal Violence assessment/screening</td>
   </tr>
   <tr>
     <td class="tg-0lax">Health Status Assessments</td>
     <td class="tg-1wig">Mental Health Status Screen</td>
-    <td class="tg-zzem"><a href="Observation-cognitive-status-observation-example-3.html">cognitive-status-obs-example</a></td>
+    <td class="tg-zzem"><a href="Observation-cognitive-status-observation-example-3.html">Mini-Mental State Examination [MMSE]</a></td>
     <td class="tg-ktyi">Example of a behavioral health focused mental health status screening</td>
   </tr>
   <tr>
     <td class="tg-0lax">Health Status Assessments</td>
     <td class="tg-1wig">Mental Trauma and PTSD Assessment</td>
-    <td class="tg-zzem"><a href="QuestionnaireResponse-ace-example-1.html">ace-example</a></td>
+    <td class="tg-zzem"><a href="QuestionnaireResponse-ace-example-1.html">Adverse Childhood Experiences (ACEs) Assessment</a></td>
     <td class="tg-ktyi">Example of a mental trauma or PTSD assessment/screening</td>
   </tr>
   <tr>
@@ -419,7 +419,7 @@ This table provides a correlation between USCDI+ behavioral health data elements
   <tr>
     <td class="tg-0lax">Medications</td>
     <td class="tg-1wig">Medication Instructions</td>
-    <td class="tg-zzem"><a href="MedicationRequest-paroxetine-discharge-med-example-1.html">paroxetine-discharge-example</a></td>
+    <td class="tg-zzem"><a href="MedicationRequest-paroxetine-discharge-med-example-1.html">paroxetine-discharge-example</a><br><a href="MedicationRequest-benzo-order-example-1.html">benzo-order-example</a></td>
     <td class="tg-0lax">Example of medication instructions - paroxetine</td>
   </tr>
   <tr>
