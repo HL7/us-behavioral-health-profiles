@@ -69,26 +69,26 @@ The Implementation Guide contains multiple sections to help readers use the IG, 
   <tr>
     <td class="tg-cly1">Background</td>
     <td class="tg-uozz"><a href="uscdi_bh_elements.html">USCDI+ BH Elements</a></td>
-    <td class="tg-cly1">A list of USCDI+ Behavioral Health elements used in the implementation guide, covering data classes like adverse events, clinical notes, and vital signs. Each element includes descriptions, purposes, and examples, supporting structured health information management and sharing.</td>
-    <td class="tg-cly1">Technical</td>
-  </tr>
-  <tr>
-    <td class="tg-cly1">Technical Artifacts</td>
-    <td class="tg-fapl"><a href="artifacts.html">FHIR Artifacts</a></td>
-    <td class="tg-cly1">An index of the FHIR artifacts include in this implementation guide</td>
+    <td class="tg-cly1">A list of USCDI+ Behavioral Health elements used in the implementation guide, covering data classes like adverse events, clinical notes, and vital signs. Each element includes descriptions, purposes, and examples, supporting structured health information management and sharing</td>
     <td class="tg-cly1">Technical</td>
   </tr>
     <tr>
     <td class="tg-cly1">Technical Artifacts</td>
-    <td class="tg-uozz"><a href="bh_to_fhir_profiles.html">USCDI+ BH to Suggestive FHIR Profiles</a></td>
-    <td class="tg-cly1">Draft proposals for Observation profiles supporting Personal Characteristics</td>
-    <td class="tg-cly1">Detailed Technical</td>
-  </tr>
-  <tr>
-    <td class="tg-cly1">Technical Artifacts</td>
     <td class="tg-fapl"><a href="bh_to_fhir_examples.html">USCDI+ BH to FHIR Examples</a></td>
     <td class="tg-cly1">This table links USCDI+ behavioral health data elements to their corresponding FHIR elements, with examples and narratives showing their practical application. It ensures accurate and interoperable healthcare data across systems</td>
     <td class="tg-cly1">Detailed Technical</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Technical Artifacts</td>
+    <td class="tg-uozz"><a href="bh_to_fhir_profiles.html">USCDI+ BH to Suggestive FHIR Profiles</a></td>
+    <td class="tg-cly1">Draft proposals for profiles supporting USCDI + Behavioral Health Data Elements</td>
+    <td class="tg-cly1">Detailed Technical</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Technical Artifacts</td>
+    <td class="tg-fapl"><a href="artifacts.html">FHIR Artifacts</a></td>
+    <td class="tg-cly1">An index of the FHIR artifacts include in this implementation guide</td>
+    <td class="tg-cly1">Technical</td>
   </tr>
   <tr>
     <td class="tg-cly1">Specification</td>
@@ -115,7 +115,6 @@ The Implementation Guide contains multiple sections to help readers use the IG, 
     <td class="tg-xf3r">Name</td>
     <td class="tg-xf3r">Role</td>
     <td class="tg-xf3r">Organization</td>
-    <td class="tg-xf3r">Email</td>
   </tr>
 </thead>
 <tbody>
@@ -123,67 +122,55 @@ The Implementation Guide contains multiple sections to help readers use the IG, 
     <td class="tg-cly1">Llew Brown</td>
     <td class="tg-cly1">Contributor</td>
         <td class="tg-cly1">Next Level Health Innovations</td>
-    <td class="tg-cly1">Llew.Brown@NextLevelHealthInnovations.com</td>
   </tr>
   <tr>
     <td class="tg-cly1">JaMor Hairston</td>
     <td class="tg-cly1">Contributor</td>
             <td class="tg-cly1">Next Level Health Innovations</td>
-    <td class="tg-cly1">JaMor@NextLevelHealthInnovations.com</td>
   </tr>
   <tr>
     <td class="tg-cly1">Claudia Hall</td>
     <td class="tg-cly1">IG Author</td>
             <td class="tg-cly1">Next Level Health Innovations</td>
-    <td class="tg-cly1">Claudia@NextLevelHealthInnovations.com</td>
   </tr>
   <tr>
     <td class="tg-cly1">Eva Keeling</td>
     <td class="tg-cly1">Contributor</td>
             <td class="tg-cly1">Next Level Health Innovations</td>
-    <td class="tg-cly1">Eva@NextLevelHealthInnovations.com</td>
   </tr>
   <tr>
     <td class="tg-cly1">Susan Matney</td>
     <td class="tg-cly1">Contributor</td>
             <td class="tg-cly1">Next Level Health Innovations</td>
-    <td class="tg-cly1">Susan@NextLevelHealthInnovations.com</td>
   </tr>
     <tr>
     <td class="tg-cly1">Aaron Nusstein</td>
     <td class="tg-cly1">IG Author</td>
                 <td class="tg-cly1">Lantana Consulting Group</td>
-    <td class="tg-cly1">aaron.nusstein@lantanagroup.com</td>
   </tr>
   <tr>
     <td class="tg-cly1">David deRoode</td>
     <td class="tg-cly1">IG Author</td>
             <td class="tg-cly1">Lantana Consulting Group</td>
-    <td class="tg-cly1">david.deroode@lantanagroup.com</td>
   </tr>
   <tr>
     <td class="tg-cly1">Laura Goubeaux</td>
     <td class="tg-cly1">Contributor</td>
                 <td class="tg-cly1">Lantana Consulting Group</td>
-    <td class="tg-cly1">laura.goubeaux@lantanagroup.com</td>
   </tr>
   <tr>
     <td class="tg-cly1">Talisha Searcy</td>
     <td class="tg-cly1">Project Sponsor Contact</td>
     <td class="tg-cly1">Substance Abuse and Mental Health Services Administration (SAMHSA)</td>
-    <td class="tg-cly1">Talisha.Searcy@samhsa.hhs.gov</td>
   </tr>
   <tr>
     <td class="tg-cly1">Lori Haberman</td>
     <td class="tg-cly1">Project Sponsor Contact</td>
-        <td class="tg-cly1">Substance Abuse and Mental Health Services Administration (SAMHSA)</td>
-    <td class="tg-cly1">Lori.Haberman@hhs.gov</td>
-  </tr>
+        <td class="tg-cly1">Substance Abuse and Mental Health Services Administration (SAMHSA)</td>  </tr>
   <tr>
     <td class="tg-cly1">Christopher Muir</td>
     <td class="tg-cly1">Project Sponsor Contact</td>
     <td class="tg-cly1">Assistant Secretary for Technology Policy / Office of the National Coordinator for Health IT (ASTP/ONC)</td>
-    <td class="tg-cly1">Christopher.Muir@hhs.gov</td>
   </tr>
 </tbody></table>
 
@@ -227,19 +214,14 @@ This guide contains content from [LOINC](http://loinc.org). LOINC is copyright �
     <td class="tg-cly1">3.0.0</td>
     <td class="tg-cly1">SDC is the basis for mapping QuestionnaireResponses to Observations and Conditions. SDC also provides guidance around how questionnaires can be created with support for score calculation, conditional behavior, specific rendering expectations, etc.</td>
   </tr>
-  <tr>
-    <td class="tg-zzem"><a href="https://vsac.nlm.nih.gov/">Value Set Authority Center (VSAC)</a></td>
-    <td class="tg-cly1">0.9.0</td>
-    <td class="tg-7zrl">Gravity Project social risk data elements are published in Value Set Authority Center (VSAC) value sets. The value sets can be identified by searching for “The Gravity Project” steward. You will need to create a free National Library of Medicine (NLM) account to access the value sets. Value sets will be updated bi-annually on June 30th and December 31st.  </td>
-  </tr>
     <tr>
-    <td class="tg-zzem"><a href="https://hl7.org/fhir/us/sdoh-clinicalcare/STU2.1/</a></td>
+    <td class="tg-zzem"><a href="https://hl7.org/fhir/us/sdoh-clinicalcare/STU2.1"/>Gravity SDOH Clinical Care</a></td>
     <td class="tg-cly1">2.1.0</td>
     <td class="tg-7zrl">In some cases, where profiles could not be derived from US Core, SDOH Clinical Care profiles are referenced.</td>
   </tr>
       <tr>
     <td class="tg-zzem"><a href="http://hl7.org/fhir/R4/index.html">HL7 FHIR R4</a></td>
     <td class="tg-cly1">R4</td>
-    <td class="tg-7zrl">In some cases, where profiles could not be derived from US Core, SDOH Clinical Care profiles are referenced.</td>
+    <td class="tg-7zrl">In some cases, where profiles could not be derived from US Core, base FHIR resources may be used.</td>
   </tr>
 </tbody></table>
