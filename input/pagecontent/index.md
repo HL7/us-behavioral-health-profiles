@@ -1,6 +1,6 @@
 ### Introduction 
 
-The United States Core Data for Interoperability (USCDI) Plus Behavioral Health (BH) dataset (also referred to as USCDI+ BH) aims to enhance the exchange and interoperability of behavioral health information across healthcare systems in the United States. Building on the USCDI foundation, this dataset addresses the unique needs and challenges associated with behavioral health data. It is designed to facilitate behavioral health integration with other healthcare services, support better clinical decision-making, and improve patient outcomes. 
+The United States Core Data for Interoperability (USCDI) Plus Behavioral Health (BH) dataset (also referred to as USCDI+ BH) aims to enhance the exchange and interoperability of behavioral health information across healthcare systems in the United States. Building on the USCDI foundation, this dataset addresses the unique needs and challenges associated with behavioral health data. It is designed to facilitate behavioral health integration with other healthcare services, support better clinical decision-making, and improve patient outcomes. This implementation guide is based on the contents in the USCDI+ BH dataset.
 
 ### Background 
 
@@ -207,7 +207,7 @@ This guide contains content from [LOINC](http://loinc.org). LOINC is copyright Â
   <tr>
     <td class="tg-zzem"><a href="https://hl7.org/fhir/us/core/STU6.1/">US Core</a></td>
     <td class="tg-cly1">6.1.0</td>
-    <td class="tg-cly1">Where possible, all profiles in this IG are either derived from US Core 3.1.1 or aligned with that release and future releases as much as possible. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.</td>
+    <td class="tg-cly1">Where possible, all profiles in this IG are either derived from US Core 6.1.0 or aligned with that release and future releases as much as possible. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.</td>
   </tr>
   <tr>
     <td class="tg-zzem"><a href="http://hl7.org/fhir/uv/sdc/">Structured Document Capture (SDC)</a></td>
