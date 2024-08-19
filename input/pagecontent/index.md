@@ -166,7 +166,7 @@ The Implementation Guide contains multiple sections to help readers use the IG, 
   <tr>
     <td class="tg-cly1">Lori Haberman</td>
     <td class="tg-cly1">Project Sponsor Contact</td>
-        <td class="tg-cly1">Substance Abuse and Mental Health Services Administration (SAMHSA)</td>  </tr>
+        <td class="tg-cly1">Assistant Secretary for Technology Policy / Office of the National Coordinator for Health IT (ASTP/ONC)</td>  </tr>
   <tr>
     <td class="tg-cly1">Christopher Muir</td>
     <td class="tg-cly1">Project Sponsor Contact</td>
