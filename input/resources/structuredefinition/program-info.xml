@@ -1,14 +1,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
     <id value="program-info"/>
-    <meta>
-        <versionId value="6"/>
-        <lastUpdated value="2024-08-05T17:14:11.055Z"/>
-    </meta>
     <url value="http://hl7.org/fhir/us/bhp/StructureDefinition/program-info"/>
+    <version value="0.1.0"/>
     <name value="GrantProgramIdAndNumber"/>
     <title value="Grant Program ID and Number"/>
-    <status value="active"/>
-    <experimental value="false"/>
     <fhirVersion value="4.0.1"/>
     <kind value="complex-type"/>
     <abstract value="false"/>
@@ -22,10 +17,7 @@
     <differential>
         <element id="Extension">
             <path value="Extension"/>
-            <definition
-                value="Behavioral Health Program and grant information"/>
-            <min value="0"/>
-            <max value="0"/>
+            <short value="Grant Program ID and Number"/>
         </element>
         <element id="Extension.extension">
             <path value="Extension.extension"/>
@@ -34,10 +26,9 @@
         <element id="Extension.extension:program_id">
             <path value="Extension.extension"/>
             <sliceName value="program_id"/>
-            <short
-                value="The program id for a program that that is participating in a designated behavioral health program."/>
-            <definition
-                value="The program id for a program that that is participating in a designated behavioral health program."/>
+            <short value="The program id for a program that that is participating in a designated behavioral health program."/>
+            <definition value="The program id for a program that that is participating in a designated behavioral health program."/>
+            <min value="0"/>
             <max value="1"/>
             <mustSupport value="true"/>
         </element>
@@ -47,8 +38,6 @@
         </element>
         <element id="Extension.extension:program_id.url">
             <path value="Extension.extension.url"/>
-            <min value="1"/>
-            <max value="1"/>
             <fixedUri value="program_id"/>
         </element>
         <element id="Extension.extension:program_id.value[x]">
@@ -62,12 +51,9 @@
             <path value="Extension.extension"/>
             <sliceName value="grant_number"/>
             <short value="The grant number that the behavioral health service is operating under."/>
-            <definition
-                value="The grant number that the behavioral health service is operating under."/>
+            <definition value="The grant number that the behavioral health service is operating under."/>
+            <min value="0"/>
             <max value="1"/>
-            <type>
-                <code value="Extension"/>
-            </type>
             <mustSupport value="true"/>
         </element>
         <element id="Extension.extension:grant_number.extension">
@@ -87,6 +73,10 @@
         <element id="Extension.url">
             <path value="Extension.url"/>
             <fixedUri value="http://hl7.org/fhir/us/bhp/StructureDefinition/program-info"/>
+        </element>
+        <element id="Extension.value[x]">
+            <path value="Extension.value[x]"/>
+            <max value="0"/>
         </element>
     </differential>
 </StructureDefinition>
