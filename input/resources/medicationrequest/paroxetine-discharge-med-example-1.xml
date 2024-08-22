@@ -4,6 +4,110 @@
         <profile
             value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"/>
     </meta>
+    <text>
+        <status value="extensions"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>Generated Narrative: MedicationRequest</b>
+                <a name="medicationrequest-coded-oral-axid"> </a>
+                <a name="hcmedicationrequest-coded-oral-axid"> </a>
+            </p>
+            <div
+                style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%">
+                <p style="margin-bottom: 0px">Resource MedicationRequest
+                    &quot;medicationrequest-coded-oral-axid&quot; </p>
+                <p style="margin-bottom: 0px">Profile: <a
+                    href="StructureDefinition-us-core-medicationrequest.html">US Core
+                    MedicationRequest Profile (version 7.0.0)</a></p>
+            </div>
+            <blockquote>
+                <p>
+                    <b>US Core Medication Adherence Extension</b>
+                </p>
+                <blockquote>
+                    <p>
+                        <b>url</b>
+                    </p>
+                    <code>medicationAdherence</code>
+                </blockquote>
+                <p><b>value</b>: Non-compliance of drug therapy (finding) <span
+                    style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">
+                    (<a href="https://browser.ihtsdotools.org/">SNOMED
+                        CT</a>#702565001)</span></p>
+                <blockquote>
+                    <p>
+                        <b>url</b>
+                    </p>
+                    <code>dateAsserted</code>
+                </blockquote>
+                <p><b>value</b>: 2024-02-01 08:15:49+0000</p>
+                <blockquote>
+                    <p>
+                        <b>url</b>
+                    </p>
+                    <code>informationSource</code>
+                </blockquote>
+                <p><b>value</b>: Patient (person) <span
+                    style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">
+                    (<a href="https://browser.ihtsdotools.org/">SNOMED
+                        CT</a>#116154003)</span></p>
+                <blockquote>
+                    <p>
+                        <b>url</b>
+                    </p>
+                    <code>informationSource</code>
+                </blockquote>
+                <p><b>value</b>: Pharmacy <span
+                    style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">
+                    (<a
+                        href="https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html"
+                        >Healthcare Service Location</a>#1179-1)</span></p>
+            </blockquote>
+            <p><b>status</b>: completed</p>
+            <p><b>intent</b>: order</p>
+            <p><b>medication</b>: paroxetine hydrochloride 10 MG Oral Tablet <span
+                style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a
+                    href="http://terminology.hl7.org/5.3.0/CodeSystem-v3-rxNorm.html"
+                    >RxNorm</a>#1738483)</span></p>
+            <p><b>subject</b>: <a href="Patient-bh-patient-example.html">James Wolff</a></p>
+            <p><b>encounter</b>: <a href="Encounter-ed-encounter-example-1.html">Emergency
+                Department</a></p>
+            <p><b>requester</b>: <a href="Practitioner-mental-health-provider-example-1.html">Dr. Lazslo
+                Cravensworth</a></p>
+            <p><b>reasonReference</b>: <a href="Condition-depression-condition-example-1.html">Condition
+                Moderate depression (disorder)</a></p>
+            <h3>DosageInstructions</h3>
+            <table class="grid">
+                <tr>
+                    <td style="display: none">-</td>
+                    <td>
+                        <b>Text</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="display: none">*</td>
+                    <td>Take 1 tablet daily</td>
+                </tr>
+            </table>
+            <h3>DispenseRequests</h3>
+            <table class="grid">
+                <tr>
+                    <td style="display: none">-</td>
+                    <td>
+                        <b>NumberOfRepeatsAllowed</b>
+                    </td>
+                    <td>
+                        <b>Quantity</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="display: none">*</td>
+                    <td>3</td>
+                    <td/>
+                </tr>
+            </table>
+        </div>
+    </text>
     <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence">
         <extension url="medicationAdherence">
             <valueCodeableConcept>
