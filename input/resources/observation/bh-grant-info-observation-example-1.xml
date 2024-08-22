@@ -3,6 +3,55 @@
     <meta>
         <profile value="http://hl7.org/fhir/us/bhp/StructureDefinition/bh-grant-info"/>
     </meta>
+    <text>
+        <status value="extensions"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>Generated Narrative: Behavioral Health Grant Information Observation</b>
+                <a name="program-grant-info"> </a>
+                <a name="hcprogram-grant-info"> </a>
+            </p>
+            <div
+                style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%">
+                <p style="margin-bottom: 0px">Resource Observation &quot;program-grant-info&quot; </p>
+                <p style="margin-bottom: 0px">Profile: <a
+                        href="StructureDefinition-bh-grant-info.html">Grant Information Observation
+                        Profile</a></p>
+            </div>
+            <blockquote>
+                <p>
+                    <b>Behavioral Health Grant Information Extension</b>
+                </p>
+                <blockquote>
+                    <p>
+                        <b>url</b>
+                    </p>
+                    <code>program_id</code>
+                </blockquote>
+                <p><b>value</b> SP-23-004 <span
+                        style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"
+                        > <a href="https://www.samhsa.gov/">(SAMHSA) </a></span></p>
+                <blockquote>
+                    <p>
+                        <b>url</b>
+                    </p>
+                    <code>grant_number</code>
+                </blockquote>
+                <p><b>value</b> SP083783-01</p>
+            </blockquote>
+
+            <p><b>status</b>: final</p>
+            <p><b>category</b>: Program Funding Information</p>
+            <p><b>code</b>: Behavioral Health Grant Funding Type</p>
+
+            <p><b>subject</b>: Patient/bh-patient-example: James Wolff</p>
+
+            <p><b>effectiveDateTime</b>: 2024-02-01</p>
+            <p><b>performer</b>: Organization: Florida Mental Health Provider Associates </p>
+            <p><b>valueCodeableConcept</b>: Discretionary Funding </p>
+
+        </div>
+    </text>
     <extension url="http://hl7.org/fhir/us/bhp/StructureDefinition/bh-grant-info">
         <extension url="program-id">
             <valueString value="SP-23-004"/>
