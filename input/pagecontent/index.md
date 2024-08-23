@@ -1,6 +1,6 @@
 ### Introduction 
 
-The United States Core Data for Interoperability (USCDI) Plus Behavioral Health (BH) dataset (also referred to as USCDI+ BH) aims to enhance the exchange and interoperability of behavioral health information across healthcare systems in the United States. Building on the USCDI foundation, this dataset addresses the unique needs and challenges associated with behavioral health data. It is designed to facilitate behavioral health integration with other healthcare services, support better clinical decision-making, and improve patient outcomes. This implementation guide is based on the contents in the USCDI+ BH dataset.
+The United States Core Data for Interoperability (USCDI) Plus Behavioral Health (BH) dataset (also referred to as USCDI+ BH) aims to enhance the exchange and interoperability of behavioral health information across healthcare systems in the United States. Building on the USCDI foundation, this dataset addresses the unique needs and challenges associated with behavioral health data. It is designed to facilitate behavioral health integration with other healthcare services, support better clinical decision-making, and improve patient outcomes.
 
 ### Background 
 
@@ -16,9 +16,11 @@ The USCDI+ Behavioral Health (BH) initiative is designed to facilitate the seaml
 
 This BH FHIR implementation guide will use the profiles outlined in the [US Core Implementation Guide](https://www.hl7.org/fhir/us/core/uscdi.html). Where necessary, custom profiles are used to address needs specific to BH care.  The developers will follow the [Cross Group Projects WG's variance request process](https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process) and provide the US Realm Steering Committee with an approved rationale for deviation in the implementation guide where applicable. 
 
+It is recommended to review sections [How to Read This Implementation Guide](index.html#how-to-read-this-implementation-guide) and [Limitations and Challenges](index.html#limitations-and-challenges) below before exploring. 
+
 ### Audience
 
-This informational IG is intended to illustrate the use of FHIR standards to exchange USCDI+ BH elements.  The IG maximizes existing FHIR standards and provides newly developed FHIR profiles and elements to address data requirements specific to BH. The IG is intended for a technical audience working with behavioral health data using the USCDI+ framework. The IG authors seek feedback on the usefulness of the user story, the completeness of the crosswalk to FHIR elements, and the usability of the example FHIR references for each data element. 
+This informational IG is intended to illustrate the use of FHIR standards to exchange USCDI+ BH elements.  The IG maximizes existing FHIR standards and provides newly developed FHIR profiles and elements to address data requirements specific to BH. The IG is intended for a technical audience working with behavioral health data using the USCDI+ framework. The IG authors seek feedback on the usefulness of the user story, the completeness of the crosswalk to FHIR elements, applicable behavioral health specific terminology, and the usability of the example FHIR references for each data element. 
 
 Researchers, quality improvement staff, and policymakers can also benefit from a basic understanding of how this guide presents BH data elements to support data collection and analysis.  
 
@@ -95,6 +97,62 @@ The Implementation Guide contains multiple sections to help readers use the IG, 
     <td class="tg-uozz"><a href="downloads.html">Downloads</a></td>
     <td class="tg-cly1">Downloads</td>
     <td class="tg-cly1">Detailed Technical</td>
+  </tr>
+</tbody></table>
+
+### Limitations and Challenges 
+
+This section outlines the limitations and challenges encountered when developing this Implementation Guide. It highlights topics like the complexities in standardizing health assessments across various clinical practices and the use of specific resources like DocumentReference in FHIR to manage different types of clinical documents. By acknowledging these challenges, the IG aims to provide users with a clear understanding of the decisions made, the potential constraints implementers they may encounter, and the collective work to be done to standardize Behavioral Health data. 
+
+- The <b>health status assessments</b> included in this Implementation Guide (IG) were chosen based on their availability in widely recognized clinical coding standards, such as LOINC and SNOMED. We acknowledge that the assessments presented here are not the only ones applicable within their respective categories, nor may they be the most commonly used in the field. This limitation reflects the inherent challenges in standardizing health assessments across diverse clinical practices. 
+- Many prominent <b>health status assessments</b> are proprietary and licensed material, this will be a challenge in further development. 
+- In the <b>FHIR examples</b> provided in this IG, the DocumentReference resource is utilized to supply metadata about various documents, enabling their discovery and management within a system. These resources employ the Attachment datatype, which stores the content type and a base64 encoded representation of the binary content. The types of documents that can be represented this way include but aren’t limited to: 
+  - PDF documents 
+  - Scanned paper and digital records of faxes 
+  - Clinical notes in various forms 
+  - Image, video, and audio files (e.g., JPEG, GIF, MP4, MP3) 
+  - Non-standard formats (e.g., CSV, RTF, WORD) 
+- It’s important to note that these FHIR examples are annotated in the FHIR narrative, of the technical artifacts sections, as “...<u>encoded (base64)</u>”. 
+
+### Dependencies on Other IGs
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-xf3r{background-color:#BFBFBF;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-zzem{color:#467886;text-align:left;vertical-align:top}
+.tg .tg-7zrl{text-align:left;vertical-align:bottom}
+</style>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-xf3r">Implementation Guide</th>
+    <th class="tg-xf3r">Version</th>
+    <th class="tg-xf3r">Dependency</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-zzem"><a href="https://hl7.org/fhir/us/core/STU6.1/">US Core</a></td>
+    <td class="tg-cly1">6.1.0</td>
+    <td class="tg-cly1">Where possible, all profiles in this IG are either derived from US Core 6.1.0 or aligned with that release and future releases as much as possible. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.</td>
+  </tr>
+  <tr>
+    <td class="tg-zzem"><a href="http://hl7.org/fhir/uv/sdc/">Structured Document Capture (SDC)</a></td>
+    <td class="tg-cly1">3.0.0</td>
+    <td class="tg-cly1">SDC is the basis for mapping QuestionnaireResponses to Observations and Conditions. SDC also provides guidance around how questionnaires can be created with support for score calculation, conditional behavior, specific rendering expectations, etc.</td>
+  </tr>
+    <tr>
+    <td class="tg-zzem"><a href="https://hl7.org/fhir/us/sdoh-clinicalcare/STU2.1">SDOH Clinical Care</a></td>
+    <td class="tg-cly1">2.1.0</td>
+    <td class="tg-7zrl">In some cases, where profiles could not be derived from US Core, SDOH Clinical Care profiles are referenced.</td>
+  </tr>
+      <tr>
+    <td class="tg-zzem"><a href="http://hl7.org/fhir/R4/index.html">HL7 FHIR R4</a></td>
+    <td class="tg-cly1">R4</td>
+    <td class="tg-7zrl">In some cases, where profiles could not be derived from US Core, base FHIR resources may be used.</td>
   </tr>
 </tbody></table>
 
@@ -184,44 +242,3 @@ This guide includes SNOMED CT content, copyright © 2002+ International Health T
 
 This guide contains content from [LOINC](http://loinc.org). LOINC is copyright © 1995-2024, Regenstrief Institute, Inc., and the Logical Observation Identifiers Names and Codes (LOINC) Committee. It is available at no cost under the license at [https://loinc.org/kb/license](https://loinc.org/kb/license/). LOINC® is a registered United States trademark of Regenstrief Institute, Inc. 
 
-### Dependencies on Other IGs
-
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
-.tg .tg-xf3r{background-color:#BFBFBF;font-weight:bold;text-align:left;vertical-align:middle}
-.tg .tg-zzem{color:#467886;text-align:left;vertical-align:top}
-.tg .tg-7zrl{text-align:left;vertical-align:bottom}
-</style>
-<table class="tg"><thead>
-  <tr>
-    <th class="tg-xf3r">Implementation Guide</th>
-    <th class="tg-xf3r">Version</th>
-    <th class="tg-xf3r">Dependency</th>
-  </tr></thead>
-<tbody>
-  <tr>
-    <td class="tg-zzem"><a href="https://hl7.org/fhir/us/core/STU6.1/">US Core</a></td>
-    <td class="tg-cly1">6.1.0</td>
-    <td class="tg-cly1">Where possible, all profiles in this IG are either derived from US Core 6.1.0 or aligned with that release and future releases as much as possible. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.</td>
-  </tr>
-  <tr>
-    <td class="tg-zzem"><a href="http://hl7.org/fhir/uv/sdc/">Structured Document Capture (SDC)</a></td>
-    <td class="tg-cly1">3.0.0</td>
-    <td class="tg-cly1">SDC is the basis for mapping QuestionnaireResponses to Observations and Conditions. SDC also provides guidance around how questionnaires can be created with support for score calculation, conditional behavior, specific rendering expectations, etc.</td>
-  </tr>
-    <tr>
-    <td class="tg-zzem"><a href="https://hl7.org/fhir/us/sdoh-clinicalcare/STU2.1"/>SDOH Clinical Care</a></td>
-    <td class="tg-cly1">2.1.0</td>
-    <td class="tg-7zrl">In some cases, where profiles could not be derived from US Core, SDOH Clinical Care profiles are referenced.</td>
-  </tr>
-      <tr>
-    <td class="tg-zzem"><a href="http://hl7.org/fhir/R4/index.html">HL7 FHIR R4</a></td>
-    <td class="tg-cly1">R4</td>
-    <td class="tg-7zrl">In some cases, where profiles could not be derived from US Core, base FHIR resources may be used.</td>
-  </tr>
-</tbody></table>

@@ -66,7 +66,7 @@ This table provides a correlation between USCDI+ behavioral health data elements
     <td class="tg-0lax">Care Team Member(s)</td>
     <td class="tg-1wig">Care Team Member Identifier</td>
     <td class="tg-zzem"><a href="Practitioner-ed-physician-example-1.html">physician-example	</a><br><a href="Practitioner-ed-physician-example-1.html"> pcp-provider-example	</a><br><a href="Practitioner-ed-physician-example-1.html"> mental-health-provider-example</a></td>
-    <td class="tg-0lax">Examples of a patient's emeergency room provider, Primary care provider and mental health provider identifiers</td>
+    <td class="tg-0lax">Examples of a patient's emergency room provider, Primary care provider and mental health provider identifiers</td>
   </tr>
   <tr>
     <td class="tg-0lax">Clinical Notes</td>
@@ -101,14 +101,14 @@ This table provides a correlation between USCDI+ behavioral health data elements
   <tr>
     <td class="tg-0lax">Clinical Tests</td>
     <td class="tg-1wig">Clinical Test</td>
-    <td class="tg-zzem"><a href="Observation-serum-glucose-example-1.html" target="_blank" rel="noopener noreferrer">serum-glucose-example</a></td>
-    <td class="tg-ycr8">Example of electocardiagram test</td>
+    <td class="tg-zzem"><a href="Observation-hemoglobin-a1c-example-1.html" target="_blank" rel="noopener noreferrer">hemoglobin-a1c-example</a></td>
+    <td class="tg-ycr8">Example of laboratory test - Hemogobin A1C</td>
   </tr>
   <tr>
     <td class="tg-0lax">Clinical Tests</td>
     <td class="tg-1wig">Clinical Test Result/Report</td>
-    <td class="tg-zzem"><a href="Observation-serum-glucose-example-1.html" target="_blank" rel="noopener noreferrer">serum-glucose-example</a></td>
-    <td class="tg-ycr8">Example of electocardiagram with normal sinus rthym</td>
+    <td class="tg-zzem"><a href="Observation-hemoglobin-a1c-example-1.html" target="_blank" rel="noopener noreferrer">hemoglobin-a1c-example</a></td>
+    <td class="tg-ycr8">Example of laboratory test result - elevated value</td>
   </tr>
   <tr>
     <td class="tg-0lax">Consent</td>
@@ -204,7 +204,7 @@ This table provides a correlation between USCDI+ behavioral health data elements
     <td class="tg-0lax">Goals and Preferences</td>
     <td class="tg-1wig">Patient Goals</td>
     <td class="tg-zzem"><a href="Goal-social-connection-example-1.html">sdoh-referral-example</a></td>
-    <td class="tg-0lax">Example of an improving patient goal improve toward adequate social participation</td>
+    <td class="tg-0lax">Example of a patient goal to improve toward adequate social participation</td>
   </tr>
   <tr>
     <td class="tg-0lax">Goals and Preferences</td>
@@ -216,7 +216,7 @@ This table provides a correlation between USCDI+ behavioral health data elements
     <td class="tg-0lax">Goals and Preferences</td>
     <td class="tg-1wig">Treatment Intervention Preference</td>
     <td class="tg-zzem"><a href="Observation-no-morphine-preference-observation-example-1.html">no-morphine-preference-obs-example</a></td>
-    <td class="tg-0lax">Example of a treatment intervention preference to avoid morphine based on past history of substance abuse.</td>
+    <td class="tg-0lax">Example of a treatment intervention preference to avoid morphine based on past history of substance abuse</td>
   </tr>
   <tr>
     <td class="tg-0lax">Health Insurance Information</td>
@@ -377,13 +377,13 @@ This table provides a correlation between USCDI+ behavioral health data elements
   <tr>
     <td class="tg-0lax">Laboratory</td>
     <td class="tg-1wig">Tests</td>
-    <td class="tg-zzem"><a href="Observation-serum-glucose-example-1.html" target="_blank" rel="noopener noreferrer">serum-glucose-example</a></td>
+    <td class="tg-zzem"><a href="Observation-hemoglobin-a1c-example-1.html" target="_blank" rel="noopener noreferrer">hemoglobin-a1c-example</a></td>
     <td class="tg-0lax">Example of laboratory test - Hemogobin A1C</td>
   </tr>
   <tr>
     <td class="tg-0lax">Laboratory</td>
     <td class="tg-1wig">Values/Results</td>
-    <td class="tg-zzem"><a href="Observation-serum-glucose-example-1.html" target="_blank" rel="noopener noreferrer">serum-glucose-example</a></td>
+    <td class="tg-zzem"><a href="Observation-hemoglobin-a1c-example-1.html" target="_blank" rel="noopener noreferrer">hemoglobin-a1c-example</a></td>
     <td class="tg-0lax">Example of laboratory test result - elevated value </td>
   </tr>
   <tr>
@@ -576,7 +576,7 @@ This table provides a correlation between USCDI+ behavioral health data elements
     <td class="tg-0lax">Problems</td>
     <td class="tg-1wig">Date of Diagnosis</td>
             <td class="tg-zzem"><a href="Condition-panic-attack-condition-example-1.html">panic-attack-example</a><br> <a href="Condition-chest-pain-condition-example-1.html">chest-pain-example</a><br> <a href="Condition-grief-condition-example-1.html">grief-example</a><br> <a href="Condition-substance-abuse-condition-example-1.html">substance-abuse-condition-example</a><br> <a href="Condition-diabetes-condition-example-1.html">diabetes-example</a></td>
-    <td class="tg-0lax">Example of diagnosis</td>
+    <td class="tg-0lax">Example of diagnosis date</td>
   </tr>
   <tr>
     <td class="tg-0lax">Problems</td>
