@@ -36,19 +36,19 @@ This table provides a correlation between USCDI+ behavioral health data elements
     <td class="tg-0lax">Allergies and Intolerances</td>
     <td class="tg-1wig">Reaction</td>
     <td class="tg-zzem"><a href="AllergyIntolerance-peanut-allergy-example-1.html">peanut-allergy-example</a><br><a href="AllergyIntolerance-peanut-allergy-example-1.html"> penicillin-allergy-example</a></td>
-    <td class="tg-0lax">Examples of allergic response to peanuts and penciliin</td>
+    <td class="tg-0lax">Examples of allergic response to peanuts and penicillin</td>
   </tr>
   <tr>
     <td class="tg-0lax">Allergies and Intolerances</td>
     <td class="tg-1wig">Substance (Medication)</td>
     <td class="tg-zzem"><a href="AllergyIntolerance-penicillin-allergy-example-1.html">penicillin-allergy-example</a></td>
-    <td class="tg-0lax">Example of patient documented peanut allergy</td>
+    <td class="tg-0lax">Example of patient documented penicillin allergy</td>
   </tr>
   <tr>
     <td class="tg-0lax">Allergies and Intolerances</td>
     <td class="tg-1wig">Substance (Non-Medication)</td>
     <td class="tg-zzem"><a href="AllergyIntolerance-peanut-allergy-example-1.html">peanut-allergy-example</a></td>
-    <td class="tg-0lax">Example of patient documented penicillin allergy</td>
+    <td class="tg-0lax">Example of patient documented peanut allergy</td>
   </tr>
   <tr>
     <td class="tg-0lax">Care Team Member(s)</td>
@@ -280,7 +280,7 @@ This table provides a correlation between USCDI+ behavioral health data elements
   </tr>
   <tr>
     <td class="tg-0lax">Health Status Assessments</td>
-    <td class="tg-1wig">Anxiety Assesment</td>
+    <td class="tg-1wig">Anxiety Assessment</td>
     <td class="tg-zzem"><a href="Observation-anxiety-assessment-observation-example-1.html">anxiety-assessment-obs-example</a></td>
     <td class="tg-ktyi">Example of an anxiety assessment/screening</td>
   </tr>
@@ -528,7 +528,7 @@ This table provides a correlation between USCDI+ behavioral health data elements
     <td class="tg-0lax">Patient Demographics</td>
     <td class="tg-1wig">Sexual Orientation</td>
     <td class="tg-zzem"><a href="Observation-sexual-orientation-example-1.html">sexual-orientation-example</a></td>
-    <td class="tg-0lax">Example of patient sexual orienation</td>
+    <td class="tg-0lax">Example of patient sexual orientation</td>
   </tr>
   <tr>
     <td class="tg-0lax">Patient Demographics</td>
@@ -599,7 +599,7 @@ This table provides a correlation between USCDI+ behavioral health data elements
   <tr>
     <td class="tg-0lax">Procedures</td>
     <td class="tg-1wig">Performance Time</td>
-    <td class="tg-zzem"><a href="Procedure-alcohol-prevetion-education-example-1.html">alcohol-prevention-edu-example</a></td>
+    <td class="tg-zzem"><a href="Procedure-alcohol-prevention-education-example-1.html">alcohol-prevention-edu-example</a></td>
     <td class="tg-0lax">Example of a documented time when alcohol prevention information was provided</td>
   </tr>
   <tr>

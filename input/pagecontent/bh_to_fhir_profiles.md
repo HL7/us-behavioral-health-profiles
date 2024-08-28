@@ -177,19 +177,19 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   <tr>
     <td class="tg-0lax">Federal/State Grants Reporting Requirements</td>
     <td class="tg-1wig">Grant Number</td>
-    <td class="tg-zzem"><a href="https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/StructureDefinition-bh-grant-info.html">US Behavioral Health Grant Information Observation Profle</a></td>
+    <td class="tg-zzem"><a href="https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/StructureDefinition-bh-grant-info.html">US Behavioral Health Grant Information Observation Profile</a></td>
     <td class="tg-0lax">observation.code</td>
   </tr>
   <tr>
     <td class="tg-0lax">Federal/State Grants Reporting Requirements</td>
     <td class="tg-1wig">Grant Program ID</td>
-    <td class="tg-zzem"><a href="https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/StructureDefinition-bh-grant-info.html">US Behavioral Health Grant Information Observation Profle</a></td>
+    <td class="tg-zzem"><a href="https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/StructureDefinition-bh-grant-info.html">US Behavioral Health Grant Information Observation Profile</a></td>
     <td class="tg-7zrl">observation.extension</td>
   </tr>
   <tr>
     <td class="tg-0lax">Federal/State Grants Reporting Requirements</td>
     <td class="tg-1wig">Grant/Funding Type</td>
-    <td class="tg-zzem"><a href="https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/StructureDefinition-bh-grant-info.html">US Behavioral Health Grant Information Observation Profle</a></td>
+    <td class="tg-zzem"><a href="https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/StructureDefinition-bh-grant-info.html">US Behavioral Health Grant Information Observation Profile</a></td>
     <td class="tg-7zrl">observation.category</td>
   </tr>
   <tr>
@@ -278,7 +278,7 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   </tr>
   <tr>
     <td class="tg-0lax">Health Status Assessments</td>
-    <td class="tg-1wig">Anxiety Assesment</td>
+    <td class="tg-1wig">Anxiety Assessment</td>
     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
     <td class="tg-0lax">n/a</td>
   </tr>
