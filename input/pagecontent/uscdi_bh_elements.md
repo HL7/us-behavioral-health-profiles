@@ -1,6 +1,6 @@
 ### USCDI+ BH Elements
 
-The table provides a comprehensive list of the USCDI+ Behavioral Health elements used to model this implementation guide. The table includes various data classes such as adverse events, clinical notes, encounters, health assessments, and vital signs. Each data element includes specific descriptions that outline the type of data captured, its purpose, and examples where applicable, contributing to a structured approach to managing and sharing health information.
+The table provides a comprehensive list of the USCDI+ Behavioral Health elements used to model this implementation guide. The table includes various data classes such as adverse events, clinical notes, encounter information, health status assessments, and vital signs. Each data element includes specific descriptions that outline the type of data captured, its purpose, and examples where applicable, contributing to a structured approach to managing and sharing health information.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -457,7 +457,7 @@ The table provides a comprehensive list of the USCDI+ Behavioral Health elements
   </tr>
   <tr>
     <td class="tg-0lax">Patient Demographics  </td>
-    <td class="tg-1wig">Pronoun</td>
+    <td class="tg-1wig">Pronouns</td>
     <td class="tg-0lax">Words that can replace a person’s name when addressing or referring to a person</td>
   </tr>
   <tr>
