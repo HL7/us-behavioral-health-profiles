@@ -49,18 +49,7 @@
     </extension>
     <!-- Tribal Affiliation -->
     <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation">
-        <extension url="tribalAffiliation">
-            <valueCodeableConcept>
-                <coding>
-                    <system
-                        value="http://terminology.hl7.org/CodeSystem/v3-TribalEntityUS"/>
-                    <code value="187"/>
-                    <display
-                        value="Paiute-Shoshone Tribe of the Fallon Reservation and Colony, Nevada"/>
-                </coding>
-                <text value="Shoshone"/>
-            </valueCodeableConcept>
-        </extension>
+            <valueBoolean value="false"/>
     </extension>
     <!-- Gender Identity -->
     <extension

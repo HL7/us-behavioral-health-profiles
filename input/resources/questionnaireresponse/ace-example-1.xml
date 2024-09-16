@@ -5,7 +5,7 @@
             value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|7.0.0"/>
     </meta>
     <questionnaire
-        value="http://hl7.org/fhir/us/core/Questionnaire/ace-example"/>
+        value="https://www.acesaware.org/wp-content/uploads/2022/07/ACE-Questionnaire-for-Adults-Identified-English-rev.7.26.22.pdf"/>
     <status value="completed"/>
     <subject>
         <reference value="Patient/bh-patient-example"/>
@@ -76,8 +76,8 @@
         <answer>
             <valueCoding>
                 <system value="http://loinc.org"/>
-                <code value="LA33-6"/>
-                <display value="Yes"/>
+                <code value="LA32-8"/>
+                <display value="No"/>
             </valueCoding>
         </answer>
     </item>
@@ -87,8 +87,8 @@
         <answer>
             <valueCoding>
                 <system value="http://loinc.org"/>
-                <code value="LA33-6"/>
-                <display value="Yes"/>
+                <code value="LA32-8"/>
+                <display value="No"/>
             </valueCoding>
         </answer>
     </item>
@@ -98,8 +98,8 @@
         <answer>
             <valueCoding>
                 <system value="http://loinc.org"/>
-                <code value="LA33-6"/>
-                <display value="Yes"/>
+                <code value="LA32-8"/>
+                <display value="No"/>
             </valueCoding>
         </answer>
     </item>

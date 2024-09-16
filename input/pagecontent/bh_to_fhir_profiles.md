@@ -117,7 +117,7 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   <tr>
      <td class="tg-0lax">Diagnostic Imaging</td>
      <td class="tg-1wig">Diagnostic Imaging Report</td>
-     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-diagnosticreport-note.html">US Core Diagnostic Report</a></td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-diagnosticreport-note.html"> US Core DiagnosticReport Profile for Report and Note Exchange</a></td>
      <td class="tg-0lax">diagnosticReport.result</td>
   </tr>
   <tr>
@@ -267,7 +267,7 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   <tr>
      <td class="tg-0lax">Health Status Assessments</td>
      <td class="tg-1wig">Depression Assessment</td>
-     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html"> US Core QuestionnaireResponse Profile</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
      <td class="tg-0lax">n/a</td>
   </tr>
   <tr>
@@ -315,7 +315,7 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   <tr>
      <td class="tg-0lax">Health Status Assessments</td>
      <td class="tg-1wig">Pregnancy Status</td>
-     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-pregnancystatus.html">US Core Pregnancy Status Profile</a></td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-pregnancystatus.html">US Core Observation Pregnancy Status Profile</a></td>
      <td class="tg-0lax">observation.value</td>
   </tr>
   <tr>
@@ -435,7 +435,7 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   <tr>
      <td class="tg-0lax">Patient Demographics</td>
      <td class="tg-1wig">Name to Use</td>
-     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient Profile</a></td>
      <td class="tg-0lax">patient.name.use</td>
   </tr>
   <tr>
@@ -548,14 +548,14 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   </tr>
   <tr>
      <td class="tg-0lax">Patient Demographics  </td>
-     <td class="tg-1wig">Pronoun</td>
+     <td class="tg-1wig">Pronouns</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-ktyi">patient.name.use</td>
   </tr>
   <tr>
      <td class="tg-0lax">Patient Summary and Plan</td>
      <td class="tg-1wig">Assessment and Plan of Treatment</td>
-     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-documentreference.html">US Core Document Reference</a></td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile</a></td>
      <td class="tg-0lax">n/a</td>
   </tr>
   <tr>
