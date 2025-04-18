@@ -2,12 +2,15 @@
 
 Patient Information: 
 
-    - Name: James Wolff (prefers to be called James, legal name Jennifer) 
+    - Name: James Wolff
     - Age: 60 
-    - Gender: Male (assigned female at birth) 
+    - Gender: Male
     - Race: Non-Hispanic African American 
     - Status: Retired, lives alone in Orlando, Florida 
     - Insurance: Medicare 
+
+<!-- added at the end of Name - (prefers to be called James, legal name Jennifer)
+added at the end of Gender - (assigned female at birth) -->
 
 Medical History: 
 
@@ -25,7 +28,7 @@ ED Visit (6 months ago):
     - Declined morphine due to past opioid issues 
     - Overnight observation and blood workup (CBC, BMP, HbA1c) 
     - Consulted in-house psychiatrist: Evidence of depressive symptoms, low suicide risk 
-    -     Prescribed: Paroxetine 10mg daily, Ativan 0.5mg every 8 hrs PRN 
+    - Prescribed: Paroxetine 10mg daily, Ativan 0.5mg every 8 hrs PRN 
     - Care navigator assistance: New PCP appointment, bus fare vouchers 
 
 PCP Encounter (following week): 
@@ -33,7 +36,7 @@ PCP Encounter (following week):
     - Discussed feelings of loneliness and lack of motivation 
     - Continued Paroxetine 10mg daily 
     - Referred to community mental health provider and in-house care manager 
-    - Requested female counselors 
+    - Requested female counselors
 
 Initial Behavioral Health Encounter (two weeks later): 
 

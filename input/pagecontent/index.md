@@ -71,7 +71,7 @@ The Implementation Guide contains multiple sections to help readers use the IG, 
   <tr>
     <td class="tg-cly1">Background</td>
     <td class="tg-uozz"><a href="uscdi_bh_elements.html">USCDI+ BH Elements</a></td>
-    <td class="tg-cly1">A list of USCDI+ Behavioral Health elements used in the implementation guide, covering data classes like adverse events, clinical notes, and vital signs. Each element includes descriptions, purposes, and examples, supporting structured health information management and sharing</td>
+    <td class="tg-cly1">A list of USCDI+ Behavioral Health elements used in the implementation guide, covering data classes like <!--adverse events, -->clinical notes and vital signs. Each element includes descriptions, purposes, and examples, supporting structured health information management and sharing</td>
     <td class="tg-cly1">Technical</td>
   </tr>
     <tr>

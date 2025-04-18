@@ -26,12 +26,12 @@ This table provides a correlation between USCDI+ behavioral health data elements
      <th class="tg-w98d"><span style="font-weight:700;color:white;background-color:#156082">FHIR Narrative</span></th>
   </tr></thead>
 <tbody>
-  <tr>
+  <!-- <tr>
      <td class="tg-ktyi">Adverse Event</td>
      <td class="tg-1wig">Adverse Event</td>
      <td class="tg-zzem"><a href="AdverseEvent-fall-adverse-event-example-1.html">fall-adverse-event-example</a></td>
      <td class="tg-0lax">Example of patient adverse fall event</td>
-  </tr>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Allergies and Intolerances</td>
      <td class="tg-1wig">Reaction</td>
@@ -470,12 +470,12 @@ This table provides a correlation between USCDI+ behavioral health data elements
      <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
      <td class="tg-0lax">Example of patient first name</td>
   </tr>
-  <tr>
+  <!-- <tr>
      <td class="tg-0lax">Patient Demographics</td>
      <td class="tg-1wig">Gender Identity</td>
      <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
      <td class="tg-0lax">Example of patient gender identify</td>
-  </tr>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Patient Demographics</td>
      <td class="tg-1wig">Last Name</td>
@@ -524,12 +524,12 @@ This table provides a correlation between USCDI+ behavioral health data elements
      <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
      <td class="tg-0lax">Example of patient sex </td>
   </tr>
-  <tr>
+  <!-- <tr>
      <td class="tg-0lax">Patient Demographics</td>
      <td class="tg-1wig">Sexual Orientation</td>
      <td class="tg-zzem"><a href="Observation-sexual-orientation-example-1.html">sexual-orientation-example</a></td>
      <td class="tg-0lax">Example of patient sexual orientation</td>
-  </tr>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Patient Demographics</td>
      <td class="tg-1wig">Tribal Affiliation</td>
@@ -548,12 +548,12 @@ This table provides a correlation between USCDI+ behavioral health data elements
      <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
      <td class="tg-0lax">Example of patient patient identifier</td>
   </tr>
-  <tr>
+  <!-- <tr>
      <td class="tg-0lax">Patient Demographics  </td>
      <td class="tg-1wig">Pronouns</td>
      <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
      <td class="tg-0lax">Example of patient preferred pronouns</td>
-  </tr>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Patient Summary and Plan</td>
      <td class="tg-1wig">Assessment and Plan of Treatment</td>

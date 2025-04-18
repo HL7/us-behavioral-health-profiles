@@ -3,7 +3,7 @@
     xmlns="http://hl7.org/fhir">
     <id value="hl7.fhir.us.bhp"/>
     <url value="http://hl7.org/fhir/us/bhp/ImplementationGuide/hl7.fhir.us.bhp"/>
-    <version value="0.1.0"/>
+    <version value="0.2.0"/>
     <name value="USBehavioralHealthProfiles"/>
     <title value="US Behavioral Health Profiles Implementation Guide"/>
     <status value="active"/>
@@ -157,7 +157,7 @@
             <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
-        <resource>
+        <!-- <resource>
             <reference>
                 <reference value="AdverseEvent/fall-adverse-event-example-1"/>
                 <display value="fall-adverse-event-example"/>
@@ -166,7 +166,7 @@
             <description value="Example of patient adverse fall event"/>
             <exampleBoolean value="true"/>
             <groupingId value="examples"/>
-        </resource>
+        </resource> -->
         <resource>
             <reference>
                 <reference value="AllergyIntolerance/peanut-allergy-example-1"/>
@@ -627,7 +627,7 @@
             <exampleBoolean value="true"/>
             <groupingId value="examples"/>
         </resource>
-        <resource>
+        <!-- <resource>
             <reference>
                 <reference value="Observation/sexual-orientation-example-1"/>
                 <display value="sexual-orientation-example"/>
@@ -636,7 +636,7 @@
             <description value="Example of patient sexual orientation"/>
             <exampleBoolean value="true"/>
             <groupingId value="examples"/>
-        </resource>
+        </resource> -->
         <resource>
             <reference>
                 <reference value="Observation/temperature-example-1"/>
@@ -889,6 +889,11 @@
             <page>
                 <nameUrl value="bh_to_fhir_profiles.html"/>
                 <title value="+BH to FHIR Profile"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="change_log.html"/>
+                <title value="Change Log"/>
                 <generation value="markdown"/>
             </page>
             <page>

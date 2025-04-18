@@ -20,11 +20,11 @@ The table provides a comprehensive list of the USCDI+ Behavioral Health elements
     <th class="tg-w98d"><span style="color:white;background-color:#156082">USCDI+ BH Data Element Description</span></th>
   </tr></thead>
 <tbody>
-  <tr>
+  <!-- <tr>
     <td class="tg-ktyi">Adverse Event</td>
     <td class="tg-1wig">Adverse Event</td>
     <td class="tg-0lax">An event that may be related to unintended effects on a patient or research participant.</td>
-  </tr>
+  </tr> -->
   <tr>
     <td class="tg-0lax">Allergies and Intolerances</td>
     <td class="tg-1wig">Reaction</td>
@@ -390,11 +390,11 @@ The table provides a comprehensive list of the USCDI+ Behavioral Health elements
     <td class="tg-1wig">First Name</td>
     <td class="tg-0lax">A personal name used before a family name.</td>
   </tr>
-  <tr>
+  <!-- <tr>
     <td class="tg-0lax">Patient Demographics</td>
     <td class="tg-1wig">Gender Identity</td>
     <td class="tg-0lax">A person’s internal sense of being a man, woman, both, or neither.</td>
-  </tr>
+  </tr> -->
   <tr>
     <td class="tg-0lax">Patient Demographics</td>
     <td class="tg-1wig">Last Name</td>
@@ -435,11 +435,11 @@ The table provides a comprehensive list of the USCDI+ Behavioral Health elements
     <td class="tg-1wig">Sex</td>
     <td class="tg-0lax">Documentation of a specific instance of sex and/or gender information.</td>
   </tr>
-  <tr>
+  <!-- <tr>
     <td class="tg-0lax">Patient Demographics</td>
     <td class="tg-1wig">Sexual Orientation</td>
     <td class="tg-0lax">A person’s identification of their emotional, romantic, sexual, or affectional attraction to another person.</td>
-  </tr>
+  </tr> -->
   <tr>
     <td class="tg-0lax">Patient Demographics</td>
     <td class="tg-1wig">Tribal Affiliation</td>
@@ -455,11 +455,11 @@ The table provides a comprehensive list of the USCDI+ Behavioral Health elements
     <td class="tg-1wig">Identifier</td>
     <td class="tg-0lax">An identifier for the patient.</td>
   </tr>
-  <tr>
+  <!-- <tr>
     <td class="tg-0lax">Patient Demographics  </td>
     <td class="tg-1wig">Pronouns</td>
     <td class="tg-0lax">Words that can replace a person’s name when addressing or referring to a person</td>
-  </tr>
+  </tr> -->
   <tr>
     <td class="tg-0lax">Patient Summary and Plan</td>
     <td class="tg-1wig">Assessment and Plan of Treatment</td>

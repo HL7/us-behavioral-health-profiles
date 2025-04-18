@@ -24,12 +24,12 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
      <th class="tg-w98d"><span style="background-color:#156082">Proposed FHIR Data Element</span></th>
   </tr></thead>
 <tbody>
-  <tr>
+  <!-- <tr>
       <td class="tg-ktyi">Adverse Event</td>
       <td class="tg-1wig">Adverse Event</td>
      <td class="tg-zzem"><a href="https://www.hl7.org/fhir/adverseevent.html">Adverse Event -Base FHIR</a></td>
      <td class="tg-ktyi">n/a</td>
-  </tr>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Allergies and Intolerances</td>
      <td class="tg-1wig">Reaction</td>
@@ -468,12 +468,12 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.name.given</td>
   </tr>
-  <tr>
+  <!-- <tr>
      <td class="tg-0lax">Patient Demographics</td>
      <td class="tg-1wig">Gender Identity</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.genderIdentity</td>
-  </tr>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Patient Demographics</td>
      <td class="tg-1wig">Last Name</td>
@@ -522,12 +522,12 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.sex</td>
   </tr>
-  <tr>
+  <!-- <tr>
      <td class="tg-0lax">Patient Demographics</td>
      <td class="tg-1wig">Sexual Orientation</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-sexual-orientation.html">US Core Observation Sexual Orientation Profile</a></td>
      <td class="tg-0lax">observation.value</td>
-  </tr>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Patient Demographics</td>
      <td class="tg-1wig">Tribal Affiliation</td>
@@ -546,12 +546,12 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.identifier</td>
   </tr>
-  <tr>
+  <!-- <tr>
      <td class="tg-0lax">Patient Demographics  </td>
      <td class="tg-1wig">Pronouns</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
-     <td class="tg-ktyi">patient.name.use</td>
-  </tr>
+     <td class="tg-ktyi">n/a</td>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Patient Summary and Plan</td>
      <td class="tg-1wig">Assessment and Plan of Treatment</td>
@@ -574,7 +574,7 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
      <td class="tg-0lax">Problems</td>
      <td class="tg-1wig">Date of Diagnosis</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
-     <td class="tg-0lax">condition.onset</td>
+     <td class="tg-0lax">n/a</td>
   </tr>
   <tr>
      <td class="tg-0lax">Problems</td>
@@ -687,7 +687,7 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   <tr>
      <td class="tg-0lax">Work Information</td>
      <td class="tg-1wig">Farmworker Status</td>
-     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-occupation.html">US Core Occupation Observation</a></td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-occupation.html">US Core Observation Occupation Profile</a></td>
      <td class="tg-0lax">observation.code</td>
   </tr>
   <tr>

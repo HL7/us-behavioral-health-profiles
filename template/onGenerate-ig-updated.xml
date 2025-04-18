@@ -15,11 +15,11 @@
       </div>
    </text>
    <url value="http://hl7.org/fhir/us/bhp/ImplementationGuide/hl7.fhir.us.bhp"/>
-   <version value="0.1.0"/>
+   <version value="0.2.0"/>
    <name value="USBehavioralHealthProfiles"/>
    <title value="US Behavioral Health Profiles Implementation Guide"/>
    <status value="active"/>
-   <date value="2024-09-16T10:40:06-04:00"/>
+   <date value="2025-04-18T13:21:41-04:00"/>
    <contact>
       <telecom>
          <system value="phone"/>
@@ -42,7 +42,7 @@
       </extension>
       <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
       <packageId value="hl7.terminology.r4"/>
-      <version value="6.0.2"/>
+      <version value="6.2.0"/>
    </dependsOn>
    <dependsOn id="hl7ext">
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -50,7 +50,7 @@
       </extension>
       <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
       <packageId value="hl7.fhir.uv.extensions.r4"/>
-      <version value="5.1.0"/>
+      <version value="5.2.0"/>
    </dependsOn>
    <dependsOn id="hl7fhiruscore">
       <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core#6.1.0"/>
@@ -267,7 +267,7 @@
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-         <valueCode value="hl7.fhir.uv.tools#0.1.0"/>
+         <valueCode value="hl7.fhir.uv.tools.r4#0.5.0"/>
       </extension>
       <grouping id="profiles">
          <name value="Profiles"/>
@@ -278,156 +278,6 @@
       <grouping id="examples">
          <name value="Examples"/>
       </grouping>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
             <valueInteger value="999999999"/>
@@ -615,25 +465,6 @@
          </reference>
          <name value="mental-health-provider-example"/>
          <description value="Example of mental health provider"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="AdverseEvent"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="AdverseEvent-fall-adverse-event-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="AdverseEvent/fall-adverse-event-example-1"/>
-            <display value="fall-adverse-event-example"/>
-         </reference>
-         <name value="fall-adverse-event-example"/>
-         <description value="Example of patient adverse fall event"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -1519,25 +1350,6 @@
             <valueString value="Observation"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-sexual-orientation-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/sexual-orientation-example-1"/>
-            <display value="sexual-orientation-example"/>
-         </reference>
-         <name value="sexual-orientation-example"/>
-         <description value="Example of patient sexual orientation"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="Observation-temperature-example-1.html"/>
          </extension>
          <reference>
@@ -1959,13 +1771,6 @@
             <nameUrl value="index.html"/>
             <title value="Home Page"/>
             <generation value="markdown"/>
-         
-         
-         
-         
-         
-         
-         
          </page>
          <page>
             <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -2013,6 +1818,14 @@
             </extension>
             <nameUrl value="bh_to_fhir_profiles.html"/>
             <title value="+BH to FHIR Profile"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="change_log.html"/>
+            </extension>
+            <nameUrl value="change_log.html"/>
+            <title value="Change Log"/>
             <generation value="markdown"/>
          </page>
          <page>
@@ -2075,11 +1888,6 @@
             <page>
                <nameUrl value="Practitioner-mental-health-provider-example-1.html"/>
                <title value="mental-health-provider-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="AdverseEvent-fall-adverse-event-example-1.html"/>
-               <title value="fall-adverse-event-example"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -2310,11 +2118,6 @@
             <page>
                <nameUrl value="Observation-pregnancy-status-example-1.html"/>
                <title value="pregnancy-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Observation-sexual-orientation-example-1.html"/>
-               <title value="sexual-orientation-example"/>
                <generation value="generated"/>
             </page>
             <page>

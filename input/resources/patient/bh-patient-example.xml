@@ -33,15 +33,15 @@
         </extension>
     </extension>
     <!-- Sex assigned at birth -->
-    <extension
+    <!-- <extension
         url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex">
         <valueCode value="F"/>
-    </extension>
+    </extension> -->
     <!-- USCDI (Snomed) Sex -->
-    <extension
+    <!-- <extension
         url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex">
         <valueCode value="248152002"/>
-    </extension>
+    </extension> -->
     <!-- Veteran Status -->
     <extension
         url="http://hl7.org/fhir/us/military-service/StructureDefinition/military-service-veteran-status">
@@ -52,7 +52,7 @@
             <valueBoolean value="false"/>
     </extension>
     <!-- Gender Identity -->
-    <extension
+    <!-- <extension
         url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity">
         <valueCodeableConcept>
             <coding>
@@ -62,10 +62,10 @@
             </coding>
             <text value="Identifies as Male"/>
         </valueCodeableConcept>
-    </extension>
+    </extension> -->
     <!-- Individual Pronouns Extension -->
     <!-- TODO: Profile? -->
-    <extension url="http://hl7.org/fhir/StructureDefinition/individual-pronouns">
+    <!-- <extension url="http://hl7.org/fhir/StructureDefinition/individual-pronouns">
         <extension url="value">
             <valueCodeableConcept> 
                 <coding> 
@@ -75,7 +75,7 @@
                 </coding> 
             </valueCodeableConcept> 
         </extension> 
-    </extension>
+    </extension> -->
     <identifier>
         <use value="usual"/>
         <type>
