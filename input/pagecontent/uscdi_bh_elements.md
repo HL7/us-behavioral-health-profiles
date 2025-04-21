@@ -360,11 +360,11 @@ The table provides a comprehensive list of the USCDI+ Behavioral Health elements
     <td class="tg-1wig">Medications Dispensed</td>
     <td class="tg-0lax">Description/ list of medications supplied to a patient with the intention that it is subsequently consumed by the patient.</td>
   </tr>
-  <tr>
+  <!-- <tr>
     <td class="tg-0lax">Patient Demographics</td>
     <td class="tg-1wig">Name to Use</td>
     <td class="tg-0lax">Name that should be used when addressing or referencing a person.</td>
-  </tr>
+  </tr> -->
   <tr>
     <td class="tg-0lax">Patient Demographics</td>
     <td class="tg-1wig">Current Address</td>

@@ -40,7 +40,7 @@ PCP Encounter (following week):
 
 Initial Behavioral Health Encounter (two weeks later): 
 
-    - Discussed mental health history, abusive past relationship, and support from late partner 
+    - Discussed mental health history, abusive past relationship, and support from late wife 
     - Strained relationship with adult daughter, Sarah Wolff. Limited family support 
     - Administered depression and suicide risk assessments (PHQ-9 score: 12) 
     - Recommended CBT, peer coaching, and grief support group 

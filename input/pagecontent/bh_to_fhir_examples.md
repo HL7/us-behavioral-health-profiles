@@ -314,12 +314,12 @@ This table provides a correlation between USCDI+ behavioral health data elements
      <td class="tg-zzem"><a href="QuestionnaireResponse-BHP-QuestionnaireResponsePRAPAREExample-1.html">prapare-questionnaireresponse-example</a></td>
      <td class="tg-ktyi">Example of SDOH housing assessment/screening</td>
   </tr>
-  <tr>
+  <!-- <tr>
      <td class="tg-0lax">Health Status Assessments</td>
      <td class="tg-1wig">Pregnancy Status</td>
      <td class="tg-zzem"><a href="Observation-pregnancy-status-example-1.html">pregnancy-example</a></td>
      <td class="tg-ktyi">Example of patient pregnancy status assessment/screening</td>
-  </tr>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Health Status Assessments</td>
      <td class="tg-1wig">SDOH Assessment</td>
@@ -434,12 +434,12 @@ This table provides a correlation between USCDI+ behavioral health data elements
      <td class="tg-zzem"><a href="MedicationDispense-bupropion-dispense-example-1.html">bupropion-dispense-example</a></td>
      <td class="tg-0lax">Example of dispensed medication - bupropion</td>
   </tr>
-  <tr>
+  <!-- <tr>
      <td class="tg-0lax">Patient Demographics</td>
      <td class="tg-1wig">Name to Use</td>
      <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
      <td class="tg-0lax">Example of patient preferred name</td>
-  </tr>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Patient Demographics</td>
      <td class="tg-1wig">Current Address</td>
