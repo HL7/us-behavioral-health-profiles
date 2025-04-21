@@ -686,12 +686,12 @@ This table provides a correlation between USCDI+ behavioral health data elements
      <td class="tg-zzem"><a href="Observation-average-blood-pressure-example-1.html">average-bp-example</a></td>
      <td class="tg-0lax">Example of average blood pressure</td>
   </tr>
-  <tr>
+  <!-- <tr>
      <td class="tg-0lax">Work Information</td>
      <td class="tg-1wig">Farmworker Status</td>
      <td class="tg-zzem"><a href="Observation-usual-work-example-1.html">history-of-occupation-example</a></td>
      <td class="tg-7zrl">Example of patient usual occupation as a citrus farm worker</td>
-  </tr>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Work Information</td>
      <td class="tg-1wig">Veteran Status</td>

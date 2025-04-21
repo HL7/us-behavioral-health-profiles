@@ -684,12 +684,12 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
      <td class="tg-zzem"><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-average-blood-pressure.html">US Core Average Blood Pressure (STU7)</a></td>
      <td class="tg-0lax">observation.code</td>
   </tr>
-  <tr>
+  <!-- <tr>
      <td class="tg-0lax">Work Information</td>
      <td class="tg-1wig">Farmworker Status</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-occupation.html">US Core Observation Occupation Profile</a></td>
      <td class="tg-0lax">observation.code</td>
-  </tr>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Work Information</td>
      <td class="tg-1wig">Veteran Status</td>

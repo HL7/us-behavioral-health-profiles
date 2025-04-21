@@ -1,6 +1,6 @@
 ### USCDI+ BH Elements
 
-The table provides a comprehensive list of the USCDI+ Behavioral Health elements used to model this implementation guide. The table includes various data classes such as adverse events, clinical notes, encounter information, health status assessments, and vital signs. Each data element includes specific descriptions that outline the type of data captured, its purpose, and examples where applicable, contributing to a structured approach to managing and sharing health information.
+The table provides a comprehensive list of the USCDI+ Behavioral Health elements used to model this implementation guide. The table includes various data classes such as clinical notes, encounter information, health status assessments, and vital signs. Each data element includes specific descriptions that outline the type of data captured, its purpose, and examples where applicable, contributing to a structured approach to managing and sharing health information.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -58,7 +58,7 @@ The table provides a comprehensive list of the USCDI+ Behavioral Health elements
   <tr>
     <td class="tg-0lax">Clinical Notes</td>
     <td class="tg-1wig">Mental Health Consultation Note</td>
-    <td class="tg-0lax">Response to request from a mental health clinician for an opinion, advice, or service from another clinician.</td>
+    <td class="tg-0lax">Response to request from a mental health clinician for an opinion, advice, or service from another clinician. Examples include but are not limited to notes from psychiatrists, social workers, pediatricians, and school counselors.</td>
   </tr>
   <tr>
     <td class="tg-0lax">Clinical Notes</td>
@@ -68,12 +68,12 @@ The table provides a comprehensive list of the USCDI+ Behavioral Health elements
   <tr>
     <td class="tg-0lax">Clinical Notes</td>
     <td class="tg-1wig">Mental Health History &amp; Physical</td>
-    <td class="tg-0lax">Summary of current and past mental health conditions and observations used to inform an episode of care. Examples include but are not limited to admissions, surgeries, and other procedures.</td>
+    <td class="tg-0lax">Summary of current and past mental health conditions and observations used to inform an episode of care. Examples include but are not limited to psychiatric hospital admissions, Medication-Assisted Treatment or substance Use Treatment, and other procedures.</td>
   </tr>
   <tr>
     <td class="tg-0lax">Clinical Notes</td>
     <td class="tg-1wig">Mental Health Procedure Note</td>
-    <td class="tg-0lax">Synopsis of non-operative mental health procedure.<br> </td>
+    <td class="tg-0lax">Synopsis of non-operative mental health procedure. Examples include but are not limited to notes for an initial assessment, ADHD interventions, or group therapy.<br> </td>
   </tr>
   <tr>
     <td class="tg-0lax">Clinical Notes</td>
@@ -493,7 +493,7 @@ The table provides a comprehensive list of the USCDI+ Behavioral Health elements
   <tr>
     <td class="tg-0lax">Procedures</td>
     <td class="tg-1wig">Harm Reduction Activities</td>
-    <td class="tg-ktyi">Intervention tools or resources given to a patient to reduce harm, prevent overdose, and connect to health/social services. Examples include naloxone distribution, syringe services, and education on healthcare, treatment, and support services. </td>
+    <td class="tg-ktyi">Intervention tools or resources given to a patient to reduce harm, prevent overdose, and connect to health/social services. Examples include naloxone distribution, cyber bulling  support, and education on prevention, treatment, and support services.</td>
   </tr>
   <tr>
     <td class="tg-0lax">Procedures</td>
@@ -570,11 +570,11 @@ The table provides a comprehensive list of the USCDI+ Behavioral Health elements
     <td class="tg-1wig">Average Blood Pressure</td>
     <td class="tg-0lax">Arithmetic average of systolic and diastolic components of two of more blood pressure readings in a specified time period or according to a specified algorithm or protocol.<br> Examples include but are not limited to 3-day morning and evening home monitoring, clinical encounter repeat average, and 24-hour ambulatory measurement.</td>
   </tr>
-  <tr>
+  <!-- <tr>
     <td class="tg-0lax">Work Information</td>
     <td class="tg-1wig">Farmworker Status</td>
     <td class="tg-0lax">Data element capturing seasonal or migrant farm work status.</td>
-  </tr>
+  </tr> -->
   <tr>
     <td class="tg-0lax">Work Information</td>
     <td class="tg-1wig">Veteran Status</td>
