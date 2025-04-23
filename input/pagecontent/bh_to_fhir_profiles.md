@@ -432,12 +432,12 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-medicationdispense.html">US Core Medication Dispense Profile</a></td>
      <td class="tg-0lax">medicationDispense.</td>
   </tr>
-  <tr>
+  <!-- <tr>
      <td class="tg-0lax">Patient Demographics</td>
      <td class="tg-1wig">Name to Use</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient Profile</a></td>
      <td class="tg-0lax">patient.name.use</td>
-  </tr>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Patient Demographics</td>
      <td class="tg-1wig">Current Address</td>

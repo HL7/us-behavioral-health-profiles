@@ -28,7 +28,7 @@ Standardizing behavioral health data through this IG aims to improve data exchan
 
 ### How to Read This Implementation Guide 
 
-The Implementation Guide contains multiple sections to help readers use the IG, including a description of the IG’s intended audience, scope, and guidance for implementing USCDI+BH elements using FHIR standards.  The table below lists major sections of the IG and relevant audiences for each section. 
+The Implementation Guide contains multiple sections to help readers use the IG, including a description of the IG’s intended audience, scope, and guidance for implementing USCDI+BH elements using FHIR standards. The table below lists major sections of the IG and relevant audiences for each section. 
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -38,7 +38,7 @@ The Implementation Guide contains multiple sections to help readers use the IG, 
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-yd0e{color:#467886;text-align:left;vertical-align:middle}
-.tg .tg-uozz{color:#F00;text-align:left;vertical-align:bottom}
+.tg .tg-uozz{color:#F00;text-align:left;vertical-align:middle}
 .tg .tg-fapl{color:#F00;text-align:left;vertical-align:middle}
 .tg .tg-xf3r{background-color:#BFBFBF;font-weight:bold;text-align:left;vertical-align:middle}
 </style>
@@ -89,7 +89,7 @@ The Implementation Guide contains multiple sections to help readers use the IG, 
     <tr>
     <td class="tg-cly1">Technical Artifacts</td>
     <td class="tg-fapl"><a href="artifacts.html">FHIR Artifacts</a></td>
-    <td class="tg-cly1">An index of the FHIR artifacts include in this implementation guide</td>
+    <td class="tg-cly1">An index of the FHIR artifacts included in this implementation guide</td>
     <td class="tg-cly1">Detailed Technical</td>
   </tr>
   <tr>
@@ -124,8 +124,7 @@ This section outlines the limitations and challenges encountered when developing
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-xf3r{background-color:#BFBFBF;font-weight:bold;text-align:left;vertical-align:middle}
-.tg .tg-zzem{color:#467886;text-align:left;vertical-align:top}
-.tg .tg-7zrl{text-align:left;vertical-align:bottom}
+.tg .tg-zzem{color:#467886;text-align:left;vertical-align:middle}
 </style>
 <table class="tg"><thead>
   <tr>
@@ -147,12 +146,12 @@ This section outlines the limitations and challenges encountered when developing
     <tr>
     <td class="tg-zzem"><a href="https://hl7.org/fhir/us/sdoh-clinicalcare/STU2.1">SDOH Clinical Care</a></td>
     <td class="tg-cly1">2.1.0</td>
-    <td class="tg-7zrl">In some cases, where profiles could not be derived from US Core, SDOH Clinical Care profiles are referenced.</td>
+    <td class="tg-cly1">In some cases, where profiles could not be derived from US Core, SDOH Clinical Care profiles are referenced.</td>
   </tr>
       <tr>
     <td class="tg-zzem"><a href="http://hl7.org/fhir/R4/index.html">HL7 FHIR R4</a></td>
     <td class="tg-cly1">R4</td>
-    <td class="tg-7zrl">In some cases, where profiles could not be derived from US Core, base FHIR resources may be used.</td>
+    <td class="tg-cly1">In some cases, where profiles could not be derived from US Core, base FHIR resources may be used.</td>
   </tr>
 </tbody></table>
 
@@ -179,42 +178,47 @@ This section outlines the limitations and challenges encountered when developing
   <tr>
     <td class="tg-cly1">Llew Brown</td>
     <td class="tg-cly1">Contributor</td>
-        <td class="tg-cly1">Next Level Health Innovations</td>
+    <td class="tg-cly1">Next Level Health Innovations</td>
   </tr>
   <tr>
     <td class="tg-cly1">JaMor Hairston</td>
     <td class="tg-cly1">IG Author</td>
-            <td class="tg-cly1">Next Level Health Innovations</td>
+    <td class="tg-cly1">Next Level Health Innovations</td>
   </tr>
   <tr>
     <td class="tg-cly1">Claudia Hall</td>
     <td class="tg-cly1">IG Author</td>
-            <td class="tg-cly1">Next Level Health Innovations</td>
+    <td class="tg-cly1">Next Level Health Innovations</td>
   </tr>
   <tr>
     <td class="tg-cly1">Eva Keeling</td>
     <td class="tg-cly1">Contributor</td>
-            <td class="tg-cly1">Next Level Health Innovations</td>
+    <td class="tg-cly1">Next Level Health Innovations</td>
   </tr>
   <tr>
     <td class="tg-cly1">Susan Matney</td>
     <td class="tg-cly1">Contributor</td>
-            <td class="tg-cly1">Next Level Health Innovations</td>
+    <td class="tg-cly1">Next Level Health Innovations</td>
   </tr>
     <tr>
     <td class="tg-cly1">Aaron Nusstein</td>
     <td class="tg-cly1">IG Author</td>
-                <td class="tg-cly1">Lantana Consulting Group</td>
+    <td class="tg-cly1">Lantana Consulting Group</td>
   </tr>
   <tr>
     <td class="tg-cly1">David deRoode</td>
     <td class="tg-cly1">IG Author</td>
-            <td class="tg-cly1">Lantana Consulting Group</td>
+    <td class="tg-cly1">Lantana Consulting Group</td>
   </tr>
   <tr>
     <td class="tg-cly1">Laura Goubeaux</td>
     <td class="tg-cly1">Contributor</td>
-                <td class="tg-cly1">Lantana Consulting Group</td>
+    <td class="tg-cly1">Lantana Consulting Group</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Patrick Joyce</td>
+    <td class="tg-cly1">Contributor</td>
+    <td class="tg-cly1">Lantana Consulting Group</td>
   </tr>
   <tr>
     <td class="tg-cly1">Talisha Searcy</td>
@@ -224,7 +228,8 @@ This section outlines the limitations and challenges encountered when developing
   <tr>
     <td class="tg-cly1">Lori Haberman</td>
     <td class="tg-cly1">Project Sponsor Contact</td>
-        <td class="tg-cly1">Assistant Secretary for Technology Policy / Office of the National Coordinator for Health IT (ASTP/ONC)</td>  </tr>
+    <td class="tg-cly1">Assistant Secretary for Technology Policy / Office of the National Coordinator for Health IT (ASTP/ONC)</td>
+  </tr>
   <tr>
     <td class="tg-cly1">Christopher Muir</td>
     <td class="tg-cly1">Project Sponsor Contact</td>
