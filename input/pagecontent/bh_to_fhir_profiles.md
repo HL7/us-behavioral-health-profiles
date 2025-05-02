@@ -1,4 +1,4 @@
-This table serves as a crosswalk between USCDI+ behavioral health data elements and their corresponding proposed FHIR profiles. The table maps the +BH data classes and elements, such as adverse events, allergies, clinical notes, and patient demographics, to FHIR profiles, showing how each USCDI+ BH element aligns with FHIR's data standards. This alignment facilitates the standardized exchange of health information across different systems, ensuring consistency and interoperability in managing and sharing healthcare data.
+This table serves as a crosswalk between USCDI+ behavioral health data elements and their corresponding proposed FHIR profiles. The table maps the +BH data classes and elements, such as allergies, clinical notes, and patient demographics, to FHIR profiles, showing how each USCDI+ BH element aligns with FHIR's data standards. This alignment facilitates the standardized exchange of health information across different systems, ensuring consistency and interoperability in managing and sharing healthcare data.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}

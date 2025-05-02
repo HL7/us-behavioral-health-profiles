@@ -6,7 +6,7 @@ The United States Core Data for Interoperability (USCDI) Plus Behavioral Health 
 
 Behavioral health, encompassing both acute and chronic mental health and substance use disorders, is a critical component of overall health and well-being. The increasing prevalence of these disorders necessitates robust information technology (IT) systems to support efficient and effective care. However, the fragmentation of behavioral health information has historically hindered the ability of healthcare providers to deliver comprehensive, coordinated care. In addition, behavioral health providers often lag in adopting health IT due to factors such as ineligibility for incentive programs and the complexity of documenting behavioral health encounters. These factors and others complicate the sharing of behavioral health data, impeding care coordination and integration of behavioral health with other health settings. 
 
-The USCDI+ BH dataset seeks to address this fragmentation by establishing, harmonizing, and advancing a core list of standardized, interoperable data elements to capture treatment data for adults, adolescence, and children with mental health and substance use disorders. The dataset development involved collaboration with diverse stakeholders, including behavioral health clinicians, patient advocacy groups, healthcare IT developers, and policymakers. This collaborative approach aimed to address the needs and priorities of all stakeholders while aligning with existing standards and certain regulations, where possible. 
+The USCDI+ BH dataset seeks to address this fragmentation by establishing, harmonizing, and advancing a core list of standardized, interoperable data elements to capture treatment data for adults, adolescents, and children with mental health and substance use disorders. The dataset development involved collaboration with diverse stakeholders, including behavioral health clinicians, patient advocacy groups, healthcare IT developers, and policymakers. This collaborative approach aimed to address the needs and priorities of all stakeholders while aligning with existing standards and certain regulations, where possible. 
 
 ### Scope and Usage 
 
@@ -201,13 +201,23 @@ This section outlines the limitations and challenges encountered when developing
     <td class="tg-cly1">Next Level Health Innovations</td>
   </tr>
     <tr>
+    <td class="tg-cly1">Tiara Halstead</td>
+    <td class="tg-cly1">Contributor</td>
+    <td class="tg-cly1">Next Level Health Innovations</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Michelle Zancan</td>
+    <td class="tg-cly1">Contributor</td>
+    <td class="tg-cly1">Next Level Health Innovations</td>
+  </tr>
+    <tr>
     <td class="tg-cly1">Aaron Nusstein</td>
-    <td class="tg-cly1">IG Author</td>
+    <td class="tg-cly1">Primary Author</td>
     <td class="tg-cly1">Lantana Consulting Group</td>
   </tr>
   <tr>
     <td class="tg-cly1">David deRoode</td>
-    <td class="tg-cly1">IG Author</td>
+    <td class="tg-cly1">Contributor</td>
     <td class="tg-cly1">Lantana Consulting Group</td>
   </tr>
   <tr>
@@ -221,17 +231,32 @@ This section outlines the limitations and challenges encountered when developing
     <td class="tg-cly1">Lantana Consulting Group</td>
   </tr>
   <tr>
-    <td class="tg-cly1">Talisha Searcy</td>
-    <td class="tg-cly1">Project Sponsor Contact</td>
-    <td class="tg-cly1">Substance Abuse and Mental Health Services Administration (SAMHSA)</td>
-  </tr>
-  <tr>
     <td class="tg-cly1">Lori Haberman</td>
     <td class="tg-cly1">Project Sponsor Contact</td>
     <td class="tg-cly1">Assistant Secretary for Technology Policy / Office of the National Coordinator for Health IT (ASTP/ONC)</td>
   </tr>
   <tr>
     <td class="tg-cly1">Christopher Muir</td>
+    <td class="tg-cly1">Project Sponsor Contact</td>
+    <td class="tg-cly1">Assistant Secretary for Technology Policy / Office of the National Coordinator for Health IT (ASTP/ONC)</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Dantrell Simmons</td>
+    <td class="tg-cly1">Project Sponsor Contact</td>
+    <td class="tg-cly1">Substance Abuse and Mental Health Services Administration (SAMHSA)</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Talisha Searcy</td>
+    <td class="tg-cly1">Project Sponsor Contact</td>
+    <td class="tg-cly1">Assistant Secretary for Technology Policy / Office of the National Coordinator for Health IT (ASTP/ONC)</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Brett Andriesen</td>
+    <td class="tg-cly1">Project Sponsor Contact</td>
+    <td class="tg-cly1">Assistant Secretary for Technology Policy / Office of the National Coordinator for Health IT (ASTP/ONC)</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Leliveld Emeni</td>
     <td class="tg-cly1">Project Sponsor Contact</td>
     <td class="tg-cly1">Assistant Secretary for Technology Policy / Office of the National Coordinator for Health IT (ASTP/ONC)</td>
   </tr>
