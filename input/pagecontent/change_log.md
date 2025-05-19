@@ -10,8 +10,8 @@ The following outlines the changes made in April 2025 to align to Executive Orde
 
 <u>Make America Health Again Commission statement</u>
 
-- Updated Implementation Guide narrative content to reflect the needs of children and adolescence and to highlight chronic conditions 
-- Added Chronic condition and child and adolescent examples to data elements  
+- Updated Implementation Guide narrative content to reflect the needs of children and adolescents and to highlight chronic conditions 
+- Added chronic condition and child and adolescent examples to data elements  
 - Removed the Farmworker Status data element 
 - Updated supporting documentation to reflect the removal of the Farmworker Status data element
 

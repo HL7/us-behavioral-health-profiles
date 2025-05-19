@@ -198,7 +198,7 @@ This table provides a correlation between USCDI+ behavioral health data elements
      <td class="tg-0lax">Goals and Preferences</td>
      <td class="tg-1wig">Care Experience Preference</td>
      <td class="tg-zzem"><a href="Observation-provider-preference-observation-example-2.html">provider-preference-obs-example</a></td>
-     <td class="tg-0lax">Example of a care experience preference for female providers</td>
+     <td class="tg-0lax">Example of a care experience preference for health professional</td>
   </tr>
   <tr>
      <td class="tg-0lax">Goals and Preferences</td>
