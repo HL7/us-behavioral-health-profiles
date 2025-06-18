@@ -18,9 +18,9 @@
         <coding>
             <system value="http://loinc.org"/>
             <code value="75773-2"/>
-            <display value="Goals, preferences, and priorities for medical treatment [Reported]"/>
+            <display value="Goals, preferences, and priorities for medical treatment Narrative - Reported"/>
         </coding>
-        <text value="Goals, preferences, and priorities for medical treatment [Reported]"/>
+        <text value="Goals, preferences, and priorities for medical treatment Narrative - Reported"/>
     </code>
     <subject>
         <reference value="Patient/bh-patient-example"/>
@@ -28,8 +28,8 @@
     </subject>
     <effectiveDateTime value="2024-02-01"/>
     <performer>
-        <reference value="Patient/bh-patient-example"/>
-        <display value="James Wolff"/>
+        <reference value="Practitioner/pcp-provider-example-1"/>
+        <display value="Dr. Doc Family"/>
     </performer>
     <valueString
         value="James made sure to let the staff know that he does NOT want morphine for his chest pain, citing a past struggle with opioids and other substances."/>

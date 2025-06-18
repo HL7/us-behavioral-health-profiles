@@ -5,7 +5,7 @@
         <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"/>
     </meta>
      <questionnaire
-        value="http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-QuestionnairePRAPARE">
+        value="http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-QuestionnairePRAPARE#2.3.0">
         <extension url="http://hl7.org/fhir/StructureDefinition/display">
             <valueString value="SDOHCC Questionnaire PRAPARE"/>
         </extension>
@@ -17,15 +17,15 @@
     </subject>
     <authored value="2024-02-01T13:56:33.747Z"/>
     <item>
-        <linkId value="93025-5"/>
+        <linkId value="/93025-5"/>
         <text
             value="Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]"/>
         <item>
-            <linkId value="93043-8"/>
+            <linkId value="/93043-8"/>
             <text value="Personal characteristics"/>
             <item>
-                <linkId value="56051-6"/>
-                <text value="Do you consider yourself Hispanic/Latino?"/>
+                <linkId value="/93043-8/56051-6"/>
+        <text value="Hispanic or Latino"/>
                 <answer>
                     <valueCoding>
                         <system value="http://loinc.org"/>
@@ -35,8 +35,8 @@
                 </answer>
             </item>
             <item>
-                <linkId value="32624-9"/>
-                <text value="Race"/>
+                <linkId value="/93043-8/32624-9"/>
+        <text value="Race"/>
                 <answer>
                     <valueCoding>
                         <system value="http://loinc.org"/>
@@ -46,9 +46,9 @@
                 </answer>
             </item>
             <item>
-                <linkId value="93035-4"/>
-                <text
-                    value="At any point in the past 2 years, has season or migrant farm work been your or your family's main source of income?"/>
+                <linkId value="/93043-8/93035-4"/>
+        <text
+              value="Has season or migrant farm work been your or your family's main source of income at any point in past 2 years?"/>
                 <answer>
                     <valueCoding>
                         <system value="http://loinc.org"/>
@@ -58,9 +58,10 @@
                 </answer>
             </item>
             <item>
-                <linkId value="93034-7"/>
-                <text value="Have you been discharged from the armed forces of the United States?"/>
-                <answer>
+                <linkId value="/93043-8/93034-7"/>
+        <text
+              value="Have you been discharged from the armed forces of the United States?"/>
+        <answer>
                     <valueCoding>
                         <system value="http://loinc.org"/>
                         <code value="LA32-8"/>
@@ -69,9 +70,9 @@
                 </answer>
             </item>
             <item>
-                <linkId value="54899-0"/>
-                <text value="Preferred language"/>
-                <answer>
+                <linkId value="/93043-8/54899-0"/>
+        <text value="Preferred language"/>
+        <answer>
                     <valueCoding>
                         <system value="http://loinc.org"/>
                         <code value="LA43-5"/>
@@ -81,18 +82,18 @@
             </item>
         </item>
         <item>
-            <linkId value="93042-0"/>
+            <linkId value="/93042-0"/>
             <text value="Family and home"/>
             <item>
-                <linkId value="63512-8"/>
-                <text value="How many people are living or staying at this address?"/>
+                <linkId value="/93042-0/63512-8"/>
+        <text value="How many people are living or staying at this address?"/>
                 <answer>
                     <valueInteger value="6"/>
                 </answer>
             </item>
             <item>
-                <linkId value="71802-3"/>
-                <text value="Housing status"/>
+                <linkId value="/93042-0/71802-3"/>
+        <text value="Housing status"/>
                 <answer>
                     <valueCoding>
                         <system value="http://loinc.org"/>
@@ -104,8 +105,8 @@
                 </answer>
             </item>
             <item>
-                <linkId value="93033-9"/>
-                <text value="Are you worried about losing your housing?"/>
+                <linkId value="/93042-0/93033-9"/>
+        <text value="Are you worried about losing your housing?"/>
                 <answer>
                     <valueCoding>
                         <system value="http://loinc.org"/>
@@ -115,19 +116,19 @@
                 </answer>
             </item>
             <item>
-                <linkId value="56799-0"/>
-                <text value="Address"/>
+                <linkId value="/93042-0/56799-0"/>
+        <text value="Address"/>
                 <answer>
                     <valueString value="Broadway"/>
                 </answer>
             </item>
         </item>
         <item>
-            <linkId value="93041-2"/>
+            <linkId value="/93041-2"/>
             <text value="Money and resources"/>
             <item>
-                <linkId value="82589-3"/>
-                <text value="Highest level of Education"/>
+                <linkId value="/93041-2/82589-3"/>
+        <text value="Highest level of educ"/>
                 <answer>
                     <valueCoding>
                         <system value="http://loinc.org"/>
@@ -137,8 +138,8 @@
                 </answer>
             </item>
             <item>
-                <linkId value="67875-5"/>
-                <text value="Employment status current"/>
+                <linkId value="/93041-2/67875-5"/>
+        <text value="Employment status current"/>
                 <answer>
                     <valueCoding>
                         <system value="http://loinc.org"/>
@@ -148,7 +149,7 @@
                 </answer>
             </item>
             <item>
-                <linkId value="76437-3"/>
+                <linkId value="/93041-2/76437-3"/>
                 <text value="Primary insurance"/>
                 <answer>
                     <valueCoding>
@@ -159,7 +160,7 @@
                 </answer>
             </item>
             <item>
-                <linkId value="63586-2"/>
+                <linkId value="/93041-2/63586-2"/>
                 <text
                     value="What was your best estimate of the total income of all family members from all sources, before taxes, in last year?"/>
                 <answer>
@@ -167,7 +168,7 @@
                 </answer>
             </item>
             <item>
-                <linkId value="93031-3"/>
+                <linkId value="/93041-2/93031-3"/>
                 <text
                     value="In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?"/>
                 <answer>
@@ -186,7 +187,7 @@
                 </answer>
             </item>
             <item>
-                <linkId value="93030-5"/>
+                <linkId value="/93041-2/93030-5"/>
                 <text
                     value="Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?"/>
                 <answer>
@@ -210,10 +211,10 @@
             </item>
         </item>
         <item>
-            <linkId value="93040-4"/>
+            <linkId value="/93040-4"/>
             <text value="Social and emotional health"/>
             <item>
-                <linkId value="93029-7"/>
+                <linkId value="/93040-4/93029-7"/>
                 <text
                     value="How often do you see or talk to people that you care about and feel close to (For example: talking to friends on the phone, visiting friends or family, going to church or club meetings)?"/>
                 <answer>
@@ -225,7 +226,7 @@
                 </answer>
             </item>
             <item>
-                <linkId value="93038-8"/>
+                <linkId value="/93040-4/93038-8"/>
                 <text
                     value="Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled. How stressed are you?"/>
                 <answer>
@@ -238,10 +239,10 @@
             </item>
         </item>
         <item>
-            <linkId value="93039-6"/>
+            <linkId value="/93039-6"/>
             <text value="Optional additional questions"/>
             <item>
-                <linkId value="93028-9"/>
+                <linkId value="/93039-6/93028-9"/>
                 <text
                     value="In the past year, have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility?"/>
                 <answer>
@@ -253,7 +254,7 @@
                 </answer>
             </item>
             <item>
-                <linkId value="93027-1"/>
+                <linkId value="/93039-6/93027-1"/>
                 <text value="Are you a refugee?"/>
                 <answer>
                     <valueCoding>
@@ -264,7 +265,7 @@
                 </answer>
             </item>
             <item>
-                <linkId value="93026-3"/>
+                <linkId value="/93039-6/93026-3"/>
                 <text value="Do you feel physically and emotionally safe where you currently live?"/>
                 <answer>
                     <valueCoding>
@@ -275,7 +276,7 @@
                 </answer>
             </item>
             <item>
-                <linkId value="76501-6"/>
+                <linkId value="/93039-6/76501-6"/>
                 <text
                     value="Within the last year, have you been afraid of your partner or ex-partner?"/>
                 <answer>

@@ -2,7 +2,7 @@
     <id value="adult-child-relatedperson-example-1"/>
     <meta>
         <profile
-            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson|7.0.0"/>
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson|6.1.0"/>
     </meta>
     <active value="true"/>
     <patient>
@@ -12,8 +12,8 @@
     <relationship>
         <coding>
             <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
-            <code value="child"/>
-            <display value="Adult child"/>
+            <code value="CHILD"/>
+            <display value="child"/>
         </coding>
     </relationship>
     <name>

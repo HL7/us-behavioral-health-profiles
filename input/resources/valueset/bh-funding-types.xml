@@ -1,13 +1,15 @@
 <ValueSet
     xmlns="http://hl7.org/fhir">
     <id value="bh-funding-types"/>
-    <url value="http://hl7.org/fhir/us/bhp/ValueSet/bh-funding-types"/>
+    <url value="http://fhir.org/guides/astp/bhp/ValueSet/bh-funding-types"/>
     <name value="BehavioralHealthProgramFundingTypes"/>
     <title value="Behavioral Health Program Funding Types"/>
     <status value="draft"/>
+    <experimental value="true"/>
+    <description value="This ValueSet defines coded concepts pertaining to a Behavioral Health program/grant."/>
     <compose>
         <include>
-            <system value="http://hl7.org/fhir/us/bhp/CodeSystem/bh-funding-type-codes"/>
+            <system value="http://fhir.org/guides/astp/bhp/CodeSystem/bh-funding-type-codes"/>
             <concept>
                 <code value="discretionary"/>
                 <display value="Discretionary Funding"/>

@@ -1,2 +1,39 @@
 == Suppressed Messages ==
-TODO
+
+# INFORMATION: Asserted the 'pin-canonicals' parameter, ignoring associated comments
+%Pinned the version of http://hl7.org/fhir/us/core/StructureDefinition/%
+%Pinned the version of http://hl7.org/fhir/us/core/ValueSet/%
+%Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/%
+%Pinned the version of http://terminology.hl7.org/ValueSet/%
+
+# WARNING: Example identifier URLs are not expected to be defined
+%No definition could be found for URL value 'urn:oid:2.16.840.1.113883.19.5.1.698.8'
+%No definition could be found for URL value 'urn:oid:2.16.840.1.113883.19.5.1.798'
+%No definition could be found for URL value 'http://ncsbn.org/identifier/example-system'
+%No definition could be found for URL value 'http://hospital.smarthealthit.org'
+
+# INFORMATION: Code used in Medication Request active in Value Set for US Core Medication Adherance extension
+%The code '702565001' is valid but is not active
+
+# INFORMATION: Drafted CodeSystems found in US Core
+%Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-ver-status|4.0.1%
+%Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationrequest-category|1.0.0%
+%Reference to experimental CodeSystem http://fhir.org/guides/astp/bhp/CodeSystem/bh-funding-type-codes|1.0.0%
+
+# WARNING: Questionnaires used in examples are PDFs and do not have formal FHIR definitions
+%A definition could not be found for Canonical URL 'https://www.cms.gov/files/document/cssrs-screen-version-instrument.pdf'
+%A definition could not be found for Canonical URL 'https://www.acesaware.org/wp-content/uploads/2022/07/ACE-Questionnaire-for-Adults-Identified-English-rev.7.26.22.pdf'
+%A definition could not be found for Canonical URL 'https://www.sralab.org/sites/default/files/2017-07/barthel.pdf'
+%A definition could not be found for Canonical URL 'https://www.etsu.edu/institute/child-family-health/documents/mahf_dv_hark_c.pdf'
+%The questionnaire 'https://www.cms.gov/files/document/cssrs-screen-version-instrument.pdf' could not be resolved, so no validation can be performed against the base questionnaire 
+%The questionnaire 'https://www.acesaware.org/wp-content/uploads/2022/07/ACE-Questionnaire-for-Adults-Identified-English-rev.7.26.22.pdf' could not be resolved, so no validation can be performed against the base questionnaire 
+%The questionnaire 'https://www.sralab.org/sites/default/files/2017-07/barthel.pdf' could not be resolved, so no validation can be performed against the base questionnaire 
+%The questionnaire 'https://www.etsu.edu/institute/child-family-health/documents/mahf_dv_hark_c.pdf' could not be resolved, so no validation can be performed against the base questionnaire 
+
+# HCPCS is a valid code system for US Core Procedure codes
+%A definition for CodeSystem 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets' could not be found, so the code cannot be validated%
+%Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|6.1.0' because the code system https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets| was not found%
+
+# Examples include identifiers that are not defined in base specification
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|6.1.0 (this may not be a problem, but you should check that it's not intended to match a slice) 
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0 (this may not be a problem, but you should check that it's not intended to match a slice) 

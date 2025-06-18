@@ -5,16 +5,17 @@
         <versionId value="4"/>
         <lastUpdated value="2024-08-05T17:34:26.085Z"/>
     </meta>
-    <url value="http://hl7.org/fhir/us/bhp/StructureDefinition/bh-grant-info"/>
-    <version value="0.1.0"/>
+    <url value="http://fhir.org/guides/astp/bhp/StructureDefinition/bh-grant-info"/>
+    <version value="1.0.0"/>
     <name value="BehavioralHealthGrantInfo"/>
     <title value="Behavioral Health Grant Funding Information"/>
     <status value="active"/>
+    <experimental value="true"/>
     <fhirVersion value="4.0.1"/>
-    <kind value="complex-type"/>
+    <kind value="resource"/>
     <abstract value="false"/>
     <type value="Observation"/>
-    <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"/>
+    <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|6.1.0"/>
     <derivation value="constraint"/>
     <differential>
         <element id="Observation">
@@ -37,7 +38,7 @@
             </base>
             <type>
                 <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/us/bhp/StructureDefinition/program-info"/>
+                <targetProfile value="http://fhir.org/guides/astp/bhp/StructureDefinition/program-info"/>
             </type>
         </element>
         <element id="Observation.category">
@@ -51,14 +52,14 @@
             <sliceName value="bh_funding"/>
             <binding>
                 <strength value="required"/>
-                <valueSet value="http://hl7.org/fhir/us/bhp/ValueSet/bh-funding-types"/>
+                <valueSet value="http://fhir.org/guides/astp/bhp/ValueSet/bh-funding-types"/>
             </binding>
         </element>
         <element id="Observation.performer">
             <path value="Observation.performer"/>
             <type>
                 <code value="Reference"/>
-                <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
             </type>
         </element>
         <element id="Observation.value[x]">
@@ -68,7 +69,7 @@
             </type>
             <binding>
                 <strength value="required"/>
-                <valueSet value="http://hl7.org/fhir/us/bhp/ValueSet/bh-funding-types"/>
+                <valueSet value="http://fhir.org/guides/astp/bhp/ValueSet/bh-funding-types"/>
             </binding>
         </element>
     </differential>

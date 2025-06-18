@@ -2,10 +2,10 @@
     <id value="phq-9-example-1"/>
     <meta>
         <profile
-            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|7.0.0"/>
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|6.1.0"/>
     </meta>
     <questionnaire
-        value="http://hl7.org/fhir/us/core/Questionnaire/phq-9-example"/>
+        value="http://hl7.org/fhir/us/core/Questionnaire/phq-9-example|6.1.0"/>
     <status value="completed"/>
     <subject>
         <reference value="Patient/bh-patient-example"/>
@@ -118,6 +118,13 @@
             </valueCoding>
         </answer>
     </item>
+        <item>
+        <linkId value="/44261-6"/>
+        <text value="Patient health questionnaire 9 item total score"/>
+        <answer>
+            <valueDecimal value="12"/>
+        </answer>
+    </item>
     <item>
         <linkId value="/69722-7"/>
         <text
@@ -128,13 +135,6 @@
                 <code value="LA6573-5"/>
                 <display value="Somewhat difficult"/>
             </valueCoding>
-        </answer>
-    </item>
-    <item>
-        <linkId value="/44261-6"/>
-        <text value="Patient health questionnaire 9 item total score"/>
-        <answer>
-            <valueDecimal value="12"/>
         </answer>
     </item>
 </QuestionnaireResponse>

@@ -2,7 +2,7 @@
     <id value="pregnancy-status-example-1"/>
     <meta>
         <profile
-            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus"/>
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus|6.1.0"/>
     </meta>
     <status value="final"/>
     <category>
@@ -27,6 +27,10 @@
         <display value="James Wolff"/>
     </subject>
     <effectiveDateTime value="2024-02-01T10:39:52Z"/>
+    <performer>
+        <reference value="Practitioner/pcp-provider-example-1"/>
+        <display value="Dr. Doc Family"/>
+    </performer>
     <valueCodeableConcept>
         <coding>
             <system value="http://snomed.info/sct"/>

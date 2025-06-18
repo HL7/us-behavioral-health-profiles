@@ -1,25 +1,24 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-   <id value="hl7.fhir.us.bhp"/>
+   <id value="fhir.astp.bhp"/>
    <text>
       <status value="generated"/>
       <div xmlns="http://www.w3.org/1999/xhtml">
          <p class="res-header-id">
-            <b>Generated Narrative: ImplementationGuide hl7.fhir.us.bhp</b>
+            <b>Generated Narrative: ImplementationGuide fhir.astp.bhp</b>
          </p>
-         <a name="hl7.fhir.us.bhp"> </a>
-         <a name="hchl7.fhir.us.bhp"> </a>
-         <a name="hl7.fhir.us.bhp-en-US"> </a>
+         <a name="fhir.astp.bhp"> </a>
+         <a name="hcfhir.astp.bhp"> </a>
          <h2>USBehavioralHealthProfiles</h2>
          <p>The official URL for this implementation guide is: </p>
-         <pre>http://hl7.org/fhir/us/bhp/ImplementationGuide/hl7.fhir.us.bhp</pre>
+         <pre>http://fhir.org/guides/astp/bhp/ImplementationGuide/fhir.astp.bhp</pre>
       </div>
    </text>
-   <url value="http://hl7.org/fhir/us/bhp/ImplementationGuide/hl7.fhir.us.bhp"/>
-   <version value="0.2.0"/>
+   <url value="http://fhir.org/guides/astp/bhp/ImplementationGuide/fhir.astp.bhp"/>
+   <version value="1.0.0"/>
    <name value="USBehavioralHealthProfiles"/>
    <title value="US Behavioral Health Profiles Implementation Guide"/>
    <status value="active"/>
-   <date value="2025-05-13T15:32:20-04:00"/>
+   <date value="2025-06-18T10:40:37-04:00"/>
    <contact>
       <telecom>
          <system value="phone"/>
@@ -33,7 +32,7 @@
       </coding>
       <text value="USA"/>
    </jurisdiction>
-   <packageId value="hl7.fhir.us.bhp"/>
+   <packageId value="fhir.astp.bhp"/>
    <license value="CC0-1.0"/>
    <fhirVersion value="4.0.1"/>
    <dependsOn id="hl7tx">
@@ -42,7 +41,7 @@
       </extension>
       <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
       <packageId value="hl7.terminology.r4"/>
-      <version value="6.3.0"/>
+      <version value="6.4.0"/>
    </dependsOn>
    <dependsOn id="hl7ext">
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -56,6 +55,16 @@
       <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core#6.1.0"/>
       <packageId value="hl7.fhir.us.core"/>
       <version value="6.1.0"/>
+   </dependsOn>
+   <dependsOn id="hl7fhirussdohcc">
+      <uri value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/hl7.fhir.us.sdoh-clinicalcare#2.3.0"/>
+      <packageId value="hl7.fhir.us.sdoh-clinicalcare"/>
+      <version value="2.3.0"/>
+   </dependsOn>
+   <dependsOn id="militaryservice">
+      <uri value="http://hl7.org/fhir/us/military-service/ImplementationGuide/hl7.fhir.us.military-service#1.0.0"/>
+      <packageId value="hl7.fhir.us.military-service"/>
+      <version value="1.0.0"/>
    </dependsOn>
    <definition>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -88,6 +97,14 @@
          </extension>
          <extension url="value">
             <valueString value="CI Build"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="pin-canonicals"/>
+         </extension>
+         <extension url="value">
+            <valueString value="pin-multiples"/>
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -151,7 +168,7 @@
             <valueString value="path-history"/>
          </extension>
          <extension url="value">
-            <valueString value="http://hl7.org/fhir/us/bhp/history.html"/>
+            <valueString value="http://fhir.org/guides/astp/bhp/history.html"/>
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -302,7 +319,7 @@
             <valueInteger value="999999999"/>
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:complex-type"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="StructureDefinition-bh-grant-info.html"/>
@@ -1262,7 +1279,7 @@
             <display value="provider-preference-obs-example"/>
          </reference>
          <name value="provider-preference-obs-example"/>
-         <description value="Example of patient preference for afternoon appointments"/>
+         <description value="Example of patient preference for healthcare professiona"/>
          <exampleBoolean value="true"/>
          <groupingId value="examples"/>
       </resource>
@@ -1818,6 +1835,14 @@
             <generation value="markdown"/>
          </page>
          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="license.html"/>
+            </extension>
+            <nameUrl value="license.html"/>
+            <title value="License"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
             <nameUrl value="artifacts.html"/>
             <title value="Artifacts Summary"/>
             <generation value="html"/>
@@ -2285,6 +2310,10 @@
          <value value="CI Build"/>
       </parameter>
       <parameter>
+         <code value="pin-canonicals"/>
+         <value value="pin-multiples"/>
+      </parameter>
+      <parameter>
          <code value="autoload-resources"/>
          <value value="true"/>
       </parameter>
@@ -2314,7 +2343,7 @@
       </parameter>
       <parameter>
          <code value="path-history"/>
-         <value value="http://hl7.org/fhir/us/bhp/history.html"/>
+         <value value="http://fhir.org/guides/astp/bhp/history.html"/>
       </parameter>
       <parameter>
          <code value="template-html"/>

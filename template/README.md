@@ -1,2 +1,4 @@
-# ig-publisher-templates
-Contain a branch for each FHIR IG Publisher template used by Lantana
+# ig-template-base
+package-id = fhir.base.template
+
+Base IG template managed by HL7 but usable by anyone (no logos).  The foundation for most HL7-published IGs

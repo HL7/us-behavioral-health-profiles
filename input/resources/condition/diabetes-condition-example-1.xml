@@ -2,8 +2,8 @@
     <id value="diabetes-condition-example-1"/>
     <meta>
         <profile
-            value="http://hl7.org/fhir/us/core/ValueSet/us-core-problem-or-health-concern"/>
-    </meta>
+             value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns|6.1.0"/>
+                 </meta>
     <clinicalStatus>
         <coding>
             <system
@@ -35,7 +35,7 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="444110003"/>
-            <display value="Type II diabetes mellitus well controlled (finding)"/>
+            <display value="Type II diabetes mellitus well controlled"/>
         </coding>
         <coding>
             <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
@@ -49,6 +49,5 @@
         <display value="James Wolff"/>
     </subject>
     <onsetDateTime value="2020-01-01"/>
-    <abatementDateTime value="2023-06-01"/>
     <recordedDate value="2024-02-01"/>
 </Condition>

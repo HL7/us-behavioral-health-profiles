@@ -2,10 +2,9 @@
     <id value="barthel-index-functional-status-example-1"/>
     <meta>
         <profile
-            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|7.0.0"/>
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|6.1.0"/>
     </meta>
-    <questionnaire
-        value="http://hl7.org/fhir/us/core/Questionnaire/barthel-index-panel"/>
+    <questionnaire value="https://www.sralab.org/sites/default/files/2017-07/barthel.pdf"/>
     <status value="completed"/>
     <subject>
         <reference value="Patient/bh-patient-example"/>
@@ -21,39 +20,30 @@
         <answer>
             <valueCoding>
                 <system value="http://loinc.org"/>
-                <code value="LA12302-8
-                    "/>
-                <display value="Independent
-                    "/>
+                <code value="LA12302-8"/>
+                <display value="Independent"/>
             </valueCoding>
         </answer>
     </item>
     <item>
-        <linkId value="/83185-9
-            "/>
-        <text value="Transferring ability
-            "/>
+        <linkId value="/83185-9"/>
+        <text value="Transferring ability"/>
         <answer>
             <valueCoding>
                 <system value="http://loinc.org"/>
-                <code value="LA12302-8
-                    "/>
-                <display value="Independent
-                    "/>
+                <code value="LA12302-8"/>
+                <display value="Independent"/>
             </valueCoding>
         </answer>
     </item>
     <item>
-        <linkId value="/83185-9
-            "/>
+        <linkId value="/83185-9"/>
         <text value="Grooming ability"/>
         <answer>
             <valueCoding>
                 <system value="http://loinc.org"/>
-                <code value="LA31644-0
-                    "/>
-                <display value="Independent face/hair/teeth/shaving (implements provided)
-                    "/>
+                <code value="LA31644-0"/>
+                <display value="Independent face/hair/teeth/shaving (implements provided)"/>
             </valueCoding>
         </answer>
     </item>
@@ -63,39 +53,30 @@
         <answer>
             <valueCoding>
                 <system value="http://loinc.org"/>
-                <code value="LA31632-5
-                    "/>
-                <display value="Independent (on and off, dressing, wiping)
-                    "/>
+                <code value="LA31632-5"/>
+                <display value="Independent (on and off, dressing, wiping)"/>
             </valueCoding>
         </answer>
     </item>
     <item>
-        <linkId value="/83181-8
-            "/>
-        <text value="Bathing ability
-            "/>
+        <linkId value="/83181-8"/>
+        <text value="Bathing ability"/>
         <answer>
             <valueCoding>
                 <system value="http://loinc.org"/>
-                <code value="LA31636-6
-                    "/>
-                <display value="Independent (or in shower)
-                    "/>
+                <code value="LA31636-6"/>
+                <display value="Independent (or in shower)"/>
             </valueCoding>
         </answer>
     </item>
     <item>
-        <linkId value="/83186-7
-            "/>
-        <text value="Ambulation ability
-            "/>
+        <linkId value="/83186-7"/>
+        <text value="Ambulation ability"/>
         <answer>
             <valueCoding>
                 <system value="http://loinc.org"/>
                 <code value="LA31642-4"/>
-                <display value="Independent (but may use any aid; for example, stick) >50 yards
-                    "/>
+                <display value="Independent (but may use any aid; for example, stick) >50 yards"/>
             </valueCoding>
         </answer>
     </item>
@@ -105,10 +86,8 @@
         <answer>
             <valueCoding>
                 <system value="http://loinc.org"/>
-                <code value="LA12302-8
-                    "/>
-                <display value="Independent
-                    "/>
+                <code value="LA12302-8"/>
+                <display value="Independent"/>
             </valueCoding>
         </answer>
     </item>
@@ -118,18 +97,14 @@
         <answer>
             <valueCoding>
                 <system value="http://loinc.org"/>
-                <code value="LA31638-2
-                    "/>
-                <display value="Independent (including buttons, zips, laces, etc.)
-                    "/>
+                <code value="LA31638-2"/>
+                <display value="Independent (including buttons, zips, laces, etc.)"/>
             </valueCoding>
         </answer>
     </item>
     <item>
-        <linkId value="/96759-6
-            "/>
-        <text value="Bowel control ability
-            "/>
+        <linkId value="/96759-6"/>
+        <text value="Bowel control ability"/>
         <answer>
             <valueCoding>
                 <system value="http://loinc.org"/>

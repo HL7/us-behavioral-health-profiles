@@ -2,8 +2,7 @@
     <id value="depression-condition-example-1"/>
     <meta>
         <profile
-            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"/>
-    </meta>
+             value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns|6.1.0"/>    </meta>
     <clinicalStatus>
         <coding>
             <system
@@ -30,6 +29,15 @@
             <display value="Problem List Item"/>
         </coding>
         <text value="Problem List Item"/>
+    </category>
+    <category>
+        <coding>
+            <system
+                value="http://hl7.org/fhir/us/core/CodeSystem/us-core-category"/>
+            <code value="sdoh"/>
+            <display value="SDOH"/>
+        </coding>
+        <text value="Social Determinants Of Health"/>
     </category>
     <code>
         <coding>

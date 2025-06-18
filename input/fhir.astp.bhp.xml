@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ImplementationGuide
     xmlns="http://hl7.org/fhir">
-    <id value="hl7.fhir.us.bhp"/>
-    <url value="http://hl7.org/fhir/us/bhp/ImplementationGuide/hl7.fhir.us.bhp"/>
-    <version value="0.2.0"/>
+    <id value="fhir.astp.bhp"/>
+    <url value="http://fhir.org/guides/astp/bhp/ImplementationGuide/fhir.astp.bhp"/>
+    <version value="1.0.0"/>
     <name value="USBehavioralHealthProfiles"/>
     <title value="US Behavioral Health Profiles Implementation Guide"/>
     <status value="active"/>
@@ -20,7 +20,7 @@
         </coding>
         <text value="USA"/>
     </jurisdiction>
-    <packageId value="hl7.fhir.us.bhp"/>
+    <packageId value="fhir.astp.bhp"/>
     <fhirVersion value="4.0.1"/>
     <dependsOn id="hl7fhiruscore">
         <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core#6.1.0"/>
@@ -36,17 +36,24 @@
         <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.us.odh#1.3.0"/>
         <packageId value="hl7.fhir.us.odh"/>
         <version value="1.3.0"/>
-    </dependsOn>
-    <dependsOn id="hl7fhirussdohcc">
-        <uri value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/hl7.fhir.us.sdoh-clinicalcare#2.1.0"/>
-        <packageId value="hl7.fhir.us.sdoh-clinicalcare"/>
-        <version value="2.1.0"/>
     </dependsOn>-->
+    <dependsOn id="hl7fhirussdohcc">
+        <uri value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/hl7.fhir.us.sdoh-clinicalcare#2.3.0"/>
+        <packageId value="hl7.fhir.us.sdoh-clinicalcare"/>
+        <version value="2.3.0"/>
+    </dependsOn>
     <!-- <dependsOn id="usnlmvsac">
         <uri value="http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"/>
         <packageId value="us.nlm.vsac"/>
         <version value="0.11.0"/>
     </dependsOn> -->
+    <dependsOn id="militaryservice">
+        <uri value="http://hl7.org/fhir/us/military-service/ImplementationGuide/hl7.fhir.us.military-service#1.0.0"/>
+        <packageId value="hl7.fhir.us.military-service"/>
+        <version value="1.0.0"/>
+    </dependsOn>
+    
+
     <definition>
         <grouping id="profiles">
             <name value="Profiles"/>
@@ -901,6 +908,11 @@
                 <title value="Downloads"/>
                 <generation value="markdown"/>
             </page>
+            <page>
+                <nameUrl value="license.html"/>
+                <title value="License"/>
+                <generation value="markdown"/>
+            </page>
         </page>
         <parameter>
             <code value="apply-jurisdiction" />
@@ -917,6 +929,10 @@
         <parameter>
             <code value="releaselabel"/>
             <value value="CI Build"/>
+        </parameter>
+        <parameter>
+            <code value="pin-canonicals"/>
+            <value value="pin-multiples"/>
         </parameter>
     </definition>
 </ImplementationGuide>

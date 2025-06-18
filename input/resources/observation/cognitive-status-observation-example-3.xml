@@ -2,7 +2,7 @@
     <id value="cognitive-status-observation-example-3"/>
     <meta>
         <profile
-            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"/>
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|6.1.0"/>
     </meta>
     <status value="final"/>
     <category>
@@ -37,8 +37,8 @@
     </subject>
     <effectiveDateTime value="2024-02-01"/>
     <performer>
-        <reference value="Patient/bh-patient-example"/>
-        <display value="James Wolff"/>
+        <reference value="Practitioner/mental-health-provider-example-1"/>
+        <display value="Dr. Lazslo Cravensworth"/>
     </performer>
     <component>
         <code>
@@ -49,6 +49,6 @@
             </coding>
             <text value="Total score [MMSE]"/>
         </code>
+        <valueInteger value="30"/>
     </component>
-    <valueInteger value="30"/>
 </Observation>

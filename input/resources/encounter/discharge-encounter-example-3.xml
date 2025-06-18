@@ -2,7 +2,7 @@
     <id value="discharge-encounter-example-3"/>
     <meta>
         <profile
-            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0"/>
     </meta>
     <identifier>
         <use value="usual"/>
@@ -60,7 +60,7 @@
             <coding>
                 <system value="https://www.nubc.org/CodeSystem/PatDischargeStatus"/>
                 <code value="01"/>
-                <display value="Discharge to home or self-care (routine discharge)"/>
+                <display value="Discharged to Home"/>
             </coding>
             <text value="Discharged to Home"/>
         </dischargeDisposition>

@@ -2,11 +2,13 @@
 <ValueSet
     xmlns="http://hl7.org/fhir">
     <id value="mental-health-clinical-note-types"/>
-    <url value="http://hl7.org/fhir/us/bhp/ValueSet/mental-health-clinical-note-types"/>
+    <url value="http://fhir.org/guides/astp/bhp/ValueSet/mental-health-clinical-note-types"/>
     <version value="0.1.0"/>
     <name value="MentalHealthClinicalNoteTypes"/>
     <title value="Mental Health Clinical Note Types"/>
     <status value="draft"/>
+        <experimental value="true"/>
+    <description value="This ValueSet defines the LOINC codes for Mental Health Clinical Note types."/>
     <compose>
         <inactive value="false"/>
         <include>

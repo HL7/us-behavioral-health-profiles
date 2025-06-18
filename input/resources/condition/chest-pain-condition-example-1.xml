@@ -2,14 +2,14 @@
     <id value="chest-pain-condition-example-1"/>
     <meta>
         <profile
-            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"/>
+            value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis|6.1.0"/>
     </meta>
     <clinicalStatus>
         <coding>
             <system
                 value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
-            <code value="active"/>
-            <display value="Active"/>
+            <code value="inactive"/>
+            <display value="Inactive"/>
         </coding>
     </clinicalStatus>
     <verificationStatus>
@@ -35,9 +35,8 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="29857009"/>
-            <display value=" Chest pain (finding)"/>
+            <display value="Chest pain"/>
         </coding>
-        
         <text value="Chest Pain"/>
     </code>
     <subject>
