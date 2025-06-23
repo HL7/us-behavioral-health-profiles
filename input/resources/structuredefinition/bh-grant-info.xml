@@ -26,7 +26,7 @@
         </element>
         <element id="Observation.extension:program_info">
             <path value="Observation.extension"/>
-            <sliceName value="program_info"/>
+            <sliceName value="program-info"/>
            <!-- <label value="program_info"/>-->
             <short value="Program information including program ID and grant number"/>
             <min value="0"/>
@@ -44,6 +44,10 @@
         <element id="Observation.category">
             <path value="Observation.category"/>
             <slicing>
+                <discriminator>
+                    <type value="pattern"/>
+                    <path value="$this"/>
+                </discriminator>
                 <rules value="open"/>
             </slicing>
         </element>
