@@ -20,6 +20,8 @@
 %Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationrequest-category|1.0.0%
 %Reference to experimental CodeSystem http://fhir.org/guides/astp/bhp/CodeSystem/bh-funding-type-codes|1.0.0%
 %A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PatDischargeStatus' could not be found, so the code cannot be validated%
+%Unable to check if http://fhir.org/guides/astp/bhp/ValueSet/mental-health-clinical-note-types is a proper subset of http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type - value set is too large to check%
+%Error from https://tx.fhir.org/r4: Unable to provide support for code system http://loinc.org version 2.77%
 
 # WARNING: Questionnaires used in examples are PDFs and do not have formal FHIR definitions
 %A definition could not be found for Canonical URL 'https://www.cms.gov/files/document/cssrs-screen-version-instrument.pdf'
@@ -37,7 +39,9 @@
 
 # Examples include identifiers that are not defined in base specification
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|6.1.0 (this may not be a problem, but you should check that it's not intended to match a slice) 
-%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0 (this may not be a problem, but you should check that it's not intended to match a slice) 
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+%Constraint failed: us-core-5: 'SHOULD have a translation to the NDC value set'%
+
 
 # INFORMATION: Discriminator type inherited from US Core
 %The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
