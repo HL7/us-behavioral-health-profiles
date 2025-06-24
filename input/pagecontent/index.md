@@ -24,7 +24,9 @@ This informational IG is intended to illustrate the use of FHIR standards to exc
 
 Researchers, quality improvement staff, and policymakers can also benefit from a basic understanding of how this guide presents BH data elements to support data collection and analysis.  
 
-Standardizing behavioral health data through this IG aims to improve data exchange and interoperability in the behavioral health ecosystem, ultimately contributing to improved patient care and outcomes.  
+Standardizing behavioral health data through this IG aims to improve data exchange and interoperability in the behavioral health ecosystem, ultimately contributing to improved patient care and outcomes.
+
+Discussions on the use of this IG take place regularly on the [Behavioral Health Information Technology (BHIT)](https://confluence.hl7.org/spaces/EHR/pages/208471919/Behavioral+Health) calls, hosted by the Electronic Health Record (EHR) Workgroup at HL7. Implementers are invited to participate in the discussions and the testing activities.
 
 ### How to Read This Implementation Guide 
 
