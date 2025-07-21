@@ -26,7 +26,7 @@ Researchers, quality improvement staff, and policymakers can also benefit from a
 
 Standardizing behavioral health data through this IG aims to improve data exchange and interoperability in the behavioral health ecosystem, ultimately contributing to improved patient care and outcomes.
 
-Discussions on the use of this IG take place regularly on the BHIT calls. Implementers are invited to participate in the discussions and the testing activities.
+Discussions on the use of this IG take place regularly on the [BHIT calls](https://www.hl7.org/concalls/CallDetails.cfm?concall=78861). Implementers are invited to participate in the discussions and the testing activities.
 
 ### How to Read This Implementation Guide 
 
@@ -116,6 +116,15 @@ This section outlines the limitations and challenges encountered when developing
   - Non-standard formats (e.g., CSV, RTF, WORD) 
 - It’s important to note that these FHIR examples are annotated in the FHIR narrative, of the technical artifacts sections, as “...<u>encoded (base64)</u>”. 
 
+### Privacy and Security Considerations
+
+Implementers **SHOULD** be familiar with and adhere primarily to any security and privacy guidelines defined below:
+* [Security & Privacy module](http://hl7.org/fhir/R4/secpriv-module.html)
+* [Security Principles](http://hl7.org/fhir/R4/security.html)
+* [Implementer's Checklist](http://hl7.org/fhir/R4/safety.html)
+
+Issues or concerns regarding privacy, security, and safety should use the [Health IT Feedback and Inquiry Portal](https://inquiry.healthit.gov/support/plugins/servlet/desk/portal/2) to submit feedback or inquiries.
+
 ### Dependencies on Other IGs
 
 <style type="text/css">
@@ -156,13 +165,6 @@ This section outlines the limitations and challenges encountered when developing
     <td class="tg-cly1">In some cases, where profiles could not be derived from US Core, base FHIR resources may be used.</td>
   </tr>
 </tbody></table>
-
-### Privacy and Security Considerations
-
-Implementers **SHOULD** be familiar with and adhere primarily to any security and privacy guidelines defined below:
-* [Security & Privacy module](http://hl7.org/fhir/R4/secpriv-module.html)
-* [Security Principles](http://hl7.org/fhir/R4/security.html)
-* [Implementer's Checklist](http://hl7.org/fhir/R4/safety.html)
 
 ### Authors and Project Team
 
