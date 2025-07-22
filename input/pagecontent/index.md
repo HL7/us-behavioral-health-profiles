@@ -26,7 +26,7 @@ Researchers, quality improvement staff, and policymakers can also benefit from a
 
 Standardizing behavioral health data through this IG aims to improve data exchange and interoperability in the behavioral health ecosystem, ultimately contributing to improved patient care and outcomes.
 
-Discussions on the use of this IG take place regularly on the [BHIT calls](https://www.hl7.org/concalls/CallDetails.cfm?concall=78861). Implementers are invited to participate in the discussions and the testing activities.
+Discussions on the use of this IG take place regularly on the BHIT calls. Implementers are invited to participate in the discussions and the testing activities. Readers who wish to make a comment or suggestion regarding the IG are encouraged to submit them through [GitHub Issue submission page](https://github.com/HL7/us-behavioral-health-profiles/issues) for this IG.
 
 ### How to Read This Implementation Guide 
 
