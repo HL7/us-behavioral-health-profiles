@@ -378,7 +378,7 @@ This table provides a correlation between USCDI+ behavioral health data elements
      <td class="tg-0lax">Laboratory</td>
      <td class="tg-1wig">Tests</td>
      <td class="tg-zzem"><a href="Observation-hemoglobin-a1c-example-1.html" target="_blank" rel="noopener noreferrer">hemoglobin-a1c-example</a></td>
-     <td class="tg-0lax">Example of laboratory test - Hemogobin A1C</td>
+     <td class="tg-0lax">Example of laboratory test - Hemoglobin A1C</td>
   </tr>
   <tr>
      <td class="tg-0lax">Laboratory</td>
@@ -629,7 +629,7 @@ This table provides a correlation between USCDI+ behavioral health data elements
   <tr>
      <td class="tg-0lax">Procedures</td>
      <td class="tg-1wig">Recovery Planning</td>
-     <td class="tg-zzem"><a href="Procedure-alcohol-prevetion-education-example-1.html">alcohol-prevetion-edu-example</a></td>
+     <td class="tg-zzem"><a href="Procedure-alcohol-prevention-education-example-1.html">alcohol-prevetion-edu-example</a></td>
      <td class="tg-ktyi">Example of recovery planning services</td>
   </tr>
   <tr>
