@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>{{variable:scope}} | {{page-title}} - FHIR {{variable:guide-fhir-version}}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="{{content}}/{{style-folder}}/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="{{content}}/{{style-folder}}/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="{{content}}/{{style-folder}}/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="{{content}}/{{style-folder}}/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="{{content}}/{{style-folder}}/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="{{content}}/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="{{content}}/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="{{content}}/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="{{content}}/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="{{content}}/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="{{content}}/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="{{content}}/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="{{content}}/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="{{content}}/{{style-folder}}/style.css?v={{version}}" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="{{content}}/{{style-folder}}/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="{{content}}/{{style-folder}}/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="{{content}}/{{style-folder}}/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">{{ guide-title }}</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        {{variable:guide-version }}
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="{{content}}/{{style-folder}}/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                {{ dropdown-navigation, show-index:yes }}
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                {{breadcrumbs}}
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide. This guide is not an authorized publication; it is the continuous build for version 0.1.0 built by Simplifier.net.</p>
+                        {{ page }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; {{publish-date, format:yyy}} <a style="color:var(--footer-hyperlink-text-color)" href="{{variable:publisher-url}}">{{variable:publisher-name}}</a>.  Package {{variable:scope}} based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/{{variable:guide-fhir-version}}">FHIR {{variable:guide-fhir-version}}</a>. Generated
+            <span title="{{publish-date}}">
+                {{publish-date, format:yyy-MM-dd}}
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/{{variable:project-url-key}}/~issues?source=QualityControl">QA Report</a>
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://simplifier.net/published-guide/{{variable:guide-url-key}}/versions">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" rel="license" href="{{pagelink:license}}">License</a> |
+                <a style="color: #81BEF7" href="https://simplifier.net/search?guide={{variable:guide-url-key}}">Search</a> |  
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="{{content}}/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="{{content}}/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="{{content}}/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="{{content}}/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url({{content}}/{{style-folder}}/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url({{content}}/{{style-folder}}/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url({{content}}/{{style-folder}}/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('{{content}}/{{style-folder}}/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url({{content}}/{{style-folder}}/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url({{content}}/{{style-folder}}/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url({{content}}/{{style-folder}}/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url({{content}}/{{style-folder}}/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

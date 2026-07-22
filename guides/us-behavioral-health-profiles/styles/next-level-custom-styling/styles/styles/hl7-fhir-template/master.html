@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>{{variable:scope}}\{{page-title}} - FHIR {{variable:guide-fhir-version}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="{{content}}/{{style-folder}}/content/assets/css/fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{content}}/{{style-folder}}/content/assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="{{content}}/{{style-folder}}/content/assets/css/project.css" rel="stylesheet"/>
+
+    <link href="{{content}}/{{style-folder}}/content/assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="{{content}}/{{style-folder}}/content/assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="{{content}}/{{style-folder}}/content/assets/css/prism.css" rel="stylesheet" />
+
+    <!-- FROM THE HL7 BASE TEMPLATE -->
+    <link href="{{content}}/{{style-folder}}/content/assets/css/hl7.css" rel="stylesheet"/>
+
+    <!-- FROM HL7 FHIR BASE TEMPLATE -->
+    <link href="{{content}}/{{style-folder}}/content/assets/css/fhir-ig.css" rel="stylesheet"/>
+
+    <!-- Custom color theme (overrides defaults above) -->
+    <link href="{{content}}/{{style-folder}}/content/assets/css/astp-bhp.css" rel="stylesheet"/>
+
+    <!-- FROM SIMPLIFIER COMMON -->
+    <script src="{{content}}/styles/common/jquery/jquery.min.js"></script>
+    <script src="{{content}}/styles/common/bootstrap/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="{{content}}/styles/common/main.min.css" /> -->
+    <!-- <link rel="stylesheet" href="{{content}}/styles/common/bootstrap/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="{{content}}/styles/common/rendering/rendering.min.css" />
+    <script src="{{content}}/styles/common/rendering/stu3TreeTable.min.js"></script>
+    <script src="{{content}}/styles/common/rendering/baseTreetable.min.js"></script>
+    
+
+    <script type="text/javascript">
+let fhirTableLoading = false;
+
+function getCollapsed(store, row) {
+  return sessionStorage.getItem("ft-"+store+row);
+}
+
+function setCollapsed(store, row, value) {
+  if (!fhirTableLoading) {
+    if (value == 'collapsed') {
+      sessionStorage.setItem("ft-"+store+row, value);
+    } else {
+      sessionStorage.removeItem("ft-"+store+row);
+    }
+  }
+}
+
+function fhirTableRowExpand(table, id) {
+  var rows = table.getElementsByTagName('tr');
+  var row, i;
+  var noex = null;
+  for (i = 0; i < rows.length; i++) {
+    row = rows[i];
+    if (row.id.startsWith(id)) {
+      if (noex && row.id.startsWith(noex)) {
+        // do nothing
+      } else {
+        noex = null;
+        if (row.id != id) {
+          row.style.display = "";
+          if (row.className == 'closed') {
+            noex = row.id;
+          }
+        }
+      }
+    }
+  }
+}
+
+function fhirTableRowCollapse(table, id) {
+  var rows = table.getElementsByTagName('tr');
+  var row, i;
+  for (i = 0; i < rows.length; i++) {
+    row = rows[i];
+    if (row.id.startsWith(id) && row.id != id) {
+      row.style.display = "none";
+    }
+  }
+}
+
+function findElementFromFocus(src, name) {
+  e = src;
+  while (e && e.tagName != name) {
+    e = e.parentNode;
+  }
+  return e;
+}
+
+// src - a handle to an element in a row in the table
+function tableRowAction(src) {
+  let table = findElementFromFocus(src, "TABLE");
+  let row = findElementFromFocus(src, "TR");
+  let td = row.firstElementChild;
+  let state = row.className;
+  if (state == "closed") {
+    fhirTableRowExpand(table, row.id);
+    row.className = "open";
+    src.src  = src.src.replace("-closed", "-open");
+    td.style.backgroundImage = td.style.backgroundImage.replace('0.png', '1.png');
+    setCollapsed(table.id, row.id, 'expanded');
+  } else {
+    fhirTableRowCollapse(table, row.id);
+    row.className = "closed";
+    src.src  = src.src.replace("-open", "-closed");
+    td.style.backgroundImage = td.style.backgroundImage.replace('1.png', '0.png');
+    setCollapsed(table.id, row.id, 'collapsed');
+  }
+}
+
+// src - a handle to an element in a row in the table
+function fhirTableInit(src) {
+  let table = findElementFromFocus(src, "TABLE");
+  var rows = table.getElementsByTagName('tr');
+  var row, i;
+  fhirTableLoading = true;
+  for (i = 0; i < rows.length; i++) {
+    row = rows[i];
+    var id = row.id;
+    if (getCollapsed(table.id, id) == 'collapsed') {
+      let td = row.firstElementChild;
+      let e = td.firstElementChild;
+      while (e.tagName != "IMG" || !(e.src.includes("join"))) {
+        e = e.nextSibling;
+      }
+      tableRowAction(e);
+    }
+  }
+  fhirTableLoading = false;
+}
+    </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="{{content}}/{{style-folder}}/content/assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="{{content}}/{{style-folder}}/content/assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="{{content}}/{{style-folder}}/content/assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="{{content}}/{{style-folder}}/content/assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="{{content}}/{{style-folder}}/content/assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+  <style type="text/css">
+  h2{--heading-prefix:"1"}
+  h3,h4,h5,h6{--heading-prefix:"1"}
+  #preview-content{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  </style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        
+        <!-- FROM BHP TEMPLATE: ASTP logo -->
+        <div id="project-nav">
+          <a id="hrsa-logo" no-external="true" href="https://www.healthit.gov/">
+            <img height="50" alt="Visit the ASTP website" src="{{content}}/{{style-folder}}/content/assets/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+          </a>
+        </div>
+
+        <!-- FROM HL7 FHIR BASE TEMPLATE -->
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="{{content}}/{{style-folder}}/content/assets/images/fhir-logo.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="https://simplifier.net/search?guide={{variable:guide-url-key}}"><img alt="Search FHIR" src="{{content}}/{{style-folder}}/content/assets/images/search.png"/></a>
+        </div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">{{variable:guide-title}}</span>
+            <br/>
+            <span style="display:inline-block;">{{variable:guide-version}} - {{variable:guide-status}}
+  <!-- <img alt="{{jurisdiction.name}} flag" src="{{content}}/{{style-folder}}/content/assets/images/{{jurisdiction.flag}}.svg" height="16" title="{{jurisdiction.name}}"/> -->
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <div class="header" role="banner" aria-label="Header">
+          {{ dropdown-navigation }}
+        </div>
+        
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          {{breadcrumbs}}
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+            <!-- Somehow this breaks the numbering, so commented out -->
+            <!-- <style type="text/css">
+              h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+              h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+              h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+              h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+              h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+              </style> -->
+              <div class="col-12">
+                <!--ReleaseHeader--><p id="publish-box">{{variable:publish-box}}</p><!--EndReleaseHeader-->
+                <!--<h2>{{ page-title }}</h2>-->
+                {{ page }}              
+              </div>
+
+
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+  
+  <!-- note <script type="text/javascript" src="{{content}}/{{style-folder}}/content/assets/js/jquery.js"> </script>      note keep space here, otherwise it will be transformed to empty tag -> fails -->
+
+  <!-- <script type="text/javascript" src="{{content}}/{{style-folder}}/content/assets/js/jquery.js"> </script> -->
+  <!-- DELETED -->
+
+  <!-- <script type="text/javascript" src="{{content}}/{{style-folder}}/content/assets/js/jquery-ui.min.js"> </script> -->
+  <!-- DELETED -->
+
+  <script type="text/javascript">
+    $(".header .navbar").removeClass("navbar-default").addClass("navbar-inverse");
+    $(".navbar .navbar-collapse").addClass("in");
+    $(".navbar-toggle .sr-only").text("");
+
+    $(window).on( "resize", function() {
+      $(".navbar .navbar-collapse").addClass("in");
+    });
+
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; {{publish-date, format:yyy}} <a style="color:var(--footer-hyperlink-text-color)" href="{{variable:publisher-url}}">{{variable:publisher-name}}</a>.  Package {{variable:scope}} based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/{{variable:guide-fhir-version}}">FHIR {{variable:guide-fhir-version}}</a>. Generated
+          <span title="{{publish-date}}">
+            {{publish-date, format:yyy-MM-dd}}
+          </span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="{{content}}/../">Table of Contents</a> |
+            <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/{{variable:project-url-key}}/~issues?source=QualityControl">QA Report</a>
+            <!-- FROM HL7 FHIR BASE TEMPLATE -->
+             | <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://simplifier.net/published-guide/{{variable:guide-url-key}}/versions">Version History</a> |
+             <a style="color:var(--footer-hyperlink-text-color)" rel="license" href="https://hl7.org/fhir/{{variable:guide-fhir-version}}/license.html"><img style="border-style: none;" alt="CC0" src="{{content}}/{{style-folder}}/content/assets/images/cc0.png"/></a> |
+             <a style="color: #81BEF7" href="https://simplifier.net/search?guide={{variable:guide-url-key}}">Search</a> |  
+             <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://simplifier.net/{{variable:project-url-key}}/~issues">Propose a change</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <!-- <script type="text/javascript" src="{{content}}/{{style-folder}}/content/assets/js/bootstrap.min.js"> </script> -->
+  <!-- DELETED -->
+  
+  <!-- Respond.js - media query polyfill for IE8 -->
+    <script type="text/javascript">
+/*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas. Dual MIT/BSD license */
+/*! NOTE: If you're already including a window.matchMedia polyfill via Modernizr or otherwise, you don't need this part */
+window.matchMedia=window.matchMedia||function(a){"use strict";var c,d=a.documentElement,e=d.firstElementChild||d.firstChild,f=a.createElement("body"),g=a.createElement("div");return g.id="mq-test-1",g.style.cssText="position:absolute;top:-100em",f.style.background="none",f.appendChild(g),function(a){return g.innerHTML='&shy;<style media="'+a+'"> #mq-test-1 { width: 42px; }</style>',d.insertBefore(f,e),c=42===g.offsetWidth,d.removeChild(f),{matches:c,media:a}}}(document);
+
+/*! Respond.js v1.1.0: min/max-width media query polyfill. (c) Scott Jehl. MIT/GPLv2 Lic. j.mp/respondjs  */
+(function(a){"use strict";function x(){u(!0)}var b={};a.respond=b,b.update=function(){},b.mediaQueriesSupported=a.matchMedia&&a.matchMedia("only all").matches,b.mediaQueriesSupported;var q,r,t,c=a.document,d=c.documentElement,e=[],f=[],g=[],h={},i=30,j=c.getElementsByTagName("head")[0]||d,k=c.getElementsByTagName("base")[0],l=j.getElementsByTagName("link"),m=[],n=function(){for(var b=0;l.length>b;b++){var c=l[b],d=c.href,e=c.media,f=c.rel&&"stylesheet"===c.rel.toLowerCase();d&&f&&!h[d]&&(c.styleSheet&&c.styleSheet.rawCssText?(p(c.styleSheet.rawCssText,d,e),h[d]=!0):(!/^([a-zA-Z:]*\/\/)/.test(d)&&!k||d.replace(RegExp.$1,"").split("/")[0]===a.location.host)&&m.push({href:d,media:e}))}o()},o=function(){if(m.length){var a=m.shift();v(a.href,function(b){p(b,a.href,a.media),h[a.href]=!0,setTimeout(function(){o()},0)})}},p=function(a,b,c){var d=a.match(/@media[^\{]+\{([^\{\}]*\{[^\}\{]*\})+/gi),g=d&&d.length||0;b=b.substring(0,b.lastIndexOf("/"));var h=function(a){return a.replace(/(url\()['"]?([^\/\)'"][^:\)'"]+)['"]?(\))/g,"$1"+b+"$2$3")},i=!g&&c;b.length&&(b+="/"),i&&(g=1);for(var j=0;g>j;j++){var k,l,m,n;i?(k=c,f.push(h(a))):(k=d[j].match(/@media *([^\{]+)\{([\S\s]+?)$/)&&RegExp.$1,f.push(RegExp.$2&&h(RegExp.$2))),m=k.split(","),n=m.length;for(var o=0;n>o;o++)l=m[o],e.push({media:l.split("(")[0].match(/(only\s+)?([a-zA-Z]+)\s?/)&&RegExp.$2||"all",rules:f.length-1,hasquery:l.indexOf("(")>-1,minw:l.match(/\(min\-width:[\s]*([\s]*[0-9\.]+)(px|em)[\s]*\)/)&&parseFloat(RegExp.$1)+(RegExp.$2||""),maxw:l.match(/\(max\-width:[\s]*([\s]*[0-9\.]+)(px|em)[\s]*\)/)&&parseFloat(RegExp.$1)+(RegExp.$2||"")})}u()},s=function(){var a,b=c.createElement("div"),e=c.body,f=!1;return b.style.cssText="position:absolute;font-size:1em;width:1em",e||(e=f=c.createElement("body"),e.style.background="none"),e.appendChild(b),d.insertBefore(e,d.firstChild),a=b.offsetWidth,f?d.removeChild(e):e.removeChild(b),a=t=parseFloat(a)},u=function(a){var b="clientWidth",h=d[b],k="CSS1Compat"===c.compatMode&&h||c.body[b]||h,m={},n=l[l.length-1],o=(new Date).getTime();if(a&&q&&i>o-q)return clearTimeout(r),r=setTimeout(u,i),void 0;q=o;for(var p in e)if(e.hasOwnProperty(p)){var v=e[p],w=v.minw,x=v.maxw,y=null===w,z=null===x,A="em";w&&(w=parseFloat(w)*(w.indexOf(A)>-1?t||s():1)),x&&(x=parseFloat(x)*(x.indexOf(A)>-1?t||s():1)),v.hasquery&&(y&&z||!(y||k>=w)||!(z||x>=k))||(m[v.media]||(m[v.media]=[]),m[v.media].push(f[v.rules]))}for(var B in g)g.hasOwnProperty(B)&&g[B]&&g[B].parentNode===j&&j.removeChild(g[B]);for(var C in m)if(m.hasOwnProperty(C)){var D=c.createElement("style"),E=m[C].join("\n");D.type="text/css",D.media=C,j.insertBefore(D,n.nextSibling),D.styleSheet?D.styleSheet.cssText=E:D.appendChild(c.createTextNode(E)),g.push(D)}},v=function(a,b){var c=w();c&&(c.open("GET",a,!0),c.onreadystatechange=function(){4!==c.readyState||200!==c.status&&304!==c.status||b(c.responseText)},4!==c.readyState&&c.send(null))},w=function(){var b=!1;try{b=new a.XMLHttpRequest}catch(c){b=new a.ActiveXObject("Microsoft.XMLHTTP")}return function(){return b}}();n(),b.update=n,a.addEventListener?a.addEventListener("resize",x,!1):a.attachEvent&&a.attachEvent("onresize",x)})(this);
+
+  </script>
+
+ <script type="text/javascript">
+/**
+ * AnchorJS - v4.1.0 - 2017-09-20
+ * https://github.com/bryanbraun/anchorjs
+ * Copyright (c) 2017 Bryan Braun; Licensed MIT
+ */
+ !function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function e(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64}function t(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}function i(){if(null===document.head.querySelector("style.anchorjs")){var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"], style'))?document.head.appendChild(e):document.head.insertBefore(e,A),e.sheet.insertRule(" .anchorjs-link {   opacity: 0;   text-decoration: none;   -webkit-font-smoothing: antialiased;   -moz-osx-font-smoothing: grayscale; }",e.sheet.cssRules.length),e.sheet.insertRule(" *:hover > .anchorjs-link, .anchorjs-link:focus  {   opacity: 1; }",e.sheet.cssRules.length),e.sheet.insertRule(" [data-anchorjs-icon]::after {   content: attr(data-anchorjs-icon); }",e.sheet.cssRules.length),e.sheet.insertRule(' @font-face {   font-family: "anchorjs-icons";   src: url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype"); }',e.sheet.cssRules.length)}}this.options=A||{},this.elements=[],e(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var n,o,s,a,r,c,h,l,u,d,f,p=[];if(e(this.options),"touch"===(f=this.options.visible)&&(f=this.isTouchDevice()?"always":"hover"),A||(A="h2, h3, h4, h5, h6"),0===(n=t(A)).length)return this;for(i(),o=document.querySelectorAll("[id]"),s=[].map.call(o,function(A){return A.id}),r=0;r<n.length;r++)if(this.hasAnchorJSLink(n[r]))p.push(r);else{if(n[r].hasAttribute("id"))a=n[r].getAttribute("id");else if(n[r].hasAttribute("data-anchor-id"))a=n[r].getAttribute("data-anchor-id");else{u=l=this.urlify(n[r].textContent),h=0;do{void 0!==c&&(u=l+"-"+h),c=s.indexOf(u),h+=1}while(-1!==c);c=void 0,s.push(u),n[r].setAttribute("id",u),a=u}a.replace(/-/g," "),(d=document.createElement("a")).className="anchorjs-link "+this.options.class,d.href="#"+a,d.setAttribute("aria-label",this.options.ariaLabel),d.setAttribute("data-anchorjs-icon",this.options.icon),"always"===f&&(d.style.opacity="1"),""===this.options.icon&&(d.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(d.style.lineHeight="inherit")),"left"===this.options.placement?(d.style.position="absolute",d.style.marginLeft="-1em",d.style.paddingRight="0.5em",n[r].insertBefore(d,n[r].firstChild)):(d.style.paddingLeft="0.375em",n[r].appendChild(d))}for(r=0;r<p.length;r++)n.splice(p[r]-r,1);return this.elements=this.elements.concat(n),this},this.remove=function(A){for(var e,i,n=t(A),o=0;o<n.length;o++)(i=n[o].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(n[o]))&&this.elements.splice(e,1),n[o].removeChild(i));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){var t=/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\]/g;return this.options.truncate||e(this.options),A.trim().replace(/\'/gi,"").replace(t,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&(" "+A.firstChild.className+" ").indexOf(" anchorjs-link ")>-1,t=A.lastChild&&(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ")>-1;return e||t||!1}}});
+  </script>
+  <!-- <script type="text/javascript" src="{{content}}/{{style-folder}}/content/assets/js/clipboard.min.js"> </script> -->
+  <script type="text/javascript">
+/*!
+ * clipboard.js v2.0.8
+ * https://clipboardjs.com/
+ *
+ * Licensed MIT © Zeno Rocha
+ */
+ !function(t,e){"object"==typeof exports&&"object"==typeof module?module.exports=e():"function"==typeof define&&define.amd?define([],e):"object"==typeof exports?exports.ClipboardJS=e():t.ClipboardJS=e()}(this,function(){return n={686:function(t,e,n){"use strict";n.d(e,{default:function(){return o}});var e=n(279),i=n.n(e),e=n(370),u=n.n(e),e=n(817),c=n.n(e);function a(t){try{return document.execCommand(t)}catch(t){return}}var f=function(t){t=c()(t);return a("cut"),t};var l=function(t){var e,n,o,r=1<arguments.length&&void 0!==arguments[1]?arguments[1]:{container:document.body},i="";return"string"==typeof t?(e=t,n="rtl"===document.documentElement.getAttribute("dir"),(o=document.createElement("textarea")).style.fontSize="12pt",o.style.border="0",o.style.padding="0",o.style.margin="0",o.style.position="absolute",o.style[n?"right":"left"]="-9999px",n=window.pageYOffset||document.documentElement.scrollTop,o.style.top="".concat(n,"px"),o.setAttribute("readonly",""),o.value=e,o=o,r.container.appendChild(o),i=c()(o),a("copy"),o.remove()):(i=c()(t),a("copy")),i};function r(t){return(r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}var s=function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:{},e=t.action,n=void 0===e?"copy":e,o=t.container,e=t.target,t=t.text;if("copy"!==n&&"cut"!==n)throw new Error('Invalid "action" value, use either "copy" or "cut"');if(void 0!==e){if(!e||"object"!==r(e)||1!==e.nodeType)throw new Error('Invalid "target" value, use a valid Element');if("copy"===n&&e.hasAttribute("disabled"))throw new Error('Invalid "target" attribute. Please use "readonly" instead of "disabled" attribute');if("cut"===n&&(e.hasAttribute("readonly")||e.hasAttribute("disabled")))throw new Error('Invalid "target" attribute. You can\'t cut text from elements with "readonly" or "disabled" attributes')}return t?l(t,{container:o}):e?"cut"===n?f(e):l(e,{container:o}):void 0};function d(t){return(d="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function p(t,e){for(var n=0;n<e.length;n++){var o=e[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,o.key,o)}}function y(t,e){return(y=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function h(n){var o=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],function(){})),!0}catch(t){return!1}}();return function(){var t,e=m(n);return t=o?(t=m(this).constructor,Reflect.construct(e,arguments,t)):e.apply(this,arguments),e=this,!(t=t)||"object"!==d(t)&&"function"!=typeof t?function(t){if(void 0!==t)return t;throw new ReferenceError("this hasn't been initialised - super() hasn't been called")}(e):t}}function m(t){return(m=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}function v(t,e){t="data-clipboard-".concat(t);if(e.hasAttribute(t))return e.getAttribute(t)}var o=function(){!function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&y(t,e)}(r,i());var t,e,n,o=h(r);function r(t,e){var n;return function(t){if(!(t instanceof r))throw new TypeError("Cannot call a class as a function")}(this),(n=o.call(this)).resolveOptions(e),n.listenClick(t),n}return t=r,n=[{key:"copy",value:function(t){var e=1<arguments.length&&void 0!==arguments[1]?arguments[1]:{container:document.body};return l(t,e)}},{key:"cut",value:function(t){return f(t)}},{key:"isSupported",value:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:["copy","cut"],t="string"==typeof t?[t]:t,e=!!document.queryCommandSupported;return t.forEach(function(t){e=e&&!!document.queryCommandSupported(t)}),e}}],(e=[{key:"resolveOptions",value:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:{};this.action="function"==typeof t.action?t.action:this.defaultAction,this.target="function"==typeof t.target?t.target:this.defaultTarget,this.text="function"==typeof t.text?t.text:this.defaultText,this.container="object"===d(t.container)?t.container:document.body}},{key:"listenClick",value:function(t){var e=this;this.listener=u()(t,"click",function(t){return e.onClick(t)})}},{key:"onClick",value:function(t){var e=t.delegateTarget||t.currentTarget,t=s({action:this.action(e),container:this.container,target:this.target(e),text:this.text(e)});this.emit(t?"success":"error",{action:this.action,text:t,trigger:e,clearSelection:function(){e&&e.focus(),document.activeElement.blur(),window.getSelection().removeAllRanges()}})}},{key:"defaultAction",value:function(t){return v("action",t)}},{key:"defaultTarget",value:function(t){t=v("target",t);if(t)return document.querySelector(t)}},{key:"defaultText",value:function(t){return v("text",t)}},{key:"destroy",value:function(){this.listener.destroy()}}])&&p(t.prototype,e),n&&p(t,n),r}()},828:function(t){var e;"undefined"==typeof Element||Element.prototype.matches||((e=Element.prototype).matches=e.matchesSelector||e.mozMatchesSelector||e.msMatchesSelector||e.oMatchesSelector||e.webkitMatchesSelector),t.exports=function(t,e){for(;t&&9!==t.nodeType;){if("function"==typeof t.matches&&t.matches(e))return t;t=t.parentNode}}},438:function(t,e,n){var u=n(828);function i(t,e,n,o,r){var i=function(e,n,t,o){return function(t){t.delegateTarget=u(t.target,n),t.delegateTarget&&o.call(e,t)}}.apply(this,arguments);return t.addEventListener(n,i,r),{destroy:function(){t.removeEventListener(n,i,r)}}}t.exports=function(t,e,n,o,r){return"function"==typeof t.addEventListener?i.apply(null,arguments):"function"==typeof n?i.bind(null,document).apply(null,arguments):("string"==typeof t&&(t=document.querySelectorAll(t)),Array.prototype.map.call(t,function(t){return i(t,e,n,o,r)}))}},879:function(t,n){n.node=function(t){return void 0!==t&&t instanceof HTMLElement&&1===t.nodeType},n.nodeList=function(t){var e=Object.prototype.toString.call(t);return void 0!==t&&("[object NodeList]"===e||"[object HTMLCollection]"===e)&&"length"in t&&(0===t.length||n.node(t[0]))},n.string=function(t){return"string"==typeof t||t instanceof String},n.fn=function(t){return"[object Function]"===Object.prototype.toString.call(t)}},370:function(t,e,n){var f=n(879),l=n(438);t.exports=function(t,e,n){if(!t&&!e&&!n)throw new Error("Missing required arguments");if(!f.string(e))throw new TypeError("Second argument must be a String");if(!f.fn(n))throw new TypeError("Third argument must be a Function");if(f.node(t))return c=e,a=n,(u=t).addEventListener(c,a),{destroy:function(){u.removeEventListener(c,a)}};if(f.nodeList(t))return o=t,r=e,i=n,Array.prototype.forEach.call(o,function(t){t.addEventListener(r,i)}),{destroy:function(){Array.prototype.forEach.call(o,function(t){t.removeEventListener(r,i)})}};if(f.string(t))return t=t,e=e,n=n,l(document.body,t,e,n);throw new TypeError("First argument must be a String, HTMLElement, HTMLCollection, or NodeList");var o,r,i,u,c,a}},817:function(t){t.exports=function(t){var e,n="SELECT"===t.nodeName?(t.focus(),t.value):"INPUT"===t.nodeName||"TEXTAREA"===t.nodeName?((e=t.hasAttribute("readonly"))||t.setAttribute("readonly",""),t.select(),t.setSelectionRange(0,t.value.length),e||t.removeAttribute("readonly"),t.value):(t.hasAttribute("contenteditable")&&t.focus(),n=window.getSelection(),(e=document.createRange()).selectNodeContents(t),n.removeAllRanges(),n.addRange(e),n.toString());return n}},279:function(t){function e(){}e.prototype={on:function(t,e,n){var o=this.e||(this.e={});return(o[t]||(o[t]=[])).push({fn:e,ctx:n}),this},once:function(t,e,n){var o=this;function r(){o.off(t,r),e.apply(n,arguments)}return r._=e,this.on(t,r,n)},emit:function(t){for(var e=[].slice.call(arguments,1),n=((this.e||(this.e={}))[t]||[]).slice(),o=0,r=n.length;o<r;o++)n[o].fn.apply(n[o].ctx,e);return this},off:function(t,e){var n=this.e||(this.e={}),o=n[t],r=[];if(o&&e)for(var i=0,u=o.length;i<u;i++)o[i].fn!==e&&o[i].fn._!==e&&r.push(o[i]);return r.length?n[t]=r:delete n[t],this}},t.exports=e,t.exports.TinyEmitter=e}},r={},o.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return o.d(e,{a:e}),e},o.d=function(t,e){for(var n in e)o.o(e,n)&&!o.o(t,n)&&Object.defineProperty(t,n,{enumerable:!0,get:e[n]})},o.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},o(686).default;function o(t){if(r[t])return r[t].exports;var e=r[t]={exports:{}};return n[t](e,e.exports,o),e.exports}var n,r});
+  </script>
+  <!-- <script type="text/javascript" src="{{content}}/{{style-folder}}/content/assets/js/clipboard-btn.js"> </script> -->
+  <script type="text/javascript">
+// Tooltip
+$('.btn-copy').tooltip({
+  trigger: 'hover',
+  placement: 'bottom' 
+});
+
+function setTooltip(message) {
+  button = $(event.target)
+  oldMsg = button.tooltip().attr('data-original-title')
+  button.tooltip()
+    .attr('data-original-title', message)
+    .tooltip('show');
+  setTimeout(function() {
+    button.tooltip()
+    .attr('data-original-title', oldMsg)
+    .tooltip('hide');
+  }, 1000);
+}
+
+// Clipboard
+
+var clipboard = new ClipboardJS('.btn-copy');
+
+clipboard.on('success', function(e) {
+  setTooltip('Copied!');
+});
+
+clipboard.on('error', function(e) {
+  setTooltip('Failed :( - copy manually');
+});
+  </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

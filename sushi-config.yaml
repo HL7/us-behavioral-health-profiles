@@ -1,0 +1,39 @@
+# ╭─────────────────────────Commonly Used ImplementationGuide Properties───────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. The most commonly   │
+# │  used properties are included. For a list of all supported properties and their functions,     │
+# │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: fhir.onc.bhp
+canonical: http://fhir.org/guides/onc/bhp
+name: FhirGuidesOncBhp
+title: US Behavioral Health Profiles Implementation Guide
+description: US Behavioral Health Profiles Implementation Guide
+status: active # draft | active | retired | unknown
+version: 0.1.0
+fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+copyrightYear: 2026+
+releaseLabel: trial-use
+# license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html  -- this drives the SNOMED version selection too.
+publisher:
+  name: ONC
+  url: https://www.healthit.gov/
+  email: info@healthit.gov
+
+dependencies:
+  hl7.fhir.us.core: 6.1.0
+  hl7.fhir.us.sdoh-clinicalcare: 2.3.0
+  hl7.fhir.us.military-service: 1.0.0
+
+menu:
+  Home: index.html
+
+parameters:
+  path-expansion-params: Parameters-expansion-parameters-bhir.json
+  pin-canonicals: pin-all
+  display-warnings: true
+  no-cibuild-issues: true
+  suppress-mappings: '*'
+
+instanceOptions:
+  manualSliceOrdering: false

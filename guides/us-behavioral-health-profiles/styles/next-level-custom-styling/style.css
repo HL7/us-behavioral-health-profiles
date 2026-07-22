@@ -1,0 +1,2048 @@
+
+
+/*************
+    *********************************** FHIR CSS ************/
+
+body {
+    background-color: rgb(243, 243, 243);
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+    body.book {
+        margin: 20px;
+        padding: 20px;
+        background-color: #fff;
+    }
+
+.watermark {
+    background-position: center center;
+    s-background-size: 100%; /* CSS3 only, but not really necessary if you make a large enough image */
+    background-attachment: fixed;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 10;
+}
+
+i.inherited {
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+p, li {
+    font-size: 12px;
+    line-height: 1.4em;
+    font-family: verdana;
+    margin: 0 0 20px 0;
+    font-weight: normal;
+}
+
+a.cf {
+    color: red;
+}
+
+a.dict {
+    color: Purple;
+}
+
+td {
+    font-size: 12px;
+    line-height: 1.4em;
+    font-family: verdana;
+    font-weight: normal;
+    padding: 3px;
+    vertical-align: top;
+}
+
+tr {
+    font-size: 12px;
+    line-height: 1.4em;
+    font-family: verdana;
+    font-weight: normal;
+    padding: 3px;
+    vertical-align: top;
+    text-align: left;
+}
+
+table.colstu {
+    width: 100%;
+}
+
+    table.colstu td {
+        border: 1px grey solid;
+        border-spacing: 0;
+        padding: 5px;
+        border-collapse: collapse;
+        background-color: #fff5e6;
+    }
+
+table.colsdp {
+    width: 100%;
+}
+
+    table.colsdp td {
+        border: 1px grey solid;
+        border-spacing: 0;
+        padding: 5px;
+        border-collapse: collapse;
+        background-color: #ffcccc;
+    }
+
+table.colsd {
+    width: 100%;
+}
+
+    table.colsd td {
+        border: 1px grey solid;
+        border-spacing: 0;
+        padding: 5px;
+        border-collapse: collapse;
+        background-color: #efefef;
+    }
+
+table.colsn {
+    width: 100%;
+}
+
+    table.colsn td {
+        border: 1px grey solid;
+        border-spacing: 0;
+        padding: 5px;
+        border-collapse: collapse;
+        background-color: #e6ffff;
+    }
+
+table.colse {
+    width: 100%;
+}
+
+    table.colse td {
+        border: 1px grey solid;
+        border-spacing: 0;
+        padding: 5px;
+        border-collapse: collapse;
+        background-color: #e6e6e6;
+    }
+
+table.colsi {
+    width: 100%;
+}
+
+    table.colsi td {
+        border: 1px grey solid;
+        border-spacing: 0;
+        padding: 5px;
+        border-collapse: collapse;
+        background-color: #ffffe6;
+    }
+
+
+table.list td {
+    border-top: 1px silver solid;
+    border-spacing: 0;
+}
+
+table.bare td {
+    border-spacing: 0;
+}
+
+ul.dict li {
+    font-size: 11px;
+    line-height: 1.2em;
+    font-family: verdana;
+    font-weight: normal;
+    padding: 3px;
+}
+
+table.dict td {
+    padding: 3px 7px 2px 7px;
+    font-size: 11px;
+    line-height: 1.2em;
+    font-family: verdana;
+    font-weight: normal;
+    padding: 3px;
+    vertical-align: top;
+}
+
+table.dict p {
+    font-size: 11px;
+}
+
+table.dict td.structure {
+    padding: 3px 7px 2px 7px;
+    font-size: 12px;
+    line-height: 1.2em;
+    font-family: verdana;
+    font-weight: bold;
+    padding: 3px;
+    vertical-align: top;
+    border-bottom: 1px silver solid;
+    background: #EFEFEF
+}
+
+
+table {
+    margin-bottom: 10px;
+    border-collapse: collapse;
+}
+
+    table.codes {
+        margin-bottom: 10px;
+        border: 1px black solid;
+    }
+
+        table.codes td {
+            border: 1px solid silver;
+            padding: 3px 7px 2px 7px;
+            font-size: 12px;
+            line-height: 1.4em;
+            font-family: verdana;
+            font-weight: normal;
+            padding: 3px;
+            vertical-align: top;
+        }
+
+    table.grid {
+        margin-bottom: 10px;
+        border: 1px black solid;
+        margin-right: auto;
+    }
+
+        table.grid th {
+            border: 1px solid silver;
+            padding: 3px 7px 2px 7px;
+            font-size: 12px;
+            line-height: 1.4em;
+            font-family: verdana;
+            font-weight: bold;
+            padding: 3px;
+            vertical-align: top;
+        }
+
+
+        table.grid td {
+            border: 1px solid silver;
+            padding: 3px 7px 2px 7px;
+            font-size: 12px;
+            line-height: 1.4em;
+            font-family: verdana;
+            font-weight: normal;
+            padding: 3px;
+            vertical-align: top;
+        }
+
+ul {
+    margin: 10px 0;
+    padding: 0 0 0 25px;
+}
+
+.dense li {
+    margin: 0 0 0 0;
+}
+
+li {
+    margin: 0 0 5px 0;
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0 0 4px 0;
+    font-family: verdana;
+    border-bottom: 1px solid #7e7e7e;
+    padding-bottom: 2px;
+}
+
+h2 {
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 2px;
+}
+
+div.content {
+    background-color: #fff;
+    margin-left: 180px;
+    padding: 5px;
+    border-left: 1px solid #dcdcdc;
+}
+
+div.use {
+    border: 1px solid #dcdcdc;
+    background: #EEEEEE;
+    padding: 5px;
+}
+
+div.mapping {
+    border: 1px solid #dcdcdc;
+    background: #e4dbf9;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 0.75em;
+    width: 800px;
+}
+
+
+div.example {
+    border: 1px solid #dcdcdc;
+    background: #FFECDD;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 0.75em;
+    width: 670px;
+}
+
+div.sidebar h2 {
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 2px;
+    padding-top: 0px;
+    margin-top: 0px;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-bottom: 0px;
+    font-size: 12px;
+}
+
+div.sidebar p {
+    padding-bottom: 0px;
+    padding-top: 10px;
+    font-weight: normal;
+    margin-left: 8px;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+div.sidebar ul {
+    list-style: none;
+    padding: 0px;
+    margin-left: 6px;
+    font-size: 11px;
+    line-height: 2.125em;
+}
+
+div.sidebar li {
+    margin: 0px 0px 0px 6px;
+    padding: 0px;
+    font-size: 11px;
+    line-height: 2.125m;
+}
+
+div.sidebar {
+    position: fixed;
+    width: 180px;
+    left: 0px;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+pre.spec {
+    border: 1px solid #dcdcdc;
+    font-size: 11px;
+    background: #FFFFE0;
+    padding: 5px;
+    width: 650px;
+}
+
+pre.json {
+    border: 1px solid #dcdcdc;
+    font-size: 11px;
+    background: #EFFFEF;
+    padding: 5px;
+    width: 650px;
+}
+
+pre.liquid {
+    border: 1px solid #dcdcdc;
+    font-size: 11px;
+    background: #fbf3e3;
+    padding: 5px;
+    width: 650px;
+}
+
+pre.xml {
+    font-family: 'Courier New';
+    font-size: 9pt;
+    padding: 2px;
+    background: #F0FFFF;
+    width: 650px;
+}
+
+a.xmltag {
+    color: Navy;
+}
+
+    a.xmltag :visited {
+        color: Navy;
+    }
+
+    a.xmltag :hover {
+        color: Blue;
+    }
+
+span.xmltag {
+    color: Navy;
+}
+
+span.xmltagred {
+    color: Maroon;
+}
+
+span.xmlcomment {
+    color: Grey;
+}
+
+span.xmlattr {
+    color: Maroon;
+}
+
+span.xmlattrvalue {
+    color: DarkGreen;
+}
+
+
+pre a {
+    color: darkgreen;
+    text-decoration: none;
+    border: 0;
+}
+
+@media all {
+    .page-break {
+        display: none;
+    }
+}
+
+@media print {
+    .page-break {
+        display: block;
+        page-break-before: always;
+    }
+}
+
+ul.navtop {
+    list-style: none outside none;
+    display: block;
+    font-family: sans serif;
+    margin: 0 0 8px 0;
+    padding: 0px;
+}
+
+li.selected {
+    white-space: nowrap;
+    display: inline-block;
+    background-color: white;
+    border-right: 1px solid #adcbb9;
+    margin: 0px;
+    padding: 0px;
+}
+
+li.spacerleft {
+    white-space: nowrap;
+    display: inline-block;
+    background-color: white;
+    border-bottom: 1px solid #adcbb9;
+    border-right: 1px solid #adcbb9;
+    margin: 0px;
+    padding: 0px;
+}
+
+li.spacerright {
+    white-space: nowrap;
+    display: inline-block;
+    background-color: white;
+    border-bottom: 1px solid #adcbb9;
+    margin: 0px;
+    padding: 0px;
+    width: 160px;
+}
+
+li.nselected {
+    white-space: nowrap;
+    display: inline-block;
+    background-color: #eeeeee;
+    border-right: 1px solid #adcbb9;
+    margin: 0px;
+    border-bottom: 1px solid #adcbb9;
+    padding: 0px;
+    background-repeat: x-repeat;
+}
+
+li.wiki {
+    white-space: nowrap;
+    display: inline-block;
+    background-color: #fff;
+    margin: 0px;
+    border-bottom: 1px solid #adcbb9;
+    padding: 0px;
+}
+
+
+div.navtop {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul.navtop a {
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    font-size: 10px;
+}
+
+ul.navtop span {
+    display: inline-block;
+    margin: 0px;
+    padding: 3px 3px 3px 3px;
+    font-size: 10px;
+}
+
+span.forprint {
+    display: none;
+}
+
+p.status {
+    color: navy;
+    border: 1px solid navy;
+    background-color: Mistyrose;
+}
+
+
+div.sidebar p.note {
+    color: maroon;
+    font-size: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+div.itoc {
+    margin: 4px;
+    padding: 4px;
+    float: right;
+    z-index: 10;
+    width: 150px;
+    background-color: #ffeb7e;
+    border: 1px solid navy;
+}
+
+    div.itoc p {
+        font-size: 10px;
+        font-weight: bold;
+        margin: 5px;
+        padding: 0px;
+    }
+
+        div.itoc p.link {
+            font-size: 10px;
+            padding-left: 8px;
+            margin: 0px;
+        }
+
+span.sectioncount {
+    color: silver;
+    x-position: absolute;
+    x-right: 0;
+    x-margin-right: 30px;
+}
+
+@font-face {
+    font-family: 'OpenSansCondensedLight';
+    src: url('OpenSans-CondLight-webfont.eot');
+    src: url('OpenSans-CondLight-webfont.eot?#iefix') format('embedded-opentype'), url('OpenSans-CondLight-webfont.woff') format('woff'), url('OpenSans-CondLight-webfont.ttf') format('truetype'), url('OpenSans-CondLight-webfont.svg#open_sanscondensed_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansCondensedBold';
+    src: url('OpenSans-CondBold-webfont.eot');
+    src: url('OpenSans-CondBold-webfont.eot?#iefix') format('embedded-opentype'), url('OpenSans-CondBold-webfont.woff') format('woff'), url('OpenSans-CondBold-webfont.ttf') format('truetype'), url('OpenSans-CondBold-webfont.svg#open_sans_condensedbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.diagram-class-title {
+    font-size: 1em;
+    text-anchor: middle;
+    font-family: OpenSansCondensedLight;
+    font-weight: regular;
+}
+
+.diagram-resource {
+    font-family: OpenSansCondensedBold;
+    font-weight: bold;
+}
+
+.diagram-class-title-link {
+    font-size: .9em;
+    text-anchor: middle;
+    font-family: OpenSansCondensedLight;
+    font-weight: regular;
+}
+
+.diagram-class-reference {
+    fill: navy;
+}
+
+.diagram-class-detail {
+    font-size: .8em;
+    text-anchor: left;
+    font-family: OpenSansCondensedLight;
+    font-weight: regular;
+}
+
+.diagram-class-linkage {
+    font-size: .9em;
+    text-anchor: middle;
+    font-family: OpenSansCondensedLight;
+    font-weight: regular;
+    opacity: 1;
+}
+
+.hierarchy {
+    border: 0px;
+    padding: 0px 4px 0px 4px;
+    font-size: 11px;
+    font-family: verdana;
+    vertical-align: top;
+}
+
+tr.hierarchy {
+    border: 1px #F0F0F0 solid;
+    padding: 0px 4px 0px 4px;
+    font-size: 11px;
+    font-family: verdana;
+    vertical-align: top;
+}
+
+img.hierarchy {
+    border: 0px;
+    padding: 0px;
+    vertical-align: top;
+    background-color: white;
+}
+
+.linecounter {
+    counter-reset: listing
+}
+
+
+code {
+    counter-increment: listing;
+}
+
+.linecounter i:before {
+    content: counter(listing) ". ";
+    color: black;
+}
+
+.linecounter i {
+    float: left;
+    clear: both;
+    min-width: 2.5em;
+}
+
+.linecounter code:before {
+    content: counter(listing) ". ";
+    color: black;
+    display: inline-block;
+    min-width: 2.5em;
+}
+
+div.warning {
+    background-color: #FFE6E6;
+    border: 1px silver solid;
+    padding: 5px;
+}
+
+
+
+tr.diff-title td {
+    font-weight: bold;
+    background-color: #eeeeee;
+}
+
+tr.diff-item td.diff-left {
+    font-weight: bold;
+    vertical-align: top;
+}
+
+tr.diff-new-item td.diff-left {
+    font-weight: bold;
+    vertical-align: top;
+}
+
+tr.diff-del-item td.diff-left {
+    font-weight: bold;
+    vertical-align: top;
+}
+
+tr.diff-new {
+    background-color: #f4fff4;
+}
+
+tr.diff-new-item {
+    background-color: #f4fff4;
+}
+
+tr.diff-del {
+    background-color: #fff4f4;
+}
+
+tr.diff-del-item {
+    background-color: #fff4f4;
+}
+
+.self-link-parent a.self-link {
+    visibility: hidden;
+}
+
+.self-link-parent:hover a.self-link {
+    visibility: visible;
+}
+
+tr.frm-group {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-top: 1px solid black override;
+    border-bottom: 0px none black override;
+    font-weight: bold;
+}
+
+tr.frm-group-n {
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+tr.frm-contents {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    padding-bottom: 3px;
+    border-bottom: 1px solid black override;
+}
+
+td.frm-category {
+    border-left: 1px solid #eeeeee;
+    font-weight: bold;
+    text-align: center;
+}
+
+td.frm-group {
+    background: #f4f4f4;
+    font-weight: bold;
+}
+
+td.frm-null {
+    background: #f4f4f4;
+}
+
+
+td.frm-set {
+    border-left: 1px solid #eeeeee;
+}
+
+.gsc-control-cse .gsc-table-result {
+    font-family: inherit;
+}
+
+.gsc-control-cse .gsc-input-box {
+    height: inherit;
+}
+
+input.gsc-input,
+.gsc-input-box,
+.gsc-input-box-hover,
+.gsc-input-box-focus,
+.gsc-search-button, input.gsc-search-button-v2 {
+    box-sizing: content-box;
+    line-height: normal;
+    margin-top: 0px;
+}
+
+
+a.normative-flag {
+    border: 1px grey solid;
+    background-color: #e6ffe6;
+    padding-left: 3px;
+    padding-right: 3px;
+    color: black;
+    font-weight: bold
+}
+
+
+.copy-text .btn-copy {
+    visibility: hidden;
+}
+
+.copy-text:hover .btn-copy {
+    visibility: visible;
+}
+
+.btn-copy {
+    height: 14px;
+    width: 17px;
+    background-size: 22px;
+    padding: 0px 0px;
+    border-width: 0px;
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+/*************
+    *********************************** PROJECT CSS ************/
+
+/*
+
+    Specific layout and styling, project based
+
+
+*/
+/*
+Flexslider vs LayerSlider vs SliderRevolution
+Font-scaling
+Transition
+Isotope Masonry less
+popover alties => wireframe analyse hiervoor
+breadcrumb vs history what is a breadcrumb hiearchy or history?
+gray-color thingy
+
+widget-row vs thumbs vs joyo-thumbs
+shortcode for
+- Fontawesome
+- Accordion
+- Notifications
+- span-fluid in content bv span3
+font-awesome OWN export
+joyo-widget and all other style
+widget in sidebar vs in column = uiterlijk op basis van locale class via functions of template
+  een sidebar uiterlijk moet ook midden in de pagina kunnen.
+*/
+/*
+
+- SCAFFOLDING							Groundwork for the site. Background colors are set in less or overruled here
+- SCAFFOLDING OBJECTS					Objects reoccurring on every page
+- COMPONENTS							Everything what can be moved around
+- BACK TO TOP							Anchor animating to top of the page
+- EXCEPTIONS FOR SPECIFIC SITUATIONS	Some pages are not like the others
+- D-I-D AREA							Do-It-Dirty
+
+*/
+/* SCAFFOLDING STYLING
+----------------------------------------------------------------------------------------*/
+
+
+/* Colors
+
+Usage:
+var(--publish-box-border); */
+
+:root {
+    --ig-status-text-color: maroon; /* 1. IG Title and status text color */
+    --navbar-bg-color: #7b1fad; /* 2. Header container color */
+    --footer-bg-color: #707070; /* 3. Footer background color*/
+    --footer-container-bg-color: #7b1fad; /* 4. Footer container color */
+    --stripe-bg-color: #999999; /* 5. Header strip color */
+
+    --btn-hover-color: #9b2fdd; /* 6. Menu button hover color */
+    --btn-active-color: #da0c23; /* 7. Menu button active color */
+    --btn-text-color: #e6e6e6; /* 8. Menu button text color */
+    --btn-gradient-start-color: #428bca; /* 9. Menu item gradient start color */
+    --btn-gradient-end-color: #357ebd; /* 10. Menu item gradient end  color */
+    --btn-gradient-start-color-alpha: #ff428bca; /* 11. Menu item gradient start color (with alpha) */
+    --btn-gradient-end-color-alpha: #ff357ebd; /* 12. Menu item gradient end color (with alpha) */
+    --link-color: #428bca; /* 13. Hyperlink text color */
+    --link-hover-color: #2a6496; /* 14. Hyperlink text hover color */
+
+    --publish-box-bg-color: yellow; /* 15. Publish box background color */
+    --publish-box-border: 1px solid #0A0008; /* 16.  Publish box border definition */
+
+    --toc-box-bg-color: #ffeb7e; /* 17.  TOC box background color */
+    --toc-box-border: 1px solid navy; /* 18. TOC box border definition */
+
+    --stu-note-background-color: #fff2ff; /* 19. (STU) Note box background color */
+    --stu-note-border-left-color: #ffa0ff; /* 20. (STU) Note box border color */
+
+    --ig-header-color: #f5f5f5; /* 21. Header color (sides) */
+    --ig-header-container-color: #ffffff; /* 22. Header container color (center) */
+    --footer-nav-bg-color: #f5f5f5; /* 23. Footer navigation background color*/
+
+    --footer-text-color: #ffffff; /* 24. Footer highlight font color */
+    --footer-hyperlink-text-color: #81BEF7; /* 25. Footer hyperlinks font color */
+    --footer-highlight-text-color: #ffff77; /* 26. Footer highlight font color */
+
+    --breadcrumb-bg-color: #f5f5f5; /* 27. Breadcrumb font color */
+    --breadcrumb-text-color: ##555555; /* 28. Breadcrumb font color */
+
+    --dragon-background-color: #fffbf7; /* 29. Dragon background color */
+    --dragon-text-color: #101020; /* 30. Dragon font color */
+}
+
+
+
+html {
+    background-color: #ffffff;
+}
+
+body {
+    background-color: #ffffff;
+    position: relative;
+    padding-top: 0;
+}
+
+.segment {
+    position: relative;
+}
+
+    .segment > .container {
+        background-color: #ffffff;
+        position: relative;
+    }
+
+#segment-header {
+    background-color: var(--ig-header-color);
+}
+
+    #segment-header > .container {
+        background-color: var(--ig-header-container-color);
+    }
+
+#segment-footer {
+    background-color: var(--footer-bg-color);
+}
+
+    #segment-footer > .container {
+        background-color: var(--footer-container-bg-color);
+        color: var(--footer-text-color);
+    }
+
+/* Don't display the Table Of Contents menu item (links back to the guide root, e.g. /guide/uscdi-plus-ctm/ig?version=current) */
+.header .nav.navbar-nav li > a[href$="/ig"],
+.header .nav.navbar-nav li > a[href*="/ig?"] {
+    display: none !important;
+}
+
+
+.navbar-inverse {
+    background-color: var(--navbar-bg-color);
+}
+
+    .navbar-inverse .navbar-nav > li > a:hover {
+        background-color: var(--btn-hover-color);
+    }
+
+#segment-footer > .container .inner-wrapper {
+    padding: 4px 20px;
+}
+
+    #segment-footer > .container .inner-wrapper > p {
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        color: var(--footer-text-color);
+    }
+
+#segment-post-footer {
+    background-color: #f5f5f5;
+}
+
+    #segment-post-footer > .container {
+        background-color: #e6e6e6;
+        min-height: 90px;
+    }
+/*
+@media (max-width: 767px) {
+	body {
+		//padding-left: 0;
+		//padding-right: 0;
+		.segment > .container {
+			//padding-left: 10px;
+			//padding-right: 10px;
+		}
+	}
+	.segment {
+		margin-left: -20px;
+		margin-right: -20px;
+		&#segment-content {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+*/
+#sidebar > .inner-wrapper {
+    margin-top: 14px;
+    margin-bottom: 20px;
+}
+
+#content > .inner-wrapper,
+.container > .row > .inner-wrapper {
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+/* SCAFFOlDING OBJECTS
+----------------------------------------------------------------------------------------*/
+#logo {
+    float: left;
+    margin-top: 6px;
+    margin-left: 20px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+    #logo img {
+        max-width: 100%;
+    }
+
+#project-nav {
+    line-height: 50px;
+    float: left;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: #808080;
+}
+
+#project-logo {
+    float: left;
+    margin-left: 3px;
+}
+
+#family-nav {
+    line-height: 50px;
+    float: right;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    color: #808080;
+}
+
+#family-logo {
+    float: right;
+    margin-left: 6px;
+}
+
+#ig-status {
+    line-height: 20px;
+    margin-top: 17px;
+    color: var(--ig-status-text-color);
+    text-align: center;
+    height: 50px;
+}
+
+#stripe {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 8px;
+    background: var(--stripe-bg-color);
+}
+
+#notes a {
+    color: #555555;
+}
+
+#publish-box {
+    background-color: var(--publish-box-bg-color);
+    border: var(--publish-box-border);
+    padding: 5px;
+}
+
+.dragon {
+    border: 1px solid maroon;
+    padding: 10px;
+    background-color: var(--dragon-background-color);
+    min-height: 160px;
+    color: var(--dragon-text-color);
+}
+
+    .dragon::before {
+        content: "";
+        background-size: 150px 150px;
+        display: inline-block;
+        float: left;
+        margin-right: 10px;
+        width: 150px;
+        height: 150px;
+    }
+
+.note-to-balloters, .stu-note {
+    margin: 5px;
+    padding: 10px;
+    border-left-style: solid;
+    background-color: var(--stu-note-background-color);
+    border-left-color: var(--stu-note-border-left-color);
+}
+
+    .stu-note::before {
+        white-space: pre;
+        content: "Note\A ";
+        background-color: yellow;
+        color: red;
+        font-weight: bold;
+    }
+
+    .note-to-balloters::before {
+        white-space: pre;
+        content: "Note to Balloters\A ";
+        background-color: yellow;
+        color: red;
+        font-weight: bold;
+    }
+
+blockquote.stu-note {
+    margin: 5px;
+    padding: 10px;
+    background-color: var(--stu-note-background-color);
+    border-left-color: var(--stu-note-border-left-color);
+}
+
+
+/* GENERIC OBJECTS
+----------------------------------------------------------------------------------------*/
+.navbar {
+    clear: both;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-color: #ffffff;
+    border-width: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 0;
+    /*  background-color: var(--navbar-bg-color); */
+}
+
+    .navbar > div > div > ul > li {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .navbar .nav > li > a {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .navbar .nav > li > a {
+        padding: 10px 12px;
+        text-shadow: none;
+    }
+
+    .navbar .nav > li > a,
+    .navbar .nav > .active > a,
+    .navbar .nav > .active > a:hover,
+    .navbar .nav > .active > a:focus {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+.dropdown-menu {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+    .dropdown-menu li > a {
+        padding: 6px 20px;
+    }
+
+    .dropdown-menu > li > a:hover,
+    .dropdown-menu > li > a:focus,
+    .dropdown-submenu:hover > a,
+    .dropdown-submenu:focus > a {
+        text-decoration: none;
+        color: #ffffff;
+        background-color: var(--btn-hover-color);
+        background-image: -webkit-gradient(linear, left 0%, left 100%, from(var(--btn-gradient-start-color)), to(var(--btn-gradient-end-color)));
+        background-image: -webkit-linear-gradient(top, var(--btn-gradient-start-color), 0%, var(--btn-gradient-end-color), 100%);
+        background-image: -moz-linear-gradient(top, var(--btn-gradient-start-color) 0%, var(--btn-gradient-end-color) 100%);
+        background-image: linear-gradient(to bottom, var(--btn-gradient-start-color) 0%, var(--btn-gradient-end-color) 100%);
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--btn-gradient-start-color-alpha), endColorstr=var(--btn-gradient-end-color-alpha), GradientType=0);
+    }
+
+    .dropdown-menu > .active > a,
+    .dropdown-menu > .active > a:hover,
+    .dropdown-menu > .active > a:focus {
+        color: #ffffff;
+        text-decoration: none;
+        outline: 0;
+        background-color: var(--btn-active-color);
+        background-image: -webkit-gradient(linear, left 0%, left 100%, from(var(--btn-gradient-start-color)), to(var(--btn-gradient-end-color)));
+        background-image: -webkit-linear-gradient(top, var(--btn-gradient-start-color), 0%, var(--btn-gradient-end-color), 100%);
+        background-image: -moz-linear-gradient(top, var(--btn-gradient-start-color) 0%, var(--btn-gradient-end-color) 100%);
+        background-image: linear-gradient(to bottom, var(--btn-gradient-start-color) 0%, var(--btn-gradient-end-color) 100%);
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--btn-gradient-start-color-alpha), endColorstr=var(--btn-gradient-end-color-alpha), GradientType=0);
+    }
+
+.nav-tabs {
+    margin-bottom: 20px;
+}
+
+    .nav-tabs a {
+        color: #555555;
+    }
+
+    .nav-tabs li a:hover,
+    .nav-tabs li a:focus {
+        border-bottom-color: #955159;
+    }
+
+.nav-tabs {
+    border-bottom-color: #955159;
+}
+
+    .nav-tabs > .active > a,
+    .nav-tabs > .active > a:hover,
+    .nav-tabs > .active > a:focus {
+        color: var(--btn-active-color);
+        border-color: #955159 #955159 transparent;
+    }
+
+    .nav-tabs > li.active > a,
+    .nav-tabs > li.active > a:hover,
+    .nav-tabs > li.active > a:focus {
+        color: var(--btn-active-color);
+        background-color: #ffffff;
+        border: 1px solid #955159;
+        border-bottom-color: transparent;
+        cursor: default;
+    }
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: var(--btn-active-color);
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: var(--btn-text-color);
+}
+
+    .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-nav > li > a:focus {
+        color: #ffffff;
+        background-color: var(--btn-hover-color);
+    }
+
+/*
+@media (max-width: 979px) {
+    // make tabs act like nav-stacked
+    // (mostly) copied from bootstrap/navs.less
+    .nav-tabs > li {
+        float: none;
+    }
+    .nav-tabs > li > a {
+        margin-right: 0; // no need for the gap between nav items
+    }
+    .nav-tabs {
+        border-bottom: 0;
+    }
+    .nav-tabs > li > a {
+        border: 1px solid #ddd;
+        .border-top-radius(0);
+        .border-right-radius(0);
+        .border-bottom-radius(0);
+        .border-left-radius(0);
+    }
+    .nav-tabs > .active > a,
+    .nav-tabs > .active > a:hover {
+        border: 1px solid #ddd;
+    }
+    .nav-tabs > li:first-child > a {
+        .border-top-radius(4px);
+    }
+    .nav-tabs > li:last-child > a {
+        .border-bottom-radius(4px);
+    }
+    .nav-tabs > li > a:hover,
+    .nav-tabs > li > a:focus {
+        border-color: #ddd;
+        z-index: 2;
+    }
+}
+*/
+
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+    a:hover,
+    a:focus {
+        color: var(--link-hover-color);
+        text-decoration: underline;
+    }
+
+.btn-link:hover,
+.btn-link:focus {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+
+.nav-list > li > a {
+    padding: 3px 15px;
+}
+
+.breadcrumb {
+    margin-bottom: 0;
+    background-color: var(--breadcrumb-bg-color);
+    ;
+}
+
+    .breadcrumb a {
+        color: var(--breadcrumb-text-color);
+    }
+
+.nav-listing {
+    overflow: hidden;
+}
+
+    .nav-listing > li {
+        float: left;
+        width: 25%;
+    }
+
+        .nav-listing > li > a {
+            padding: 2px 6px;
+        }
+
+.sectioncount {
+    x-float: right;
+    x-color: #555555;
+    x-font-size: 12px;
+}
+
+    .sectioncount a {
+        color: inherit;
+    }
+
+h1.underlined,
+h2.underlined,
+h3.underlined,
+h4.underlined,
+h5.underlined,
+h6.underlined {
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 0.2em;
+}
+
+p > img {
+    float: left;
+    margin-top: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+.table td {
+    padding: 6px;
+    line-height: 18px;
+}
+
+.table th h1,
+.table th h2,
+.table th h3,
+.table th h4,
+.table th h5,
+.table th h6 {
+    margin-bottom: 0;
+}
+
+.table th.inverted {
+    background-color: #555555;
+    color: #ffffff;
+    border: none !important;
+}
+
+    .table th.inverted h1,
+    .table th.inverted h2,
+    .table th.inverted h3,
+    .table th.inverted h4,
+    .table th.inverted h5,
+    .table th.inverted h6 {
+        color: inherit;
+    }
+
+pre {
+    font-size: 12px;
+}
+
+.icon-warning-sign {
+    font-size: 30px;
+    margin-right: 10px;
+    display: block;
+    float: left;
+}
+/* BACK TO TOP
+----------------------------------------------------------------------------------------*/
+a.to-top {
+    display: block;
+    float: right;
+    width: 25px;
+    height: 25px;
+    text-indent: -9999px;
+    margin-top: -28px;
+}
+/* EXCEPTIONS FOR SPECIFIC SITUATIONS
+----------------------------------------------------------------------------------------*/
+/* D-I-D AREA
+----------------------------------------------------------------------------------------*/
+
+ul.markdown-toc {
+    margin: 4px;
+    padding: 4px;
+    float: right;
+    z-index: 10;
+    width: 30%;
+    background-color: var(--toc-box-bg-color);
+    border: var(--toc-box-border);
+}
+
+    ul.markdown-toc p {
+        font-size: 10px;
+        font-weight: bold;
+        margin: 5px;
+        padding: 0px;
+    }
+
+        ul.markdown-toc p.link {
+            font-size: 10px;
+            padding-left: 8px;
+            margin: 0px;
+        }
+
+div.markdown-toc {
+    margin: 4px;
+    padding: 4px;
+    float: right;
+    z-index: 10;
+    width: 30%;
+    background-color: var(--toc-box-bg-color);
+    border: var(--toc-box-border);
+}
+
+    div.markdown-toc p {
+        font-size: 10px;
+        font-weight: bold;
+        margin: 5px;
+        padding: 0px;
+    }
+
+        div.markdown-toc p.link {
+            font-size: 10px;
+            padding-left: 8px;
+            margin: 0px;
+        }
+
+/* Fix to avoid truncating letter descenders in headings */
+h1, h2, h3, h4, h5, h6, .title {
+    overflow: visible;
+    margin: 1em 0 0.4em 0;
+}
+
+/* ============ downloads css ============= */
+
+a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 3px;
+}
+
+/* =========== external links ============= */
+p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 3px;
+}
+
+li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 3px;
+}
+
+/* ----------New content for ballot styling------*/
+
+.new-content::before {
+    white-space: pre;
+    content: "New Content\A ";
+    color: red;
+    font-weight: bold;
+}
+
+.new-content {
+    margin: 5px;
+    padding: 10px;
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.modified-content::before {
+    white-space: pre;
+    content: "Modified Content\A ";
+    color: red;
+    font-weight: bold;
+}
+
+.modified-content {
+    margin: 5px;
+    padding: 10px;
+    color: #784212;
+    background-color: #fef9e7;
+    border-color: #f9e79f;
+}
+
+.bg-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #bce8f1;
+}
+
+.bg-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #d6e9c6;
+}
+
+.bg-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.bg-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+
+.feedback {
+    color: #e0e0e0;
+    padding: 1px;
+    font-size: 80%;
+    background-size: 17px 17px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    margin-left: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    float: right; /* none or right */
+    border-radius: 6px;
+    border: 0.5px solid #ffffff;
+}
+
+    .feedback:hover {
+        color: #101010;
+        border: 0.5px solid #777;
+        background-color: #f7f7f7;
+    }
+
+    .feedback:after { /* 'feedback:before' or after for icon before or after text  */
+        content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDY0IDY0IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyB0cmFuc2Zvcm09Im1hdHJpeCguMzE4NzIgMCAwIC4zMTg3MiAtMi4xNDYxIC0yLjE3NTcpIiBmaWxsPSIjODgyMjIyIj48cGF0aCBkPSJtNTUuNzM2IDEzLjYzNi00LjM2OC00LjM2MmMtMC40NTEtMC40NTEtMS4wNDQtMC42NzctMS42MzYtMC42NzdzLTEuMTg0IDAuMjI1LTEuNjM1IDAuNjc2bC0zLjQ5NCAzLjQ4NCA3LjYzOSA3LjYyNiAzLjQ5NC0zLjQ4M2MwLjkwMy0wLjkwMiAwLjkwMy0yLjM2NSAwLTMuMjY0eiIvPjxwb2x5Z29uIHBvaW50cz0iMjEuOTIyIDM1LjM5NiAyOS41NjIgNDMuMDIzIDUwLjYwNyAyMi4wMTcgNDIuOTY3IDE0LjM5Ii8+PHBvbHlnb24gcG9pbnRzPSIyNy45MTMgNDQuNjU0IDIwLjI3MyAzNy4wMjggMTguNjQyIDQ2LjI4Ii8+PHBhdGggZD0ibTQxLjM5MyA1MC40MDNoLTI4LjgwNnYtMjguODA2aDIwLjMyOWw1LjAxLTVoLTI3LjEwNmMtMS43NzkgMC0zLjIzNCAxLjQ1NS0zLjIzNCAzLjIzNHYzMi4zMzljMCAxLjc3OSAxLjQ1NSAzLjIzNCAzLjIzNCAzLjIzNGgzMi4zMzljMS43NzkgMCAzLjIzNC0xLjQ1NSAzLjIzNC0zLjIzNHYtMjMuMTIxbC01IDQuOTkxeiIvPjwvZz48L3N2Zz4K') !important;
+    }
+
+    .feedback:before { /* 'feedback:before' or after for icon before or after text  */
+        content: none !important;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+.copy-text {
+    font-family: monospace;
+    font-weight: bold;
+}
+
+    .copy-text .btn-copy {
+        visibility: hidden;
+    }
+
+    .copy-text:hover .btn-copy {
+        visibility: visible;
+    }
+
+.btn-copy {
+    height: 14px;
+    width: 17px;
+    background-size: 22px;
+    padding: 0px 0px;
+    border-width: 0px;
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+/*************
+    *********************************** PYGMENTS MANNI CSS ************/
+
+.hll {
+    background-color: #ffffcc
+}
+/*{ background: #f0f3f3; }*/
+.c {
+    color: #999;
+}
+/* Comment */
+.err {
+    color: #AA0000;
+    background-color: #FFAAAA
+}
+/* Error */
+.k {
+    color: #006699;
+}
+/* Keyword */
+.o {
+    color: #555555
+}
+/* Operator */
+.cm {
+    color: #0099FF;
+    font-style: italic
+}
+/* Comment.Multiline */
+.cp {
+    color: #009999
+}
+/* Comment.Preproc */
+.c1 {
+    color: #999;
+}
+/* Comment.Single */
+.cs {
+    color: #999;
+}
+/* Comment.Special */
+.gd {
+    background-color: #FFCCCC;
+    border: 1px solid #CC0000
+}
+/* Generic.Deleted */
+.ge {
+    font-style: italic
+}
+/* Generic.Emph */
+.gr {
+    color: #FF0000
+}
+/* Generic.Error */
+.gh {
+    color: #003300;
+}
+/* Generic.Heading */
+.gi {
+    background-color: #CCFFCC;
+    border: 1px solid #00CC00
+}
+/* Generic.Inserted */
+.go {
+    color: #AAAAAA
+}
+/* Generic.Output */
+.gp {
+    color: #000099;
+}
+/* Generic.Prompt */
+.gs {
+}
+/* Generic.Strong */
+.gu {
+    color: #003300;
+}
+/* Generic.Subheading */
+.gt {
+    color: #99CC66
+}
+/* Generic.Traceback */
+.kc {
+    color: #006699;
+}
+/* Keyword.Constant */
+.kd {
+    color: #006699;
+}
+/* Keyword.Declaration */
+.kn {
+    color: #006699;
+}
+/* Keyword.Namespace */
+.kp {
+    color: #006699
+}
+/* Keyword.Pseudo */
+.kr {
+    color: #006699;
+}
+/* Keyword.Reserved */
+.kt {
+    color: #007788;
+}
+/* Keyword.Type */
+.m {
+    color: #FF6600
+}
+/* Literal.Number */
+.s {
+    color: #d44950
+}
+/* Literal.String */
+.na {
+    color: #4f9fcf
+}
+/* Name.Attribute */
+.nb {
+    color: #336666
+}
+/* Name.Builtin */
+.nc {
+    color: #00AA88;
+}
+/* Name.Class */
+.no {
+    color: #336600
+}
+/* Name.Constant */
+.nd {
+    color: #9999FF
+}
+/* Name.Decorator */
+.ni {
+    color: #999999;
+}
+/* Name.Entity */
+.ne {
+    color: #CC0000;
+}
+/* Name.Exception */
+.nf {
+    color: #CC00FF
+}
+/* Name.Function */
+.nl {
+    color: #9999FF
+}
+/* Name.Label */
+.nn {
+    color: #00CCFF;
+}
+/* Name.Namespace */
+.nt {
+    color: #2f6f9f;
+}
+/* Name.Tag */
+.nv {
+    color: #003333
+}
+/* Name.Variable */
+.ow {
+    color: #000000;
+}
+/* Operator.Word */
+.w {
+    color: #bbbbbb
+}
+/* Text.Whitespace */
+.mf {
+    color: #FF6600
+}
+/* Literal.Number.Float */
+.mh {
+    color: #FF6600
+}
+/* Literal.Number.Hex */
+.mi {
+    color: #FF6600
+}
+/* Literal.Number.Integer */
+.mo {
+    color: #FF6600
+}
+/* Literal.Number.Oct */
+.sb {
+    color: #CC3300
+}
+/* Literal.String.Backtick */
+.sc {
+    color: #CC3300
+}
+/* Literal.String.Char */
+.sd {
+    color: #CC3300;
+    font-style: italic
+}
+/* Literal.String.Doc */
+.s2 {
+    color: #CC3300
+}
+/* Literal.String.Double */
+.se {
+    color: #CC3300;
+}
+/* Literal.String.Escape */
+.sh {
+    color: #CC3300
+}
+/* Literal.String.Heredoc */
+.si {
+    color: #AA0000
+}
+/* Literal.String.Interpol */
+.sx {
+    color: #CC3300
+}
+/* Literal.String.Other */
+.sr {
+    color: #33AAAA
+}
+/* Literal.String.Regex */
+.s1 {
+    color: #CC3300
+}
+/* Literal.String.Single */
+.ss {
+    color: #FFCC33
+}
+/* Literal.String.Symbol */
+.bp {
+    color: #336666
+}
+/* Name.Builtin.Pseudo */
+.vc {
+    color: #003333
+}
+/* Name.Variable.Class */
+.vg {
+    color: #003333
+}
+/* Name.Variable.Global */
+.vi {
+    color: #003333
+}
+/* Name.Variable.Instance */
+.il {
+    color: #FF6600
+}
+/* Literal.Number.Integer.Long */
+
+.css .o,
+.css .o + .nt,
+.css .nt + .nt {
+    color: #999;
+}
+
+
+
+
+
+
+
+/*************
+    *********************************** HL7 CSS ************/
+
+/* Product families should override the following colors with family-specific colors */
+:root {
+    --navbar-bg-color: #505050; /* 2. Header container color */
+    --footer-bg-color: #707070; /* 3. Footer background color*/
+    --footer-container-bg-color: #505050; /* 4. Footer container color */
+    --btn-hover-color: #808080; /* 6. Menu button hover color */
+}
+
+/* Generic settings common to all HL7 IGs */
+:root {
+    --stripe-bg-color: #999999; /* 5. Header strip color */
+    --btn-active-color: #da0c23; /* 7. Menu button active color */
+    --btn-text-color: #e6e6e6; /* 8. Menu button text color */
+    --stu-note-background-color: #fff2ff; /* 19. (STU) Note box background color */
+    --stu-note-border-left-color: #ffa0ff; /* 20. (STU) Note box border color */
+}
+
+#hl7-nav {
+    line-height: 50px;
+    float: left;
+    margin-top: 4px;
+}
+
+    #hl7-nav a {
+        color: inherit;
+    }
+
+#hl7-logo {
+    float: left;
+    margin-left: 6px;
+}
+
+#hl7-search {
+    line-height: 50px;
+    float: right;
+    margin-top: 4px;
+    color: maroon;
+}
+
+    #hl7-search a {
+        color: inherit;
+    }
+
+#project-nav {
+    line-height: 50px;
+    float: left;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: #808080;
+}
+
+#project-logo {
+    float: left;
+    margin-left: 3px;
+}
+
+/* ----------note-to-balloters styling------*/
+
+.note-to-balloters::before {
+    white-space: pre;
+    content: "Note To Balloters\A ";
+    #background-color: yellow;
+    color: red;
+    font-weight: bold;
+}
+
+.note-to-balloters, .stu-note {
+    margin: 5px;
+    padding: 10px;
+    border-left-style: solid;
+}
+
+    .stu-note::before {
+        white-space: pre;
+        content: "STU Note\A ";
+        #background-color: yellow;
+        color: red;
+        font-weight: bold;
+    }
+
+
+/*************
+    *********************************** FHIR-IG CSS ************/
+
+/* FHIR family-specific colors */
+:root {
+    --navbar-bg-color: #ad1f2f; /* 2. Header container color */
+    --footer-container-bg-color: #ad1f2f; /* 4. Footer container color */
+    --btn-hover-color: #790713; /* 6. Menu button hover color */
+}
+
+/*************
+    *********************************** SIMPLIFIER CUSTOM CSS ************/
+
+body, html {
+    height: 100%;
+    position: relative;
+}
+
+#preview-content {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#segment-content {
+    overflow: hidden;
+    position: relative;
+    min-height: calc(100% - 206px);
+}
+
+.breadcrumb {
+    margin-top: 0px;
+}
+
+.breadcrumb li {
+    margin-bottom: 0px;
+}
+
+.markdown-toc ul {
+    margin: 0px !important;
+}
+
+.nav .nav-tabs {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.breadcrumb li.active {
+    font-weight: bold;
+    color: #333333;
+}
+
+ul {
+    margin: 0px;
+}
+
+.collapse.navbar-collapse {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+@media screen and (max-width: 768px) {
+    .collapse.navbar-collapse:not(.in) {
+        display: none !important;
+    }
+
+    .collapse.navbar-collapse ul.navbar-nav {
+        margin-top: 38px;
+    }
+}
+
+
+/* Guide data tables (.tg) — shared by data-mapping and sponsor-initiated pages */
+.tg {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-w98d{background-color:#156082;color:#FFF;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-zzem{color:#467886;text-align:left;vertical-align:top}
+.tg .tg-ktyi{background-color:#FFF;text-align:left;vertical-align:top}
+/* home page tables */
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-yd0e{color:#467886;text-align:left;vertical-align:middle}
+.tg .tg-uozz{color:#F00;text-align:left;vertical-align:middle}
+.tg .tg-fapl{color:#F00;text-align:left;vertical-align:middle}
+.tg .tg-xf3r{background-color:#BFBFBF;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-xxp7{font-style:italic;font-weight:bold;text-align:center;vertical-align:middle}
+/* bh_to_fhir_examples / bh_to_fhir_profiles tables */
+.tg .tg-yf6x{background-color:#ffffff;color:#467886;text-align:left;text-decoration:underline;vertical-align:top}
+.tg .tg-ycr8{background-color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-2c4j{background-color:#ffffff;color:#06C;text-align:left;vertical-align:top}
+.tg .tg-2oxb{background-color:#ffffff;color:#467886;text-align:left;vertical-align:top}
+.tg .tg-yk8o{color:#467886;text-align:left;text-decoration:underline;vertical-align:top}
+.tg .tg-7zrl{text-align:left;vertical-align:bottom}
+.tg .tg-uxzt{color:#242424;text-align:left;vertical-align:bottom}
+.tg .tg-6rn5{background-color:#FFF;color:#467886;text-align:left;vertical-align:top}
+
+/* Example query table (sponsor-initiated): fixed layout so long query URLs wrap */
+.tg-queries{table-layout:fixed;width:100%;}
+.tg-queries thead th:first-child{width:20%;}
+.tg-queries .tg-code{text-align:left;vertical-align:top;}
+.tg-queries .tg-code code{display:block;background-color:#f4f6f8;border:1px solid #d6dde3;border-left:3px solid #156082;
+  border-radius:4px;padding:8px 10px;margin:3px 0;font-family:Consolas,Monaco,monospace;font-size:13px;
+  color:#0b3d52;white-space:normal;word-break:break-all;line-height:1.5}
+.tg-queries .tg-code .verb{color:#156082;font-weight:bold}

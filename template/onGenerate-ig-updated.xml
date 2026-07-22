@@ -1,40 +1,48 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-   <id value="fhir.astp.bhp"/>
+   <id value="fhir.onc.bhp"/>
    <text>
       <status value="generated"/>
       <div xmlns="http://www.w3.org/1999/xhtml">
          <p class="res-header-id">
-            <b>Generated Narrative: ImplementationGuide fhir.astp.bhp</b>
+            <b>Generated Narrative: ImplementationGuide fhir.onc.bhp</b>
          </p>
-         <a name="fhir.astp.bhp"> </a>
-         <a name="hcfhir.astp.bhp"> </a>
-         <h2>USBehavioralHealthProfiles</h2>
+         <a name="fhir.onc.bhp"> </a>
+         <a name="hcfhir.onc.bhp"> </a>
+         <h2>FhirGuidesOncBhp</h2>
          <p>The official URL for this implementation guide is: </p>
-         <pre>http://fhir.org/guides/astp/bhp/ImplementationGuide/fhir.astp.bhp</pre>
+         <pre>http://fhir.org/guides/onc/bhp/ImplementationGuide/fhir.onc.bhp</pre>
+         <div>
+            <p>US Behavioral Health Profiles Implementation Guide</p>
+         </div>
       </div>
    </text>
-   <url value="http://fhir.org/guides/astp/bhp/ImplementationGuide/fhir.astp.bhp"/>
+   <url value="http://fhir.org/guides/onc/bhp/ImplementationGuide/fhir.onc.bhp"/>
    <version value="0.1.0"/>
-   <name value="USBehavioralHealthProfiles"/>
+   <name value="FhirGuidesOncBhp"/>
    <title value="US Behavioral Health Profiles Implementation Guide"/>
    <status value="active"/>
-   <date value="2025-07-21T11:42:43-04:00"/>
-   <publisher value="ASTP / BHIT"/>
+   <date value="2026-07-22T09:45:51+02:00"/>
+   <publisher value="ONC"/>
    <contact>
+      <name value="ONC"/>
       <telecom>
          <system value="url"/>
          <value value="https://www.healthit.gov/"/>
       </telecom>
+      <telecom>
+         <system value="email"/>
+         <value value="info@healthit.gov"/>
+      </telecom>
    </contact>
+   <description value="US Behavioral Health Profiles Implementation Guide"/>
    <jurisdiction>
       <coding>
          <system value="urn:iso:std:iso:3166"/>
          <code value="US"/>
          <display value="United States of America"/>
       </coding>
-      <text value="USA"/>
    </jurisdiction>
-   <packageId value="fhir.astp.bhp"/>
+   <packageId value="fhir.onc.bhp"/>
    <license value="CC0-1.0"/>
    <fhirVersion value="4.0.1"/>
    <dependsOn id="hl7tx">
@@ -43,7 +51,7 @@
       </extension>
       <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
       <packageId value="hl7.terminology.r4"/>
-      <version value="6.5.0"/>
+      <version value="7.2.0"/>
    </dependsOn>
    <dependsOn id="hl7ext">
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -51,46 +59,30 @@
       </extension>
       <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
       <packageId value="hl7.fhir.uv.extensions.r4"/>
-      <version value="5.2.0"/>
+      <version value="5.3.0"/>
    </dependsOn>
-   <dependsOn id="hl7fhiruscore">
-      <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core#6.1.0"/>
+   <dependsOn id="hl7_fhir_us_core">
+      <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
       <packageId value="hl7.fhir.us.core"/>
       <version value="6.1.0"/>
    </dependsOn>
-   <dependsOn id="hl7fhirussdohcc">
-      <uri value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/hl7.fhir.us.sdoh-clinicalcare#2.3.0"/>
+   <dependsOn id="hl7_fhir_us_sdoh_clinicalcare">
+      <uri value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/hl7.fhir.us.sdoh-clinicalcare"/>
       <packageId value="hl7.fhir.us.sdoh-clinicalcare"/>
       <version value="2.3.0"/>
    </dependsOn>
-   <dependsOn id="militaryservice">
-      <uri value="http://hl7.org/fhir/us/military-service/ImplementationGuide/hl7.fhir.us.military-service#1.0.0"/>
+   <dependsOn id="hl7_fhir_us_military_service">
+      <uri value="http://hl7.org/fhir/us/military-service/ImplementationGuide/hl7.fhir.us.military-service"/>
       <packageId value="hl7.fhir.us.military-service"/>
       <version value="1.0.0"/>
    </dependsOn>
    <definition>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
-            <valueString value="apply-jurisdiction"/>
-         </extension>
-         <extension url="value">
-            <valueString value="false"/>
-         </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-         <extension url="code">
-            <valueString value="path-expansion-params"/>
-         </extension>
-         <extension url="value">
-            <valueString value="resources/parameters/expansion-parameters-bhir.xml"/>
-         </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-         <extension url="code">
             <valueString value="copyrightyear"/>
          </extension>
          <extension url="value">
-            <valueString value="2020+"/>
+            <valueString value="2026+"/>
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -98,7 +90,15 @@
             <valueString value="releaselabel"/>
          </extension>
          <extension url="value">
-            <valueString value="CI Build"/>
+            <valueString value="trial-use"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-expansion-params"/>
+         </extension>
+         <extension url="value">
+            <valueString value="Parameters-expansion-parameters-bhir.json"/>
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -106,7 +106,31 @@
             <valueString value="pin-canonicals"/>
          </extension>
          <extension url="value">
-            <valueString value="pin-multiples"/>
+            <valueString value="pin-all"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="display-warnings"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="no-cibuild-issues"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="suppress-mappings"/>
+         </extension>
+         <extension url="value">
+            <valueString value="*"/>
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -170,7 +194,7 @@
             <valueString value="path-history"/>
          </extension>
          <extension url="value">
-            <valueString value="http://fhir.org/guides/astp/bhp/history.html"/>
+            <valueString value="http://fhir.org/guides/onc/bhp/history.html"/>
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -208,6 +232,14 @@
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
          <extension url="code">
             <valueString value="apply-copyright"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-jurisdiction"/>
          </extension>
          <extension url="value">
             <valueString value="true"/>
@@ -285,37 +317,183 @@
             <valueString value="true"/>
          </extension>
       </extension>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-         <valueCode value="hl7.fhir.uv.tools.r4#0.5.0"/>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters">
+         <valueReference>
+            <reference value="Parameters/expansion-parameters"/>
+         </valueReference>
       </extension>
-      <grouping id="profiles">
-         <name value="Profiles"/>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+         <valueCode value="hl7.fhir.uv.tools.r4#1.1.2"/>
+      </extension>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <grouping id="-str-profile">
+         <name value="Structures: Resource Profiles"/>
+         <description value="These define constraints on FHIR resources for systems conforming to this implementation guide."/>
       </grouping>
-      <grouping id="tx">
-         <name value="Terminology"/>
+      
+      <grouping id="-str-extension">
+         <name value="Structures: Extension Definitions"/>
+         <description value="These define constraints on FHIR data types for systems conforming to this implementation guide."/>
       </grouping>
-      <grouping id="examples">
-         <name value="Examples"/>
+      <grouping id="-term-valueset">
+         <name value="Terminology: Value Sets"/>
+         <description value="These define sets of codes used by systems conforming to this implementation guide."/>
       </grouping>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-mental-health-clinical-notes.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/mental-health-clinical-notes"/>
-            <display value="Behavioral Health DocumentReference"/>
-         </reference>
-         <name value="Mental Health Clinical Notes Profile"/>
-         <description value="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="profiles"/>
-      </resource>
+      <grouping id="-term-codesystem">
+         <name value="Terminology: Code Systems"/>
+         <description value="These define new code systems used by systems conforming to this implementation guide."/>
+      </grouping>
+      
+      
+      
+      
+      
+      
+      <grouping id="-ex-example">
+         <name value="Example: Example Instances"/>
+         <description value="These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like."/>
+      </grouping>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
             <valueInteger value="999999999"/>
@@ -328,12 +506,29 @@
          </extension>
          <reference>
             <reference value="StructureDefinition/bh-grant-info"/>
-            <display value="Grant Information Observation"/>
          </reference>
-         <name value="Grant Information Observation Profile"/>
+         <name value="Behavioral Health Grant Funding Information"/>
          <description value="This profile defines the structure and terminology for Observations related to Program ID, number, and funding type. Feedback is requested throughout this profile, specifically do standard concepts exist for .category, .code, and .value[x]? Also, use of a complex extension to represent both grant number and program ID."/>
          <exampleBoolean value="false"/>
-         <groupingId value="profiles"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-mental-health-clinical-notes.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/mental-health-clinical-notes"/>
+         </reference>
+         <name value="Mental Health Clinical Notes"/>
+         <description value="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
@@ -347,31 +542,11 @@
          </extension>
          <reference>
             <reference value="StructureDefinition/program-info"/>
-            <display value="Grant Program ID and Number Extension"/>
          </reference>
-         <name value="Grant Program ID and Number Extension"/>
+         <name value="Grant Program ID and Number"/>
          <description value="This complex extension defines the representation of Grant Program ID as well as grant number."/>
          <exampleBoolean value="false"/>
-         <groupingId value="profiles"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ValueSet"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-mental-health-clinical-note-types.html"/>
-         </extension>
-         <reference>
-            <reference value="ValueSet/mental-health-clinical-note-types"/>
-            <display value="Behavioral Health Clinical Note Types"/>
-         </reference>
-         <name value="Mental Health Clinical Notes Profile"/>
-         <description value="This ValueSet defines the LOINC codes for Mental Health Clinical Note types."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="tx"/>
+         <groupingId value="-str-extension"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
@@ -385,12 +560,29 @@
          </extension>
          <reference>
             <reference value="ValueSet/bh-funding-types"/>
-            <display value="Behavioral Health Program Funding Types"/>
          </reference>
          <name value="Behavioral Health Program Funding Types"/>
          <description value="This ValueSet defines coded concepts pertaining to a Behavioral Health program/grant."/>
          <exampleBoolean value="false"/>
-         <groupingId value="tx"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-mental-health-clinical-note-types.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/mental-health-clinical-note-types"/>
+         </reference>
+         <name value="Mental Health Clinical Note Types"/>
+         <description value="This ValueSet defines the LOINC codes for Mental Health Clinical Note types."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
@@ -404,1228 +596,11 @@
          </extension>
          <reference>
             <reference value="CodeSystem/bh-funding-type-codes"/>
-            <display value="Behavioral Health Program Funding Type Codes"/>
          </reference>
          <name value="Behavioral Health Program Funding Type Codes"/>
          <description value="This CodeSystem defines coded concepts pertaining to a Behavioral Health program/grant."/>
          <exampleBoolean value="false"/>
-         <groupingId value="tx"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Patient"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Patient-bh-patient-example.html"/>
-         </extension>
-         <reference>
-            <reference value="Patient/bh-patient-example"/>
-            <display value="patient-example"/>
-         </reference>
-         <name value="patient-example"/>
-         <description value="Example of patient demographic information, which includes Veteran Status (missing from narrative)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Practitioner"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Practitioner-ed-physician-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Practitioner/ed-physician-example-1"/>
-            <display value="physician-example"/>
-         </reference>
-         <name value="physician-example"/>
-         <description value="Example of emergency room physician care team member"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Practitioner"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Practitioner-pcp-provider-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Practitioner/pcp-provider-example-1"/>
-            <display value="pcp-provider-example"/>
-         </reference>
-         <name value="pcp-provider-example"/>
-         <description value="Example of Primary Care Provider"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Practitioner"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Practitioner-mental-health-provider-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Practitioner/mental-health-provider-example-1"/>
-            <display value="mental-health-provider-example"/>
-         </reference>
-         <name value="mental-health-provider-example"/>
-         <description value="Example of mental health provider"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="AllergyIntolerance"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="AllergyIntolerance-peanut-allergy-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="AllergyIntolerance/peanut-allergy-example-1"/>
-            <display value="peanut-allergy-example"/>
-         </reference>
-         <name value="peanut-allergy-example"/>
-         <description value="Example of patient documented peanut allergy"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="AllergyIntolerance"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="AllergyIntolerance-penicillin-allergy-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="AllergyIntolerance/penicillin-allergy-example-1"/>
-            <display value="penicillin-allergy-example"/>
-         </reference>
-         <name value="penicillin-allergy-example"/>
-         <description value="Example of patient documented penicillin allergy"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CareTeam"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CareTeam-bh-care-team-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="CareTeam/bh-care-team-example-1"/>
-            <display value="care-team-example"/>
-         </reference>
-         <name value="care-team-example"/>
-         <description value="Example of a mental health counselor as part of the care team"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Condition"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Condition-panic-attack-condition-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Condition/panic-attack-condition-example-1"/>
-            <display value="panic-attack-example"/>
-         </reference>
-         <name value="panic-attack-example"/>
-         <description value="Example of patients panic attack condition"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Condition"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Condition-chest-pain-condition-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Condition/chest-pain-condition-example-1"/>
-            <display value="chest-pain-example"/>
-         </reference>
-         <name value="chest-pain-example"/>
-         <description value="Example of patient chest pain"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Condition"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Condition-depression-condition-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Condition/depression-condition-example-1"/>
-            <display value="depression-example"/>
-         </reference>
-         <name value="depression-example"/>
-         <description value="Example of patient depression"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Condition"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Condition-diabetes-condition-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Condition/diabetes-condition-example-1"/>
-            <display value="diabetes-example"/>
-         </reference>
-         <name value="diabetes-example"/>
-         <description value="Example of patient diabetes"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Condition"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Condition-grief-condition-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Condition/grief-condition-example-1"/>
-            <display value="grief-example"/>
-         </reference>
-         <name value="grief-example"/>
-         <description value="Example of patient history of grief"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Condition"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Condition-substance-abuse-condition-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Condition/substance-abuse-condition-example-1"/>
-            <display value="substance-abuse-example"/>
-         </reference>
-         <name value="substance-abuse-example"/>
-         <description value="Example of patient history of substance use"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Consent"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Consent-SDOHCC-ConsentInformationDisclosure-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Consent/SDOHCC-ConsentInformationDisclosure-example-1"/>
-            <display value="consent-disclosure-example"/>
-         </reference>
-         <name value="consent-disclosure-example"/>
-         <description value="Example of patient HIPAA consent form for mental health providers (custodian). The consent (PDF form) content is encoded (base64)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Coverage"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Coverage-medicaid-coverage-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Coverage/medicaid-coverage-example-1"/>
-            <display value="medicaid-coverage-example"/>
-         </reference>
-         <name value="medicaid-coverage-example"/>
-         <description value="Example of patient Medicaid coverage"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Organization"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Organization-fl-medicaid-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Organization/fl-medicaid-example-1"/>
-            <display value="fl-medicaid-example"/>
-         </reference>
-         <name value="fl-medicaid-example"/>
-         <description value="Example of Florida Medicaid (organization) - MyACCESS"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DiagnosticReport"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DiagnosticReport-ekg-impression-report-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="DiagnosticReport/ekg-impression-report-example-1"/>
-            <display value="ekg-report-example"/>
-         </reference>
-         <name value="ekg-report-example"/>
-         <description value="Example of patient ekg impression"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DocumentReference"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DocumentReference-mental-health-discharge-summary-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="DocumentReference/mental-health-discharge-summary-example-1"/>
-            <display value="mental-health-discharge-example"/>
-         </reference>
-         <name value="mental-health-discharge-example"/>
-         <description value="Example of a mental health dsicharge summary note. Clinical details of note content are encoded (base64)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DocumentReference"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DocumentReference-mental-health-consult-note-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="DocumentReference/mental-health-consult-note-example-1"/>
-            <display value="mental-health-consult-example"/>
-         </reference>
-         <name value="mental-health-consult-example"/>
-         <description value="Example of a mental health consult note. Clinical details of note content are encoded (base64)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DocumentReference"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DocumentReference-mental-health-hx-physical-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="DocumentReference/mental-health-hx-physical-example-1"/>
-            <display value="mental-health-physical-note-example"/>
-         </reference>
-         <name value="mental-health-physical-note-example"/>
-         <description value="Example of a mental health history and physical note. Clinical details of note content are encoded (base64)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DocumentReference"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DocumentReference-mental-health-procedure-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="DocumentReference/mental-health-procedure-example-1"/>
-            <display value="mental-health-procedure-note-example"/>
-         </reference>
-         <name value="mental-health-procedure-note-example"/>
-         <description value="Example of a mental health procedure note. Clinical details of note content are encoded (base64)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DocumentReference"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DocumentReference-mental-health-progress-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="DocumentReference/mental-health-progress-example-1"/>
-            <display value="mental-health-progress-note-example"/>
-         </reference>
-         <name value="mental-health-progress-note-example"/>
-         <description value="Example of a mental health progress note. Clinical details of note content are encoded (base64)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Encounter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Encounter-ed-encounter-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Encounter/ed-encounter-example-1"/>
-            <display value="ed-encounter-example"/>
-         </reference>
-         <name value="ed-encounter-example"/>
-         <description value="Example of patient emergency room encounter"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Encounter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Encounter-obs-encounter-example-2.html"/>
-         </extension>
-         <reference>
-            <reference value="Encounter/obs-encounter-example-2"/>
-            <display value="obs-encounter-example"/>
-         </reference>
-         <name value="obs-encounter-example"/>
-         <description value="Example of patient observation encounter"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Encounter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Encounter-discharge-encounter-example-3.html"/>
-         </extension>
-         <reference>
-            <reference value="Encounter/discharge-encounter-example-3"/>
-            <display value="discharge-encounter-example"/>
-         </reference>
-         <name value="discharge-encounter-example"/>
-         <description value="Example of patient discharge encounter"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Encounter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Encounter-pcp-encounter-example-4.html"/>
-         </extension>
-         <reference>
-            <reference value="Encounter/pcp-encounter-example-4"/>
-            <display value="pcp-encounter-example"/>
-         </reference>
-         <name value="pcp-encounter-example"/>
-         <description value="Example of patient ambulatory encounter with primary care provider"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Goal"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Goal-food-insecurity-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Goal/food-insecurity-example-1"/>
-            <display value="food-insecurity-example"/>
-         </reference>
-         <name value="food-insecurity-example"/>
-         <description value="Example of food insecurity (goal)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Goal"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Goal-housing-insecurity-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Goal/housing-insecurity-example-1"/>
-            <display value="housing-insecurity-example"/>
-         </reference>
-         <name value="housing-insecurity-example"/>
-         <description value="Example of housing insecurity (goal)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Goal"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Goal-transportation-insecurity-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Goal/transportation-insecurity-example-1"/>
-            <display value="transportation-insecurity-example"/>
-         </reference>
-         <name value="transportation-insecurity-example"/>
-         <description value="Example of transportation insecurity (goal)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Goal"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Goal-social-connection-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Goal/social-connection-example-1"/>
-            <display value="social-connection-example"/>
-         </reference>
-         <name value="social-connection-example"/>
-         <description value="Example of an improving patient goal improve toward adequate social participation"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Immunization"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Immunization-flu-vaccine-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Immunization/flu-vaccine-example-1"/>
-            <display value="flu-vaccine-example"/>
-         </reference>
-         <name value="flu-vaccine-example"/>
-         <description value="Example of patient flu vaccine (immunization)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Location"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Location-ed-location-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Location/ed-location-example-1"/>
-            <display value="ed-location-example"/>
-         </reference>
-         <name value="ed-location-example"/>
-         <description value="Example of emergency dept. location"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Location"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Location-obs-location-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Location/obs-location-example-1"/>
-            <display value="obs-location-example"/>
-         </reference>
-         <name value="obs-location-example"/>
-         <description value="Example of patient observation"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Medication"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Medication-benzo-medication-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Medication/benzo-medication-example-1"/>
-            <display value="benzo-medication-example"/>
-         </reference>
-         <name value="benzo-medication-example"/>
-         <description value="Example of patient benzo medication"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="MedicationDispense"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="MedicationDispense-bupropion-dispense-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="MedicationDispense/bupropion-dispense-example-1"/>
-            <display value="bupropion-dispense-example"/>
-         </reference>
-         <name value="bupropion-dispense-example"/>
-         <description value="Example of patient bupropion dispensed from a community health center pharmacy"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="MedicationRequest"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="MedicationRequest-benzo-order-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="MedicationRequest/benzo-order-example-1"/>
-            <display value="benzo-order-example"/>
-         </reference>
-         <name value="benzo-order-example"/>
-         <description value="Example of patient benzo medication order from ED setting"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="MedicationRequest"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="MedicationRequest-metformin-discharge-med-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="MedicationRequest/metformin-discharge-med-example-1"/>
-            <display value="metformin-discharge-example"/>
-         </reference>
-         <name value="metformin-discharge-example"/>
-         <description value="Example of discharge medication order of metformin"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="MedicationRequest"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="MedicationRequest-ativan-discharge-med-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="MedicationRequest/ativan-discharge-med-example-1"/>
-            <display value="ativan-discharge-example"/>
-         </reference>
-         <name value="ativan-discharge-example"/>
-         <description value="Example of discharge medication order of ativan"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="MedicationRequest"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="MedicationRequest-paroxetine-discharge-med-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="MedicationRequest/paroxetine-discharge-med-example-1"/>
-            <display value="paroxetine-discharge-example"/>
-         </reference>
-         <name value="paroxetine-discharge-example"/>
-         <description value="Example of discharge medication order of paroxetine. This example includes a US Core 7.0.0 MedicationAdherence extension"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="MedicationRequest"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="MedicationRequest-bupropion-discharge-med-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="MedicationRequest/bupropion-discharge-med-example-1"/>
-            <display value="bupropion-discharge-example"/>
-         </reference>
-         <name value="bupropion-discharge-example"/>
-         <description value="Example of discharge medication order of bupropion"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-bh-grant-info-observation-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/bh-grant-info-observation-example-1"/>
-            <display value="bh-grant-info-obs-example"/>
-         </reference>
-         <name value="bh-grant-info-obs-example"/>
-         <description value="Example of patient observation"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-average-blood-pressure-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/average-blood-pressure-example-1"/>
-            <display value="average-bp-example"/>
-         </reference>
-         <name value="average-bp-example"/>
-         <description value="Example of patient average blood pressure"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-ekg-observation-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/ekg-observation-example-1"/>
-            <display value="ekg-obs-example"/>
-         </reference>
-         <name value="ekg-obs-example"/>
-         <description value="Example of patient ekg test result"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-no-morphine-preference-observation-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/no-morphine-preference-observation-example-1"/>
-            <display value="no-morphine-preference-obs-example"/>
-         </reference>
-         <name value="no-morphine-preference-obs-example"/>
-         <description value="Example of patient treatment preference for no morphine"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-non-smoker-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/non-smoker-example-1"/>
-            <display value="non-smoker-example"/>
-         </reference>
-         <name value="non-smoker-example"/>
-         <description value="Example of patient smoking status"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-provider-preference-observation-example-2.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/provider-preference-observation-example-2"/>
-            <display value="provider-preference-obs-example"/>
-         </reference>
-         <name value="provider-preference-obs-example"/>
-         <description value="Example of patient preference for healthcare professiona"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="QuestionnaireResponse"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="QuestionnaireResponse-barthel-index-functional-status-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="QuestionnaireResponse/barthel-index-functional-status-example-1"/>
-            <display value="barthel-index-example"/>
-         </reference>
-         <name value="barthel-index-example"/>
-         <description value="Example of patient barthel index functional status (panel)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-cognitive-status-observation-example-3.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/cognitive-status-observation-example-3"/>
-            <display value="Mini Mental State Examination [MMSE]"/>
-         </reference>
-         <name value="Mini-Mental State Examination [MMSE]"/>
-         <description value="Example of a mental/cognitive health status assessment/screening"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-disability-status-observation-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/disability-status-observation-example-1"/>
-            <display value="Comprehensive Universal Behavior Health Screen (CUBS)©"/>
-         </reference>
-         <name value="Comprehensive Universal Behavior Health Screen (CUBS)©"/>
-         <description value="Example of disability status health status assessment/screening"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-pregnancy-status-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/pregnancy-status-example-1"/>
-            <display value="pregnancy-example"/>
-         </reference>
-         <name value="pregnancy-example"/>
-         <description value="Example of patient pregnancy status"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-temperature-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/temperature-example-1"/>
-            <display value="temperature-example"/>
-         </reference>
-         <name value="temperature-example"/>
-         <description value="Example of patient body temperature"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-height-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/height-example-1"/>
-            <display value="height-example"/>
-         </reference>
-         <name value="height-example"/>
-         <description value="Example of patient body height"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-blood-pressure-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/blood-pressure-example-1"/>
-            <display value="blood-pressure-example"/>
-         </reference>
-         <name value="blood-pressure-example"/>
-         <description value="Example of patient systolic and diastolic blood pressure measurements"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-heart-rate-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/heart-rate-example-1"/>
-            <display value="heart-rate-example"/>
-         </reference>
-         <name value="heart-rate-example"/>
-         <description value="Example of patient heart rate"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-oxygen-saturation-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/oxygen-saturation-example-1"/>
-            <display value="oxygen-saturation-example"/>
-         </reference>
-         <name value="oxygen-saturation-example"/>
-         <description value="Example of patient oxygen saturation"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-respiratory-rate-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/respiratory-rate-example-1"/>
-            <display value="respiratory-rate-example"/>
-         </reference>
-         <name value="respiratory-rate-example"/>
-         <description value="Example of patient respiratory rate"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-weight-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/weight-example-1"/>
-            <display value="weight-example"/>
-         </reference>
-         <name value="weight-example"/>
-         <description value="Example of patient's weight"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-anxiety-assessment-observation-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/anxiety-assessment-observation-example-1"/>
-            <display value="anxiety-assessment-obs-example"/>
-         </reference>
-         <name value="anxiety-assessment-obs-example"/>
-         <description value="Example of patient anxiety assessment/screening"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-hemoglobin-a1c-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/hemoglobin-a1c-example-1"/>
-            <display value="hemoglobin-a1c-example"/>
-         </reference>
-         <name value="hemoglobin-a1c-example"/>
-         <description value="Example of Hemoglobin A1c test result"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Organization"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Organization-mh-provider-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="Organization/mh-provider-example-1"/>
-            <display value="mh-provider-example"/>
-         </reference>
-         <name value="mh-provider-example"/>
-         <description value="Example of patient mental health provider"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="QuestionnaireResponse"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="QuestionnaireResponse-BHP-QuestionnaireResponsePRAPAREExample-1.html"/>
-         </extension>
-         <reference>
-            <reference value="QuestionnaireResponse/BHP-QuestionnaireResponsePRAPAREExample-1"/>
-            <display value="prapare-questionnaireresponse-example"/>
-         </reference>
-         <name value="prapare-questionnaireresponse-example"/>
-         <description value="Example of SDOH assessment/screening"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="QuestionnaireResponse"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="QuestionnaireResponse-phq-9-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="QuestionnaireResponse/phq-9-example-1"/>
-            <display value="Patient Health Questionnaire-9 (PHQ-9)"/>
-         </reference>
-         <name value="Patient Health Questionnaire-9 (PHQ-9)"/>
-         <description value="Example of a depression assessment/screening"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="QuestionnaireResponse"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="QuestionnaireResponse-C-SSRS-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="QuestionnaireResponse/C-SSRS-example-1"/>
-            <display value="Columbia-Suicide Severity Rating Scale (C-SSRS)"/>
-         </reference>
-         <name value="Columbia-Suicide Severity Rating Scale (C-SSRS)"/>
-         <description value="Example of suicide risk assessment/screening"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="QuestionnaireResponse"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="QuestionnaireResponse-hark-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="QuestionnaireResponse/hark-example-1"/>
-            <display value="Humiliation, Afraid, Rape, and Kick questionnaire (HARK)"/>
-         </reference>
-         <name value="Humiliation, Afraid, Rape, and Kick questionnaire (HARK)"/>
-         <description value="Example of interpersonal violence assessment/screening"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
+         <groupingId value="-term-codesystem"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
@@ -1639,31 +614,11 @@
          </extension>
          <reference>
             <reference value="QuestionnaireResponse/ace-example-1"/>
-            <display value="Adverse Childhood Experiences (ACEs) Assessment"/>
          </reference>
          <name value="Adverse Childhood Experiences (ACEs) Assessment"/>
          <description value="Example of a mental trauma or PTSD assessment/screening"/>
          <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="RelatedPerson"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="RelatedPerson-adult-child-relatedperson-example-1.html"/>
-         </extension>
-         <reference>
-            <reference value="RelatedPerson/adult-child-relatedperson-example-1"/>
-            <display value="adult-child-relatedperson-example"/>
-         </reference>
-         <name value="adult-child-relatedperson-example"/>
-         <description value="Example of patient related person"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
@@ -1677,50 +632,119 @@
          </extension>
          <reference>
             <reference value="QuestionnaireResponse/alcohol-use-identification-test-1"/>
-            <display value="Alcohol Use Disorder Identification Test - Consumption (AUDIT-C)"/>
          </reference>
          <name value="Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]"/>
          <description value="Example of patient alcohol abuse health status assessment/screening"/>
          <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
             <valueInteger value="999999999"/>
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ServiceRequest"/>
+            <valueString value="QuestionnaireResponse"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ServiceRequest-ServiceRequest-peer-mentoring-example-1.html"/>
+            <valueUri value="QuestionnaireResponse-C-SSRS-example-1.html"/>
          </extension>
          <reference>
-            <reference value="ServiceRequest/ServiceRequest-peer-mentoring-example-1"/>
-            <display value="sdoh-referral-example"/>
+            <reference value="QuestionnaireResponse/C-SSRS-example-1"/>
          </reference>
-         <name value="sdoh-referral-example"/>
-         <description value="Example of patient referral to a peer coaching program"/>
+         <name value="Columbia-Suicide Severity Rating Scale (C-SSRS)"/>
+         <description value="Example of suicide risk assessment/screening"/>
          <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
             <valueInteger value="999999999"/>
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Procedure"/>
+            <valueString value="Observation"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Procedure-bh-prevention-education-program-example-1.html"/>
+            <valueUri value="Observation-disability-status-observation-example-1.html"/>
          </extension>
          <reference>
-            <reference value="Procedure/bh-prevention-education-program-example-1"/>
-            <display value="bh-prevention-edu-example"/>
+            <reference value="Observation/disability-status-observation-example-1"/>
          </reference>
-         <name value="bh-prevention-edu-example"/>
-         <description value="Example of education service provided to patient"/>
+         <name value="Comprehensive Universal Behavior Health Screen (CUBS)©"/>
+         <description value="Example of disability status health status assessment/screening"/>
          <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="QuestionnaireResponse"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="QuestionnaireResponse-hark-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="QuestionnaireResponse/hark-example-1"/>
+         </reference>
+         <name value="Humiliation, Afraid, Rape, and Kick questionnaire (HARK)"/>
+         <description value="Example of interpersonal violence assessment/screening"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-cognitive-status-observation-example-3.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/cognitive-status-observation-example-3"/>
+         </reference>
+         <name value="Mini-Mental State Examination [MMSE]"/>
+         <description value="Example of a mental/cognitive health status assessment/screening"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="QuestionnaireResponse"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="QuestionnaireResponse-phq-9-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="QuestionnaireResponse/phq-9-example-1"/>
+         </reference>
+         <name value="Patient Health Questionnaire-9 (PHQ-9)"/>
+         <description value="Example of a depression assessment/screening"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="RelatedPerson"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="RelatedPerson-adult-child-relatedperson-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="RelatedPerson/adult-child-relatedperson-example-1"/>
+         </reference>
+         <name value="adult-child-relatedperson-example"/>
+         <description value="Example of patient related person"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
@@ -1734,12 +758,495 @@
          </extension>
          <reference>
             <reference value="Procedure/alcohol-prevetion-education-example-1"/>
-            <display value="alcohol-prevention-edu-example"/>
          </reference>
          <name value="alcohol-prevention-edu-example"/>
          <description value="Example of patient alcohol cessation education"/>
          <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-anxiety-assessment-observation-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/anxiety-assessment-observation-example-1"/>
+         </reference>
+         <name value="anxiety-assessment-obs-example"/>
+         <description value="Example of patient anxiety assessment/screening"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="MedicationRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="MedicationRequest-ativan-discharge-med-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="MedicationRequest/ativan-discharge-med-example-1"/>
+         </reference>
+         <name value="ativan-discharge-example"/>
+         <description value="Example of discharge medication order of ativan"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-average-blood-pressure-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/average-blood-pressure-example-1"/>
+         </reference>
+         <name value="average-bp-example"/>
+         <description value="Example of patient average blood pressure"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="QuestionnaireResponse"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="QuestionnaireResponse-barthel-index-functional-status-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="QuestionnaireResponse/barthel-index-functional-status-example-1"/>
+         </reference>
+         <name value="barthel-index-example"/>
+         <description value="Example of patient barthel index functional status (panel)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Medication"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Medication-benzo-medication-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Medication/benzo-medication-example-1"/>
+         </reference>
+         <name value="benzo-medication-example"/>
+         <description value="Example of patient benzo medication"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="MedicationRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="MedicationRequest-benzo-order-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="MedicationRequest/benzo-order-example-1"/>
+         </reference>
+         <name value="benzo-order-example"/>
+         <description value="Example of patient benzo medication order from ED setting"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-bh-grant-info-observation-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/bh-grant-info-observation-example-1"/>
+         </reference>
+         <name value="bh-grant-info-obs-example"/>
+         <description value="Example of patient observation"/>
+         <exampleCanonical value="http://fhir.org/guides/onc/bhp/StructureDefinition/bh-grant-info|0.1.0"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Procedure"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Procedure-bh-prevention-education-program-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Procedure/bh-prevention-education-program-example-1"/>
+         </reference>
+         <name value="bh-prevention-edu-example"/>
+         <description value="Example of education service provided to patient"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-blood-pressure-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/blood-pressure-example-1"/>
+         </reference>
+         <name value="blood-pressure-example"/>
+         <description value="Example of patient systolic and diastolic blood pressure measurements"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="MedicationRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="MedicationRequest-bupropion-discharge-med-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="MedicationRequest/bupropion-discharge-med-example-1"/>
+         </reference>
+         <name value="bupropion-discharge-example"/>
+         <description value="Example of discharge medication order of bupropion"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="MedicationDispense"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="MedicationDispense-bupropion-dispense-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="MedicationDispense/bupropion-dispense-example-1"/>
+         </reference>
+         <name value="bupropion-dispense-example"/>
+         <description value="Example of patient bupropion dispensed from a community health center pharmacy"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CareTeam"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CareTeam-bh-care-team-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="CareTeam/bh-care-team-example-1"/>
+         </reference>
+         <name value="care-team-example"/>
+         <description value="Example of a mental health counselor as part of the care team"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Condition"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Condition-chest-pain-condition-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Condition/chest-pain-condition-example-1"/>
+         </reference>
+         <name value="chest-pain-example"/>
+         <description value="Example of patient chest pain"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Consent"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Consent-SDOHCC-ConsentInformationDisclosure-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Consent/SDOHCC-ConsentInformationDisclosure-example-1"/>
+         </reference>
+         <name value="consent-disclosure-example"/>
+         <description value="Example of patient HIPAA consent form for mental health providers (custodian). The consent (PDF form) content is encoded (base64)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Condition"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Condition-depression-condition-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Condition/depression-condition-example-1"/>
+         </reference>
+         <name value="depression-example"/>
+         <description value="Example of patient depression"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Condition"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Condition-diabetes-condition-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Condition/diabetes-condition-example-1"/>
+         </reference>
+         <name value="diabetes-example"/>
+         <description value="Example of patient diabetes"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Encounter"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Encounter-discharge-encounter-example-3.html"/>
+         </extension>
+         <reference>
+            <reference value="Encounter/discharge-encounter-example-3"/>
+         </reference>
+         <name value="discharge-encounter-example"/>
+         <description value="Example of patient discharge encounter"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Encounter"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Encounter-ed-encounter-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Encounter/ed-encounter-example-1"/>
+         </reference>
+         <name value="ed-encounter-example"/>
+         <description value="Example of patient emergency room encounter"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Location"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Location-ed-location-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Location/ed-location-example-1"/>
+         </reference>
+         <name value="ed-location-example"/>
+         <description value="Example of emergency dept. location"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-ekg-observation-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/ekg-observation-example-1"/>
+         </reference>
+         <name value="ekg-obs-example"/>
+         <description value="Example of patient ekg test result"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DiagnosticReport"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DiagnosticReport-ekg-impression-report-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="DiagnosticReport/ekg-impression-report-example-1"/>
+         </reference>
+         <name value="ekg-report-example"/>
+         <description value="Example of patient ekg impression"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Parameters"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Parameters-expansion-parameters-bhir.html"/>
+         </extension>
+         <reference>
+            <reference value="Parameters/expansion-parameters-bhir"/>
+         </reference>
+         <name value="expansion-parameters-bhir"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="AdverseEvent"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="AdverseEvent-fall-adverse-event-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="AdverseEvent/fall-adverse-event-example-1"/>
+         </reference>
+         <name value="fall-adverse-event-example-1"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-fl-medicaid-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/fl-medicaid-example-1"/>
+         </reference>
+         <name value="fl-medicaid-example"/>
+         <description value="Example of Florida Medicaid (organization) - MyACCESS"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Immunization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Immunization-flu-vaccine-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Immunization/flu-vaccine-example-1"/>
+         </reference>
+         <name value="flu-vaccine-example"/>
+         <description value="Example of patient flu vaccine (immunization)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Goal"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Goal-food-insecurity-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Goal/food-insecurity-example-1"/>
+         </reference>
+         <name value="food-insecurity-example"/>
+         <description value="Example of food insecurity (goal)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Condition"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Condition-grief-condition-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Condition/grief-condition-example-1"/>
+         </reference>
+         <name value="grief-example"/>
+         <description value="Example of patient history of grief"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
@@ -1753,14 +1260,681 @@
          </extension>
          <reference>
             <reference value="Procedure/harm-reduction-example-1"/>
-            <display value="harm-reduction-activities-example"/>
          </reference>
          <name value="harm-reduction-activities-example"/>
          <description value="Example of patient harm reduction program"/>
          <exampleBoolean value="true"/>
-         <groupingId value="examples"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-heart-rate-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/heart-rate-example-1"/>
+         </reference>
+         <name value="heart-rate-example"/>
+         <description value="Example of patient heart rate"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-height-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/height-example-1"/>
+         </reference>
+         <name value="height-example"/>
+         <description value="Example of patient body height"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-hemoglobin-a1c-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/hemoglobin-a1c-example-1"/>
+         </reference>
+         <name value="hemoglobin-a1c-example"/>
+         <description value="Example of Hemoglobin A1c test result"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Goal"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Goal-housing-insecurity-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Goal/housing-insecurity-example-1"/>
+         </reference>
+         <name value="housing-insecurity-example"/>
+         <description value="Example of housing insecurity (goal)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Coverage"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Coverage-medicaid-coverage-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Coverage/medicaid-coverage-example-1"/>
+         </reference>
+         <name value="medicaid-coverage-example"/>
+         <description value="Example of patient Medicaid coverage"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-mental-health-consult-note-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/mental-health-consult-note-example-1"/>
+         </reference>
+         <name value="mental-health-consult-example"/>
+         <description value="Example of a mental health consult note. Clinical details of note content are encoded (base64)"/>
+         <exampleCanonical value="http://fhir.org/guides/onc/bhp/StructureDefinition/mental-health-clinical-notes|0.1.0"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-mental-health-discharge-summary-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/mental-health-discharge-summary-example-1"/>
+         </reference>
+         <name value="mental-health-discharge-example"/>
+         <description value="Example of a mental health dsicharge summary note. Clinical details of note content are encoded (base64)"/>
+         <exampleCanonical value="http://fhir.org/guides/onc/bhp/StructureDefinition/mental-health-clinical-notes|0.1.0"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-mental-health-hx-physical-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/mental-health-hx-physical-example-1"/>
+         </reference>
+         <name value="mental-health-physical-note-example"/>
+         <description value="Example of a mental health history and physical note. Clinical details of note content are encoded (base64)"/>
+         <exampleCanonical value="http://fhir.org/guides/onc/bhp/StructureDefinition/mental-health-clinical-notes|0.1.0"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-mental-health-procedure-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/mental-health-procedure-example-1"/>
+         </reference>
+         <name value="mental-health-procedure-note-example"/>
+         <description value="Example of a mental health procedure note. Clinical details of note content are encoded (base64)"/>
+         <exampleCanonical value="http://fhir.org/guides/onc/bhp/StructureDefinition/mental-health-clinical-notes|0.1.0"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-mental-health-progress-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/mental-health-progress-example-1"/>
+         </reference>
+         <name value="mental-health-progress-note-example"/>
+         <description value="Example of a mental health progress note. Clinical details of note content are encoded (base64)"/>
+         <exampleCanonical value="http://fhir.org/guides/onc/bhp/StructureDefinition/mental-health-clinical-notes|0.1.0"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-mental-health-provider-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/mental-health-provider-example-1"/>
+         </reference>
+         <name value="mental-health-provider-example"/>
+         <description value="Example of mental health provider"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="MedicationRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="MedicationRequest-metformin-discharge-med-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="MedicationRequest/metformin-discharge-med-example-1"/>
+         </reference>
+         <name value="metformin-discharge-example"/>
+         <description value="Example of discharge medication order of metformin"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-mh-provider-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/mh-provider-example-1"/>
+         </reference>
+         <name value="mh-provider-example"/>
+         <description value="Example of patient mental health provider"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-no-morphine-preference-observation-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/no-morphine-preference-observation-example-1"/>
+         </reference>
+         <name value="no-morphine-preference-obs-example"/>
+         <description value="Example of patient treatment preference for no morphine"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-non-smoker-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/non-smoker-example-1"/>
+         </reference>
+         <name value="non-smoker-example"/>
+         <description value="Example of patient smoking status"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Encounter"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Encounter-obs-encounter-example-2.html"/>
+         </extension>
+         <reference>
+            <reference value="Encounter/obs-encounter-example-2"/>
+         </reference>
+         <name value="obs-encounter-example"/>
+         <description value="Example of patient observation encounter"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Location"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Location-obs-location-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Location/obs-location-example-1"/>
+         </reference>
+         <name value="obs-location-example"/>
+         <description value="Example of patient observation"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-oxygen-saturation-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/oxygen-saturation-example-1"/>
+         </reference>
+         <name value="oxygen-saturation-example"/>
+         <description value="Example of patient oxygen saturation"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Condition"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Condition-panic-attack-condition-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Condition/panic-attack-condition-example-1"/>
+         </reference>
+         <name value="panic-attack-example"/>
+         <description value="Example of patients panic attack condition"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="MedicationRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="MedicationRequest-paroxetine-discharge-med-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="MedicationRequest/paroxetine-discharge-med-example-1"/>
+         </reference>
+         <name value="paroxetine-discharge-example"/>
+         <description value="Example of discharge medication order of paroxetine. This example includes a US Core 7.0.0 MedicationAdherence extension"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Patient"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Patient-bh-patient-example.html"/>
+         </extension>
+         <reference>
+            <reference value="Patient/bh-patient-example"/>
+         </reference>
+         <name value="patient-example"/>
+         <description value="Example of patient demographic information, which includes Veteran Status (missing from narrative)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Encounter"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Encounter-pcp-encounter-example-4.html"/>
+         </extension>
+         <reference>
+            <reference value="Encounter/pcp-encounter-example-4"/>
+         </reference>
+         <name value="pcp-encounter-example"/>
+         <description value="Example of patient ambulatory encounter with primary care provider"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-pcp-provider-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/pcp-provider-example-1"/>
+         </reference>
+         <name value="pcp-provider-example"/>
+         <description value="Example of Primary Care Provider"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="AllergyIntolerance"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="AllergyIntolerance-peanut-allergy-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="AllergyIntolerance/peanut-allergy-example-1"/>
+         </reference>
+         <name value="peanut-allergy-example"/>
+         <description value="Example of patient documented peanut allergy"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="AllergyIntolerance"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="AllergyIntolerance-penicillin-allergy-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="AllergyIntolerance/penicillin-allergy-example-1"/>
+         </reference>
+         <name value="penicillin-allergy-example"/>
+         <description value="Example of patient documented penicillin allergy"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-ed-physician-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/ed-physician-example-1"/>
+         </reference>
+         <name value="physician-example"/>
+         <description value="Example of emergency room physician care team member"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="QuestionnaireResponse"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="QuestionnaireResponse-BHP-QuestionnaireResponsePRAPAREExample-1.html"/>
+         </extension>
+         <reference>
+            <reference value="QuestionnaireResponse/BHP-QuestionnaireResponsePRAPAREExample-1"/>
+         </reference>
+         <name value="prapare-questionnaireresponse-example"/>
+         <description value="Example of SDOH assessment/screening"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-pregnancy-status-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/pregnancy-status-example-1"/>
+         </reference>
+         <name value="pregnancy-example"/>
+         <description value="Example of patient pregnancy status"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-provider-preference-observation-example-2.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/provider-preference-observation-example-2"/>
+         </reference>
+         <name value="provider-preference-obs-example"/>
+         <description value="Example of patient preference for healthcare professiona"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-respiratory-rate-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/respiratory-rate-example-1"/>
+         </reference>
+         <name value="respiratory-rate-example"/>
+         <description value="Example of patient respiratory rate"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ServiceRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ServiceRequest-ServiceRequest-peer-mentoring-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="ServiceRequest/ServiceRequest-peer-mentoring-example-1"/>
+         </reference>
+         <name value="sdoh-referral-example"/>
+         <description value="Example of patient referral to a peer coaching program"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Goal"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Goal-social-connection-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Goal/social-connection-example-1"/>
+         </reference>
+         <name value="social-connection-example"/>
+         <description value="Example of an improving patient goal improve toward adequate social participation"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Condition"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Condition-substance-abuse-condition-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Condition/substance-abuse-condition-example-1"/>
+         </reference>
+         <name value="substance-abuse-example"/>
+         <description value="Example of patient history of substance use"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-temperature-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/temperature-example-1"/>
+         </reference>
+         <name value="temperature-example"/>
+         <description value="Example of patient body temperature"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Goal"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Goal-transportation-insecurity-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Goal/transportation-insecurity-example-1"/>
+         </reference>
+         <name value="transportation-insecurity-example"/>
+         <description value="Example of transportation insecurity (goal)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-usual-work-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/usual-work-example-1"/>
+         </reference>
+         <name value="usual-work-example-1"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-weight-example-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/weight-example-1"/>
+         </reference>
+         <name value="weight-example"/>
+         <description value="Example of patient's weight"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <page>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="toc.html"/>
+         </extension>
          <nameUrl value="toc.html"/>
          <title value="Table of Contents"/>
          <generation value="html"/>
@@ -1769,79 +1943,7 @@
                <valueUrl value="index.html"/>
             </extension>
             <nameUrl value="index.html"/>
-            <title value="Home Page"/>
-            <generation value="markdown"/>
-         </page>
-         <page>
-            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="uscdi_bh_elements.html"/>
-            </extension>
-            <nameUrl value="uscdi_bh_elements.html"/>
-            <title value="USCDI+ BH Elements"/>
-            <generation value="markdown"/>
-         </page>
-         <page>
-            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="summary_story.html"/>
-            </extension>
-            <nameUrl value="summary_story.html"/>
-            <title value="Summary Story"/>
-            <generation value="markdown"/>
-         </page>
-         <page>
-            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="full_story.html"/>
-            </extension>
-            <nameUrl value="full_story.html"/>
-            <title value="Full Use Case Story"/>
-            <generation value="markdown"/>
-         </page>
-         <page>
-            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="quick_facts.html"/>
-            </extension>
-            <nameUrl value="quick_facts.html"/>
-            <title value="Quick Facts"/>
-            <generation value="markdown"/>
-         </page>
-         <page>
-            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="bh_to_fhir_examples.html"/>
-            </extension>
-            <nameUrl value="bh_to_fhir_examples.html"/>
-            <title value="+BH to FHIR Examples"/>
-            <generation value="markdown"/>
-         </page>
-         <page>
-            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="bh_to_fhir_profiles.html"/>
-            </extension>
-            <nameUrl value="bh_to_fhir_profiles.html"/>
-            <title value="+BH to FHIR Profile"/>
-            <generation value="markdown"/>
-         </page>
-         <page>
-            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="change_log.html"/>
-            </extension>
-            <nameUrl value="change_log.html"/>
-            <title value="Change Log"/>
-            <generation value="markdown"/>
-         </page>
-         <page>
-            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="downloads.html"/>
-            </extension>
-            <nameUrl value="downloads.html"/>
-            <title value="Downloads"/>
-            <generation value="markdown"/>
-         </page>
-         <page>
-            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-               <valueUrl value="license.html"/>
-            </extension>
-            <nameUrl value="license.html"/>
-            <title value="License"/>
+            <title value="Home"/>
             <generation value="markdown"/>
          </page>
          <page>
@@ -1849,23 +1951,18 @@
             <title value="Artifacts Summary"/>
             <generation value="html"/>
             <page>
-               <nameUrl value="StructureDefinition-mental-health-clinical-notes.html"/>
-               <title value="Mental Health Clinical Notes Profile"/>
+               <nameUrl value="StructureDefinition-bh-grant-info.html"/>
+               <title value="Behavioral Health Grant Funding Information"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-bh-grant-info.html"/>
-               <title value="Grant Information Observation Profile"/>
+               <nameUrl value="StructureDefinition-mental-health-clinical-notes.html"/>
+               <title value="Mental Health Clinical Notes"/>
                <generation value="generated"/>
             </page>
             <page>
                <nameUrl value="StructureDefinition-program-info.html"/>
-               <title value="Grant Program ID and Number Extension"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="ValueSet-mental-health-clinical-note-types.html"/>
-               <title value="Mental Health Clinical Notes Profile"/>
+               <title value="Grant Program ID and Number"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1874,38 +1971,88 @@
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="ValueSet-mental-health-clinical-note-types.html"/>
+               <title value="Mental Health Clinical Note Types"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="CodeSystem-bh-funding-type-codes.html"/>
                <title value="Behavioral Health Program Funding Type Codes"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Patient-bh-patient-example.html"/>
-               <title value="patient-example"/>
+               <nameUrl value="RelatedPerson-adult-child-relatedperson-example-1.html"/>
+               <title value="adult-child-relatedperson-example"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Practitioner-ed-physician-example-1.html"/>
-               <title value="physician-example"/>
+               <nameUrl value="QuestionnaireResponse-ace-example-1.html"/>
+               <title value="Adverse Childhood Experiences (ACEs) Assessment"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Practitioner-pcp-provider-example-1.html"/>
-               <title value="pcp-provider-example"/>
+               <nameUrl value="QuestionnaireResponse-alcohol-use-identification-test-1.html"/>
+               <title value="Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Practitioner-mental-health-provider-example-1.html"/>
-               <title value="mental-health-provider-example"/>
+               <nameUrl value="Procedure-alcohol-prevetion-education-example-1.html"/>
+               <title value="alcohol-prevention-edu-example"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="AllergyIntolerance-peanut-allergy-example-1.html"/>
-               <title value="peanut-allergy-example"/>
+               <nameUrl value="Observation-anxiety-assessment-observation-example-1.html"/>
+               <title value="anxiety-assessment-obs-example"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="AllergyIntolerance-penicillin-allergy-example-1.html"/>
-               <title value="penicillin-allergy-example"/>
+               <nameUrl value="MedicationRequest-ativan-discharge-med-example-1.html"/>
+               <title value="ativan-discharge-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Observation-average-blood-pressure-example-1.html"/>
+               <title value="average-bp-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="QuestionnaireResponse-barthel-index-functional-status-example-1.html"/>
+               <title value="barthel-index-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Medication-benzo-medication-example-1.html"/>
+               <title value="benzo-medication-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="MedicationRequest-benzo-order-example-1.html"/>
+               <title value="benzo-order-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Observation-bh-grant-info-observation-example-1.html"/>
+               <title value="bh-grant-info-obs-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Procedure-bh-prevention-education-program-example-1.html"/>
+               <title value="bh-prevention-edu-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Observation-blood-pressure-example-1.html"/>
+               <title value="blood-pressure-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="MedicationRequest-bupropion-discharge-med-example-1.html"/>
+               <title value="bupropion-discharge-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="MedicationDispense-bupropion-dispense-example-1.html"/>
+               <title value="bupropion-dispense-example"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1914,13 +2061,23 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Condition-panic-attack-condition-example-1.html"/>
-               <title value="panic-attack-example"/>
+               <nameUrl value="Condition-chest-pain-condition-example-1.html"/>
+               <title value="chest-pain-example"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Condition-chest-pain-condition-example-1.html"/>
-               <title value="chest-pain-example"/>
+               <nameUrl value="QuestionnaireResponse-C-SSRS-example-1.html"/>
+               <title value="Columbia-Suicide Severity Rating Scale (C-SSRS)"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Observation-disability-status-observation-example-1.html"/>
+               <title value="Comprehensive Universal Behavior Health Screen (CUBS)©"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Consent-SDOHCC-ConsentInformationDisclosure-example-1.html"/>
+               <title value="consent-disclosure-example"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1934,28 +2091,23 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Condition-grief-condition-example-1.html"/>
-               <title value="grief-example"/>
+               <nameUrl value="Encounter-discharge-encounter-example-3.html"/>
+               <title value="discharge-encounter-example"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Condition-substance-abuse-condition-example-1.html"/>
-               <title value="substance-abuse-example"/>
+               <nameUrl value="Encounter-ed-encounter-example-1.html"/>
+               <title value="ed-encounter-example"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Consent-SDOHCC-ConsentInformationDisclosure-example-1.html"/>
-               <title value="consent-disclosure-example"/>
+               <nameUrl value="Location-ed-location-example-1.html"/>
+               <title value="ed-location-example"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Coverage-medicaid-coverage-example-1.html"/>
-               <title value="medicaid-coverage-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Organization-fl-medicaid-example-1.html"/>
-               <title value="fl-medicaid-example"/>
+               <nameUrl value="Observation-ekg-observation-example-1.html"/>
+               <title value="ekg-obs-example"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1964,13 +2116,78 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="DocumentReference-mental-health-discharge-summary-example-1.html"/>
-               <title value="mental-health-discharge-example"/>
+               <nameUrl value="Parameters-expansion-parameters-bhir.html"/>
+               <title value="expansion-parameters-bhir"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="AdverseEvent-fall-adverse-event-example-1.html"/>
+               <title value="fall-adverse-event-example-1"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-fl-medicaid-example-1.html"/>
+               <title value="fl-medicaid-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Immunization-flu-vaccine-example-1.html"/>
+               <title value="flu-vaccine-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Goal-food-insecurity-example-1.html"/>
+               <title value="food-insecurity-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Condition-grief-condition-example-1.html"/>
+               <title value="grief-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Procedure-harm-reduction-example-1.html"/>
+               <title value="harm-reduction-activities-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Observation-heart-rate-example-1.html"/>
+               <title value="heart-rate-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Observation-height-example-1.html"/>
+               <title value="height-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Observation-hemoglobin-a1c-example-1.html"/>
+               <title value="hemoglobin-a1c-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Goal-housing-insecurity-example-1.html"/>
+               <title value="housing-insecurity-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="QuestionnaireResponse-hark-example-1.html"/>
+               <title value="Humiliation, Afraid, Rape, and Kick questionnaire (HARK)"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Coverage-medicaid-coverage-example-1.html"/>
+               <title value="medicaid-coverage-example"/>
                <generation value="generated"/>
             </page>
             <page>
                <nameUrl value="DocumentReference-mental-health-consult-note-example-1.html"/>
                <title value="mental-health-consult-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="DocumentReference-mental-health-discharge-summary-example-1.html"/>
+               <title value="mental-health-discharge-example"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1989,73 +2206,8 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Encounter-ed-encounter-example-1.html"/>
-               <title value="ed-encounter-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Encounter-obs-encounter-example-2.html"/>
-               <title value="obs-encounter-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Encounter-discharge-encounter-example-3.html"/>
-               <title value="discharge-encounter-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Encounter-pcp-encounter-example-4.html"/>
-               <title value="pcp-encounter-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Goal-food-insecurity-example-1.html"/>
-               <title value="food-insecurity-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Goal-housing-insecurity-example-1.html"/>
-               <title value="housing-insecurity-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Goal-transportation-insecurity-example-1.html"/>
-               <title value="transportation-insecurity-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Goal-social-connection-example-1.html"/>
-               <title value="social-connection-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Immunization-flu-vaccine-example-1.html"/>
-               <title value="flu-vaccine-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Location-ed-location-example-1.html"/>
-               <title value="ed-location-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Location-obs-location-example-1.html"/>
-               <title value="obs-location-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Medication-benzo-medication-example-1.html"/>
-               <title value="benzo-medication-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="MedicationDispense-bupropion-dispense-example-1.html"/>
-               <title value="bupropion-dispense-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="MedicationRequest-benzo-order-example-1.html"/>
-               <title value="benzo-order-example"/>
+               <nameUrl value="Practitioner-mental-health-provider-example-1.html"/>
+               <title value="mental-health-provider-example"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -2064,33 +2216,13 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="MedicationRequest-ativan-discharge-med-example-1.html"/>
-               <title value="ativan-discharge-example"/>
+               <nameUrl value="Organization-mh-provider-example-1.html"/>
+               <title value="mh-provider-example"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="MedicationRequest-paroxetine-discharge-med-example-1.html"/>
-               <title value="paroxetine-discharge-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="MedicationRequest-bupropion-discharge-med-example-1.html"/>
-               <title value="bupropion-discharge-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Observation-bh-grant-info-observation-example-1.html"/>
-               <title value="bh-grant-info-obs-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Observation-average-blood-pressure-example-1.html"/>
-               <title value="average-bp-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Observation-ekg-observation-example-1.html"/>
-               <title value="ekg-obs-example"/>
+               <nameUrl value="Observation-cognitive-status-observation-example-3.html"/>
+               <title value="Mini-Mental State Examination [MMSE]"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -2104,48 +2236,13 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Observation-provider-preference-observation-example-2.html"/>
-               <title value="provider-preference-obs-example"/>
+               <nameUrl value="Encounter-obs-encounter-example-2.html"/>
+               <title value="obs-encounter-example"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="QuestionnaireResponse-barthel-index-functional-status-example-1.html"/>
-               <title value="barthel-index-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Observation-cognitive-status-observation-example-3.html"/>
-               <title value="Mini-Mental State Examination [MMSE]"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Observation-disability-status-observation-example-1.html"/>
-               <title value="Comprehensive Universal Behavior Health Screen (CUBS)©"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Observation-pregnancy-status-example-1.html"/>
-               <title value="pregnancy-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Observation-temperature-example-1.html"/>
-               <title value="temperature-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Observation-height-example-1.html"/>
-               <title value="height-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Observation-blood-pressure-example-1.html"/>
-               <title value="blood-pressure-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Observation-heart-rate-example-1.html"/>
-               <title value="heart-rate-example"/>
+               <nameUrl value="Location-obs-location-example-1.html"/>
+               <title value="obs-location-example"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -2154,33 +2251,13 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Observation-respiratory-rate-example-1.html"/>
-               <title value="respiratory-rate-example"/>
+               <nameUrl value="Condition-panic-attack-condition-example-1.html"/>
+               <title value="panic-attack-example"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Observation-weight-example-1.html"/>
-               <title value="weight-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Observation-anxiety-assessment-observation-example-1.html"/>
-               <title value="anxiety-assessment-obs-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Observation-hemoglobin-a1c-example-1.html"/>
-               <title value="hemoglobin-a1c-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Organization-mh-provider-example-1.html"/>
-               <title value="mh-provider-example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="QuestionnaireResponse-BHP-QuestionnaireResponsePRAPAREExample-1.html"/>
-               <title value="prapare-questionnaireresponse-example"/>
+               <nameUrl value="MedicationRequest-paroxetine-discharge-med-example-1.html"/>
+               <title value="paroxetine-discharge-example"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -2189,28 +2266,53 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="QuestionnaireResponse-C-SSRS-example-1.html"/>
-               <title value="Columbia-Suicide Severity Rating Scale (C-SSRS)"/>
+               <nameUrl value="Patient-bh-patient-example.html"/>
+               <title value="patient-example"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="QuestionnaireResponse-hark-example-1.html"/>
-               <title value="Humiliation, Afraid, Rape, and Kick questionnaire (HARK)"/>
+               <nameUrl value="Encounter-pcp-encounter-example-4.html"/>
+               <title value="pcp-encounter-example"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="QuestionnaireResponse-ace-example-1.html"/>
-               <title value="Adverse Childhood Experiences (ACEs) Assessment"/>
+               <nameUrl value="Practitioner-pcp-provider-example-1.html"/>
+               <title value="pcp-provider-example"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="RelatedPerson-adult-child-relatedperson-example-1.html"/>
-               <title value="adult-child-relatedperson-example"/>
+               <nameUrl value="AllergyIntolerance-peanut-allergy-example-1.html"/>
+               <title value="peanut-allergy-example"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="QuestionnaireResponse-alcohol-use-identification-test-1.html"/>
-               <title value="Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]"/>
+               <nameUrl value="AllergyIntolerance-penicillin-allergy-example-1.html"/>
+               <title value="penicillin-allergy-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Practitioner-ed-physician-example-1.html"/>
+               <title value="physician-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="QuestionnaireResponse-BHP-QuestionnaireResponsePRAPAREExample-1.html"/>
+               <title value="prapare-questionnaireresponse-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Observation-pregnancy-status-example-1.html"/>
+               <title value="pregnancy-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Observation-provider-preference-observation-example-2.html"/>
+               <title value="provider-preference-obs-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Observation-respiratory-rate-example-1.html"/>
+               <title value="respiratory-rate-example"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -2219,18 +2321,33 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Procedure-bh-prevention-education-program-example-1.html"/>
-               <title value="bh-prevention-edu-example"/>
+               <nameUrl value="Goal-social-connection-example-1.html"/>
+               <title value="social-connection-example"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Procedure-alcohol-prevetion-education-example-1.html"/>
-               <title value="alcohol-prevention-edu-example"/>
+               <nameUrl value="Condition-substance-abuse-condition-example-1.html"/>
+               <title value="substance-abuse-example"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Procedure-harm-reduction-example-1.html"/>
-               <title value="harm-reduction-activities-example"/>
+               <nameUrl value="Observation-temperature-example-1.html"/>
+               <title value="temperature-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Goal-transportation-insecurity-example-1.html"/>
+               <title value="transportation-insecurity-example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Observation-usual-work-example-1.html"/>
+               <title value="usual-work-example-1"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Observation-weight-example-1.html"/>
+               <title value="weight-example"/>
                <generation value="generated"/>
             </page>
          </page>
@@ -2296,24 +2413,32 @@
          <value value="input-cache/txcache"/>
       </parameter>
       <parameter>
-         <code value="apply-jurisdiction"/>
-         <value value="false"/>
-      </parameter>
-      <parameter>
-         <code value="path-expansion-params"/>
-         <value value="resources/parameters/expansion-parameters-bhir.xml"/>
-      </parameter>
-      <parameter>
          <code value="copyrightyear"/>
-         <value value="2020+"/>
+         <value value="2026+"/>
       </parameter>
       <parameter>
          <code value="releaselabel"/>
-         <value value="CI Build"/>
+         <value value="trial-use"/>
+      </parameter>
+      <parameter>
+         <code value="path-expansion-params"/>
+         <value value="Parameters-expansion-parameters-bhir.json"/>
       </parameter>
       <parameter>
          <code value="pin-canonicals"/>
-         <value value="pin-multiples"/>
+         <value value="pin-all"/>
+      </parameter>
+      <parameter>
+         <code value="display-warnings"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="no-cibuild-issues"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="suppress-mappings"/>
+         <value value="*"/>
       </parameter>
       <parameter>
          <code value="autoload-resources"/>
@@ -2345,7 +2470,7 @@
       </parameter>
       <parameter>
          <code value="path-history"/>
-         <value value="http://fhir.org/guides/astp/bhp/history.html"/>
+         <value value="http://fhir.org/guides/onc/bhp/history.html"/>
       </parameter>
       <parameter>
          <code value="template-html"/>
@@ -2365,6 +2490,10 @@
       </parameter>
       <parameter>
          <code value="apply-copyright"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-jurisdiction"/>
          <value value="true"/>
       </parameter>
       <parameter>

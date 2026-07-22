@@ -1,8 +1,60 @@
-/_updatePublisher.sh
-/_genonce.sh
-/_gencontinuous.bat
-/_gencontinuous.sh
-/_genonce.bat
-/output
+# Ingnore potential IG Publisher related files
+.DS_Store
+Thumbs.db
+/fsh-generated 
 /input-cache
+/output
 /temp
+/template
+
+
+# Ignore Simplifier/Forge/FirelyTerminal files
+.local-packages
+.simplifier/
+fhirpkg.lock.json 
+project.yaml
+
+## Log files
+*.log
+generator.log
+
+## Temporary files
+*.tmp
+*.bak
+
+## Visual Studio specific
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.vcxproj*.*.user
+*.vcxproj.filters
+*.vcproj.*.user
+vs*.suo
+*.vsk
+
+## OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Other common ignores
+.DS_Store
+._*
