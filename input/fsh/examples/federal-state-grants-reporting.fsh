@@ -7,8 +7,8 @@ InstanceOf: BehavioralHealthGrantInfo
 Usage: #example
 Title: "bh-grant-info-obs-example"
 Description: "Example of patient observation"
-* extension[program_info].extension[program-id].valueString = "SP-23-004"
-* extension[program_info].extension[grant-number].valueString = "SP083783-01"
+* extension[program-info].extension[program-id].valueString = "SP-23-004"
+* extension[program-info].extension[grant-number].valueString = "SP083783-01"
 * status = #final
 * category = BehavioralHealthProgramFundingTypeCodes#funding-program-info "Program Funding Information"
 * category.text = "Program Funding Information"
