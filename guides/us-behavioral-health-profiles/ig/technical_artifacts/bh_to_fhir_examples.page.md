@@ -4,7 +4,7 @@ topic: bh_to_fhir_examples
 
 # {{page-title}}
 
-This table provides a correlation between USCDI+ behavioral health data elements and their corresponding FHIR elements, illustrating how each data element is represented in the BH FHIR implementation guide. It includes specific examples and narratives for each matched representation, demonstrating how they are applied in practical scenarios, such as documenting allergies, health assessments, clinical notes, and patient demographics. This ensures that healthcare data is accurately represented and easily interoperable across different health information systems.
+This table provides a correlation between USCDI+ behavioral health data elements and their corresponding FHIR elements, illustrating how each data element is represented in the BH FHIR implementation guide. It includes specific examples and narratives for each matched representation, demonstrating how they are applied in practical scenarios, such as documenting allergies, health assessments, clinical notes, and patient demographics/information. This ensures that healthcare data is accurately represented and easily interoperable across different health information systems.
 
 <table class="tg"> <thead>
   <tr>
@@ -28,30 +28,30 @@ This table provides a correlation between USCDI+ behavioral health data elements
   </tr>
   <tr>
      <td class="tg-0lax">Allergies and Intolerances</td>
-     <td class="tg-1wig">Substance (Medication)</td>
+     <td class="tg-1wig">Medication Allergy Intolerance</td>
      <td class="tg-zzem">{{pagelink:example-penicillin-allergy-example-1}}</td>
      <td class="tg-0lax">Example of patient documented penicillin allergy</td>
   </tr>
   <tr>
      <td class="tg-0lax">Allergies and Intolerances</td>
-     <td class="tg-1wig">Substance (Non-Medication)</td>
+     <td class="tg-1wig">Non-Medication Allergy Intolerance</td>
      <td class="tg-zzem">{{pagelink:example-peanut-allergy-example-1}}</td>
      <td class="tg-0lax">Example of patient documented peanut allergy</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Care Team Member(s)</td>
+     <td class="tg-0lax">Care Team Members</td>
      <td class="tg-1wig">Care Team Member Role</td>
      <td class="tg-zzem">{{pagelink:example-bh-care-team-example-1}}</td>
      <td class="tg-0lax">Example of a mental health counselor as part of the care team</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Care Team Member(s)</td>
+     <td class="tg-0lax">Care Team Members</td>
      <td class="tg-1wig">Care Team Member Telecom</td>
          <td class="tg-zzem">{{pagelink:example-ed-physician-example-1}}<br>{{pagelink:example-pcp-provider-example-1}}<br>{{pagelink:example-mental-health-provider-example-1}}</td>
      <td class="tg-0lax">Examples of a patient's emergency room provider, Primary care provider and mental health provider telecom</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Care Team Member(s)</td>
+     <td class="tg-0lax">Care Team Members</td>
      <td class="tg-1wig">Care Team Member Identifier</td>
          <td class="tg-zzem">{{pagelink:example-ed-physician-example-1}}<br>{{pagelink:example-pcp-provider-example-1}}<br>{{pagelink:example-mental-health-provider-example-1}}</td>
      <td class="tg-0lax">Examples of a patient's emergency room provider, Primary care provider and mental health provider identifiers</td>
@@ -208,7 +208,7 @@ This table provides a correlation between USCDI+ behavioral health data elements
   </tr>
   <tr>
      <td class="tg-0lax">Health Insurance Information</td>
-     <td class="tg-1wig">Plan Name</td>
+     <td class="tg-1wig">Insurance Plan Name</td>
      <td class="tg-zzem">{{pagelink:example-medicaid-coverage-example-1}}</td>
      <td class="tg-0lax">Example of health insurance coverage name</td>
   </tr>
@@ -286,21 +286,9 @@ This table provides a correlation between USCDI+ behavioral health data elements
   </tr>
   <tr>
      <td class="tg-0lax">Health Status Assessments</td>
-     <td class="tg-1wig">Food Insecurity</td>
-     <td class="tg-zzem">{{pagelink:example-BHP-QuestionnaireResponsePRAPAREExample-1}}</td>
-     <td class="tg-ktyi">Example of SDOH food assessment/screening</td>
-  </tr>
-  <tr>
-     <td class="tg-0lax">Health Status Assessments</td>
      <td class="tg-1wig">Functional Status</td>
      <td class="tg-zzem">{{pagelink:example-barthel-index-functional-status-example-1}}</td>
      <td class="tg-ktyi">Example of functional health status assessment/screening</td>
-  </tr>
-  <tr>
-     <td class="tg-0lax">Health Status Assessments</td>
-     <td class="tg-1wig">Housing Instability</td>
-     <td class="tg-zzem">{{pagelink:example-BHP-QuestionnaireResponsePRAPAREExample-1}}</td>
-     <td class="tg-ktyi">Example of SDOH housing assessment/screening</td>
   </tr>
   <!-- <tr>
      <td class="tg-0lax">Health Status Assessments</td>
@@ -316,9 +304,9 @@ This table provides a correlation between USCDI+ behavioral health data elements
   </tr>
   <tr>
      <td class="tg-0lax">Health Status Assessments</td>
-     <td class="tg-1wig">Smoking Status</td>
+     <td class="tg-1wig">Tobacco and Nicotine Product Use</td>
      <td class="tg-zzem">{{pagelink:example-non-smoker-example-1}}</td>
-     <td class="tg-ktyi">Example of patient smoking status assessment/screening</td>
+     <td class="tg-ktyi">Example of patient tobacco and nicotine product use assessment/screening.</td>
   </tr>
   <tr>
      <td class="tg-0lax">Health Status Assessments</td>
@@ -328,21 +316,9 @@ This table provides a correlation between USCDI+ behavioral health data elements
   </tr>
   <tr>
      <td class="tg-0lax">Health Status Assessments</td>
-     <td class="tg-1wig">Transportation Insecurity</td>
-     <td class="tg-zzem">{{pagelink:example-BHP-QuestionnaireResponsePRAPAREExample-1}}</td>
-     <td class="tg-ktyi">Example of SDOH transportation assessment/screening</td>
-  </tr>
-  <tr>
-     <td class="tg-0lax">Health Status Assessments</td>
-     <td class="tg-1wig">Suicide Risk Assessment</td>
+     <td class="tg-1wig">Suicide Risk Screen</td>
      <td class="tg-zzem">{{pagelink:example-C-SSRS-example-1}}</td>
      <td class="tg-ktyi">Example of suicide risk assessment/screening</td>
-  </tr>
-  <tr>
-     <td class="tg-0lax">Health Status Assessments</td>
-     <td class="tg-1wig">Interpersonal Violence</td>
-     <td class="tg-zzem">{{pagelink:example-hark-example-1}}</td>
-     <td class="tg-ktyi">Example of Interpersonal Violence assessment/screening</td>
   </tr>
   <tr>
      <td class="tg-0lax">Health Status Assessments</td>
@@ -423,121 +399,121 @@ This table provides a correlation between USCDI+ behavioral health data elements
      <td class="tg-0lax">Example of dispensed medication - bupropion</td>
   </tr>
   <!-- <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Name to Use</td>
      <td class="tg-zzem">{{pagelink:example-bh-patient-example}}</td>
      <td class="tg-0lax">Example of patient preferred name</td>
   </tr> -->
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Current Address</td>
      <td class="tg-zzem">{{pagelink:example-bh-patient-example}}</td>
      <td class="tg-0lax">Example of patient address</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Date of Birth</td>
      <td class="tg-zzem">{{pagelink:example-bh-patient-example}}</td>
      <td class="tg-0lax">Example of patient date of birth</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Email Address</td>
      <td class="tg-zzem">{{pagelink:example-bh-patient-example}}</td>
      <td class="tg-0lax">Example of patient email address</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Ethnicity</td>
      <td class="tg-zzem">{{pagelink:example-bh-patient-example}}</td>
      <td class="tg-0lax">Example of patient ethnicity</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">First Name</td>
      <td class="tg-zzem">{{pagelink:example-bh-patient-example}}</td>
      <td class="tg-0lax">Example of patient first name</td>
   </tr>
   <!-- <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Gender Identity</td>
      <td class="tg-zzem">{{pagelink:example-bh-patient-example}}</td>
      <td class="tg-0lax">Example of patient gender identify</td>
   </tr> -->
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Last Name</td>
      <td class="tg-zzem">{{pagelink:example-bh-patient-example}}</td>
      <td class="tg-0lax">Example of patient last name</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Name Suffix</td>
      <td class="tg-zzem">{{pagelink:example-bh-patient-example}}</td>
      <td class="tg-0lax">Example of patient name suffix</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Phone Number</td>
      <td class="tg-zzem">{{pagelink:example-bh-patient-example}}</td>
      <td class="tg-ktyi">Example of patient phone number</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Preferred Language</td>
      <td class="tg-zzem">{{pagelink:example-bh-patient-example}}</td>
      <td class="tg-ktyi">Example of patient preferred language</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Race</td>
      <td class="tg-zzem">{{pagelink:example-bh-patient-example}}</td>
      <td class="tg-0lax">Example of patient race</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Related Person's Name</td>
      <td class="tg-zzem">{{pagelink:example-adult-child-relatedperson-example-1}}</td>
      <td class="tg-0lax">Example of patient related person's name</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Relationship Type</td>
      <td class="tg-zzem">{{pagelink:example-adult-child-relatedperson-example-1}}</td>
      <td class="tg-0lax">Example of patient related person's relationship</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Sex</td>
      <td class="tg-zzem">{{pagelink:example-bh-patient-example}}</td>
      <td class="tg-0lax">Example of patient sex </td>
   </tr>
   <!-- <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Sexual Orientation</td>
      <td class="tg-zzem">{{pagelink:example-sexual-orientation-example-1}}</td>
      <td class="tg-0lax">Example of patient sexual orientation</td>
   </tr> -->
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Tribal Affiliation</td>
      <td class="tg-zzem">{{pagelink:example-bh-patient-example}}</td>
      <td class="tg-0lax">Example of patient tribal affiliation</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Date of Death</td>
      <td class="tg-zzem">{{pagelink:example-bh-patient-example}}</td>
      <td class="tg-0lax">Example of patient date of death</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
-     <td class="tg-1wig">Identifier</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Patient Identifier</td>
      <td class="tg-zzem">{{pagelink:example-bh-patient-example}}</td>
      <td class="tg-0lax">Example of patient patient identifier</td>
   </tr>
   <!-- <tr>
-     <td class="tg-0lax">Patient Demographics  </td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Pronouns</td>
      <td class="tg-zzem">{{pagelink:example-bh-patient-example}}</td>
      <td class="tg-0lax">Example of patient preferred pronouns</td>
@@ -550,7 +526,7 @@ This table provides a correlation between USCDI+ behavioral health data elements
   </tr>
   <tr>
      <td class="tg-0lax">Problems</td>
-     <td class="tg-1wig">Problems/Conditions</td>
+     <td class="tg-1wig">Problems</td>
          <td class="tg-zzem">{{pagelink:example-panic-attack-condition-example-1}}<br> {{pagelink:example-chest-pain-condition-example-1}}<br> {{pagelink:example-grief-condition-example-1}}<br> {{pagelink:example-substance-abuse-condition-example-1}}<br> {{pagelink:example-diabetes-condition-example-1}}</td>
      <td class="tg-0lax">Examples of diagnosis</td>
   </tr>
@@ -580,12 +556,6 @@ This table provides a correlation between USCDI+ behavioral health data elements
   </tr>
   <tr>
      <td class="tg-0lax">Procedures</td>
-     <td class="tg-1wig">Harm Reduction Activities</td>
-     <td class="tg-zzem">{{pagelink:example-harm-reduction-example-1}}</td>
-     <td class="tg-0lax">Example of patient harm reduction program</td>
-  </tr>
-  <tr>
-     <td class="tg-0lax">Procedures</td>
      <td class="tg-1wig">Performance Time</td>
      <td class="tg-zzem">{{pagelink:example-alcohol-prevetion-education-example-1}}</td>
      <td class="tg-0lax">Example of a documented time when alcohol harm reduction information was provided</td>
@@ -608,17 +578,47 @@ This table provides a correlation between USCDI+ behavioral health data elements
      <td class="tg-zzem">{{pagelink:example-ServiceRequest-peer-mentoring-example-1}}</td>
      <td class="tg-0lax">Example of social connection intervention</td>
   </tr>
+    <tr>
+     <td class="tg-0lax">Recovery Support Services</td>
+     <td class="tg-1wig">Harm Reduction Activities</td>
+     <td class="tg-zzem">{{pagelink:example-harm-reduction-example-1}}</td>
+     <td class="tg-0lax">Example of patient harm reduction program</td>
+  </tr>
   <tr>
-     <td class="tg-0lax">Procedures</td>
+     <td class="tg-0lax">Recovery Support Services</td>
      <td class="tg-1wig">Peer Coaching or Mentoring</td>
      <td class="tg-zzem">{{pagelink:example-ServiceRequest-peer-mentoring-example-1}}</td>
      <td class="tg-0lax">Example of a referral for peer support or mentoring</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Procedures</td>
+     <td class="tg-0lax">Recovery Support Services</td>
      <td class="tg-1wig">Recovery Planning</td>
      <td class="tg-zzem">{{pagelink:example-alcohol-prevetion-education-example-1}}</td>
      <td class="tg-ktyi">Example of recovery planning services</td>
+  </tr>
+   <tr>
+     <td class="tg-0lax">Social Determinants of Health</td>
+     <td class="tg-1wig">Food Insecurity</td>
+     <td class="tg-zzem">{{pagelink:example-BHP-QuestionnaireResponsePRAPAREExample-1}}</td>
+     <td class="tg-ktyi">Example of SDOH food assessment/screening</td>
+  </tr>
+   <tr>
+     <td class="tg-0lax">Social Determinants of Health</td>
+     <td class="tg-1wig">Housing Instability</td>
+     <td class="tg-zzem">{{pagelink:example-BHP-QuestionnaireResponsePRAPAREExample-1}}</td>
+     <td class="tg-ktyi">Example of SDOH housing assessment/screening</td>
+  </tr>
+    <tr>
+     <td class="tg-0lax">Social Determinants of Health</td>
+     <td class="tg-1wig">Interpersonal Violence</td>
+     <td class="tg-zzem">{{pagelink:example-hark-example-1}}</td>
+     <td class="tg-ktyi">Example of Interpersonal Violence assessment/screening</td>
+  </tr>
+    <tr>
+     <td class="tg-0lax">Social Determinants of Health</td>
+     <td class="tg-1wig">Transportation Insecurity</td>
+     <td class="tg-zzem">{{pagelink:example-BHP-QuestionnaireResponsePRAPAREExample-1}}</td>
+     <td class="tg-ktyi">Example of SDOH transportation assessment/screening</td>
   </tr>
   <tr>
      <td class="tg-0lax">Vital Signs</td>

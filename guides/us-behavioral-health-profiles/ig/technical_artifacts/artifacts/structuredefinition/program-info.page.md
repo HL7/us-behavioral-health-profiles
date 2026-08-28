@@ -7,7 +7,7 @@ buttons: yes
 
 ## {{page-title}}
 
-  {{page:Resource-Meta-Table}}
+  {{page:resource-meta-table-profiles}}
   
   {{page:FQL-get-resource-description}}
 

@@ -11,7 +11,6 @@ topic: examples-index
 		meta.profile.empty().not()
 	select
 		Example: '{{pagelink:example-'+ id + '}}',
-		ResourceType: typename(),
-		ConformsToProfile: meta.profile[0]
+		ResourceType: typename()
 	order by Example
 </fql>

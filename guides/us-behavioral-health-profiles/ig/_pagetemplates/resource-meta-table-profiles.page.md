@@ -1,5 +1,5 @@
 ---
-topic: resource-meta-table
+topic: resource-meta-table-profiles
 ---
 <table class="table meta-table">
   <tr>
@@ -12,7 +12,7 @@ topic: resource-meta-table
   </tr>
   <tr>
     <td colspan="2">
-      <i>ResourceType:</i> {{page:FQL-get-resource-type}}
+      <i>Parent:</i> {{page:FQL-get-resource-base}}
     </td>
     <td>
       <i>Computable Name:</i> {{page:FQL-get-resource-name}}

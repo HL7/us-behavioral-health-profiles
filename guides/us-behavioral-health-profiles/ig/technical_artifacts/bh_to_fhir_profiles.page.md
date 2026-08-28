@@ -4,7 +4,7 @@ topic: bh_to_fhir_profiles
 
 # {{page-title}}
 
-This table serves as a crosswalk between USCDI+ behavioral health data elements and their corresponding proposed FHIR profiles. The table maps the +BH data classes and elements, such as allergies, clinical notes, and patient demographics, to FHIR profiles, showing how each USCDI+ BH element aligns with FHIR's data standards. This alignment facilitates the standardized exchange of health information across different systems, ensuring consistency and interoperability in managing and sharing healthcare data.
+This table serves as a crosswalk between USCDI+ behavioral health data elements and their corresponding proposed FHIR profiles. The table maps the +BH data classes and elements, such as allergies, clinical notes, and patient demographics/information, to FHIR profiles, showing how each USCDI+ BH element aligns with FHIR's data standards. This alignment facilitates the standardized exchange of health information across different systems, ensuring consistency and interoperability in managing and sharing healthcare data.
 
 <table class="tg"> <thead>
   <tr>
@@ -28,30 +28,30 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   </tr>
   <tr>
      <td class="tg-0lax">Allergies and Intolerances</td>
-     <td class="tg-1wig">Substance (Medication)</td>
+     <td class="tg-1wig">Medication Allergy Intolerance</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a></td>
      <td class="tg-ktyi">allergyIntolerance.code</td>
   </tr>
   <tr>
      <td class="tg-0lax">Allergies and Intolerances</td>
-     <td class="tg-1wig">Substance (Non-Medication)</td>
+     <td class="tg-1wig">Non-Medication Allergy Intolerance</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a></td>
      <td class="tg-ktyi">allergyIntolerance.code</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Care Team Member(s)</td>
+     <td class="tg-0lax">Care Team Members</td>
      <td class="tg-1wig">Care Team Member Role</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-careteam.html">US Core Care Team Profile</a></td>
      <td class="tg-0lax">careTeam.participant.role</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Care Team Member(s)</td>
+     <td class="tg-0lax">Care Team Members</td>
      <td class="tg-1wig">Care Team Member Telecom</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-practitioner.html">US Core Care Practitioner Profile</a></td>
      <td class="tg-ktyi">practitioner.telecom</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Care Team Member(s)</td>
+     <td class="tg-0lax">Care Team Members</td>
      <td class="tg-1wig">Care Team Member Identifier</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-practitioner.html">US Core Care Practitioner Profile</a></td>
      <td class="tg-ktyi">practitioner.identifier</td>
@@ -208,7 +208,7 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   </tr>
   <tr>
      <td class="tg-0lax">Health Insurance Information</td>
-     <td class="tg-1wig">Plan Name</td>
+     <td class="tg-1wig">Insurance Plan Name</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-coverage.html">US Core Coverage Profile</a></td>
      <td class="tg-0lax">coverage.payor.name</td>
   </tr>
@@ -286,19 +286,7 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   </tr>
   <tr>
      <td class="tg-0lax">Health Status Assessments</td>
-     <td class="tg-1wig">Food Insecurity</td>
-     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
-     <td class="tg-0lax">n/a</td>
-  </tr>
-  <tr>
-     <td class="tg-0lax">Health Status Assessments</td>
      <td class="tg-1wig">Functional Status</td>
-     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
-     <td class="tg-0lax">n/a</td>
-  </tr>
-  <tr>
-     <td class="tg-0lax">Health Status Assessments</td>
-     <td class="tg-1wig">Housing Instability</td>
      <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
      <td class="tg-0lax">n/a</td>
   </tr>
@@ -316,7 +304,7 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   </tr>
   <tr>
      <td class="tg-0lax">Health Status Assessments</td>
-     <td class="tg-1wig">Smoking Status</td>
+     <td class="tg-1wig">Tobacco and Nicotine Product Use</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile</a></td>
      <td class="tg-0lax">observation.value</td>
   </tr>
@@ -328,19 +316,7 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   </tr>
   <tr>
      <td class="tg-0lax">Health Status Assessments</td>
-     <td class="tg-1wig">Transportation Insecurity</td>
-     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
-     <td class="tg-0lax">n/a</td>
-  </tr>
-  <tr>
-     <td class="tg-0lax">Health Status Assessments</td>
-     <td class="tg-1wig">Suicide Risk Assessment</td>
-     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
-     <td class="tg-0lax">n/a</td>
-  </tr>
-  <tr>
-     <td class="tg-0lax">Health Status Assessments</td>
-     <td class="tg-1wig">Interpersonal Violence</td>
+     <td class="tg-1wig">Suicide Risk Screen</td>
      <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
      <td class="tg-0lax">n/a</td>
   </tr>
@@ -423,121 +399,121 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
      <td class="tg-0lax">medicationDispense.</td>
   </tr>
   <!-- <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Name to Use</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient Profile</a></td>
      <td class="tg-0lax">patient.name.use</td>
   </tr> -->
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Current Address</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.address</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Date of Birth</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.birthDate</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Email Address</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.telecom</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Ethnicity</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.ethnicity</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">First Name</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.name.given</td>
   </tr>
   <!-- <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Gender Identity</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.genderIdentity</td>
   </tr> -->
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Last Name</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.name.family</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Name Suffix</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.name.suffix</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Phone Number</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.telecom</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Preferred Language</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.communication.language</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Race</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.race</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Related Person's Name</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-relatedperson.html">US Core RelatedPerson Profile</a></td>
      <td class="tg-0lax">relatedPerson.name</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Relationship Type</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-relatedperson.html">US Core RelatedPerson Profile</a></td>
      <td class="tg-0lax">relatedPerson.relationship</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Sex</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.sex</td>
   </tr>
   <!-- <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Sexual Orientation</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-sexual-orientation.html">US Core Observation Sexual Orientation Profile</a></td>
      <td class="tg-0lax">observation.value</td>
   </tr> -->
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Tribal Affiliation</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.tribalAffiliation</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Date of Death</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.deceased</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Patient Demographics</td>
-     <td class="tg-1wig">Identifier</td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Patient Identifier</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.identifier</td>
   </tr>
   <!-- <tr>
-     <td class="tg-0lax">Patient Demographics  </td>
+     <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Pronouns</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-ktyi">n/a</td>
@@ -550,26 +526,26 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   </tr>
   <tr>
      <td class="tg-0lax">Problems</td>
-     <td class="tg-1wig">Problems/Conditions</td>
-     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+     <td class="tg-1wig">Problems</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
      <td class="tg-0lax">condition.code</td>
   </tr>
   <tr>
      <td class="tg-0lax">Problems</td>
      <td class="tg-1wig">SDOH Problems/Health Concerns</td>
-     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
      <td class="tg-0lax">condition.code</td>
   </tr>
   <tr>
      <td class="tg-0lax">Problems</td>
      <td class="tg-1wig">Date of Diagnosis</td>
-     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
      <td class="tg-0lax">n/a</td>
   </tr>
   <tr>
      <td class="tg-0lax">Problems</td>
      <td class="tg-1wig">Date of Onset</td>
-     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
      <td class="tg-0lax">condition.onset</td>
   </tr>
   <tr>
@@ -577,12 +553,6 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
      <td class="tg-1wig">Date of Resolution</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
      <td class="tg-0lax">condition.abatement</td>
-  </tr>
-  <tr>
-     <td class="tg-0lax">Procedures</td>
-     <td class="tg-1wig">Harm Reduction Activities</td>
-     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
-     <td class="tg-0lax">procedure.code</td>
   </tr>
   <tr>
      <td class="tg-0lax">Procedures</td>
@@ -608,17 +578,47 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
      <td class="tg-6rn5"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-servicerequest.html">US Core Service Request Profile</a></td>
      <td class="tg-ktyi">serviceRequest.code</td>
   </tr>
+    <tr>
+     <td class="tg-0lax">Recovery Support Services</td>
+     <td class="tg-1wig">Harm Reduction Activities</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+     <td class="tg-0lax">procedure.code</td>
+  </tr>
   <tr>
-     <td class="tg-0lax">Procedures</td>
+     <td class="tg-0lax">Recovery Support Services</td>
      <td class="tg-1wig">Peer Coaching or Mentoring</td>
      <td class="tg-6rn5"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-servicerequest.html">US Core Service Request Profile</a></td>
      <td class="tg-ktyi">serviceRequest.code</td>
   </tr>
   <tr>
-     <td class="tg-0lax">Procedures</td>
+     <td class="tg-0lax">Recovery Support Services</td>
      <td class="tg-1wig">Recovery Planning</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-procedure.html">US Core Procedures Profile</a></td>
      <td class="tg-0lax">procedure.code</td>
+  </tr>
+    <tr>
+     <td class="tg-0lax">Social Determinants of Health</td>
+     <td class="tg-1wig">Food Insecurity</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+    <tr>
+     <td class="tg-0lax">Social Determinants of Health</td>
+     <td class="tg-1wig">Housing Instability</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+    <tr>
+     <td class="tg-0lax">Social Determinants of Health</td>
+     <td class="tg-1wig">Interpersonal Violence</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+    <tr>
+     <td class="tg-0lax">Social Determinants of Health</td>
+     <td class="tg-1wig">Transportation Insecurity</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
   </tr>
   <tr>
      <td class="tg-0lax">Vital Signs</td>
