@@ -1,0 +1,28 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mental-health-clinical-notes",
+  "url": "http://fhir.org/guides/onc/bhp/StructureDefinition/mental-health-clinical-notes",
+  "name": "MentalHealthClinicalNotes",
+  "title": "Mental Health Clinical Notes",
+  "status": "active",
+  "experimental": true,
+  "description": "This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference.type",
+        "path": "DocumentReference.type",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.org/guides/onc/bhp/ValueSet/mental-health-clinical-note-types"
+        }
+      }
+    ]
+  }
+}

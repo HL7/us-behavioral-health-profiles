@@ -1,0 +1,25 @@
+{
+  "resourceType": "Procedure",
+  "id": "harm-reduction-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure|6.1.0"
+    ]
+  },
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "code": "720175009",
+        "system": "http://snomed.info/sct",
+        "display": "Alcohol harm reduction program (regime/therapy)"
+      }
+    ],
+    "text": "Alcohol harm reduction program (regime/therapy)"
+  },
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "performedDateTime": "2024-03-23"
+}

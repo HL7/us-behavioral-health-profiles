@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | Quick Facts - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>User Story</span></li>
+
+    <li class="active">Quick Facts</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+<h1 id="quick-facts">3.3. Quick Facts</h1>
+<p>Patient Information:</p>
+<pre><code>- Name: James Wolff
+- Age: 60 
+- Gender: Male
+- Race: Non-Hispanic African American 
+- Status: Retired, lives alone in Orlando, Florida 
+- Insurance: Medicare 
+</code></pre>
+
+<p>Medical History:</p>
+<pre><code>- Type 2 Diabetes: Takes metformin 2000 mg daily 
+- Moderate Depression: On antidepressants, recently discontinued due to difficulty scheduling PCP appointments 
+- Severe allergies to peanuts and penicillin 
+- History of substance use, clean for the past year  
+</code></pre>
+<p>ED Visit (6 months ago):</p>
+<pre><code>- Symptoms: Chest pain, sweating, heart racing 
+- Vitals: Elevated blood pressure (157/92) and heart rate (111) 
+- EKG: Normal sinus rhythm 
+- Suspected Panic Attack: Given Ativan 0.5mg orally 
+- Declined morphine due to past opioid issues 
+- Overnight observation and blood workup (CBC, BMP, HbA1c) 
+- Consulted in-house psychiatrist: Evidence of depressive symptoms, low suicide risk 
+- Prescribed: Paroxetine 10mg daily, Ativan 0.5mg every 8 hrs PRN 
+- Care navigator assistance: New PCP appointment, bus fare vouchers 
+</code></pre>
+<p>PCP Encounter (following week):</p>
+<pre><code>- Discussed feelings of loneliness and lack of motivation 
+- Continued Paroxetine 10mg daily 
+- Referred to community mental health provider and in-house care manager 
+- Requested female counselors
+</code></pre>
+<p>Initial Behavioral Health Encounter (two weeks later):</p>
+<pre><code>- Discussed mental health history, abusive past relationship, and support from late wife 
+- Strained relationship with adult daughter, Sarah Wolff. Limited family support 
+- Administered depression and suicide risk assessments (PHQ-9 score: 12) 
+- Recommended CBT, peer coaching, and grief support group 
+- Eligible for SAMHSA grant program 
+- Scheduled weekly CBT sessions and provided widower's support group info 
+</code></pre>
+<p>In-House Care Manager Encounter (same day):</p>
+<pre><code>- Assessed SDOH using the PRAPARE tool 
+- Identified needs: Food, reliable transportation, housing security 
+- Connected with community meal service and local supportive housing office 
+- Received bus fare vouchers 
+- Eligible for reduced-fare MetroCard and reinstated disability benefits 
+</code></pre>
+<p>Follow-Up Behavioral Health Encounter (one month later):</p>
+<pre><code>- Reported slight improvement, adherence to medication, and missed CBT sessions due to transportation 
+- Found support group unhelpful: connected with community recreation center for social engagement 
+</code></pre>
+<p>Second PCP Encounter (three months later):</p>
+<pre><code>- Complained of fatigue, dizziness, nausea, and discontinued antidepressant 
+- Experienced a recent fall at home 
+- Reported daily beer consumption for relaxation 
+- Lab work showed elevated HbA1c (6.9%) 
+- Provided alcohol abuse prevention education and harm reduction activities 
+- Scheduled endocrinologist appointments and virtual CBT sessions 
+</code></pre>
+<p>Second Follow-Up Behavioral Health Encounter (one month later):</p>
+<pre><code>- Reported improved diabetes management and eating habits, reduced alcohol intake 
+- Scored 3 on AUDIT and 12 on PHQ-9 
+- Started new antidepressant (Bupropion 200mg daily) 
+- Referred to a psychiatrist for medication management 
+- Connected with community recreation center for Zumba and line-dance classes 
+- Scheduled follow-up visit to review progress 
+</code></pre>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

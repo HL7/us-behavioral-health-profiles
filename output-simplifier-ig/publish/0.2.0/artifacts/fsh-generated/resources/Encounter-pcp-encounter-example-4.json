@@ -1,0 +1,42 @@
+{
+  "resourceType": "Encounter",
+  "id": "pcp-encounter-example-4",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0"
+    ]
+  },
+  "identifier": [
+    {
+      "use": "usual",
+      "system": "urn:oid:2.16.840.1.113883.19.5.1.698.8",
+      "value": "40005104253"
+    }
+  ],
+  "status": "finished",
+  "class": {
+    "code": "AMB",
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "display": "ambulatory"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "737470001",
+          "system": "http://snomed.info/sct",
+          "display": "Primary care management (procedure)"
+        }
+      ],
+      "text": "Primary care encounter"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "period": {
+    "start": "2024-02-15T17:02:00+00:00",
+    "end": "2024-02-15T17:32:00+00:00"
+  }
+}

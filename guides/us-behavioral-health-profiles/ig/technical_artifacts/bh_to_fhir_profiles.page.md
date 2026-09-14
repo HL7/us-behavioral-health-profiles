@@ -208,7 +208,7 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   </tr>
   <tr>
      <td class="tg-0lax">Health Insurance Information</td>
-     <td class="tg-1wig">Insurance Plan Name</td>
+     <td class="tg-1wig">Health Insurance Plan</td>
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-coverage.html">US Core Coverage Profile</a></td>
      <td class="tg-0lax">coverage.payor.name</td>
   </tr>

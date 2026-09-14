@@ -1,15 +1,26 @@
-# Exports the Simplifier IG zip into output-simplifier-ig/.
+# Exports the Simplifier IG zip into output-simplifier-ig/ as
+# us-behavioral-health-profiles@<version>.zip, with the bundled packages/ cache stripped.
+#
 # Uses your browser's existing Simplifier login (the export endpoint is cookie-authed),
 # so make sure you're logged in at simplifier.net first.
 # ponytail: reuses the browser session instead of scripting login/antiforgery/2FA.
 
+param([string]$Version)
+
+$ErrorActionPreference = 'Stop'
+$repo = Split-Path $PSScriptRoot -Parent
+
+if (-not $Version) {
+    $Version = (Select-String -Path (Join-Path $repo 'sushi-config.yaml') -Pattern '^version:\s*(\S+)').Matches[0].Groups[1].Value
+}
+if (-not $Version) { Write-Error "No version found in sushi-config.yaml"; exit 1 }
+
 $url  = 'https://simplifier.net/guide/us-behavioral-health-profiles/$exportaszipui'
 $dest = $PSScriptRoot  # script lives in output-simplifier-ig/
 $dl   = Join-Path $env:USERPROFILE 'Downloads'
-New-Item -ItemType Directory -Force -Path $dest | Out-Null
 
 $since = Get-Date
-Write-Host "Opening export URL in your browser..."
+Write-Host "Exporting version $Version - opening export URL in your browser..."
 Start-Process $url
 
 # Wait for a new zip to finish landing in Downloads (ignores partial .crdownload/.part files).
@@ -24,7 +35,7 @@ for ($i = 0; $i -lt 120 -and -not $zip; $i++) {
 }
 if (-not $zip) { Write-Error "No new zip in Downloads after 2 min. Did the download start / are you logged in?"; exit 1 }
 
-$target = Join-Path $dest $zip.Name
+$target = Join-Path $dest "us-behavioral-health-profiles@$Version.zip"
 Move-Item $zip.FullName $target -Force
 Write-Host "Moved: $($zip.Name) -> $target"
 

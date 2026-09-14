@@ -1,0 +1,51 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "mental-health-progress-example-1",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/onc/bhp/StructureDefinition/mental-health-clinical-notes"
+    ]
+  },
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "code": "78306-8",
+        "system": "http://loinc.org",
+        "display": "Mental health History and physical note"
+      }
+    ],
+    "text": "Mental health History and physical note"
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "clinical-note",
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display": "Clinical Note"
+        }
+      ],
+      "text": "Clinical Note"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "date": "2024-01-01T15:29:46+00:00",
+  "author": [
+    {
+      "reference": "Practitioner/mental-health-provider-example-1",
+      "display": "Dr. Lazslo Cravensworth"
+    }
+  ],
+  "content": [
+    {
+      "attachment": {
+        "contentType": "text/plain",
+        "data": "Tm8gYWN0aXZpdHkgcmVzdHJpY3Rpb24sIHJlZ3VsYXIgZGlldCwgZm9sbG93IHVwIGluIHR3byB0byB0aHJlZSB3ZWVrcyB3aXRoIHByaW1hcnkgY2FyZSBwcm92aWRlci4="
+      }
+    }
+  ]
+}

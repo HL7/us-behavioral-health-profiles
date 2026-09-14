@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | valueset-bh-funding-types - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">valueset-bh-funding-types</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+<h2 id="behavioral-health-program-funding-types">Behavioral Health Program Funding Types</h2>
+<p><table class="table meta-table">
+  <tbody><tr>
+    <td colspan="2">
+      <i>Official URL:</i> <code>http://fhir.org/guides/onc/bhp/ValueSet/bh-funding-types</code>
+    </td>
+    <td>
+      <i>Version:</i> 0.2.0
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <i>ResourceType:</i> <p>ValueSet</p>
+
+    </td>
+    <td>
+      <i>Computable Name:</i> <p>BehavioralHealthProgramFundingTypes</p>
+
+    </td>
+  </tr>
+</tbody></table>
+</p>
+<p><p>This ValueSet defines coded concepts pertaining to a Behavioral Health program/grant.</p>
+</p>
+<p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#c980c521-57ba-4b97-b874-8f4e6fbd92bd" aria-controls="c980c521-57ba-4b97-b874-8f4e6fbd92bd" role="tab" data-toggle="tab">Rendered view</a>
+</li><li role="presentation" class="">
+    <a href="#a320aa32-cdd1-467d-869d-5477af61d517" aria-controls="a320aa32-cdd1-467d-869d-5477af61d517" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#25cc69b6-86d9-4ae5-a020-867a8e098b02" aria-controls="25cc69b6-86d9-4ae5-a020-867a8e098b02" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#08f3c108-ec1f-4529-8706-dcb628f6dcb0" aria-controls="08f3c108-ec1f-4529-8706-dcb628f6dcb0" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#f624b8e2-3502-40f5-b60d-1c90b44685a1" aria-controls="f624b8e2-3502-40f5-b60d-1c90b44685a1" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="c980c521-57ba-4b97-b874-8f4e6fbd92bd">
+    <div class="rendered-resource" xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes from the following code systems:</p><ul><li><p>The following codes from system: <code><a href="artifacts/fsh-generated/resources/CodeSystem-bh-funding-type-codes.json" title="This CodeSystem defines coded concepts pertaining to a Behavioral Health program/grant." target="_blank">BehavioralHealthProgramFundingTypeCodes</a></code></p><table class="regular"><colgroup><col class="w-auto"/><col/></colgroup><thead><tr><th>Code</th><th>Display</th></tr></thead><tbody><tr><td class="nowrap"><a href="artifacts/fsh-generated/resources/CodeSystem-bh-funding-type-codes.json" title="This CodeSystem defines coded concepts pertaining to a Behavioral Health program/grant." target="_blank">discretionary</a></td><td>Discretionary Funding</td></tr><tr><td class="nowrap"><a href="artifacts/fsh-generated/resources/CodeSystem-bh-funding-type-codes.json" title="This CodeSystem defines coded concepts pertaining to a Behavioral Health program/grant." target="_blank">grant-funding-type</a></td><td>Grant Funding Type</td></tr><tr><td class="nowrap"><a href="artifacts/fsh-generated/resources/CodeSystem-bh-funding-type-codes.json" title="This CodeSystem defines coded concepts pertaining to a Behavioral Health program/grant." target="_blank">funding-program-info</a></td><td>Program Funding Information</td></tr></tbody></table></li></ul></div>
+</div><div role="tabpanel" class="tab-pane " id="a320aa32-cdd1-467d-869d-5477af61d517">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.resourceType" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">resourceType</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">ValueSet</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.id" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">bh-funding-types</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.url" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">url</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://fhir.org/guides/onc/bhp/ValueSet/bh-funding-types</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.name" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">name</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">BehavioralHealthProgramFundingTypes</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.title" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">title</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Behavioral Health Program Funding Types</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.status" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">status</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">draft</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.experimental" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">experimental</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">true</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.description" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">description</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">This ValueSet defines coded concepts pertaining to a Behavioral Health program/grant.</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">compose</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">include</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.system" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://fhir.org/guides/onc/bhp/CodeSystem/bh-funding-type-codes</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.concept" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">concept</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.concept.code" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">discretionary</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.concept.display" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Discretionary Funding</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.concept.code" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">grant-funding-type</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.concept.display" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Grant Funding Type</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.concept.code" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">funding-program-info</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.concept.display" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Program Funding Information</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="25cc69b6-86d9-4ae5-a020-867a8e098b02">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">ValueSet</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.id" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">bh-funding-types</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.url" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">url</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://fhir.org/guides/onc/bhp/ValueSet/bh-funding-types</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.name" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">name</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">BehavioralHealthProgramFundingTypes</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.title" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">title</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Behavioral Health Program Funding Types</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.status" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">draft</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.experimental" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">experimental</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">true</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.description" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">description</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">This ValueSet defines coded concepts pertaining to a Behavioral Health program/grant.</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">compose</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">include</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.system" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://fhir.org/guides/onc/bhp/CodeSystem/bh-funding-type-codes</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.concept" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">concept</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.concept.code" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">discretionary</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.concept.display" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Discretionary Funding</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">concept</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.concept" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">concept</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.concept.code" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">grant-funding-type</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.concept.display" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Grant Funding Type</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">concept</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.concept" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">concept</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.concept.code" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">funding-program-info</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ValueSet.json&tab=details#ValueSet.compose.include.concept.display" title="ValueSet
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ValueSet.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Program Funding Information</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">concept</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">include</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">compose</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">ValueSet</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="08f3c108-ec1f-4529-8706-dcb628f6dcb0">
+    <div class="stu3-treetable" id="f7987ade8199427d9c303231e0312ace" data-level="2"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="c55b8fd875ce435eb6ab4b2897eeba49"><td class="instance"><span class="baseIcon primitive"></span><b>ValueSet</b></td></tr><tr class="collapsed" data-id="de8f5727a0dd43f5bc0caba9645160ef" data-parentId="c55b8fd875ce435eb6ab4b2897eeba49"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>bh-funding-types</span></td></tr><tr class="collapsed" data-id="8887200e7d70471c84f464cdd8addc8f" data-parentId="c55b8fd875ce435eb6ab4b2897eeba49"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>http://fhir.org/guides/onc/bhp/ValueSet/bh-funding-types</span></td></tr><tr class="collapsed" data-id="3c00456cb9ed44019daa022b396090ad" data-parentId="c55b8fd875ce435eb6ab4b2897eeba49"><td class="instance"><span class="baseIcon primitive"></span><b>name : </b><span>BehavioralHealthProgramFundingTypes</span></td></tr><tr class="collapsed" data-id="1f3d2e006e0e4830b7fb555f7d68edbe" data-parentId="c55b8fd875ce435eb6ab4b2897eeba49"><td class="instance"><span class="baseIcon primitive"></span><b>title : </b><span>Behavioral Health Program Funding Types</span></td></tr><tr class="collapsed" data-id="f368570dfe234d8baf59647bf9e1a7f9" data-parentId="c55b8fd875ce435eb6ab4b2897eeba49"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>draft</span></td></tr><tr class="collapsed" data-id="dbfb934f694642679d8e6cfee7a1986f" data-parentId="c55b8fd875ce435eb6ab4b2897eeba49"><td class="instance"><span class="baseIcon primitive"></span><b>experimental : </b><span>True</span></td></tr><tr class="collapsed" data-id="24fc0a458d6944d4a08b5095d8403315" data-parentId="c55b8fd875ce435eb6ab4b2897eeba49"><td class="instance"><span class="baseIcon primitive"></span><b>description : </b><span>This ValueSet defines coded concepts pertaining to a Behavioral Health program/grant.</span></td></tr><tr class="collapsed" data-id="eb0ea0e896f74f5c9b92d7ecf3c54f94" data-parentId="c55b8fd875ce435eb6ab4b2897eeba49"><td class="instance"><span class="baseIcon primitive"></span><b>compose</b></td></tr><tr class="collapsed" data-id="892add58e75c409bb367717c2f41f92d" data-parentId="eb0ea0e896f74f5c9b92d7ecf3c54f94"><td class="instance"><span class="baseIcon primitive"></span><b>include</b></td></tr><tr class="collapsed" data-id="15c2d1a0ce34479fb5ab5fb8d75695c0" data-parentId="892add58e75c409bb367717c2f41f92d"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://fhir.org/guides/onc/bhp/CodeSystem/bh-funding-type-codes</span></td></tr><tr class="collapsed" data-id="bd714d74010140acbc495174ece8e59a" data-parentId="892add58e75c409bb367717c2f41f92d"><td class="instance"><span class="baseIcon primitive"></span><b>concept</b></td></tr><tr class="collapsed" data-id="16ece49bc7d14f81a8ba0c218f8fe561" data-parentId="bd714d74010140acbc495174ece8e59a"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>discretionary</span></td></tr><tr class="collapsed" data-id="9a59e08b9e994120a6fda11e5f6b6ef7" data-parentId="bd714d74010140acbc495174ece8e59a"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Discretionary Funding</span></td></tr><tr class="collapsed" data-id="aa9edbccd8e7417d8afd894166efcde0" data-parentId="892add58e75c409bb367717c2f41f92d"><td class="instance"><span class="baseIcon primitive"></span><b>concept</b></td></tr><tr class="collapsed" data-id="23ce7e887e2646b1953452d4782a9a4b" data-parentId="aa9edbccd8e7417d8afd894166efcde0"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>grant-funding-type</span></td></tr><tr class="collapsed" data-id="99e36be0c8b84598b48fa38156f340a0" data-parentId="aa9edbccd8e7417d8afd894166efcde0"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Grant Funding Type</span></td></tr><tr class="collapsed" data-id="78a0e37854584d478bf851892a5c57a6" data-parentId="892add58e75c409bb367717c2f41f92d"><td class="instance"><span class="baseIcon primitive"></span><b>concept</b></td></tr><tr class="collapsed" data-id="88987d3ece2e49339b16507201e65c4a" data-parentId="78a0e37854584d478bf851892a5c57a6"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>funding-program-info</span></td></tr><tr class="collapsed" data-id="020ea9fbbd8b4cad9bdcad4d058f6a41" data-parentId="78a0e37854584d478bf851892a5c57a6"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Program Funding Information</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTablef7987ade8199427d9c303231e0312ace = new InstanceTree();
+resourceTreeTablef7987ade8199427d9c303231e0312ace.init("f7987ade8199427d9c303231e0312ace");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="f624b8e2-3502-40f5-b60d-1c90b44685a1">
+    <div class="path"><table><tbody><tr><td>ValueSet.<span class="field">id[0]</span></td><td>bh-funding-types</td></tr><tr><td>ValueSet.<span class="field">url[0]</span></td><td>http://fhir.org/guides/onc/bhp/ValueSet/bh-funding-types</td></tr><tr><td>ValueSet.<span class="field">name[0]</span></td><td>BehavioralHealthProgramFundingTypes</td></tr><tr><td>ValueSet.<span class="field">title[0]</span></td><td>Behavioral Health Program Funding Types</td></tr><tr><td>ValueSet.<span class="field">status[0]</span></td><td>draft</td></tr><tr><td>ValueSet.<span class="field">experimental[0]</span></td><td>True</td></tr><tr><td>ValueSet.<span class="field">description[0]</span></td><td>This ValueSet defines coded concepts pertaining to a Behavioral Health program/grant.</td></tr><tr><td>ValueSet.compose[0].include[0].<span class="field">system[0]</span></td><td>http://fhir.org/guides/onc/bhp/CodeSystem/bh-funding-type-codes</td></tr><tr><td>ValueSet.compose[0].include[0].concept[0].<span class="field">code[0]</span></td><td>discretionary</td></tr><tr><td>ValueSet.compose[0].include[0].concept[0].<span class="field">display[0]</span></td><td>Discretionary Funding</td></tr><tr><td>ValueSet.compose[0].include[0].concept[1].<span class="field">code[0]</span></td><td>grant-funding-type</td></tr><tr><td>ValueSet.compose[0].include[0].concept[1].<span class="field">display[0]</span></td><td>Grant Funding Type</td></tr><tr><td>ValueSet.compose[0].include[0].concept[2].<span class="field">code[0]</span></td><td>funding-program-info</td></tr><tr><td>ValueSet.compose[0].include[0].concept[2].<span class="field">display[0]</span></td><td>Program Funding Information</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

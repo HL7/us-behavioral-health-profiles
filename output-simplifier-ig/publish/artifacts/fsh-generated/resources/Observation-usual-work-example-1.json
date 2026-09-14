@@ -1,0 +1,38 @@
+{
+  "resourceType": "Observation",
+  "id": "usual-work-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "11341-5",
+        "system": "http://loinc.org",
+        "display": "History of Occupation"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "performer": [
+    {
+      "reference": "Practitioner/mental-health-provider-example-1",
+      "display": "Dr. Lazslo Cravensworth"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "45-2092.02.015820",
+        "system": "urn:oid:2.16.840.1.114222.4.5.327",
+        "display": "Farm Worker [Farmworkers and Laborers, Crop]"
+      }
+    ]
+  }
+}

@@ -208,7 +208,7 @@ This table provides a correlation between USCDI+ behavioral health data elements
   </tr>
   <tr>
      <td class="tg-0lax">Health Insurance Information</td>
-     <td class="tg-1wig">Insurance Plan Name</td>
+     <td class="tg-1wig">Health Insurance Plan</td>
      <td class="tg-zzem">{{pagelink:example-medicaid-coverage-example-1}}</td>
      <td class="tg-0lax">Example of health insurance coverage name</td>
   </tr>

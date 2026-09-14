@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | example-adult-child-relatedperson-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-adult-child-relatedperson-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+<h2 id="example-relatedperson-adult-child-relatedperson-example">Example RelatedPerson: adult-child-relatedperson-example</h2>
+<p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#0b8bbabc-4e97-4c54-b969-330c0cd24b88" aria-controls="0b8bbabc-4e97-4c54-b969-330c0cd24b88" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#ecbc41d0-cb76-4c14-a054-7aa97d6864f7" aria-controls="ecbc41d0-cb76-4c14-a054-7aa97d6864f7" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#63d1d6bc-c763-4b25-b3bf-8ec74cc97d27" aria-controls="63d1d6bc-c763-4b25-b3bf-8ec74cc97d27" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#bc424e75-748a-4b88-a19b-4eeb517c7d83" aria-controls="bc424e75-748a-4b88-a19b-4eeb517c7d83" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="0b8bbabc-4e97-4c54-b969-330c0cd24b88">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.resourceType" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">resourceType</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">RelatedPerson</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.id" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">adult-child-relatedperson-example-1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.meta" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">meta</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.meta.profile" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">profile</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson|6.1.0</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.active" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">active</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">true</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.patient" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">patient</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.patient.reference" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.patient.display" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">James Wolff</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.relationship" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">relationship</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.relationship.coding" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.relationship.coding.system" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/v3-RoleCode</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.relationship.coding.code" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">CHILD</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.relationship.coding.display" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">child</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.name" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">name</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.name.use" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">use</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">official</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.name.family" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">family</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Wolff</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.name.given" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">given</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">&quot;</span><span class="string">Sarah</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.telecom" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">telecom</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.telecom.system" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">phone</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.telecom.value" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">value</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">555-555-5555</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.telecom.use" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">use</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">home</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.telecom.system" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">email</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.telecom.value" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">value</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">sarah.wolff@example.com</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.telecom.use" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">use</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">home</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.birthDate" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">birthDate</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">1996-01-28</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.address" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">address</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.address.use" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">use</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">home</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.address.line" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">line</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">&quot;</span><span class="string">80A VILLAGE ST</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.address.city" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">city</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">NEW HOLLAND</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.address.state" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">state</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">PA</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.address.postalCode" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">postalCode</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">17557</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="ecbc41d0-cb76-4c14-a054-7aa97d6864f7">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">RelatedPerson</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.id" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">adult-child-relatedperson-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.meta" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.meta.profile" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson|6.1.0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.active" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">active</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">true</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.patient" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">patient</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.patient.reference" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.patient.display" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">James Wolff</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">patient</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.relationship" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">relationship</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.relationship.coding" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.relationship.coding.system" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/v3-RoleCode</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.relationship.coding.code" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">CHILD</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.relationship.coding.display" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">child</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">relationship</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.name" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">name</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.name.use" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">use</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">official</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.name.family" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">family</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Wolff</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.name.given" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">given</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Sarah</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">name</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.telecom" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">telecom</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.telecom.system" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">phone</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.telecom.value" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">555-555-5555</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.telecom.use" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">use</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">home</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">telecom</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.telecom" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">telecom</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.telecom.system" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">email</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.telecom.value" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">sarah.wolff@example.com</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.telecom.use" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">use</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">home</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">telecom</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.birthDate" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">birthDate</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">1996-01-28</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.address" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">address</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.address.use" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">use</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">home</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.address.line" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">line</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">80A VILLAGE ST</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.address.city" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">city</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">NEW HOLLAND</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.address.state" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">state</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">PA</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-relatedperson.json&tab=details#RelatedPerson.address.postalCode" title="US Core RelatedPerson Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-relatedperson.json" target="_blank">postalCode</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">17557</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">address</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">RelatedPerson</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="63d1d6bc-c763-4b25-b3bf-8ec74cc97d27">
+    <div class="stu3-treetable" id="ebe447db219545dd981d6527fe2c763f" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="7444a6183b8f4a62afac236bfa141a4b"><td class="instance"><span class="baseIcon primitive"></span><b>RelatedPerson</b></td></tr><tr class="collapsed" data-id="4e991fbdb2524e3f9b3e775d8ccca1f9" data-parentId="7444a6183b8f4a62afac236bfa141a4b"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>adult-child-relatedperson-example-1</span></td></tr><tr class="collapsed" data-id="5f8614e336e948218ebf131e2c571f9e" data-parentId="7444a6183b8f4a62afac236bfa141a4b"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="5a4889459f5741e4a3bb318a9e53575d" data-parentId="5f8614e336e948218ebf131e2c571f9e"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson|6.1.0</span></td></tr><tr class="collapsed" data-id="0e1a2786ad4648aab76bde389990d83c" data-parentId="7444a6183b8f4a62afac236bfa141a4b"><td class="instance"><span class="baseIcon primitive"></span><b>active : </b><span>True</span></td></tr><tr class="collapsed" data-id="945798fa6e424d11b76873f9a09724fb" data-parentId="7444a6183b8f4a62afac236bfa141a4b"><td class="instance"><span class="baseIcon primitive"></span><b>patient</b></td></tr><tr class="collapsed" data-id="2d94f84831be4c089b457832063b0cfb" data-parentId="945798fa6e424d11b76873f9a09724fb"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="6c44f73668734da4a581da3be03e3540" data-parentId="945798fa6e424d11b76873f9a09724fb"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="29189bac74e84d16962a375786b93ada" data-parentId="7444a6183b8f4a62afac236bfa141a4b"><td class="instance"><span class="baseIcon primitive"></span><b>relationship</b></td></tr><tr class="collapsed" data-id="1d00c58aeacb40f88ace5c5aecfeabce" data-parentId="29189bac74e84d16962a375786b93ada"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="24b17e83045c4d58b676dfd58c93411c" data-parentId="1d00c58aeacb40f88ace5c5aecfeabce"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/v3-RoleCode</span></td></tr><tr class="collapsed" data-id="bf97034c06df46d59656b6eef0bce784" data-parentId="1d00c58aeacb40f88ace5c5aecfeabce"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>CHILD</span></td></tr><tr class="collapsed" data-id="3bf202b351bf46379bfa029c75bb4389" data-parentId="1d00c58aeacb40f88ace5c5aecfeabce"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>child</span></td></tr><tr class="collapsed" data-id="7204383b9aa14cc899b25631d2cb312b" data-parentId="7444a6183b8f4a62afac236bfa141a4b"><td class="instance"><span class="baseIcon primitive"></span><b>name</b></td></tr><tr class="collapsed" data-id="a4aa63e7f2ac46478bea49cf2df53b8a" data-parentId="7204383b9aa14cc899b25631d2cb312b"><td class="instance"><span class="baseIcon primitive"></span><b>use : </b><span>official</span></td></tr><tr class="collapsed" data-id="c66db1a22a4c44f29d23fdcdc35f3b9e" data-parentId="7204383b9aa14cc899b25631d2cb312b"><td class="instance"><span class="baseIcon primitive"></span><b>family : </b><span>Wolff</span></td></tr><tr class="collapsed" data-id="245e67deb92d44aab94e2c80e3476326" data-parentId="7204383b9aa14cc899b25631d2cb312b"><td class="instance"><span class="baseIcon primitive"></span><b>given : </b><span>Sarah</span></td></tr><tr class="collapsed" data-id="e1fb648d744b4f828276d6548eb2e6e6" data-parentId="7444a6183b8f4a62afac236bfa141a4b"><td class="instance"><span class="baseIcon primitive"></span><b>telecom</b></td></tr><tr class="collapsed" data-id="86805d99698f4edeba027c779e260579" data-parentId="e1fb648d744b4f828276d6548eb2e6e6"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>phone</span></td></tr><tr class="collapsed" data-id="29864a983d284c18b73a782af692626a" data-parentId="e1fb648d744b4f828276d6548eb2e6e6"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>555-555-5555</span></td></tr><tr class="collapsed" data-id="1364dad133af4b9b8789db88753f46af" data-parentId="e1fb648d744b4f828276d6548eb2e6e6"><td class="instance"><span class="baseIcon primitive"></span><b>use : </b><span>home</span></td></tr><tr class="collapsed" data-id="3279610eefb441b49b55ca39f03898d3" data-parentId="7444a6183b8f4a62afac236bfa141a4b"><td class="instance"><span class="baseIcon primitive"></span><b>telecom</b></td></tr><tr class="collapsed" data-id="ffdd23447a56431ca33ad4d8f461dcdc" data-parentId="3279610eefb441b49b55ca39f03898d3"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>email</span></td></tr><tr class="collapsed" data-id="69e4d3ad479b4cf9bbe59e1d0774c9b3" data-parentId="3279610eefb441b49b55ca39f03898d3"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>sarah.wolff@example.com</span></td></tr><tr class="collapsed" data-id="202bba55ebb745b2ad673a8e59d34acd" data-parentId="3279610eefb441b49b55ca39f03898d3"><td class="instance"><span class="baseIcon primitive"></span><b>use : </b><span>home</span></td></tr><tr class="collapsed" data-id="ba2a311b76ec4fae80658ed54ef28242" data-parentId="7444a6183b8f4a62afac236bfa141a4b"><td class="instance"><span class="baseIcon primitive"></span><b>birthDate : </b><span>1996-01-28</span></td></tr><tr class="collapsed" data-id="8a68a621b6434c619663ba4bbd5153a8" data-parentId="7444a6183b8f4a62afac236bfa141a4b"><td class="instance"><span class="baseIcon primitive"></span><b>address</b></td></tr><tr class="collapsed" data-id="e104a94c046042a196e24eca63b989c1" data-parentId="8a68a621b6434c619663ba4bbd5153a8"><td class="instance"><span class="baseIcon primitive"></span><b>use : </b><span>home</span></td></tr><tr class="collapsed" data-id="61062f3571fd400c998cf2f9d9175a4e" data-parentId="8a68a621b6434c619663ba4bbd5153a8"><td class="instance"><span class="baseIcon primitive"></span><b>line : </b><span>80A VILLAGE ST</span></td></tr><tr class="collapsed" data-id="644b4eccb7b34f798b849850fbd3a86a" data-parentId="8a68a621b6434c619663ba4bbd5153a8"><td class="instance"><span class="baseIcon primitive"></span><b>city : </b><span>NEW HOLLAND</span></td></tr><tr class="collapsed" data-id="5b8a1e9ba3e44f8dacf8bf68de1fbbad" data-parentId="8a68a621b6434c619663ba4bbd5153a8"><td class="instance"><span class="baseIcon primitive"></span><b>state : </b><span>PA</span></td></tr><tr class="collapsed" data-id="9f7b6e8e88804b0fb0f740a682c4e00d" data-parentId="8a68a621b6434c619663ba4bbd5153a8"><td class="instance"><span class="baseIcon primitive"></span><b>postalCode : </b><span>17557</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTableebe447db219545dd981d6527fe2c763f = new InstanceTree();
+resourceTreeTableebe447db219545dd981d6527fe2c763f.init("ebe447db219545dd981d6527fe2c763f");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="bc424e75-748a-4b88-a19b-4eeb517c7d83">
+    <div class="path"><table><tbody><tr><td>RelatedPerson.<span class="field">id[0]</span></td><td>adult-child-relatedperson-example-1</td></tr><tr><td>RelatedPerson.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson|6.1.0</td></tr><tr><td>RelatedPerson.<span class="field">active[0]</span></td><td>True</td></tr><tr><td>RelatedPerson.patient[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>RelatedPerson.patient[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>RelatedPerson.relationship[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td></tr><tr><td>RelatedPerson.relationship[0].coding[0].<span class="field">code[0]</span></td><td>CHILD</td></tr><tr><td>RelatedPerson.relationship[0].coding[0].<span class="field">display[0]</span></td><td>child</td></tr><tr><td>RelatedPerson.name[0].<span class="field">use[0]</span></td><td>official</td></tr><tr><td>RelatedPerson.name[0].<span class="field">family[0]</span></td><td>Wolff</td></tr><tr><td>RelatedPerson.name[0].<span class="field">given[0]</span></td><td>Sarah</td></tr><tr><td>RelatedPerson.telecom[0].<span class="field">system[0]</span></td><td>phone</td></tr><tr><td>RelatedPerson.telecom[0].<span class="field">value[0]</span></td><td>555-555-5555</td></tr><tr><td>RelatedPerson.telecom[0].<span class="field">use[0]</span></td><td>home</td></tr><tr><td>RelatedPerson.telecom[1].<span class="field">system[0]</span></td><td>email</td></tr><tr><td>RelatedPerson.telecom[1].<span class="field">value[0]</span></td><td>sarah.wolff@example.com</td></tr><tr><td>RelatedPerson.telecom[1].<span class="field">use[0]</span></td><td>home</td></tr><tr><td>RelatedPerson.<span class="field">birthDate[0]</span></td><td>1996-01-28</td></tr><tr><td>RelatedPerson.address[0].<span class="field">use[0]</span></td><td>home</td></tr><tr><td>RelatedPerson.address[0].<span class="field">line[0]</span></td><td>80A VILLAGE ST</td></tr><tr><td>RelatedPerson.address[0].<span class="field">city[0]</span></td><td>NEW HOLLAND</td></tr><tr><td>RelatedPerson.address[0].<span class="field">state[0]</span></td><td>PA</td></tr><tr><td>RelatedPerson.address[0].<span class="field">postalCode[0]</span></td><td>17557</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

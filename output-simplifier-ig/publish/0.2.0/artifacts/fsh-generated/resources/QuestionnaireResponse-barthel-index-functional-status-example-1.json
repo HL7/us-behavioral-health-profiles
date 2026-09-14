@@ -1,0 +1,160 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "barthel-index-functional-status-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|6.1.0"
+    ]
+  },
+  "questionnaire": "https://www.sralab.org/sites/default/files/2017-07/barthel.pdf",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "authored": "2024-02-01T20:50:32.718Z",
+  "author": {
+    "reference": "Practitioner/ed-physician-example-1"
+  },
+  "item": [
+    {
+      "linkId": "/83184-2",
+      "text": "Feeding or eating ability",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA12302-8",
+            "system": "http://loinc.org",
+            "display": "Independent"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/83185-9",
+      "text": "Transferring ability",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA12302-8",
+            "system": "http://loinc.org",
+            "display": "Independent"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/96767-9",
+      "text": "Grooming ability",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA31644-0",
+            "system": "http://loinc.org",
+            "display": "Independent face/hair/teeth/shaving (implements provided)"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/83183-4",
+      "text": "Toileting ability",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA31632-5",
+            "system": "http://loinc.org",
+            "display": "Independent (on and off, dressing, wiping)"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/83181-8",
+      "text": "Bathing ability",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA31636-6",
+            "system": "http://loinc.org",
+            "display": "Independent (or in shower)"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/83186-7",
+      "text": "Ambulation ability",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA31642-4",
+            "system": "http://loinc.org",
+            "display": "Independent (but may use any aid; for example, stick) >50 yards"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/96758-8",
+      "text": "Stairs ability",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA12302-8",
+            "system": "http://loinc.org",
+            "display": "Independent"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/83182-6",
+      "text": "Dressing ability",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA31638-2",
+            "system": "http://loinc.org",
+            "display": "Independent (including buttons, zips, laces, etc.)"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/96759-6",
+      "text": "Bowel control ability",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA31625-9",
+            "system": "http://loinc.org",
+            "display": "Continent"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/96760-4",
+      "text": "Bladder control ability",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA31625-9",
+            "system": "http://loinc.org",
+            "display": "Continent"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/96761-2",
+      "text": "Total score Barthel Index",
+      "answer": [
+        {
+          "valueInteger": 100
+        }
+      ]
+    }
+  ]
+}

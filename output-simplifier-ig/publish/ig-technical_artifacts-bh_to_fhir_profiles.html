@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | +BH to FHIR Profiles - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+
+    <li class="active">&#x2B;BH to FHIR Profiles</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+<h1 id="page-title">4.2. +BH to FHIR Profiles</h1>
+<p>This table serves as a crosswalk between USCDI+ behavioral health data elements and their corresponding proposed FHIR profiles. The table maps the +BH data classes and elements, such as allergies, clinical notes, and patient demographics/information, to FHIR profiles, showing how each USCDI+ BH element aligns with FHIR's data standards. This alignment facilitates the standardized exchange of health information across different systems, ensuring consistency and interoperability in managing and sharing healthcare data.</p>
+<table class="tg"> <thead>
+  <tr>
+     <th class="tg-w98d">USCDI+ BH <br> Data Class</th>
+     <th class="tg-w98d"><span style="color: rgba(255, 255, 255, 1); background-color: rgba(21, 96, 130, 1)">USCDI+ BH </span><br><span style="color: rgba(255, 255, 255, 1); background-color: rgba(21, 96, 130, 1)"> Data Element</span></th>
+     <th class="tg-w98d"><span style="color: rgba(255, 255, 255, 1); background-color: rgba(21, 96, 130, 1)">Proposed FHIR Profile</span></th>
+     <th class="tg-w98d"><span style="background-color: rgba(21, 96, 130, 1)">Proposed FHIR Data Element</span></th>
+  </tr></thead>
+<tbody>
+  
+  <tr>
+     <td class="tg-0lax">Allergies and Intolerances</td>
+     <td class="tg-1wig">Reaction</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a></td>
+     <td class="tg-ktyi">allergyIntolerance.reaction.manifestation</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Allergies and Intolerances</td>
+     <td class="tg-1wig">Medication Allergy Intolerance</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a></td>
+     <td class="tg-ktyi">allergyIntolerance.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Allergies and Intolerances</td>
+     <td class="tg-1wig">Non-Medication Allergy Intolerance</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a></td>
+     <td class="tg-ktyi">allergyIntolerance.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Care Team Members</td>
+     <td class="tg-1wig">Care Team Member Role</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-careteam.html">US Core Care Team Profile</a></td>
+     <td class="tg-0lax">careTeam.participant.role</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Care Team Members</td>
+     <td class="tg-1wig">Care Team Member Telecom</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-practitioner.html">US Core Care Practitioner Profile</a></td>
+     <td class="tg-ktyi">practitioner.telecom</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Care Team Members</td>
+     <td class="tg-1wig">Care Team Member Identifier</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-practitioner.html">US Core Care Practitioner Profile</a></td>
+     <td class="tg-ktyi">practitioner.identifier</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Clinical Notes</td>
+     <td class="tg-1wig">Mental Health Consultation Note</td>
+     <td class="tg-zzem"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes.html" title='ig/technical_artifacts/artifacts/structuredefinition-mental-health-clinical-notes.page.md'>US Behavioral Health Mental Health Clinical Notes Profile</a></td>
+     <td class="tg-0lax">documentReference.type</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Clinical Notes</td>
+     <td class="tg-1wig">Mental Health Discharge Summary Note</td>
+     <td class="tg-zzem"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes.html" title='ig/technical_artifacts/artifacts/structuredefinition-mental-health-clinical-notes.page.md'>US Behavioral Health Mental Health Clinical Notes Profile</a></td>
+     <td class="tg-0lax">documentReference.type</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Clinical Notes</td>
+     <td class="tg-1wig">Mental Health History &amp; Physical</td>
+     <td class="tg-zzem"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes.html" title='ig/technical_artifacts/artifacts/structuredefinition-mental-health-clinical-notes.page.md'>US Behavioral Health Mental Health Clinical Notes Profile</a></td>
+     <td class="tg-0lax">documentReference.type</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Clinical Notes</td>
+     <td class="tg-1wig">Mental Health Procedure Note</td>
+     <td class="tg-zzem"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes.html" title='ig/technical_artifacts/artifacts/structuredefinition-mental-health-clinical-notes.page.md'>US Behavioral Health Mental Health Clinical Notes Profile</a></td>
+     <td class="tg-0lax">documentReference.type</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Clinical Notes</td>
+     <td class="tg-1wig">Mental Health Progress Note</td>
+     <td class="tg-zzem"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes.html" title='ig/technical_artifacts/artifacts/structuredefinition-mental-health-clinical-notes.page.md'>US Behavioral Health Mental Health Clinical Notes Profile</a></td>
+     <td class="tg-0lax">documentReference.type</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Clinical Tests</td>
+     <td class="tg-1wig">Clinical Test</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result Profile</a></td>
+     <td class="tg-0lax">observation.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Clinical Tests</td>
+     <td class="tg-1wig">Clinical Test Result/Report</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result Profile</a></td>
+     <td class="tg-0lax">observation.value</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Consent</td>
+     <td class="tg-1wig">Consent</td>
+     <td class="tg-zzem"><a href="https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Consent.html">SDOH Clinical Care Consent Profile</a></td>
+     <td class="tg-yk8o">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Diagnostic Imaging</td>
+     <td class="tg-1wig">Diagnostic Imaging Report</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-diagnosticreport-note.html"> US Core DiagnosticReport Profile for Report and Note Exchange</a></td>
+     <td class="tg-0lax">diagnosticReport.result</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Diagnostic Imaging</td>
+     <td class="tg-1wig">Diagnostic Imaging Test</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-diagnosticreport-note.html">US Core Diagnostic Report</a></td>
+     <td class="tg-0lax">diagnosticReport.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Encounter Information</td>
+     <td class="tg-1wig">Diagnosis Rank</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a></td>
+     <td class="tg-0lax">encounter.diagnosis.rank</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Encounter Information</td>
+     <td class="tg-1wig">Encounter Diagnosis</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a></td>
+     <td class="tg-0lax">encounter.diagnosis&nbsp;</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Encounter Information</td>
+     <td class="tg-1wig">Encounter Disposition</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a></td>
+     <td class="tg-0lax">encounter.hospitalization.dischargeDisposition</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Encounter Information</td>
+     <td class="tg-1wig">Encounter Location</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a></td>
+     <td class="tg-0lax">encounter.location</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Encounter Information</td>
+     <td class="tg-1wig">Encounter Time</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a></td>
+     <td class="tg-0lax">encounter.period</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Encounter Information</td>
+     <td class="tg-1wig">Encounter Type</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a></td>
+     <td class="tg-0lax">encounter.type</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Facility Information</td>
+     <td class="tg-1wig">Facility Type</td>
+     <td class="tg-6rn5"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-location.html">US Core Location Profile</a></td>
+     <td class="tg-ktyi">location.type</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Family Health History</td>
+     <td class="tg-1wig">Family Health History</td>
+     <td class="tg-zzem"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes.html" title='ig/technical_artifacts/artifacts/structuredefinition-mental-health-clinical-notes.page.md'>US Behavioral Health Mental Health Clinical Notes Profile</a></td>
+     <td class="tg-ktyi">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Federal/State Grants Reporting Requirements</td>
+     <td class="tg-1wig">Grant Number</td>
+     <td class="tg-zzem"><a href="ig-technical_artifacts-artifacts-structuredefinition-bh-grant-info.html" title='ig/technical_artifacts/artifacts/structuredefinition-bh-grant-info.page.md'>US Behavioral Health Grant Information Observation Profile</a></td>
+     <td class="tg-0lax">observation.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Federal/State Grants Reporting Requirements</td>
+     <td class="tg-1wig">Grant Program ID</td>
+     <td class="tg-zzem"><a href="ig-technical_artifacts-artifacts-structuredefinition-bh-grant-info.html" title='ig/technical_artifacts/artifacts/structuredefinition-bh-grant-info.page.md'>US Behavioral Health Grant Information Observation Profile</a></td>
+     <td class="tg-7zrl">observation.extension</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Federal/State Grants Reporting Requirements</td>
+     <td class="tg-1wig">Grant/Funding Type</td>
+     <td class="tg-zzem"><a href="ig-technical_artifacts-artifacts-structuredefinition-bh-grant-info.html" title='ig/technical_artifacts/artifacts/structuredefinition-bh-grant-info.page.md'>US Behavioral Health Grant Information Observation Profile</a></td>
+     <td class="tg-7zrl">observation.category</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Goals and Preferences</td>
+     <td class="tg-1wig">Care Experience Preference</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-care-experience-preference.html">US Core Care Experience Preference Profile (STU7)</a></td>
+     <td class="tg-yk8o">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Goals and Preferences</td>
+     <td class="tg-1wig">Patient Goals</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-goal.html">US Core Goal Profile</a></td>
+     <td class="tg-0lax">goal.description</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Goals and Preferences</td>
+     <td class="tg-1wig">SDOH Goals</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-goal.html">US Core Goal Profile</a></td>
+     <td class="tg-0lax">goal.description</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Goals and Preferences</td>
+     <td class="tg-1wig">Treatment Intervention Preference</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-treatment-intervention-preference.html">US Core Treatment Intervention Preference Profile (STU7)</a></td>
+     <td class="tg-yk8o">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Insurance Information</td>
+     <td class="tg-1wig">Health Insurance Plan</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-coverage.html">US Core Coverage Profile</a></td>
+     <td class="tg-0lax">coverage.payor.name</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Insurance Information</td>
+     <td class="tg-1wig">Coverage Status</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-coverage.html">US Core Coverage Profile</a></td>
+     <td class="tg-0lax">coverage.status</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Insurance Information</td>
+     <td class="tg-1wig">Coverage Type</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-coverage.html">US Core Coverage Profile</a></td>
+     <td class="tg-0lax">coverage.type</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Insurance Information</td>
+     <td class="tg-1wig">Group Identifier</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-coverage.html">US Core Coverage Profile</a></td>
+     <td class="tg-0lax">coverage.class:group</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Insurance Information</td>
+     <td class="tg-1wig">Member Identifier</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-coverage.html">US Core Coverage Profile</a></td>
+     <td class="tg-0lax">coverage.memberID</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Insurance Information</td>
+     <td class="tg-1wig">Payer Identifier</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-coverage.html">US Core Coverage Profile</a></td>
+     <td class="tg-0lax">coverage.payor.identifier</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Insurance Information</td>
+     <td class="tg-1wig">Relationship to Subscriber</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-coverage.html">US Core Coverage Profile</a></td>
+     <td class="tg-0lax">coverage.relationship</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Insurance Information</td>
+     <td class="tg-1wig">Subscriber Identifier</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-coverage.html">US Core Coverage Profile</a></td>
+     <td class="tg-0lax">coverage.subscriberID</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Depression Assessment</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html"> US Core QuestionnaireResponse Profile</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Mental/Cognitive Status</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Anxiety Assessment</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Alcohol Use</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Disability Status</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Functional Status</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Pregnancy Status</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-pregnancystatus.html">US Core Observation Pregnancy Status Profile</a></td>
+     <td class="tg-0lax">observation.value</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">SDOH Assessment</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Tobacco and Nicotine Product Use</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile</a></td>
+     <td class="tg-0lax">observation.value</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Substance Use</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Suicide Risk Screen</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Mental Health Status Screen</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Mental Trauma and PTSD Assessment</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Immunizations</td>
+     <td class="tg-1wig">Immunizations</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-immunization.html">US Core Immunization Profile</a></td>
+     <td class="tg-0lax">immunization.vaccineCode</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Laboratory</td>
+     <td class="tg-1wig">Tests</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-clinical-result.html">US Core Observation Clinical Result Profile</a></td>
+     <td class="tg-0lax">observation.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Laboratory</td>
+     <td class="tg-1wig">Values/Results</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Observation Profile</a></td>
+     <td class="tg-0lax">observation.value</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Medications</td>
+     <td class="tg-1wig">Discharge Medications</td>
+     <td class="tg-zzem"><a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-medicationrequest.html">US Core Medication Request Profile</a></td>
+     <td class="tg-0lax">medicationRequest.category:us-core</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Medications</td>
+     <td class="tg-1wig">Dose</td>
+     <td class="tg-zzem"><a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-medicationrequest.html">US Core Medication Request Profile</a></td>
+     <td class="tg-uxzt">medicationRequest.dose</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Medications</td>
+     <td class="tg-1wig">Dose Unit of Measure</td>
+     <td class="tg-zzem"><a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-medicationrequest.html">US Core Medication Request Profile</a></td>
+     <td class="tg-uxzt">medicationRequest.dose</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Medications</td>
+     <td class="tg-1wig">Medications</td>
+     <td class="tg-zzem"><a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-medication.html">US Core Medication Profile</a></td>
+     <td class="tg-0lax">medication.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Medications</td>
+     <td class="tg-1wig">Medication Adherence</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-medicationrequest.html">US Core Medication Request Profile</a></td>
+     <td class="tg-0lax">medicationRequest.medicationAdherence</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Medications</td>
+     <td class="tg-1wig">Medication Instructions</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-medicationrequest.html">US Core Medication Request Profile</a></td>
+     <td class="tg-0lax">medicationRequest. dosageInstructions</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Medications</td>
+     <td class="tg-1wig">Medication Quantity</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-medicationrequest.html">US Core Medication Request Profile</a></td>
+     <td class="tg-0lax">medicationRequest.dispense Request</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Medications</td>
+     <td class="tg-1wig">Medications Dispensed</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-medicationdispense.html">US Core Medication Dispense Profile</a></td>
+     <td class="tg-0lax">medicationDispense.</td>
+  </tr>
+  
+  <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Current Address</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-0lax">patient.address</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Date of Birth</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-0lax">patient.birthDate</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Email Address</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-0lax">patient.telecom</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Ethnicity</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-0lax">patient.ethnicity</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">First Name</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-0lax">patient.name.given</td>
+  </tr>
+  
+  <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Last Name</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-0lax">patient.name.family</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Name Suffix</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-0lax">patient.name.suffix</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Phone Number</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-0lax">patient.telecom</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Preferred Language</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-0lax">patient.communication.language</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Race</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-0lax">patient.race</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Related Person's Name</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-relatedperson.html">US Core RelatedPerson Profile</a></td>
+     <td class="tg-0lax">relatedPerson.name</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Relationship Type</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-relatedperson.html">US Core RelatedPerson Profile</a></td>
+     <td class="tg-0lax">relatedPerson.relationship</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Sex</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-0lax">patient.sex</td>
+  </tr>
+  
+  <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Tribal Affiliation</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-0lax">patient.tribalAffiliation</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Date of Death</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-0lax">patient.deceased</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Patient Identifier</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-0lax">patient.identifier</td>
+  </tr>
+  
+  <tr>
+     <td class="tg-0lax">Patient Summary and Plan</td>
+     <td class="tg-1wig">Assessment and Plan of Treatment</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Problems</td>
+     <td class="tg-1wig">Problems</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+     <td class="tg-0lax">condition.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Problems</td>
+     <td class="tg-1wig">SDOH Problems/Health Concerns</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+     <td class="tg-0lax">condition.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Problems</td>
+     <td class="tg-1wig">Date of Diagnosis</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Problems</td>
+     <td class="tg-1wig">Date of Onset</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+     <td class="tg-0lax">condition.onset</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Problems</td>
+     <td class="tg-1wig">Date of Resolution</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+     <td class="tg-0lax">condition.abatement</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Procedures</td>
+     <td class="tg-1wig">Performance Time</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-procedure.html">US Core Procedures Profile</a></td>
+     <td class="tg-0lax">procedure.performed</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Procedures</td>
+     <td class="tg-1wig">Procedures</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-procedure.html">US Core Procedures Profile</a></td>
+     <td class="tg-0lax">procedure.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Procedures</td>
+     <td class="tg-1wig">Reason for Referral</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-procedure.html">US Core Procedures Profile</a></td>
+     <td class="tg-ktyi">serviceRequest.reasonReference</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Procedures</td>
+     <td class="tg-1wig">SDOH Interventions</td>
+     <td class="tg-6rn5"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-servicerequest.html">US Core Service Request Profile</a></td>
+     <td class="tg-ktyi">serviceRequest.code</td>
+  </tr>
+    <tr>
+     <td class="tg-0lax">Recovery Support Services</td>
+     <td class="tg-1wig">Harm Reduction Activities</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html">US Core Condition Encounter Diagnosis Profile</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html">US Core Condition Problems and Health Concerns Profile</a></td>
+     <td class="tg-0lax">procedure.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Recovery Support Services</td>
+     <td class="tg-1wig">Peer Coaching or Mentoring</td>
+     <td class="tg-6rn5"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-servicerequest.html">US Core Service Request Profile</a></td>
+     <td class="tg-ktyi">serviceRequest.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Recovery Support Services</td>
+     <td class="tg-1wig">Recovery Planning</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-procedure.html">US Core Procedures Profile</a></td>
+     <td class="tg-0lax">procedure.code</td>
+  </tr>
+    <tr>
+     <td class="tg-0lax">Social Determinants of Health</td>
+     <td class="tg-1wig">Food Insecurity</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+    <tr>
+     <td class="tg-0lax">Social Determinants of Health</td>
+     <td class="tg-1wig">Housing Instability</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+    <tr>
+     <td class="tg-0lax">Social Determinants of Health</td>
+     <td class="tg-1wig">Interpersonal Violence</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+    <tr>
+     <td class="tg-0lax">Social Determinants of Health</td>
+     <td class="tg-1wig">Transportation Insecurity</td>
+     <td class="tg-0lax"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response</a><br><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></td>
+     <td class="tg-0lax">n/a</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Body Height</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-body-height.html">US Core Body Height</a></td>
+     <td class="tg-0lax">observation.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Body Temperature</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-body-temperature.html">US Core Body Temperature</a></td>
+     <td class="tg-0lax">observation.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Body Weight</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-body-weight.html">US Core Body Weight</a></td>
+     <td class="tg-0lax">observation.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Diastolic Blood Pressure</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-blood-pressure.html">US Core Blood Pressure Profile</a></td>
+     <td class="tg-0lax">observation.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Heart Rate</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-heart-rate.html">US Core Heart Rate</a></td>
+     <td class="tg-0lax">observation.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Pulse Oximetry</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-pulse-oximetry.html">US Core Pulse Oximetry</a></td>
+     <td class="tg-0lax">observation.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Respiratory Rate</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-respiratory-rate.html">US Core Respiratory Rate</a></td>
+     <td class="tg-0lax">observation.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Systolic Blood Pressure</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-blood-pressure.html">US Core Blood Pressure Profile</a></td>
+     <td class="tg-0lax">observation.code</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Average Blood Pressure</td>
+     <td class="tg-zzem"><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-average-blood-pressure.html">US Core Average Blood Pressure (STU7)</a></td>
+     <td class="tg-0lax">observation.code</td>
+  </tr>
+  
+  <tr>
+     <td class="tg-0lax">Work Information</td>
+     <td class="tg-1wig">Veteran Status</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-zzem">extension</td>
+  </tr>
+</tbody></table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

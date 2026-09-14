@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | structuredefinition-program-info - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">structuredefinition-program-info</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+<h2 id="grant-program-id-and-number-extension">Grant Program ID and Number Extension</h2>
+<p><table class="table meta-table">
+  <tbody><tr>
+    <td colspan="2">
+      <i>Official URL:</i> <code>http://fhir.org/guides/onc/bhp/StructureDefinition/program-info</code>
+    </td>
+    <td>
+      <i>Version:</i> 0.2.0
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <i>Parent:</i> <p><a target="_blank" href="/resolve?&amp;scope=project:bh-ig-test&amp;canonical=http://hl7.org/fhir/StructureDefinition/Extension">http://hl7.org/fhir/StructureDefinition/Extension</a></p>
+
+    </td>
+    <td>
+      <i>Computable Name:</i> <p>GrantProgramIdAndNumber</p>
+
+    </td>
+  </tr>
+</tbody></table>
+</p>
+<p><p>This complex extension defines the representation of Grant Program ID as well as grant number.</p>
+</p>
+<p><h2 id="formal-views-of-profile-content">Formal Views of Profile Content</h2>
+<div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#896731c4-eba2-40a7-bdce-96abdf69f025" aria-controls="896731c4-eba2-40a7-bdce-96abdf69f025" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#4764af0d-6b14-4cfb-a5bf-01fd08a0b3ad" aria-controls="4764af0d-6b14-4cfb-a5bf-01fd08a0b3ad" role="tab" data-toggle="tab">Detailed Descriptions</a>
+</li><li role="presentation" class="">
+    <a href="#2ea2e745-1720-4065-a61a-8bab33996033" aria-controls="2ea2e745-1720-4065-a61a-8bab33996033" role="tab" data-toggle="tab">XML</a>
+</li><li role="presentation" class="">
+    <a href="#fc769569-595b-4299-9683-3d4fddd93e3d" aria-controls="fc769569-595b-4299-9683-3d4fddd93e3d" role="tab" data-toggle="tab">JSON</a>
+</li><li role="presentation" class="">
+    <a href="#85ab8f4c-6b42-44af-90c8-6064d25b2f81" aria-controls="85ab8f4c-6b42-44af-90c8-6064d25b2f81" role="tab" data-toggle="tab">Examples</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="896731c4-eba2-40a7-bdce-96abdf69f025">
+    <div class="stu3-treetable" id="9b7608a49658491f824fb6180b76f36d" data-level="2"><div class="treetable-buttons"><div class="tree-control"><button class="tree-button" title="Show changes compared to parent resource" data-mode="diff">diff</button><button class="tree-button" title="Show combination of diff and snap" data-mode="hybrid">hybrid</button><button class="tree-button active" title="Show available resource elements" data-mode="snapshot">snap</button></div><div class="tree-settings"><button class="tree-button" id="ShowCommonResourceElements" title="Show common resource elements" data-settings="ShowCommonResourceElements">show common</button></div></div><div class="treetable-wrapper snapshot"><div class="treetable-left-panel"><table class="treetable"><tr class="collapsed constraints" data-id="d4f155ca050f4dc4b75836d775ca9951"><td class="profile"><span class="baseIcon resource" title="Resource"></span><span class="constraints" title="GrantProgramIdAndNumber is the name of the resource
+Extension is the type of the resource
+Extension is the name of the parent resource"><b>GrantProgramIdAndNumber</b><span class="constraints"> (</span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank" class="constraints">Extension</a><span class="constraints">)</span></span></td><td class="profile"><span class="invariant" title="This element has or is affected by constraints">C</span></td><td></td><td class="profile"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank">Extension</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Element id</b></span><pre>Extension</pre><span class="constraints"><b>Short description</b></span><p><span class="constraints">Grant Program ID and Number</span></p><span class="constraints"><b>Definition</b></span><div class="markdown constraints"><p>This complex extension defines the representation of Grant Program ID as well as grant number.</p>
+</div><span><b>Data type</b></span><p><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank">Extension</a></p><span><b>Constraints</b></span><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li><li><b>ext-1: </b>Must have either extensions or value[x], not both<br/><code>extension.exists() != value.exists()</code></li></ul><span><b>Mappings</b></span><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr><tr class="common" id="Extension.id" data-id="452ed57f25e14efe82fa0f788df31c03" data-parentId="d4f155ca050f4dc4b75836d775ca9951"><td class="profile"><span class="baseIcon primitive" title="Primitive Data Type"></span><span>id</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-string.json" title="string
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-string.json" target="_blank">string</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element id</b></span><pre>Extension.id</pre><span><b>Short description</b></span><p><span>Unique id for inter-element referencing</span></p><span><b>Definition</b></span><div class="markdown"><p>Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.</p>
+</div><span><b>Data type</b></span><p><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-string.json" title="string
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-string.json" target="_blank">string</a></p><span><b>Conditions</b></span><p><span>The cardinality or value of this element may be affected by these constraints: </span><span><b>ele-1</b></span></p><span><b>Mappings</b></span><ul><li><b>rim: </b>n/a</li></ul></td></tr><tr class="collapsed sliced constraints" id="Extension.extension" data-id="76f3f8feecec4bc5ba827eb7431510a9" data-parentId="d4f155ca050f4dc4b75836d775ca9951"><td class="profile"><span class="baseIcon extension" title="Extension"></span><span class="constraints">extension</span></td><td class="profile"><span class="invariant" title="This element has or is affected by constraints">C</span></td><td class="profile"><span class="constraints">1</span><span class="constraints">..</span><span>*</span></td><td class="profile"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank">Extension</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element id</b></span><pre>Extension.extension</pre><span><b>Short description</b></span><p><span>Additional content defined by implementations</span></p><span><b>Alternate names</b></span><p><span>extensions</span><span>, </span><span>user content</span></p><span><b>Definition</b></span><div class="markdown"><p>May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</div><span><b>Comments</b></span><div class="markdown"><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</div><span><b>Data type</b></span><p><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank">Extension</a></p><span><b>Slicing</b></span><p><span>Unordered, Open, by url(Value)</span></p><p><span>Extensions are always sliced by (at least) url</span></p><span><b>Constraints</b></span><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li><li><b>ext-1: </b>Must have either extensions or value[x], not both<br/><code>extension.exists() != value.exists()</code></li></ul><span><b>Mappings</b></span><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr><tr class="collapsed constraints" id="Extension.extension:program-id" data-id="903aa5cf16364ad7abd26fec74150555" data-parentId="76f3f8feecec4bc5ba827eb7431510a9"><td class="profile"><span class="baseIcon extension" title="Extension"></span><span class="constraints">program-id</span></td><td class="profile"><span class="mustsupport constraints" title="This element must be supported">S</span> <span class="invariant" title="This element has or is affected by constraints">C</span></td><td class="profile"><span>0</span><span class="constraints">..</span><span class="constraints">1</span></td><td class="profile"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank">Extension</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Element id</b></span><pre>Extension.extension:program-id</pre><span class="constraints"><b>Short description</b></span><p><span class="constraints">The program id for a program that that is participating in a designated behavioral health program.</span></p><span><b>Alternate names</b></span><p><span>extensions</span><span>, </span><span>user content</span></p><span class="constraints"><b>Definition</b></span><div class="markdown constraints"><p>The program id for a program that that is participating in a designated behavioral health program.</p>
+</div><span><b>Comments</b></span><div class="markdown"><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</div><span><b>Data type</b></span><p><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank">Extension</a></p><span><b>Constraints</b></span><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li><li><b>ext-1: </b>Must have either extensions or value[x], not both<br/><code>extension.exists() != value.exists()</code></li></ul><span><b>Mappings</b></span><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr><tr class="common" id="Extension.extension:program-id.id" data-id="2521b4a8155e4c5383b52e3620805c17" data-parentId="903aa5cf16364ad7abd26fec74150555"><td class="profile"><span class="baseIcon primitive" title="Primitive Data Type"></span><span>id</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-string.json" title="string
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-string.json" target="_blank">string</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element id</b></span><pre>Extension.extension:program-id.id</pre><span><b>Short description</b></span><p><span>Unique id for inter-element referencing</span></p><span><b>Definition</b></span><div class="markdown"><p>Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.</p>
+</div><span><b>Data type</b></span><p><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-string.json" title="string
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-string.json" target="_blank">string</a></p><span><b>Conditions</b></span><p><span>The cardinality or value of this element may be affected by these constraints: </span><span><b>ele-1</b></span></p><span><b>Mappings</b></span><ul><li><b>rim: </b>n/a</li></ul></td></tr><tr class="striped sliced constraints" id="Extension.extension:program-id.extension" data-id="2095bcb4ba2b439cba477fb59c304e05" data-parentId="903aa5cf16364ad7abd26fec74150555"><td class="profile"><span class="baseIcon extension" title="Extension"></span><span class="constraints">extension</span></td><td class="profile"><span class="invariant" title="This element has or is affected by constraints">C</span></td><td class="profile"><span>0</span><span class="constraints">..</span><span class="constraints">0</span></td><td class="profile"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank">Extension</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element id</b></span><pre>Extension.extension:program-id.extension</pre><span><b>Short description</b></span><p><span>Additional content defined by implementations</span></p><span><b>Alternate names</b></span><p><span>extensions</span><span>, </span><span>user content</span></p><span><b>Definition</b></span><div class="markdown"><p>May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</div><span><b>Comments</b></span><div class="markdown"><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</div><span><b>Data type</b></span><p><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank">Extension</a></p><span><b>Slicing</b></span><p><span>Unordered, Open, by url(Value)</span></p><p><span>Extensions are always sliced by (at least) url</span></p><span><b>Constraints</b></span><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li><li><b>ext-1: </b>Must have either extensions or value[x], not both<br/><code>extension.exists() != value.exists()</code></li></ul><span><b>Mappings</b></span><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr><tr class="constraints" id="Extension.extension:program-id.url" data-id="01adb387a7f44af68d71a7daac8806d4" data-parentId="903aa5cf16364ad7abd26fec74150555"><td class="profile"><span class="baseIcon primitive" title="Primitive Data Type"></span><span class="constraints">url</span></td><td class="profile"></td><td class="profile"><span>1</span><span>..</span><span>1</span></td><td class="profile"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-uri.json" title="uri
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-uri.json" target="_blank">uri</a><span class="fixed-label constraints">Fixed Value</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Element id</b></span><pre>Extension.extension:program-id.url</pre><span><b>Short description</b></span><p><span>identifies the meaning of the extension</span></p><span><b>Definition</b></span><div class="markdown"><p>Source of the definition for the extension code - a logical name or a URL.</p>
+</div><span><b>Comments</b></span><div class="markdown"><p>The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.</p>
+</div><span><b>Data type</b></span><p><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-uri.json" title="uri
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-uri.json" target="_blank">uri</a></p><span class="constraints"><b>Fixed value</b></span><pre class="constraints">program-id</pre><span><b>Mappings</b></span><ul><li><b>rim: </b>N/A</li></ul></td></tr><tr class="collapsed constraints" id="Extension.extension:program-id.value[x]" data-id="802cb11076f948b590e8e1478b0c155e" data-parentId="903aa5cf16364ad7abd26fec74150555"><td class="profile"><span class="baseIcon valueX" title="Choice of Types"></span><span class="constraints">value[x]</span></td><td class="profile"><span class="invariant" title="This element has or is affected by constraints">C</span></td><td class="profile"><span class="constraints">1</span><span class="constraints">..</span><span>1</span></td><td class="profile"></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element id</b></span><pre>Extension.extension:program-id.value[x]</pre><span><b>Short description</b></span><p><span>Value of extension</span></p><span><b>Definition</b></span><div class="markdown"><p>Value of extension - must be one of a constrained set of the data types (see <a href="extensibility.html">Extensibility</a> for a list).</p>
+</div><span><b>Conditions</b></span><p><span>The cardinality or value of this element may be affected by these constraints: </span><span><b>ext-1</b></span></p><span><b>Constraints</b></span><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li></ul><span><b>Mappings</b></span><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr><tr class="constraints" id="Extension.extension:program-id.valueString" data-id="d4ac683b4f894d318f9693aa0aae4b6e" data-parentId="802cb11076f948b590e8e1478b0c155e"><td class="profile"><span class="baseIcon primitive" title="Primitive Data Type"></span><span class="constraints">valueString</span></td><td class="profile"></td><td></td><td class="profile"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-string.json" title="string
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-string.json" target="_blank" class="constraints">string</a></td><td class="details hidden"><span class="pin-control"></span><span class="constraints"><b>Data type</b></span><p><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-string.json" title="string
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-string.json" target="_blank" class="constraints">string</a></p></td></tr><tr class="collapsed constraints" id="Extension.extension:grant-number" data-id="a0fb45b91f50446a8558e4ac56d926f6" data-parentId="76f3f8feecec4bc5ba827eb7431510a9"><td class="profile"><span class="baseIcon extension" title="Extension"></span><span class="constraints">grant-number</span></td><td class="profile"><span class="mustsupport constraints" title="This element must be supported">S</span> <span class="invariant" title="This element has or is affected by constraints">C</span></td><td class="profile"><span>0</span><span class="constraints">..</span><span class="constraints">1</span></td><td class="profile"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank">Extension</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Element id</b></span><pre>Extension.extension:grant-number</pre><span class="constraints"><b>Short description</b></span><p><span class="constraints">The grant number that the behavioral health service is operating under.</span></p><span><b>Alternate names</b></span><p><span>extensions</span><span>, </span><span>user content</span></p><span class="constraints"><b>Definition</b></span><div class="markdown constraints"><p>The grant number that the behavioral health service is operating under.</p>
+</div><span><b>Comments</b></span><div class="markdown"><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</div><span><b>Data type</b></span><p><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank">Extension</a></p><span><b>Constraints</b></span><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li><li><b>ext-1: </b>Must have either extensions or value[x], not both<br/><code>extension.exists() != value.exists()</code></li></ul><span><b>Mappings</b></span><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr><tr class="common" id="Extension.extension:grant-number.id" data-id="fe5661ac3cd0446183f182ce51852f8f" data-parentId="a0fb45b91f50446a8558e4ac56d926f6"><td class="profile"><span class="baseIcon primitive" title="Primitive Data Type"></span><span>id</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-string.json" title="string
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-string.json" target="_blank">string</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element id</b></span><pre>Extension.extension:grant-number.id</pre><span><b>Short description</b></span><p><span>Unique id for inter-element referencing</span></p><span><b>Definition</b></span><div class="markdown"><p>Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.</p>
+</div><span><b>Data type</b></span><p><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-string.json" title="string
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-string.json" target="_blank">string</a></p><span><b>Conditions</b></span><p><span>The cardinality or value of this element may be affected by these constraints: </span><span><b>ele-1</b></span></p><span><b>Mappings</b></span><ul><li><b>rim: </b>n/a</li></ul></td></tr><tr class="striped sliced constraints" id="Extension.extension:grant-number.extension" data-id="829f4959a1f542b2bf5247459966283a" data-parentId="a0fb45b91f50446a8558e4ac56d926f6"><td class="profile"><span class="baseIcon extension" title="Extension"></span><span class="constraints">extension</span></td><td class="profile"><span class="invariant" title="This element has or is affected by constraints">C</span></td><td class="profile"><span>0</span><span class="constraints">..</span><span class="constraints">0</span></td><td class="profile"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank">Extension</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element id</b></span><pre>Extension.extension:grant-number.extension</pre><span><b>Short description</b></span><p><span>Additional content defined by implementations</span></p><span><b>Alternate names</b></span><p><span>extensions</span><span>, </span><span>user content</span></p><span><b>Definition</b></span><div class="markdown"><p>May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</div><span><b>Comments</b></span><div class="markdown"><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</div><span><b>Data type</b></span><p><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank">Extension</a></p><span><b>Slicing</b></span><p><span>Unordered, Open, by url(Value)</span></p><p><span>Extensions are always sliced by (at least) url</span></p><span><b>Constraints</b></span><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li><li><b>ext-1: </b>Must have either extensions or value[x], not both<br/><code>extension.exists() != value.exists()</code></li></ul><span><b>Mappings</b></span><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr><tr class="constraints" id="Extension.extension:grant-number.url" data-id="adc5cb59c79e49c7b0658837c87f1668" data-parentId="a0fb45b91f50446a8558e4ac56d926f6"><td class="profile"><span class="baseIcon primitive" title="Primitive Data Type"></span><span class="constraints">url</span></td><td class="profile"></td><td class="profile"><span>1</span><span>..</span><span>1</span></td><td class="profile"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-uri.json" title="uri
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-uri.json" target="_blank">uri</a><span class="fixed-label constraints">Fixed Value</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Element id</b></span><pre>Extension.extension:grant-number.url</pre><span><b>Short description</b></span><p><span>identifies the meaning of the extension</span></p><span><b>Definition</b></span><div class="markdown"><p>Source of the definition for the extension code - a logical name or a URL.</p>
+</div><span><b>Comments</b></span><div class="markdown"><p>The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.</p>
+</div><span><b>Data type</b></span><p><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-uri.json" title="uri
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-uri.json" target="_blank">uri</a></p><span class="constraints"><b>Fixed value</b></span><pre class="constraints">grant-number</pre><span><b>Mappings</b></span><ul><li><b>rim: </b>N/A</li></ul></td></tr><tr class="collapsed constraints" id="Extension.extension:grant-number.value[x]" data-id="9613032d283f421181dc9c355edc33ed" data-parentId="a0fb45b91f50446a8558e4ac56d926f6"><td class="profile"><span class="baseIcon valueX" title="Choice of Types"></span><span class="constraints">value[x]</span></td><td class="profile"><span class="invariant" title="This element has or is affected by constraints">C</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element id</b></span><pre>Extension.extension:grant-number.value[x]</pre><span><b>Short description</b></span><p><span>Value of extension</span></p><span><b>Definition</b></span><div class="markdown"><p>Value of extension - must be one of a constrained set of the data types (see <a href="extensibility.html">Extensibility</a> for a list).</p>
+</div><span><b>Conditions</b></span><p><span>The cardinality or value of this element may be affected by these constraints: </span><span><b>ext-1</b></span></p><span><b>Constraints</b></span><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li></ul><span><b>Mappings</b></span><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr><tr class="constraints" id="Extension.extension:grant-number.valueString" data-id="c363055aa4c342f0b315c34cd33f2de8" data-parentId="9613032d283f421181dc9c355edc33ed"><td class="profile"><span class="baseIcon primitive" title="Primitive Data Type"></span><span class="constraints">valueString</span></td><td class="profile"></td><td></td><td class="profile"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-string.json" title="string
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-string.json" target="_blank" class="constraints">string</a></td><td class="details hidden"><span class="pin-control"></span><span class="constraints"><b>Data type</b></span><p><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-string.json" title="string
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-string.json" target="_blank" class="constraints">string</a></p></td></tr><tr class="constraints" id="Extension.url" data-id="4292ed0fe9e542158aadbc356e096140" data-parentId="d4f155ca050f4dc4b75836d775ca9951"><td class="profile"><span class="baseIcon primitive" title="Primitive Data Type"></span><span class="constraints">url</span></td><td class="profile"></td><td class="profile"><span>1</span><span>..</span><span>1</span></td><td class="profile"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-uri.json" title="uri
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-uri.json" target="_blank">uri</a><span class="fixed-label constraints">Fixed Value</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Element id</b></span><pre>Extension.url</pre><span><b>Short description</b></span><p><span>identifies the meaning of the extension</span></p><span><b>Definition</b></span><div class="markdown"><p>Source of the definition for the extension code - a logical name or a URL.</p>
+</div><span><b>Comments</b></span><div class="markdown"><p>The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.</p>
+</div><span><b>Data type</b></span><p><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-uri.json" title="uri
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-uri.json" target="_blank">uri</a></p><span class="constraints"><b>Fixed value</b></span><pre class="constraints">http://fhir.org/guides/onc/bhp/StructureDefinition/program-info</pre><span><b>Mappings</b></span><ul><li><b>rim: </b>N/A</li></ul></td></tr><tr class="collapsed striped constraints" id="Extension.value[x]" data-id="66f0c4d87d80481abb418f3cb2d8133a" data-parentId="d4f155ca050f4dc4b75836d775ca9951"><td class="profile"><span class="baseIcon valueX" title="Choice of Types"></span><span class="constraints">value[x]</span></td><td class="profile"><span class="invariant" title="This element has or is affected by constraints">C</span></td><td class="profile"><span>0</span><span class="constraints">..</span><span class="constraints">0</span></td><td class="profile"></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element id</b></span><pre>Extension.value[x]</pre><span><b>Short description</b></span><p><span>Value of extension</span></p><span><b>Definition</b></span><div class="markdown"><p>Value of extension - must be one of a constrained set of the data types (see <a href="extensibility.html">Extensibility</a> for a list).</p>
+</div><span><b>Conditions</b></span><p><span>The cardinality or value of this element may be affected by these constraints: </span><span><b>ext-1</b></span></p><span><b>Constraints</b></span><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li></ul><span><b>Mappings</b></span><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr></table></div><div class="treetable-right-panel"></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable9b7608a49658491f824fb6180b76f36d = new Stu3TreeTable(false);
+resourceTreeTable9b7608a49658491f824fb6180b76f36d.init("9b7608a49658491f824fb6180b76f36d");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="4764af0d-6b14-4cfb-a5bf-01fd08a0b3ad">
+    <div class="dict"><table class="dict"><colgroup><col class="w-auto"/><col/><col class="w-auto"/></colgroup><tbody><tr><td class="structure" colspan="2"><a name="Extension"></a>Extension</td><td class="structure-flags"><span class="invariant" title="This element has or is affected by constraints">C</span></td></tr><tr><td>Short</td><td colspan="2">Grant Program ID and Number</td></tr><tr><td>Definition</td><td colspan="2"><div class="markdown"><p>This complex extension defines the representation of Grant Program ID as well as grant number.</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/conformance-rules.html#cardinality" target="_blank">Cardinality</a></td><td colspan="2">0..*</td></tr><tr><td>Constraints</td><td colspan="2"><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li><li><b>ext-1: </b>Must have either extensions or value[x], not both<br/><code>extension.exists() != value.exists()</code></li></ul></td></tr><tr><td>Mappings</td><td colspan="2"><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr><tr><td class="structure" colspan="2"><a name="Extension.id"></a>Extension.id</td><td class="structure-flags"></td></tr><tr><td>Short</td><td colspan="2">Unique id for inter-element referencing</td></tr><tr><td>Definition</td><td colspan="2"><div class="markdown"><p>Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/conformance-rules.html#cardinality" target="_blank">Cardinality</a></td><td colspan="2">0..1</td></tr><tr><td><a href="http://hl7.org/fhir/r4/datatypes.html" target="_blank">Type</a></td><td colspan="2"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-string.json" title="string
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-string.json" target="_blank">string</a></td></tr><tr><td>Conditions</td><td colspan="2"><span>The cardinality or value of this element may be affected by these constraints: </span><span><b>ele-1</b></span></td></tr><tr><td>Mappings</td><td colspan="2"><ul><li><b>rim: </b>n/a</li></ul></td></tr><tr><td class="structure" colspan="2"><a name="Extension.extension"></a>Extension.extension</td><td class="structure-flags"><span class="invariant" title="This element has or is affected by constraints">C</span></td></tr><tr><td>Short</td><td colspan="2">Additional content defined by implementations</td></tr><tr><td>Definition</td><td colspan="2"><div class="markdown"><p>May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/conformance-rules.html#cardinality" target="_blank">Cardinality</a></td><td colspan="2">1..*</td></tr><tr><td><a href="http://hl7.org/fhir/r4/datatypes.html" target="_blank">Type</a></td><td colspan="2"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank">Extension</a></td></tr><tr><td>Alias</td><td colspan="2"><span>extensions</span><span>, </span><span>user content</span></td></tr><tr><td>Comments</td><td colspan="2"><div class="markdown"><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/profiling.html#slicing" target="_blank">Slicing</a></td><td colspan="2"><p><span>Unordered, Open, by url(Value)</span></p><p><span>Extensions are always sliced by (at least) url</span></p></td></tr><tr><td>Constraints</td><td colspan="2"><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li><li><b>ext-1: </b>Must have either extensions or value[x], not both<br/><code>extension.exists() != value.exists()</code></li></ul></td></tr><tr><td>Mappings</td><td colspan="2"><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr><tr><td class="structure" colspan="2"><a name="Extension.extension:program-id"></a>Extension.extension:program-id</td><td class="structure-flags"><span class="mustsupport constraints" title="This element must be supported">S</span> <span class="invariant" title="This element has or is affected by constraints">C</span></td></tr><tr><td>Short</td><td colspan="2">The program id for a program that that is participating in a designated behavioral health program.</td></tr><tr><td>Definition</td><td colspan="2"><div class="markdown"><p>The program id for a program that that is participating in a designated behavioral health program.</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/conformance-rules.html#cardinality" target="_blank">Cardinality</a></td><td colspan="2">0..1</td></tr><tr><td><a href="http://hl7.org/fhir/r4/datatypes.html" target="_blank">Type</a></td><td colspan="2"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank">Extension</a></td></tr><tr><td><a href="http://hl7.org/fhir/r4/conformance-rules.html#mustSupport" target="_blank">Must Support</a></td><td colspan="2">True</td></tr><tr><td>Alias</td><td colspan="2"><span>extensions</span><span>, </span><span>user content</span></td></tr><tr><td>Comments</td><td colspan="2"><div class="markdown"><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</div></td></tr><tr><td>Constraints</td><td colspan="2"><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li><li><b>ext-1: </b>Must have either extensions or value[x], not both<br/><code>extension.exists() != value.exists()</code></li></ul></td></tr><tr><td>Mappings</td><td colspan="2"><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr><tr><td class="structure" colspan="2"><a name="Extension.extension:program-id.id"></a>Extension.extension:program-id.id</td><td class="structure-flags"></td></tr><tr><td>Short</td><td colspan="2">Unique id for inter-element referencing</td></tr><tr><td>Definition</td><td colspan="2"><div class="markdown"><p>Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/conformance-rules.html#cardinality" target="_blank">Cardinality</a></td><td colspan="2">0..1</td></tr><tr><td><a href="http://hl7.org/fhir/r4/datatypes.html" target="_blank">Type</a></td><td colspan="2"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-string.json" title="string
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-string.json" target="_blank">string</a></td></tr><tr><td>Conditions</td><td colspan="2"><span>The cardinality or value of this element may be affected by these constraints: </span><span><b>ele-1</b></span></td></tr><tr><td>Mappings</td><td colspan="2"><ul><li><b>rim: </b>n/a</li></ul></td></tr><tr><td class="structure" colspan="2"><a name="Extension.extension:program-id.extension"></a>Extension.extension:program-id.extension</td><td class="structure-flags"><span class="invariant" title="This element has or is affected by constraints">C</span></td></tr><tr><td>Short</td><td colspan="2">Additional content defined by implementations</td></tr><tr><td>Definition</td><td colspan="2"><div class="markdown"><p>May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/conformance-rules.html#cardinality" target="_blank">Cardinality</a></td><td colspan="2">0..0</td></tr><tr><td><a href="http://hl7.org/fhir/r4/datatypes.html" target="_blank">Type</a></td><td colspan="2"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank">Extension</a></td></tr><tr><td>Alias</td><td colspan="2"><span>extensions</span><span>, </span><span>user content</span></td></tr><tr><td>Comments</td><td colspan="2"><div class="markdown"><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/profiling.html#slicing" target="_blank">Slicing</a></td><td colspan="2"><p><span>Unordered, Open, by url(Value)</span></p><p><span>Extensions are always sliced by (at least) url</span></p></td></tr><tr><td>Constraints</td><td colspan="2"><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li><li><b>ext-1: </b>Must have either extensions or value[x], not both<br/><code>extension.exists() != value.exists()</code></li></ul></td></tr><tr><td>Mappings</td><td colspan="2"><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr><tr><td class="structure" colspan="2"><a name="Extension.extension:program-id.url"></a>Extension.extension:program-id.url</td><td class="structure-flags"></td></tr><tr><td>Short</td><td colspan="2">identifies the meaning of the extension</td></tr><tr><td>Definition</td><td colspan="2"><div class="markdown"><p>Source of the definition for the extension code - a logical name or a URL.</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/conformance-rules.html#cardinality" target="_blank">Cardinality</a></td><td colspan="2">1..1</td></tr><tr><td><a href="http://hl7.org/fhir/r4/datatypes.html" target="_blank">Type</a></td><td colspan="2"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-uri.json" title="uri
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-uri.json" target="_blank">uri</a></td></tr><tr><td>Comments</td><td colspan="2"><div class="markdown"><p>The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.</p>
+</div></td></tr><tr><td>Fixed Value</td><td colspan="2"><pre>program-id</pre></td></tr><tr><td>Mappings</td><td colspan="2"><ul><li><b>rim: </b>N/A</li></ul></td></tr><tr><td class="structure" colspan="2"><a name="Extension.extension:program-id.value[x]"></a>Extension.extension:program-id.value[x]</td><td class="structure-flags"><span class="invariant" title="This element has or is affected by constraints">C</span></td></tr><tr><td>Short</td><td colspan="2">Value of extension</td></tr><tr><td>Definition</td><td colspan="2"><div class="markdown"><p>Value of extension - must be one of a constrained set of the data types (see <a href="extensibility.html">Extensibility</a> for a list).</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/conformance-rules.html#cardinality" target="_blank">Cardinality</a></td><td colspan="2">1..1</td></tr><tr><td><a href="http://hl7.org/fhir/r4/datatypes.html" target="_blank">Type</a></td><td colspan="2"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-string.json" title="string
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-string.json" target="_blank" class="constraints">string</a></td></tr><tr><td>Conditions</td><td colspan="2"><span>The cardinality or value of this element may be affected by these constraints: </span><span><b>ext-1</b></span></td></tr><tr><td>Constraints</td><td colspan="2"><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li></ul></td></tr><tr><td>Mappings</td><td colspan="2"><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr><tr><td class="structure" colspan="2"><a name="Extension.extension:grant-number"></a>Extension.extension:grant-number</td><td class="structure-flags"><span class="mustsupport constraints" title="This element must be supported">S</span> <span class="invariant" title="This element has or is affected by constraints">C</span></td></tr><tr><td>Short</td><td colspan="2">The grant number that the behavioral health service is operating under.</td></tr><tr><td>Definition</td><td colspan="2"><div class="markdown"><p>The grant number that the behavioral health service is operating under.</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/conformance-rules.html#cardinality" target="_blank">Cardinality</a></td><td colspan="2">0..1</td></tr><tr><td><a href="http://hl7.org/fhir/r4/datatypes.html" target="_blank">Type</a></td><td colspan="2"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank">Extension</a></td></tr><tr><td><a href="http://hl7.org/fhir/r4/conformance-rules.html#mustSupport" target="_blank">Must Support</a></td><td colspan="2">True</td></tr><tr><td>Alias</td><td colspan="2"><span>extensions</span><span>, </span><span>user content</span></td></tr><tr><td>Comments</td><td colspan="2"><div class="markdown"><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</div></td></tr><tr><td>Constraints</td><td colspan="2"><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li><li><b>ext-1: </b>Must have either extensions or value[x], not both<br/><code>extension.exists() != value.exists()</code></li></ul></td></tr><tr><td>Mappings</td><td colspan="2"><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr><tr><td class="structure" colspan="2"><a name="Extension.extension:grant-number.id"></a>Extension.extension:grant-number.id</td><td class="structure-flags"></td></tr><tr><td>Short</td><td colspan="2">Unique id for inter-element referencing</td></tr><tr><td>Definition</td><td colspan="2"><div class="markdown"><p>Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/conformance-rules.html#cardinality" target="_blank">Cardinality</a></td><td colspan="2">0..1</td></tr><tr><td><a href="http://hl7.org/fhir/r4/datatypes.html" target="_blank">Type</a></td><td colspan="2"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-string.json" title="string
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-string.json" target="_blank">string</a></td></tr><tr><td>Conditions</td><td colspan="2"><span>The cardinality or value of this element may be affected by these constraints: </span><span><b>ele-1</b></span></td></tr><tr><td>Mappings</td><td colspan="2"><ul><li><b>rim: </b>n/a</li></ul></td></tr><tr><td class="structure" colspan="2"><a name="Extension.extension:grant-number.extension"></a>Extension.extension:grant-number.extension</td><td class="structure-flags"><span class="invariant" title="This element has or is affected by constraints">C</span></td></tr><tr><td>Short</td><td colspan="2">Additional content defined by implementations</td></tr><tr><td>Definition</td><td colspan="2"><div class="markdown"><p>May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/conformance-rules.html#cardinality" target="_blank">Cardinality</a></td><td colspan="2">0..0</td></tr><tr><td><a href="http://hl7.org/fhir/r4/datatypes.html" target="_blank">Type</a></td><td colspan="2"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Extension.json" title="Extension
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Extension.json" target="_blank">Extension</a></td></tr><tr><td>Alias</td><td colspan="2"><span>extensions</span><span>, </span><span>user content</span></td></tr><tr><td>Comments</td><td colspan="2"><div class="markdown"><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/profiling.html#slicing" target="_blank">Slicing</a></td><td colspan="2"><p><span>Unordered, Open, by url(Value)</span></p><p><span>Extensions are always sliced by (at least) url</span></p></td></tr><tr><td>Constraints</td><td colspan="2"><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li><li><b>ext-1: </b>Must have either extensions or value[x], not both<br/><code>extension.exists() != value.exists()</code></li></ul></td></tr><tr><td>Mappings</td><td colspan="2"><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr><tr><td class="structure" colspan="2"><a name="Extension.extension:grant-number.url"></a>Extension.extension:grant-number.url</td><td class="structure-flags"></td></tr><tr><td>Short</td><td colspan="2">identifies the meaning of the extension</td></tr><tr><td>Definition</td><td colspan="2"><div class="markdown"><p>Source of the definition for the extension code - a logical name or a URL.</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/conformance-rules.html#cardinality" target="_blank">Cardinality</a></td><td colspan="2">1..1</td></tr><tr><td><a href="http://hl7.org/fhir/r4/datatypes.html" target="_blank">Type</a></td><td colspan="2"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-uri.json" title="uri
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-uri.json" target="_blank">uri</a></td></tr><tr><td>Comments</td><td colspan="2"><div class="markdown"><p>The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.</p>
+</div></td></tr><tr><td>Fixed Value</td><td colspan="2"><pre>grant-number</pre></td></tr><tr><td>Mappings</td><td colspan="2"><ul><li><b>rim: </b>N/A</li></ul></td></tr><tr><td class="structure" colspan="2"><a name="Extension.extension:grant-number.value[x]"></a>Extension.extension:grant-number.value[x]</td><td class="structure-flags"><span class="invariant" title="This element has or is affected by constraints">C</span></td></tr><tr><td>Short</td><td colspan="2">Value of extension</td></tr><tr><td>Definition</td><td colspan="2"><div class="markdown"><p>Value of extension - must be one of a constrained set of the data types (see <a href="extensibility.html">Extensibility</a> for a list).</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/conformance-rules.html#cardinality" target="_blank">Cardinality</a></td><td colspan="2">0..1</td></tr><tr><td><a href="http://hl7.org/fhir/r4/datatypes.html" target="_blank">Type</a></td><td colspan="2"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-string.json" title="string
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-string.json" target="_blank" class="constraints">string</a></td></tr><tr><td>Conditions</td><td colspan="2"><span>The cardinality or value of this element may be affected by these constraints: </span><span><b>ext-1</b></span></td></tr><tr><td>Constraints</td><td colspan="2"><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li></ul></td></tr><tr><td>Mappings</td><td colspan="2"><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr><tr><td class="structure" colspan="2"><a name="Extension.url"></a>Extension.url</td><td class="structure-flags"></td></tr><tr><td>Short</td><td colspan="2">identifies the meaning of the extension</td></tr><tr><td>Definition</td><td colspan="2"><div class="markdown"><p>Source of the definition for the extension code - a logical name or a URL.</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/conformance-rules.html#cardinality" target="_blank">Cardinality</a></td><td colspan="2">1..1</td></tr><tr><td><a href="http://hl7.org/fhir/r4/datatypes.html" target="_blank">Type</a></td><td colspan="2"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-uri.json" title="uri
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-uri.json" target="_blank">uri</a></td></tr><tr><td>Comments</td><td colspan="2"><div class="markdown"><p>The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.</p>
+</div></td></tr><tr><td>Fixed Value</td><td colspan="2"><pre>http://fhir.org/guides/onc/bhp/StructureDefinition/program-info</pre></td></tr><tr><td>Mappings</td><td colspan="2"><ul><li><b>rim: </b>N/A</li></ul></td></tr><tr><td class="structure" colspan="2"><a name="Extension.value[x]"></a>Extension.value[x]</td><td class="structure-flags"><span class="invariant" title="This element has or is affected by constraints">C</span></td></tr><tr><td>Short</td><td colspan="2">Value of extension</td></tr><tr><td>Definition</td><td colspan="2"><div class="markdown"><p>Value of extension - must be one of a constrained set of the data types (see <a href="extensibility.html">Extensibility</a> for a list).</p>
+</div></td></tr><tr><td><a href="http://hl7.org/fhir/r4/conformance-rules.html#cardinality" target="_blank">Cardinality</a></td><td colspan="2">0..0</td></tr><tr><td><a href="http://hl7.org/fhir/r4/datatypes.html" target="_blank">Type</a></td><td colspan="2"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Address.json" title="Address
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Address.json" target="_blank">Address</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Age.json" title="Age
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Age.json" target="_blank">Age</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Annotation.json" title="Annotation
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Annotation.json" target="_blank">Annotation</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Attachment.json" title="Attachment
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Attachment.json" target="_blank">Attachment</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Availability.json" title="Availability
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Availability.json" target="_blank">Availability</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-base64Binary.json" title="base64Binary
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-base64Binary.json" target="_blank">base64Binary</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-boolean.json" title="boolean
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-boolean.json" target="_blank">boolean</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-canonical.json" title="canonical
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-canonical.json" target="_blank">canonical</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-code.json" title="code
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-code.json" target="_blank">code</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeableConcept.json" title="CodeableConcept
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeableConcept.json" target="_blank">CodeableConcept</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeableReference.json" title="CodeableReference
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeableReference.json" target="_blank">CodeableReference</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Coding.json" title="Coding
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Coding.json" target="_blank">Coding</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ContactDetail.json" title="ContactDetail
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ContactDetail.json" target="_blank">ContactDetail</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ContactPoint.json" title="ContactPoint
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ContactPoint.json" target="_blank">ContactPoint</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Count.json" title="Count
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Count.json" target="_blank">Count</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-DataRequirement.json" title="DataRequirement
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-DataRequirement.json" target="_blank">DataRequirement</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-date.json" title="date
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-date.json" target="_blank">date</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-dateTime.json" title="dateTime
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-dateTime.json" target="_blank">dateTime</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-decimal.json" title="decimal
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-decimal.json" target="_blank">decimal</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Distance.json" title="Distance
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Distance.json" target="_blank">Distance</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Dosage.json" title="Dosage
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Dosage.json" target="_blank">Dosage</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Duration.json" title="Duration
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Duration.json" target="_blank">Duration</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Expression.json" title="Expression
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Expression.json" target="_blank">Expression</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ExtendedContactDetail.json" title="ExtendedContactDetail
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ExtendedContactDetail.json" target="_blank">ExtendedContactDetail</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-HumanName.json" title="HumanName
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-HumanName.json" target="_blank">HumanName</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-id.json" title="id
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-id.json" target="_blank">id</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Identifier.json" title="Identifier
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Identifier.json" target="_blank">Identifier</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-instant.json" title="instant
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-instant.json" target="_blank">instant</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-integer.json" title="integer
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-integer.json" target="_blank">integer</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-integer64.json" title="integer64
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-integer64.json" target="_blank">integer64</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-markdown.json" title="markdown
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-markdown.json" target="_blank">markdown</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Meta.json" title="Meta
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Meta.json" target="_blank">Meta</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Money.json" title="Money
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Money.json" target="_blank">Money</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-oid.json" title="oid
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-oid.json" target="_blank">oid</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-ParameterDefinition.json" title="ParameterDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-ParameterDefinition.json" target="_blank">ParameterDefinition</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Period.json" title="Period
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Period.json" target="_blank">Period</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-positiveInt.json" title="positiveInt
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-positiveInt.json" target="_blank">positiveInt</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Quantity.json" title="Quantity
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Quantity.json" target="_blank">Quantity</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Range.json" title="Range
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Range.json" target="_blank">Range</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Ratio.json" title="Ratio
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Ratio.json" target="_blank">Ratio</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-RatioRange.json" title="RatioRange
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-RatioRange.json" target="_blank">RatioRange</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Reference.json" title="Reference
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Reference.json" target="_blank">Reference</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-RelatedArtifact.json" title="RelatedArtifact
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-RelatedArtifact.json" target="_blank">RelatedArtifact</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-SampledData.json" title="SampledData
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-SampledData.json" target="_blank">SampledData</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Signature.json" title="Signature
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Signature.json" target="_blank">Signature</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-string.json" title="string
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-string.json" target="_blank">string</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-time.json" title="time
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-time.json" target="_blank">time</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-Timing.json" title="Timing
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-Timing.json" target="_blank">Timing</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-TriggerDefinition.json" title="TriggerDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-TriggerDefinition.json" target="_blank">TriggerDefinition</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-unsignedInt.json" title="unsignedInt
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-unsignedInt.json" target="_blank">unsignedInt</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-uri.json" title="uri
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-uri.json" target="_blank">uri</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-url.json" title="url
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-url.json" target="_blank">url</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-UsageContext.json" title="UsageContext
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-UsageContext.json" target="_blank">UsageContext</a><span> | </span><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-uuid.json" title="uuid
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-uuid.json" target="_blank">uuid</a></td></tr><tr><td>Conditions</td><td colspan="2"><span>The cardinality or value of this element may be affected by these constraints: </span><span><b>ext-1</b></span></td></tr><tr><td>Constraints</td><td colspan="2"><ul><li><b>ele-1: </b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() &gt; id.count())</code></li></ul></td></tr><tr><td>Mappings</td><td colspan="2"><ul><li><b>rim: </b>n/a</li><li><b>rim: </b>N/A</li></ul></td></tr></tbody></table></div>
+</div><div role="tabpanel" class="tab-pane " id="2ea2e745-1720-4065-a61a-8bab33996033">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">StructureDefinition</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.id" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">program-info</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.url" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">url</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://fhir.org/guides/onc/bhp/StructureDefinition/program-info</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.version" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">version</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">1.0.0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.name" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">name</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">GrantProgramIdAndNumber</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.title" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">title</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Grant Program ID and Number</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.status" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">active</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.description" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">description</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">This complex extension defines the representation of Grant Program ID as well as grant number.</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.fhirVersion" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">fhirVersion</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">4.0.1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.kind" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">kind</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">complex-type</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.abstract" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">abstract</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">false</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.context" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">context</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.context.type" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">type</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">element</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.context.expression" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">expression</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Observation</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">context</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.type" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">type</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.baseDefinition" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">baseDefinition</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/StructureDefinition/Extension</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.derivation" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">derivation</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">constraint</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">differential</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">element</a></span> <span class="attr">id</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.short" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">short</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Grant Program ID and Number</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.definition" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">definition</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">This complex extension defines the representation of Grant Program ID as well as grant number.</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">element</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">element</a></span> <span class="attr">id</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.min" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">min</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">element</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">element</a></span> <span class="attr">id</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension:program-id</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.sliceName" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">sliceName</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">program-id</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.short" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">short</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">The program id for a program that that is participating in a designated behavioral health program.</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.definition" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">definition</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">The program id for a program that that is participating in a designated behavioral health program.</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.min" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">min</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.max" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">max</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.mustSupport" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">mustSupport</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">true</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">element</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">element</a></span> <span class="attr">id</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension:program-id.extension</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension.extension</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.max" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">max</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">element</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">element</a></span> <span class="attr">id</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension:program-id.url</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension.url</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.fixed" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">fixedUri</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">program-id</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">element</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">element</a></span> <span class="attr">id</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension:program-id.value[x]</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension.value[x]</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.min" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">min</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.type" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">type</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.type.code" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">string</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">type</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">element</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">element</a></span> <span class="attr">id</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension:grant-number</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.sliceName" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">sliceName</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">grant-number</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.short" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">short</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">The grant number that the behavioral health service is operating under.</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.definition" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">definition</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">The grant number that the behavioral health service is operating under.</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.min" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">min</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.max" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">max</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.mustSupport" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">mustSupport</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">true</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">element</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">element</a></span> <span class="attr">id</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension:grant-number.extension</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension.extension</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.max" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">max</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">element</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">element</a></span> <span class="attr">id</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension:grant-number.url</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension.url</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.fixed" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">fixedUri</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">grant-number</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">element</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">element</a></span> <span class="attr">id</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension:grant-number.value[x]</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.extension.value[x]</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.type" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">type</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.type.code" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">string</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">type</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">element</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">element</a></span> <span class="attr">id</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.url</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.url</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.fixed" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">fixedUri</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://fhir.org/guides/onc/bhp/StructureDefinition/program-info</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">element</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">element</a></span> <span class="attr">id</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.value[x]</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Extension.value[x]</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.max" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">max</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">element</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">differential</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">StructureDefinition</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="fc769569-595b-4299-9683-3d4fddd93e3d">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.resourceType" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">resourceType</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">StructureDefinition</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.id" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">program-info</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.url" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">url</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://fhir.org/guides/onc/bhp/StructureDefinition/program-info</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.version" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">version</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">1.0.0</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.name" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">name</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">GrantProgramIdAndNumber</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.title" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">title</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Grant Program ID and Number</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.status" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">status</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">active</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.description" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">description</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">This complex extension defines the representation of Grant Program ID as well as grant number.</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.fhirVersion" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">fhirVersion</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">4.0.1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.kind" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">kind</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">complex-type</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.abstract" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">abstract</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">false</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.context" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">context</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.context.type" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">type</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">element</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.context.expression" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">expression</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Observation</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.type" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">type</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.baseDefinition" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">baseDefinition</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://hl7.org/fhir/StructureDefinition/Extension</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.derivation" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">derivation</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">constraint</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">differential</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">element</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.id" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.short" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">short</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Grant Program ID and Number</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.definition" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">definition</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">This complex extension defines the representation of Grant Program ID as well as grant number.</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.id" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.min" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">min</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">1</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.id" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension:program-id</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.sliceName" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">sliceName</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">program-id</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.short" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">short</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">The program id for a program that that is participating in a designated behavioral health program.</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.definition" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">definition</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">The program id for a program that that is participating in a designated behavioral health program.</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.min" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">min</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">0</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.max" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">max</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.mustSupport" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">mustSupport</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">true</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.id" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension:program-id.extension</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension.extension</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.max" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">max</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">0</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.id" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension:program-id.url</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension.url</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.fixedUri" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">fixedUri</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">program-id</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.id" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension:program-id.value[x]</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension.value[x]</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.min" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">min</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">1</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.type" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">type</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.type.code" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">string</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.id" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension:grant-number</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.sliceName" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">sliceName</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">grant-number</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.short" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">short</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">The grant number that the behavioral health service is operating under.</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.definition" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">definition</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">The grant number that the behavioral health service is operating under.</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.min" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">min</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">0</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.max" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">max</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.mustSupport" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">mustSupport</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">true</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.id" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension:grant-number.extension</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension.extension</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.max" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">max</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">0</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.id" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension:grant-number.url</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension.url</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.fixedUri" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">fixedUri</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">grant-number</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.id" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension:grant-number.value[x]</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.extension.value[x]</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.type" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">type</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.type.code" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">string</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.id" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.url</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.url</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.fixedUri" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">fixedUri</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://fhir.org/guides/onc/bhp/StructureDefinition/program-info</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.id" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.value[x]</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.path" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">path</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Extension.value[x]</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-StructureDefinition.json&tab=details#StructureDefinition.differential.element.max" title="StructureDefinition
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-StructureDefinition.json" target="_blank">max</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">0</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="85ab8f4c-6b42-44af-90c8-6064d25b2f81">
+    
+</div>
+  </div>
+</div>
+</p>
+<h3 id="terminology-bindings">Terminology Bindings</h3>
+<p></p>
+<h3 id="constraints">Constraints</h3>
+<p></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+---
+topic: example-cognitive-status-observation-example-3
+subject: Observation/cognitive-status-observation-example-3
+expand: yes
+description: "Example of a mental/cognitive health status assessment/screening"
+---
+
+## Example Observation: cognitive-status-observation-example
+
+{{page:Resource-View-Example}}
+

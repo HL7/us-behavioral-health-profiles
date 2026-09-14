@@ -1,0 +1,48 @@
+{
+  "resourceType": "Practitioner",
+  "id": "ed-physician-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/sid/us-npi",
+      "value": "9941339100"
+    },
+    {
+      "system": "http://ncsbn.org/identifier/example-system",
+      "value": "9941339100"
+    }
+  ],
+  "name": [
+    {
+      "family": "Owl",
+      "given": [
+        "Wise"
+      ],
+      "prefix": [
+        "Dr"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "email",
+      "value": "Wise.owl@MassGenExample.net",
+      "use": "work"
+    }
+  ],
+  "address": [
+    {
+      "use": "work",
+      "line": [
+        "1003 HEALTHCARE DR"
+      ],
+      "city": "Miami",
+      "state": "FL",
+      "postalCode": "01002"
+    }
+  ]
+}

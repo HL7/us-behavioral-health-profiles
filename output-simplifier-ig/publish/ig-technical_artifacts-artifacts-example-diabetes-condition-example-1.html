@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | example-diabetes-condition-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-diabetes-condition-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+<h2 id="example-condition-diabetes-condition-example">Example Condition: diabetes-condition-example</h2>
+<p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#a8a8c0f3-b3b2-4396-b05f-c4bacc9f625c" aria-controls="a8a8c0f3-b3b2-4396-b05f-c4bacc9f625c" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#4eb67b63-263c-4085-b28e-eb83c05fcefb" aria-controls="4eb67b63-263c-4085-b28e-eb83c05fcefb" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#c43e4551-d5d4-48cb-adeb-3ff98b969961" aria-controls="c43e4551-d5d4-48cb-adeb-3ff98b969961" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#9131a2e2-f0bd-4002-93aa-d51ec8eaa61d" aria-controls="9131a2e2-f0bd-4002-93aa-d51ec8eaa61d" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="a8a8c0f3-b3b2-4396-b05f-c4bacc9f625c">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.resourceType" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">resourceType</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Condition</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.id" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">diabetes-condition-example-1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.meta" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">meta</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.meta.profile" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">profile</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns|6.1.0</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.clinicalStatus" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">clinicalStatus</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.clinicalStatus.coding" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.clinicalStatus.coding.system" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/condition-clinical</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.clinicalStatus.coding.code" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">active</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.clinicalStatus.coding.display" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Active</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.verificationStatus" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">verificationStatus</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.verificationStatus.coding" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.verificationStatus.coding.system" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/condition-ver-status</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.verificationStatus.coding.version" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">version</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">4.0.0</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.verificationStatus.coding.code" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">confirmed</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.verificationStatus.coding.display" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Confirmed</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.verificationStatus.text" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Confirmed</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.category" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">category</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.category.coding" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.category.coding.system" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/condition-category</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.category.coding.code" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">problem-list-item</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.category.coding.display" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Problem List Item</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.category.text" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Problem List</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code.coding" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code.coding.system" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://snomed.info/sct</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code.coding.code" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">444110003</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code.coding.display" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Type II diabetes mellitus well controlled</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code.coding.system" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://hl7.org/fhir/sid/icd-10-cm</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code.coding.code" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">E11.9</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code.coding.display" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Type 2 diabetes mellitus without complications</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code.text" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Type 2 Diabetes</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.subject" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">subject</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.subject.reference" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.subject.display" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">James Wolff</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.onsetDateTime" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">onsetDateTime</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2020-01-01</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.recordedDate" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">recordedDate</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2024-02-01</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="4eb67b63-263c-4085-b28e-eb83c05fcefb">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">Condition</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.id" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">diabetes-condition-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.meta" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.meta.profile" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns|6.1.0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.clinicalStatus" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">clinicalStatus</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.clinicalStatus.coding" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.clinicalStatus.coding.system" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/condition-clinical</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.clinicalStatus.coding.code" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">active</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.clinicalStatus.coding.display" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Active</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">clinicalStatus</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.verificationStatus" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">verificationStatus</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.verificationStatus.coding" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.verificationStatus.coding.system" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/condition-ver-status</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.verificationStatus.coding.version" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">version</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">4.0.0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.verificationStatus.coding.code" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">confirmed</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.verificationStatus.coding.display" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Confirmed</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.verificationStatus.text" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Confirmed</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">verificationStatus</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.category" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.category.coding" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.category.coding.system" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/condition-category</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.category.coding.code" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">problem-list-item</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.category.coding.display" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Problem List Item</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.category.text" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Problem List</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code.coding" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code.coding.system" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://snomed.info/sct</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code.coding.code" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">444110003</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code.coding.display" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Type II diabetes mellitus well controlled</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code.coding" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code.coding.system" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/sid/icd-10-cm</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code.coding.code" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">E11.9</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code.coding.display" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Type 2 diabetes mellitus without complications</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.code.text" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Type 2 Diabetes</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.subject" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.subject.reference" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.subject.display" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">James Wolff</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.onset" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">onsetDateTime</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2020-01-01</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-problems-health-concerns.json&tab=details#Condition.recordedDate" title="US Core Condition Problems and Health Concerns Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-problems-health-concerns.json" target="_blank">recordedDate</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2024-02-01</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Condition</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="c43e4551-d5d4-48cb-adeb-3ff98b969961">
+    <div class="stu3-treetable" id="fbaa666f920b4daea97a95e82b141b91" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="e1fb4059439f4a82ab3a2ce03340d7e1"><td class="instance"><span class="baseIcon primitive"></span><b>Condition</b></td></tr><tr class="collapsed" data-id="031d36a81e754deb81ba7f62b3a884fc" data-parentId="e1fb4059439f4a82ab3a2ce03340d7e1"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>diabetes-condition-example-1</span></td></tr><tr class="collapsed" data-id="0753dc529cab418b83f90a296b6888af" data-parentId="e1fb4059439f4a82ab3a2ce03340d7e1"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="fd7aba595d594bc8b5ff5e7aa4ca3fdc" data-parentId="0753dc529cab418b83f90a296b6888af"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns|6.1.0</span></td></tr><tr class="collapsed" data-id="039e3f8cf015456d8eba6a773d95ebfc" data-parentId="e1fb4059439f4a82ab3a2ce03340d7e1"><td class="instance"><span class="baseIcon primitive"></span><b>clinicalStatus</b></td></tr><tr class="collapsed" data-id="a10336358bf847a9846e8699e4104692" data-parentId="039e3f8cf015456d8eba6a773d95ebfc"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="c421e65745934ffca88f02f5cc40fc3d" data-parentId="a10336358bf847a9846e8699e4104692"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/condition-clinical</span></td></tr><tr class="collapsed" data-id="5aa1f6a0d0b6411e96503759ac73a1e3" data-parentId="a10336358bf847a9846e8699e4104692"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>active</span></td></tr><tr class="collapsed" data-id="3e1ed67021dc4e7bac42a584137769c4" data-parentId="a10336358bf847a9846e8699e4104692"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Active</span></td></tr><tr class="collapsed" data-id="c96242e01db54ae583cbd537284c7c80" data-parentId="e1fb4059439f4a82ab3a2ce03340d7e1"><td class="instance"><span class="baseIcon primitive"></span><b>verificationStatus</b></td></tr><tr class="collapsed" data-id="5b74096c87ca479297cfbbe5fbec2feb" data-parentId="c96242e01db54ae583cbd537284c7c80"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="b67601117493414183f9f02a5a538a55" data-parentId="5b74096c87ca479297cfbbe5fbec2feb"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/condition-ver-status</span></td></tr><tr class="collapsed" data-id="bd3bd607506945bcad71971146dd93d5" data-parentId="5b74096c87ca479297cfbbe5fbec2feb"><td class="instance"><span class="baseIcon primitive"></span><b>version : </b><span>4.0.0</span></td></tr><tr class="collapsed" data-id="f0b94cb77d1c41fc8bf485ee8aa673fc" data-parentId="5b74096c87ca479297cfbbe5fbec2feb"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>confirmed</span></td></tr><tr class="collapsed" data-id="900709b55be54fb6bdbb6beefa598dde" data-parentId="5b74096c87ca479297cfbbe5fbec2feb"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Confirmed</span></td></tr><tr class="collapsed" data-id="405cf755ffed43a08264c571ad367a8e" data-parentId="c96242e01db54ae583cbd537284c7c80"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Confirmed</span></td></tr><tr class="collapsed" data-id="d4ea05b13fa449dda2d92b0b5443f936" data-parentId="e1fb4059439f4a82ab3a2ce03340d7e1"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="54421c215bb8434c90b6652dd922b64a" data-parentId="d4ea05b13fa449dda2d92b0b5443f936"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="06facba37e0d4676965a4fac606aa606" data-parentId="54421c215bb8434c90b6652dd922b64a"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/condition-category</span></td></tr><tr class="collapsed" data-id="b6f6f791a831461ab1979deba25199b0" data-parentId="54421c215bb8434c90b6652dd922b64a"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>problem-list-item</span></td></tr><tr class="collapsed" data-id="ef806bc68dc548308eaf77f2f0528a6c" data-parentId="54421c215bb8434c90b6652dd922b64a"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Problem List Item</span></td></tr><tr class="collapsed" data-id="46a7688bfdcf4811b75a360eeaa63235" data-parentId="d4ea05b13fa449dda2d92b0b5443f936"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Problem List</span></td></tr><tr class="collapsed" data-id="c20b1c05b9014bb18bf2a41fb54e7858" data-parentId="e1fb4059439f4a82ab3a2ce03340d7e1"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="a70b283fcadc4b2596fadc178b2eb6b1" data-parentId="c20b1c05b9014bb18bf2a41fb54e7858"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="ff225a14f7f44ba5996a019224ac7b7d" data-parentId="a70b283fcadc4b2596fadc178b2eb6b1"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://snomed.info/sct</span></td></tr><tr class="collapsed" data-id="bf348ea8b4914c88b8224facad867ba7" data-parentId="a70b283fcadc4b2596fadc178b2eb6b1"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>444110003</span></td></tr><tr class="collapsed" data-id="8658a7a4764745f48a80fb8084d73f82" data-parentId="a70b283fcadc4b2596fadc178b2eb6b1"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Type II diabetes mellitus well controlled</span></td></tr><tr class="collapsed" data-id="aca609f148374d40898ddf8c87132cc0" data-parentId="c20b1c05b9014bb18bf2a41fb54e7858"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="1b6016f5e91d4c138b5bec40d0075acf" data-parentId="aca609f148374d40898ddf8c87132cc0"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://hl7.org/fhir/sid/icd-10-cm</span></td></tr><tr class="collapsed" data-id="97d84ffb483342aabac92c1ba12c363f" data-parentId="aca609f148374d40898ddf8c87132cc0"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>E11.9</span></td></tr><tr class="collapsed" data-id="377456bd03ef411982b697bcfb4105cf" data-parentId="aca609f148374d40898ddf8c87132cc0"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Type 2 diabetes mellitus without complications</span></td></tr><tr class="collapsed" data-id="3b9f4135366b45e4b5114398e594f8ac" data-parentId="c20b1c05b9014bb18bf2a41fb54e7858"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Type 2 Diabetes</span></td></tr><tr class="collapsed" data-id="2392bc236f5641d9993d59dac2c77575" data-parentId="e1fb4059439f4a82ab3a2ce03340d7e1"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="39b92da9853f4e3096eda82c62981fe1" data-parentId="2392bc236f5641d9993d59dac2c77575"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="8cb5a47e51fe4862bb11ca0014f27dc5" data-parentId="2392bc236f5641d9993d59dac2c77575"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="c4c88dcc2a61421da2c4cc91620b050c" data-parentId="e1fb4059439f4a82ab3a2ce03340d7e1"><td class="instance"><span class="baseIcon primitive"></span><b>onset : </b><span>2020-01-01</span></td></tr><tr class="collapsed" data-id="a415ff586f834bba9adc589530b7d29c" data-parentId="e1fb4059439f4a82ab3a2ce03340d7e1"><td class="instance"><span class="baseIcon primitive"></span><b>recordedDate : </b><span>2024-02-01</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTablefbaa666f920b4daea97a95e82b141b91 = new InstanceTree();
+resourceTreeTablefbaa666f920b4daea97a95e82b141b91.init("fbaa666f920b4daea97a95e82b141b91");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="9131a2e2-f0bd-4002-93aa-d51ec8eaa61d">
+    <div class="path"><table><tbody><tr><td>Condition.<span class="field">id[0]</span></td><td>diabetes-condition-example-1</td></tr><tr><td>Condition.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns|6.1.0</td></tr><tr><td>Condition.clinicalStatus[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/condition-clinical</td></tr><tr><td>Condition.clinicalStatus[0].coding[0].<span class="field">code[0]</span></td><td>active</td></tr><tr><td>Condition.clinicalStatus[0].coding[0].<span class="field">display[0]</span></td><td>Active</td></tr><tr><td>Condition.verificationStatus[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/condition-ver-status</td></tr><tr><td>Condition.verificationStatus[0].coding[0].<span class="field">version[0]</span></td><td>4.0.0</td></tr><tr><td>Condition.verificationStatus[0].coding[0].<span class="field">code[0]</span></td><td>confirmed</td></tr><tr><td>Condition.verificationStatus[0].coding[0].<span class="field">display[0]</span></td><td>Confirmed</td></tr><tr><td>Condition.verificationStatus[0].<span class="field">text[0]</span></td><td>Confirmed</td></tr><tr><td>Condition.category[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/condition-category</td></tr><tr><td>Condition.category[0].coding[0].<span class="field">code[0]</span></td><td>problem-list-item</td></tr><tr><td>Condition.category[0].coding[0].<span class="field">display[0]</span></td><td>Problem List Item</td></tr><tr><td>Condition.category[0].<span class="field">text[0]</span></td><td>Problem List</td></tr><tr><td>Condition.code[0].coding[0].<span class="field">system[0]</span></td><td>http://snomed.info/sct</td></tr><tr><td>Condition.code[0].coding[0].<span class="field">code[0]</span></td><td>444110003</td></tr><tr><td>Condition.code[0].coding[0].<span class="field">display[0]</span></td><td>Type II diabetes mellitus well controlled</td></tr><tr><td>Condition.code[0].coding[1].<span class="field">system[0]</span></td><td>http://hl7.org/fhir/sid/icd-10-cm</td></tr><tr><td>Condition.code[0].coding[1].<span class="field">code[0]</span></td><td>E11.9</td></tr><tr><td>Condition.code[0].coding[1].<span class="field">display[0]</span></td><td>Type 2 diabetes mellitus without complications</td></tr><tr><td>Condition.code[0].<span class="field">text[0]</span></td><td>Type 2 Diabetes</td></tr><tr><td>Condition.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>Condition.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>Condition.<span class="field">onset[0]</span></td><td>2020-01-01</td></tr><tr><td>Condition.<span class="field">recordedDate[0]</span></td><td>2024-02-01</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

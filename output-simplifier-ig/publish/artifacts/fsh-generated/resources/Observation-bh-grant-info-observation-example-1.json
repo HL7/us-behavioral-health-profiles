@@ -1,0 +1,68 @@
+{
+  "resourceType": "Observation",
+  "id": "bh-grant-info-observation-example-1",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/onc/bhp/StructureDefinition/bh-grant-info"
+    ]
+  },
+  "extension": [
+    {
+      "extension": [
+        {
+          "url": "program-id",
+          "valueString": "SP-23-004"
+        },
+        {
+          "url": "grant-number",
+          "valueString": "SP083783-01"
+        }
+      ],
+      "url": "http://fhir.org/guides/onc/bhp/StructureDefinition/program-info"
+    }
+  ],
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "funding-program-info",
+          "system": "http://fhir.org/guides/onc/bhp/CodeSystem/bh-funding-type-codes",
+          "display": "Program Funding Information"
+        }
+      ],
+      "text": "Program Funding Information"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "grant-funding-type",
+        "system": "http://fhir.org/guides/onc/bhp/CodeSystem/bh-funding-type-codes",
+        "display": "Grant Funding Type"
+      }
+    ],
+    "text": "Behavioral Health Grant Funding Type"
+  },
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "effectiveDateTime": "2024-02-01",
+  "performer": [
+    {
+      "reference": "Organization/mh-provider-example-1",
+      "display": "Florida Mental Health Provider Associates"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "discretionary",
+        "system": "http://fhir.org/guides/onc/bhp/CodeSystem/bh-funding-type-codes",
+        "display": "Discretionary Funding"
+      }
+    ],
+    "text": "Discretionary Grant Funding"
+  }
+}

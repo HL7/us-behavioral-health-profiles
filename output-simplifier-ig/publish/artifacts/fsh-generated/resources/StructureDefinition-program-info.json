@@ -1,0 +1,106 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "program-info",
+  "url": "http://fhir.org/guides/onc/bhp/StructureDefinition/program-info",
+  "version": "1.0.0",
+  "name": "GrantProgramIdAndNumber",
+  "title": "Grant Program ID and Number",
+  "status": "active",
+  "description": "This complex extension defines the representation of Grant Program ID as well as grant number.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Observation",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Grant Program ID and Number",
+        "definition": "This complex extension defines the representation of Grant Program ID as well as grant number."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "min": 1
+      },
+      {
+        "id": "Extension.extension:program-id",
+        "path": "Extension.extension",
+        "sliceName": "program-id",
+        "short": "The program id for a program that that is participating in a designated behavioral health program.",
+        "definition": "The program id for a program that that is participating in a designated behavioral health program.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:program-id.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:program-id.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "program-id"
+      },
+      {
+        "id": "Extension.extension:program-id.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:grant-number",
+        "path": "Extension.extension",
+        "sliceName": "grant-number",
+        "short": "The grant number that the behavioral health service is operating under.",
+        "definition": "The grant number that the behavioral health service is operating under.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:grant-number.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:grant-number.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "grant-number"
+      },
+      {
+        "id": "Extension.extension:grant-number.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://fhir.org/guides/onc/bhp/StructureDefinition/program-info"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

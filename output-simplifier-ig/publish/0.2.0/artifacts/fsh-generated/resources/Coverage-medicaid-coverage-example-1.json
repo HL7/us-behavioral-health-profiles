@@ -1,0 +1,72 @@
+{
+  "resourceType": "Coverage",
+  "id": "medicaid-coverage-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage|6.1.0"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "MB",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display": "Member Number"
+          }
+        ]
+      },
+      "system": "http://example.org/fhir/memberidentifier",
+      "value": "88800933501"
+    }
+  ],
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "code": "2",
+        "system": "https://nahdo.org/sopt",
+        "display": "Medicaid"
+      }
+    ],
+    "text": "Medicaid"
+  },
+  "subscriberId": "888009335",
+  "beneficiary": {
+    "reference": "Patient/bh-patient-example"
+  },
+  "relationship": {
+    "coding": [
+      {
+        "code": "self",
+        "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
+      }
+    ],
+    "text": "Self"
+  },
+  "period": {
+    "start": "2024-01-01"
+  },
+  "payor": [
+    {
+      "reference": "Organization/fl-medicaid-example-1",
+      "display": "MyACCESS - Florida Medicaid"
+    }
+  ],
+  "class": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "group",
+            "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+            "display": "Group"
+          }
+        ],
+        "text": "Group"
+      },
+      "value": "Union Group Plan"
+    }
+  ]
+}

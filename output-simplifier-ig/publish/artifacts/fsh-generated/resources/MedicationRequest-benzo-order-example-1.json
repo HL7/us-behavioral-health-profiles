@@ -1,0 +1,38 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "benzo-order-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest|6.1.0"
+    ]
+  },
+  "identifier": [
+    {
+      "use": "usual",
+      "system": "urn:oid:2.16.840.1.113883.19.5.1.798",
+      "value": "101888811"
+    }
+  ],
+  "status": "completed",
+  "intent": "order",
+  "medicationReference": {
+    "reference": "Medication/benzo-medication-example-1",
+    "display": "lorazepam 0.5 MG Oral Tablet [Ativan]"
+  },
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "encounter": {
+    "reference": "Encounter/ed-encounter-example-1",
+    "display": "Emergency Department"
+  },
+  "requester": {
+    "reference": "Practitioner/ed-physician-example-1"
+  },
+  "dosageInstruction": [
+    {
+      "text": "every 8 hours as needed"
+    }
+  ]
+}

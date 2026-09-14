@@ -1,0 +1,16 @@
+---
+topic: examples-index
+---
+
+## Examples Index
+
+<fql>
+	from
+		Resource
+	where 
+		meta.profile.empty().not()
+	select
+		Example: '{{pagelink:example-'+ id + '}}',
+		ResourceType: typename()
+	order by Example
+</fql>

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | Full Story - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>User Story</span></li>
+
+    <li class="active">Full Story</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+<h1 id="full-use-case-story">3.2. Full Use Case Story</h1>
+
+
+<div class="itoc page-toc">
+<ul>
+  <li><a href="#ed-visit-encounter">ED Visit Encounter</a></li>
+  <li><a href="#pcp-encounter">PCP Encounter</a></li>
+  <li><a href="#initial-behavioral-health-encounter">Initial Behavioral Health Encounter</a></li>
+  <li><a href="#in-house-care-manager-encounter">In-House Care Manager Encounter</a></li>
+  <li><a href="#follow-up-behavioral-health-encounter">Follow-Up Behavioral Health Encounter</a></li>
+  <li><a href="#second-pcp-encounter">Second PCP Encounter</a></li>
+  <li><a href="#second-follow-up-behavioral-health-encounter">Second Follow-Up Behavioral Health Encounter</a></li>
+</ul>
+</div>
+
+<h2 id="ed-visit-encounter">3.2.1. ED Visit Encounter</h2>
+<p>James Wolff visited the emergency department (ED) six months ago due to chest pain, sweating, and feeling like his heart was racing. James is a 60-year-old non-Hispanic African American male. He provided his address, contact information, and Medicaid insurance information at ED registration. </p>
+<p>James shared his medical history with the triage nurse, which includes type 2 diabetes (managed with metformin 2000 mg daily), moderate depression (for which he has not taken his antidepressant recently due to difficulties scheduling a follow-up appointment with his primary care provider), and severe allergies to peanuts and penicillin. He denied smoking or using recreational drugs in the last year but noted past substance use issues.</p>
+<p>A patient care technician took his vital signs in triage, noting an elevated blood pressure of 157/92 and a heart rate of 111. An EKG showed normal sinus rhythm. His physical, cognitive, and functional assessments were normal. The ED physician suspected a panic attack and ordered a one-time dose of Ativan 0.5 mg. James's symptoms and vital signs improved, and he mentioned not taking his antidepressant since his wife, who used to schedule his appointments, died four months prior. He shared his loneliness and financial strain.</p>
+<p>James was kept overnight for observation and further tests, including a CBC, BMP, and HbA1c. The in-house psychiatrist noted evidence of depressive symptoms but assessed a low risk for suicide based on the C-SSRS screen completed by the ED nurse. James was prescribed Paroxetine 10 mg daily and Ativan 0.5 mg every 8 hours as needed, and he was referred to a community mental health provider. A care navigator helped secure appointments with a new primary care physician at a community health center and provided bus fare vouchers.</p>
+<h2 id="pcp-encounter">3.2.2. PCP Encounter</h2>
+<p>The following week, at his appointment with the new PCP, James shared his feelings of loneliness and lack of motivation to socialize or visit community centers since his wife's death. The PCP was able to see all the emergency room visit information from the week before, and after assessing and talking more with James, wanted him to continue his depression medication and wrote a new prescription for Paroxetine 10mg daily. She also referred James to his local community behavioral health provider and an in-house care manager. James agreed but requested afternoon appointments.</p>
+<h2 id="initial-behavioral-health-encounter">3.2.3. Initial Behavioral Health Encounter</h2>
+<p>James met with a Licensed Professional Counselor (LPC) two weeks later at the community mental health center. The LPC could view all prior encounter information, including the patient’s HIPAA consent, as a member of the same health information exchange network. He shared his mental health history, including an abusive relationship at 17, his parents' divorce, and past struggles with alcohol and substance use. Although he has always struggled with maintaining relationships, he had solid support from his late wife. James’s feelings of isolation are also due to a strained relationship with his adult daughter, Sarah Wolff. They only speak occasionally, as their connection has weakened over the years, leaving James with limited family support. The LPC administered a depression and suicide risk assessment, with James scoring 12 on the PHQ-9, indicating moderate depression and a low suicide risk on the C-SSRS. The LPC recommended cognitive behavioral therapy (CBT), peer coaching via a grief support group, and continuing the antidepressant. When James agreed to the plan, the LPC informed him that, based on the assessments, he was likely eligible for a grant program funded by SAMHSA, providing the services he needed at no cost. The LPC scheduled weekly CBT sessions and provided information on a local widower's support group.</p>
+<h2 id="in-house-care-manager-encounter">3.2.4. In-House Care Manager Encounter</h2>
+<p>That same day, James met with the community BH provider’s care manager, who administered the Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences tool (PRAPARE), an assessment for Social Determinants of Health (SDOH). She determined that, within the past year, James needed assistance with obtaining food and reliable transportation to medical appointments and the grocery store. He also worried about losing his housing. The care manager connected him with a community-based meal service for the elderly. Also, the care manager connected him with the local supportive housing office, provided more bus fare vouchers, and helped him apply for a reduced-fare MetroCard. She also assisted in reinstating his disability benefits, which he started receiving after suffering a back injury while working on a nearby citrus farm.</p>
+<h2 id="follow-up-behavioral-health-encounter">3.2.5. Follow-Up Behavioral Health Encounter</h2>
+<p>During a follow-up visit with his LPC four weeks later, James reported feeling “a little better.” He was taking his medications as prescribed and attending CBT sessions, though he missed a couple due to unreliable transportation. However, he found the support group sessions unhelpful. The LPC connected James with his community recreation center to explore other social engagement opportunities.</p>
+<h2 id="second-pcp-encounter">3.2.6. Second PCP Encounter</h2>
+<p>Three months later, James returned to his PCP with complaints of increased fatigue, trouble sleeping, periodic dizziness, and nausea. He had discontinued his antidepressant due to these side effects. He also reported that he had recently experienced a fall at home, which resulted in a minor injury to his knee. James shared that he had been drinking a few beers daily to relax and to help him sleep. He noted that he had missed several CBT sessions and support group meetings due to a lack of motivation. The PCP performed assessments, noting a score of 17 on the PHQ-9 and 6 on the AUDIT (Alcohol Use Disorders Identification Test), indicating potential health risks related to high alcohol use. The PCP provided alcohol use prevention education and discussed the possibility of resuming antidepressant medication. James agreed to reduce his drinking but wanted to think more before resuming antidepressants. Lab work ordered by the PCP showed an elevated HbA1c of 6.9%. The care manager scheduled appointments with an endocrinologist for diabetes management and virtual sessions with the LPC for CBT.</p>
+<h2 id="second-follow-up-behavioral-health-encounter">3.2.7. Second Follow-Up Behavioral Health Encounter</h2>
+<p>A month later, James's care team reviewed his case at the community mental health center. James reported feeling much better. They noted improvements in his diabetes management and reduced alcohol intake. James’s eating habits also improved thanks to the community-based meal service. The team also noted that James had not missed a CBT session since they became virtual and attended most support group sessions. He scored 3 on the AUDIT and 12 on the PHQ-9. James agreed to start retaking antidepressants, and the PCP prescribed Bupropion 200 mg daily, only to be taken in the morning so that his sleep was not affected. The care team continued to monitor his alcohol use and referred him to a psychiatrist for future management of his psychiatric medications. The care manager assisted in setting up the psychiatry appointment. The LPC expressed continued concern about James's social isolation. James informed them that he had enjoyed music and line dancing with his wife and might be interested in participating in a similar activity. The LPC suggested connecting him with a community recreation center offering free line-dance classes. They scheduled a follow-up visit in one month to review his progress.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

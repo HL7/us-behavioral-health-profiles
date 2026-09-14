@@ -2,7 +2,7 @@ ValueSet: MentalHealthClinicalNoteTypes
 Id: mental-health-clinical-note-types
 Title: "Mental Health Clinical Note Types"
 Description: "This ValueSet defines the LOINC codes for Mental Health Clinical Note types."
-* ^version = "0.1.0"
+* ^version = "0.2.0"
 * ^status = #draft
 * ^experimental = true
 * ^compose.inactive = false

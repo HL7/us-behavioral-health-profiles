@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | IG Home - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+
+    <li class="active">IG Home</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+<h1 id="home-page">1. Home Page</h1>
+
+
+<div class="itoc page-toc">
+<ul>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#background">Background</a></li>
+  <li><a href="#scope-and-usage">Scope and Usage</a></li>
+  <li><a href="#overview-of-implementation-guide">Overview of Implementation Guide</a></li>
+  <li><a href="#audience">Audience</a></li>
+  <li><a href="#how-to-read-this-implementation-guide">How to Read This Implementation Guide</a></li>
+  <li><a href="#limitations-and-challenges">Limitations and Challenges</a></li>
+  <li><a href="#privacy-and-security-considerations">Privacy and Security Considerations</a></li>
+  <li><a href="#dependencies-on-other-igs">Dependencies on Other IGs</a></li>
+  <li><a href="#authors-and-project-team">Authors and Project Team</a></li>
+  <li><a href="#acknowledgements">Acknowledgements</a></li>
+</ul>
+</div>
+
+<h2 id="introduction">1.1. Introduction</h2>
+<p>The United States Core Data for Interoperability (USCDI) Plus Behavioral Health (BH) dataset (also referred to as USCDI+ BH) aims to enhance the exchange and interoperability of behavioral health information across healthcare systems in the United States. Building on the USCDI foundation, this dataset addresses the unique needs and challenges associated with behavioral health data. It is designed to facilitate behavioral health integration with other healthcare services, support better clinical decision-making, and improve patient outcomes.</p>
+<h2 id="background">1.2. Background</h2>
+<p>Behavioral health, encompassing both acute and chronic mental health and substance use disorders, is a critical component of overall health and well-being. The increasing prevalence of these disorders necessitates robust information technology (IT) systems to support efficient and effective care. However, the fragmentation of behavioral health information has historically hindered the ability of healthcare providers to deliver comprehensive, coordinated care. In addition, behavioral health providers often lag in adopting health IT due to factors such as ineligibility for incentive programs and the complexity of documenting behavioral health encounters. These factors and others complicate the sharing of behavioral health data, impeding care coordination and integration of behavioral health with other health settings.</p>
+<p>The USCDI+ BH dataset seeks to address this fragmentation by establishing, harmonizing, and advancing a core list of standardized, interoperable data elements to capture treatment data for adults, adolescents, and children with mental health and substance use disorders. The dataset development involved collaboration with diverse stakeholders, including behavioral health clinicians, patient advocacy groups, healthcare IT developers, and policymakers. This collaborative approach aimed to address the needs and priorities of all stakeholders while aligning with existing standards and certain regulations, where possible.</p>
+<h2 id="scope-and-usage">1.3. Scope and Usage</h2>
+<p>The USCDI+ Behavioral Health (BH) initiative is designed to facilitate the seamless integration and exchange of behavioral health data across various healthcare settings, including hospitals, outpatient clinics, behavioral health centers, substance use treatment facilities, integrated care settings, telehealth platforms, and Certified Community Behavioral Health Clinics (CCBHCs).</p>
+<h2 id="overview-of-implementation-guide">1.4. Overview of Implementation Guide</h2>
+<p>This BH FHIR implementation guide will use the profiles outlined in the <a href="https://www.hl7.org/fhir/us/core/uscdi.html">US Core Implementation Guide</a>. Where necessary, custom profiles are used to address needs specific to BH care.  The developers will follow the <a href="https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process">Cross Group Projects WG's variance request process</a> and provide the US Realm Steering Committee with an approved rationale for deviation in the implementation guide where applicable.</p>
+<p>It is recommended to review sections <a href="#how-to-read-this-implementation-guide">How to Read This Implementation Guide</a> and <a href="#limitations-and-challenges">Limitations and Challenges</a> below before exploring.</p>
+<h2 id="audience">1.5. Audience</h2>
+<p>This informational IG is intended to illustrate the use of FHIR standards to exchange USCDI+ BH elements.  The IG maximizes existing FHIR standards and provides newly developed FHIR profiles and elements to address data requirements specific to BH. The IG is intended for a technical audience working with behavioral health data using the USCDI+ framework. The IG authors seek feedback on the usefulness of the user story, the completeness of the crosswalk to FHIR elements, applicable behavioral health specific terminology, and the usability of the example FHIR references for each data element.</p>
+<p>Researchers, quality improvement staff, and policymakers can also benefit from a basic understanding of how this guide presents BH data elements to support data collection and analysis.</p>
+<p>Standardizing behavioral health data through this IG aims to improve data exchange and interoperability in the behavioral health ecosystem, ultimately contributing to improved patient care and outcomes.</p>
+<p>Discussions on the use of this IG take place regularly on the BHIT calls. Implementers are invited to participate in the discussions and the testing activities. Readers who wish to make a comment or suggestion regarding the IG are encouraged to submit them through <a href="https://github.com/lantanagroup/astp-bhp/issues">GitHub Issue submission page</a> for this IG.</p>
+<h2 id="how-to-read-this-implementation-guide">1.6. How to Read This Implementation Guide</h2>
+<p>The Implementation Guide contains multiple sections to help readers use the IG, including a description of the IG’s intended audience, scope, and guidance for implementing USCDI+BH elements using FHIR standards. The table below lists major sections of the IG and relevant audiences for each section.</p>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-xf3r">Section</th>
+    <th class="tg-xf3r">Resource</th>
+    <th class="tg-xf3r">Description</th>
+    <th class="tg-xf3r">Audience</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-yd0e">User Story</td>
+    <td class="tg-uozz"><a href="ig-user_story-summary_story.html" title='ig/user_story/summary_story.page.md'>Summary</a></td>
+    <td class="tg-cly1">A summary of the behavioral health user story that informed the development of this implementation guide</td>
+    <td class="tg-cly1">General and Introductory</td>
+  </tr>
+  <tr>
+    <td class="tg-yd0e">User Story</td>
+    <td class="tg-uozz"><a href="ig-user_story-quick_facts.html" title='ig/user_story/quick_facts.page.md'>Quick Facts</a></td>
+    <td class="tg-cly1">A list of key points from the behavioral health user story that informed the development of this implementation guide</td>
+    <td class="tg-cly1">General and Introductory</td>
+  </tr>
+  <tr>
+    <td class="tg-yd0e">User Story</td>
+    <td class="tg-uozz"><a href="ig-user_story-full_story.html" title='ig/user_story/full_story.page.md'>Full Care Story</a></td>
+    <td class="tg-cly1">The complete behavioral health user care story used in the development of this implementation guide</td>
+    <td class="tg-cly1">General</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Background</td>
+    <td class="tg-uozz"><a href="ig-background-uscdi_bh_elements.html" title='ig/background/uscdi_bh_elements.page.md'>USCDI+ BH Elements</a></td>
+    <td class="tg-cly1">A list of USCDI+ Behavioral Health elements used in the implementation guide, covering data classes like clinical notes and vital signs. Each element includes descriptions, purposes, and examples, supporting structured health information management and sharing</td>
+    <td class="tg-cly1">Technical</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Technical Artifacts</td>
+    <td class="tg-fapl"><a href="ig-technical_artifacts-bh_to_fhir_examples.html" title='ig/technical_artifacts/bh_to_fhir_examples.page.md'>USCDI+ BH to FHIR Examples</a></td>
+    <td class="tg-cly1">This table links USCDI+ behavioral health data elements to their corresponding FHIR elements, with examples and narratives showing their practical application. It ensures accurate and interoperable healthcare data across systems</td>
+    <td class="tg-cly1">Technical</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Technical Artifacts</td>
+    <td class="tg-uozz"><a href="ig-technical_artifacts-bh_to_fhir_profiles.html" title='ig/technical_artifacts/bh_to_fhir_profiles.page.md'>USCDI+ BH to Suggestive FHIR Profiles</a></td>
+    <td class="tg-cly1">Draft proposals for profiles supporting USCDI + Behavioral Health Data Elements</td>
+    <td class="tg-cly1">Detailed Technical</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Technical Artifacts</td>
+    <td class="tg-fapl"><a href="ig-technical_artifacts-artifacts.html" title='ig/technical_artifacts/artifacts'>FHIR Artifacts</a></td>
+    <td class="tg-cly1">An index of the FHIR artifacts included in this implementation guide</td>
+    <td class="tg-cly1">Detailed Technical</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Specification</td>
+    <td class="tg-uozz"><a href="ig-downloads.html" title='ig/downloads.page.md'>Downloads</a></td>
+    <td class="tg-cly1">Downloads</td>
+    <td class="tg-cly1">Detailed Technical</td>
+  </tr>
+</tbody></table>
+<h2 id="limitations-and-challenges">1.7. Limitations and Challenges</h2>
+<p>This section outlines the limitations and challenges encountered when developing this Implementation Guide. It highlights topics like the complexities in standardizing health assessments across various clinical practices and the use of specific resources like DocumentReference in FHIR to manage different types of clinical documents. By acknowledging these challenges, the IG aims to provide users with a clear understanding of the decisions made, the potential constraints implementers they may encounter, and the collective work to be done to standardize Behavioral Health data.</p>
+<ul>
+<li>The <b>health status assessments</b> included in this Implementation Guide (IG) were chosen based on their availability in widely recognized clinical coding standards, such as LOINC and SNOMED. We acknowledge that the assessments presented here are not the only ones applicable within their respective categories, nor may they be the most commonly used in the field. This limitation reflects the inherent challenges in standardizing health assessments across diverse clinical practices.</li>
+<li>Many prominent <b>health status assessments</b> are proprietary and licensed material, this will be a challenge in further development.</li>
+<li>In the <b>FHIR examples</b> provided in this IG, the DocumentReference resource is utilized to supply metadata about various documents, enabling their discovery and management within a system. These resources employ the Attachment datatype, which stores the content type and a base64 encoded representation of the binary content. The types of documents that can be represented this way include but aren’t limited to:
+<ul>
+<li>PDF documents</li>
+<li>Scanned paper and digital records of faxes</li>
+<li>Clinical notes in various forms</li>
+<li>Image, video, and audio files (e.g., JPEG, GIF, MP4, MP3)</li>
+<li>Non-standard formats (e.g., CSV, RTF, WORD)</li>
+</ul>
+</li>
+<li>It’s important to note that these FHIR examples are annotated in the FHIR narrative, of the technical artifacts sections, as “...<u>encoded (base64)</u>”.</li>
+</ul>
+<h2 id="privacy-and-security-considerations">1.8. Privacy and Security Considerations</h2>
+<p>Implementers <strong>SHOULD</strong> be familiar with and adhere primarily to any security and privacy guidelines defined below:</p>
+<ul>
+<li><a href="http://hl7.org/fhir/R4/secpriv-module.html">Security &amp; Privacy module</a></li>
+<li><a href="http://hl7.org/fhir/R4/security.html">Security Principles</a></li>
+<li><a href="http://hl7.org/fhir/R4/safety.html">Implementer's Checklist</a></li>
+</ul>
+<p>Issues or concerns regarding privacy, security, and safety should use the <a href="https://inquiry.healthit.gov/support/plugins/servlet/desk/portal/2">Health IT Feedback and Inquiry Portal</a> to submit feedback or inquiries.</p>
+<h2 id="dependencies-on-other-igs">1.9. Dependencies on Other IGs</h2>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-xf3r">Implementation Guide</th>
+    <th class="tg-xf3r">Version</th>
+    <th class="tg-xf3r">Dependency</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-zzem"><a href="https://hl7.org/fhir/us/core/STU6.1/">US Core</a></td>
+    <td class="tg-cly1">6.1.0</td>
+    <td class="tg-cly1">Where possible, all profiles in this IG are either derived from US Core 6.1.0 or aligned with that release and future releases as much as possible. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.</td>
+  </tr>
+  <tr>
+    <td class="tg-zzem"><a href="http://hl7.org/fhir/uv/sdc/">Structured Document Capture (SDC)</a></td>
+    <td class="tg-cly1">3.0.0</td>
+    <td class="tg-cly1">SDC is the basis for mapping QuestionnaireResponses to Observations and Conditions. SDC also provides guidance around how questionnaires can be created with support for score calculation, conditional behavior, specific rendering expectations, etc.</td>
+  </tr>
+    <tr>
+    <td class="tg-zzem"><a href="https://hl7.org/fhir/us/sdoh-clinicalcare/STU2.1">SDOH Clinical Care</a></td>
+    <td class="tg-cly1">2.1.0</td>
+    <td class="tg-cly1">In some cases, where profiles could not be derived from US Core, SDOH Clinical Care profiles are referenced.</td>
+  </tr>
+      <tr>
+    <td class="tg-zzem"><a href="http://hl7.org/fhir/R4/index.html">HL7 FHIR R4</a></td>
+    <td class="tg-cly1">R4</td>
+    <td class="tg-cly1">In some cases, where profiles could not be derived from US Core, base FHIR resources may be used.</td>
+  </tr>
+</tbody></table>
+<h2 id="authors-and-project-team">1.10. Authors and Project Team</h2>
+<table class="tg"><thead>
+  <tr>
+    <td class="tg-xf3r">Name</td>
+    <td class="tg-xf3r">Role</td>
+    <td class="tg-xf3r">Organization</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-cly1">Llew Brown</td>
+    <td class="tg-cly1">Contributor</td>
+    <td class="tg-cly1">Next Level Health Innovations</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">JaMor Hairston</td>
+    <td class="tg-cly1">IG Author</td>
+    <td class="tg-cly1">Next Level Health Innovations</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Claudia Hall</td>
+    <td class="tg-cly1">IG Author</td>
+    <td class="tg-cly1">Next Level Health Innovations</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Eva Keeling</td>
+    <td class="tg-cly1">Contributor</td>
+    <td class="tg-cly1">Next Level Health Innovations</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Susan Matney</td>
+    <td class="tg-cly1">Contributor</td>
+    <td class="tg-cly1">Next Level Health Innovations</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Tiara Halstead</td>
+    <td class="tg-cly1">Contributor</td>
+    <td class="tg-cly1">Next Level Health Innovations</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Michelle Zancan</td>
+    <td class="tg-cly1">Contributor</td>
+    <td class="tg-cly1">Next Level Health Innovations</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Aaron Nusstein</td>
+    <td class="tg-cly1">Primary Author</td>
+    <td class="tg-cly1">Lantana Consulting Group</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">David deRoode</td>
+    <td class="tg-cly1">Contributor</td>
+    <td class="tg-cly1">Lantana Consulting Group</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Laura Goubeaux</td>
+    <td class="tg-cly1">Contributor</td>
+    <td class="tg-cly1">Lantana Consulting Group</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Patrick Joyce</td>
+    <td class="tg-cly1">Contributor</td>
+    <td class="tg-cly1">Lantana Consulting Group</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Lori Haberman</td>
+    <td class="tg-cly1">Project Sponsor Contact</td>
+    <td class="tg-cly1">Assistant Secretary for Technology Policy / Office of the National Coordinator for Health IT (ASTP/ONC)</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Christopher Muir</td>
+    <td class="tg-cly1">Project Sponsor Contact</td>
+    <td class="tg-cly1">Assistant Secretary for Technology Policy / Office of the National Coordinator for Health IT (ASTP/ONC)</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Dantrell Simmons</td>
+    <td class="tg-cly1">Project Sponsor Contact</td>
+    <td class="tg-cly1">Substance Abuse and Mental Health Services Administration (SAMHSA)</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Talisha Searcy</td>
+    <td class="tg-cly1">Project Sponsor Contact</td>
+    <td class="tg-cly1">Assistant Secretary for Technology Policy / Office of the National Coordinator for Health IT (ASTP/ONC)</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Brett Andriesen</td>
+    <td class="tg-cly1">Project Sponsor Contact</td>
+    <td class="tg-cly1">Assistant Secretary for Technology Policy / Office of the National Coordinator for Health IT (ASTP/ONC)</td>
+  </tr>
+    <tr>
+    <td class="tg-cly1">Leliveld Emeni</td>
+    <td class="tg-cly1">Project Sponsor Contact</td>
+    <td class="tg-cly1">Assistant Secretary for Technology Policy / Office of the National Coordinator for Health IT (ASTP/ONC)</td>
+  </tr>
+</tbody></table>
+<h2 id="acknowledgements">1.11. Acknowledgements</h2>
+<p>Next Level Health Innovations and Lantana Consulting Group developed and produced this informational FHIR Implementation Guide (IG) for the Behavioral Health (BH) domain based on the data elements developed for USCDI+ BH. The guide explains the mapping and use of the USCDI+ elements in FHIR. The project is funded by the Substance Abuse and Mental Health Services Administration (SAMHSA) as part of the Behavioral Health Information Technology (BHIT) Initiative, in collaboration with the Assistant Secretary for Technology Policy/Office of the National Coordinator for Health Information Technology (ASTP/ONC). The BHIT is intended to advance health information technology (IT) in behavioral health care and practice settings. The FHIR IG was also developed with input from the HL7 Electronic Health Record (EHR) Work Group Behavioral Health Project Team, which included federal, local, and private BH-focused professionals.</p>
+<p>Health Level Seven, HL7, CDA, CCD, and FHIR are registered trademarks of Health Level Seven International in the US Trademark Office.</p>
+<p>This guide includes SNOMED CT content, copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. This agreement does not cover the implementer's use of SNOMED CT.</p>
+<p>This guide contains content from <a href="http://loinc.org">LOINC</a>. LOINC is copyright © 1995-2024, Regenstrief Institute, Inc., and the Logical Observation Identifiers Names and Codes (LOINC) Committee. It is available at no cost under the license at <a href="https://loinc.org/kb/license/">https://loinc.org/kb/license</a>. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

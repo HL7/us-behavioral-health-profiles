@@ -1,0 +1,51 @@
+{
+  "resourceType": "CareTeam",
+  "id": "bh-care-team-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam|6.1.0"
+    ]
+  },
+  "status": "active",
+  "name": "Example CareTeam",
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "participant": [
+    {
+      "role": [
+        {
+          "coding": [
+            {
+              "code": "309339007",
+              "system": "http://snomed.info/sct",
+              "display": "Adult intensive care specialist (occupation)"
+            }
+          ]
+        }
+      ],
+      "member": {
+        "reference": "Practitioner/ed-physician-example-1",
+        "display": "Wise Owl, MD"
+      }
+    },
+    {
+      "role": [
+        {
+          "coding": [
+            {
+              "code": "310190000",
+              "system": "http://snomed.info/sct",
+              "display": "Mental health counselor (occupation)"
+            }
+          ]
+        }
+      ],
+      "member": {
+        "reference": "Practitioner/mental-health-provider-example-1",
+        "display": "Dr. Lazslo Cravensworth"
+      }
+    }
+  ]
+}

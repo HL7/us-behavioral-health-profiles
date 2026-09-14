@@ -1,0 +1,126 @@
+{
+  "resourceType": "Encounter",
+  "id": "ed-encounter-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0"
+    ]
+  },
+  "identifier": [
+    {
+      "use": "usual",
+      "system": "urn:oid:2.16.840.1.113883.19.5.1.698.8",
+      "value": "10005104251"
+    }
+  ],
+  "status": "finished",
+  "class": {
+    "code": "EMER",
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "display": "emergency"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "50849002",
+          "system": "http://snomed.info/sct",
+          "display": "Emergency room admission (procedure)"
+        }
+      ],
+      "text": "Emergency room"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "period": {
+    "start": "2024-02-01T21:02:00+00:00",
+    "end": "2024-02-02T03:00:00+00:00"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "code": "R07.9",
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "display": "Chest pain, unspecified"
+        }
+      ],
+      "text": "Angina"
+    },
+    {
+      "coding": [
+        {
+          "code": "R61",
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "display": "Generalized hyperhidrosis"
+        }
+      ],
+      "text": "Sweating"
+    },
+    {
+      "coding": [
+        {
+          "code": "R00.2",
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "display": "Palpitations"
+        }
+      ],
+      "text": "Palpitations"
+    }
+  ],
+  "diagnosis": [
+    {
+      "condition": {
+        "reference": "Condition/panic-attack-condition-example-1",
+        "display": "Panic Attack"
+      },
+      "rank": 1
+    },
+    {
+      "condition": {
+        "reference": "Condition/chest-pain-condition-example-1",
+        "display": "Chest Pain"
+      },
+      "rank": 2
+    },
+    {
+      "condition": {
+        "reference": "Condition/diabetes-condition-example-1",
+        "display": "Diabetes (II)"
+      },
+      "rank": 3
+    }
+  ],
+  "location": [
+    {
+      "location": {
+        "reference": "Location/ed-location-example-1",
+        "display": "Emergency Dept."
+      },
+      "physicalType": {
+        "coding": [
+          {
+            "code": "wa",
+            "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+            "display": "Ward"
+          }
+        ]
+      },
+      "period": {
+        "start": "2024-02-01T21:02:00+00:00",
+        "end": "2024-02-02T03:02:00+00:00"
+      }
+    }
+  ],
+  "partOf": {
+    "reference": "Encounter/discharge-encounter-example-3",
+    "identifier": {
+      "use": "usual",
+      "system": "urn:oid:2.16.840.1.113883.19.5.1.698.8",
+      "value": "40005104253"
+    }
+  }
+}

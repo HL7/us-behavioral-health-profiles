@@ -1,0 +1,40 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MentalHealthClinicalNoteTypes",
+  "id": "mental-health-clinical-note-types",
+  "title": "Mental Health Clinical Note Types",
+  "description": "This ValueSet defines the LOINC codes for Mental Health Clinical Note types.",
+  "url": "http://fhir.org/guides/onc/bhp/ValueSet/mental-health-clinical-note-types",
+  "version": "0.2.0",
+  "experimental": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "34785-6",
+            "display": "Mental Health Consult Note"
+          },
+          {
+            "code": "78263-1",
+            "display": "Mental Health Discharge Summary Note"
+          },
+          {
+            "code": "78306-8",
+            "display": "Mental Health History and Physical Note"
+          },
+          {
+            "code": "78472-8",
+            "display": "Mental Health Procedure Note"
+          },
+          {
+            "code": "34904-3",
+            "display": "Mental Health Progress Note"
+          }
+        ]
+      }
+    ]
+  }
+}

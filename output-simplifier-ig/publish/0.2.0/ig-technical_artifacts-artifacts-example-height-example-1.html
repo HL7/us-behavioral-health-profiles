@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | example-height-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-height-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+<h2 id="example-observation-height-example">Example Observation: height-example</h2>
+<p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#500df449-096a-46e5-ba91-05d8b78fa3e9" aria-controls="500df449-096a-46e5-ba91-05d8b78fa3e9" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#8c27c682-5df8-4829-8b0a-d5ad298160f8" aria-controls="8c27c682-5df8-4829-8b0a-d5ad298160f8" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#9c34950f-dfdd-4521-ad60-da1470184cbe" aria-controls="9c34950f-dfdd-4521-ad60-da1470184cbe" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#50c3d344-fc38-4510-9911-54e25b5dc2a6" aria-controls="50c3d344-fc38-4510-9911-54e25b5dc2a6" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="500df449-096a-46e5-ba91-05d8b78fa3e9">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.resourceType" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">resourceType</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Observation</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.id" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">height-example-1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.meta" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">meta</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.meta.profile" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">profile</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height|6.1.0</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.status" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">status</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">final</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.category" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">category</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.category.coding" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.category.coding.system" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/observation-category</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.category.coding.code" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">vital-signs</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.category.coding.display" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Vital Signs</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.category.text" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Vital Signs</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.code" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.code.coding" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.code.coding.system" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://loinc.org</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.code.coding.code" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">8302-2</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.code.coding.display" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Body height</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.code.text" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">height</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.subject" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">subject</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.subject.reference" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.subject.display" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">James Wolff</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.effectiveDateTime" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">effectiveDateTime</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2024-02-01</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.performer" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">performer</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.performer.reference" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Practitioner/pcp-provider-example-1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.performer.display" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Dr. Doc Family</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.valueQuantity" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">valueQuantity</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.valueQuantity.value" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">value</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">172.72</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.valueQuantity.unit" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">unit</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">cm</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.valueQuantity.system" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://unitsofmeasure.org</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.valueQuantity.code" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">cm</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="8c27c682-5df8-4829-8b0a-d5ad298160f8">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">Observation</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.id" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">height-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.meta" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.meta.profile" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height|6.1.0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.status" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">final</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.category" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.category.coding" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.category.coding.system" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/observation-category</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.category.coding.code" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">vital-signs</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.category.coding.display" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Vital Signs</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.category.text" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Vital Signs</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.code" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.code.coding" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.code.coding.system" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://loinc.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.code.coding.code" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">8302-2</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.code.coding.display" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Body height</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.code.text" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">height</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.subject" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.subject.reference" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.subject.display" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">James Wolff</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.effective" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">effectiveDateTime</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2024-02-01</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.performer" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">performer</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.performer.reference" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Practitioner/pcp-provider-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.performer.display" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Dr. Doc Family</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">performer</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.value" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">valueQuantity</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.value.value" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">172.72</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.value.unit" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">unit</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">cm</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.value.system" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://unitsofmeasure.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-body-height.json&tab=details#Observation.value.code" title="US Core Body Height Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-body-height.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">cm</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">valueQuantity</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Observation</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="9c34950f-dfdd-4521-ad60-da1470184cbe">
+    <div class="stu3-treetable" id="c012abd082a24c3d921e461c0b26ee5d" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="61072260a1804c8c875f0af0c003e04c"><td class="instance"><span class="baseIcon primitive"></span><b>Observation</b></td></tr><tr class="collapsed" data-id="76828f1ce0bc419e8b7b6d77cbf48a1a" data-parentId="61072260a1804c8c875f0af0c003e04c"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>height-example-1</span></td></tr><tr class="collapsed" data-id="0959a256b57e47b182e9c4933d566818" data-parentId="61072260a1804c8c875f0af0c003e04c"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="605d24dae88544618ad947253e1afe78" data-parentId="0959a256b57e47b182e9c4933d566818"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height|6.1.0</span></td></tr><tr class="collapsed" data-id="73fe6111f6d940fe9c857c8027c1bca2" data-parentId="61072260a1804c8c875f0af0c003e04c"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>final</span></td></tr><tr class="collapsed" data-id="68f0b16f74874b1a876ee1da3b099bc1" data-parentId="61072260a1804c8c875f0af0c003e04c"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="6e717496b25042e9ac993a5d48a3e9e0" data-parentId="68f0b16f74874b1a876ee1da3b099bc1"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="22b99a02a14e43e2a344cb2016ebdbe2" data-parentId="6e717496b25042e9ac993a5d48a3e9e0"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/observation-category</span></td></tr><tr class="collapsed" data-id="e89f323729e146b0811393c28b510469" data-parentId="6e717496b25042e9ac993a5d48a3e9e0"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>vital-signs</span></td></tr><tr class="collapsed" data-id="308b07505c1f4c50894537ae64e15bc1" data-parentId="6e717496b25042e9ac993a5d48a3e9e0"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Vital Signs</span></td></tr><tr class="collapsed" data-id="795704064e92454991dd49d66eec7023" data-parentId="68f0b16f74874b1a876ee1da3b099bc1"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Vital Signs</span></td></tr><tr class="collapsed" data-id="78cd52e45c6f4f2b952d50a973838db4" data-parentId="61072260a1804c8c875f0af0c003e04c"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="efb27d8bad634b0e84e136a37aeff973" data-parentId="78cd52e45c6f4f2b952d50a973838db4"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="36c66edd9fea4ddfa1d728adccff43f2" data-parentId="efb27d8bad634b0e84e136a37aeff973"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="501e6466f3794196aea7cf6dbef672df" data-parentId="efb27d8bad634b0e84e136a37aeff973"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>8302-2</span></td></tr><tr class="collapsed" data-id="5e6937ab53c143b09eb7f156bbbbf269" data-parentId="efb27d8bad634b0e84e136a37aeff973"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Body height</span></td></tr><tr class="collapsed" data-id="5aec41a4060540a8b7bf871fbf584c9b" data-parentId="78cd52e45c6f4f2b952d50a973838db4"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>height</span></td></tr><tr class="collapsed" data-id="a63c10ff536a463baaa375500fc12941" data-parentId="61072260a1804c8c875f0af0c003e04c"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="c94bc240763b44cf89afc1347a82da7d" data-parentId="a63c10ff536a463baaa375500fc12941"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="1d6c1c1a1857445ebc73a51cab4f9dbf" data-parentId="a63c10ff536a463baaa375500fc12941"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="323899f7a24443d38b9af8f547885f52" data-parentId="61072260a1804c8c875f0af0c003e04c"><td class="instance"><span class="baseIcon primitive"></span><b>effective : </b><span>2024-02-01</span></td></tr><tr class="collapsed" data-id="dfbbd615cc994af8bab69891b453d257" data-parentId="61072260a1804c8c875f0af0c003e04c"><td class="instance"><span class="baseIcon primitive"></span><b>performer</b></td></tr><tr class="collapsed" data-id="865f4f0edb8c4df5bbc4d1cf520b0540" data-parentId="dfbbd615cc994af8bab69891b453d257"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Practitioner/pcp-provider-example-1</span></td></tr><tr class="collapsed" data-id="8815f4c6fc2942dfa7a9133cdf213ff3" data-parentId="dfbbd615cc994af8bab69891b453d257"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Dr. Doc Family</span></td></tr><tr class="collapsed" data-id="1ff244a92ea74e91b0fe896588bea151" data-parentId="61072260a1804c8c875f0af0c003e04c"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="b248148c437f4ef4bef9b0c60e76b28b" data-parentId="1ff244a92ea74e91b0fe896588bea151"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>172.72</span></td></tr><tr class="collapsed" data-id="a723572596c247c5bb7e1dcee68037fb" data-parentId="1ff244a92ea74e91b0fe896588bea151"><td class="instance"><span class="baseIcon primitive"></span><b>unit : </b><span>cm</span></td></tr><tr class="collapsed" data-id="20b2c2680a074efe86b08a9b4d16182a" data-parentId="1ff244a92ea74e91b0fe896588bea151"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://unitsofmeasure.org</span></td></tr><tr class="collapsed" data-id="c0f195529f0a4654979c127c39e90537" data-parentId="1ff244a92ea74e91b0fe896588bea151"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>cm</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTablec012abd082a24c3d921e461c0b26ee5d = new InstanceTree();
+resourceTreeTablec012abd082a24c3d921e461c0b26ee5d.init("c012abd082a24c3d921e461c0b26ee5d");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="50c3d344-fc38-4510-9911-54e25b5dc2a6">
+    <div class="path"><table><tbody><tr><td>Observation.<span class="field">id[0]</span></td><td>height-example-1</td></tr><tr><td>Observation.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height|6.1.0</td></tr><tr><td>Observation.<span class="field">status[0]</span></td><td>final</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/observation-category</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">code[0]</span></td><td>vital-signs</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">display[0]</span></td><td>Vital Signs</td></tr><tr><td>Observation.category[0].<span class="field">text[0]</span></td><td>Vital Signs</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">code[0]</span></td><td>8302-2</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">display[0]</span></td><td>Body height</td></tr><tr><td>Observation.code[0].<span class="field">text[0]</span></td><td>height</td></tr><tr><td>Observation.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>Observation.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>Observation.<span class="field">effective[0]</span></td><td>2024-02-01</td></tr><tr><td>Observation.performer[0].<span class="field">reference[0]</span></td><td>Practitioner/pcp-provider-example-1</td></tr><tr><td>Observation.performer[0].<span class="field">display[0]</span></td><td>Dr. Doc Family</td></tr><tr><td>Observation.value[0].<span class="field">value[0]</span></td><td>172.72</td></tr><tr><td>Observation.value[0].<span class="field">unit[0]</span></td><td>cm</td></tr><tr><td>Observation.value[0].<span class="field">system[0]</span></td><td>http://unitsofmeasure.org</td></tr><tr><td>Observation.value[0].<span class="field">code[0]</span></td><td>cm</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

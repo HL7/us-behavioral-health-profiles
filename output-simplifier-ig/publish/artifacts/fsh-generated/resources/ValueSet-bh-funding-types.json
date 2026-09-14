@@ -1,0 +1,31 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "BehavioralHealthProgramFundingTypes",
+  "id": "bh-funding-types",
+  "title": "Behavioral Health Program Funding Types",
+  "description": "This ValueSet defines coded concepts pertaining to a Behavioral Health program/grant.",
+  "url": "http://fhir.org/guides/onc/bhp/ValueSet/bh-funding-types",
+  "experimental": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhir.org/guides/onc/bhp/CodeSystem/bh-funding-type-codes",
+        "concept": [
+          {
+            "code": "discretionary",
+            "display": "Discretionary Funding"
+          },
+          {
+            "code": "grant-funding-type",
+            "display": "Grant Funding Type"
+          },
+          {
+            "code": "funding-program-info",
+            "display": "Program Funding Information"
+          }
+        ]
+      }
+    ]
+  }
+}

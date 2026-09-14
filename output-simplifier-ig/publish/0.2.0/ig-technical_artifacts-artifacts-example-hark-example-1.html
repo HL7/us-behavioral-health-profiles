@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | example-hark-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-hark-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+<h2 id="example-questionnaireresponse-hark-example">Example QuestionnaireResponse: hark-example</h2>
+<p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#79cd8f2a-9d41-454c-8ceb-afb78e8ed9fd" aria-controls="79cd8f2a-9d41-454c-8ceb-afb78e8ed9fd" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#29f4933b-a9ad-4f83-ad5e-9ef4d3a23c57" aria-controls="29f4933b-a9ad-4f83-ad5e-9ef4d3a23c57" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#fdd0d11b-a701-4f16-89d6-7ba6367fdde2" aria-controls="fdd0d11b-a701-4f16-89d6-7ba6367fdde2" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#3989e596-1726-4402-9e78-b46a72b07da9" aria-controls="3989e596-1726-4402-9e78-b46a72b07da9" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="79cd8f2a-9d41-454c-8ceb-afb78e8ed9fd">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.resourceType" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">resourceType</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">QuestionnaireResponse</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.id" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">hark-example-1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.meta" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">meta</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.meta.profile" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">profile</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|6.1.0</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.questionnaire" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">questionnaire</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">https://www.etsu.edu/institute/child-family-health/documents/mahf_dv_hark_c.pdf</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.status" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">status</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">completed</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.subject" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">subject</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.subject.reference" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.subject.display" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">James Wolff</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.authored" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">authored</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2024-02-01T20:50:32.718Z</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.author" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">author</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.author.reference" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Practitioner/ed-physician-example-1</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">item</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.linkId" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">linkId</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">/76499-3</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.text" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Within the last year, have you been humiliated or emotionally abused in other ways by your partner or ex-partner?</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">answer</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.valueCoding" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">valueCoding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.valueCoding.system" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://loinc.org</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.valueCoding.code" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">LA32-8</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.valueCoding.display" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">No</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.linkId" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">linkId</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">/76501-6</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.text" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Within the last year, have you been afraid of your partner or ex-partner?</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">answer</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.valueCoding" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">valueCoding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.valueCoding.system" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://loinc.org</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.valueCoding.code" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">LA32-8</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.valueCoding.display" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">No</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.linkId" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">linkId</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">/76502-4</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.text" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Within the last year, have you been raped or forced to have any kind of sexual activity by your partner or ex-partner?</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">answer</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.valueCoding" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">valueCoding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.valueCoding.system" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://loinc.org</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.valueCoding.code" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">LA32-8</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.valueCoding.display" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">No</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.linkId" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">linkId</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">/76503-2</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.text" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Within the last year, have you been kicked, hit, slapped, or otherwise physically hurt by your partner or ex-partner?</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">answer</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.valueCoding" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">valueCoding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.valueCoding.system" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://loinc.org</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.valueCoding.code" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">LA32-8</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.valueCoding.display" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">No</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.linkId" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">linkId</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">/76504-0</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.text" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Total score [HARK]</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">answer</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.valueInteger" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">valueInteger</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">0</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="29f4933b-a9ad-4f83-ad5e-9ef4d3a23c57">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">QuestionnaireResponse</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.id" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">hark-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.meta" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.meta.profile" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|6.1.0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.questionnaire" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">questionnaire</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">https://www.etsu.edu/institute/child-family-health/documents/mahf_dv_hark_c.pdf</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.status" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">completed</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.subject" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.subject.reference" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.subject.display" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">James Wolff</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.authored" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">authored</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2024-02-01T20:50:32.718Z</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.author" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">author</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.author.reference" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Practitioner/ed-physician-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">author</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">item</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.linkId" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">linkId</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">/76499-3</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.text" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Within the last year, have you been humiliated or emotionally abused in other ways by your partner or ex-partner?</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">answer</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.value" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">valueCoding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.value.system" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://loinc.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.value.code" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">LA32-8</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.value.display" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">No</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">valueCoding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">answer</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">item</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">item</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.linkId" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">linkId</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">/76501-6</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.text" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Within the last year, have you been afraid of your partner or ex-partner?</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">answer</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.value" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">valueCoding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.value.system" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://loinc.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.value.code" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">LA32-8</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.value.display" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">No</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">valueCoding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">answer</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">item</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">item</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.linkId" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">linkId</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">/76502-4</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.text" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Within the last year, have you been raped or forced to have any kind of sexual activity by your partner or ex-partner?</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">answer</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.value" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">valueCoding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.value.system" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://loinc.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.value.code" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">LA32-8</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.value.display" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">No</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">valueCoding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">answer</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">item</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">item</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.linkId" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">linkId</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">/76503-2</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.text" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Within the last year, have you been kicked, hit, slapped, or otherwise physically hurt by your partner or ex-partner?</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">answer</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.value" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">valueCoding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.value.system" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://loinc.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.value.code" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">LA32-8</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.value.display" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">No</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">valueCoding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">answer</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">item</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">item</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.linkId" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">linkId</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">/76504-0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.text" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Total score [HARK]</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">answer</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-questionnaireresponse.json&tab=details#QuestionnaireResponse.item.answer.value" title="US Core QuestionnaireResponse Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-questionnaireresponse.json" target="_blank">valueInteger</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">answer</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">item</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">QuestionnaireResponse</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="fdd0d11b-a701-4f16-89d6-7ba6367fdde2">
+    <div class="stu3-treetable" id="d31bdd582e8c4de19f391b875c05c0b8" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="09fd07a75ba84e9bba1ccb28378b81e7"><td class="instance"><span class="baseIcon primitive"></span><b>QuestionnaireResponse</b></td></tr><tr class="collapsed" data-id="00f11035b4984ef5a2de0cb9728382c4" data-parentId="09fd07a75ba84e9bba1ccb28378b81e7"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>hark-example-1</span></td></tr><tr class="collapsed" data-id="b6b2515f83f64982b310913c1bd69f18" data-parentId="09fd07a75ba84e9bba1ccb28378b81e7"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="7ec47e76dff34ffba11f730b1a44c9e3" data-parentId="b6b2515f83f64982b310913c1bd69f18"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|6.1.0</span></td></tr><tr class="collapsed" data-id="516624babbf849fab9faa8799d86b00e" data-parentId="09fd07a75ba84e9bba1ccb28378b81e7"><td class="instance"><span class="baseIcon primitive"></span><b>questionnaire : </b><span>https://www.etsu.edu/institute/child-family-health/documents/mahf_dv_hark_c.pdf</span></td></tr><tr class="collapsed" data-id="91203330885042cba38718cae86920d5" data-parentId="09fd07a75ba84e9bba1ccb28378b81e7"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>completed</span></td></tr><tr class="collapsed" data-id="b0cdc20c81da4e62bbe3f2693d89dedd" data-parentId="09fd07a75ba84e9bba1ccb28378b81e7"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="dbcda15f354c4feaafdfc56f04963c3b" data-parentId="b0cdc20c81da4e62bbe3f2693d89dedd"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="77d41f4955ff4e5e9de2b62bbc979f31" data-parentId="b0cdc20c81da4e62bbe3f2693d89dedd"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="76c43ee0cde6476dae54c7140ea7995b" data-parentId="09fd07a75ba84e9bba1ccb28378b81e7"><td class="instance"><span class="baseIcon primitive"></span><b>authored : </b><span>2024-02-01T20:50:32.718Z</span></td></tr><tr class="collapsed" data-id="ca4466648b53438abfcb73759538eadf" data-parentId="09fd07a75ba84e9bba1ccb28378b81e7"><td class="instance"><span class="baseIcon primitive"></span><b>author</b></td></tr><tr class="collapsed" data-id="ec3f1036560044e295d227a4185c15d0" data-parentId="ca4466648b53438abfcb73759538eadf"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Practitioner/ed-physician-example-1</span></td></tr><tr class="collapsed" data-id="af1d49dbfa4d49e0adcc4b97d598b34d" data-parentId="09fd07a75ba84e9bba1ccb28378b81e7"><td class="instance"><span class="baseIcon primitive"></span><b>item</b></td></tr><tr class="collapsed" data-id="0024ef81337f42daa44e8999f6597ed3" data-parentId="af1d49dbfa4d49e0adcc4b97d598b34d"><td class="instance"><span class="baseIcon primitive"></span><b>linkId : </b><span>/76499-3</span></td></tr><tr class="collapsed" data-id="ea0edb4ac03c4e16969378ad28a9da26" data-parentId="af1d49dbfa4d49e0adcc4b97d598b34d"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Within the last year, have you been humiliated or emotionally abused in other ways by your partner or ex-partner?</span></td></tr><tr class="collapsed" data-id="9e274ade4b1a4cf494ab9dd95a9f8265" data-parentId="af1d49dbfa4d49e0adcc4b97d598b34d"><td class="instance"><span class="baseIcon primitive"></span><b>answer</b></td></tr><tr class="collapsed" data-id="44229d358b6a42f28d099446faed5ba5" data-parentId="9e274ade4b1a4cf494ab9dd95a9f8265"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="2de8e935cf1b4f40803677436732b2b8" data-parentId="44229d358b6a42f28d099446faed5ba5"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="5bb171af2ffd4e42b4e94180a18b70b0" data-parentId="44229d358b6a42f28d099446faed5ba5"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>LA32-8</span></td></tr><tr class="collapsed" data-id="c90e64cdf60c46e9a600a000e6602ef1" data-parentId="44229d358b6a42f28d099446faed5ba5"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>No</span></td></tr><tr class="collapsed" data-id="10eb0c07539f40e5994e084937e027b1" data-parentId="09fd07a75ba84e9bba1ccb28378b81e7"><td class="instance"><span class="baseIcon primitive"></span><b>item</b></td></tr><tr class="collapsed" data-id="8274cef9aa1a421cad260a486ea5d063" data-parentId="10eb0c07539f40e5994e084937e027b1"><td class="instance"><span class="baseIcon primitive"></span><b>linkId : </b><span>/76501-6</span></td></tr><tr class="collapsed" data-id="e961b6f7403a48889efd8dadb2806c18" data-parentId="10eb0c07539f40e5994e084937e027b1"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Within the last year, have you been afraid of your partner or ex-partner?</span></td></tr><tr class="collapsed" data-id="2f49e7e468b64e5facf647b9b7c03384" data-parentId="10eb0c07539f40e5994e084937e027b1"><td class="instance"><span class="baseIcon primitive"></span><b>answer</b></td></tr><tr class="collapsed" data-id="a082c97c30dd4faaad7a0a562b0016f9" data-parentId="2f49e7e468b64e5facf647b9b7c03384"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="b1b6c62eb1ff41ba9f507a8e268bad4a" data-parentId="a082c97c30dd4faaad7a0a562b0016f9"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="6f191f8b5cbd48be87a950e4167369e7" data-parentId="a082c97c30dd4faaad7a0a562b0016f9"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>LA32-8</span></td></tr><tr class="collapsed" data-id="c46521f6aeff4cea8cf4f58213831611" data-parentId="a082c97c30dd4faaad7a0a562b0016f9"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>No</span></td></tr><tr class="collapsed" data-id="1358cdfc0f8c4007bae55207ab8a721a" data-parentId="09fd07a75ba84e9bba1ccb28378b81e7"><td class="instance"><span class="baseIcon primitive"></span><b>item</b></td></tr><tr class="collapsed" data-id="748990ef9b2b44a7a416ddad6ea8f8ee" data-parentId="1358cdfc0f8c4007bae55207ab8a721a"><td class="instance"><span class="baseIcon primitive"></span><b>linkId : </b><span>/76502-4</span></td></tr><tr class="collapsed" data-id="1f83e9259862433697d8658c5d1f1e00" data-parentId="1358cdfc0f8c4007bae55207ab8a721a"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Within the last year, have you been raped or forced to have any kind of sexual activity by your partner or ex-partner?</span></td></tr><tr class="collapsed" data-id="dfd783c7881b4155a6979ed212f99f95" data-parentId="1358cdfc0f8c4007bae55207ab8a721a"><td class="instance"><span class="baseIcon primitive"></span><b>answer</b></td></tr><tr class="collapsed" data-id="64daf6f10f45494ba372ea86ab6a27e2" data-parentId="dfd783c7881b4155a6979ed212f99f95"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="80e2312839e64aa89b010032146ddd43" data-parentId="64daf6f10f45494ba372ea86ab6a27e2"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="9393cc7b2b3d45b49700b008897e2a5d" data-parentId="64daf6f10f45494ba372ea86ab6a27e2"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>LA32-8</span></td></tr><tr class="collapsed" data-id="ac2aadeeeabf481c9148184a49a99d27" data-parentId="64daf6f10f45494ba372ea86ab6a27e2"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>No</span></td></tr><tr class="collapsed" data-id="b05a4ddd5833484d859ee3359276c36d" data-parentId="09fd07a75ba84e9bba1ccb28378b81e7"><td class="instance"><span class="baseIcon primitive"></span><b>item</b></td></tr><tr class="collapsed" data-id="a2e3f1db33b04dcfbc3e5c93593b2a5e" data-parentId="b05a4ddd5833484d859ee3359276c36d"><td class="instance"><span class="baseIcon primitive"></span><b>linkId : </b><span>/76503-2</span></td></tr><tr class="collapsed" data-id="3ac94cf9bf644d6488bcbf8c2e075d38" data-parentId="b05a4ddd5833484d859ee3359276c36d"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Within the last year, have you been kicked, hit, slapped, or otherwise physically hurt by your partner or ex-partner?</span></td></tr><tr class="collapsed" data-id="c64c58a19fad47638772011f343ca92d" data-parentId="b05a4ddd5833484d859ee3359276c36d"><td class="instance"><span class="baseIcon primitive"></span><b>answer</b></td></tr><tr class="collapsed" data-id="e40eebf5ab7047c89384f0c72c16ea87" data-parentId="c64c58a19fad47638772011f343ca92d"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="b961a4bd3ca945aaa64be7b0be1e70f8" data-parentId="e40eebf5ab7047c89384f0c72c16ea87"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="40f87568a6f249e8bccbb0574f5c7947" data-parentId="e40eebf5ab7047c89384f0c72c16ea87"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>LA32-8</span></td></tr><tr class="collapsed" data-id="1e4efd197a124ea5baa0f9ab4a852477" data-parentId="e40eebf5ab7047c89384f0c72c16ea87"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>No</span></td></tr><tr class="collapsed" data-id="e901c99976e8432c8e6ebf83889967dc" data-parentId="09fd07a75ba84e9bba1ccb28378b81e7"><td class="instance"><span class="baseIcon primitive"></span><b>item</b></td></tr><tr class="collapsed" data-id="0e164178bf1c45e09e6142e00c34d67e" data-parentId="e901c99976e8432c8e6ebf83889967dc"><td class="instance"><span class="baseIcon primitive"></span><b>linkId : </b><span>/76504-0</span></td></tr><tr class="collapsed" data-id="227a90235d334f368574b50cc2480ab9" data-parentId="e901c99976e8432c8e6ebf83889967dc"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Total score [HARK]</span></td></tr><tr class="collapsed" data-id="ea53750e71d441f8a19a64a4db9e0f6c" data-parentId="e901c99976e8432c8e6ebf83889967dc"><td class="instance"><span class="baseIcon primitive"></span><b>answer</b></td></tr><tr class="collapsed" data-id="9bc0851d38c944fba0d9457e57bebed1" data-parentId="ea53750e71d441f8a19a64a4db9e0f6c"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>0</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTabled31bdd582e8c4de19f391b875c05c0b8 = new InstanceTree();
+resourceTreeTabled31bdd582e8c4de19f391b875c05c0b8.init("d31bdd582e8c4de19f391b875c05c0b8");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="3989e596-1726-4402-9e78-b46a72b07da9">
+    <div class="path"><table><tbody><tr><td>QuestionnaireResponse.<span class="field">id[0]</span></td><td>hark-example-1</td></tr><tr><td>QuestionnaireResponse.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|6.1.0</td></tr><tr><td>QuestionnaireResponse.<span class="field">questionnaire[0]</span></td><td>https://www.etsu.edu/institute/child-family-health/documents/mahf_dv_hark_c.pdf</td></tr><tr><td>QuestionnaireResponse.<span class="field">status[0]</span></td><td>completed</td></tr><tr><td>QuestionnaireResponse.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>QuestionnaireResponse.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>QuestionnaireResponse.<span class="field">authored[0]</span></td><td>2024-02-01T20:50:32.718Z</td></tr><tr><td>QuestionnaireResponse.author[0].<span class="field">reference[0]</span></td><td>Practitioner/ed-physician-example-1</td></tr><tr><td>QuestionnaireResponse.item[0].<span class="field">linkId[0]</span></td><td>/76499-3</td></tr><tr><td>QuestionnaireResponse.item[0].<span class="field">text[0]</span></td><td>Within the last year, have you been humiliated or emotionally abused in other ways by your partner or ex-partner?</td></tr><tr><td>QuestionnaireResponse.item[0].answer[0].value[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>QuestionnaireResponse.item[0].answer[0].value[0].<span class="field">code[0]</span></td><td>LA32-8</td></tr><tr><td>QuestionnaireResponse.item[0].answer[0].value[0].<span class="field">display[0]</span></td><td>No</td></tr><tr><td>QuestionnaireResponse.item[1].<span class="field">linkId[0]</span></td><td>/76501-6</td></tr><tr><td>QuestionnaireResponse.item[1].<span class="field">text[0]</span></td><td>Within the last year, have you been afraid of your partner or ex-partner?</td></tr><tr><td>QuestionnaireResponse.item[1].answer[0].value[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>QuestionnaireResponse.item[1].answer[0].value[0].<span class="field">code[0]</span></td><td>LA32-8</td></tr><tr><td>QuestionnaireResponse.item[1].answer[0].value[0].<span class="field">display[0]</span></td><td>No</td></tr><tr><td>QuestionnaireResponse.item[2].<span class="field">linkId[0]</span></td><td>/76502-4</td></tr><tr><td>QuestionnaireResponse.item[2].<span class="field">text[0]</span></td><td>Within the last year, have you been raped or forced to have any kind of sexual activity by your partner or ex-partner?</td></tr><tr><td>QuestionnaireResponse.item[2].answer[0].value[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>QuestionnaireResponse.item[2].answer[0].value[0].<span class="field">code[0]</span></td><td>LA32-8</td></tr><tr><td>QuestionnaireResponse.item[2].answer[0].value[0].<span class="field">display[0]</span></td><td>No</td></tr><tr><td>QuestionnaireResponse.item[3].<span class="field">linkId[0]</span></td><td>/76503-2</td></tr><tr><td>QuestionnaireResponse.item[3].<span class="field">text[0]</span></td><td>Within the last year, have you been kicked, hit, slapped, or otherwise physically hurt by your partner or ex-partner?</td></tr><tr><td>QuestionnaireResponse.item[3].answer[0].value[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>QuestionnaireResponse.item[3].answer[0].value[0].<span class="field">code[0]</span></td><td>LA32-8</td></tr><tr><td>QuestionnaireResponse.item[3].answer[0].value[0].<span class="field">display[0]</span></td><td>No</td></tr><tr><td>QuestionnaireResponse.item[4].<span class="field">linkId[0]</span></td><td>/76504-0</td></tr><tr><td>QuestionnaireResponse.item[4].<span class="field">text[0]</span></td><td>Total score [HARK]</td></tr><tr><td>QuestionnaireResponse.item[4].answer[0].<span class="field">value[0]</span></td><td>0</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

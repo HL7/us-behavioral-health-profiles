@@ -1,0 +1,117 @@
+{
+  "resourceType": "Encounter",
+  "id": "discharge-encounter-example-3",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0"
+    ]
+  },
+  "identifier": [
+    {
+      "use": "usual",
+      "system": "urn:oid:2.16.840.1.113883.19.5.1.698.8",
+      "value": "40005104253"
+    }
+  ],
+  "status": "finished",
+  "class": {
+    "code": "OBSENC",
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "display": "observation encounter"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "448951000124107",
+          "system": "http://snomed.info/sct",
+          "display": "Admission to observation unit (procedure)"
+        }
+      ],
+      "text": "Observation bed"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "period": {
+    "start": "2024-02-01T21:02:00+00:00",
+    "end": "2024-02-02T17:00:00+00:00"
+  },
+  "diagnosis": [
+    {
+      "condition": {
+        "reference": "Condition/panic-attack-condition-example-1",
+        "display": "Panic Attack"
+      },
+      "rank": 1
+    },
+    {
+      "condition": {
+        "reference": "Condition/chest-pain-condition-example-1",
+        "display": "Chest Pain"
+      },
+      "rank": 2
+    },
+    {
+      "condition": {
+        "reference": "Condition/diabetes-condition-example-1",
+        "display": "Diabetes (II)"
+      },
+      "rank": 3
+    }
+  ],
+  "hospitalization": {
+    "dischargeDisposition": {
+      "coding": [
+        {
+          "code": "01",
+          "system": "https://www.nubc.org/CodeSystem/PatDischargeStatus",
+          "display": "Discharged to Home"
+        }
+      ],
+      "text": "Discharged to Home"
+    }
+  },
+  "location": [
+    {
+      "location": {
+        "reference": "Location/ed-location-example-1",
+        "display": "Emergency Dept."
+      },
+      "physicalType": {
+        "coding": [
+          {
+            "code": "wa",
+            "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+            "display": "Ward"
+          }
+        ]
+      },
+      "period": {
+        "start": "2024-02-01T21:02:00+00:00",
+        "end": "2024-02-02T03:02:00+00:00"
+      }
+    },
+    {
+      "location": {
+        "reference": "Location/obs-location-example-1",
+        "display": "Hospital bed - OBSERVATION"
+      },
+      "physicalType": {
+        "coding": [
+          {
+            "code": "wa",
+            "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+            "display": "Ward"
+          }
+        ]
+      },
+      "period": {
+        "start": "2024-02-01T21:02:00+00:00",
+        "end": "2024-02-02T03:00:00+00:00"
+      }
+    }
+  ]
+}

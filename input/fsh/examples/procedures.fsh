@@ -26,7 +26,7 @@ Description: "Example of patient alcohol cessation education"
 * subject = Reference(bh-patient-example) "James Wolff"
 * performedDateTime = "2024-03-23"
 
-Instance: ServiceRequest-peer-mentoring-example-1
+Instance: sdoh-referral-example-1
 InstanceOf: ServiceRequest
 Usage: #example
 Title: "sdoh-referral-example"

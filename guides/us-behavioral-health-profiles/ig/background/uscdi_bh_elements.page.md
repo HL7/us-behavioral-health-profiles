@@ -186,8 +186,8 @@ The table provides a comprehensive list of the USCDI+ Behavioral Health elements
   </tr>
   <tr>
     <td class="tg-0lax">Health Insurance Information</td>
-    <td class="tg-1wig">Insurance Plan Name</td>
-    <td class="tg-0lax">Name of the health plan benefit offering assigned to the Plan Identifier.</td>
+    <td class="tg-1wig">Health Insurance Plan</td>
+    <td class="tg-0lax">Health insurance offering or package.</td>
   </tr>
   <tr>
     <td class="tg-0lax">Health Insurance Information</td>

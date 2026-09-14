@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | example-panic-attack-condition-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-panic-attack-condition-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+<h2 id="example-condition-panic-attack-condition-example">Example Condition: panic-attack-condition-example</h2>
+<p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#e2166132-2577-44f1-b311-e92ca26dd8bc" aria-controls="e2166132-2577-44f1-b311-e92ca26dd8bc" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#31b00a60-3b0e-4e91-9a85-d4c93a6e53e3" aria-controls="31b00a60-3b0e-4e91-9a85-d4c93a6e53e3" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#d3c253ff-953b-4882-8f2b-1096b64a6d59" aria-controls="d3c253ff-953b-4882-8f2b-1096b64a6d59" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#3b0c7469-06e2-4d24-86e7-4e94f18ea95a" aria-controls="3b0c7469-06e2-4d24-86e7-4e94f18ea95a" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="e2166132-2577-44f1-b311-e92ca26dd8bc">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.resourceType" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">resourceType</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Condition</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.id" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">panic-attack-condition-example-1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.meta" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">meta</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.meta.profile" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">profile</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis|6.1.0</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.clinicalStatus" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">clinicalStatus</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.clinicalStatus.coding" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.clinicalStatus.coding.system" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/condition-clinical</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.clinicalStatus.coding.code" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">inactive</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.clinicalStatus.coding.display" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Inactive</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.verificationStatus" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">verificationStatus</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.verificationStatus.coding" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.verificationStatus.coding.system" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/condition-ver-status</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.verificationStatus.coding.version" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">version</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">4.0.0</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.verificationStatus.coding.code" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">confirmed</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.verificationStatus.coding.display" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Confirmed</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.verificationStatus.text" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Confirmed</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.category" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">category</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.category.coding" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.category.coding.system" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/condition-category</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.category.coding.code" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">encounter-diagnosis</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.category.coding.display" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Encounter Diagnosis</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.category.text" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Encounter Diagnosis</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.code" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.code.coding" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.code.coding.system" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://snomed.info/sct</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.code.coding.code" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">225624000</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.code.coding.display" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Panic attack (finding)</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.code.text" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Panic Attack</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.subject" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">subject</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.subject.reference" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.subject.display" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">James Wolff</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.onsetDateTime" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">onsetDateTime</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2007-12-14</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.abatementDateTime" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">abatementDateTime</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2007-12-14</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.recordedDate" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">recordedDate</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2007-12-14T15:15:07+00:00</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="31b00a60-3b0e-4e91-9a85-d4c93a6e53e3">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">Condition</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.id" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">panic-attack-condition-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.meta" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.meta.profile" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis|6.1.0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.clinicalStatus" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">clinicalStatus</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.clinicalStatus.coding" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.clinicalStatus.coding.system" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/condition-clinical</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.clinicalStatus.coding.code" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">inactive</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.clinicalStatus.coding.display" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Inactive</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">clinicalStatus</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.verificationStatus" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">verificationStatus</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.verificationStatus.coding" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.verificationStatus.coding.system" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/condition-ver-status</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.verificationStatus.coding.version" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">version</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">4.0.0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.verificationStatus.coding.code" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">confirmed</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.verificationStatus.coding.display" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Confirmed</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.verificationStatus.text" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Confirmed</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">verificationStatus</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.category" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.category.coding" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.category.coding.system" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/condition-category</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.category.coding.code" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">encounter-diagnosis</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.category.coding.display" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Encounter Diagnosis</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.category.text" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Encounter Diagnosis</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.code" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.code.coding" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.code.coding.system" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://snomed.info/sct</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.code.coding.code" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">225624000</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.code.coding.display" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Panic attack (finding)</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.code.text" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Panic Attack</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.subject" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.subject.reference" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.subject.display" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">James Wolff</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.onset" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">onsetDateTime</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2007-12-14</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.abatement" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">abatementDateTime</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2007-12-14</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-condition-encounter-diagnosis.json&tab=details#Condition.recordedDate" title="US Core Condition Encounter Diagnosis Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-condition-encounter-diagnosis.json" target="_blank">recordedDate</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2007-12-14T15:15:07+00:00</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Condition</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="d3c253ff-953b-4882-8f2b-1096b64a6d59">
+    <div class="stu3-treetable" id="bb9826cdee5d4cbdbfe32ac774a9f575" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="6853167cfc764a7fa15a8b5063bfd3f8"><td class="instance"><span class="baseIcon primitive"></span><b>Condition</b></td></tr><tr class="collapsed" data-id="d975068a0d1c44e9aebc8523c8abd172" data-parentId="6853167cfc764a7fa15a8b5063bfd3f8"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>panic-attack-condition-example-1</span></td></tr><tr class="collapsed" data-id="a33bd21b75d140ae8476e3b7d45212b7" data-parentId="6853167cfc764a7fa15a8b5063bfd3f8"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="25b496ca34644e8481df7452fc2a921f" data-parentId="a33bd21b75d140ae8476e3b7d45212b7"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis|6.1.0</span></td></tr><tr class="collapsed" data-id="d68bb111ba504551aba67221354babae" data-parentId="6853167cfc764a7fa15a8b5063bfd3f8"><td class="instance"><span class="baseIcon primitive"></span><b>clinicalStatus</b></td></tr><tr class="collapsed" data-id="7ddde0e7c1a4490299b631ebbf153545" data-parentId="d68bb111ba504551aba67221354babae"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="6c0f5df83fb348cb821b73e6d286902d" data-parentId="7ddde0e7c1a4490299b631ebbf153545"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/condition-clinical</span></td></tr><tr class="collapsed" data-id="761bb0a250544f2087eadb81d07666da" data-parentId="7ddde0e7c1a4490299b631ebbf153545"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>inactive</span></td></tr><tr class="collapsed" data-id="8ee33ee454434467a9c076f19137aa1e" data-parentId="7ddde0e7c1a4490299b631ebbf153545"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Inactive</span></td></tr><tr class="collapsed" data-id="0cb9b360030c4771b479e2e71766c676" data-parentId="6853167cfc764a7fa15a8b5063bfd3f8"><td class="instance"><span class="baseIcon primitive"></span><b>verificationStatus</b></td></tr><tr class="collapsed" data-id="2346d6ce234145bf9cd041aa0a36e1b8" data-parentId="0cb9b360030c4771b479e2e71766c676"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="71416c1460614c178f4a7c4aa6cb383f" data-parentId="2346d6ce234145bf9cd041aa0a36e1b8"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/condition-ver-status</span></td></tr><tr class="collapsed" data-id="03f366df914d49be9a39063f877a2121" data-parentId="2346d6ce234145bf9cd041aa0a36e1b8"><td class="instance"><span class="baseIcon primitive"></span><b>version : </b><span>4.0.0</span></td></tr><tr class="collapsed" data-id="d01d198a2603440baf47a978dcbcedec" data-parentId="2346d6ce234145bf9cd041aa0a36e1b8"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>confirmed</span></td></tr><tr class="collapsed" data-id="e4f9180a60134f3abbaedffd4d4397a7" data-parentId="2346d6ce234145bf9cd041aa0a36e1b8"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Confirmed</span></td></tr><tr class="collapsed" data-id="e3b671aa87db4a8e89c4ca8e153ad149" data-parentId="0cb9b360030c4771b479e2e71766c676"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Confirmed</span></td></tr><tr class="collapsed" data-id="39f613405bdd44f6a3e98a13dbe7e35b" data-parentId="6853167cfc764a7fa15a8b5063bfd3f8"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="e4ca58b2ad604e3b8628b437ce1cf3db" data-parentId="39f613405bdd44f6a3e98a13dbe7e35b"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="9b71e9a4eeda492db0e2622b6a0ec44e" data-parentId="e4ca58b2ad604e3b8628b437ce1cf3db"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/condition-category</span></td></tr><tr class="collapsed" data-id="9c06aa075d9b44398d4c1bd7a91ea13b" data-parentId="e4ca58b2ad604e3b8628b437ce1cf3db"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>encounter-diagnosis</span></td></tr><tr class="collapsed" data-id="0c24d25391c844e0b5876b081f32c6b0" data-parentId="e4ca58b2ad604e3b8628b437ce1cf3db"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Encounter Diagnosis</span></td></tr><tr class="collapsed" data-id="d45ce5b2b1914112bf06149af63fa9cb" data-parentId="39f613405bdd44f6a3e98a13dbe7e35b"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Encounter Diagnosis</span></td></tr><tr class="collapsed" data-id="25cc18d7ee00448fa2ffcbe40f348305" data-parentId="6853167cfc764a7fa15a8b5063bfd3f8"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="7e5c4d7e14984cc592826984918fe59f" data-parentId="25cc18d7ee00448fa2ffcbe40f348305"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="820ce427e8fc488da167be3929acfd43" data-parentId="7e5c4d7e14984cc592826984918fe59f"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://snomed.info/sct</span></td></tr><tr class="collapsed" data-id="a9c84adc86854cb2a90dd4d59fdf801b" data-parentId="7e5c4d7e14984cc592826984918fe59f"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>225624000</span></td></tr><tr class="collapsed" data-id="eafaf7da856548ffa1691a61482464d9" data-parentId="7e5c4d7e14984cc592826984918fe59f"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Panic attack (finding)</span></td></tr><tr class="collapsed" data-id="bbf061a157b94a7c9f3dcf70f1be4ebf" data-parentId="25cc18d7ee00448fa2ffcbe40f348305"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Panic Attack</span></td></tr><tr class="collapsed" data-id="000da68d4a5e491cbedcd8d1dda43d30" data-parentId="6853167cfc764a7fa15a8b5063bfd3f8"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="03c24ce4fc834b0eb60008819670ade4" data-parentId="000da68d4a5e491cbedcd8d1dda43d30"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="fa3492201b9b428294e7d2b67583194a" data-parentId="000da68d4a5e491cbedcd8d1dda43d30"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="700fd80673034c73b33aa0238bb2de6c" data-parentId="6853167cfc764a7fa15a8b5063bfd3f8"><td class="instance"><span class="baseIcon primitive"></span><b>onset : </b><span>2007-12-14</span></td></tr><tr class="collapsed" data-id="f58c5af9acbb4b7cae1dbda326621057" data-parentId="6853167cfc764a7fa15a8b5063bfd3f8"><td class="instance"><span class="baseIcon primitive"></span><b>abatement : </b><span>2007-12-14</span></td></tr><tr class="collapsed" data-id="53c9778e933b4a1085d916218c261ab0" data-parentId="6853167cfc764a7fa15a8b5063bfd3f8"><td class="instance"><span class="baseIcon primitive"></span><b>recordedDate : </b><span>2007-12-14T15:15:07+00:00</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTablebb9826cdee5d4cbdbfe32ac774a9f575 = new InstanceTree();
+resourceTreeTablebb9826cdee5d4cbdbfe32ac774a9f575.init("bb9826cdee5d4cbdbfe32ac774a9f575");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="3b0c7469-06e2-4d24-86e7-4e94f18ea95a">
+    <div class="path"><table><tbody><tr><td>Condition.<span class="field">id[0]</span></td><td>panic-attack-condition-example-1</td></tr><tr><td>Condition.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis|6.1.0</td></tr><tr><td>Condition.clinicalStatus[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/condition-clinical</td></tr><tr><td>Condition.clinicalStatus[0].coding[0].<span class="field">code[0]</span></td><td>inactive</td></tr><tr><td>Condition.clinicalStatus[0].coding[0].<span class="field">display[0]</span></td><td>Inactive</td></tr><tr><td>Condition.verificationStatus[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/condition-ver-status</td></tr><tr><td>Condition.verificationStatus[0].coding[0].<span class="field">version[0]</span></td><td>4.0.0</td></tr><tr><td>Condition.verificationStatus[0].coding[0].<span class="field">code[0]</span></td><td>confirmed</td></tr><tr><td>Condition.verificationStatus[0].coding[0].<span class="field">display[0]</span></td><td>Confirmed</td></tr><tr><td>Condition.verificationStatus[0].<span class="field">text[0]</span></td><td>Confirmed</td></tr><tr><td>Condition.category[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/condition-category</td></tr><tr><td>Condition.category[0].coding[0].<span class="field">code[0]</span></td><td>encounter-diagnosis</td></tr><tr><td>Condition.category[0].coding[0].<span class="field">display[0]</span></td><td>Encounter Diagnosis</td></tr><tr><td>Condition.category[0].<span class="field">text[0]</span></td><td>Encounter Diagnosis</td></tr><tr><td>Condition.code[0].coding[0].<span class="field">system[0]</span></td><td>http://snomed.info/sct</td></tr><tr><td>Condition.code[0].coding[0].<span class="field">code[0]</span></td><td>225624000</td></tr><tr><td>Condition.code[0].coding[0].<span class="field">display[0]</span></td><td>Panic attack (finding)</td></tr><tr><td>Condition.code[0].<span class="field">text[0]</span></td><td>Panic Attack</td></tr><tr><td>Condition.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>Condition.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>Condition.<span class="field">onset[0]</span></td><td>2007-12-14</td></tr><tr><td>Condition.<span class="field">abatement[0]</span></td><td>2007-12-14</td></tr><tr><td>Condition.<span class="field">recordedDate[0]</span></td><td>2007-12-14T15:15:07+00:00</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

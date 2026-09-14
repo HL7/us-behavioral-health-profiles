@@ -832,7 +832,7 @@ The USCDI+ Behavioral Health (BH) initiative is designed to facilitate the seaml
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black;background-color:#CAEDFB"> </span></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black">US Core Immunization Profile</span></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black">immunization.vaccineCode</span></td>
-    <td class="tg-0lax"><a href="https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/Immunization-flu-vaccine-example-1.html">flu-vaccine-example - US Behavioral Health Profiles&nbsp;&nbsp;&nbsp;Implementation Guide v0.1.0 (fhir.org)</a></td>
+    <td class="tg-0lax"><a href="https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/Immunization-flu-vaccine-example-1.html">flu-vaccine-example - US Behavioral Health Profiles&nbsp;&nbsp;&nbsp;Implementation Guide v0.2.0 (fhir.org)</a></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:windowtext">Example of immunization&nbsp;&nbsp;&nbsp;- flu</span></td>
     <td class="tg-0lax"></td>
   </tr>
@@ -887,7 +887,7 @@ The USCDI+ Behavioral Health (BH) initiative is designed to facilitate the seaml
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black;background-color:#CAEDFB"> </span></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black">US Core Medication Request Profile</span></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black"> </span></td>
-    <td class="tg-0lax"><a href="https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/MedicationRequest-paroxetine-discharge-med-example-1.html">paroxetine-discharge-med-example - US Behavioral&nbsp;&nbsp;&nbsp;Health Profiles Implementation Guide v0.1.0 (fhir.org)</a></td>
+    <td class="tg-0lax"><a href="https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/MedicationRequest-paroxetine-discharge-med-example-1.html">paroxetine-discharge-med-example - US Behavioral&nbsp;&nbsp;&nbsp;Health Profiles Implementation Guide v0.2.0 (fhir.org)</a></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:windowtext"> </span></td>
     <td class="tg-0lax"></td>
   </tr>
@@ -898,7 +898,7 @@ The USCDI+ Behavioral Health (BH) initiative is designed to facilitate the seaml
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black;background-color:#CAEDFB"> </span></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black">US Core Medication Request Profile</span></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black"> </span></td>
-    <td class="tg-0lax"><a href="https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/MedicationRequest-paroxetine-discharge-med-example-1.html">paroxetine-discharge-med-example - US Behavioral&nbsp;&nbsp;&nbsp;Health Profiles Implementation Guide v0.1.0 (fhir.org)</a></td>
+    <td class="tg-0lax"><a href="https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/MedicationRequest-paroxetine-discharge-med-example-1.html">paroxetine-discharge-med-example - US Behavioral&nbsp;&nbsp;&nbsp;Health Profiles Implementation Guide v0.2.0 (fhir.org)</a></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:windowtext"> </span></td>
     <td class="tg-0lax"></td>
   </tr>
@@ -909,7 +909,7 @@ The USCDI+ Behavioral Health (BH) initiative is designed to facilitate the seaml
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black;background-color:#CAEDFB"> </span></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black">US Core Medication Request Profile</span></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black"> </span></td>
-    <td class="tg-0lax"><a href="https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/MedicationRequest-paroxetine-discharge-med-example-1.html">paroxetine-discharge-med-example - US Behavioral&nbsp;&nbsp;&nbsp;Health Profiles Implementation Guide v0.1.0 (fhir.org)</a></td>
+    <td class="tg-0lax"><a href="https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/MedicationRequest-paroxetine-discharge-med-example-1.html">paroxetine-discharge-med-example - US Behavioral&nbsp;&nbsp;&nbsp;Health Profiles Implementation Guide v0.2.0 (fhir.org)</a></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:windowtext"> </span></td>
     <td class="tg-0lax"></td>
   </tr>
@@ -920,7 +920,7 @@ The USCDI+ Behavioral Health (BH) initiative is designed to facilitate the seaml
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black;background-color:#CAEDFB"> </span></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black">US Core Medication Request Profile</span></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black"> </span></td>
-    <td class="tg-0lax"><a href="https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/MedicationRequest-paroxetine-discharge-med-example-1.html">paroxetine-discharge-med-example - US Behavioral&nbsp;&nbsp;&nbsp;Health Profiles Implementation Guide v0.1.0 (fhir.org)</a></td>
+    <td class="tg-0lax"><a href="https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/MedicationRequest-paroxetine-discharge-med-example-1.html">paroxetine-discharge-med-example - US Behavioral&nbsp;&nbsp;&nbsp;Health Profiles Implementation Guide v0.2.0 (fhir.org)</a></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:windowtext"> </span></td>
     <td class="tg-0lax"></td>
   </tr>

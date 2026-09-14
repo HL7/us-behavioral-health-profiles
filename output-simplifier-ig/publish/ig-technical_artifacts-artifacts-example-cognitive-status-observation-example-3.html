@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | example-cognitive-status-observation-example-3 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-cognitive-status-observation-example-3</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+<h2 id="example-observation-cognitive-status-observation-example">Example Observation: cognitive-status-observation-example</h2>
+<p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#f2f71297-4503-43e5-aee5-49972e7025fe" aria-controls="f2f71297-4503-43e5-aee5-49972e7025fe" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#2de9327f-c3f2-4b03-b946-25bd46ae8850" aria-controls="2de9327f-c3f2-4b03-b946-25bd46ae8850" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#a97e0b91-8e40-4be0-b54c-786efc3c27ae" aria-controls="a97e0b91-8e40-4be0-b54c-786efc3c27ae" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#f5b9f40d-1486-41df-b638-68b4715f83c7" aria-controls="f5b9f40d-1486-41df-b638-68b4715f83c7" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="f2f71297-4503-43e5-aee5-49972e7025fe">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.resourceType" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">resourceType</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Observation</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.id" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">cognitive-status-observation-example-3</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.meta" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">meta</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.meta.profile" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">profile</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|6.1.0</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.status" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">status</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">final</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">category</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.coding" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.coding.system" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/observation-category</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.coding.code" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">survey</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.coding.display" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Survey</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.text" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Survey</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.coding" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.coding.system" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://hl7.org/fhir/us/core/CodeSystem/us-core-category</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.coding.code" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">cognitive-status</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.coding.display" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Cognitive Status</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.text" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Cognitive Status Category</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.code" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.code.coding" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.code.coding.system" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://loinc.org</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.code.coding.code" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">72107-6</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.code.coding.display" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Mini-Mental State Examination [MMSE]</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.code.text" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Mini-Mental State Examination [MMSE]</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.subject" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">subject</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.subject.reference" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.subject.display" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">James Wolff</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.effectiveDateTime" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">effectiveDateTime</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2024-02-01</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.performer" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">performer</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.performer.reference" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Practitioner/mental-health-provider-example-1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.performer.display" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Dr. Lazslo Cravensworth</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.component" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">component</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.component.code" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.component.code.coding" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.component.code.coding.system" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://loinc.org</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.component.code.coding.code" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">72106-8</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.component.code.coding.display" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Total score [MMSE]</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.component.code.text" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Total score [MMSE]</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.component.valueInteger" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">valueInteger</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">30</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="2de9327f-c3f2-4b03-b946-25bd46ae8850">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">Observation</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.id" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">cognitive-status-observation-example-3</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.meta" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.meta.profile" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|6.1.0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.status" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">final</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.coding" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.coding.system" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/observation-category</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.coding.code" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">survey</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.coding.display" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Survey</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.text" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Survey</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.coding" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.coding.system" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/us/core/CodeSystem/us-core-category</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.coding.code" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">cognitive-status</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.coding.display" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Cognitive Status</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.category.text" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Cognitive Status Category</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.code" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.code.coding" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.code.coding.system" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://loinc.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.code.coding.code" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">72107-6</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.code.coding.display" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Mini-Mental State Examination [MMSE]</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.code.text" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Mini-Mental State Examination [MMSE]</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.subject" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.subject.reference" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.subject.display" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">James Wolff</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.effective" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">effectiveDateTime</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2024-02-01</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.performer" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">performer</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.performer.reference" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Practitioner/mental-health-provider-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.performer.display" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Dr. Lazslo Cravensworth</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">performer</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.component" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">component</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.component.code" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.component.code.coding" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.component.code.coding.system" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://loinc.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.component.code.coding.code" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">72106-8</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.component.code.coding.display" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Total score [MMSE]</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.component.code.text" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Total score [MMSE]</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-screening-assessment.json&tab=details#Observation.component.value" title="US Core Observation Screening Assessment Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-screening-assessment.json" target="_blank">valueInteger</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">30</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">component</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Observation</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="a97e0b91-8e40-4be0-b54c-786efc3c27ae">
+    <div class="stu3-treetable" id="14a5591893ab445da0cbfc3b8d967278" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="cb3d9e665307483fb5aaf4521fe27986"><td class="instance"><span class="baseIcon primitive"></span><b>Observation</b></td></tr><tr class="collapsed" data-id="917cd51197d5418a90445d2e88911f36" data-parentId="cb3d9e665307483fb5aaf4521fe27986"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>cognitive-status-observation-example-3</span></td></tr><tr class="collapsed" data-id="3f98e5685849490a8f9f266d379c5ad7" data-parentId="cb3d9e665307483fb5aaf4521fe27986"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="585346018a764ec4b576ebce5db0ccc2" data-parentId="3f98e5685849490a8f9f266d379c5ad7"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|6.1.0</span></td></tr><tr class="collapsed" data-id="a70aee3d01364c5ca13fb0521bc6a995" data-parentId="cb3d9e665307483fb5aaf4521fe27986"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>final</span></td></tr><tr class="collapsed" data-id="e35637686bee4aa897cd4a817dd1ab20" data-parentId="cb3d9e665307483fb5aaf4521fe27986"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="059048565d5f4fd48f8cc4aa9ec37b0e" data-parentId="e35637686bee4aa897cd4a817dd1ab20"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="873da508187d40599405bf355d746b8e" data-parentId="059048565d5f4fd48f8cc4aa9ec37b0e"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/observation-category</span></td></tr><tr class="collapsed" data-id="e1fa0333d7094627b12c0ba2156ff2c0" data-parentId="059048565d5f4fd48f8cc4aa9ec37b0e"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>survey</span></td></tr><tr class="collapsed" data-id="975176460dae473a93d8e69b9ab714a1" data-parentId="059048565d5f4fd48f8cc4aa9ec37b0e"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Survey</span></td></tr><tr class="collapsed" data-id="8a76d2fdafa942caaf9fb704a895b3f1" data-parentId="e35637686bee4aa897cd4a817dd1ab20"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Survey</span></td></tr><tr class="collapsed" data-id="09a8f3e344984a749e4a604fa76c5a11" data-parentId="cb3d9e665307483fb5aaf4521fe27986"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="7ef52129aabe487daff4755323c02622" data-parentId="09a8f3e344984a749e4a604fa76c5a11"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="15271774e9994aa38edab5c7ca201e7d" data-parentId="7ef52129aabe487daff4755323c02622"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://hl7.org/fhir/us/core/CodeSystem/us-core-category</span></td></tr><tr class="collapsed" data-id="9ed8fcf64a0245b6b43af812bd390dc2" data-parentId="7ef52129aabe487daff4755323c02622"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>cognitive-status</span></td></tr><tr class="collapsed" data-id="3144b992f434477e8407e7313aa96807" data-parentId="7ef52129aabe487daff4755323c02622"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Cognitive Status</span></td></tr><tr class="collapsed" data-id="70cca2a8f53f418b8e4d9d027977c235" data-parentId="09a8f3e344984a749e4a604fa76c5a11"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Cognitive Status Category</span></td></tr><tr class="collapsed" data-id="5cc6ddd634934077950956658ca54d87" data-parentId="cb3d9e665307483fb5aaf4521fe27986"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="3d778d6b7a804ddf97653f39025d77c2" data-parentId="5cc6ddd634934077950956658ca54d87"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="abe4fd14a6a8437c85ab92b469008c62" data-parentId="3d778d6b7a804ddf97653f39025d77c2"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="16e1cc5ffd5d43adbde8ab1d174d031f" data-parentId="3d778d6b7a804ddf97653f39025d77c2"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>72107-6</span></td></tr><tr class="collapsed" data-id="3d1d13cacbc04321b6b4dc3c4783f3eb" data-parentId="3d778d6b7a804ddf97653f39025d77c2"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Mini-Mental State Examination [MMSE]</span></td></tr><tr class="collapsed" data-id="27e25966abbc4cd1bded10a473d9d3a3" data-parentId="5cc6ddd634934077950956658ca54d87"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Mini-Mental State Examination [MMSE]</span></td></tr><tr class="collapsed" data-id="3f89a173eda546c4a21e440cc1204209" data-parentId="cb3d9e665307483fb5aaf4521fe27986"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="b14cdcab24b34609bc1d46fbd2a35784" data-parentId="3f89a173eda546c4a21e440cc1204209"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="80e7a5e64c9c44a8a7d990ba447f9dd0" data-parentId="3f89a173eda546c4a21e440cc1204209"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="7aa45d968d334f51a4b2ef29b54113a2" data-parentId="cb3d9e665307483fb5aaf4521fe27986"><td class="instance"><span class="baseIcon primitive"></span><b>effective : </b><span>2024-02-01</span></td></tr><tr class="collapsed" data-id="3d6b3ede452b47169711be663c90cd6e" data-parentId="cb3d9e665307483fb5aaf4521fe27986"><td class="instance"><span class="baseIcon primitive"></span><b>performer</b></td></tr><tr class="collapsed" data-id="104484501a1c484cb4eaeb669f72345f" data-parentId="3d6b3ede452b47169711be663c90cd6e"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Practitioner/mental-health-provider-example-1</span></td></tr><tr class="collapsed" data-id="6697ad5f32c0437aa07a2a338bea3759" data-parentId="3d6b3ede452b47169711be663c90cd6e"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Dr. Lazslo Cravensworth</span></td></tr><tr class="collapsed" data-id="0bf1d9fab67f4e3f9d800e398f6b7b4c" data-parentId="cb3d9e665307483fb5aaf4521fe27986"><td class="instance"><span class="baseIcon primitive"></span><b>component</b></td></tr><tr class="collapsed" data-id="12175f36fb1549b89470421d4a4f7d4f" data-parentId="0bf1d9fab67f4e3f9d800e398f6b7b4c"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="21a7aaf7fe7447c3b184b274a55464ad" data-parentId="12175f36fb1549b89470421d4a4f7d4f"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="41047b9986424f869aa3120f3c2b5fea" data-parentId="21a7aaf7fe7447c3b184b274a55464ad"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="2c9bd71e14ad4b4db543262002d882d7" data-parentId="21a7aaf7fe7447c3b184b274a55464ad"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>72106-8</span></td></tr><tr class="collapsed" data-id="09fc1af682ae4777b848662295d932cf" data-parentId="21a7aaf7fe7447c3b184b274a55464ad"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Total score [MMSE]</span></td></tr><tr class="collapsed" data-id="648fd0dc13dd42abaade2a6499b0f8ca" data-parentId="12175f36fb1549b89470421d4a4f7d4f"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Total score [MMSE]</span></td></tr><tr class="collapsed" data-id="ae0f1d08109245b89403171bc8a0c19d" data-parentId="0bf1d9fab67f4e3f9d800e398f6b7b4c"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>30</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable14a5591893ab445da0cbfc3b8d967278 = new InstanceTree();
+resourceTreeTable14a5591893ab445da0cbfc3b8d967278.init("14a5591893ab445da0cbfc3b8d967278");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="f5b9f40d-1486-41df-b638-68b4715f83c7">
+    <div class="path"><table><tbody><tr><td>Observation.<span class="field">id[0]</span></td><td>cognitive-status-observation-example-3</td></tr><tr><td>Observation.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|6.1.0</td></tr><tr><td>Observation.<span class="field">status[0]</span></td><td>final</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/observation-category</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">code[0]</span></td><td>survey</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">display[0]</span></td><td>Survey</td></tr><tr><td>Observation.category[0].<span class="field">text[0]</span></td><td>Survey</td></tr><tr><td>Observation.category[1].coding[0].<span class="field">system[0]</span></td><td>http://hl7.org/fhir/us/core/CodeSystem/us-core-category</td></tr><tr><td>Observation.category[1].coding[0].<span class="field">code[0]</span></td><td>cognitive-status</td></tr><tr><td>Observation.category[1].coding[0].<span class="field">display[0]</span></td><td>Cognitive Status</td></tr><tr><td>Observation.category[1].<span class="field">text[0]</span></td><td>Cognitive Status Category</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">code[0]</span></td><td>72107-6</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">display[0]</span></td><td>Mini-Mental State Examination [MMSE]</td></tr><tr><td>Observation.code[0].<span class="field">text[0]</span></td><td>Mini-Mental State Examination [MMSE]</td></tr><tr><td>Observation.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>Observation.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>Observation.<span class="field">effective[0]</span></td><td>2024-02-01</td></tr><tr><td>Observation.performer[0].<span class="field">reference[0]</span></td><td>Practitioner/mental-health-provider-example-1</td></tr><tr><td>Observation.performer[0].<span class="field">display[0]</span></td><td>Dr. Lazslo Cravensworth</td></tr><tr><td>Observation.component[0].code[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>Observation.component[0].code[0].coding[0].<span class="field">code[0]</span></td><td>72106-8</td></tr><tr><td>Observation.component[0].code[0].coding[0].<span class="field">display[0]</span></td><td>Total score [MMSE]</td></tr><tr><td>Observation.component[0].code[0].<span class="field">text[0]</span></td><td>Total score [MMSE]</td></tr><tr><td>Observation.component[0].<span class="field">value[0]</span></td><td>30</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

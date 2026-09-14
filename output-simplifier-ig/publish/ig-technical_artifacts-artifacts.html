@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | Artifact Index - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+
+    <li class="active">Artifact Index</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+
+<h1 id="artifact-index">4.3.0. Artifact Index</h1>
+<p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+<h2 id="profiles">4.3.0.1. Profiles</h2>
+<table class="grid" style="width: 100%">
+<tbody>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-structuredefinition-bh-grant-info.html" title='ig/technical_artifacts/artifacts/structuredefinition-bh-grant-info.page.md'>Behavioral Health Grant Funding Information</a></td>
+     <td>This profile defines the structure and terminology for Observations related to Program ID, number, and funding type. Feedback is requested throughout this profile, specifically do standard concepts exist for .category, .code, and .value[x]? Also, use of a complex extension to represent both grant number and program ID.</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-structuredefinition-program-info.html" title='ig/technical_artifacts/artifacts/structuredefinition-program-info.page.md'>Grant Program ID and Number</a></td>
+     <td>This complex extension defines the representation of Grant Program ID as well as grant number.</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes.html" title='ig/technical_artifacts/artifacts/structuredefinition-mental-health-clinical-notes.page.md'>Mental Health Clinical Notes</a></td>
+     <td>This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)</td>
+  </tr>
+</tbody>
+</table>
+<h2 id="terminology">4.3.0.2. Terminology</h2>
+<table class="grid" style="width: 100%">
+<tbody>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-codesystem-bh-funding-type-codes.html" title='ig/technical_artifacts/artifacts/codesystem-bh-funding-type-codes.page.md'>Behavioral Health Program Funding Type Codes</a></td>
+     <td>This CodeSystem defines coded concepts pertaining to a Behavioral Health program/grant.</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-valueset-bh-funding-types.html" title='ig/technical_artifacts/artifacts/valueset-bh-funding-types.page.md'>Behavioral Health Program Funding Types</a></td>
+     <td>This ValueSet defines coded concepts pertaining to a Behavioral Health program/grant.</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-valueset-mental-health-clinical-note-types.html" title='ig/technical_artifacts/artifacts/valueset-mental-health-clinical-note-types.page.md'>Mental Health Clinical Note Types</a></td>
+     <td>This ValueSet defines the LOINC codes for Mental Health Clinical Note types.</td>
+  </tr>
+</tbody>
+</table>
+<h2 id="examples">4.3.0.3. Examples</h2>
+<table class="grid" style="width: 100%">
+<tbody>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-fall-adverse-event-example-1.html" title='ig/technical_artifacts/artifacts/example-fall-adverse-event-example-1.page.md'>example-fall-adverse-event-example-1</a></td>
+     <td>Example of patient adverse fall event</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-peanut-allergy-example-1.html" title='ig/technical_artifacts/artifacts/example-peanut-allergy-example-1.page.md'>example-peanut-allergy-example-1</a></td>
+     <td>Example of patient documented peanut allergy</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-penicillin-allergy-example-1.html" title='ig/technical_artifacts/artifacts/example-penicillin-allergy-example-1.page.md'>example-penicillin-allergy-example-1</a></td>
+     <td>Example of patient documented penicillin allergy</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-bh-care-team-example-1.html" title='ig/technical_artifacts/artifacts/example-bh-care-team-example-1.page.md'>example-bh-care-team-example-1</a></td>
+     <td>Example of a mental health counselor as part of the care team</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-chest-pain-condition-example-1.html" title='ig/technical_artifacts/artifacts/example-chest-pain-condition-example-1.page.md'>example-chest-pain-condition-example-1</a></td>
+     <td>Example of patient chest pain</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-depression-condition-example-1.html" title='ig/technical_artifacts/artifacts/example-depression-condition-example-1.page.md'>example-depression-condition-example-1</a></td>
+     <td>Example of patient depression</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-diabetes-condition-example-1.html" title='ig/technical_artifacts/artifacts/example-diabetes-condition-example-1.page.md'>example-diabetes-condition-example-1</a></td>
+     <td>Example of patient diabetes</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-grief-condition-example-1.html" title='ig/technical_artifacts/artifacts/example-grief-condition-example-1.page.md'>example-grief-condition-example-1</a></td>
+     <td>Example of patient history of grief</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-panic-attack-condition-example-1.html" title='ig/technical_artifacts/artifacts/example-panic-attack-condition-example-1.page.md'>example-panic-attack-condition-example-1</a></td>
+     <td>Example of patients panic attack condition</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-substance-abuse-condition-example-1.html" title='ig/technical_artifacts/artifacts/example-substance-abuse-condition-example-1.page.md'>example-substance-abuse-condition-example-1</a></td>
+     <td>Example of patient history of substance use</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-SDOHCC-ConsentInformationDisclosure-example-1.html" title='ig/technical_artifacts/artifacts/example-SDOHCC-ConsentInformationDisclosure-example-1.page.md'>example-SDOHCC-ConsentInformationDisclosure-example-1</a></td>
+     <td>Example of patient HIPAA consent form for mental health providers (custodian). The consent (PDF form) content is encoded (base64)</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-medicaid-coverage-example-1.html" title='ig/technical_artifacts/artifacts/example-medicaid-coverage-example-1.page.md'>example-medicaid-coverage-example-1</a></td>
+     <td>Example of patient Medicaid coverage</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-ekg-impression-report-example-1.html" title='ig/technical_artifacts/artifacts/example-ekg-impression-report-example-1.page.md'>example-ekg-impression-report-example-1</a></td>
+     <td>Example of patient ekg impression</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-mental-health-consult-note-example-1.html" title='ig/technical_artifacts/artifacts/example-mental-health-consult-note-example-1.page.md'>example-mental-health-consult-note-example-1</a></td>
+     <td>Example of a mental health consult note. Clinical details of note content are encoded (base64)</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-mental-health-discharge-summary-example-1.html" title='ig/technical_artifacts/artifacts/example-mental-health-discharge-summary-example-1.page.md'>example-mental-health-discharge-summary-example-1</a></td>
+     <td>Example of a mental health dsicharge summary note. Clinical details of note content are encoded (base64)</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-mental-health-hx-physical-example-1.html" title='ig/technical_artifacts/artifacts/example-mental-health-hx-physical-example-1.page.md'>example-mental-health-hx-physical-example-1</a></td>
+     <td>Example of a mental health history and physical note. Clinical details of note content are encoded (base64)</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-mental-health-procedure-example-1.html" title='ig/technical_artifacts/artifacts/example-mental-health-procedure-example-1.page.md'>example-mental-health-procedure-example-1</a></td>
+     <td>Example of a mental health procedure note. Clinical details of note content are encoded (base64)</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-mental-health-progress-example-1.html" title='ig/technical_artifacts/artifacts/example-mental-health-progress-example-1.page.md'>example-mental-health-progress-example-1</a></td>
+     <td>Example of a mental health progress note. Clinical details of note content are encoded (base64)</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-discharge-encounter-example-3.html" title='ig/technical_artifacts/artifacts/example-discharge-encounter-example-3.page.md'>example-discharge-encounter-example-3</a></td>
+     <td>Example of patient discharge encounter</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-ed-encounter-example-1.html" title='ig/technical_artifacts/artifacts/example-ed-encounter-example-1.page.md'>example-ed-encounter-example-1</a></td>
+     <td>Example of patient emergency room encounter</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-obs-encounter-example-2.html" title='ig/technical_artifacts/artifacts/example-obs-encounter-example-2.page.md'>example-obs-encounter-example-2</a></td>
+     <td>Example of patient observation encounter</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-pcp-encounter-example-4.html" title='ig/technical_artifacts/artifacts/example-pcp-encounter-example-4.page.md'>example-pcp-encounter-example-4</a></td>
+     <td>Example of patient ambulatory encounter with primary care provider</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-food-insecurity-example-1.html" title='ig/technical_artifacts/artifacts/example-food-insecurity-example-1.page.md'>example-food-insecurity-example-1</a></td>
+     <td>Example of food insecurity (goal)</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-housing-insecurity-example-1.html" title='ig/technical_artifacts/artifacts/example-housing-insecurity-example-1.page.md'>example-housing-insecurity-example-1</a></td>
+     <td>Example of housing insecurity (goal)</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-social-connection-example-1.html" title='ig/technical_artifacts/artifacts/example-social-connection-example-1.page.md'>example-social-connection-example-1</a></td>
+     <td>Example of an improving patient goal improve toward adequate social participation</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-transportation-insecurity-example-1.html" title='ig/technical_artifacts/artifacts/example-transportation-insecurity-example-1.page.md'>example-transportation-insecurity-example-1</a></td>
+     <td>Example of transportation insecurity (goal)</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-flu-vaccine-example-1.html" title='ig/technical_artifacts/artifacts/example-flu-vaccine-example-1.page.md'>example-flu-vaccine-example-1</a></td>
+     <td>Example of patient flu vaccine (immunization)</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-ed-location-example-1.html" title='ig/technical_artifacts/artifacts/example-ed-location-example-1.page.md'>example-ed-location-example-1</a></td>
+     <td>Example of emergency dept. location</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-obs-location-example-1.html" title='ig/technical_artifacts/artifacts/example-obs-location-example-1.page.md'>example-obs-location-example-1</a></td>
+     <td>Example of patient observation</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-benzo-medication-example-1.html" title='ig/technical_artifacts/artifacts/example-benzo-medication-example-1.page.md'>example-benzo-medication-example-1</a></td>
+     <td>Example of patient benzo medication</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-bupropion-dispense-example-1.html" title='ig/technical_artifacts/artifacts/example-bupropion-dispense-example-1.page.md'>example-bupropion-dispense-example-1</a></td>
+     <td>Example of patient bupropion dispensed from a community health center pharmacy</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-ativan-discharge-med-example-1.html" title='ig/technical_artifacts/artifacts/example-ativan-discharge-med-example-1.page.md'>example-ativan-discharge-med-example-1</a></td>
+     <td>Example of discharge medication order of ativan</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-benzo-order-example-1.html" title='ig/technical_artifacts/artifacts/example-benzo-order-example-1.page.md'>example-benzo-order-example-1</a></td>
+     <td>Example of patient benzo medication order from ED setting</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-bupropion-discharge-med-example-1.html" title='ig/technical_artifacts/artifacts/example-bupropion-discharge-med-example-1.page.md'>example-bupropion-discharge-med-example-1</a></td>
+     <td>Example of discharge medication order of bupropion</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-metformin-discharge-med-example-1.html" title='ig/technical_artifacts/artifacts/example-metformin-discharge-med-example-1.page.md'>example-metformin-discharge-med-example-1</a></td>
+     <td>Example of discharge medication order of metformin</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-paroxetine-discharge-med-example-1.html" title='ig/technical_artifacts/artifacts/example-paroxetine-discharge-med-example-1.page.md'>example-paroxetine-discharge-med-example-1</a></td>
+     <td>Example of discharge medication order of paroxetine. This example includes a US Core 7.0.0 MedicationAdherence extension</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-anxiety-assessment-observation-example-1.html" title='ig/technical_artifacts/artifacts/example-anxiety-assessment-observation-example-1.page.md'>example-anxiety-assessment-observation-example-1</a></td>
+     <td>Example of patient anxiety assessment/screening</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-average-blood-pressure-example-1.html" title='ig/technical_artifacts/artifacts/example-average-blood-pressure-example-1.page.md'>example-average-blood-pressure-example-1</a></td>
+     <td>Example of patient average blood pressure</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-bh-grant-info-observation-example-1.html" title='ig/technical_artifacts/artifacts/example-bh-grant-info-observation-example-1.page.md'>example-bh-grant-info-observation-example-1</a></td>
+     <td>Example of patient observation</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-blood-pressure-example-1.html" title='ig/technical_artifacts/artifacts/example-blood-pressure-example-1.page.md'>example-blood-pressure-example-1</a></td>
+     <td>Example of patient systolic and diastolic blood pressure measurements</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-cognitive-status-observation-example-3.html" title='ig/technical_artifacts/artifacts/example-cognitive-status-observation-example-3.page.md'>example-cognitive-status-observation-example-3</a></td>
+     <td>Example of a mental/cognitive health status assessment/screening</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-disability-status-observation-example-1.html" title='ig/technical_artifacts/artifacts/example-disability-status-observation-example-1.page.md'>example-disability-status-observation-example-1</a></td>
+     <td>Example of disability status health status assessment/screening</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-ekg-observation-example-1.html" title='ig/technical_artifacts/artifacts/example-ekg-observation-example-1.page.md'>example-ekg-observation-example-1</a></td>
+     <td>Example of patient ekg test result</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-heart-rate-example-1.html" title='ig/technical_artifacts/artifacts/example-heart-rate-example-1.page.md'>example-heart-rate-example-1</a></td>
+     <td>Example of patient heart rate</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-height-example-1.html" title='ig/technical_artifacts/artifacts/example-height-example-1.page.md'>example-height-example-1</a></td>
+     <td>Example of patient body height</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-hemoglobin-a1c-example-1.html" title='ig/technical_artifacts/artifacts/example-hemoglobin-a1c-example-1.page.md'>example-hemoglobin-a1c-example-1</a></td>
+     <td>Example of Hemoglobin A1c test result</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-no-morphine-preference-observation-example-1.html" title='ig/technical_artifacts/artifacts/example-no-morphine-preference-observation-example-1.page.md'>example-no-morphine-preference-observation-example-1</a></td>
+     <td>Example of patient treatment preference for no morphine</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-non-smoker-example-1.html" title='ig/technical_artifacts/artifacts/example-non-smoker-example-1.page.md'>example-non-smoker-example-1</a></td>
+     <td>Example of patient smoking status</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-oxygen-saturation-example-1.html" title='ig/technical_artifacts/artifacts/example-oxygen-saturation-example-1.page.md'>example-oxygen-saturation-example-1</a></td>
+     <td>Example of patient oxygen saturation</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-pregnancy-status-example-1.html" title='ig/technical_artifacts/artifacts/example-pregnancy-status-example-1.page.md'>example-pregnancy-status-example-1</a></td>
+     <td>Example of patient pregnancy status</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-provider-preference-observation-example-2.html" title='ig/technical_artifacts/artifacts/example-provider-preference-observation-example-2.page.md'>example-provider-preference-observation-example-2</a></td>
+     <td>Example of patient preference for healthcare professiona</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-respiratory-rate-example-1.html" title='ig/technical_artifacts/artifacts/example-respiratory-rate-example-1.page.md'>example-respiratory-rate-example-1</a></td>
+     <td>Example of patient respiratory rate</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-temperature-example-1.html" title='ig/technical_artifacts/artifacts/example-temperature-example-1.page.md'>example-temperature-example-1</a></td>
+     <td>Example of patient body temperature</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-usual-work-example-1.html" title='ig/technical_artifacts/artifacts/example-usual-work-example-1.page.md'>example-usual-work-example-1</a></td>
+     <td>Example of patient usual occupation as a citrus farm worker</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-weight-example-1.html" title='ig/technical_artifacts/artifacts/example-weight-example-1.page.md'>example-weight-example-1</a></td>
+     <td>Example of patient's weight</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-fl-medicaid-example-1.html" title='ig/technical_artifacts/artifacts/example-fl-medicaid-example-1.page.md'>example-fl-medicaid-example-1</a></td>
+     <td>Example of Florida Medicaid (organization) - MyACCESS</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-mh-provider-example-1.html" title='ig/technical_artifacts/artifacts/example-mh-provider-example-1.page.md'>example-mh-provider-example-1</a></td>
+     <td>Example of patient mental health provider</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-bh-patient-example.html" title='ig/technical_artifacts/artifacts/example-bh-patient-example.page.md'>example-bh-patient-example</a></td>
+     <td>Example of patient demographic information, which includes Veteran Status (missing from narrative)</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-ed-physician-example-1.html" title='ig/technical_artifacts/artifacts/example-ed-physician-example-1.page.md'>example-ed-physician-example-1</a></td>
+     <td>Example of emergency room physician care team member</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-mental-health-provider-example-1.html" title='ig/technical_artifacts/artifacts/example-mental-health-provider-example-1.page.md'>example-mental-health-provider-example-1</a></td>
+     <td>Example of mental health provider</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-pcp-provider-example-1.html" title='ig/technical_artifacts/artifacts/example-pcp-provider-example-1.page.md'>example-pcp-provider-example-1</a></td>
+     <td>Example of Primary Care Provider</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-alcohol-prevetion-education-example-1.html" title='ig/technical_artifacts/artifacts/example-alcohol-prevetion-education-example-1.page.md'>example-alcohol-prevetion-education-example-1</a></td>
+     <td>Example of patient alcohol cessation education</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-bh-prevention-education-program-example-1.html" title='ig/technical_artifacts/artifacts/example-bh-prevention-education-program-example-1.page.md'>example-bh-prevention-education-program-example-1</a></td>
+     <td>Example of education service provided to patient</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-harm-reduction-example-1.html" title='ig/technical_artifacts/artifacts/example-harm-reduction-example-1.page.md'>example-harm-reduction-example-1</a></td>
+     <td>Example of patient harm reduction program</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-BHP-QuestionnaireResponsePRAPAREExample-1.html" title='ig/technical_artifacts/artifacts/example-BHP-QuestionnaireResponsePRAPAREExample-1.page.md'>example-BHP-QuestionnaireResponsePRAPAREExample-1</a></td>
+     <td>Example of SDOH assessment/screening</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-C-SSRS-example-1.html" title='ig/technical_artifacts/artifacts/example-C-SSRS-example-1.page.md'>example-C-SSRS-example-1</a></td>
+     <td>Example of suicide risk assessment/screening</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-ace-example-1.html" title='ig/technical_artifacts/artifacts/example-ace-example-1.page.md'>example-ace-example-1</a></td>
+     <td>Example of a mental trauma or PTSD assessment/screening</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-alcohol-use-identification-test-1.html" title='ig/technical_artifacts/artifacts/example-alcohol-use-identification-test-1.page.md'>example-alcohol-use-identification-test-1</a></td>
+     <td>Example of patient alcohol abuse health status assessment/screening</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-barthel-index-functional-status-example-1.html" title='ig/technical_artifacts/artifacts/example-barthel-index-functional-status-example-1.page.md'>example-barthel-index-functional-status-example-1</a></td>
+     <td>Example of patient barthel index functional status (panel)</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-hark-example-1.html" title='ig/technical_artifacts/artifacts/example-hark-example-1.page.md'>example-hark-example-1</a></td>
+     <td>Example of interpersonal violence assessment/screening</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-phq-9-example-1.html" title='ig/technical_artifacts/artifacts/example-phq-9-example-1.page.md'>example-phq-9-example-1</a></td>
+     <td>Example of a depression assessment/screening</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-adult-child-relatedperson-example-1.html" title='ig/technical_artifacts/artifacts/example-adult-child-relatedperson-example-1.page.md'>example-adult-child-relatedperson-example-1</a></td>
+     <td>Example of patient related person</td>
+  </tr>
+  <tr>
+     <td><a href="ig-technical_artifacts-artifacts-example-ServiceRequest-peer-mentoring-example-1.html" title='ig/technical_artifacts/artifacts/example-ServiceRequest-peer-mentoring-example-1.page.md'>example-ServiceRequest-peer-mentoring-example-1</a></td>
+     <td>Example of patient referral to a peer coaching program</td>
+  </tr>
+</tbody>
+</table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

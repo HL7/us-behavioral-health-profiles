@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | example-average-blood-pressure-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-average-blood-pressure-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+<h2 id="example-observation-average-blood-pressure-example">Example Observation: average-blood-pressure-example</h2>
+<p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#6bb90fc5-d618-4ef2-a986-ae9bc04c625f" aria-controls="6bb90fc5-d618-4ef2-a986-ae9bc04c625f" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#3e85fe8f-76df-4ae4-9997-ecc263dfc47e" aria-controls="3e85fe8f-76df-4ae4-9997-ecc263dfc47e" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#ad879b61-3a84-4125-8528-f3796dc033ca" aria-controls="ad879b61-3a84-4125-8528-f3796dc033ca" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#d72fed10-3192-4495-a4e7-af2919d15ce7" aria-controls="d72fed10-3192-4495-a4e7-af2919d15ce7" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="6bb90fc5-d618-4ef2-a986-ae9bc04c625f">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.resourceType" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">resourceType</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Observation</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.id" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">average-blood-pressure-example-1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.meta" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">meta</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.meta.profile" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">profile</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|7.0.0</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.status" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">status</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">final</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.category" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">category</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.category.coding" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.category.coding.system" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/observation-category</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.category.coding.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">vital-signs</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.category.coding.display" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Vital Signs</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.category.text" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Vital Signs</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.code.coding" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.code.coding.system" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://loinc.org</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.code.coding.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">96607-7</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.code.coding.display" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Blood pressure panel mean systolic and mean diastolic</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.code.text" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Avg Blood pressure systolic and diastolic</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.subject" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">subject</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.subject.reference" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.subject.display" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">James Wolff</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.effectivePeriod" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">effectivePeriod</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.effectivePeriod.start" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">start</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2024-02-01T01:06:52.48Z</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.effectivePeriod.end" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">end</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2024-02-01T13:07:01.166Z</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.performer" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">performer</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.performer.reference" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Practitioner/pcp-provider-example-1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.performer.display" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Dr. Doc Family</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">component</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.coding" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.coding.system" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://loinc.org</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.coding.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">96608-5</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.coding.display" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Systolic blood pressure mean</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.text" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Average systolic blood pressure</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.valueQuantity" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">valueQuantity</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.valueQuantity.value" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">value</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">157</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.valueQuantity.unit" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">unit</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">mm[Hg]</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.valueQuantity.system" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://unitsofmeasure.org</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.valueQuantity.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">mm[Hg]</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.coding" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.coding.system" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://loinc.org</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.coding.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">96609-3</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.coding.display" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Diastolic blood pressure mean</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.text" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Average diastolic blood pressure</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.valueQuantity" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">valueQuantity</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.valueQuantity.value" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">value</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">92</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.valueQuantity.unit" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">unit</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">mm[Hg]</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.valueQuantity.system" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://unitsofmeasure.org</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.valueQuantity.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">mm[Hg]</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="3e85fe8f-76df-4ae4-9997-ecc263dfc47e">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">Observation</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.id" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">average-blood-pressure-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.meta" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.meta.profile" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|7.0.0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.status" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">final</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.category" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.category.coding" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.category.coding.system" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/observation-category</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.category.coding.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">vital-signs</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.category.coding.display" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Vital Signs</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.category.text" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Vital Signs</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.code.coding" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.code.coding.system" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://loinc.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.code.coding.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">96607-7</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.code.coding.display" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Blood pressure panel mean systolic and mean diastolic</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.code.text" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Avg Blood pressure systolic and diastolic</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.subject" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.subject.reference" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.subject.display" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">James Wolff</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.effective" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">effectivePeriod</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.effective.start" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">start</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2024-02-01T01:06:52.48Z</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.effective.end" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">end</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2024-02-01T13:07:01.166Z</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">effectivePeriod</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.performer" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">performer</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.performer.reference" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Practitioner/pcp-provider-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.performer.display" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Dr. Doc Family</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">performer</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">component</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.coding" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.coding.system" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://loinc.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.coding.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">96608-5</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.coding.display" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Systolic blood pressure mean</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.text" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Average systolic blood pressure</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.value" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">valueQuantity</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.value.value" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">157</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.value.unit" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">unit</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">mm[Hg]</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.value.system" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://unitsofmeasure.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.value.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">mm[Hg]</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">valueQuantity</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">component</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">component</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.coding" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.coding.system" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://loinc.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.coding.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">96609-3</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.coding.display" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Diastolic blood pressure mean</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.code.text" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Average diastolic blood pressure</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.value" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">valueQuantity</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.value.value" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">92</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.value.unit" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">unit</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">mm[Hg]</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.value.system" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://unitsofmeasure.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@7.0.0&filepath=package/StructureDefinition-us-core-average-blood-pressure.json&tab=details#Observation.component.value.code" title="US Core Average Blood Pressure Profile
+hl7.fhir.us.core 7.0.0
+StructureDefinition-us-core-average-blood-pressure.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">mm[Hg]</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">valueQuantity</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">component</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Observation</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="ad879b61-3a84-4125-8528-f3796dc033ca">
+    <div class="stu3-treetable" id="5a5d7f644978447d9f59c1dcf643d233" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="48d4b29e0a3a42859b6e160de6355f35"><td class="instance"><span class="baseIcon primitive"></span><b>Observation</b></td></tr><tr class="collapsed" data-id="4c1013a5662a4e5382765011d18c8547" data-parentId="48d4b29e0a3a42859b6e160de6355f35"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>average-blood-pressure-example-1</span></td></tr><tr class="collapsed" data-id="0db9b9fbedfe48ff8ce64179ea579f3c" data-parentId="48d4b29e0a3a42859b6e160de6355f35"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="1d5f253454064090b65516c1ab284b1b" data-parentId="0db9b9fbedfe48ff8ce64179ea579f3c"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|7.0.0</span></td></tr><tr class="collapsed" data-id="7878a8d6e8274385b222ce4eff308b8d" data-parentId="48d4b29e0a3a42859b6e160de6355f35"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>final</span></td></tr><tr class="collapsed" data-id="760a772d1014489da09b555033dd55ff" data-parentId="48d4b29e0a3a42859b6e160de6355f35"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="b53e59a195274a0b8466baf47b284d2e" data-parentId="760a772d1014489da09b555033dd55ff"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="d74c2fb3fd8a47c48e76f7acc1b8dded" data-parentId="b53e59a195274a0b8466baf47b284d2e"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/observation-category</span></td></tr><tr class="collapsed" data-id="7d989fec151741218932eea64b205a49" data-parentId="b53e59a195274a0b8466baf47b284d2e"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>vital-signs</span></td></tr><tr class="collapsed" data-id="56ecab7f22a24e20a370ef3d84376423" data-parentId="b53e59a195274a0b8466baf47b284d2e"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Vital Signs</span></td></tr><tr class="collapsed" data-id="02555e71a3eb478a9d2e1c967bad4e17" data-parentId="760a772d1014489da09b555033dd55ff"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Vital Signs</span></td></tr><tr class="collapsed" data-id="5a7b374d49a246cdbf02a02ea80a930d" data-parentId="48d4b29e0a3a42859b6e160de6355f35"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="1caace2549164b4896350a3b449c8f5f" data-parentId="5a7b374d49a246cdbf02a02ea80a930d"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="7585feb2589740439264ec570dc2a509" data-parentId="1caace2549164b4896350a3b449c8f5f"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="33122c761c3a4f1b8d511f52a4d2fb88" data-parentId="1caace2549164b4896350a3b449c8f5f"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>96607-7</span></td></tr><tr class="collapsed" data-id="bab2d9185a884bc3a93c82fd9fbb89b7" data-parentId="1caace2549164b4896350a3b449c8f5f"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Blood pressure panel mean systolic and mean diastolic</span></td></tr><tr class="collapsed" data-id="069f017c276a4410a0b8e6ed1ef53ce6" data-parentId="5a7b374d49a246cdbf02a02ea80a930d"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Avg Blood pressure systolic and diastolic</span></td></tr><tr class="collapsed" data-id="c7a7263f42e04ee6abc51f2468d62c5a" data-parentId="48d4b29e0a3a42859b6e160de6355f35"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="b92d459cc6a941da92e2dc1234688544" data-parentId="c7a7263f42e04ee6abc51f2468d62c5a"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="35087461630e4549b040d062ac3adb18" data-parentId="c7a7263f42e04ee6abc51f2468d62c5a"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="8dc17c005d724fec825e44a910bbedab" data-parentId="48d4b29e0a3a42859b6e160de6355f35"><td class="instance"><span class="baseIcon primitive"></span><b>effective</b></td></tr><tr class="collapsed" data-id="34896a6b9ae64db289566679c66925ae" data-parentId="8dc17c005d724fec825e44a910bbedab"><td class="instance"><span class="baseIcon primitive"></span><b>start : </b><span>2024-02-01T01:06:52.48Z</span></td></tr><tr class="collapsed" data-id="65db40c56adc47f2a23376cee9b4ef98" data-parentId="8dc17c005d724fec825e44a910bbedab"><td class="instance"><span class="baseIcon primitive"></span><b>end : </b><span>2024-02-01T13:07:01.166Z</span></td></tr><tr class="collapsed" data-id="65410ad88cd1425c8e2baa46547dd841" data-parentId="48d4b29e0a3a42859b6e160de6355f35"><td class="instance"><span class="baseIcon primitive"></span><b>performer</b></td></tr><tr class="collapsed" data-id="9d3c6af2c4344f60a72d14c7c8c4cc5a" data-parentId="65410ad88cd1425c8e2baa46547dd841"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Practitioner/pcp-provider-example-1</span></td></tr><tr class="collapsed" data-id="1af7ed39e8a94426a895410aa955893d" data-parentId="65410ad88cd1425c8e2baa46547dd841"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Dr. Doc Family</span></td></tr><tr class="collapsed" data-id="8932f5ea35124e6f877e031a5d090e02" data-parentId="48d4b29e0a3a42859b6e160de6355f35"><td class="instance"><span class="baseIcon primitive"></span><b>component</b></td></tr><tr class="collapsed" data-id="751409b16f6b494c982a23049614f944" data-parentId="8932f5ea35124e6f877e031a5d090e02"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="d40c2aea48974538bb3cebf6800b18b8" data-parentId="751409b16f6b494c982a23049614f944"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="4540d9ef04c343989d33e1f16be9bc6c" data-parentId="d40c2aea48974538bb3cebf6800b18b8"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="bb48fbde4f7f42b4847ca245ffdd1edf" data-parentId="d40c2aea48974538bb3cebf6800b18b8"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>96608-5</span></td></tr><tr class="collapsed" data-id="9c58739fde5d46e2aad9d12797174903" data-parentId="d40c2aea48974538bb3cebf6800b18b8"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Systolic blood pressure mean</span></td></tr><tr class="collapsed" data-id="9f242c510b864d3e89e3e1d5b7efcad7" data-parentId="751409b16f6b494c982a23049614f944"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Average systolic blood pressure</span></td></tr><tr class="collapsed" data-id="c8c948c48c0940f497cabb1937a293e0" data-parentId="8932f5ea35124e6f877e031a5d090e02"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="c51ed0caacbe41bf8680985c0cda42dc" data-parentId="c8c948c48c0940f497cabb1937a293e0"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>157</span></td></tr><tr class="collapsed" data-id="9f365caf046e4baaac299c8fcad70d3e" data-parentId="c8c948c48c0940f497cabb1937a293e0"><td class="instance"><span class="baseIcon primitive"></span><b>unit : </b><span>mm[Hg]</span></td></tr><tr class="collapsed" data-id="9303da2667414204b276a5e71327994d" data-parentId="c8c948c48c0940f497cabb1937a293e0"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://unitsofmeasure.org</span></td></tr><tr class="collapsed" data-id="3b9bcbf2614744c796ea9ff412b8a7cc" data-parentId="c8c948c48c0940f497cabb1937a293e0"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>mm[Hg]</span></td></tr><tr class="collapsed" data-id="1da9d7af82554829afe55e6f685f1ff6" data-parentId="48d4b29e0a3a42859b6e160de6355f35"><td class="instance"><span class="baseIcon primitive"></span><b>component</b></td></tr><tr class="collapsed" data-id="ec0d5a566b664037b2fb5dc03a689565" data-parentId="1da9d7af82554829afe55e6f685f1ff6"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="77cea772ab2141d5ba7b8080cedd30c8" data-parentId="ec0d5a566b664037b2fb5dc03a689565"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="11f2dfeca1a742e680acc20bb47bbe9e" data-parentId="77cea772ab2141d5ba7b8080cedd30c8"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="390ce9e43f6446ae871821206b9a2886" data-parentId="77cea772ab2141d5ba7b8080cedd30c8"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>96609-3</span></td></tr><tr class="collapsed" data-id="c18665c6ff4240caa44e53948709c90a" data-parentId="77cea772ab2141d5ba7b8080cedd30c8"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Diastolic blood pressure mean</span></td></tr><tr class="collapsed" data-id="f37f52306c2b43b292dec6cbbfd7bf25" data-parentId="ec0d5a566b664037b2fb5dc03a689565"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Average diastolic blood pressure</span></td></tr><tr class="collapsed" data-id="cb5c62958e634caf84036c549f2203c4" data-parentId="1da9d7af82554829afe55e6f685f1ff6"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="8c34313aab08451592262fcc221f05f4" data-parentId="cb5c62958e634caf84036c549f2203c4"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>92</span></td></tr><tr class="collapsed" data-id="42a5ad4cb23b45e9adf89bbf83eb6339" data-parentId="cb5c62958e634caf84036c549f2203c4"><td class="instance"><span class="baseIcon primitive"></span><b>unit : </b><span>mm[Hg]</span></td></tr><tr class="collapsed" data-id="0d44d39957b0455da52cea60fcfd41dd" data-parentId="cb5c62958e634caf84036c549f2203c4"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://unitsofmeasure.org</span></td></tr><tr class="collapsed" data-id="eec7c1a5ae084c9a82379db560ade904" data-parentId="cb5c62958e634caf84036c549f2203c4"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>mm[Hg]</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable5a5d7f644978447d9f59c1dcf643d233 = new InstanceTree();
+resourceTreeTable5a5d7f644978447d9f59c1dcf643d233.init("5a5d7f644978447d9f59c1dcf643d233");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="d72fed10-3192-4495-a4e7-af2919d15ce7">
+    <div class="path"><table><tbody><tr><td>Observation.<span class="field">id[0]</span></td><td>average-blood-pressure-example-1</td></tr><tr><td>Observation.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|7.0.0</td></tr><tr><td>Observation.<span class="field">status[0]</span></td><td>final</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/observation-category</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">code[0]</span></td><td>vital-signs</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">display[0]</span></td><td>Vital Signs</td></tr><tr><td>Observation.category[0].<span class="field">text[0]</span></td><td>Vital Signs</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">code[0]</span></td><td>96607-7</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">display[0]</span></td><td>Blood pressure panel mean systolic and mean diastolic</td></tr><tr><td>Observation.code[0].<span class="field">text[0]</span></td><td>Avg Blood pressure systolic and diastolic</td></tr><tr><td>Observation.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>Observation.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>Observation.effective[0].<span class="field">start[0]</span></td><td>2024-02-01T01:06:52.48Z</td></tr><tr><td>Observation.effective[0].<span class="field">end[0]</span></td><td>2024-02-01T13:07:01.166Z</td></tr><tr><td>Observation.performer[0].<span class="field">reference[0]</span></td><td>Practitioner/pcp-provider-example-1</td></tr><tr><td>Observation.performer[0].<span class="field">display[0]</span></td><td>Dr. Doc Family</td></tr><tr><td>Observation.component[0].code[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>Observation.component[0].code[0].coding[0].<span class="field">code[0]</span></td><td>96608-5</td></tr><tr><td>Observation.component[0].code[0].coding[0].<span class="field">display[0]</span></td><td>Systolic blood pressure mean</td></tr><tr><td>Observation.component[0].code[0].<span class="field">text[0]</span></td><td>Average systolic blood pressure</td></tr><tr><td>Observation.component[0].value[0].<span class="field">value[0]</span></td><td>157</td></tr><tr><td>Observation.component[0].value[0].<span class="field">unit[0]</span></td><td>mm[Hg]</td></tr><tr><td>Observation.component[0].value[0].<span class="field">system[0]</span></td><td>http://unitsofmeasure.org</td></tr><tr><td>Observation.component[0].value[0].<span class="field">code[0]</span></td><td>mm[Hg]</td></tr><tr><td>Observation.component[1].code[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>Observation.component[1].code[0].coding[0].<span class="field">code[0]</span></td><td>96609-3</td></tr><tr><td>Observation.component[1].code[0].coding[0].<span class="field">display[0]</span></td><td>Diastolic blood pressure mean</td></tr><tr><td>Observation.component[1].code[0].<span class="field">text[0]</span></td><td>Average diastolic blood pressure</td></tr><tr><td>Observation.component[1].value[0].<span class="field">value[0]</span></td><td>92</td></tr><tr><td>Observation.component[1].value[0].<span class="field">unit[0]</span></td><td>mm[Hg]</td></tr><tr><td>Observation.component[1].value[0].<span class="field">system[0]</span></td><td>http://unitsofmeasure.org</td></tr><tr><td>Observation.component[1].value[0].<span class="field">code[0]</span></td><td>mm[Hg]</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | example-pregnancy-status-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-pregnancy-status-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+<h2 id="example-observation-pregnancy-status-example">Example Observation: pregnancy-status-example</h2>
+<p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#cee63683-08a9-48ed-b332-04b511fb071d" aria-controls="cee63683-08a9-48ed-b332-04b511fb071d" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#7166fe49-879c-47ff-be1b-ee82b7e6e923" aria-controls="7166fe49-879c-47ff-be1b-ee82b7e6e923" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#da2bf26b-2558-4bac-9a98-006ad72a7c48" aria-controls="da2bf26b-2558-4bac-9a98-006ad72a7c48" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#68e887ec-195b-4400-8485-bf4556ecbe7c" aria-controls="68e887ec-195b-4400-8485-bf4556ecbe7c" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="cee63683-08a9-48ed-b332-04b511fb071d">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.resourceType" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">resourceType</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Observation</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.id" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">pregnancy-status-example-1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.meta" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">meta</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.meta.profile" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">profile</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus|6.1.0</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.status" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">status</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">final</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.category" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">category</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.category.coding" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.category.coding.system" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/observation-category</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.category.coding.code" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">social-history</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.category.coding.display" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Social History</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.category.text" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Social History</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.code" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.code.coding" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.code.coding.system" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://loinc.org</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.code.coding.code" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">82810-3</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.code.coding.display" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Pregnancy status</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.code.text" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Pregnancy Status</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.subject" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">subject</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.subject.reference" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.subject.display" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">James Wolff</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.effectiveDateTime" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">effectiveDateTime</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2024-02-01T10:39:52Z</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.performer" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">performer</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.performer.reference" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Practitioner/pcp-provider-example-1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.performer.display" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Dr. Doc Family</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.valueCodeableConcept" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">valueCodeableConcept</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.valueCodeableConcept.coding" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.valueCodeableConcept.coding.system" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://snomed.info/sct</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.valueCodeableConcept.coding.version" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">version</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://snomed.info/sct/731000124108</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.valueCodeableConcept.coding.code" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">60001007</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.valueCodeableConcept.coding.display" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Not pregnant (finding)</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.valueCodeableConcept.text" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Not pregnant</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="7166fe49-879c-47ff-be1b-ee82b7e6e923">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">Observation</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.id" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">pregnancy-status-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.meta" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.meta.profile" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus|6.1.0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.status" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">final</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.category" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.category.coding" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.category.coding.system" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/observation-category</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.category.coding.code" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">social-history</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.category.coding.display" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Social History</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.category.text" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Social History</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.code" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.code.coding" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.code.coding.system" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://loinc.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.code.coding.code" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">82810-3</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.code.coding.display" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Pregnancy status</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.code.text" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Pregnancy Status</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.subject" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.subject.reference" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.subject.display" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">James Wolff</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.effective" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">effectiveDateTime</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2024-02-01T10:39:52Z</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.performer" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">performer</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.performer.reference" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Practitioner/pcp-provider-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.performer.display" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Dr. Doc Family</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">performer</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.value" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">valueCodeableConcept</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.value.coding" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.value.coding.system" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://snomed.info/sct</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.value.coding.version" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">version</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://snomed.info/sct/731000124108</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.value.coding.code" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">60001007</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.value.coding.display" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Not pregnant (finding)</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-observation-pregnancystatus.json&tab=details#Observation.value.text" title="US Core Observation Pregnancy Status Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-observation-pregnancystatus.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Not pregnant</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">valueCodeableConcept</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Observation</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="da2bf26b-2558-4bac-9a98-006ad72a7c48">
+    <div class="stu3-treetable" id="a5729f8a96a64cb799bc75347b5910ec" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="32286c959c02402a88d554648a8d0cc3"><td class="instance"><span class="baseIcon primitive"></span><b>Observation</b></td></tr><tr class="collapsed" data-id="228270a67f9f439a92d6819b2322d116" data-parentId="32286c959c02402a88d554648a8d0cc3"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>pregnancy-status-example-1</span></td></tr><tr class="collapsed" data-id="bff431600f6e4b95a0f1e8450b69a1f9" data-parentId="32286c959c02402a88d554648a8d0cc3"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="a381b33c5593417296a880d63399da20" data-parentId="bff431600f6e4b95a0f1e8450b69a1f9"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus|6.1.0</span></td></tr><tr class="collapsed" data-id="e6535649b1ce4325b8f5a6f3b4d44e38" data-parentId="32286c959c02402a88d554648a8d0cc3"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>final</span></td></tr><tr class="collapsed" data-id="47c7d7c0bb35407f8e044102db5392d5" data-parentId="32286c959c02402a88d554648a8d0cc3"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="4cc7f2107f894df596b078c3035bb734" data-parentId="47c7d7c0bb35407f8e044102db5392d5"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="c113d1b24fa142169d5815e8efcf3ea8" data-parentId="4cc7f2107f894df596b078c3035bb734"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/observation-category</span></td></tr><tr class="collapsed" data-id="316a62c18cca4dbc80afff3465afc7be" data-parentId="4cc7f2107f894df596b078c3035bb734"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>social-history</span></td></tr><tr class="collapsed" data-id="ffad2e12dc38466b803369344fc4718f" data-parentId="4cc7f2107f894df596b078c3035bb734"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Social History</span></td></tr><tr class="collapsed" data-id="aa25919a16e74a7193475f528abf581a" data-parentId="47c7d7c0bb35407f8e044102db5392d5"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Social History</span></td></tr><tr class="collapsed" data-id="2adb6a2a50b64d62837341293c58cc16" data-parentId="32286c959c02402a88d554648a8d0cc3"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="bb494dc5c93f447cb4d216a129359ac7" data-parentId="2adb6a2a50b64d62837341293c58cc16"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="3ebd56ab33254adb9d0d5c8b23c3ac9a" data-parentId="bb494dc5c93f447cb4d216a129359ac7"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="f27f45efbc564c49ac40576d53d22896" data-parentId="bb494dc5c93f447cb4d216a129359ac7"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>82810-3</span></td></tr><tr class="collapsed" data-id="0e8e5d40205b43e3b874cef4c6cd81b0" data-parentId="bb494dc5c93f447cb4d216a129359ac7"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Pregnancy status</span></td></tr><tr class="collapsed" data-id="17bbf6d88d90466baa446f7f96dfef85" data-parentId="2adb6a2a50b64d62837341293c58cc16"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Pregnancy Status</span></td></tr><tr class="collapsed" data-id="623034eb7c0b468e9731ce1e73cf33bf" data-parentId="32286c959c02402a88d554648a8d0cc3"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="eb487fc2a506479ea6529db1839ae6a0" data-parentId="623034eb7c0b468e9731ce1e73cf33bf"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="6f66a5ff29184534907ee9344b48e287" data-parentId="623034eb7c0b468e9731ce1e73cf33bf"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="899a87415ec44ad2abfb1c0e0eebbc17" data-parentId="32286c959c02402a88d554648a8d0cc3"><td class="instance"><span class="baseIcon primitive"></span><b>effective : </b><span>2024-02-01T10:39:52Z</span></td></tr><tr class="collapsed" data-id="bab2f4c257d14c829e0d4ce3322eca07" data-parentId="32286c959c02402a88d554648a8d0cc3"><td class="instance"><span class="baseIcon primitive"></span><b>performer</b></td></tr><tr class="collapsed" data-id="cbd24868089b43f79d5637fc4d345958" data-parentId="bab2f4c257d14c829e0d4ce3322eca07"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Practitioner/pcp-provider-example-1</span></td></tr><tr class="collapsed" data-id="9818a9adf62a4365981d0c825b14b5a9" data-parentId="bab2f4c257d14c829e0d4ce3322eca07"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Dr. Doc Family</span></td></tr><tr class="collapsed" data-id="f5e89db041a14389a455d3a98c5ae6de" data-parentId="32286c959c02402a88d554648a8d0cc3"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="b72b8662bde64cc080f78fd085c378f1" data-parentId="f5e89db041a14389a455d3a98c5ae6de"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="d21db30b3f08435a9c7ebf2f41b78ae1" data-parentId="b72b8662bde64cc080f78fd085c378f1"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://snomed.info/sct</span></td></tr><tr class="collapsed" data-id="cc49615f77c549f28a0f9a9df1e85fe8" data-parentId="b72b8662bde64cc080f78fd085c378f1"><td class="instance"><span class="baseIcon primitive"></span><b>version : </b><span>http://snomed.info/sct/731000124108</span></td></tr><tr class="collapsed" data-id="439c0712109b4920a21d90c4a89cf77d" data-parentId="b72b8662bde64cc080f78fd085c378f1"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>60001007</span></td></tr><tr class="collapsed" data-id="a6f67c7e77064b5cad1b470e67de25da" data-parentId="b72b8662bde64cc080f78fd085c378f1"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Not pregnant (finding)</span></td></tr><tr class="collapsed" data-id="71d9fc0a7bcd4b5a9c79334b1c1d70e7" data-parentId="f5e89db041a14389a455d3a98c5ae6de"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Not pregnant</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTablea5729f8a96a64cb799bc75347b5910ec = new InstanceTree();
+resourceTreeTablea5729f8a96a64cb799bc75347b5910ec.init("a5729f8a96a64cb799bc75347b5910ec");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="68e887ec-195b-4400-8485-bf4556ecbe7c">
+    <div class="path"><table><tbody><tr><td>Observation.<span class="field">id[0]</span></td><td>pregnancy-status-example-1</td></tr><tr><td>Observation.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus|6.1.0</td></tr><tr><td>Observation.<span class="field">status[0]</span></td><td>final</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/observation-category</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">code[0]</span></td><td>social-history</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">display[0]</span></td><td>Social History</td></tr><tr><td>Observation.category[0].<span class="field">text[0]</span></td><td>Social History</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">code[0]</span></td><td>82810-3</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">display[0]</span></td><td>Pregnancy status</td></tr><tr><td>Observation.code[0].<span class="field">text[0]</span></td><td>Pregnancy Status</td></tr><tr><td>Observation.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>Observation.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>Observation.<span class="field">effective[0]</span></td><td>2024-02-01T10:39:52Z</td></tr><tr><td>Observation.performer[0].<span class="field">reference[0]</span></td><td>Practitioner/pcp-provider-example-1</td></tr><tr><td>Observation.performer[0].<span class="field">display[0]</span></td><td>Dr. Doc Family</td></tr><tr><td>Observation.value[0].coding[0].<span class="field">system[0]</span></td><td>http://snomed.info/sct</td></tr><tr><td>Observation.value[0].coding[0].<span class="field">version[0]</span></td><td>http://snomed.info/sct/731000124108</td></tr><tr><td>Observation.value[0].coding[0].<span class="field">code[0]</span></td><td>60001007</td></tr><tr><td>Observation.value[0].coding[0].<span class="field">display[0]</span></td><td>Not pregnant (finding)</td></tr><tr><td>Observation.value[0].<span class="field">text[0]</span></td><td>Not pregnant</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

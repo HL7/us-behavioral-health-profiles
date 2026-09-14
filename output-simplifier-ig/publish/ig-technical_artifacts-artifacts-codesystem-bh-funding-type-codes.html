@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | codesystem-bh-funding-type-codes - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">codesystem-bh-funding-type-codes</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+<h2 id="behavioral-health-program-funding-type-codes">Behavioral Health Program Funding Type Codes</h2>
+<p><table class="table meta-table">
+  <tbody><tr>
+    <td colspan="2">
+      <i>Official URL:</i> <code>http://fhir.org/guides/onc/bhp/CodeSystem/bh-funding-type-codes</code>
+    </td>
+    <td>
+      <i>Version:</i> 0.2.0
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <i>ResourceType:</i> <p>CodeSystem</p>
+
+    </td>
+    <td>
+      <i>Computable Name:</i> <p>BehavioralHealthProgramFundingTypeCodes</p>
+
+    </td>
+  </tr>
+</tbody></table>
+</p>
+<p><p>This CodeSystem defines coded concepts pertaining to a Behavioral Health program/grant.</p>
+</p>
+<p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#a9f6775a-a671-485d-9bee-749bad71d69c" aria-controls="a9f6775a-a671-485d-9bee-749bad71d69c" role="tab" data-toggle="tab">Rendered view</a>
+</li><li role="presentation" class="">
+    <a href="#c18e32fe-6b10-452f-8915-766f37a27796" aria-controls="c18e32fe-6b10-452f-8915-766f37a27796" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#2249aa5e-a0f3-487d-8307-d79c41ed71cf" aria-controls="2249aa5e-a0f3-487d-8307-d79c41ed71cf" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#a5d37315-2b60-42bd-b89f-d788360a46d5" aria-controls="a5d37315-2b60-42bd-b89f-d788360a46d5" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#a021373f-9010-4c30-9c2a-a869e9ba2407" aria-controls="a021373f-9010-4c30-9c2a-a869e9ba2407" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="a9f6775a-a671-485d-9bee-749bad71d69c">
+    <div class="rendered-resource" xmlns="http://www.w3.org/1999/xhtml"><p><h3>Concepts</h3></p><p>This code system <code>http://fhir.org/guides/onc/bhp/CodeSystem/bh-funding-type-codes</code> defines the following codes:</p><table class="regular"><colgroup><col class="w-auto" /><col /><col /></colgroup><thead><tr><th>Code<th>Display<th>Definition</th></th></th></tr></thead><tbody><tr><td class="nowrap">discretionary<a name="bh-funding-type-codes-discretionary" /><td>Discretionary Funding<td>Discretionary Funding</td></td></td></tr><tr><td class="nowrap">grant-funding-type<a name="bh-funding-type-codes-grant-funding-type" /><td>Grant Funding Type<td>Grant Funding Type</td></td></td></tr><tr><td class="nowrap">funding-program-info<a name="bh-funding-type-codes-funding-program-info" /><td>Program Funding Information<td>Program Funding Information</td></td></td></tr></tbody></table></div>
+</div><div role="tabpanel" class="tab-pane " id="c18e32fe-6b10-452f-8915-766f37a27796">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.resourceType" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">resourceType</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">CodeSystem</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.id" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">bh-funding-type-codes</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.url" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">url</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://fhir.org/guides/onc/bhp/CodeSystem/bh-funding-type-codes</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.name" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">name</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">BehavioralHealthProgramFundingTypeCodes</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.title" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">title</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Behavioral Health Program Funding Type Codes</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.status" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">status</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">draft</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.experimental" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">experimental</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">true</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.description" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">description</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">This CodeSystem defines coded concepts pertaining to a Behavioral Health program/grant.</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.caseSensitive" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">caseSensitive</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">true</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.content" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">content</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">complete</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.count" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">count</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">3</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">concept</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.code" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">discretionary</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.display" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Discretionary Funding</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.definition" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">definition</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Discretionary Funding</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.code" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">grant-funding-type</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.display" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Grant Funding Type</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.definition" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">definition</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Grant Funding Type</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.code" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">funding-program-info</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.display" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Program Funding Information</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.definition" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">definition</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Program Funding Information</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="2249aa5e-a0f3-487d-8307-d79c41ed71cf">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">CodeSystem</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.id" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">bh-funding-type-codes</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.url" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">url</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://fhir.org/guides/onc/bhp/CodeSystem/bh-funding-type-codes</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.name" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">name</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">BehavioralHealthProgramFundingTypeCodes</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.title" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">title</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Behavioral Health Program Funding Type Codes</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.status" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">draft</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.experimental" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">experimental</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">true</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.description" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">description</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">This CodeSystem defines coded concepts pertaining to a Behavioral Health program/grant.</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.caseSensitive" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">caseSensitive</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">true</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.content" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">content</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">complete</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.count" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">count</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">3</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">concept</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.code" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">discretionary</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.display" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Discretionary Funding</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.definition" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">definition</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Discretionary Funding</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">concept</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">concept</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.code" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">grant-funding-type</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.display" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Grant Funding Type</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.definition" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">definition</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Grant Funding Type</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">concept</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">concept</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.code" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">funding-program-info</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.display" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Program Funding Information</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.r5.core@5.0.0&filepath=package/StructureDefinition-CodeSystem.json&tab=details#CodeSystem.concept.definition" title="CodeSystem
+hl7.fhir.r5.core 5.0.0
+StructureDefinition-CodeSystem.json" target="_blank">definition</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Program Funding Information</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">concept</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">CodeSystem</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="a5d37315-2b60-42bd-b89f-d788360a46d5">
+    <div class="stu3-treetable" id="913ba6bcacb44815bfc657fbe958d1f5" data-level="2"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="8eefeb8050bd453c974abac7a24cf526"><td class="instance"><span class="baseIcon primitive"></span><b>CodeSystem</b></td></tr><tr class="collapsed" data-id="c9a6fc1504234389979ab132ac53b4ef" data-parentId="8eefeb8050bd453c974abac7a24cf526"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>bh-funding-type-codes</span></td></tr><tr class="collapsed" data-id="d6954fb2f8e848a588e53c0ee55e5ec6" data-parentId="8eefeb8050bd453c974abac7a24cf526"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>http://fhir.org/guides/onc/bhp/CodeSystem/bh-funding-type-codes</span></td></tr><tr class="collapsed" data-id="6c67c86805dd4b868faf862088cf658b" data-parentId="8eefeb8050bd453c974abac7a24cf526"><td class="instance"><span class="baseIcon primitive"></span><b>name : </b><span>BehavioralHealthProgramFundingTypeCodes</span></td></tr><tr class="collapsed" data-id="1643adc9d25b4e8fb2b908ad7c63ac50" data-parentId="8eefeb8050bd453c974abac7a24cf526"><td class="instance"><span class="baseIcon primitive"></span><b>title : </b><span>Behavioral Health Program Funding Type Codes</span></td></tr><tr class="collapsed" data-id="fcb5a3bb63f24f41b67b605079e66d7b" data-parentId="8eefeb8050bd453c974abac7a24cf526"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>draft</span></td></tr><tr class="collapsed" data-id="291e626e2d9d4a88ba28bd667ae495fb" data-parentId="8eefeb8050bd453c974abac7a24cf526"><td class="instance"><span class="baseIcon primitive"></span><b>experimental : </b><span>True</span></td></tr><tr class="collapsed" data-id="dd4b5a6bbc9f4fbf9f82ede93acff84c" data-parentId="8eefeb8050bd453c974abac7a24cf526"><td class="instance"><span class="baseIcon primitive"></span><b>description : </b><span>This CodeSystem defines coded concepts pertaining to a Behavioral Health program/grant.</span></td></tr><tr class="collapsed" data-id="bbd8ef37a8bb4b558549e4e34ed8e96f" data-parentId="8eefeb8050bd453c974abac7a24cf526"><td class="instance"><span class="baseIcon primitive"></span><b>caseSensitive : </b><span>True</span></td></tr><tr class="collapsed" data-id="b8fa7afe2b3d4832b65483644914cbf9" data-parentId="8eefeb8050bd453c974abac7a24cf526"><td class="instance"><span class="baseIcon primitive"></span><b>content : </b><span>complete</span></td></tr><tr class="collapsed" data-id="1c37f91298a0428d85217dbaf16f0f5d" data-parentId="8eefeb8050bd453c974abac7a24cf526"><td class="instance"><span class="baseIcon primitive"></span><b>count : </b><span>3</span></td></tr><tr class="collapsed" data-id="e6d9c5d38323482d92f86118aa5492cf" data-parentId="8eefeb8050bd453c974abac7a24cf526"><td class="instance"><span class="baseIcon primitive"></span><b>concept</b></td></tr><tr class="collapsed" data-id="836c1e70d7fd48418822edae0d6ee401" data-parentId="e6d9c5d38323482d92f86118aa5492cf"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>discretionary</span></td></tr><tr class="collapsed" data-id="5854ab2bb20e403ab27057869f155814" data-parentId="e6d9c5d38323482d92f86118aa5492cf"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Discretionary Funding</span></td></tr><tr class="collapsed" data-id="5f8ac88c58684ba8b7dcc2dedc14140b" data-parentId="e6d9c5d38323482d92f86118aa5492cf"><td class="instance"><span class="baseIcon primitive"></span><b>definition : </b><span>Discretionary Funding</span></td></tr><tr class="collapsed" data-id="a4647e28e85849c3b879a4c807b97972" data-parentId="8eefeb8050bd453c974abac7a24cf526"><td class="instance"><span class="baseIcon primitive"></span><b>concept</b></td></tr><tr class="collapsed" data-id="102bec5df7334790991c7ba2304b91e9" data-parentId="a4647e28e85849c3b879a4c807b97972"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>grant-funding-type</span></td></tr><tr class="collapsed" data-id="5432938bf4e74f57908d24ec1f314307" data-parentId="a4647e28e85849c3b879a4c807b97972"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Grant Funding Type</span></td></tr><tr class="collapsed" data-id="b1094f3f93884e90adb61b925924f1a9" data-parentId="a4647e28e85849c3b879a4c807b97972"><td class="instance"><span class="baseIcon primitive"></span><b>definition : </b><span>Grant Funding Type</span></td></tr><tr class="collapsed" data-id="fdeab70cfc97415cb760366afcd91682" data-parentId="8eefeb8050bd453c974abac7a24cf526"><td class="instance"><span class="baseIcon primitive"></span><b>concept</b></td></tr><tr class="collapsed" data-id="08fc0b2fadcd4d4488ac0c868d1c2e2f" data-parentId="fdeab70cfc97415cb760366afcd91682"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>funding-program-info</span></td></tr><tr class="collapsed" data-id="1aa58f10ba094ed1baf1b97ec54684d1" data-parentId="fdeab70cfc97415cb760366afcd91682"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Program Funding Information</span></td></tr><tr class="collapsed" data-id="9df9e91f80fb4640b08c2cd4dc56548e" data-parentId="fdeab70cfc97415cb760366afcd91682"><td class="instance"><span class="baseIcon primitive"></span><b>definition : </b><span>Program Funding Information</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable913ba6bcacb44815bfc657fbe958d1f5 = new InstanceTree();
+resourceTreeTable913ba6bcacb44815bfc657fbe958d1f5.init("913ba6bcacb44815bfc657fbe958d1f5");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="a021373f-9010-4c30-9c2a-a869e9ba2407">
+    <div class="path"><table><tbody><tr><td>CodeSystem.<span class="field">id[0]</span></td><td>bh-funding-type-codes</td></tr><tr><td>CodeSystem.<span class="field">url[0]</span></td><td>http://fhir.org/guides/onc/bhp/CodeSystem/bh-funding-type-codes</td></tr><tr><td>CodeSystem.<span class="field">name[0]</span></td><td>BehavioralHealthProgramFundingTypeCodes</td></tr><tr><td>CodeSystem.<span class="field">title[0]</span></td><td>Behavioral Health Program Funding Type Codes</td></tr><tr><td>CodeSystem.<span class="field">status[0]</span></td><td>draft</td></tr><tr><td>CodeSystem.<span class="field">experimental[0]</span></td><td>True</td></tr><tr><td>CodeSystem.<span class="field">description[0]</span></td><td>This CodeSystem defines coded concepts pertaining to a Behavioral Health program/grant.</td></tr><tr><td>CodeSystem.<span class="field">caseSensitive[0]</span></td><td>True</td></tr><tr><td>CodeSystem.<span class="field">content[0]</span></td><td>complete</td></tr><tr><td>CodeSystem.<span class="field">count[0]</span></td><td>3</td></tr><tr><td>CodeSystem.concept[0].<span class="field">code[0]</span></td><td>discretionary</td></tr><tr><td>CodeSystem.concept[0].<span class="field">display[0]</span></td><td>Discretionary Funding</td></tr><tr><td>CodeSystem.concept[0].<span class="field">definition[0]</span></td><td>Discretionary Funding</td></tr><tr><td>CodeSystem.concept[1].<span class="field">code[0]</span></td><td>grant-funding-type</td></tr><tr><td>CodeSystem.concept[1].<span class="field">display[0]</span></td><td>Grant Funding Type</td></tr><tr><td>CodeSystem.concept[1].<span class="field">definition[0]</span></td><td>Grant Funding Type</td></tr><tr><td>CodeSystem.concept[2].<span class="field">code[0]</span></td><td>funding-program-info</td></tr><tr><td>CodeSystem.concept[2].<span class="field">display[0]</span></td><td>Program Funding Information</td></tr><tr><td>CodeSystem.concept[2].<span class="field">definition[0]</span></td><td>Program Funding Information</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

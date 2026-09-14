@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | example-ekg-impression-report-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-ekg-impression-report-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+<h2 id="example-diagnosticreport-ekg-impression-report-example">Example DiagnosticReport: ekg-impression-report-example</h2>
+<p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#37e0969a-6493-45f9-9709-aa605a831094" aria-controls="37e0969a-6493-45f9-9709-aa605a831094" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#635c4e5e-b2b0-4d42-bc8b-6fbdc6c86220" aria-controls="635c4e5e-b2b0-4d42-bc8b-6fbdc6c86220" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#b06daa56-a345-4d3e-91d3-b9f5cd73ef11" aria-controls="b06daa56-a345-4d3e-91d3-b9f5cd73ef11" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#9be16a82-59b9-44b1-94f2-e26e2c7e9c8c" aria-controls="9be16a82-59b9-44b1-94f2-e26e2c7e9c8c" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="37e0969a-6493-45f9-9709-aa605a831094">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.resourceType" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">resourceType</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">DiagnosticReport</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.id" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">ekg-impression-report-example-1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.meta" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">meta</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.meta.profile" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">profile</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note|6.1.0</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.status" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">status</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">final</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.category" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">category</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.category.coding" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.category.coding.system" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://loinc.org</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.category.coding.code" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">LP29708-2</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.category.coding.display" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Cardiology</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.category.text" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Cardiology</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.code" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.code.coding" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.code.coding.system" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://loinc.org</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.code.coding.code" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">8601-7</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.code.coding.display" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">EKG Impression</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.code.text" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">EKG Impression</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.subject" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">subject</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.subject.reference" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.subject.display" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">James Wolff</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.effectiveDateTime" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">effectiveDateTime</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2024-01-02T03:30:46+00:00</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.result" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">result</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.result.reference" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Observation/ekg-observation-example-1</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="635c4e5e-b2b0-4d42-bc8b-6fbdc6c86220">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">DiagnosticReport</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.id" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">ekg-impression-report-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.meta" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.meta.profile" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note|6.1.0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.status" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">final</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.category" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.category.coding" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.category.coding.system" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://loinc.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.category.coding.code" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">LP29708-2</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.category.coding.display" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Cardiology</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.category.text" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Cardiology</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.code" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.code.coding" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.code.coding.system" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://loinc.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.code.coding.code" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">8601-7</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.code.coding.display" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">EKG Impression</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.code.text" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">EKG Impression</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.subject" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.subject.reference" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.subject.display" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">James Wolff</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.effective" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">effectiveDateTime</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2024-01-02T03:30:46+00:00</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.result" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">result</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-diagnosticreport-note.json&tab=details#DiagnosticReport.result.reference" title="US Core DiagnosticReport Profile for Report and Note Exchange
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-diagnosticreport-note.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Observation/ekg-observation-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">result</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">DiagnosticReport</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="b06daa56-a345-4d3e-91d3-b9f5cd73ef11">
+    <div class="stu3-treetable" id="c2d744c8fe924c7c82c7aade0f375b38" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="6d5a32abe86d40e0a57dfb27e53de77b"><td class="instance"><span class="baseIcon primitive"></span><b>DiagnosticReport</b></td></tr><tr class="collapsed" data-id="060e222aedec4a85bdb199506a210112" data-parentId="6d5a32abe86d40e0a57dfb27e53de77b"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>ekg-impression-report-example-1</span></td></tr><tr class="collapsed" data-id="d6f4c98dfbea479f9c429913ea24e99b" data-parentId="6d5a32abe86d40e0a57dfb27e53de77b"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="0e551bbbbb514d26a278aad554a220db" data-parentId="d6f4c98dfbea479f9c429913ea24e99b"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note|6.1.0</span></td></tr><tr class="collapsed" data-id="5adfd4b4a39944b2bb6156db009a3559" data-parentId="6d5a32abe86d40e0a57dfb27e53de77b"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>final</span></td></tr><tr class="collapsed" data-id="a7c6dce5cbca457ea077f56351b4d679" data-parentId="6d5a32abe86d40e0a57dfb27e53de77b"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="f862b72606494500badc56b17c2daa5d" data-parentId="a7c6dce5cbca457ea077f56351b4d679"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="07716aa4638042de8f27c8c34d6658ed" data-parentId="f862b72606494500badc56b17c2daa5d"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="571a80f8984f4679891680eed49e3ffb" data-parentId="f862b72606494500badc56b17c2daa5d"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>LP29708-2</span></td></tr><tr class="collapsed" data-id="8435f01db60140b69fa160f3308b4f00" data-parentId="f862b72606494500badc56b17c2daa5d"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Cardiology</span></td></tr><tr class="collapsed" data-id="94a6cbe777db4612b53706badb4b060f" data-parentId="a7c6dce5cbca457ea077f56351b4d679"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Cardiology</span></td></tr><tr class="collapsed" data-id="5a088d03739a4cd1ba55545b3b09b213" data-parentId="6d5a32abe86d40e0a57dfb27e53de77b"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="b1575a6eb58140a0bb02dfffcdbc9961" data-parentId="5a088d03739a4cd1ba55545b3b09b213"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="b9f9da3fac244ed6bc6b1abc75ab269e" data-parentId="b1575a6eb58140a0bb02dfffcdbc9961"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="21888e23630541dfba78975f6106090c" data-parentId="b1575a6eb58140a0bb02dfffcdbc9961"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>8601-7</span></td></tr><tr class="collapsed" data-id="d4b32819c4474d2d896c3f88008f1d68" data-parentId="b1575a6eb58140a0bb02dfffcdbc9961"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>EKG Impression</span></td></tr><tr class="collapsed" data-id="d5c3a500fd714739b90a5c14e2f48047" data-parentId="5a088d03739a4cd1ba55545b3b09b213"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>EKG Impression</span></td></tr><tr class="collapsed" data-id="dd98d2f7fce3452b9bb495e1f1dbe097" data-parentId="6d5a32abe86d40e0a57dfb27e53de77b"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="1e35f925c4b84c2ab579599d61f5974b" data-parentId="dd98d2f7fce3452b9bb495e1f1dbe097"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="70271e273cae49798d564b4643786958" data-parentId="dd98d2f7fce3452b9bb495e1f1dbe097"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="2b12aef67a73422ba0be03b8d5613d5f" data-parentId="6d5a32abe86d40e0a57dfb27e53de77b"><td class="instance"><span class="baseIcon primitive"></span><b>effective : </b><span>2024-01-02T03:30:46+00:00</span></td></tr><tr class="collapsed" data-id="469c5fe5596f44a5b1089647f1a6b85c" data-parentId="6d5a32abe86d40e0a57dfb27e53de77b"><td class="instance"><span class="baseIcon primitive"></span><b>result</b></td></tr><tr class="collapsed" data-id="78c149ef894b483b8810d8abc867ab59" data-parentId="469c5fe5596f44a5b1089647f1a6b85c"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Observation/ekg-observation-example-1</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTablec2d744c8fe924c7c82c7aade0f375b38 = new InstanceTree();
+resourceTreeTablec2d744c8fe924c7c82c7aade0f375b38.init("c2d744c8fe924c7c82c7aade0f375b38");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="9be16a82-59b9-44b1-94f2-e26e2c7e9c8c">
+    <div class="path"><table><tbody><tr><td>DiagnosticReport.<span class="field">id[0]</span></td><td>ekg-impression-report-example-1</td></tr><tr><td>DiagnosticReport.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note|6.1.0</td></tr><tr><td>DiagnosticReport.<span class="field">status[0]</span></td><td>final</td></tr><tr><td>DiagnosticReport.category[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>DiagnosticReport.category[0].coding[0].<span class="field">code[0]</span></td><td>LP29708-2</td></tr><tr><td>DiagnosticReport.category[0].coding[0].<span class="field">display[0]</span></td><td>Cardiology</td></tr><tr><td>DiagnosticReport.category[0].<span class="field">text[0]</span></td><td>Cardiology</td></tr><tr><td>DiagnosticReport.code[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>DiagnosticReport.code[0].coding[0].<span class="field">code[0]</span></td><td>8601-7</td></tr><tr><td>DiagnosticReport.code[0].coding[0].<span class="field">display[0]</span></td><td>EKG Impression</td></tr><tr><td>DiagnosticReport.code[0].<span class="field">text[0]</span></td><td>EKG Impression</td></tr><tr><td>DiagnosticReport.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>DiagnosticReport.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>DiagnosticReport.<span class="field">effective[0]</span></td><td>2024-01-02T03:30:46+00:00</td></tr><tr><td>DiagnosticReport.result[0].<span class="field">reference[0]</span></td><td>Observation/ekg-observation-example-1</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "ekg-impression-report-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note|6.1.0"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "LP29708-2",
+          "system": "http://loinc.org",
+          "display": "Cardiology"
+        }
+      ],
+      "text": "Cardiology"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "8601-7",
+        "system": "http://loinc.org",
+        "display": "EKG Impression"
+      }
+    ],
+    "text": "EKG Impression"
+  },
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "effectiveDateTime": "2024-01-02T03:30:46+00:00",
+  "result": [
+    {
+      "reference": "Observation/ekg-observation-example-1"
+    }
+  ]
+}

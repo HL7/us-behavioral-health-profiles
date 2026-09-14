@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>project:bh-ig-test | example-ed-encounter-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-144.png" sizes="144x144" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-114.png" sizes="114x114" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-72.png" sizes="72x72" />
+    <link rel="fhir-logo" href="static/styles/next-level-custom-styling/images/icon-fhir-57.png" />
+    <link rel="shortcut icon" href="static/styles/next-level-custom-styling/images/favicon.png" />
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet" />
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet" />
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/next-level-custom-styling/style.css?v=1dd442bd3485f80" rel="stylesheet" />
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/next-level-custom-styling/images/ONC_Primary-Vertical_Full_Color@4x.png" />
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/next-level-custom-styling/images/fhir-logo-www.png" /> </a>
+            </div>
+
+            <!--<div id="hl7-search">
+              <a id="hl7-search-lnk" no-external="true" href="todo:$linktosearch"><img alt="search fhir" src="static/styles/next-level-custom-styling/images/search.png"/></a>
+            </div>-->
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br />
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/next-level-custom-styling/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI&#x2B; BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            &#x2B;BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            &#x2B;BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-ed-encounter-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <p id="publish-box">US Behavioral Health Profiles Implementation Guide, published by ONC. This guide is not an authorized publication; it is the continuous build for version 0.2.0 built by Simplifier.net. See the <a href="https://fhir.org/guides/onc/bhp/history.html">version history</a> for all published versions.</p>
+                        
+
+<h2 id="example-encounter-ed-encounter-example">Example Encounter: ed-encounter-example</h2>
+<p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#c68ffcec-81be-44b5-933a-8ae64a7eacf1" aria-controls="c68ffcec-81be-44b5-933a-8ae64a7eacf1" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#bd93cc76-bf36-47f2-9cd2-41e85fbe2a10" aria-controls="bd93cc76-bf36-47f2-9cd2-41e85fbe2a10" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#176611f9-2dae-44c8-a435-c946f5273ea3" aria-controls="176611f9-2dae-44c8-a435-c946f5273ea3" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#de55dfa7-e31c-40a4-b9a9-5989c9cebb82" aria-controls="de55dfa7-e31c-40a4-b9a9-5989c9cebb82" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="c68ffcec-81be-44b5-933a-8ae64a7eacf1">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.resourceType" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">resourceType</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Encounter</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.id" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">id</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">ed-encounter-example-1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.meta" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">meta</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.meta.profile" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">profile</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.identifier" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">identifier</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.identifier.use" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">use</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">usual</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.identifier.system" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">urn:oid:2.16.840.1.113883.19.5.1.698.8</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.identifier.value" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">value</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">10005104251</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.status" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">status</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">finished</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.class" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">class</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.class.system" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/v3-ActCode</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.class.code" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">EMER</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.class.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">emergency</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.type" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">type</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.type.coding" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.type.coding.system" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://snomed.info/sct</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.type.coding.code" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">50849002</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.type.coding.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Emergency room admission (procedure)</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.type.text" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Emergency room</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.subject" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">subject</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.subject.reference" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.subject.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">James Wolff</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.period" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">period</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.period.start" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">start</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2024-02-01T21:02:00+00:00</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.period.end" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">end</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2024-02-02T03:00:00+00:00</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">reasonCode</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.system" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://hl7.org/fhir/sid/icd-10-cm</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.code" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">R07.9</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Chest pain, unspecified</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.text" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Angina</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.system" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://hl7.org/fhir/sid/icd-10-cm</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.code" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">R61</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Generalized hyperhidrosis</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.text" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Sweating</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.system" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://hl7.org/fhir/sid/icd-10-cm</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.code" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">R00.2</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Palpitations</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.text" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">text</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Palpitations</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">diagnosis</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">condition</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition.reference" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Condition/panic-attack-condition-example-1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Panic Attack</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.rank" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">rank</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">1</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">condition</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition.reference" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Condition/chest-pain-condition-example-1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Chest Pain</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.rank" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">rank</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">2</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">condition</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition.reference" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Condition/diabetes-condition-example-1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Diabetes (II)</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.rank" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">rank</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">3</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">location</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.location" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">location</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.location.reference" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Location/ed-location-example-1</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.location.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Emergency Dept.</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.physicalType" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">physicalType</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.physicalType.coding" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">coding</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.physicalType.coding.system" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/location-physical-type</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.physicalType.coding.code" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">code</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">wa</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.physicalType.coding.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Ward</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.period" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">period</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.period.start" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">start</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2024-02-01T21:02:00+00:00</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.period.end" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">end</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2024-02-02T03:02:00+00:00</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.partOf" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">partOf</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.partOf.reference" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Encounter/discharge-encounter-example-3</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.partOf.identifier" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">identifier</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.partOf.identifier.use" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">use</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">usual</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.partOf.identifier.system" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">system</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">urn:oid:2.16.840.1.113883.19.5.1.698.8</span><span class="string">&quot;</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">&quot;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.partOf.identifier.value" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">value</a></span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">40005104253</span><span class="string">&quot;</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="bd93cc76-bf36-47f2-9cd2-41e85fbe2a10">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">Encounter</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir</span><span class="symbol">&quot;</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.id" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">ed-encounter-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.meta" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.meta.profile" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.identifier" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">identifier</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.identifier.use" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">use</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">usual</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.identifier.system" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">urn:oid:2.16.840.1.113883.19.5.1.698.8</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.identifier.value" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">10005104251</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">identifier</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.status" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">finished</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.class" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">class</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.class.system" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/v3-ActCode</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.class.code" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">EMER</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.class.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">emergency</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">class</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.type" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">type</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.type.coding" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.type.coding.system" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://snomed.info/sct</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.type.coding.code" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">50849002</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.type.coding.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Emergency room admission (procedure)</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.type.text" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Emergency room</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">type</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.subject" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.subject.reference" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Patient/bh-patient-example</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.subject.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">James Wolff</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.period" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">period</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.period.start" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">start</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2024-02-01T21:02:00+00:00</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.period.end" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">end</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2024-02-02T03:00:00+00:00</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">period</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">reasonCode</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.system" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/sid/icd-10-cm</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.code" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">R07.9</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Chest pain, unspecified</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.text" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Angina</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">reasonCode</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">reasonCode</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.system" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/sid/icd-10-cm</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.code" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">R61</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Generalized hyperhidrosis</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.text" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Sweating</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">reasonCode</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">reasonCode</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.system" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir/sid/icd-10-cm</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.code" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">R00.2</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.coding.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Palpitations</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.reasonCode.text" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Palpitations</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">reasonCode</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">diagnosis</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">condition</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition.reference" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Condition/panic-attack-condition-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Panic Attack</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">condition</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.rank" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">rank</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">diagnosis</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">diagnosis</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">condition</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition.reference" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Condition/chest-pain-condition-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Chest Pain</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">condition</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.rank" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">rank</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">diagnosis</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">diagnosis</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">condition</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition.reference" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Condition/diabetes-condition-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.condition.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Diabetes (II)</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">condition</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.diagnosis.rank" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">rank</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">3</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">diagnosis</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">location</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.location" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">location</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.location.reference" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Location/ed-location-example-1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.location.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Emergency Dept.</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">location</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.physicalType" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">physicalType</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.physicalType.coding" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.physicalType.coding.system" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/location-physical-type</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.physicalType.coding.code" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">wa</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.physicalType.coding.display" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Ward</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">physicalType</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.period" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">period</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.period.start" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">start</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2024-02-01T21:02:00+00:00</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.location.period.end" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">end</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2024-02-02T03:02:00+00:00</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">period</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">location</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.partOf" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">partOf</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.partOf.reference" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Encounter/discharge-encounter-example-3</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.partOf.identifier" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">identifier</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.partOf.identifier.use" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">use</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">usual</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.partOf.identifier.system" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">urn:oid:2.16.840.1.113883.19.5.1.698.8</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://staging.simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&filepath=package/StructureDefinition-us-core-encounter.json&tab=details#Encounter.partOf.identifier.value" title="US Core Encounter Profile
+hl7.fhir.us.core 6.1.0
+StructureDefinition-us-core-encounter.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">40005104253</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">identifier</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">partOf</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Encounter</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="176611f9-2dae-44c8-a435-c946f5273ea3">
+    <div class="stu3-treetable" id="8bd00df49803404db9eddc3a99c49513" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="219ad4ced34142a79559ae8b93d2ef40"><td class="instance"><span class="baseIcon primitive"></span><b>Encounter</b></td></tr><tr class="collapsed" data-id="af0341984b694e7aa981a2847c196d9d" data-parentId="219ad4ced34142a79559ae8b93d2ef40"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>ed-encounter-example-1</span></td></tr><tr class="collapsed" data-id="aeadf83105844d09bb3ba3d4f013b470" data-parentId="219ad4ced34142a79559ae8b93d2ef40"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="00573756b9bc42169bfeae7f0e81c28e" data-parentId="aeadf83105844d09bb3ba3d4f013b470"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0</span></td></tr><tr class="collapsed" data-id="c735c14049b6407b8dba5bf5ca7518f9" data-parentId="219ad4ced34142a79559ae8b93d2ef40"><td class="instance"><span class="baseIcon primitive"></span><b>identifier</b></td></tr><tr class="collapsed" data-id="f4fb573d74b04e788a1c6710ffefd07a" data-parentId="c735c14049b6407b8dba5bf5ca7518f9"><td class="instance"><span class="baseIcon primitive"></span><b>use : </b><span>usual</span></td></tr><tr class="collapsed" data-id="9ad5b62c79fd48cabf68143526887bd9" data-parentId="c735c14049b6407b8dba5bf5ca7518f9"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>urn:oid:2.16.840.1.113883.19.5.1.698.8</span></td></tr><tr class="collapsed" data-id="f6ae2a8592574465ad99227e17cd8cb2" data-parentId="c735c14049b6407b8dba5bf5ca7518f9"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>10005104251</span></td></tr><tr class="collapsed" data-id="dd6a1bdc8ec8483fb8b06a4412c57fcc" data-parentId="219ad4ced34142a79559ae8b93d2ef40"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>finished</span></td></tr><tr class="collapsed" data-id="8b60c9ff76154ae4b5ec169a28da3d81" data-parentId="219ad4ced34142a79559ae8b93d2ef40"><td class="instance"><span class="baseIcon primitive"></span><b>class</b></td></tr><tr class="collapsed" data-id="0ec863c2ba954174a46d6e1edaa27b72" data-parentId="8b60c9ff76154ae4b5ec169a28da3d81"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/v3-ActCode</span></td></tr><tr class="collapsed" data-id="41532855012c4c0eafccd722c94c2784" data-parentId="8b60c9ff76154ae4b5ec169a28da3d81"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>EMER</span></td></tr><tr class="collapsed" data-id="f04674ef106a414184258ec070c465cb" data-parentId="8b60c9ff76154ae4b5ec169a28da3d81"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>emergency</span></td></tr><tr class="collapsed" data-id="ee1f2bfe04354aa5864302f99fba5300" data-parentId="219ad4ced34142a79559ae8b93d2ef40"><td class="instance"><span class="baseIcon primitive"></span><b>type</b></td></tr><tr class="collapsed" data-id="1e5b8ffd38bc48fc987dafc3b4b0b9b1" data-parentId="ee1f2bfe04354aa5864302f99fba5300"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="c4e3e043434c4c9c8676182f8f79479b" data-parentId="1e5b8ffd38bc48fc987dafc3b4b0b9b1"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://snomed.info/sct</span></td></tr><tr class="collapsed" data-id="f75a272d92eb441f86a58c2f1ccefdc4" data-parentId="1e5b8ffd38bc48fc987dafc3b4b0b9b1"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>50849002</span></td></tr><tr class="collapsed" data-id="a005100cd27440818b1ee47bdbb748a1" data-parentId="1e5b8ffd38bc48fc987dafc3b4b0b9b1"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Emergency room admission (procedure)</span></td></tr><tr class="collapsed" data-id="44fee24dc27040328b5318e2816a5783" data-parentId="ee1f2bfe04354aa5864302f99fba5300"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Emergency room</span></td></tr><tr class="collapsed" data-id="81c4a5ef0a0545188133b24ce781851f" data-parentId="219ad4ced34142a79559ae8b93d2ef40"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="212440285c5e423289aa230556a57f36" data-parentId="81c4a5ef0a0545188133b24ce781851f"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="c1649f7ad49a49f7adb3dabbaa9efa3c" data-parentId="81c4a5ef0a0545188133b24ce781851f"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="e0167a67eba34205a026ecd725260a72" data-parentId="219ad4ced34142a79559ae8b93d2ef40"><td class="instance"><span class="baseIcon primitive"></span><b>period</b></td></tr><tr class="collapsed" data-id="49c5b9ee2ac349af8f7fef224266d911" data-parentId="e0167a67eba34205a026ecd725260a72"><td class="instance"><span class="baseIcon primitive"></span><b>start : </b><span>2024-02-01T21:02:00+00:00</span></td></tr><tr class="collapsed" data-id="614a60484c5d492599c42894bbb488a7" data-parentId="e0167a67eba34205a026ecd725260a72"><td class="instance"><span class="baseIcon primitive"></span><b>end : </b><span>2024-02-02T03:00:00+00:00</span></td></tr><tr class="collapsed" data-id="9504cc1f29be481c8d5069c3c6d537d3" data-parentId="219ad4ced34142a79559ae8b93d2ef40"><td class="instance"><span class="baseIcon primitive"></span><b>reasonCode</b></td></tr><tr class="collapsed" data-id="61d34d1b21f64ac4a47f64a2a813dc50" data-parentId="9504cc1f29be481c8d5069c3c6d537d3"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="0e4efdf53c214fcf8d40491024a93b53" data-parentId="61d34d1b21f64ac4a47f64a2a813dc50"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://hl7.org/fhir/sid/icd-10-cm</span></td></tr><tr class="collapsed" data-id="e10ebe6aabbb47a9bf35fc849aba5343" data-parentId="61d34d1b21f64ac4a47f64a2a813dc50"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>R07.9</span></td></tr><tr class="collapsed" data-id="903b6cfe9a4e488b90f0a9bb0e302100" data-parentId="61d34d1b21f64ac4a47f64a2a813dc50"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Chest pain, unspecified</span></td></tr><tr class="collapsed" data-id="d10b7a4d868446799ac0c744aa862d47" data-parentId="9504cc1f29be481c8d5069c3c6d537d3"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Angina</span></td></tr><tr class="collapsed" data-id="881537c9e91b47749ff3600ef8081a2a" data-parentId="219ad4ced34142a79559ae8b93d2ef40"><td class="instance"><span class="baseIcon primitive"></span><b>reasonCode</b></td></tr><tr class="collapsed" data-id="037aa547ee764143954bd69cd82a468f" data-parentId="881537c9e91b47749ff3600ef8081a2a"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="eb69cbf663a1473081bd6bf7b4b81cbb" data-parentId="037aa547ee764143954bd69cd82a468f"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://hl7.org/fhir/sid/icd-10-cm</span></td></tr><tr class="collapsed" data-id="71dc3f7edf3a4f88a1b3ddbf84f3acda" data-parentId="037aa547ee764143954bd69cd82a468f"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>R61</span></td></tr><tr class="collapsed" data-id="58f99b5c57454ea6995579e0a04ddc7d" data-parentId="037aa547ee764143954bd69cd82a468f"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Generalized hyperhidrosis</span></td></tr><tr class="collapsed" data-id="3642af267544460dadc4dbe512fd059f" data-parentId="881537c9e91b47749ff3600ef8081a2a"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Sweating</span></td></tr><tr class="collapsed" data-id="88b8bcaf7c07407190c657618ecf570c" data-parentId="219ad4ced34142a79559ae8b93d2ef40"><td class="instance"><span class="baseIcon primitive"></span><b>reasonCode</b></td></tr><tr class="collapsed" data-id="10549ce2b3504f23a57da6b10243615c" data-parentId="88b8bcaf7c07407190c657618ecf570c"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="c357e83deb9a443dbc7da875a884a393" data-parentId="10549ce2b3504f23a57da6b10243615c"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://hl7.org/fhir/sid/icd-10-cm</span></td></tr><tr class="collapsed" data-id="67896cc8b2344e8d9cb7a5c75be600f5" data-parentId="10549ce2b3504f23a57da6b10243615c"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>R00.2</span></td></tr><tr class="collapsed" data-id="f6688e33c53249c98e4d75c3394f5743" data-parentId="10549ce2b3504f23a57da6b10243615c"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Palpitations</span></td></tr><tr class="collapsed" data-id="65694f63c27b4c7290bcca281aa6cfc6" data-parentId="88b8bcaf7c07407190c657618ecf570c"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Palpitations</span></td></tr><tr class="collapsed" data-id="9b9d8b40d34e4b50b9c71faa9e83a8fa" data-parentId="219ad4ced34142a79559ae8b93d2ef40"><td class="instance"><span class="baseIcon primitive"></span><b>diagnosis</b></td></tr><tr class="collapsed" data-id="c85b08bfeff3445eaff6981fecaaf1a9" data-parentId="9b9d8b40d34e4b50b9c71faa9e83a8fa"><td class="instance"><span class="baseIcon primitive"></span><b>condition</b></td></tr><tr class="collapsed" data-id="77362f6f688d420783aa011a4e8b1d10" data-parentId="c85b08bfeff3445eaff6981fecaaf1a9"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Condition/panic-attack-condition-example-1</span></td></tr><tr class="collapsed" data-id="c8ef1438a8b24810b5040b08df38d324" data-parentId="c85b08bfeff3445eaff6981fecaaf1a9"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Panic Attack</span></td></tr><tr class="collapsed" data-id="f8a807f13ed9424cba685bf9ab0caef5" data-parentId="9b9d8b40d34e4b50b9c71faa9e83a8fa"><td class="instance"><span class="baseIcon primitive"></span><b>rank : </b><span>1</span></td></tr><tr class="collapsed" data-id="1d618455bc0843e1acc35b307d34ce83" data-parentId="219ad4ced34142a79559ae8b93d2ef40"><td class="instance"><span class="baseIcon primitive"></span><b>diagnosis</b></td></tr><tr class="collapsed" data-id="369b29851bf34787875e8b7d7ca465d2" data-parentId="1d618455bc0843e1acc35b307d34ce83"><td class="instance"><span class="baseIcon primitive"></span><b>condition</b></td></tr><tr class="collapsed" data-id="ff88ff1f49574e8090b9b2960adde030" data-parentId="369b29851bf34787875e8b7d7ca465d2"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Condition/chest-pain-condition-example-1</span></td></tr><tr class="collapsed" data-id="5b4b813ebc434594b6043588a9b9d472" data-parentId="369b29851bf34787875e8b7d7ca465d2"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Chest Pain</span></td></tr><tr class="collapsed" data-id="dc3c3efd63fd4283839d23b07571f4b8" data-parentId="1d618455bc0843e1acc35b307d34ce83"><td class="instance"><span class="baseIcon primitive"></span><b>rank : </b><span>2</span></td></tr><tr class="collapsed" data-id="5ecf9bbef7364f29a9efbded97441541" data-parentId="219ad4ced34142a79559ae8b93d2ef40"><td class="instance"><span class="baseIcon primitive"></span><b>diagnosis</b></td></tr><tr class="collapsed" data-id="24dc5f13f2e24634b6cf101351ef2a4a" data-parentId="5ecf9bbef7364f29a9efbded97441541"><td class="instance"><span class="baseIcon primitive"></span><b>condition</b></td></tr><tr class="collapsed" data-id="d6f20f07c02742c6ba34ed91f93a50f9" data-parentId="24dc5f13f2e24634b6cf101351ef2a4a"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Condition/diabetes-condition-example-1</span></td></tr><tr class="collapsed" data-id="a8adaea347aa4dac901c5b82e574fd9f" data-parentId="24dc5f13f2e24634b6cf101351ef2a4a"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Diabetes (II)</span></td></tr><tr class="collapsed" data-id="dc61666203c74274936f5d88f259b4d4" data-parentId="5ecf9bbef7364f29a9efbded97441541"><td class="instance"><span class="baseIcon primitive"></span><b>rank : </b><span>3</span></td></tr><tr class="collapsed" data-id="d9e73871a3c3403ab1bd468452f9af32" data-parentId="219ad4ced34142a79559ae8b93d2ef40"><td class="instance"><span class="baseIcon primitive"></span><b>location</b></td></tr><tr class="collapsed" data-id="c744863949a8444ba511c80cf21b9a9a" data-parentId="d9e73871a3c3403ab1bd468452f9af32"><td class="instance"><span class="baseIcon primitive"></span><b>location</b></td></tr><tr class="collapsed" data-id="cec73593b2704426b506ac7ad6841412" data-parentId="c744863949a8444ba511c80cf21b9a9a"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Location/ed-location-example-1</span></td></tr><tr class="collapsed" data-id="8397f49a18164ef2a0d763d059b488ab" data-parentId="c744863949a8444ba511c80cf21b9a9a"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Emergency Dept.</span></td></tr><tr class="collapsed" data-id="a6b6599bb6b74e5aa5d436a7feb5d525" data-parentId="d9e73871a3c3403ab1bd468452f9af32"><td class="instance"><span class="baseIcon primitive"></span><b>physicalType</b></td></tr><tr class="collapsed" data-id="d9e0ab58263344c0b760078d7632c8ba" data-parentId="a6b6599bb6b74e5aa5d436a7feb5d525"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="f89476b2e9e9457aacc8fbd2a39a0baf" data-parentId="d9e0ab58263344c0b760078d7632c8ba"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/location-physical-type</span></td></tr><tr class="collapsed" data-id="444e27568a5343b09c52f3c816ce9abb" data-parentId="d9e0ab58263344c0b760078d7632c8ba"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>wa</span></td></tr><tr class="collapsed" data-id="c4c524b6a43747f0a5588e53c8b27f8d" data-parentId="d9e0ab58263344c0b760078d7632c8ba"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Ward</span></td></tr><tr class="collapsed" data-id="34fd20d35558403a82b31bf812b464bd" data-parentId="d9e73871a3c3403ab1bd468452f9af32"><td class="instance"><span class="baseIcon primitive"></span><b>period</b></td></tr><tr class="collapsed" data-id="0ba469fda94242e8b5c69213ad88585b" data-parentId="34fd20d35558403a82b31bf812b464bd"><td class="instance"><span class="baseIcon primitive"></span><b>start : </b><span>2024-02-01T21:02:00+00:00</span></td></tr><tr class="collapsed" data-id="886d217d9de84ec4ac523897e7b6d230" data-parentId="34fd20d35558403a82b31bf812b464bd"><td class="instance"><span class="baseIcon primitive"></span><b>end : </b><span>2024-02-02T03:02:00+00:00</span></td></tr><tr class="collapsed" data-id="4b9b33964fc84fc08a1478d972125bf4" data-parentId="219ad4ced34142a79559ae8b93d2ef40"><td class="instance"><span class="baseIcon primitive"></span><b>partOf</b></td></tr><tr class="collapsed" data-id="49b23ab4ee424a57be35f431e03e4c18" data-parentId="4b9b33964fc84fc08a1478d972125bf4"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Encounter/discharge-encounter-example-3</span></td></tr><tr class="collapsed" data-id="a9fd375fa40b479c9d72fdefa3267722" data-parentId="4b9b33964fc84fc08a1478d972125bf4"><td class="instance"><span class="baseIcon primitive"></span><b>identifier</b></td></tr><tr class="collapsed" data-id="3e503a072e724806ab7fbe77860d07b9" data-parentId="a9fd375fa40b479c9d72fdefa3267722"><td class="instance"><span class="baseIcon primitive"></span><b>use : </b><span>usual</span></td></tr><tr class="collapsed" data-id="58f3ae8e44d446f9b10ca8c50b411f75" data-parentId="a9fd375fa40b479c9d72fdefa3267722"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>urn:oid:2.16.840.1.113883.19.5.1.698.8</span></td></tr><tr class="collapsed" data-id="cff304a6a64e4f6b8b69f6d0134b37da" data-parentId="a9fd375fa40b479c9d72fdefa3267722"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>40005104253</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable8bd00df49803404db9eddc3a99c49513 = new InstanceTree();
+resourceTreeTable8bd00df49803404db9eddc3a99c49513.init("8bd00df49803404db9eddc3a99c49513");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="de55dfa7-e31c-40a4-b9a9-5989c9cebb82">
+    <div class="path"><table><tbody><tr><td>Encounter.<span class="field">id[0]</span></td><td>ed-encounter-example-1</td></tr><tr><td>Encounter.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0</td></tr><tr><td>Encounter.identifier[0].<span class="field">use[0]</span></td><td>usual</td></tr><tr><td>Encounter.identifier[0].<span class="field">system[0]</span></td><td>urn:oid:2.16.840.1.113883.19.5.1.698.8</td></tr><tr><td>Encounter.identifier[0].<span class="field">value[0]</span></td><td>10005104251</td></tr><tr><td>Encounter.<span class="field">status[0]</span></td><td>finished</td></tr><tr><td>Encounter.class[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td></tr><tr><td>Encounter.class[0].<span class="field">code[0]</span></td><td>EMER</td></tr><tr><td>Encounter.class[0].<span class="field">display[0]</span></td><td>emergency</td></tr><tr><td>Encounter.type[0].coding[0].<span class="field">system[0]</span></td><td>http://snomed.info/sct</td></tr><tr><td>Encounter.type[0].coding[0].<span class="field">code[0]</span></td><td>50849002</td></tr><tr><td>Encounter.type[0].coding[0].<span class="field">display[0]</span></td><td>Emergency room admission (procedure)</td></tr><tr><td>Encounter.type[0].<span class="field">text[0]</span></td><td>Emergency room</td></tr><tr><td>Encounter.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>Encounter.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>Encounter.period[0].<span class="field">start[0]</span></td><td>2024-02-01T21:02:00+00:00</td></tr><tr><td>Encounter.period[0].<span class="field">end[0]</span></td><td>2024-02-02T03:00:00+00:00</td></tr><tr><td>Encounter.reasonCode[0].coding[0].<span class="field">system[0]</span></td><td>http://hl7.org/fhir/sid/icd-10-cm</td></tr><tr><td>Encounter.reasonCode[0].coding[0].<span class="field">code[0]</span></td><td>R07.9</td></tr><tr><td>Encounter.reasonCode[0].coding[0].<span class="field">display[0]</span></td><td>Chest pain, unspecified</td></tr><tr><td>Encounter.reasonCode[0].<span class="field">text[0]</span></td><td>Angina</td></tr><tr><td>Encounter.reasonCode[1].coding[0].<span class="field">system[0]</span></td><td>http://hl7.org/fhir/sid/icd-10-cm</td></tr><tr><td>Encounter.reasonCode[1].coding[0].<span class="field">code[0]</span></td><td>R61</td></tr><tr><td>Encounter.reasonCode[1].coding[0].<span class="field">display[0]</span></td><td>Generalized hyperhidrosis</td></tr><tr><td>Encounter.reasonCode[1].<span class="field">text[0]</span></td><td>Sweating</td></tr><tr><td>Encounter.reasonCode[2].coding[0].<span class="field">system[0]</span></td><td>http://hl7.org/fhir/sid/icd-10-cm</td></tr><tr><td>Encounter.reasonCode[2].coding[0].<span class="field">code[0]</span></td><td>R00.2</td></tr><tr><td>Encounter.reasonCode[2].coding[0].<span class="field">display[0]</span></td><td>Palpitations</td></tr><tr><td>Encounter.reasonCode[2].<span class="field">text[0]</span></td><td>Palpitations</td></tr><tr><td>Encounter.diagnosis[0].condition[0].<span class="field">reference[0]</span></td><td>Condition/panic-attack-condition-example-1</td></tr><tr><td>Encounter.diagnosis[0].condition[0].<span class="field">display[0]</span></td><td>Panic Attack</td></tr><tr><td>Encounter.diagnosis[0].<span class="field">rank[0]</span></td><td>1</td></tr><tr><td>Encounter.diagnosis[1].condition[0].<span class="field">reference[0]</span></td><td>Condition/chest-pain-condition-example-1</td></tr><tr><td>Encounter.diagnosis[1].condition[0].<span class="field">display[0]</span></td><td>Chest Pain</td></tr><tr><td>Encounter.diagnosis[1].<span class="field">rank[0]</span></td><td>2</td></tr><tr><td>Encounter.diagnosis[2].condition[0].<span class="field">reference[0]</span></td><td>Condition/diabetes-condition-example-1</td></tr><tr><td>Encounter.diagnosis[2].condition[0].<span class="field">display[0]</span></td><td>Diabetes (II)</td></tr><tr><td>Encounter.diagnosis[2].<span class="field">rank[0]</span></td><td>3</td></tr><tr><td>Encounter.location[0].location[0].<span class="field">reference[0]</span></td><td>Location/ed-location-example-1</td></tr><tr><td>Encounter.location[0].location[0].<span class="field">display[0]</span></td><td>Emergency Dept.</td></tr><tr><td>Encounter.location[0].physicalType[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/location-physical-type</td></tr><tr><td>Encounter.location[0].physicalType[0].coding[0].<span class="field">code[0]</span></td><td>wa</td></tr><tr><td>Encounter.location[0].physicalType[0].coding[0].<span class="field">display[0]</span></td><td>Ward</td></tr><tr><td>Encounter.location[0].period[0].<span class="field">start[0]</span></td><td>2024-02-01T21:02:00+00:00</td></tr><tr><td>Encounter.location[0].period[0].<span class="field">end[0]</span></td><td>2024-02-02T03:02:00+00:00</td></tr><tr><td>Encounter.partOf[0].<span class="field">reference[0]</span></td><td>Encounter/discharge-encounter-example-3</td></tr><tr><td>Encounter.partOf[0].identifier[0].<span class="field">use[0]</span></td><td>usual</td></tr><tr><td>Encounter.partOf[0].identifier[0].<span class="field">system[0]</span></td><td>urn:oid:2.16.840.1.113883.19.5.1.698.8</td></tr><tr><td>Encounter.partOf[0].identifier[0].<span class="field">value[0]</span></td><td>40005104253</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG &#169; <time>2026</time> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package project:bh-ig-test based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="<time datetime='2026-09-14T09:51:00.3001588+00:00'>9/14/2026 9:51:00 AM +00:00</time>">
+                <time>2026-09-14</time>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="https://simplifier.net/bh-ig/~issues?source=QualityControl">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/next-level-custom-styling/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/next-level-custom-styling/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/next-level-custom-styling/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/next-level-custom-styling/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/next-level-custom-styling/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/next-level-custom-styling/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>
