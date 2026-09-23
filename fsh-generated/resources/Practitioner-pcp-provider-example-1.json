@@ -1,0 +1,48 @@
+{
+  "resourceType": "Practitioner",
+  "id": "pcp-provider-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://ncsbn.org/identifier/example-system",
+      "value": "2233551235"
+    }
+  ],
+  "name": [
+    {
+      "family": "Family",
+      "given": [
+        "Doc"
+      ],
+      "prefix": [
+        "Dr"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "999-999-9999",
+      "use": "work"
+    },
+    {
+      "system": "email",
+      "value": "doc.family@example.com"
+    }
+  ],
+  "address": [
+    {
+      "use": "work",
+      "line": [
+        "444 Main Street"
+      ],
+      "city": "Miami",
+      "state": "FL",
+      "postalCode": "33102"
+    }
+  ]
+}

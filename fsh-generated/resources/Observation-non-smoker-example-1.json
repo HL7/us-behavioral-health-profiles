@@ -1,0 +1,52 @@
+{
+  "resourceType": "Observation",
+  "id": "non-smoker-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus|6.1.0"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "social-history",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Social History"
+        }
+      ],
+      "text": "Social History"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "72166-2",
+        "system": "http://loinc.org",
+        "display": "Tobacco smoking status"
+      }
+    ],
+    "text": "Tobacco smoking status"
+  },
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "effectiveDateTime": "2024-02-01T16:27:04Z",
+  "performer": [
+    {
+      "reference": "Practitioner/pcp-provider-example-1",
+      "display": "Dr. Doc Family"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "8392000",
+        "system": "http://snomed.info/sct",
+        "display": "Non-smoker (finding)"
+      }
+    ]
+  }
+}

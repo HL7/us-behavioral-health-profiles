@@ -1,0 +1,125 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "ace-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|6.1.0"
+    ]
+  },
+  "questionnaire": "https://www.acesaware.org/wp-content/uploads/2022/07/ACE-Questionnaire-for-Adults-Identified-English-rev.7.26.22.pdf",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "authored": "2024-02-01T20:50:32.718Z",
+  "author": {
+    "reference": "Practitioner/ed-physician-example-1"
+  },
+  "item": [
+    {
+      "linkId": "/82814-5",
+      "text": "Emotional abuse--before 18 years old [ACE]",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA33-6",
+            "system": "http://loinc.org",
+            "display": "Yes"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/82815-2",
+      "text": "Physical abuse--before 18 years old [ACE]",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA33-6",
+            "system": "http://loinc.org",
+            "display": "Yes"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/82816-0",
+      "text": "Sexual abuse--before 18 years old [ACE]",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA33-6",
+            "system": "http://loinc.org",
+            "display": "Yes"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/82817-8",
+      "text": "Emotional neglect--before 18 years old [ACE]",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA33-6",
+            "system": "http://loinc.org",
+            "display": "Yes"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/82818-6",
+      "text": "Physical neglect--before 18 years old [ACE]",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA33-6",
+            "system": "http://loinc.org",
+            "display": "Yes"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/82820-2",
+      "text": "Domestic violence--before 18 years old [ACE]",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA32-8",
+            "system": "http://loinc.org",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/82822-8",
+      "text": "Mental illness in household--before 18 years old [ACE]",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA32-8",
+            "system": "http://loinc.org",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/82823-6",
+      "text": "Criminal household member--before 18 years old [ACE]",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA32-8",
+            "system": "http://loinc.org",
+            "display": "No"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "resourceType": "Observation",
+  "id": "disability-status-observation-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|6.1.0"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "survey",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Survey"
+        }
+      ],
+      "text": "Survey"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "89571-4",
+        "system": "http://loinc.org",
+        "display": "Disability status [CUBS]"
+      }
+    ],
+    "text": "Disability status [CUBS]"
+  },
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "effectiveDateTime": "2024-02-01",
+  "performer": [
+    {
+      "reference": "Practitioner/mental-health-provider-example-1",
+      "display": "Dr. Lazslo Cravensworth"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "LA29243-5",
+        "system": "http://loinc.org",
+        "display": "I'm Vulnerable - I sometimes or periodically have acute or chronic symptoms affecting housing, employment, social interactions, etc."
+      }
+    ],
+    "text": "I'm Vulnerable - I sometimes or periodically have acute or chronic symptoms affecting housing, employment, social interactions, etc."
+  }
+}

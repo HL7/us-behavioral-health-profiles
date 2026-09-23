@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | example-ekg-observation-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-ekg-observation-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="example-observation-ekg-observation-example">Example Observation: ekg-observation-example</h2>
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#30118652-93db-4b09-9521-f799ee0e638f" aria-controls="30118652-93db-4b09-9521-f799ee0e638f" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#fee48df3-742e-4474-af4d-ee7a91e02f4c" aria-controls="fee48df3-742e-4474-af4d-ee7a91e02f4c" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#c7df83ba-0ddd-4ebb-9bf5-842a4e6d7b49" aria-controls="c7df83ba-0ddd-4ebb-9bf5-842a4e6d7b49" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#868a5497-a0b9-49f0-bbfa-f8060a3e54b0" aria-controls="868a5497-a0b9-49f0-bbfa-f8060a3e54b0" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="30118652-93db-4b09-9521-f799ee0e638f">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.resourceType" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Observation</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.id" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">ekg-observation-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.meta" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">meta</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.meta.profile" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">profile</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|6.1.0</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.status" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">status</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">final</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.category" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">category</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.category.coding" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.category.coding.system" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/observation-category</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.category.coding.code" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">exam</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.category.coding.display" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Exam</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.category.text" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Exam</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.code" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.code.coding" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.code.coding.system" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://loinc.org</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.code.coding.code" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">8601-7</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.code.coding.display" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">EKG impression</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.subject" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">subject</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.subject.reference" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Patient/bh-patient-example</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.subject.display" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">James Wolff</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.effectiveDateTime" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">effectiveDateTime</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2024-02-02T03:48:57.246958+00:00</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.performer" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">performer</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.performer.reference" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Practitioner/pcp-provider-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.performer.display" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Dr. Doc Family</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.valueCodeableConcept" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">valueCodeableConcept</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.valueCodeableConcept.coding" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.valueCodeableConcept.coding.system" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://snomed.info/sct</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.valueCodeableConcept.coding.code" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">64730000</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.valueCodeableConcept.coding.display" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Normal sinus rhythm (finding)</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="fee48df3-742e-4474-af4d-ee7a91e02f4c">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">Observation</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.id" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">ekg-observation-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.meta" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.meta.profile" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|6.1.0</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.status" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">final</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.category" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.category.coding" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.category.coding.system" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/observation-category</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.category.coding.code" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">exam</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.category.coding.display" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Exam</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.category.text" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Exam</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.code" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.code.coding" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.code.coding.system" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://loinc.org</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.code.coding.code" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">8601-7</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.code.coding.display" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">EKG impression</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.subject" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.subject.reference" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Patient/bh-patient-example</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.subject.display" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">James Wolff</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.effective" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">effectiveDateTime</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2024-02-02T03:48:57.246958+00:00</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.performer" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">performer</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.performer.reference" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Practitioner/pcp-provider-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.performer.display" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Dr. Doc Family</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">performer</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.value" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">valueCodeableConcept</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.value.coding" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.value.coding.system" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://snomed.info/sct</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.value.coding.code" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">64730000</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-observation-clinical-result.json&amp;tab=details#Observation.value.coding.display" title="US Core Observation Clinical Result Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-observation-clinical-result.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Normal sinus rhythm (finding)</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">valueCodeableConcept</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Observation</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="c7df83ba-0ddd-4ebb-9bf5-842a4e6d7b49">
+    <div class="stu3-treetable" id="e1775697fed24fd2846cd57b5d9b1ade" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="d54454653c23492ea5372b287202b013"><td class="instance"><span class="baseIcon primitive"></span><b>Observation</b></td></tr><tr class="collapsed" data-id="a95b42f55ebd4dbab8efe213eca9be48" data-parentid="d54454653c23492ea5372b287202b013"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>ekg-observation-example-1</span></td></tr><tr class="collapsed" data-id="0c9cc9daeefb4343a8141ef14905aa3d" data-parentid="d54454653c23492ea5372b287202b013"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="ed1be77684b343c2b3fd9ef120a8a6c8" data-parentid="0c9cc9daeefb4343a8141ef14905aa3d"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|6.1.0</span></td></tr><tr class="collapsed" data-id="55b85f6e975c4f0c8d628141ec004844" data-parentid="d54454653c23492ea5372b287202b013"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>final</span></td></tr><tr class="collapsed" data-id="9a64ec6ea3724889a449ab97721276c0" data-parentid="d54454653c23492ea5372b287202b013"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="8597dc65080a476ea85c72471d4a3faa" data-parentid="9a64ec6ea3724889a449ab97721276c0"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="be4ca45f562e467fba7986b51abd9e68" data-parentid="8597dc65080a476ea85c72471d4a3faa"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/observation-category</span></td></tr><tr class="collapsed" data-id="399e496a9d7347cb9c1560410f7fa750" data-parentid="8597dc65080a476ea85c72471d4a3faa"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>exam</span></td></tr><tr class="collapsed" data-id="a30561273382476c82ca528d05157104" data-parentid="8597dc65080a476ea85c72471d4a3faa"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Exam</span></td></tr><tr class="collapsed" data-id="980ec55071be405eb76297505693b3be" data-parentid="9a64ec6ea3724889a449ab97721276c0"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Exam</span></td></tr><tr class="collapsed" data-id="bf8de463900744d69279fc49c8cdbec4" data-parentid="d54454653c23492ea5372b287202b013"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="6387a7afcc114cdd9da36df8f92f5f99" data-parentid="bf8de463900744d69279fc49c8cdbec4"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="8ba39dbf794648e99cc24ca250c8ecdd" data-parentid="6387a7afcc114cdd9da36df8f92f5f99"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="2ad21f58f0ff4efcb79d806e047308ac" data-parentid="6387a7afcc114cdd9da36df8f92f5f99"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>8601-7</span></td></tr><tr class="collapsed" data-id="a70154bdd3e84539915352da9f78c035" data-parentid="6387a7afcc114cdd9da36df8f92f5f99"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>EKG impression</span></td></tr><tr class="collapsed" data-id="f601698ec8794d7490f591de0b522d1d" data-parentid="d54454653c23492ea5372b287202b013"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="23cfae3c95084faa99b654ce5bf3aee0" data-parentid="f601698ec8794d7490f591de0b522d1d"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="1d644420b0a0492da2a31549b7491263" data-parentid="f601698ec8794d7490f591de0b522d1d"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="0d8c96759de043e0b6f1ae8566fc18cd" data-parentid="d54454653c23492ea5372b287202b013"><td class="instance"><span class="baseIcon primitive"></span><b>effective : </b><span>2024-02-02T03:48:57.246958+00:00</span></td></tr><tr class="collapsed" data-id="aa842c16f0e644299e291fb61b810fe0" data-parentid="d54454653c23492ea5372b287202b013"><td class="instance"><span class="baseIcon primitive"></span><b>performer</b></td></tr><tr class="collapsed" data-id="e8038bfc1c114cca8363eed9bf5792eb" data-parentid="aa842c16f0e644299e291fb61b810fe0"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Practitioner/pcp-provider-example-1</span></td></tr><tr class="collapsed" data-id="c3ba9716c1e24af3a4965282819cdb93" data-parentid="aa842c16f0e644299e291fb61b810fe0"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Dr. Doc Family</span></td></tr><tr class="collapsed" data-id="1e0eef0716f3471d9aefdc2a058931c4" data-parentid="d54454653c23492ea5372b287202b013"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="e5c31e816a004c1d8591986a45eb9f7e" data-parentid="1e0eef0716f3471d9aefdc2a058931c4"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="d6a20e45bfc441fd92727760bc9e8bf9" data-parentid="e5c31e816a004c1d8591986a45eb9f7e"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://snomed.info/sct</span></td></tr><tr class="collapsed" data-id="ffb407f22dca4d2d9ba6071fe0d8eca9" data-parentid="e5c31e816a004c1d8591986a45eb9f7e"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>64730000</span></td></tr><tr class="collapsed" data-id="70716941538c4037a390dbf8de5c6039" data-parentid="e5c31e816a004c1d8591986a45eb9f7e"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Normal sinus rhythm (finding)</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTablee1775697fed24fd2846cd57b5d9b1ade = new InstanceTree();
+resourceTreeTablee1775697fed24fd2846cd57b5d9b1ade.init("e1775697fed24fd2846cd57b5d9b1ade");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="868a5497-a0b9-49f0-bbfa-f8060a3e54b0">
+    <div class="path"><table><tbody><tr><td>Observation.<span class="field">id[0]</span></td><td>ekg-observation-example-1</td></tr><tr><td>Observation.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|6.1.0</td></tr><tr><td>Observation.<span class="field">status[0]</span></td><td>final</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/observation-category</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">code[0]</span></td><td>exam</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">display[0]</span></td><td>Exam</td></tr><tr><td>Observation.category[0].<span class="field">text[0]</span></td><td>Exam</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">code[0]</span></td><td>8601-7</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">display[0]</span></td><td>EKG impression</td></tr><tr><td>Observation.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>Observation.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>Observation.<span class="field">effective[0]</span></td><td>2024-02-02T03:48:57.246958+00:00</td></tr><tr><td>Observation.performer[0].<span class="field">reference[0]</span></td><td>Practitioner/pcp-provider-example-1</td></tr><tr><td>Observation.performer[0].<span class="field">display[0]</span></td><td>Dr. Doc Family</td></tr><tr><td>Observation.value[0].coding[0].<span class="field">system[0]</span></td><td>http://snomed.info/sct</td></tr><tr><td>Observation.value[0].coding[0].<span class="field">code[0]</span></td><td>64730000</td></tr><tr><td>Observation.value[0].coding[0].<span class="field">display[0]</span></td><td>Normal sinus rhythm (finding)</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

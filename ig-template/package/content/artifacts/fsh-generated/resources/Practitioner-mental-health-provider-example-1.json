@@ -1,0 +1,44 @@
+{
+  "resourceType": "Practitioner",
+  "id": "mental-health-provider-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://ncsbn.org/identifier/example-system",
+      "value": "5516813518"
+    }
+  ],
+  "name": [
+    {
+      "family": "Cravensworth",
+      "given": [
+        "Lazslo"
+      ],
+      "prefix": [
+        "Dr"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "email",
+      "value": "lazslo.cravensworth@hospital.net",
+      "use": "work"
+    }
+  ],
+  "address": [
+    {
+      "use": "work",
+      "line": [
+        "333 Main Street"
+      ],
+      "city": "Miami",
+      "state": "FL",
+      "postalCode": "01002"
+    }
+  ]
+}

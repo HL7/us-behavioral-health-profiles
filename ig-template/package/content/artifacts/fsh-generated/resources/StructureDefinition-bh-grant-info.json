@@ -1,0 +1,102 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "bh-grant-info",
+  "url": "http://fhir.org/guides/onc/bhp/StructureDefinition/bh-grant-info",
+  "name": "BehavioralHealthGrantInfo",
+  "title": "Behavioral Health Grant Funding Information",
+  "status": "active",
+  "experimental": true,
+  "description": "This profile defines the structure and terminology for Observations related to Program ID, number, and funding type. Feedback is requested throughout this profile, specifically do standard concepts exist for .category, .code, and .value[x]? Also, use of a complex extension to represent both grant number and program ID.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.extension",
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.extension:program-info",
+        "path": "Observation.extension",
+        "sliceName": "program-info",
+        "short": "Program information including program ID and grant number",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.org/guides/onc/bhp/StructureDefinition/program-info"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.category:bh_funding",
+        "path": "Observation.category",
+        "sliceName": "bh_funding",
+        "min": 0,
+        "max": "*",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.org/guides/onc/bhp/ValueSet/bh-funding-types"
+        }
+      },
+      {
+        "id": "Observation.performer",
+        "path": "Observation.performer",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+            ],
+            "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.org/guides/onc/bhp/ValueSet/bh-funding-types"
+        }
+      }
+    ]
+  }
+}

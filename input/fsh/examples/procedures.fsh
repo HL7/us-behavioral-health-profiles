@@ -46,7 +46,7 @@ Usage: #example
 Title: "bh-prevention-edu-example"
 Description: "Example of education service provided to patient"
 * meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure|6.1.0"
-* basedOn = Reference(ServiceRequest-peer-mentoring-example-1)
+* basedOn = Reference(sdoh-referral-example-1)
 * status = #completed
 * code = $HCPCSReleaseCodeSets#H0025 "Behavioral health prevention education service (delivery of services with target population to affect knowledge, attitude and/or behavior)"
 * code.text = "Behavioral Health Prevention Education"

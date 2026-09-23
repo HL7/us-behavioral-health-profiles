@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 1210" width="940" height="1210" role="img" aria-label="Build and release process for the US Behavioral Health Profiles implementation guide">
+<title>US Behavioral Health Profiles - build and release</title>
+<style>
+  :root {
+    --bg:#ffffff; --fg:#1b1f24; --muted:#5b6570; --line:#9aa4af;
+    --box:#f6f8fa; --edge:#d0d7de; --band:#f0f3f6; --bandedge:#dde3e9;
+    --author:#6a4fb3; --build:#1f6f8b; --release:#2f7d4f; --stop:#a8452f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#0d1117; --fg:#e6edf3; --muted:#9198a1; --line:#6e7681;
+      --box:#161b22; --edge:#30363d; --band:#12171e; --bandedge:#272e36;
+      --author:#b39ddb; --build:#79c0d8; --release:#7fc79b; --stop:#e08b74;
+    }
+  }
+  text { font-family: ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; fill: var(--fg); }
+  .mono { font-family: ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace; }
+  .title { font-size: 19px; font-weight: 700; }
+  .subtitle { font-size: 12.5px; fill: var(--muted); }
+  .band { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; }
+  .nt { font-size: 13px; font-weight: 600; }
+  .ns { font-size: 11px; fill: var(--muted); }
+  .lbl { font-size: 11px; fill: var(--muted); }
+  .note { font-size: 11.5px; fill: var(--muted); }
+  .box { fill: var(--box); stroke: var(--edge); stroke-width: 1; }
+  .bandbox { fill: var(--band); stroke: var(--bandedge); stroke-width: 1; }
+  .edge { stroke: var(--line); stroke-width: 1.6; fill: none; }
+  .edge-dash { stroke: var(--line); stroke-width: 1.4; fill: none; stroke-dasharray: 5 4; }
+</style>
+<defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,1 L9,5 L0,9 z" fill="var(--line)"/>
+  </marker>
+</defs>
+
+<rect width="940" height="1210" fill="var(--bg)"/>
+
+<text class="title" x="36" y="42">US Behavioral Health Profiles — build and release</text>
+<text class="subtitle" x="36" y="62">Profiles are authored as FSH; pages and styling live on Simplifier. The IG publisher passes the rendered pages through unchanged.</text>
+
+<!-- ============ 1. AUTHOR ============ -->
+<rect class="bandbox" x="24" y="86" width="892" height="238" rx="10"/>
+<text class="band" x="44" y="110" fill="var(--author)">1 · AUTHOR</text>
+
+<rect class="box" x="44" y="126" width="196" height="62" rx="7"/>
+<text class="nt mono" x="60" y="152">input/fsh/</text>
+<text class="ns" x="60" y="170">FSH profiles</text>
+<text class="ns" x="60" y="183">and examples</text>
+
+<path class="edge" d="M240,157 L292,157" marker-end="url(#a)"/>
+<text class="lbl mono" x="266" y="149" text-anchor="middle">sushi</text>
+
+<rect class="box" x="292" y="126" width="228" height="62" rx="7"/>
+<text class="nt mono" x="308" y="152">fsh-generated/</text>
+<text class="ns" x="308" y="170">profiles · value sets · examples</text>
+<text class="ns" x="308" y="183">ImplementationGuide resource</text>
+
+<path class="edge" d="M520,157 L572,157" marker-end="url(#a)"/>
+<text class="lbl mono" x="546" y="149" text-anchor="middle">scripts/</text>
+
+<rect class="box" x="572" y="126" width="300" height="62" rx="7"/>
+<text class="nt mono" x="588" y="152" style="font-size:12px">guides/us-behavioral-health-profiles/</text>
+<text class="ns" x="588" y="170">page sources · styling · artifact index</text>
+<text class="ns" x="588" y="183">IP statements · page TOCs</text>
+
+<path class="edge" d="M722,188 L722,238" marker-end="url(#a)"/>
+<path class="edge" d="M742,238 L742,188" marker-end="url(#a)"/>
+<text class="lbl mono" x="762" y="209">fhir project sync</text>
+<text class="lbl" x="762" y="224">Firely Terminal · Forge</text>
+
+<text class="note" x="200" y="258"><tspan class="mono">_generate.bat</tspan> runs SUSHI and the page scripts —</text>
+<text class="note" x="200" y="274">both arrows above. It feeds <tspan class="mono">guides/</tspan>, so run it</text>
+<text class="note" x="200" y="290">before the sync, not after.</text>
+
+<rect class="box" x="572" y="238" width="300" height="58" rx="7"/>
+<text class="nt" x="588" y="262">Simplifier.net</text>
+<text class="ns" x="588" y="280">web editor · renders the guide</text>
+
+<!-- ============ 2. BUILD &amp; QA ============ -->
+<rect class="bandbox" x="24" y="340" width="892" height="432" rx="10"/>
+<text class="band" x="44" y="364" fill="var(--build)">2 · BUILD &amp; QA</text>
+
+<path class="edge" d="M722,296 L722,318 L470,318 L470,392" marker-end="url(#a)"/>
+<text class="lbl mono" x="600" y="312" text-anchor="middle">export-ig.ps1 (downloads)</text>
+
+<rect class="box" x="290" y="392" width="360" height="56" rx="7"/>
+<text class="nt mono" x="306" y="416">us-behavioral-health-profiles@&lt;version&gt;.zip</text>
+<text class="ns" x="306" y="434">the export, committed per release</text>
+
+<path class="edge" d="M470,448 L470,502" marker-end="url(#a)"/>
+<text class="lbl mono" x="486" y="472">export-ig.ps1 → prepare_export_for_ig_publisher.py</text>
+<text class="lbl" x="486" y="487">to XHTML · repairs known export bugs</text>
+
+<rect class="box" x="230" y="502" width="480" height="72" rx="7"/>
+<text class="nt mono" x="246" y="526">input/pagecontent/*.xml</text>
+<text class="nt mono" x="246" y="544">ig-template/…/content/{static,artifacts}</text>
+<text class="ns" x="246" y="563">generated — never hand-edited</text>
+
+<path class="edge" d="M470,574 L470,628" marker-end="url(#a)"/>
+<text class="lbl mono" x="486" y="598">_build.bat → IG publisher</text>
+<text class="lbl" x="486" y="613">pass-through template #ig-template</text>
+
+<rect class="box" x="330" y="628" width="280" height="58" rx="7"/>
+<text class="nt mono" x="346" y="652">output/</text>
+<text class="ns" x="346" y="670">the published guide · qa.html</text>
+
+<path class="edge" d="M470,686 L470,714" marker-end="url(#a)"/>
+<path class="box" d="M470,714 L586,742 L470,770 L354,742 z"/>
+<text class="nt" x="470" y="747" text-anchor="middle">QA clean?</text>
+
+<!-- QA failure loop back to author -->
+<path class="edge-dash" d="M354,742 L170,742 L170,191" marker-end="url(#a)"/>
+<text class="lbl" x="344" y="734" text-anchor="end" fill="var(--stop)">no — fix and rerun</text>
+
+
+<!-- ============ 3. RELEASE ============ -->
+<rect class="bandbox" x="24" y="812" width="892" height="356" rx="10"/>
+<text class="band" x="44" y="836" fill="var(--release)">3 · RELEASE</text>
+
+<path class="edge" d="M470,770 L470,852" marker-end="url(#a)"/>
+<text class="lbl" x="486" y="802" fill="var(--release)">yes</text>
+
+<rect class="box" x="170" y="852" width="600" height="86" rx="7"/>
+<text class="nt" x="186" y="876">Prepare the release</text>
+<text class="ns mono" x="186" y="896">sushi-config.yaml + guide.yaml — same version in both</text>
+<text class="ns" x="186" y="911">Simplifier — publish a package release and an IG version release</text>
+<text class="ns mono" x="186" y="926">publication-request.json — version, desc, status, sequence, milestone</text>
+
+<path class="edge" d="M470,938 L470,1000" marker-end="url(#a)"/>
+
+<rect class="box" x="170" y="1000" width="600" height="76" rx="7"/>
+<text class="nt" x="186" y="1024">HL7 publication process</text>
+<text class="ns mono" x="186" y="1043">output/ + publication-request.json</text>
+<text class="ns" x="186" y="1060">generates package-list.json and history.html, then publishes</text>
+
+<path class="edge" d="M470,1076 L470,1108" marker-end="url(#a)"/>
+
+<rect class="box" x="170" y="1108" width="600" height="44" rx="7"/>
+<text class="nt mono" x="470" y="1136" text-anchor="middle">https://fhir.org/guides/onc/bhp/</text>
+
+<text class="note" x="36" y="1190">Details in README.md · publisher and SUSHI behaviour worth knowing in ig-publisher-quirks.md</text>
+</svg>

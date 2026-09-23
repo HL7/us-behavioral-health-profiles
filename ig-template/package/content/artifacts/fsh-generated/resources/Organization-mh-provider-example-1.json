@@ -1,0 +1,39 @@
+{
+  "resourceType": "Organization",
+  "id": "mh-provider-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|6.1.0"
+    ]
+  },
+  "active": true,
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "prov",
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "display": "Healthcare Provider"
+        }
+      ]
+    }
+  ],
+  "name": "Florida Mental Health Provider Associates",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "(+1) 734-677-7777"
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "3300 WASHTENAW AVE STE 227"
+      ],
+      "city": "MIAMI",
+      "state": "FL",
+      "postalCode": "01002",
+      "country": "USA"
+    }
+  ]
+}

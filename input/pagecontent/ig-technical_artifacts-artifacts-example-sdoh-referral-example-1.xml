@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | example-sdoh-referral-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-sdoh-referral-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="example-servicerequest-sdoh-referral-example">Example ServiceRequest: sdoh-referral-example</h2>
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#3bf9189a-fa24-492e-a388-fc566a54258b" aria-controls="3bf9189a-fa24-492e-a388-fc566a54258b" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#bde9fef9-c476-49ae-8917-3f4b0e012ac5" aria-controls="bde9fef9-c476-49ae-8917-3f4b0e012ac5" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#aaba881b-fa1b-488d-96a5-962f41a9cb94" aria-controls="aaba881b-fa1b-488d-96a5-962f41a9cb94" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#6dc5d16a-7afb-4377-9caf-c04322ea9ccc" aria-controls="6dc5d16a-7afb-4377-9caf-c04322ea9ccc" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="3bf9189a-fa24-492e-a388-fc566a54258b">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.resourceType" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">ServiceRequest</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.id" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">sdoh-referral-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.meta" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">meta</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.meta.profile" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">profile</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.status" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">status</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">completed</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.intent" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">intent</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">order</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">category</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category.coding" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category.coding.system" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://snomed.info/sct</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category.coding.code" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">410606002</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category.coding.display" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Social service procedure</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category.coding" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category.coding.system" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category.coding.code" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">social-connection</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category.coding.display" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Social Connection</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.code" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.code.coding" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.code.coding.system" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://snomed.info/sct</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.code.coding.code" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">461481000124109</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.code.coding.display" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Referral to peer support (procedure)</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.subject" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">subject</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.subject.reference" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Patient/bh-patient-example</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.subject.display" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">James Wolff</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.reasonReference" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">reasonReference</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.reasonReference.reference" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Condition/depression-condition-example-1</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="bde9fef9-c476-49ae-8917-3f4b0e012ac5">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">ServiceRequest</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.id" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">sdoh-referral-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.meta" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.meta.profile" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.status" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">completed</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.intent" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">intent</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">order</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category.coding" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category.coding.system" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://snomed.info/sct</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category.coding.code" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">410606002</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category.coding.display" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Social service procedure</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category.coding" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category.coding.system" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category.coding.code" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">social-connection</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.category.coding.display" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Social Connection</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.code" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.code.coding" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.code.coding.system" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://snomed.info/sct</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.code.coding.code" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">461481000124109</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.code.coding.display" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Referral to peer support (procedure)</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.subject" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.subject.reference" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Patient/bh-patient-example</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.subject.display" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">James Wolff</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.reasonReference" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">reasonReference</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-ServiceRequest.json&amp;tab=details#ServiceRequest.reasonReference.reference" title="SDOHCC ServiceRequest&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-ServiceRequest.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Condition/depression-condition-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">reasonReference</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">ServiceRequest</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="aaba881b-fa1b-488d-96a5-962f41a9cb94">
+    <div class="stu3-treetable" id="391154a70fde4d61a77881178d70e285" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="7ec8fefa549348e381ebbf93544d8c0e"><td class="instance"><span class="baseIcon primitive"></span><b>ServiceRequest</b></td></tr><tr class="collapsed" data-id="d8eb43c1e6224062828ac6a5d5b2336a" data-parentid="7ec8fefa549348e381ebbf93544d8c0e"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>sdoh-referral-example-1</span></td></tr><tr class="collapsed" data-id="b7a85c8160bc4f7cb2433312394b1572" data-parentid="7ec8fefa549348e381ebbf93544d8c0e"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="2660dc52ebfa4301997c65ddd8a3b70e" data-parentid="b7a85c8160bc4f7cb2433312394b1572"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest</span></td></tr><tr class="collapsed" data-id="f31d5c71f11947369a9a2c177045d6d5" data-parentid="7ec8fefa549348e381ebbf93544d8c0e"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>completed</span></td></tr><tr class="collapsed" data-id="0376b3243ae04a45a0a69cdd41e68e10" data-parentid="7ec8fefa549348e381ebbf93544d8c0e"><td class="instance"><span class="baseIcon primitive"></span><b>intent : </b><span>order</span></td></tr><tr class="collapsed" data-id="683167af1dcc4a55ad11589d3aae0e46" data-parentid="7ec8fefa549348e381ebbf93544d8c0e"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="3f2d8d853bb144838eb30ef4c04fe8dc" data-parentid="683167af1dcc4a55ad11589d3aae0e46"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="b50b75b3d7834046b666b4040034e791" data-parentid="3f2d8d853bb144838eb30ef4c04fe8dc"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://snomed.info/sct</span></td></tr><tr class="collapsed" data-id="c71aa753a05b47f1921bf2591e8cb0f7" data-parentid="3f2d8d853bb144838eb30ef4c04fe8dc"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>410606002</span></td></tr><tr class="collapsed" data-id="37e3babc34f24eb59dfc25ad2cd7488c" data-parentid="3f2d8d853bb144838eb30ef4c04fe8dc"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Social service procedure</span></td></tr><tr class="collapsed" data-id="1319499636b945628760789b30c94115" data-parentid="7ec8fefa549348e381ebbf93544d8c0e"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="701ad8e86e2744f89f9675dbbca9a87c" data-parentid="1319499636b945628760789b30c94115"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="5d091fc70889470dba3c99c3bb067e3f" data-parentid="701ad8e86e2744f89f9675dbbca9a87c"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes</span></td></tr><tr class="collapsed" data-id="8f3206b2d6ea44ada64190e235814ff0" data-parentid="701ad8e86e2744f89f9675dbbca9a87c"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>social-connection</span></td></tr><tr class="collapsed" data-id="14434e38e36f4c36b443f1af15bf156d" data-parentid="701ad8e86e2744f89f9675dbbca9a87c"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Social Connection</span></td></tr><tr class="collapsed" data-id="2e385cdef4ee45efafe3c2512ab7205e" data-parentid="7ec8fefa549348e381ebbf93544d8c0e"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="b2a20f130dbe4c58a20b7419041e9e48" data-parentid="2e385cdef4ee45efafe3c2512ab7205e"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="50a0c344c5874a2ea3ea435c54ec6a94" data-parentid="b2a20f130dbe4c58a20b7419041e9e48"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://snomed.info/sct</span></td></tr><tr class="collapsed" data-id="58996996564042a997e11773e84c9fbe" data-parentid="b2a20f130dbe4c58a20b7419041e9e48"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>461481000124109</span></td></tr><tr class="collapsed" data-id="c20a0fe94bed4ca49498293568c549dc" data-parentid="b2a20f130dbe4c58a20b7419041e9e48"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Referral to peer support (procedure)</span></td></tr><tr class="collapsed" data-id="29af5f15f39e462db34090035585d0be" data-parentid="7ec8fefa549348e381ebbf93544d8c0e"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="75a5fcd8b8c740fa90e753222f4dc11c" data-parentid="29af5f15f39e462db34090035585d0be"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="563f1584cdfb4aef86a657ee6066c3f8" data-parentid="29af5f15f39e462db34090035585d0be"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="9a0951de6f374b329d8656265a836290" data-parentid="7ec8fefa549348e381ebbf93544d8c0e"><td class="instance"><span class="baseIcon primitive"></span><b>reasonReference</b></td></tr><tr class="collapsed" data-id="ec6b1519fa514f1f8b00013145419cc6" data-parentid="9a0951de6f374b329d8656265a836290"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Condition/depression-condition-example-1</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable391154a70fde4d61a77881178d70e285 = new InstanceTree();
+resourceTreeTable391154a70fde4d61a77881178d70e285.init("391154a70fde4d61a77881178d70e285");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="6dc5d16a-7afb-4377-9caf-c04322ea9ccc">
+    <div class="path"><table><tbody><tr><td>ServiceRequest.<span class="field">id[0]</span></td><td>sdoh-referral-example-1</td></tr><tr><td>ServiceRequest.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest</td></tr><tr><td>ServiceRequest.<span class="field">status[0]</span></td><td>completed</td></tr><tr><td>ServiceRequest.<span class="field">intent[0]</span></td><td>order</td></tr><tr><td>ServiceRequest.category[0].coding[0].<span class="field">system[0]</span></td><td>http://snomed.info/sct</td></tr><tr><td>ServiceRequest.category[0].coding[0].<span class="field">code[0]</span></td><td>410606002</td></tr><tr><td>ServiceRequest.category[0].coding[0].<span class="field">display[0]</span></td><td>Social service procedure</td></tr><tr><td>ServiceRequest.category[1].coding[0].<span class="field">system[0]</span></td><td>http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes</td></tr><tr><td>ServiceRequest.category[1].coding[0].<span class="field">code[0]</span></td><td>social-connection</td></tr><tr><td>ServiceRequest.category[1].coding[0].<span class="field">display[0]</span></td><td>Social Connection</td></tr><tr><td>ServiceRequest.code[0].coding[0].<span class="field">system[0]</span></td><td>http://snomed.info/sct</td></tr><tr><td>ServiceRequest.code[0].coding[0].<span class="field">code[0]</span></td><td>461481000124109</td></tr><tr><td>ServiceRequest.code[0].coding[0].<span class="field">display[0]</span></td><td>Referral to peer support (procedure)</td></tr><tr><td>ServiceRequest.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>ServiceRequest.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>ServiceRequest.reasonReference[0].<span class="field">reference[0]</span></td><td>Condition/depression-condition-example-1</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | example-bh-patient-example - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-bh-patient-example</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="example-patient-bh-patient-example">Example Patient: bh-patient-example</h2>
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#c3c7cd08-fa2f-4343-a520-8b6bc8d2f339" aria-controls="c3c7cd08-fa2f-4343-a520-8b6bc8d2f339" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#2283a059-be11-47cd-a857-f834795578d7" aria-controls="2283a059-be11-47cd-a857-f834795578d7" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#736ef88f-0e05-46be-bd9b-045da5db3950" aria-controls="736ef88f-0e05-46be-bd9b-045da5db3950" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#e711fe0e-c84a-48dc-9b39-6262e816e96c" aria-controls="e711fe0e-c84a-48dc-9b39-6262e816e96c" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="c3c7cd08-fa2f-4343-a520-8b6bc8d2f339">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.resourceType" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Patient</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.id" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">bh-patient-example</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.meta" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">meta</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.meta.profile" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">profile</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|6.1.0</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">extension</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">extension</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.url" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">url</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">ombCategory</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.valueCoding" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">valueCoding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.valueCoding.system" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">urn:oid:2.16.840.1.113883.6.238</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.valueCoding.code" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2054-5</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.valueCoding.display" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Black or African American</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.url" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">url</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">text</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.valueString" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">valueString</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Black or African American</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.url" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">url</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-race</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">extension</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.url" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">url</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">ombCategory</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.valueCoding" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">valueCoding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.valueCoding.system" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">urn:oid:2.16.840.1.113883.6.238</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.valueCoding.code" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2186-5</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.valueCoding.display" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Not Hispanic or Latino</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.url" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">url</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">text</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.valueString" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">valueString</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Not Hispanic or Latino</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.url" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">url</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.url" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">url</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.valueCode" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">valueCode</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">M</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.url" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">url</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.valueCode" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">valueCode</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">248153007</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.url" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">url</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://hl7.org/fhir/us/military-service/StructureDefinition/military-service-veteran-status</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.valueBoolean" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">valueBoolean</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">true</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">extension</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.url" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">url</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">tribalAffiliation</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.valueCodeableConcept" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">valueCodeableConcept</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.valueCodeableConcept.coding" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.valueCodeableConcept.coding.system" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/v3-TribalEntityUS</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.valueCodeableConcept.coding.code" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">187</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.valueCodeableConcept.coding.display" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Paiute-Shoshone Tribe of the Fallon Reservation and Colony, Nevada</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.valueCodeableConcept.text" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Shoshone</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.url" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">url</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">identifier</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.use" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">use</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">usual</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.type" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">type</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.type.coding" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.type.coding.system" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/v2-0203</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.type.coding.code" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">MR</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.type.coding.display" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Medical Record Number</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.type.text" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Medical Record Number</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.system" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://hospital.smarthealthit.org</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.value" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">value</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">1032702</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.active" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">active</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">true</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">name</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name.use" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">use</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">official</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name.family" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">family</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Wolff</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name.given" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">given</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">Jennifer</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name.use" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">use</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">usual</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name.family" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">family</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Wolff</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name.given" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">given</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">James</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name.period" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">period</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name.period.start" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">start</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2016-07-22</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.telecom" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">telecom</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.telecom.system" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">phone</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.telecom.value" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">value</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">555-555-5555</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.telecom.use" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">use</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">home</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.telecom.system" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">email</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.telecom.value" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">value</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">james.wolff@example.com</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.gender" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">gender</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">male</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.birthDate" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">birthDate</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">1961-07-16</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.deceasedBoolean" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">deceasedBoolean</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">false</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">address</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.use" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">use</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">old</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.line" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">line</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">49 MEADOW ST</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.city" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">city</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">MIAMI</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.state" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">state</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">FL</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.postalCode" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">postalCode</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">74047</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.country" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">country</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">US</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.period" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">period</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.period.start" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">start</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2016-12-06</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.period.end" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">end</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2020-07-22</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.line" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">line</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">183 MOUNTAIN VIEW ST</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.city" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">city</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">MIAMI</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.state" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">state</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">FL</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.postalCode" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">postalCode</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">74048</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.country" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">country</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">US</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.period" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">period</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.period.start" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">start</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2020-07-22</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.communication" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">communication</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.communication.language" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">language</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.communication.language.coding" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.communication.language.coding.system" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">urn:ietf:bcp:47</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.communication.language.coding.code" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">en</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.communication.language.coding.display" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">English</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.communication.language.text" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">English</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.communication.preferred" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">preferred</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">true</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="2283a059-be11-47cd-a857-f834795578d7">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">Patient</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.id" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">bh-patient-example</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.meta" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.meta.profile" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|6.1.0</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">extension</a></span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-race</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">extension</a></span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">ombCategory</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.value" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">valueCoding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.value.system" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">urn:oid:2.16.840.1.113883.6.238</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.value.code" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2054-5</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.value.display" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Black or African American</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">valueCoding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">extension</a></span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">text</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.value" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">valueString</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Black or African American</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">extension</a></span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">extension</a></span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">ombCategory</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.value" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">valueCoding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.value.system" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">urn:oid:2.16.840.1.113883.6.238</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.value.code" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2186-5</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.value.display" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Not Hispanic or Latino</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">valueCoding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">extension</a></span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">text</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.value" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">valueString</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Not Hispanic or Latino</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">extension</a></span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.value" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">valueCode</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">M</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">extension</a></span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.value" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">valueCode</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">248153007</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">extension</a></span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/military-service/StructureDefinition/military-service-veteran-status</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.value" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">valueBoolean</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">true</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">extension</a></span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">extension</a></span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">tribalAffiliation</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.value" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">valueCodeableConcept</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.value.coding" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.value.coding.system" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/v3-TribalEntityUS</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.value.coding.code" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">187</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.value.coding.display" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Paiute-Shoshone Tribe of the Fallon Reservation and Colony, Nevada</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.extension.extension.value.text" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Shoshone</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">valueCodeableConcept</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">identifier</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.use" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">use</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">usual</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.type" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">type</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.type.coding" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.type.coding.system" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/v2-0203</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.type.coding.code" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">MR</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.type.coding.display" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Medical Record Number</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.type.text" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Medical Record Number</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">type</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.system" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hospital.smarthealthit.org</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.identifier.value" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">1032702</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">identifier</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.active" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">active</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">true</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">name</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name.use" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">use</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">official</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name.family" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">family</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Wolff</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name.given" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">given</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Jennifer</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">name</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">name</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name.use" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">use</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">usual</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name.family" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">family</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Wolff</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name.given" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">given</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">James</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name.period" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">period</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.name.period.start" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">start</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2016-07-22</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">period</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">name</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.telecom" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">telecom</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.telecom.system" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">phone</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.telecom.value" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">555-555-5555</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.telecom.use" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">use</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">home</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">telecom</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.telecom" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">telecom</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.telecom.system" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">email</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.telecom.value" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">james.wolff@example.com</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">telecom</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.gender" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">gender</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">male</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.birthDate" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">birthDate</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">1961-07-16</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.deceased" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">deceasedBoolean</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">false</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">address</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.use" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">use</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">old</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.line" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">line</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">49 MEADOW ST</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.city" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">city</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">MIAMI</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.state" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">state</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">FL</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.postalCode" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">postalCode</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">74047</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.country" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">country</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">US</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.period" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">period</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.period.start" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">start</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2016-12-06</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.period.end" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">end</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2020-07-22</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">period</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">address</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">address</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.line" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">line</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">183 MOUNTAIN VIEW ST</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.city" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">city</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">MIAMI</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.state" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">state</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">FL</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.postalCode" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">postalCode</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">74048</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.country" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">country</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">US</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.period" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">period</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.address.period.start" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">start</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2020-07-22</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">period</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">address</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.communication" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">communication</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.communication.language" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">language</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.communication.language.coding" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.communication.language.coding.system" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">urn:ietf:bcp:47</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.communication.language.coding.code" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">en</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.communication.language.coding.display" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">English</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.communication.language.text" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">English</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">language</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-patient.json&amp;tab=details#Patient.communication.preferred" title="US Core Patient Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-patient.json" target="_blank">preferred</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">true</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">communication</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Patient</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="736ef88f-0e05-46be-bd9b-045da5db3950">
+    <div class="stu3-treetable" id="95ced889221440b2b243913f94becde1" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>Patient</b></td></tr><tr class="collapsed" data-id="c4b93a09362543939bed9f1597c10468" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>bh-patient-example</span></td></tr><tr class="collapsed" data-id="1d56cebb4ef94c74acc7125ecbf0d630" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="363db17e00c3484b8b6b4c0c5f413980" data-parentid="1d56cebb4ef94c74acc7125ecbf0d630"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|6.1.0</span></td></tr><tr class="collapsed" data-id="007a44e3e72e41db926404cd8e1e7ef2" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>extension</b></td></tr><tr class="collapsed" data-id="0d28cc0e661342a087ac51909344facf" data-parentid="007a44e3e72e41db926404cd8e1e7ef2"><td class="instance"><span class="baseIcon primitive"></span><b>extension</b></td></tr><tr class="collapsed" data-id="aba6d8138089430db5439430cd7c6479" data-parentid="0d28cc0e661342a087ac51909344facf"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>ombCategory</span></td></tr><tr class="collapsed" data-id="35e5dca556da44e5967b1952ce79237f" data-parentid="0d28cc0e661342a087ac51909344facf"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="c425acfa69ba41ca93def3fd0360073e" data-parentid="35e5dca556da44e5967b1952ce79237f"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>urn:oid:2.16.840.1.113883.6.238</span></td></tr><tr class="collapsed" data-id="df4d0c0bf5924337b6c11cff13c6bd13" data-parentid="35e5dca556da44e5967b1952ce79237f"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>2054-5</span></td></tr><tr class="collapsed" data-id="09f558ab307343df9fb71fba5800c061" data-parentid="35e5dca556da44e5967b1952ce79237f"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Black or African American</span></td></tr><tr class="collapsed" data-id="baa10f777ce94ee79f1c401d638abb0f" data-parentid="007a44e3e72e41db926404cd8e1e7ef2"><td class="instance"><span class="baseIcon primitive"></span><b>extension</b></td></tr><tr class="collapsed" data-id="5cfe1e6a941f47b69d7e8591b1c047be" data-parentid="baa10f777ce94ee79f1c401d638abb0f"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>text</span></td></tr><tr class="collapsed" data-id="260b6a7055d344c78183c64d23604e03" data-parentid="baa10f777ce94ee79f1c401d638abb0f"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>Black or African American</span></td></tr><tr class="collapsed" data-id="085cc3e6b2ea4e2aa3ab5aa05a858c87" data-parentid="007a44e3e72e41db926404cd8e1e7ef2"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-race</span></td></tr><tr class="collapsed" data-id="413a8f12b9264266b7cc5999ed1b8a6a" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>extension</b></td></tr><tr class="collapsed" data-id="eb2813fd7517451b81352c902f1c7ebc" data-parentid="413a8f12b9264266b7cc5999ed1b8a6a"><td class="instance"><span class="baseIcon primitive"></span><b>extension</b></td></tr><tr class="collapsed" data-id="1c7bc36d9afd45b5b116e2a9a399b114" data-parentid="eb2813fd7517451b81352c902f1c7ebc"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>ombCategory</span></td></tr><tr class="collapsed" data-id="5ff6d1dec6d04f25902d950545c3e7a2" data-parentid="eb2813fd7517451b81352c902f1c7ebc"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="861015a7381940aa9c9643b671adafa8" data-parentid="5ff6d1dec6d04f25902d950545c3e7a2"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>urn:oid:2.16.840.1.113883.6.238</span></td></tr><tr class="collapsed" data-id="4c89626cdc9d4a7a97314a2bb4358ac4" data-parentid="5ff6d1dec6d04f25902d950545c3e7a2"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>2186-5</span></td></tr><tr class="collapsed" data-id="16f5beca259149d6804c9491c511bc18" data-parentid="5ff6d1dec6d04f25902d950545c3e7a2"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Not Hispanic or Latino</span></td></tr><tr class="collapsed" data-id="4fb6771949b7411f9574fc05d74a92b8" data-parentid="413a8f12b9264266b7cc5999ed1b8a6a"><td class="instance"><span class="baseIcon primitive"></span><b>extension</b></td></tr><tr class="collapsed" data-id="57ae388496c346d9b46b981a71e0c017" data-parentid="4fb6771949b7411f9574fc05d74a92b8"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>text</span></td></tr><tr class="collapsed" data-id="8c66037a08ea41858d8a5ad61bd4e18a" data-parentid="4fb6771949b7411f9574fc05d74a92b8"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>Not Hispanic or Latino</span></td></tr><tr class="collapsed" data-id="06aee12eafa840c59e47eedd48b29749" data-parentid="413a8f12b9264266b7cc5999ed1b8a6a"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity</span></td></tr><tr class="collapsed" data-id="3e229fdf3d6d4b9ebac1c2b74f75ddb5" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>extension</b></td></tr><tr class="collapsed" data-id="bbb9dbbe2e214781a060088dc30e4182" data-parentid="3e229fdf3d6d4b9ebac1c2b74f75ddb5"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex</span></td></tr><tr class="collapsed" data-id="e6634b95394944a0b315fbd053ee68c0" data-parentid="3e229fdf3d6d4b9ebac1c2b74f75ddb5"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>M</span></td></tr><tr class="collapsed" data-id="bf5f3e53875942ec93b9f453b0349416" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>extension</b></td></tr><tr class="collapsed" data-id="33a3085bcd8d41ed965846e6aa2700e2" data-parentid="bf5f3e53875942ec93b9f453b0349416"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex</span></td></tr><tr class="collapsed" data-id="9dccb76dd9644f5a9953335a7c38dd78" data-parentid="bf5f3e53875942ec93b9f453b0349416"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>248153007</span></td></tr><tr class="collapsed" data-id="b7964a34e7704655a21a48d4ae1db8a5" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>extension</b></td></tr><tr class="collapsed" data-id="577b82eeb3454996a51c2e983d76be94" data-parentid="b7964a34e7704655a21a48d4ae1db8a5"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>http://hl7.org/fhir/us/military-service/StructureDefinition/military-service-veteran-status</span></td></tr><tr class="collapsed" data-id="11c7c8eec7c445d18f81d0de1ccc5146" data-parentid="b7964a34e7704655a21a48d4ae1db8a5"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>True</span></td></tr><tr class="collapsed" data-id="19b45a55cabd4e0fae929388b0990312" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>extension</b></td></tr><tr class="collapsed" data-id="29063b66c2b94620b0021aaca33765ed" data-parentid="19b45a55cabd4e0fae929388b0990312"><td class="instance"><span class="baseIcon primitive"></span><b>extension</b></td></tr><tr class="collapsed" data-id="6930c2e71c2e44e584d0dccdaf988d39" data-parentid="29063b66c2b94620b0021aaca33765ed"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>tribalAffiliation</span></td></tr><tr class="collapsed" data-id="09d59a8389eb452980dcae47772bf91a" data-parentid="29063b66c2b94620b0021aaca33765ed"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="5e63f67157844c988602269111818212" data-parentid="09d59a8389eb452980dcae47772bf91a"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="18faa415c24c4afc9d931467a0568c2b" data-parentid="5e63f67157844c988602269111818212"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/v3-TribalEntityUS</span></td></tr><tr class="collapsed" data-id="9f03666ae7734459993ddeb758273f2b" data-parentid="5e63f67157844c988602269111818212"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>187</span></td></tr><tr class="collapsed" data-id="58b56fa00d074e3992a21dfa8e13f41e" data-parentid="5e63f67157844c988602269111818212"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Paiute-Shoshone Tribe of the Fallon Reservation and Colony, Nevada</span></td></tr><tr class="collapsed" data-id="3f7858043b2c4422a3605eef42cfbea3" data-parentid="09d59a8389eb452980dcae47772bf91a"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Shoshone</span></td></tr><tr class="collapsed" data-id="5fc35f0d17f944c2a5cf47ceb7508359" data-parentid="19b45a55cabd4e0fae929388b0990312"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation</span></td></tr><tr class="collapsed" data-id="65ba7e10af8e436aafe47c543a7ee3ae" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>identifier</b></td></tr><tr class="collapsed" data-id="1e5ccf4d04964bab925230d126090681" data-parentid="65ba7e10af8e436aafe47c543a7ee3ae"><td class="instance"><span class="baseIcon primitive"></span><b>use : </b><span>usual</span></td></tr><tr class="collapsed" data-id="d3f732c4e14f4501a0c664b15d70eb21" data-parentid="65ba7e10af8e436aafe47c543a7ee3ae"><td class="instance"><span class="baseIcon primitive"></span><b>type</b></td></tr><tr class="collapsed" data-id="449fad1d54654fe4a7911cd9f5ee3b00" data-parentid="d3f732c4e14f4501a0c664b15d70eb21"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="f88c98bcb7fc44e6a359bf328ce30c00" data-parentid="449fad1d54654fe4a7911cd9f5ee3b00"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/v2-0203</span></td></tr><tr class="collapsed" data-id="f5674f65eacb4ffc873cde6cebbe00af" data-parentid="449fad1d54654fe4a7911cd9f5ee3b00"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>MR</span></td></tr><tr class="collapsed" data-id="3d66c1ca39e947d9a2d05e7f53a8decf" data-parentid="449fad1d54654fe4a7911cd9f5ee3b00"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Medical Record Number</span></td></tr><tr class="collapsed" data-id="0ceabd0562fb4bcdaa50eb177b997ce2" data-parentid="d3f732c4e14f4501a0c664b15d70eb21"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Medical Record Number</span></td></tr><tr class="collapsed" data-id="ba8d288b7661478e860f3b54e113787e" data-parentid="65ba7e10af8e436aafe47c543a7ee3ae"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://hospital.smarthealthit.org</span></td></tr><tr class="collapsed" data-id="f9808bf5b252429f90384c0554335bcf" data-parentid="65ba7e10af8e436aafe47c543a7ee3ae"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>1032702</span></td></tr><tr class="collapsed" data-id="6dc8df64b9b44f53bf70f97e7e78bfc8" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>active : </b><span>True</span></td></tr><tr class="collapsed" data-id="a07869a0d29248a4a63a12659fb2aca4" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>name</b></td></tr><tr class="collapsed" data-id="d014e7854d844a78a45be2dabf48665e" data-parentid="a07869a0d29248a4a63a12659fb2aca4"><td class="instance"><span class="baseIcon primitive"></span><b>use : </b><span>official</span></td></tr><tr class="collapsed" data-id="960c8c4877144048a071af7b7f93744d" data-parentid="a07869a0d29248a4a63a12659fb2aca4"><td class="instance"><span class="baseIcon primitive"></span><b>family : </b><span>Wolff</span></td></tr><tr class="collapsed" data-id="e5ec11f1cbe84d548d688813aafb0116" data-parentid="a07869a0d29248a4a63a12659fb2aca4"><td class="instance"><span class="baseIcon primitive"></span><b>given : </b><span>Jennifer</span></td></tr><tr class="collapsed" data-id="74fe4ee29faa4ab8b5cc2e32ad0862c2" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>name</b></td></tr><tr class="collapsed" data-id="13629361064a45e283ded29f8a9e5a0c" data-parentid="74fe4ee29faa4ab8b5cc2e32ad0862c2"><td class="instance"><span class="baseIcon primitive"></span><b>use : </b><span>usual</span></td></tr><tr class="collapsed" data-id="22b42b93f01843b3b7feb266b96689e9" data-parentid="74fe4ee29faa4ab8b5cc2e32ad0862c2"><td class="instance"><span class="baseIcon primitive"></span><b>family : </b><span>Wolff</span></td></tr><tr class="collapsed" data-id="7daf3f8f9f294a7984d04acec5adb750" data-parentid="74fe4ee29faa4ab8b5cc2e32ad0862c2"><td class="instance"><span class="baseIcon primitive"></span><b>given : </b><span>James</span></td></tr><tr class="collapsed" data-id="1c683b2d286d4e909e9dc4705db5b9ed" data-parentid="74fe4ee29faa4ab8b5cc2e32ad0862c2"><td class="instance"><span class="baseIcon primitive"></span><b>period</b></td></tr><tr class="collapsed" data-id="69526103924c48278ac94b30f85c8257" data-parentid="1c683b2d286d4e909e9dc4705db5b9ed"><td class="instance"><span class="baseIcon primitive"></span><b>start : </b><span>2016-07-22</span></td></tr><tr class="collapsed" data-id="33b256c080d946b9863b22ca5fe14f11" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>telecom</b></td></tr><tr class="collapsed" data-id="35e33f1e5f524a20ad39629dc94dec43" data-parentid="33b256c080d946b9863b22ca5fe14f11"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>phone</span></td></tr><tr class="collapsed" data-id="aeb5c8c4f13a483daea103e11a2ad5be" data-parentid="33b256c080d946b9863b22ca5fe14f11"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>555-555-5555</span></td></tr><tr class="collapsed" data-id="666c85d03ae34b559ac7ead0014ed6ac" data-parentid="33b256c080d946b9863b22ca5fe14f11"><td class="instance"><span class="baseIcon primitive"></span><b>use : </b><span>home</span></td></tr><tr class="collapsed" data-id="ebc409e5a08c4f659d700eb70ac77f60" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>telecom</b></td></tr><tr class="collapsed" data-id="ce7592cb1d914c90857129c739ebbe87" data-parentid="ebc409e5a08c4f659d700eb70ac77f60"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>email</span></td></tr><tr class="collapsed" data-id="c2b323d4bafb490cb0e5c48ad3505cfa" data-parentid="ebc409e5a08c4f659d700eb70ac77f60"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>james.wolff@example.com</span></td></tr><tr class="collapsed" data-id="1e51c1980d7a4988b4de8c24aa30de30" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>gender : </b><span>male</span></td></tr><tr class="collapsed" data-id="1f3b8a57347e42de8c13ffdb5e39b8db" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>birthDate : </b><span>1961-07-16</span></td></tr><tr class="collapsed" data-id="7c6893bc0bf445e09226f3cf0090f97e" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>deceased : </b><span>False</span></td></tr><tr class="collapsed" data-id="ab8dd47bb96041b08b281d35a807b86f" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>address</b></td></tr><tr class="collapsed" data-id="1ef2849d70f441bcb8975cce520d93da" data-parentid="ab8dd47bb96041b08b281d35a807b86f"><td class="instance"><span class="baseIcon primitive"></span><b>use : </b><span>old</span></td></tr><tr class="collapsed" data-id="df2c52b6571d49be9f34a208f70aa274" data-parentid="ab8dd47bb96041b08b281d35a807b86f"><td class="instance"><span class="baseIcon primitive"></span><b>line : </b><span>49 MEADOW ST</span></td></tr><tr class="collapsed" data-id="909a668b57f046e4ae7177d705cebb24" data-parentid="ab8dd47bb96041b08b281d35a807b86f"><td class="instance"><span class="baseIcon primitive"></span><b>city : </b><span>MIAMI</span></td></tr><tr class="collapsed" data-id="18b1567312544774a7b82b24231d88ce" data-parentid="ab8dd47bb96041b08b281d35a807b86f"><td class="instance"><span class="baseIcon primitive"></span><b>state : </b><span>FL</span></td></tr><tr class="collapsed" data-id="8894ac6c8d384fa1868256a3625ad0db" data-parentid="ab8dd47bb96041b08b281d35a807b86f"><td class="instance"><span class="baseIcon primitive"></span><b>postalCode : </b><span>74047</span></td></tr><tr class="collapsed" data-id="d72d5758c4634608bba883acec0412cd" data-parentid="ab8dd47bb96041b08b281d35a807b86f"><td class="instance"><span class="baseIcon primitive"></span><b>country : </b><span>US</span></td></tr><tr class="collapsed" data-id="9a4b003c2d7343469c94898b0a04091c" data-parentid="ab8dd47bb96041b08b281d35a807b86f"><td class="instance"><span class="baseIcon primitive"></span><b>period</b></td></tr><tr class="collapsed" data-id="16183755e9d148c59746f71ce9487a27" data-parentid="9a4b003c2d7343469c94898b0a04091c"><td class="instance"><span class="baseIcon primitive"></span><b>start : </b><span>2016-12-06</span></td></tr><tr class="collapsed" data-id="8a4b84ea931846fb9b44253aedad4261" data-parentid="9a4b003c2d7343469c94898b0a04091c"><td class="instance"><span class="baseIcon primitive"></span><b>end : </b><span>2020-07-22</span></td></tr><tr class="collapsed" data-id="716f17fcd9e343ed87428a827cf81ea2" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>address</b></td></tr><tr class="collapsed" data-id="cf981b89d8f84cda993528ca11b8567a" data-parentid="716f17fcd9e343ed87428a827cf81ea2"><td class="instance"><span class="baseIcon primitive"></span><b>line : </b><span>183 MOUNTAIN VIEW ST</span></td></tr><tr class="collapsed" data-id="40cb661d50514c61a0fe05a9160636ac" data-parentid="716f17fcd9e343ed87428a827cf81ea2"><td class="instance"><span class="baseIcon primitive"></span><b>city : </b><span>MIAMI</span></td></tr><tr class="collapsed" data-id="c9d651b92b4d4c2f957c89c277337782" data-parentid="716f17fcd9e343ed87428a827cf81ea2"><td class="instance"><span class="baseIcon primitive"></span><b>state : </b><span>FL</span></td></tr><tr class="collapsed" data-id="405bd817d92f4846875979b9bc506328" data-parentid="716f17fcd9e343ed87428a827cf81ea2"><td class="instance"><span class="baseIcon primitive"></span><b>postalCode : </b><span>74048</span></td></tr><tr class="collapsed" data-id="182a03ef60484af4bb94194664ea8004" data-parentid="716f17fcd9e343ed87428a827cf81ea2"><td class="instance"><span class="baseIcon primitive"></span><b>country : </b><span>US</span></td></tr><tr class="collapsed" data-id="2f3403055ef04f458b202858d5524857" data-parentid="716f17fcd9e343ed87428a827cf81ea2"><td class="instance"><span class="baseIcon primitive"></span><b>period</b></td></tr><tr class="collapsed" data-id="94b26f2243174d1b96418b94cef9686a" data-parentid="2f3403055ef04f458b202858d5524857"><td class="instance"><span class="baseIcon primitive"></span><b>start : </b><span>2020-07-22</span></td></tr><tr class="collapsed" data-id="d0b684ff077f47d2a8affde22ebede8c" data-parentid="bc7c7c3656ca44208e70cf0dc5f80259"><td class="instance"><span class="baseIcon primitive"></span><b>communication</b></td></tr><tr class="collapsed" data-id="62109172e1d64a1a9871addab81a23e2" data-parentid="d0b684ff077f47d2a8affde22ebede8c"><td class="instance"><span class="baseIcon primitive"></span><b>language</b></td></tr><tr class="collapsed" data-id="de6dcdc1a9984337bfa31aadaef219db" data-parentid="62109172e1d64a1a9871addab81a23e2"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="dcdbb9dbb519421daf77fe850ad12732" data-parentid="de6dcdc1a9984337bfa31aadaef219db"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>urn:ietf:bcp:47</span></td></tr><tr class="collapsed" data-id="6f743b81242f43fb94cbcdd92226494e" data-parentid="de6dcdc1a9984337bfa31aadaef219db"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>en</span></td></tr><tr class="collapsed" data-id="b60f8bdfd33541c0b2a5fa20bf75b1bb" data-parentid="de6dcdc1a9984337bfa31aadaef219db"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>English</span></td></tr><tr class="collapsed" data-id="a893fec00a3343679cb9681670d803c6" data-parentid="62109172e1d64a1a9871addab81a23e2"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>English</span></td></tr><tr class="collapsed" data-id="786502f9e18a449da0368b0e20577df8" data-parentid="d0b684ff077f47d2a8affde22ebede8c"><td class="instance"><span class="baseIcon primitive"></span><b>preferred : </b><span>True</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable95ced889221440b2b243913f94becde1 = new InstanceTree();
+resourceTreeTable95ced889221440b2b243913f94becde1.init("95ced889221440b2b243913f94becde1");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="e711fe0e-c84a-48dc-9b39-6262e816e96c">
+    <div class="path"><table><tbody><tr><td>Patient.<span class="field">id[0]</span></td><td>bh-patient-example</td></tr><tr><td>Patient.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|6.1.0</td></tr><tr><td>Patient.extension[0].extension[0].<span class="field">url[0]</span></td><td>ombCategory</td></tr><tr><td>Patient.extension[0].extension[0].value[0].<span class="field">system[0]</span></td><td>urn:oid:2.16.840.1.113883.6.238</td></tr><tr><td>Patient.extension[0].extension[0].value[0].<span class="field">code[0]</span></td><td>2054-5</td></tr><tr><td>Patient.extension[0].extension[0].value[0].<span class="field">display[0]</span></td><td>Black or African American</td></tr><tr><td>Patient.extension[0].extension[1].<span class="field">url[0]</span></td><td>text</td></tr><tr><td>Patient.extension[0].extension[1].<span class="field">value[0]</span></td><td>Black or African American</td></tr><tr><td>Patient.extension[0].<span class="field">url[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-race</td></tr><tr><td>Patient.extension[1].extension[0].<span class="field">url[0]</span></td><td>ombCategory</td></tr><tr><td>Patient.extension[1].extension[0].value[0].<span class="field">system[0]</span></td><td>urn:oid:2.16.840.1.113883.6.238</td></tr><tr><td>Patient.extension[1].extension[0].value[0].<span class="field">code[0]</span></td><td>2186-5</td></tr><tr><td>Patient.extension[1].extension[0].value[0].<span class="field">display[0]</span></td><td>Not Hispanic or Latino</td></tr><tr><td>Patient.extension[1].extension[1].<span class="field">url[0]</span></td><td>text</td></tr><tr><td>Patient.extension[1].extension[1].<span class="field">value[0]</span></td><td>Not Hispanic or Latino</td></tr><tr><td>Patient.extension[1].<span class="field">url[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity</td></tr><tr><td>Patient.extension[2].<span class="field">url[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex</td></tr><tr><td>Patient.extension[2].<span class="field">value[0]</span></td><td>M</td></tr><tr><td>Patient.extension[3].<span class="field">url[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex</td></tr><tr><td>Patient.extension[3].<span class="field">value[0]</span></td><td>248153007</td></tr><tr><td>Patient.extension[4].<span class="field">url[0]</span></td><td>http://hl7.org/fhir/us/military-service/StructureDefinition/military-service-veteran-status</td></tr><tr><td>Patient.extension[4].<span class="field">value[0]</span></td><td>True</td></tr><tr><td>Patient.extension[5].extension[0].<span class="field">url[0]</span></td><td>tribalAffiliation</td></tr><tr><td>Patient.extension[5].extension[0].value[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/v3-TribalEntityUS</td></tr><tr><td>Patient.extension[5].extension[0].value[0].coding[0].<span class="field">code[0]</span></td><td>187</td></tr><tr><td>Patient.extension[5].extension[0].value[0].coding[0].<span class="field">display[0]</span></td><td>Paiute-Shoshone Tribe of the Fallon Reservation and Colony, Nevada</td></tr><tr><td>Patient.extension[5].extension[0].value[0].<span class="field">text[0]</span></td><td>Shoshone</td></tr><tr><td>Patient.extension[5].<span class="field">url[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation</td></tr><tr><td>Patient.identifier[0].<span class="field">use[0]</span></td><td>usual</td></tr><tr><td>Patient.identifier[0].type[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/v2-0203</td></tr><tr><td>Patient.identifier[0].type[0].coding[0].<span class="field">code[0]</span></td><td>MR</td></tr><tr><td>Patient.identifier[0].type[0].coding[0].<span class="field">display[0]</span></td><td>Medical Record Number</td></tr><tr><td>Patient.identifier[0].type[0].<span class="field">text[0]</span></td><td>Medical Record Number</td></tr><tr><td>Patient.identifier[0].<span class="field">system[0]</span></td><td>http://hospital.smarthealthit.org</td></tr><tr><td>Patient.identifier[0].<span class="field">value[0]</span></td><td>1032702</td></tr><tr><td>Patient.<span class="field">active[0]</span></td><td>True</td></tr><tr><td>Patient.name[0].<span class="field">use[0]</span></td><td>official</td></tr><tr><td>Patient.name[0].<span class="field">family[0]</span></td><td>Wolff</td></tr><tr><td>Patient.name[0].<span class="field">given[0]</span></td><td>Jennifer</td></tr><tr><td>Patient.name[1].<span class="field">use[0]</span></td><td>usual</td></tr><tr><td>Patient.name[1].<span class="field">family[0]</span></td><td>Wolff</td></tr><tr><td>Patient.name[1].<span class="field">given[0]</span></td><td>James</td></tr><tr><td>Patient.name[1].period[0].<span class="field">start[0]</span></td><td>2016-07-22</td></tr><tr><td>Patient.telecom[0].<span class="field">system[0]</span></td><td>phone</td></tr><tr><td>Patient.telecom[0].<span class="field">value[0]</span></td><td>555-555-5555</td></tr><tr><td>Patient.telecom[0].<span class="field">use[0]</span></td><td>home</td></tr><tr><td>Patient.telecom[1].<span class="field">system[0]</span></td><td>email</td></tr><tr><td>Patient.telecom[1].<span class="field">value[0]</span></td><td>james.wolff@example.com</td></tr><tr><td>Patient.<span class="field">gender[0]</span></td><td>male</td></tr><tr><td>Patient.<span class="field">birthDate[0]</span></td><td>1961-07-16</td></tr><tr><td>Patient.<span class="field">deceased[0]</span></td><td>False</td></tr><tr><td>Patient.address[0].<span class="field">use[0]</span></td><td>old</td></tr><tr><td>Patient.address[0].<span class="field">line[0]</span></td><td>49 MEADOW ST</td></tr><tr><td>Patient.address[0].<span class="field">city[0]</span></td><td>MIAMI</td></tr><tr><td>Patient.address[0].<span class="field">state[0]</span></td><td>FL</td></tr><tr><td>Patient.address[0].<span class="field">postalCode[0]</span></td><td>74047</td></tr><tr><td>Patient.address[0].<span class="field">country[0]</span></td><td>US</td></tr><tr><td>Patient.address[0].period[0].<span class="field">start[0]</span></td><td>2016-12-06</td></tr><tr><td>Patient.address[0].period[0].<span class="field">end[0]</span></td><td>2020-07-22</td></tr><tr><td>Patient.address[1].<span class="field">line[0]</span></td><td>183 MOUNTAIN VIEW ST</td></tr><tr><td>Patient.address[1].<span class="field">city[0]</span></td><td>MIAMI</td></tr><tr><td>Patient.address[1].<span class="field">state[0]</span></td><td>FL</td></tr><tr><td>Patient.address[1].<span class="field">postalCode[0]</span></td><td>74048</td></tr><tr><td>Patient.address[1].<span class="field">country[0]</span></td><td>US</td></tr><tr><td>Patient.address[1].period[0].<span class="field">start[0]</span></td><td>2020-07-22</td></tr><tr><td>Patient.communication[0].language[0].coding[0].<span class="field">system[0]</span></td><td>urn:ietf:bcp:47</td></tr><tr><td>Patient.communication[0].language[0].coding[0].<span class="field">code[0]</span></td><td>en</td></tr><tr><td>Patient.communication[0].language[0].coding[0].<span class="field">display[0]</span></td><td>English</td></tr><tr><td>Patient.communication[0].language[0].<span class="field">text[0]</span></td><td>English</td></tr><tr><td>Patient.communication[0].<span class="field">preferred[0]</span></td><td>True</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

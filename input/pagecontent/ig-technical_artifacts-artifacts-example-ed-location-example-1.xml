@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | example-ed-location-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-ed-location-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="example-location-ed-location-example">Example Location: ed-location-example</h2>
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#152220dc-4387-48a2-86b4-aa1498aa2e0e" aria-controls="152220dc-4387-48a2-86b4-aa1498aa2e0e" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#757ce6e4-71bd-48f7-ad4a-73ded54a5c56" aria-controls="757ce6e4-71bd-48f7-ad4a-73ded54a5c56" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#55ae1928-0e95-4483-a0d4-63ef5f7b96c0" aria-controls="55ae1928-0e95-4483-a0d4-63ef5f7b96c0" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#4e8cfddb-7d71-4335-a30e-aa81399edfde" aria-controls="4e8cfddb-7d71-4335-a30e-aa81399edfde" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="152220dc-4387-48a2-86b4-aa1498aa2e0e">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.resourceType" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Location</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.id" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">ed-location-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.meta" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">meta</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.meta.profile" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">profile</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-location|6.1.0</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.identifier" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">identifier</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.identifier.system" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://www.acme.org/location</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.identifier.value" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">value</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">29</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.status" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">status</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">active</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.name" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">name</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Florida General Hospital - Emergency Department</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.description" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">description</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Florida General Hospital - Emergency Department</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.type" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">type</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.type.coding" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.type.coding.system" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/v3-RoleCode</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.type.coding.code" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">ER</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.type.coding.display" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Emergency room</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.type.text" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Emergency room</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.telecom" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">telecom</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.telecom.system" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">phone</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.telecom.value" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">value</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">(+1) 734-677-7777</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.address" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">address</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.address.line" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">line</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">1234 Beach Street</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.address.city" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">city</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Miami</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.address.state" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">state</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">FL</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.address.postalCode" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">postalCode</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">33101</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.address.country" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">country</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">USA</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="757ce6e4-71bd-48f7-ad4a-73ded54a5c56">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">Location</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.id" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">ed-location-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.meta" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.meta.profile" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-location|6.1.0</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.identifier" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">identifier</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.identifier.system" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://www.acme.org/location</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.identifier.value" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">29</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">identifier</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.status" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">active</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.name" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">name</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Florida General Hospital - Emergency Department</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.description" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">description</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Florida General Hospital - Emergency Department</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.type" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">type</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.type.coding" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.type.coding.system" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/v3-RoleCode</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.type.coding.code" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">ER</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.type.coding.display" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Emergency room</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.type.text" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Emergency room</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">type</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.telecom" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">telecom</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.telecom.system" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">phone</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.telecom.value" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">(+1) 734-677-7777</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">telecom</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.address" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">address</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.address.line" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">line</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">1234 Beach Street</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.address.city" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">city</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Miami</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.address.state" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">state</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">FL</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.address.postalCode" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">postalCode</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">33101</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-location.json&amp;tab=details#Location.address.country" title="US Core Location Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-location.json" target="_blank">country</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">USA</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">address</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Location</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="55ae1928-0e95-4483-a0d4-63ef5f7b96c0">
+    <div class="stu3-treetable" id="15f11eeabb934da783f2d7ce0474894e" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="783516cd893c43049125af6a6d9f42d1"><td class="instance"><span class="baseIcon primitive"></span><b>Location</b></td></tr><tr class="collapsed" data-id="a3f6778571154752b7054d35c5c23680" data-parentid="783516cd893c43049125af6a6d9f42d1"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>ed-location-example-1</span></td></tr><tr class="collapsed" data-id="36bf7746b6cc4b2bbc7de129d3423ddb" data-parentid="783516cd893c43049125af6a6d9f42d1"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="74aa788aba414728b086efa424e82c5a" data-parentid="36bf7746b6cc4b2bbc7de129d3423ddb"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-location|6.1.0</span></td></tr><tr class="collapsed" data-id="227d3a936f6b4d87b65258dd02d68c56" data-parentid="783516cd893c43049125af6a6d9f42d1"><td class="instance"><span class="baseIcon primitive"></span><b>identifier</b></td></tr><tr class="collapsed" data-id="f8790aa85c1e4938bb34505e06c271ef" data-parentid="227d3a936f6b4d87b65258dd02d68c56"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://www.acme.org/location</span></td></tr><tr class="collapsed" data-id="094bf3986b4545ea84bba3fb30ea6e8a" data-parentid="227d3a936f6b4d87b65258dd02d68c56"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>29</span></td></tr><tr class="collapsed" data-id="42506fb76af54bdd85dd3bffb4bf1a9c" data-parentid="783516cd893c43049125af6a6d9f42d1"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>active</span></td></tr><tr class="collapsed" data-id="1e9c341d4e424eaa86507822dfaa422b" data-parentid="783516cd893c43049125af6a6d9f42d1"><td class="instance"><span class="baseIcon primitive"></span><b>name : </b><span>Florida General Hospital - Emergency Department</span></td></tr><tr class="collapsed" data-id="15149da19a52486185bc2e18b56f8c6d" data-parentid="783516cd893c43049125af6a6d9f42d1"><td class="instance"><span class="baseIcon primitive"></span><b>description : </b><span>Florida General Hospital - Emergency Department</span></td></tr><tr class="collapsed" data-id="3627311592f3486ab0739d0e85463d22" data-parentid="783516cd893c43049125af6a6d9f42d1"><td class="instance"><span class="baseIcon primitive"></span><b>type</b></td></tr><tr class="collapsed" data-id="77e03b7541b44f908452a535c9906346" data-parentid="3627311592f3486ab0739d0e85463d22"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="c6dddf90fd8f4f62bb2bd7f2811829ad" data-parentid="77e03b7541b44f908452a535c9906346"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/v3-RoleCode</span></td></tr><tr class="collapsed" data-id="197e12f6b9e64b059c413e2ef937707e" data-parentid="77e03b7541b44f908452a535c9906346"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>ER</span></td></tr><tr class="collapsed" data-id="c0e3e6e0ae9d4b2483edce522dc21107" data-parentid="77e03b7541b44f908452a535c9906346"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Emergency room</span></td></tr><tr class="collapsed" data-id="544eaf2bb2ba4d43b1b9eab41ac80597" data-parentid="3627311592f3486ab0739d0e85463d22"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Emergency room</span></td></tr><tr class="collapsed" data-id="ef33383c8a474c5cb98c93c9ed54edf3" data-parentid="783516cd893c43049125af6a6d9f42d1"><td class="instance"><span class="baseIcon primitive"></span><b>telecom</b></td></tr><tr class="collapsed" data-id="be077c286b68449ea9078b12134395c3" data-parentid="ef33383c8a474c5cb98c93c9ed54edf3"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>phone</span></td></tr><tr class="collapsed" data-id="4b1b44cda29b46fabc57cf574f2a7253" data-parentid="ef33383c8a474c5cb98c93c9ed54edf3"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>(+1) 734-677-7777</span></td></tr><tr class="collapsed" data-id="455c66d202f341d88cc94b8b0762cc14" data-parentid="783516cd893c43049125af6a6d9f42d1"><td class="instance"><span class="baseIcon primitive"></span><b>address</b></td></tr><tr class="collapsed" data-id="cf5ad163fc214c308e26047d3517b225" data-parentid="455c66d202f341d88cc94b8b0762cc14"><td class="instance"><span class="baseIcon primitive"></span><b>line : </b><span>1234 Beach Street</span></td></tr><tr class="collapsed" data-id="a600021851c848b1a0af2d08fd55afb9" data-parentid="455c66d202f341d88cc94b8b0762cc14"><td class="instance"><span class="baseIcon primitive"></span><b>city : </b><span>Miami</span></td></tr><tr class="collapsed" data-id="f979ca143206427bb87570b191b03b05" data-parentid="455c66d202f341d88cc94b8b0762cc14"><td class="instance"><span class="baseIcon primitive"></span><b>state : </b><span>FL</span></td></tr><tr class="collapsed" data-id="aed7c306dfc345e4956eaecadc1b0cd2" data-parentid="455c66d202f341d88cc94b8b0762cc14"><td class="instance"><span class="baseIcon primitive"></span><b>postalCode : </b><span>33101</span></td></tr><tr class="collapsed" data-id="aa3ac109c2924bb79297cbdfb5b31fe0" data-parentid="455c66d202f341d88cc94b8b0762cc14"><td class="instance"><span class="baseIcon primitive"></span><b>country : </b><span>USA</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable15f11eeabb934da783f2d7ce0474894e = new InstanceTree();
+resourceTreeTable15f11eeabb934da783f2d7ce0474894e.init("15f11eeabb934da783f2d7ce0474894e");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="4e8cfddb-7d71-4335-a30e-aa81399edfde">
+    <div class="path"><table><tbody><tr><td>Location.<span class="field">id[0]</span></td><td>ed-location-example-1</td></tr><tr><td>Location.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-location|6.1.0</td></tr><tr><td>Location.identifier[0].<span class="field">system[0]</span></td><td>http://www.acme.org/location</td></tr><tr><td>Location.identifier[0].<span class="field">value[0]</span></td><td>29</td></tr><tr><td>Location.<span class="field">status[0]</span></td><td>active</td></tr><tr><td>Location.<span class="field">name[0]</span></td><td>Florida General Hospital - Emergency Department</td></tr><tr><td>Location.<span class="field">description[0]</span></td><td>Florida General Hospital - Emergency Department</td></tr><tr><td>Location.type[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td></tr><tr><td>Location.type[0].coding[0].<span class="field">code[0]</span></td><td>ER</td></tr><tr><td>Location.type[0].coding[0].<span class="field">display[0]</span></td><td>Emergency room</td></tr><tr><td>Location.type[0].<span class="field">text[0]</span></td><td>Emergency room</td></tr><tr><td>Location.telecom[0].<span class="field">system[0]</span></td><td>phone</td></tr><tr><td>Location.telecom[0].<span class="field">value[0]</span></td><td>(+1) 734-677-7777</td></tr><tr><td>Location.address[0].<span class="field">line[0]</span></td><td>1234 Beach Street</td></tr><tr><td>Location.address[0].<span class="field">city[0]</span></td><td>Miami</td></tr><tr><td>Location.address[0].<span class="field">state[0]</span></td><td>FL</td></tr><tr><td>Location.address[0].<span class="field">postalCode[0]</span></td><td>33101</td></tr><tr><td>Location.address[0].<span class="field">country[0]</span></td><td>USA</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "resourceType": "MedicationDispense",
+  "id": "bupropion-dispense-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense|6.1.0"
+    ]
+  },
+  "status": "completed",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "code": "993532",
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "display": "bupropion hydrochloride 200 MG"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "quantity": {
+    "value": 30,
+    "system": "http://unitsofmeasure.org",
+    "unit": "pills"
+  },
+  "whenHandedOver": "2016-12-08T06:38:52Z",
+  "dosageInstruction": [
+    {
+      "text": "200 mg daily"
+    }
+  ]
+}

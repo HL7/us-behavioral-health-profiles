@@ -2,9 +2,14 @@
   "fhirVersions": [
     "4.0.1"
   ],
+  "name": "fhir.onc.bhp",
+  "version": "0.2.0",
+  "description": "US Behavioral Health Profiles Implementation Guide, published by ONC",
+  "author": "Next Level Health Innovations",
   "dependencies": {
     "hl7.fhir.us.core": "6.1.0",
     "hl7.fhir.us.sdoh-clinicalcare": "2.3.0",
     "hl7.fhir.us.military-service": "1.0.0"
-  }
+  },
+  "jurisdiction": "urn:iso:std:iso:3166#US"
 }

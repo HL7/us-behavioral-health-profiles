@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | example-obs-encounter-example-2 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-obs-encounter-example-2</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="example-encounter-obs-encounter-example">Example Encounter: obs-encounter-example</h2>
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#3a11f384-e8cb-4143-a98a-71c7cd011172" aria-controls="3a11f384-e8cb-4143-a98a-71c7cd011172" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#21ddd5b0-f290-494a-b7a9-e80ef0f07d4f" aria-controls="21ddd5b0-f290-494a-b7a9-e80ef0f07d4f" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#936142b7-e5cb-4d5b-8228-a7b03e6d6ce0" aria-controls="936142b7-e5cb-4d5b-8228-a7b03e6d6ce0" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#9bfdbc8b-ebd4-4d15-b12e-cc1c9321a2c8" aria-controls="9bfdbc8b-ebd4-4d15-b12e-cc1c9321a2c8" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="3a11f384-e8cb-4143-a98a-71c7cd011172">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.resourceType" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Encounter</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.id" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">obs-encounter-example-2</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.meta" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">meta</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.meta.profile" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">profile</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.identifier" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">identifier</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.identifier.use" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">use</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">usual</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.identifier.system" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">urn:oid:2.16.840.1.113883.19.5.1.698.8</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.identifier.value" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">value</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">20005104252</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.status" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">status</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">finished</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.class" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">class</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.class.system" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/v3-ActCode</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.class.code" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">OBSENC</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.class.display" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">observation encounter</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.type" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">type</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.type.coding" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.type.coding.system" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://snomed.info/sct</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.type.coding.code" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">448951000124107</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.type.coding.display" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Admission to observation unit (procedure)</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.type.text" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Observation bed</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.subject" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">subject</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.subject.reference" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Patient/bh-patient-example</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.subject.display" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">James Wolff</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.period" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">period</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.period.start" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">start</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2024-02-02T03:02:00+00:00</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.period.end" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">end</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2024-02-02T17:00:00+00:00</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.diagnosis" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">diagnosis</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.diagnosis.condition" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">condition</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.diagnosis.condition.reference" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Condition/panic-attack-condition-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.diagnosis.condition.display" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Panic Attack</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">location</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.location" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">location</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.location.reference" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Location/obs-location-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.location.display" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Hospital bed - OBSERVATION</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.physicalType" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">physicalType</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.physicalType.coding" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.physicalType.coding.system" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/location-physical-type</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.physicalType.coding.code" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">wa</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.physicalType.coding.display" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Ward</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.period" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">period</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.period.start" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">start</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2024-02-01T21:02:00+00:00</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.period.end" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">end</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2024-02-02T03:00:00+00:00</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.partOf" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">partOf</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.partOf.reference" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Encounter/discharge-encounter-example-3</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.partOf.identifier" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">identifier</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.partOf.identifier.use" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">use</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">usual</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.partOf.identifier.system" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">urn:oid:2.16.840.1.113883.19.5.1.698.8</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.partOf.identifier.value" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">value</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">40005104253</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="21ddd5b0-f290-494a-b7a9-e80ef0f07d4f">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">Encounter</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.id" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">obs-encounter-example-2</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.meta" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.meta.profile" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.identifier" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">identifier</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.identifier.use" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">use</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">usual</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.identifier.system" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">urn:oid:2.16.840.1.113883.19.5.1.698.8</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.identifier.value" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">20005104252</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">identifier</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.status" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">finished</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.class" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">class</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.class.system" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/v3-ActCode</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.class.code" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">OBSENC</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.class.display" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">observation encounter</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">class</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.type" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">type</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.type.coding" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.type.coding.system" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://snomed.info/sct</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.type.coding.code" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">448951000124107</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.type.coding.display" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Admission to observation unit (procedure)</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.type.text" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Observation bed</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">type</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.subject" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.subject.reference" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Patient/bh-patient-example</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.subject.display" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">James Wolff</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.period" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">period</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.period.start" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">start</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2024-02-02T03:02:00+00:00</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.period.end" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">end</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2024-02-02T17:00:00+00:00</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">period</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.diagnosis" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">diagnosis</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.diagnosis.condition" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">condition</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.diagnosis.condition.reference" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Condition/panic-attack-condition-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.diagnosis.condition.display" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Panic Attack</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">condition</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">diagnosis</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">location</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.location" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">location</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.location.reference" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Location/obs-location-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.location.display" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Hospital bed - OBSERVATION</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">location</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.physicalType" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">physicalType</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.physicalType.coding" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.physicalType.coding.system" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/location-physical-type</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.physicalType.coding.code" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">wa</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.physicalType.coding.display" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Ward</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">physicalType</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.period" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">period</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.period.start" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">start</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2024-02-01T21:02:00+00:00</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.location.period.end" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">end</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2024-02-02T03:00:00+00:00</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">period</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">location</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.partOf" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">partOf</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.partOf.reference" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Encounter/discharge-encounter-example-3</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.partOf.identifier" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">identifier</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.partOf.identifier.use" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">use</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">usual</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.partOf.identifier.system" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">urn:oid:2.16.840.1.113883.19.5.1.698.8</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-encounter.json&amp;tab=details#Encounter.partOf.identifier.value" title="US Core Encounter Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-encounter.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">40005104253</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">identifier</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">partOf</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Encounter</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="936142b7-e5cb-4d5b-8228-a7b03e6d6ce0">
+    <div class="stu3-treetable" id="089be6da1a8e4f7a9a9985eb2c8908e7" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="7eb525f50af44c30acca0858e286ff85"><td class="instance"><span class="baseIcon primitive"></span><b>Encounter</b></td></tr><tr class="collapsed" data-id="2b1d72118ed042f98f9958c2abc81fc0" data-parentid="7eb525f50af44c30acca0858e286ff85"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>obs-encounter-example-2</span></td></tr><tr class="collapsed" data-id="48eabac6948d42fbb79803730f597f81" data-parentid="7eb525f50af44c30acca0858e286ff85"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="b123fa5f38f6498f93737c0c2172cac3" data-parentid="48eabac6948d42fbb79803730f597f81"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0</span></td></tr><tr class="collapsed" data-id="6dc8fced57ef41db9edeaec00bd86124" data-parentid="7eb525f50af44c30acca0858e286ff85"><td class="instance"><span class="baseIcon primitive"></span><b>identifier</b></td></tr><tr class="collapsed" data-id="2a5d9800319840408f712c2393838176" data-parentid="6dc8fced57ef41db9edeaec00bd86124"><td class="instance"><span class="baseIcon primitive"></span><b>use : </b><span>usual</span></td></tr><tr class="collapsed" data-id="a741d062eb4949f283be66ae148b048d" data-parentid="6dc8fced57ef41db9edeaec00bd86124"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>urn:oid:2.16.840.1.113883.19.5.1.698.8</span></td></tr><tr class="collapsed" data-id="f9977ead16874dc1909e9d9871dfccec" data-parentid="6dc8fced57ef41db9edeaec00bd86124"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>20005104252</span></td></tr><tr class="collapsed" data-id="22f5e617c2d2414f9b719dcf97d88dac" data-parentid="7eb525f50af44c30acca0858e286ff85"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>finished</span></td></tr><tr class="collapsed" data-id="9dd6a38d7d374b40817ba99d2c97251c" data-parentid="7eb525f50af44c30acca0858e286ff85"><td class="instance"><span class="baseIcon primitive"></span><b>class</b></td></tr><tr class="collapsed" data-id="b74d4410540744eaa356b94d0e059ddc" data-parentid="9dd6a38d7d374b40817ba99d2c97251c"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/v3-ActCode</span></td></tr><tr class="collapsed" data-id="31cd69322c7d4a868452bee8d80f4f26" data-parentid="9dd6a38d7d374b40817ba99d2c97251c"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>OBSENC</span></td></tr><tr class="collapsed" data-id="716c248112b34109ba311c93d8003c15" data-parentid="9dd6a38d7d374b40817ba99d2c97251c"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>observation encounter</span></td></tr><tr class="collapsed" data-id="dfebf3f6bb7743ce8589cce1bf63dbc9" data-parentid="7eb525f50af44c30acca0858e286ff85"><td class="instance"><span class="baseIcon primitive"></span><b>type</b></td></tr><tr class="collapsed" data-id="2fcd5689ddf84c47a3599be160d8d1ba" data-parentid="dfebf3f6bb7743ce8589cce1bf63dbc9"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="1a2d28baf977440dac6c17f0291f19f7" data-parentid="2fcd5689ddf84c47a3599be160d8d1ba"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://snomed.info/sct</span></td></tr><tr class="collapsed" data-id="4e9aaaf366c14cf58cc51b76cdec8966" data-parentid="2fcd5689ddf84c47a3599be160d8d1ba"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>448951000124107</span></td></tr><tr class="collapsed" data-id="c8418b7abf3a4f8cb3faebfc833585f6" data-parentid="2fcd5689ddf84c47a3599be160d8d1ba"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Admission to observation unit (procedure)</span></td></tr><tr class="collapsed" data-id="b7f9b6e699b74692bfacd663e112fad7" data-parentid="dfebf3f6bb7743ce8589cce1bf63dbc9"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Observation bed</span></td></tr><tr class="collapsed" data-id="2e8f1adee5674fac80c7a2ee761951cd" data-parentid="7eb525f50af44c30acca0858e286ff85"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="7cbe8c33050a449cadd7bcad1c1c448c" data-parentid="2e8f1adee5674fac80c7a2ee761951cd"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="6ac3488d3959422e9f7dc6950d23faf4" data-parentid="2e8f1adee5674fac80c7a2ee761951cd"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="5f2f8800a8a24b7db5320e2ab7bab7f2" data-parentid="7eb525f50af44c30acca0858e286ff85"><td class="instance"><span class="baseIcon primitive"></span><b>period</b></td></tr><tr class="collapsed" data-id="397fa5452dcc4625a4d9ce776828aef5" data-parentid="5f2f8800a8a24b7db5320e2ab7bab7f2"><td class="instance"><span class="baseIcon primitive"></span><b>start : </b><span>2024-02-02T03:02:00+00:00</span></td></tr><tr class="collapsed" data-id="4ca2fd8d33cc4fbaa2c91b1ba885c25b" data-parentid="5f2f8800a8a24b7db5320e2ab7bab7f2"><td class="instance"><span class="baseIcon primitive"></span><b>end : </b><span>2024-02-02T17:00:00+00:00</span></td></tr><tr class="collapsed" data-id="327bf5e96e2e47f0853e668175fcd548" data-parentid="7eb525f50af44c30acca0858e286ff85"><td class="instance"><span class="baseIcon primitive"></span><b>diagnosis</b></td></tr><tr class="collapsed" data-id="6b63b66b6da945a6aae1044f7677d461" data-parentid="327bf5e96e2e47f0853e668175fcd548"><td class="instance"><span class="baseIcon primitive"></span><b>condition</b></td></tr><tr class="collapsed" data-id="62ae76b51c4d4e98b45b845bb3dff2c7" data-parentid="6b63b66b6da945a6aae1044f7677d461"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Condition/panic-attack-condition-example-1</span></td></tr><tr class="collapsed" data-id="d445db30a22843618e745a2850efd1a5" data-parentid="6b63b66b6da945a6aae1044f7677d461"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Panic Attack</span></td></tr><tr class="collapsed" data-id="2340529e98314d73b1bbb7189801059a" data-parentid="7eb525f50af44c30acca0858e286ff85"><td class="instance"><span class="baseIcon primitive"></span><b>location</b></td></tr><tr class="collapsed" data-id="4b95991ea13a45e8a2060e5e8a3072dd" data-parentid="2340529e98314d73b1bbb7189801059a"><td class="instance"><span class="baseIcon primitive"></span><b>location</b></td></tr><tr class="collapsed" data-id="6798f0dfabf34c5991b5f6c92bc0dde2" data-parentid="4b95991ea13a45e8a2060e5e8a3072dd"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Location/obs-location-example-1</span></td></tr><tr class="collapsed" data-id="91a7139b07b94ad2a618d7f16547edff" data-parentid="4b95991ea13a45e8a2060e5e8a3072dd"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Hospital bed - OBSERVATION</span></td></tr><tr class="collapsed" data-id="6c4af62739c447c295df5bb2ceb92689" data-parentid="2340529e98314d73b1bbb7189801059a"><td class="instance"><span class="baseIcon primitive"></span><b>physicalType</b></td></tr><tr class="collapsed" data-id="5c8bd15360c144c898772e3ecf23d0bd" data-parentid="6c4af62739c447c295df5bb2ceb92689"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="4e96ae5305eb4827b77c524552cc5f88" data-parentid="5c8bd15360c144c898772e3ecf23d0bd"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/location-physical-type</span></td></tr><tr class="collapsed" data-id="c7ce64b1dcf74970b5d33095133f9446" data-parentid="5c8bd15360c144c898772e3ecf23d0bd"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>wa</span></td></tr><tr class="collapsed" data-id="e5e7e1da92224bb49227085c7ae63c95" data-parentid="5c8bd15360c144c898772e3ecf23d0bd"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Ward</span></td></tr><tr class="collapsed" data-id="8c9f1e8d463e48528382b8ae2d40f27c" data-parentid="2340529e98314d73b1bbb7189801059a"><td class="instance"><span class="baseIcon primitive"></span><b>period</b></td></tr><tr class="collapsed" data-id="89c61108547b441a9b4a6f6cc06f0947" data-parentid="8c9f1e8d463e48528382b8ae2d40f27c"><td class="instance"><span class="baseIcon primitive"></span><b>start : </b><span>2024-02-01T21:02:00+00:00</span></td></tr><tr class="collapsed" data-id="c3a1081cccbb457da893545f53e47706" data-parentid="8c9f1e8d463e48528382b8ae2d40f27c"><td class="instance"><span class="baseIcon primitive"></span><b>end : </b><span>2024-02-02T03:00:00+00:00</span></td></tr><tr class="collapsed" data-id="c9fe2e7c9b874a068ee41a2271e999f1" data-parentid="7eb525f50af44c30acca0858e286ff85"><td class="instance"><span class="baseIcon primitive"></span><b>partOf</b></td></tr><tr class="collapsed" data-id="d3a281d836fd4d63b99dbdf63f7c261f" data-parentid="c9fe2e7c9b874a068ee41a2271e999f1"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Encounter/discharge-encounter-example-3</span></td></tr><tr class="collapsed" data-id="2803bf19796d4bf5b055a0d07907e0bc" data-parentid="c9fe2e7c9b874a068ee41a2271e999f1"><td class="instance"><span class="baseIcon primitive"></span><b>identifier</b></td></tr><tr class="collapsed" data-id="dc5815098d4f43788af9603663871f87" data-parentid="2803bf19796d4bf5b055a0d07907e0bc"><td class="instance"><span class="baseIcon primitive"></span><b>use : </b><span>usual</span></td></tr><tr class="collapsed" data-id="f6f87e0b2c6d4184a5e300785a152346" data-parentid="2803bf19796d4bf5b055a0d07907e0bc"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>urn:oid:2.16.840.1.113883.19.5.1.698.8</span></td></tr><tr class="collapsed" data-id="fadc3e418e564d8abfb6b73c33d83f6e" data-parentid="2803bf19796d4bf5b055a0d07907e0bc"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>40005104253</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable089be6da1a8e4f7a9a9985eb2c8908e7 = new InstanceTree();
+resourceTreeTable089be6da1a8e4f7a9a9985eb2c8908e7.init("089be6da1a8e4f7a9a9985eb2c8908e7");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="9bfdbc8b-ebd4-4d15-b12e-cc1c9321a2c8">
+    <div class="path"><table><tbody><tr><td>Encounter.<span class="field">id[0]</span></td><td>obs-encounter-example-2</td></tr><tr><td>Encounter.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0</td></tr><tr><td>Encounter.identifier[0].<span class="field">use[0]</span></td><td>usual</td></tr><tr><td>Encounter.identifier[0].<span class="field">system[0]</span></td><td>urn:oid:2.16.840.1.113883.19.5.1.698.8</td></tr><tr><td>Encounter.identifier[0].<span class="field">value[0]</span></td><td>20005104252</td></tr><tr><td>Encounter.<span class="field">status[0]</span></td><td>finished</td></tr><tr><td>Encounter.class[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td></tr><tr><td>Encounter.class[0].<span class="field">code[0]</span></td><td>OBSENC</td></tr><tr><td>Encounter.class[0].<span class="field">display[0]</span></td><td>observation encounter</td></tr><tr><td>Encounter.type[0].coding[0].<span class="field">system[0]</span></td><td>http://snomed.info/sct</td></tr><tr><td>Encounter.type[0].coding[0].<span class="field">code[0]</span></td><td>448951000124107</td></tr><tr><td>Encounter.type[0].coding[0].<span class="field">display[0]</span></td><td>Admission to observation unit (procedure)</td></tr><tr><td>Encounter.type[0].<span class="field">text[0]</span></td><td>Observation bed</td></tr><tr><td>Encounter.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>Encounter.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>Encounter.period[0].<span class="field">start[0]</span></td><td>2024-02-02T03:02:00+00:00</td></tr><tr><td>Encounter.period[0].<span class="field">end[0]</span></td><td>2024-02-02T17:00:00+00:00</td></tr><tr><td>Encounter.diagnosis[0].condition[0].<span class="field">reference[0]</span></td><td>Condition/panic-attack-condition-example-1</td></tr><tr><td>Encounter.diagnosis[0].condition[0].<span class="field">display[0]</span></td><td>Panic Attack</td></tr><tr><td>Encounter.location[0].location[0].<span class="field">reference[0]</span></td><td>Location/obs-location-example-1</td></tr><tr><td>Encounter.location[0].location[0].<span class="field">display[0]</span></td><td>Hospital bed - OBSERVATION</td></tr><tr><td>Encounter.location[0].physicalType[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/location-physical-type</td></tr><tr><td>Encounter.location[0].physicalType[0].coding[0].<span class="field">code[0]</span></td><td>wa</td></tr><tr><td>Encounter.location[0].physicalType[0].coding[0].<span class="field">display[0]</span></td><td>Ward</td></tr><tr><td>Encounter.location[0].period[0].<span class="field">start[0]</span></td><td>2024-02-01T21:02:00+00:00</td></tr><tr><td>Encounter.location[0].period[0].<span class="field">end[0]</span></td><td>2024-02-02T03:00:00+00:00</td></tr><tr><td>Encounter.partOf[0].<span class="field">reference[0]</span></td><td>Encounter/discharge-encounter-example-3</td></tr><tr><td>Encounter.partOf[0].identifier[0].<span class="field">use[0]</span></td><td>usual</td></tr><tr><td>Encounter.partOf[0].identifier[0].<span class="field">system[0]</span></td><td>urn:oid:2.16.840.1.113883.19.5.1.698.8</td></tr><tr><td>Encounter.partOf[0].identifier[0].<span class="field">value[0]</span></td><td>40005104253</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | example-mental-health-progress-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-mental-health-progress-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="example-documentreference-mental-health-progress-example">Example DocumentReference: mental-health-progress-example</h2>
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#24f4cb90-be0a-40ab-9e18-a71b456f8b6d" aria-controls="24f4cb90-be0a-40ab-9e18-a71b456f8b6d" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#63f0a929-4692-4aa1-9bd4-1c8b3058cfd5" aria-controls="63f0a929-4692-4aa1-9bd4-1c8b3058cfd5" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#319d86aa-389a-4938-83bb-d7bb33e3ecf3" aria-controls="319d86aa-389a-4938-83bb-d7bb33e3ecf3" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#421136b3-33be-4d0d-9602-c65b5bcba541" aria-controls="421136b3-33be-4d0d-9602-c65b5bcba541" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="24f4cb90-be0a-40ab-9e18-a71b456f8b6d">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.resourceType" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">DocumentReference</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.id" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">mental-health-progress-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.meta" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">meta</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.meta.profile" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">profile</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">http://fhir.org/guides/onc/bhp/StructureDefinition/mental-health-clinical-notes</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.status" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">status</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">current</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.type" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">type</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.type.coding" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.type.coding.system" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://loinc.org</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.type.coding.code" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">78306-8</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.type.coding.display" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Mental health History and physical note</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.type.text" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Mental health History and physical note</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.category" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">category</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.category.coding" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.category.coding.system" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.category.coding.code" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">clinical-note</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.category.coding.display" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Clinical Note</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.category.text" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Clinical Note</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.subject" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">subject</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.subject.reference" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Patient/bh-patient-example</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.subject.display" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">James Wolff</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.date" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">date</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2024-01-01T15:29:46+00:00</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.author" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">author</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.author.reference" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Practitioner/mental-health-provider-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.author.display" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Dr. Lazslo Cravensworth</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.content" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">content</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.content.attachment" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">attachment</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.content.attachment.contentType" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">contentType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">text/plain</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.content.attachment.data" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">data</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Tm8gYWN0aXZpdHkgcmVzdHJpY3Rpb24sIHJlZ3VsYXIgZGlldCwgZm9sbG93IHVwIGluIHR3byB0byB0aHJlZSB3ZWVrcyB3aXRoIHByaW1hcnkgY2FyZSBwcm92aWRlci4=</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="63f0a929-4692-4aa1-9bd4-1c8b3058cfd5">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">DocumentReference</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.id" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">mental-health-progress-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.meta" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.meta.profile" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://fhir.org/guides/onc/bhp/StructureDefinition/mental-health-clinical-notes</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.status" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">current</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.type" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">type</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.type.coding" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.type.coding.system" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://loinc.org</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.type.coding.code" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">78306-8</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.type.coding.display" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Mental health History and physical note</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.type.text" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Mental health History and physical note</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">type</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.category" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.category.coding" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.category.coding.system" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.category.coding.code" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">clinical-note</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.category.coding.display" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Clinical Note</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.category.text" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Clinical Note</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.subject" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.subject.reference" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Patient/bh-patient-example</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.subject.display" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">James Wolff</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.date" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">date</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2024-01-01T15:29:46+00:00</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.author" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">author</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.author.reference" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Practitioner/mental-health-provider-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.author.display" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Dr. Lazslo Cravensworth</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">author</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.content" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">content</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.content.attachment" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">attachment</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.content.attachment.contentType" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">contentType</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">text/plain</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html#DocumentReference.content.attachment.data" title="This profile on US Core DocumentReference constrains type to be of five allowable mental health clinical note types via binding to Mental Health Clinical Notes (ValueSet)" target="_blank">data</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Tm8gYWN0aXZpdHkgcmVzdHJpY3Rpb24sIHJlZ3VsYXIgZGlldCwgZm9sbG93IHVwIGluIHR3byB0byB0aHJlZSB3ZWVrcyB3aXRoIHByaW1hcnkgY2FyZSBwcm92aWRlci4=</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">attachment</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">content</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">DocumentReference</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="319d86aa-389a-4938-83bb-d7bb33e3ecf3">
+    <div class="stu3-treetable" id="8126969eaa75422b81f8aa9ee89d2afb" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="f70b40f861bd4f0a890b2a959c828b8d"><td class="instance"><span class="baseIcon primitive"></span><b>DocumentReference</b></td></tr><tr class="collapsed" data-id="785b6748432e48eb8cfdfeea7a7c0b21" data-parentid="f70b40f861bd4f0a890b2a959c828b8d"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>mental-health-progress-example-1</span></td></tr><tr class="collapsed" data-id="c59608e60d41412eaaba327888e62e53" data-parentid="f70b40f861bd4f0a890b2a959c828b8d"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="b7a6ff1888944841b387e121c62ae6e7" data-parentid="c59608e60d41412eaaba327888e62e53"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://fhir.org/guides/onc/bhp/StructureDefinition/mental-health-clinical-notes</span></td></tr><tr class="collapsed" data-id="8027d8a194c94198be514f4bb862ce8f" data-parentid="f70b40f861bd4f0a890b2a959c828b8d"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>current</span></td></tr><tr class="collapsed" data-id="6faabf13238745bab26f01aa20a6eb75" data-parentid="f70b40f861bd4f0a890b2a959c828b8d"><td class="instance"><span class="baseIcon primitive"></span><b>type</b></td></tr><tr class="collapsed" data-id="997bad224e664139a0db7cf2a704fb06" data-parentid="6faabf13238745bab26f01aa20a6eb75"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="f059bcbacca24cf993c766b3a88c4e33" data-parentid="997bad224e664139a0db7cf2a704fb06"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="f1c9ea5bf02449b186614f4e0c36f974" data-parentid="997bad224e664139a0db7cf2a704fb06"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>78306-8</span></td></tr><tr class="collapsed" data-id="fce56065dd574cc8a0ed3d599d4c0d0c" data-parentid="997bad224e664139a0db7cf2a704fb06"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Mental health History and physical note</span></td></tr><tr class="collapsed" data-id="03d08b3133854a01b0614c8185a53d59" data-parentid="6faabf13238745bab26f01aa20a6eb75"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Mental health History and physical note</span></td></tr><tr class="collapsed" data-id="a2186674cf3441d8a822241763d33abb" data-parentid="f70b40f861bd4f0a890b2a959c828b8d"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="c7891cf28b9644209cdddbea1583be2b" data-parentid="a2186674cf3441d8a822241763d33abb"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="50a07a1c215b48ee8333da49213e3178" data-parentid="c7891cf28b9644209cdddbea1583be2b"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category</span></td></tr><tr class="collapsed" data-id="912af99d67f8417aad645710b3c0a6ab" data-parentid="c7891cf28b9644209cdddbea1583be2b"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>clinical-note</span></td></tr><tr class="collapsed" data-id="4296ee7987ba4d5da3403eaccaa75771" data-parentid="c7891cf28b9644209cdddbea1583be2b"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Clinical Note</span></td></tr><tr class="collapsed" data-id="dee3e598043b4ac6873e3ffabbbafb50" data-parentid="a2186674cf3441d8a822241763d33abb"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Clinical Note</span></td></tr><tr class="collapsed" data-id="aafe93a5a97a4d348ef9583651125b26" data-parentid="f70b40f861bd4f0a890b2a959c828b8d"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="75dc4234622a4bf88ed11d880af0bb74" data-parentid="aafe93a5a97a4d348ef9583651125b26"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="953dda7701ea41c89553e62bc763222b" data-parentid="aafe93a5a97a4d348ef9583651125b26"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="063c2ba1590d460e9bb3822c162a27f5" data-parentid="f70b40f861bd4f0a890b2a959c828b8d"><td class="instance"><span class="baseIcon primitive"></span><b>date : </b><span>2024-01-01T15:29:46+00:00</span></td></tr><tr class="collapsed" data-id="a9785115324a48e789f64d52a2238bda" data-parentid="f70b40f861bd4f0a890b2a959c828b8d"><td class="instance"><span class="baseIcon primitive"></span><b>author</b></td></tr><tr class="collapsed" data-id="34d7f3608329492daf201380680ee92d" data-parentid="a9785115324a48e789f64d52a2238bda"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Practitioner/mental-health-provider-example-1</span></td></tr><tr class="collapsed" data-id="7f841f3a650b4884bd011376bc2e9b20" data-parentid="a9785115324a48e789f64d52a2238bda"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Dr. Lazslo Cravensworth</span></td></tr><tr class="collapsed" data-id="1d5eaeb6f09148c8bfac93a674ce9332" data-parentid="f70b40f861bd4f0a890b2a959c828b8d"><td class="instance"><span class="baseIcon primitive"></span><b>content</b></td></tr><tr class="collapsed" data-id="82ef1bfa047447eeb649838aa42bda53" data-parentid="1d5eaeb6f09148c8bfac93a674ce9332"><td class="instance"><span class="baseIcon primitive"></span><b>attachment</b></td></tr><tr class="collapsed" data-id="690499c8776a42dbb76f9b513b345b1d" data-parentid="82ef1bfa047447eeb649838aa42bda53"><td class="instance"><span class="baseIcon primitive"></span><b>contentType : </b><span>text/plain</span></td></tr><tr class="collapsed" data-id="3b9443d280804e45aaee43344f930bd7" data-parentid="82ef1bfa047447eeb649838aa42bda53"><td class="instance"><span class="baseIcon primitive"></span><b>data : </b><span>Tm8gYWN0aXZpdHkgcmVzdHJpY3Rpb24sIHJlZ3VsYXIgZGlldCwgZm9sbG93IHVwIGluIHR3byB0byB0aHJlZSB3ZWVrcyB3aXRoIHByaW1hcnkgY2FyZSBwcm92aWRlci4=</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable8126969eaa75422b81f8aa9ee89d2afb = new InstanceTree();
+resourceTreeTable8126969eaa75422b81f8aa9ee89d2afb.init("8126969eaa75422b81f8aa9ee89d2afb");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="421136b3-33be-4d0d-9602-c65b5bcba541">
+    <div class="path"><table><tbody><tr><td>DocumentReference.<span class="field">id[0]</span></td><td>mental-health-progress-example-1</td></tr><tr><td>DocumentReference.meta[0].<span class="field">profile[0]</span></td><td>http://fhir.org/guides/onc/bhp/StructureDefinition/mental-health-clinical-notes</td></tr><tr><td>DocumentReference.<span class="field">status[0]</span></td><td>current</td></tr><tr><td>DocumentReference.type[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>DocumentReference.type[0].coding[0].<span class="field">code[0]</span></td><td>78306-8</td></tr><tr><td>DocumentReference.type[0].coding[0].<span class="field">display[0]</span></td><td>Mental health History and physical note</td></tr><tr><td>DocumentReference.type[0].<span class="field">text[0]</span></td><td>Mental health History and physical note</td></tr><tr><td>DocumentReference.category[0].coding[0].<span class="field">system[0]</span></td><td>http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category</td></tr><tr><td>DocumentReference.category[0].coding[0].<span class="field">code[0]</span></td><td>clinical-note</td></tr><tr><td>DocumentReference.category[0].coding[0].<span class="field">display[0]</span></td><td>Clinical Note</td></tr><tr><td>DocumentReference.category[0].<span class="field">text[0]</span></td><td>Clinical Note</td></tr><tr><td>DocumentReference.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>DocumentReference.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>DocumentReference.<span class="field">date[0]</span></td><td>2024-01-01T15:29:46+00:00</td></tr><tr><td>DocumentReference.author[0].<span class="field">reference[0]</span></td><td>Practitioner/mental-health-provider-example-1</td></tr><tr><td>DocumentReference.author[0].<span class="field">display[0]</span></td><td>Dr. Lazslo Cravensworth</td></tr><tr><td>DocumentReference.content[0].attachment[0].<span class="field">contentType[0]</span></td><td>text/plain</td></tr><tr><td>DocumentReference.content[0].attachment[0].<span class="field">data[0]</span></td><td>Tm8gYWN0aXZpdHkgcmVzdHJpY3Rpb24sIHJlZ3VsYXIgZGlldCwgZm9sbG93IHVwIGluIHR3byB0byB0aHJlZSB3ZWVrcyB3aXRoIHByaW1hcnkgY2FyZSBwcm92aWRlci4=</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

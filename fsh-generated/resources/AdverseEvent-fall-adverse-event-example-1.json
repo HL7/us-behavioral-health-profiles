@@ -1,0 +1,19 @@
+{
+  "resourceType": "AdverseEvent",
+  "id": "fall-adverse-event-example-1",
+  "actuality": "actual",
+  "event": {
+    "coding": [
+      {
+        "code": "1912002",
+        "system": "http://snomed.info/sct",
+        "display": "Fall (event)"
+      }
+    ],
+    "text": "Fall"
+  },
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  }
+}

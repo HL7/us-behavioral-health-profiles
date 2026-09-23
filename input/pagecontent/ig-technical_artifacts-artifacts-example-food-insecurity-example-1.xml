@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | example-food-insecurity-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-food-insecurity-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="example-goal-food-insecurity-example">Example Goal: food-insecurity-example</h2>
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#c0d70d8f-00a9-4241-b301-613920efe7eb" aria-controls="c0d70d8f-00a9-4241-b301-613920efe7eb" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#1f2afee7-8697-4795-badc-dcd4c9ac8f66" aria-controls="1f2afee7-8697-4795-badc-dcd4c9ac8f66" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#3407218c-c188-41f5-a3c8-091de60ff47a" aria-controls="3407218c-c188-41f5-a3c8-091de60ff47a" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#565f96fc-7976-48ad-9078-b84c479a98e7" aria-controls="565f96fc-7976-48ad-9078-b84c479a98e7" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="c0d70d8f-00a9-4241-b301-613920efe7eb">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.resourceType" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Goal</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.id" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">food-insecurity-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.meta" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">meta</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.meta.profile" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">profile</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.lifecycleStatus" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">lifecycleStatus</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">active</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.achievementStatus" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">achievementStatus</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.achievementStatus.coding" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.achievementStatus.coding.system" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/goal-achievement</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.achievementStatus.coding.code" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">improving</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.achievementStatus.coding.display" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Improving</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.category" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">category</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.category.coding" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.category.coding.system" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.category.coding.code" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">food-insecurity</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.category.coding.display" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Food Insecurity</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.description" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">description</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.description.coding" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.description.coding.system" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://snomed.info/sct</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.description.coding.code" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">1078229009</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.description.coding.display" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Food security</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.subject" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">subject</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.subject.reference" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Patient/bh-patient-example</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.subject.display" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">James Wolff</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">target</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.measure" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">measure</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.measure.coding" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.measure.coding.system" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://loinc.org</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.measure.coding.code" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">88124-3</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.measure.coding.display" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Food insecurity risk [HVS]</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.detailCodeableConcept" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">detailCodeableConcept</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.detailCodeableConcept.coding" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.detailCodeableConcept.coding.system" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://loinc.org</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.detailCodeableConcept.coding.code" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">LA19983-8</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.detailCodeableConcept.coding.display" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">No risk</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.dueDate" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">dueDate</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2025-12-10</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.statusDate" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">statusDate</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2024-02-01</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="1f2afee7-8697-4795-badc-dcd4c9ac8f66">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">Goal</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.id" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">food-insecurity-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.meta" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.meta.profile" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.lifecycleStatus" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">lifecycleStatus</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">active</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.achievementStatus" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">achievementStatus</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.achievementStatus.coding" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.achievementStatus.coding.system" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/goal-achievement</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.achievementStatus.coding.code" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">improving</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.achievementStatus.coding.display" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Improving</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">achievementStatus</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.category" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.category.coding" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.category.coding.system" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.category.coding.code" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">food-insecurity</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.category.coding.display" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Food Insecurity</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.description" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">description</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.description.coding" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.description.coding.system" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://snomed.info/sct</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.description.coding.code" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">1078229009</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.description.coding.display" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Food security</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">description</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.subject" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.subject.reference" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Patient/bh-patient-example</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.subject.display" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">James Wolff</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">target</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.measure" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">measure</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.measure.coding" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.measure.coding.system" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://loinc.org</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.measure.coding.code" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">88124-3</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.measure.coding.display" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Food insecurity risk [HVS]</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">measure</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.detail" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">detailCodeableConcept</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.detail.coding" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.detail.coding.system" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://loinc.org</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.detail.coding.code" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">LA19983-8</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.detail.coding.display" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">No risk</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">detailCodeableConcept</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.target.due" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">dueDate</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2025-12-10</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">target</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Goal.json&amp;tab=details#Goal.statusDate" title="SDOHCC Goal&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Goal.json" target="_blank">statusDate</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2024-02-01</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Goal</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="3407218c-c188-41f5-a3c8-091de60ff47a">
+    <div class="stu3-treetable" id="9a3b013bad154441927f04a1d65f35bb" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="9f1b61e548154635864b445fed7f554c"><td class="instance"><span class="baseIcon primitive"></span><b>Goal</b></td></tr><tr class="collapsed" data-id="0bca0c2f083548419124f38b25388ff0" data-parentid="9f1b61e548154635864b445fed7f554c"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>food-insecurity-example-1</span></td></tr><tr class="collapsed" data-id="f8adfbcbb7e54125bd7afe01fbc89a82" data-parentid="9f1b61e548154635864b445fed7f554c"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="63f66ca436ca4f828cf4f5611956a530" data-parentid="f8adfbcbb7e54125bd7afe01fbc89a82"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal</span></td></tr><tr class="collapsed" data-id="9e19f3b9f7d541069f9e3145740d6c0c" data-parentid="9f1b61e548154635864b445fed7f554c"><td class="instance"><span class="baseIcon primitive"></span><b>lifecycleStatus : </b><span>active</span></td></tr><tr class="collapsed" data-id="6b5b9e403c264481b845b32cda04232a" data-parentid="9f1b61e548154635864b445fed7f554c"><td class="instance"><span class="baseIcon primitive"></span><b>achievementStatus</b></td></tr><tr class="collapsed" data-id="97e0afb159274760bbe1642c42789734" data-parentid="6b5b9e403c264481b845b32cda04232a"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="9935a248589a4011b8d5970b7d1caebf" data-parentid="97e0afb159274760bbe1642c42789734"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/goal-achievement</span></td></tr><tr class="collapsed" data-id="490c6d409bab40c69a49c353df7dda15" data-parentid="97e0afb159274760bbe1642c42789734"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>improving</span></td></tr><tr class="collapsed" data-id="1baa167b00eb43c58fa1ce528bb7eef5" data-parentid="97e0afb159274760bbe1642c42789734"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Improving</span></td></tr><tr class="collapsed" data-id="51ed43deb8494af99d94d2ecb4972a48" data-parentid="9f1b61e548154635864b445fed7f554c"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="6b3288fddd50470e9f451cb76bd99a50" data-parentid="51ed43deb8494af99d94d2ecb4972a48"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="064c01fccfc74f96aa089c583d4afcce" data-parentid="6b3288fddd50470e9f451cb76bd99a50"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes</span></td></tr><tr class="collapsed" data-id="f11cade7151748bdb7c6d6499cc8aa20" data-parentid="6b3288fddd50470e9f451cb76bd99a50"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>food-insecurity</span></td></tr><tr class="collapsed" data-id="b047782b7f9247a6895a35a89f47ac37" data-parentid="6b3288fddd50470e9f451cb76bd99a50"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Food Insecurity</span></td></tr><tr class="collapsed" data-id="055efca598874fce938c476647cd001c" data-parentid="9f1b61e548154635864b445fed7f554c"><td class="instance"><span class="baseIcon primitive"></span><b>description</b></td></tr><tr class="collapsed" data-id="faea513bb4484300822d61505cf45913" data-parentid="055efca598874fce938c476647cd001c"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="100bd20711ce4d9e8c5ff05f74104a41" data-parentid="faea513bb4484300822d61505cf45913"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://snomed.info/sct</span></td></tr><tr class="collapsed" data-id="1ca1c92e0ac94509861a661fec5b2ebb" data-parentid="faea513bb4484300822d61505cf45913"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>1078229009</span></td></tr><tr class="collapsed" data-id="d45759df4a1b46b2be331abc478b7805" data-parentid="faea513bb4484300822d61505cf45913"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Food security</span></td></tr><tr class="collapsed" data-id="7816eb8c951745fb9287e16d7eafa27f" data-parentid="9f1b61e548154635864b445fed7f554c"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="75b2e4828d3c495ea1b3edd0ffee39bd" data-parentid="7816eb8c951745fb9287e16d7eafa27f"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="62df7e230b1d498288f6755e912732e5" data-parentid="7816eb8c951745fb9287e16d7eafa27f"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="28228bc159014b8887e0f08716467e15" data-parentid="9f1b61e548154635864b445fed7f554c"><td class="instance"><span class="baseIcon primitive"></span><b>target</b></td></tr><tr class="collapsed" data-id="d87a84a5c2664f0693e16f3ca8ffda35" data-parentid="28228bc159014b8887e0f08716467e15"><td class="instance"><span class="baseIcon primitive"></span><b>measure</b></td></tr><tr class="collapsed" data-id="9201e9f251a849f499b51297e41961af" data-parentid="d87a84a5c2664f0693e16f3ca8ffda35"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="7321a1d205a9499980fb4195e9348856" data-parentid="9201e9f251a849f499b51297e41961af"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="689108b372e74c2cace234418518c01f" data-parentid="9201e9f251a849f499b51297e41961af"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>88124-3</span></td></tr><tr class="collapsed" data-id="32833805717f47aebbef45a3e2b22836" data-parentid="9201e9f251a849f499b51297e41961af"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Food insecurity risk [HVS]</span></td></tr><tr class="collapsed" data-id="5de47b6a10be4335a7c143a11899938d" data-parentid="28228bc159014b8887e0f08716467e15"><td class="instance"><span class="baseIcon primitive"></span><b>detail</b></td></tr><tr class="collapsed" data-id="1960bd62338d41819941940dc0187e7c" data-parentid="5de47b6a10be4335a7c143a11899938d"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="388f06721c6f451fadf2b34b9b53df9f" data-parentid="1960bd62338d41819941940dc0187e7c"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="5d521d0de4e540e0981d77c417fecd04" data-parentid="1960bd62338d41819941940dc0187e7c"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>LA19983-8</span></td></tr><tr class="collapsed" data-id="b26dc7b5907648ada4a5fa518c4ab977" data-parentid="1960bd62338d41819941940dc0187e7c"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>No risk</span></td></tr><tr class="collapsed" data-id="e375e8e5a76740a58e3eef7fe463835d" data-parentid="28228bc159014b8887e0f08716467e15"><td class="instance"><span class="baseIcon primitive"></span><b>due : </b><span>2025-12-10</span></td></tr><tr class="collapsed" data-id="84247a7fa09445ada44c285c17364e90" data-parentid="9f1b61e548154635864b445fed7f554c"><td class="instance"><span class="baseIcon primitive"></span><b>statusDate : </b><span>2024-02-01</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable9a3b013bad154441927f04a1d65f35bb = new InstanceTree();
+resourceTreeTable9a3b013bad154441927f04a1d65f35bb.init("9a3b013bad154441927f04a1d65f35bb");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="565f96fc-7976-48ad-9078-b84c479a98e7">
+    <div class="path"><table><tbody><tr><td>Goal.<span class="field">id[0]</span></td><td>food-insecurity-example-1</td></tr><tr><td>Goal.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal</td></tr><tr><td>Goal.<span class="field">lifecycleStatus[0]</span></td><td>active</td></tr><tr><td>Goal.achievementStatus[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/goal-achievement</td></tr><tr><td>Goal.achievementStatus[0].coding[0].<span class="field">code[0]</span></td><td>improving</td></tr><tr><td>Goal.achievementStatus[0].coding[0].<span class="field">display[0]</span></td><td>Improving</td></tr><tr><td>Goal.category[0].coding[0].<span class="field">system[0]</span></td><td>http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes</td></tr><tr><td>Goal.category[0].coding[0].<span class="field">code[0]</span></td><td>food-insecurity</td></tr><tr><td>Goal.category[0].coding[0].<span class="field">display[0]</span></td><td>Food Insecurity</td></tr><tr><td>Goal.description[0].coding[0].<span class="field">system[0]</span></td><td>http://snomed.info/sct</td></tr><tr><td>Goal.description[0].coding[0].<span class="field">code[0]</span></td><td>1078229009</td></tr><tr><td>Goal.description[0].coding[0].<span class="field">display[0]</span></td><td>Food security</td></tr><tr><td>Goal.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>Goal.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>Goal.target[0].measure[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>Goal.target[0].measure[0].coding[0].<span class="field">code[0]</span></td><td>88124-3</td></tr><tr><td>Goal.target[0].measure[0].coding[0].<span class="field">display[0]</span></td><td>Food insecurity risk [HVS]</td></tr><tr><td>Goal.target[0].detail[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>Goal.target[0].detail[0].coding[0].<span class="field">code[0]</span></td><td>LA19983-8</td></tr><tr><td>Goal.target[0].detail[0].coding[0].<span class="field">display[0]</span></td><td>No risk</td></tr><tr><td>Goal.target[0].<span class="field">due[0]</span></td><td>2025-12-10</td></tr><tr><td>Goal.<span class="field">statusDate[0]</span></td><td>2024-02-01</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

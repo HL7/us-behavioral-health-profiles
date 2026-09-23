@@ -340,7 +340,7 @@ This page provides a list of the FHIR artifacts defined as part of this implemen
      <td>Example of patient related person</td>
   </tr>
   <tr>
-     <td>{{pagelink:example-ServiceRequest-peer-mentoring-example-1}}</td>
+     <td>{{pagelink:example-sdoh-referral-example-1}}</td>
      <td>Example of patient referral to a peer coaching program</td>
   </tr>
 </tbody>

@@ -7,6 +7,11 @@ Thumbs.db
 /temp
 /template
 
+# the publisher drops package indexes through the contained template source
+ig-template/**/.index.json
+ig-template/**/.index.db
+
+
 
 # Ignore Simplifier/Forge/FirelyTerminal files
 .local-packages
@@ -58,3 +63,5 @@ $RECYCLE.BIN/
 # Other common ignores
 .DS_Store
 ._*
+/txCache
+

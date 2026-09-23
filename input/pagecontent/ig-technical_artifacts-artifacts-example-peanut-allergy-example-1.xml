@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | example-peanut-allergy-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-peanut-allergy-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="example-allergyintolerance-peanut-allergy-example">Example AllergyIntolerance: peanut-allergy-example</h2>
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#caf4cf39-40d8-4e77-ae1a-dffa8bfa9c68" aria-controls="caf4cf39-40d8-4e77-ae1a-dffa8bfa9c68" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#7653d518-949a-4c51-aa35-f2c99764cda7" aria-controls="7653d518-949a-4c51-aa35-f2c99764cda7" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#6ffff010-0dd4-4611-955b-adbf726c41f0" aria-controls="6ffff010-0dd4-4611-955b-adbf726c41f0" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#128de069-e618-4c45-89cb-4e2808fd8031" aria-controls="128de069-e618-4c45-89cb-4e2808fd8031" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="caf4cf39-40d8-4e77-ae1a-dffa8bfa9c68">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.resourceType" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">AllergyIntolerance</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.id" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">peanut-allergy-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.meta" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">meta</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.meta.profile" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">profile</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance|6.1.0</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.clinicalStatus" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">clinicalStatus</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.clinicalStatus.coding" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.clinicalStatus.coding.system" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.clinicalStatus.coding.code" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">active</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.verificationStatus" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">verificationStatus</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.verificationStatus.coding" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.verificationStatus.coding.system" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/allergyintolerance-verification</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.verificationStatus.coding.code" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">confirmed</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.category" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">category</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">food</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.criticality" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">criticality</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">high</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.code" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.code.coding" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.code.coding.system" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://snomed.info/sct</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.code.coding.code" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">762952008</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.code.coding.display" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Peanut (substance)</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.code.text" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Peanut</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.patient" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">patient</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.patient.reference" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Patient/bh-patient-example</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.patient.display" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">James Wolff</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.reaction" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">reaction</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.reaction.manifestation" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">manifestation</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.reaction.manifestation.coding" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.reaction.manifestation.coding.system" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://snomed.info/sct</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.reaction.manifestation.coding.code" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">39579001</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.reaction.manifestation.coding.display" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Anaphylaxis (disorder)</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="7653d518-949a-4c51-aa35-f2c99764cda7">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">AllergyIntolerance</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.id" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">peanut-allergy-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.meta" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.meta.profile" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance|6.1.0</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.clinicalStatus" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">clinicalStatus</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.clinicalStatus.coding" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.clinicalStatus.coding.system" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.clinicalStatus.coding.code" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">active</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">clinicalStatus</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.verificationStatus" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">verificationStatus</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.verificationStatus.coding" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.verificationStatus.coding.system" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/allergyintolerance-verification</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.verificationStatus.coding.code" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">confirmed</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">verificationStatus</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.category" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">category</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">food</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.criticality" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">criticality</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">high</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.code" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.code.coding" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.code.coding.system" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://snomed.info/sct</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.code.coding.code" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">762952008</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.code.coding.display" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Peanut (substance)</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.code.text" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Peanut</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.patient" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">patient</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.patient.reference" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Patient/bh-patient-example</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.patient.display" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">James Wolff</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">patient</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.reaction" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">reaction</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.reaction.manifestation" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">manifestation</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.reaction.manifestation.coding" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.reaction.manifestation.coding.system" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://snomed.info/sct</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.reaction.manifestation.coding.code" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">39579001</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-allergyintolerance.json&amp;tab=details#AllergyIntolerance.reaction.manifestation.coding.display" title="US Core AllergyIntolerance Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-allergyintolerance.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Anaphylaxis (disorder)</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">manifestation</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">reaction</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">AllergyIntolerance</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="6ffff010-0dd4-4611-955b-adbf726c41f0">
+    <div class="stu3-treetable" id="27e2dfe81332480dbfc8ee571ecbc09a" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="3381946bb1174f0999ef03a6b3c5af21"><td class="instance"><span class="baseIcon primitive"></span><b>AllergyIntolerance</b></td></tr><tr class="collapsed" data-id="fe940d1a0a884c07be769028908adeb6" data-parentid="3381946bb1174f0999ef03a6b3c5af21"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>peanut-allergy-example-1</span></td></tr><tr class="collapsed" data-id="07adef8667b84767b0be6dad40960d14" data-parentid="3381946bb1174f0999ef03a6b3c5af21"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="ac1cc3fe285a48ca83fda960c833d71a" data-parentid="07adef8667b84767b0be6dad40960d14"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance|6.1.0</span></td></tr><tr class="collapsed" data-id="33b1d347d4e44b758ba2fca0f81b4777" data-parentid="3381946bb1174f0999ef03a6b3c5af21"><td class="instance"><span class="baseIcon primitive"></span><b>clinicalStatus</b></td></tr><tr class="collapsed" data-id="c1f33b5a672c4febbdc36115f0ebbbdb" data-parentid="33b1d347d4e44b758ba2fca0f81b4777"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="4a1276509a1042fba23fbafe801b8c76" data-parentid="c1f33b5a672c4febbdc36115f0ebbbdb"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical</span></td></tr><tr class="collapsed" data-id="b83161a03efb46b7af376bd5fce95b65" data-parentid="c1f33b5a672c4febbdc36115f0ebbbdb"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>active</span></td></tr><tr class="collapsed" data-id="accce6ec8ad24df7bd4706236bd19ff9" data-parentid="3381946bb1174f0999ef03a6b3c5af21"><td class="instance"><span class="baseIcon primitive"></span><b>verificationStatus</b></td></tr><tr class="collapsed" data-id="f236b769a9a94c2fbc953929460b7a04" data-parentid="accce6ec8ad24df7bd4706236bd19ff9"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="db1d307e176342a1a92e6269a75c9698" data-parentid="f236b769a9a94c2fbc953929460b7a04"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/allergyintolerance-verification</span></td></tr><tr class="collapsed" data-id="38dbd03ac31e477f923ad60443bda359" data-parentid="f236b769a9a94c2fbc953929460b7a04"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>confirmed</span></td></tr><tr class="collapsed" data-id="f903b4b39514437bb93d37d4008cae2d" data-parentid="3381946bb1174f0999ef03a6b3c5af21"><td class="instance"><span class="baseIcon primitive"></span><b>category : </b><span>food</span></td></tr><tr class="collapsed" data-id="3482f63eb5fc4d99badf6dabf12718c0" data-parentid="3381946bb1174f0999ef03a6b3c5af21"><td class="instance"><span class="baseIcon primitive"></span><b>criticality : </b><span>high</span></td></tr><tr class="collapsed" data-id="6cc28514c6fc436c9efdca325dbec54f" data-parentid="3381946bb1174f0999ef03a6b3c5af21"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="d006ae0cfdf648ab90684786c6b23725" data-parentid="6cc28514c6fc436c9efdca325dbec54f"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="05c258424add415598c39e8780ec71d5" data-parentid="d006ae0cfdf648ab90684786c6b23725"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://snomed.info/sct</span></td></tr><tr class="collapsed" data-id="58fe918a5718485380c64380f4af8011" data-parentid="d006ae0cfdf648ab90684786c6b23725"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>762952008</span></td></tr><tr class="collapsed" data-id="c12d0f3c5c8b4c0da63d8887aa68efcb" data-parentid="d006ae0cfdf648ab90684786c6b23725"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Peanut (substance)</span></td></tr><tr class="collapsed" data-id="fe2c9f863bf749c981c528b0d9c007ae" data-parentid="6cc28514c6fc436c9efdca325dbec54f"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Peanut</span></td></tr><tr class="collapsed" data-id="42af59bbf71c4f47a65ba93ade156896" data-parentid="3381946bb1174f0999ef03a6b3c5af21"><td class="instance"><span class="baseIcon primitive"></span><b>patient</b></td></tr><tr class="collapsed" data-id="6f4d66f4c27d4640a9b03efa08e1db9b" data-parentid="42af59bbf71c4f47a65ba93ade156896"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="f76476a2bd204fa38906a89a13a6f356" data-parentid="42af59bbf71c4f47a65ba93ade156896"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="280acabbe91d4bc38bc39a5ccb9f7aa3" data-parentid="3381946bb1174f0999ef03a6b3c5af21"><td class="instance"><span class="baseIcon primitive"></span><b>reaction</b></td></tr><tr class="collapsed" data-id="ac5780425de44b88910e0b98d03d8a5d" data-parentid="280acabbe91d4bc38bc39a5ccb9f7aa3"><td class="instance"><span class="baseIcon primitive"></span><b>manifestation</b></td></tr><tr class="collapsed" data-id="c0f5cd7bc3ae4b80bdd0ae6f58bf4d8d" data-parentid="ac5780425de44b88910e0b98d03d8a5d"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="e17cb0fa326347dcb707af96929e987f" data-parentid="c0f5cd7bc3ae4b80bdd0ae6f58bf4d8d"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://snomed.info/sct</span></td></tr><tr class="collapsed" data-id="aa2364c41c3e42989d5132e3f91bcc9d" data-parentid="c0f5cd7bc3ae4b80bdd0ae6f58bf4d8d"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>39579001</span></td></tr><tr class="collapsed" data-id="aadf603680bb436d9cfe742ad661ee83" data-parentid="c0f5cd7bc3ae4b80bdd0ae6f58bf4d8d"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Anaphylaxis (disorder)</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable27e2dfe81332480dbfc8ee571ecbc09a = new InstanceTree();
+resourceTreeTable27e2dfe81332480dbfc8ee571ecbc09a.init("27e2dfe81332480dbfc8ee571ecbc09a");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="128de069-e618-4c45-89cb-4e2808fd8031">
+    <div class="path"><table><tbody><tr><td>AllergyIntolerance.<span class="field">id[0]</span></td><td>peanut-allergy-example-1</td></tr><tr><td>AllergyIntolerance.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance|6.1.0</td></tr><tr><td>AllergyIntolerance.clinicalStatus[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical</td></tr><tr><td>AllergyIntolerance.clinicalStatus[0].coding[0].<span class="field">code[0]</span></td><td>active</td></tr><tr><td>AllergyIntolerance.verificationStatus[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/allergyintolerance-verification</td></tr><tr><td>AllergyIntolerance.verificationStatus[0].coding[0].<span class="field">code[0]</span></td><td>confirmed</td></tr><tr><td>AllergyIntolerance.<span class="field">category[0]</span></td><td>food</td></tr><tr><td>AllergyIntolerance.<span class="field">criticality[0]</span></td><td>high</td></tr><tr><td>AllergyIntolerance.code[0].coding[0].<span class="field">system[0]</span></td><td>http://snomed.info/sct</td></tr><tr><td>AllergyIntolerance.code[0].coding[0].<span class="field">code[0]</span></td><td>762952008</td></tr><tr><td>AllergyIntolerance.code[0].coding[0].<span class="field">display[0]</span></td><td>Peanut (substance)</td></tr><tr><td>AllergyIntolerance.code[0].<span class="field">text[0]</span></td><td>Peanut</td></tr><tr><td>AllergyIntolerance.patient[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>AllergyIntolerance.patient[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>AllergyIntolerance.reaction[0].manifestation[0].coding[0].<span class="field">system[0]</span></td><td>http://snomed.info/sct</td></tr><tr><td>AllergyIntolerance.reaction[0].manifestation[0].coding[0].<span class="field">code[0]</span></td><td>39579001</td></tr><tr><td>AllergyIntolerance.reaction[0].manifestation[0].coding[0].<span class="field">display[0]</span></td><td>Anaphylaxis (disorder)</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

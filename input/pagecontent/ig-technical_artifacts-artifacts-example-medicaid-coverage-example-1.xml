@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | example-medicaid-coverage-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-medicaid-coverage-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="example-coverage-medicaid-coverage-example">Example Coverage: medicaid-coverage-example</h2>
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#d365cd62-70a7-4766-9900-d644ae119256" aria-controls="d365cd62-70a7-4766-9900-d644ae119256" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#da116dea-eb6c-4a00-83ed-8cf050593f35" aria-controls="da116dea-eb6c-4a00-83ed-8cf050593f35" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#01b48ea5-2bda-4551-a621-17f29b60a87c" aria-controls="01b48ea5-2bda-4551-a621-17f29b60a87c" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#ea214f15-407e-4b9a-a9ab-584c40f949b4" aria-controls="ea214f15-407e-4b9a-a9ab-584c40f949b4" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="d365cd62-70a7-4766-9900-d644ae119256">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.resourceType" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Coverage</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.id" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">medicaid-coverage-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.meta" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">meta</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.meta.profile" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">profile</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage|6.1.0</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.identifier" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">identifier</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.identifier.type" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">type</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.identifier.type.coding" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.identifier.type.coding.system" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/v2-0203</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.identifier.type.coding.code" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">MB</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.identifier.type.coding.display" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Member Number</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.identifier.system" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://example.org/fhir/memberidentifier</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.identifier.value" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">value</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">88800933501</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.status" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">status</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">active</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.type" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">type</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.type.coding" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.type.coding.system" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">https://nahdo.org/sopt</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.type.coding.code" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.type.coding.display" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Medicaid</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.type.text" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Medicaid</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.subscriberId" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">subscriberId</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">888009335</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.beneficiary" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">beneficiary</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.beneficiary.reference" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Patient/bh-patient-example</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.relationship" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">relationship</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.relationship.coding" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.relationship.coding.system" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/subscriber-relationship</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.relationship.coding.code" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">self</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.relationship.text" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Self</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.period" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">period</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.period.start" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">start</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2024-01-01</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.payor" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">payor</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.payor.reference" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Organization/fl-medicaid-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.payor.display" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">MyACCESS - Florida Medicaid</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.class" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">class</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.class.type" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">type</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.class.type.coding" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.class.type.coding.system" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/coverage-class</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.class.type.coding.code" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">group</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.class.type.coding.display" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Group</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.class.type.text" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Group</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.class.value" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">value</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Union Group Plan</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="da116dea-eb6c-4a00-83ed-8cf050593f35">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">Coverage</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.id" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">medicaid-coverage-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.meta" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.meta.profile" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage|6.1.0</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.identifier" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">identifier</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.identifier.type" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">type</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.identifier.type.coding" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.identifier.type.coding.system" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/v2-0203</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.identifier.type.coding.code" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">MB</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.identifier.type.coding.display" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Member Number</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">type</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.identifier.system" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://example.org/fhir/memberidentifier</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.identifier.value" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">88800933501</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">identifier</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.status" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">active</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.type" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">type</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.type.coding" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.type.coding.system" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">https://nahdo.org/sopt</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.type.coding.code" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.type.coding.display" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Medicaid</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.type.text" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Medicaid</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">type</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.subscriberId" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">subscriberId</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">888009335</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.beneficiary" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">beneficiary</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.beneficiary.reference" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Patient/bh-patient-example</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">beneficiary</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.relationship" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">relationship</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.relationship.coding" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.relationship.coding.system" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/subscriber-relationship</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.relationship.coding.code" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">self</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.relationship.text" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Self</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">relationship</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.period" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">period</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.period.start" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">start</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2024-01-01</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">period</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.payor" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">payor</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.payor.reference" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Organization/fl-medicaid-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.payor.display" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">MyACCESS - Florida Medicaid</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">payor</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.class" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">class</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.class.type" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">type</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.class.type.coding" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.class.type.coding.system" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/coverage-class</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.class.type.coding.code" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">group</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.class.type.coding.display" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Group</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.class.type.text" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Group</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">type</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-coverage.json&amp;tab=details#Coverage.class.value" title="US Core Coverage Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-coverage.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Union Group Plan</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">class</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Coverage</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="01b48ea5-2bda-4551-a621-17f29b60a87c">
+    <div class="stu3-treetable" id="3339d59e493f4632b6f788ac2bef0a40" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="c37e315884744cb8925692789d177d62"><td class="instance"><span class="baseIcon primitive"></span><b>Coverage</b></td></tr><tr class="collapsed" data-id="8b466bbfe5664024b99293f7f4028b55" data-parentid="c37e315884744cb8925692789d177d62"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>medicaid-coverage-example-1</span></td></tr><tr class="collapsed" data-id="c494dad97aeb4f43866963dfb5bb24b2" data-parentid="c37e315884744cb8925692789d177d62"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="257a139698874fa1a24f4c492c3c93b3" data-parentid="c494dad97aeb4f43866963dfb5bb24b2"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage|6.1.0</span></td></tr><tr class="collapsed" data-id="508f12697b8f40a9b8e6d7fa6d2a926b" data-parentid="c37e315884744cb8925692789d177d62"><td class="instance"><span class="baseIcon primitive"></span><b>identifier</b></td></tr><tr class="collapsed" data-id="abae27b1b9c2470483b3882534f904a0" data-parentid="508f12697b8f40a9b8e6d7fa6d2a926b"><td class="instance"><span class="baseIcon primitive"></span><b>type</b></td></tr><tr class="collapsed" data-id="74ec659bf82949a49dcf56638df9050f" data-parentid="abae27b1b9c2470483b3882534f904a0"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="c0064da67cc44f299de62a941283f854" data-parentid="74ec659bf82949a49dcf56638df9050f"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/v2-0203</span></td></tr><tr class="collapsed" data-id="a869fe97520548f98d127a1b95d3f3d2" data-parentid="74ec659bf82949a49dcf56638df9050f"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>MB</span></td></tr><tr class="collapsed" data-id="ff20c634e9a54c2993ecd8da73bb0dc8" data-parentid="74ec659bf82949a49dcf56638df9050f"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Member Number</span></td></tr><tr class="collapsed" data-id="fa4b51c542ff4b7abc35b0ee0b9d2519" data-parentid="508f12697b8f40a9b8e6d7fa6d2a926b"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://example.org/fhir/memberidentifier</span></td></tr><tr class="collapsed" data-id="3238f4449662490aa5a78a296688c5e1" data-parentid="508f12697b8f40a9b8e6d7fa6d2a926b"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>88800933501</span></td></tr><tr class="collapsed" data-id="01940b478dde49e5908ee837ca6b027e" data-parentid="c37e315884744cb8925692789d177d62"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>active</span></td></tr><tr class="collapsed" data-id="47c04071bdae409bb5afb1a55b78baf8" data-parentid="c37e315884744cb8925692789d177d62"><td class="instance"><span class="baseIcon primitive"></span><b>type</b></td></tr><tr class="collapsed" data-id="7eb4fde6926f48d49b197cbff95e9002" data-parentid="47c04071bdae409bb5afb1a55b78baf8"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="0fd03202707f4956b5b8002171aef953" data-parentid="7eb4fde6926f48d49b197cbff95e9002"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>https://nahdo.org/sopt</span></td></tr><tr class="collapsed" data-id="ab91cd32730443e49b81d3401cbb47ad" data-parentid="7eb4fde6926f48d49b197cbff95e9002"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>2</span></td></tr><tr class="collapsed" data-id="585c9be952e04c67a3099b7c11bf162a" data-parentid="7eb4fde6926f48d49b197cbff95e9002"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Medicaid</span></td></tr><tr class="collapsed" data-id="cd9cd0d8979045b3ac4338c8ef5cfd0d" data-parentid="47c04071bdae409bb5afb1a55b78baf8"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Medicaid</span></td></tr><tr class="collapsed" data-id="8bf8410e2264433ab1be4d8c93dc89d7" data-parentid="c37e315884744cb8925692789d177d62"><td class="instance"><span class="baseIcon primitive"></span><b>subscriberId : </b><span>888009335</span></td></tr><tr class="collapsed" data-id="66951ac155014b89a5690ff929979a8e" data-parentid="c37e315884744cb8925692789d177d62"><td class="instance"><span class="baseIcon primitive"></span><b>beneficiary</b></td></tr><tr class="collapsed" data-id="bb65b2c0ca4746d89bdf76758ea03e0e" data-parentid="66951ac155014b89a5690ff929979a8e"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="34cac3ccb2de4ae19cc16979f0e115b7" data-parentid="c37e315884744cb8925692789d177d62"><td class="instance"><span class="baseIcon primitive"></span><b>relationship</b></td></tr><tr class="collapsed" data-id="c44c8c54040d4dac923510f1b23e0b05" data-parentid="34cac3ccb2de4ae19cc16979f0e115b7"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="4e8a45ec38b14271aa17d57e62e34be8" data-parentid="c44c8c54040d4dac923510f1b23e0b05"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/subscriber-relationship</span></td></tr><tr class="collapsed" data-id="ec18d995de9f4918b2c65c7766beb36e" data-parentid="c44c8c54040d4dac923510f1b23e0b05"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>self</span></td></tr><tr class="collapsed" data-id="7258ad5d32c7484e809ef568223e2286" data-parentid="34cac3ccb2de4ae19cc16979f0e115b7"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Self</span></td></tr><tr class="collapsed" data-id="f3bf8d714cb448b5a07ead414c875bd8" data-parentid="c37e315884744cb8925692789d177d62"><td class="instance"><span class="baseIcon primitive"></span><b>period</b></td></tr><tr class="collapsed" data-id="2859172ff3144901ab58105bfa5e5de8" data-parentid="f3bf8d714cb448b5a07ead414c875bd8"><td class="instance"><span class="baseIcon primitive"></span><b>start : </b><span>2024-01-01</span></td></tr><tr class="collapsed" data-id="d971d71f128a4380be82ff99ec4f6089" data-parentid="c37e315884744cb8925692789d177d62"><td class="instance"><span class="baseIcon primitive"></span><b>payor</b></td></tr><tr class="collapsed" data-id="1217ca51a2504a7da351155a97c4dfd7" data-parentid="d971d71f128a4380be82ff99ec4f6089"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Organization/fl-medicaid-example-1</span></td></tr><tr class="collapsed" data-id="586acf27989344c0b6b45166f51f14e9" data-parentid="d971d71f128a4380be82ff99ec4f6089"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>MyACCESS - Florida Medicaid</span></td></tr><tr class="collapsed" data-id="38a6cca486c34847bc3fa8bb2d7e5001" data-parentid="c37e315884744cb8925692789d177d62"><td class="instance"><span class="baseIcon primitive"></span><b>class</b></td></tr><tr class="collapsed" data-id="286dbbcfc61e4387a40a340ea022822e" data-parentid="38a6cca486c34847bc3fa8bb2d7e5001"><td class="instance"><span class="baseIcon primitive"></span><b>type</b></td></tr><tr class="collapsed" data-id="06ccd27e49a84bb9909436b94ec1fcc7" data-parentid="286dbbcfc61e4387a40a340ea022822e"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="33acd32a548242689bbe4d9052573301" data-parentid="06ccd27e49a84bb9909436b94ec1fcc7"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/coverage-class</span></td></tr><tr class="collapsed" data-id="bd16480ced6a4c25922670699748c51b" data-parentid="06ccd27e49a84bb9909436b94ec1fcc7"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>group</span></td></tr><tr class="collapsed" data-id="53d9259fc59e439bb2b45f845b175d70" data-parentid="06ccd27e49a84bb9909436b94ec1fcc7"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Group</span></td></tr><tr class="collapsed" data-id="fe9b09b2bed74b558a351b6ebe195c82" data-parentid="286dbbcfc61e4387a40a340ea022822e"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Group</span></td></tr><tr class="collapsed" data-id="d6d9087dd52043fe95a87b81faa5e86a" data-parentid="38a6cca486c34847bc3fa8bb2d7e5001"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>Union Group Plan</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable3339d59e493f4632b6f788ac2bef0a40 = new InstanceTree();
+resourceTreeTable3339d59e493f4632b6f788ac2bef0a40.init("3339d59e493f4632b6f788ac2bef0a40");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="ea214f15-407e-4b9a-a9ab-584c40f949b4">
+    <div class="path"><table><tbody><tr><td>Coverage.<span class="field">id[0]</span></td><td>medicaid-coverage-example-1</td></tr><tr><td>Coverage.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage|6.1.0</td></tr><tr><td>Coverage.identifier[0].type[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/v2-0203</td></tr><tr><td>Coverage.identifier[0].type[0].coding[0].<span class="field">code[0]</span></td><td>MB</td></tr><tr><td>Coverage.identifier[0].type[0].coding[0].<span class="field">display[0]</span></td><td>Member Number</td></tr><tr><td>Coverage.identifier[0].<span class="field">system[0]</span></td><td>http://example.org/fhir/memberidentifier</td></tr><tr><td>Coverage.identifier[0].<span class="field">value[0]</span></td><td>88800933501</td></tr><tr><td>Coverage.<span class="field">status[0]</span></td><td>active</td></tr><tr><td>Coverage.type[0].coding[0].<span class="field">system[0]</span></td><td>https://nahdo.org/sopt</td></tr><tr><td>Coverage.type[0].coding[0].<span class="field">code[0]</span></td><td>2</td></tr><tr><td>Coverage.type[0].coding[0].<span class="field">display[0]</span></td><td>Medicaid</td></tr><tr><td>Coverage.type[0].<span class="field">text[0]</span></td><td>Medicaid</td></tr><tr><td>Coverage.<span class="field">subscriberId[0]</span></td><td>888009335</td></tr><tr><td>Coverage.beneficiary[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>Coverage.relationship[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/subscriber-relationship</td></tr><tr><td>Coverage.relationship[0].coding[0].<span class="field">code[0]</span></td><td>self</td></tr><tr><td>Coverage.relationship[0].<span class="field">text[0]</span></td><td>Self</td></tr><tr><td>Coverage.period[0].<span class="field">start[0]</span></td><td>2024-01-01</td></tr><tr><td>Coverage.payor[0].<span class="field">reference[0]</span></td><td>Organization/fl-medicaid-example-1</td></tr><tr><td>Coverage.payor[0].<span class="field">display[0]</span></td><td>MyACCESS - Florida Medicaid</td></tr><tr><td>Coverage.class[0].type[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/coverage-class</td></tr><tr><td>Coverage.class[0].type[0].coding[0].<span class="field">code[0]</span></td><td>group</td></tr><tr><td>Coverage.class[0].type[0].coding[0].<span class="field">display[0]</span></td><td>Group</td></tr><tr><td>Coverage.class[0].type[0].<span class="field">text[0]</span></td><td>Group</td></tr><tr><td>Coverage.class[0].<span class="field">value[0]</span></td><td>Union Group Plan</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

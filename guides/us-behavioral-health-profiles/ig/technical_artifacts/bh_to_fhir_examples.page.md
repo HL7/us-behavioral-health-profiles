@@ -569,13 +569,13 @@ This table provides a correlation between USCDI+ behavioral health data elements
   <tr>
      <td class="tg-0lax">Procedures</td>
      <td class="tg-1wig">Reason for Referral</td>
-     <td class="tg-zzem">{{pagelink:example-ServiceRequest-peer-mentoring-example-1}}</td>
+     <td class="tg-zzem">{{pagelink:example-sdoh-referral-example-1}}</td>
      <td class="tg-0lax">Example of patient referral to a peer coaching program</td>
   </tr>
   <tr>
      <td class="tg-0lax">Procedures</td>
      <td class="tg-1wig">SDOH Interventions</td>
-     <td class="tg-zzem">{{pagelink:example-ServiceRequest-peer-mentoring-example-1}}</td>
+     <td class="tg-zzem">{{pagelink:example-sdoh-referral-example-1}}</td>
      <td class="tg-0lax">Example of social connection intervention</td>
   </tr>
     <tr>
@@ -587,7 +587,7 @@ This table provides a correlation between USCDI+ behavioral health data elements
   <tr>
      <td class="tg-0lax">Recovery Support Services</td>
      <td class="tg-1wig">Peer Coaching or Mentoring</td>
-     <td class="tg-zzem">{{pagelink:example-ServiceRequest-peer-mentoring-example-1}}</td>
+     <td class="tg-zzem">{{pagelink:example-sdoh-referral-example-1}}</td>
      <td class="tg-0lax">Example of a referral for peer support or mentoring</td>
   </tr>
   <tr>

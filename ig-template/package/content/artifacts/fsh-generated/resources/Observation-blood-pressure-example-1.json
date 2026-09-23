@@ -1,0 +1,81 @@
+{
+  "resourceType": "Observation",
+  "id": "blood-pressure-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure|6.1.0"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "vital-signs",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Vital Signs"
+        }
+      ],
+      "text": "Vital Signs"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "85354-9",
+        "system": "http://loinc.org",
+        "display": "Blood pressure panel with all children optional"
+      }
+    ],
+    "text": "Blood pressure systolic and diastolic"
+  },
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "effectiveDateTime": "2024-02-01",
+  "performer": [
+    {
+      "reference": "Practitioner/pcp-provider-example-1",
+      "display": "Dr. Doc Family"
+    }
+  ],
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "8480-6",
+            "system": "http://loinc.org",
+            "display": "Systolic blood pressure"
+          }
+        ],
+        "text": "Systolic blood pressure"
+      },
+      "valueQuantity": {
+        "value": 157,
+        "code": "mm[Hg]",
+        "system": "http://unitsofmeasure.org",
+        "unit": "mmHg"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "8462-4",
+            "system": "http://loinc.org",
+            "display": "Diastolic blood pressure"
+          }
+        ],
+        "text": "Diastolic blood pressure"
+      },
+      "valueQuantity": {
+        "value": 92,
+        "code": "mm[Hg]",
+        "system": "http://unitsofmeasure.org",
+        "unit": "mmHg"
+      }
+    }
+  ]
+}

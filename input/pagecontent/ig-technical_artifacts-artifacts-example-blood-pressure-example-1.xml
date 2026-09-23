@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | example-blood-pressure-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-blood-pressure-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="example-observation-blood-pressure-example">Example Observation: blood-pressure-example</h2>
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#104c9dab-e83a-4225-aee5-65f486051b31" aria-controls="104c9dab-e83a-4225-aee5-65f486051b31" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#71c0ef49-7dcd-4c8c-91ae-ec4fb7c31c3c" aria-controls="71c0ef49-7dcd-4c8c-91ae-ec4fb7c31c3c" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#e8a9736c-6c71-4c9e-9a7e-78e1d8514c19" aria-controls="e8a9736c-6c71-4c9e-9a7e-78e1d8514c19" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#1a489885-0426-4c6d-b394-c102176cece1" aria-controls="1a489885-0426-4c6d-b394-c102176cece1" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="104c9dab-e83a-4225-aee5-65f486051b31">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.resourceType" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Observation</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.id" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">blood-pressure-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.meta" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">meta</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.meta.profile" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">profile</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure|6.1.0</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.status" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">status</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">final</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.category" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">category</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.category.coding" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.category.coding.system" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/observation-category</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.category.coding.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">vital-signs</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.category.coding.display" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Vital Signs</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.category.text" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Vital Signs</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.code.coding" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.code.coding.system" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://loinc.org</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.code.coding.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">85354-9</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.code.coding.display" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Blood pressure panel with all children optional</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.code.text" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Blood pressure systolic and diastolic</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.subject" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">subject</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.subject.reference" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Patient/bh-patient-example</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.subject.display" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">James Wolff</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.effectiveDateTime" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">effectiveDateTime</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2024-02-01</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.performer" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">performer</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.performer.reference" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Practitioner/pcp-provider-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.performer.display" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Dr. Doc Family</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">component</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.coding" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.coding.system" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://loinc.org</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.coding.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">8480-6</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.coding.display" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Systolic blood pressure</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.text" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Systolic blood pressure</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.valueQuantity" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">valueQuantity</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.valueQuantity.value" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">value</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">157</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.valueQuantity.unit" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">unit</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">mmHg</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.valueQuantity.system" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://unitsofmeasure.org</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.valueQuantity.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">mm[Hg]</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.coding" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.coding.system" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://loinc.org</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.coding.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">8462-4</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.coding.display" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Diastolic blood pressure</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.text" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Diastolic blood pressure</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.valueQuantity" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">valueQuantity</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.valueQuantity.value" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">value</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">92</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.valueQuantity.unit" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">unit</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">mmHg</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.valueQuantity.system" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://unitsofmeasure.org</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.valueQuantity.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">mm[Hg]</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="71c0ef49-7dcd-4c8c-91ae-ec4fb7c31c3c">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">Observation</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.id" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">blood-pressure-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.meta" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.meta.profile" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure|6.1.0</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.status" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">final</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.category" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.category.coding" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.category.coding.system" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/observation-category</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.category.coding.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">vital-signs</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.category.coding.display" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Vital Signs</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.category.text" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Vital Signs</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.code.coding" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.code.coding.system" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://loinc.org</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.code.coding.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">85354-9</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.code.coding.display" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Blood pressure panel with all children optional</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.code.text" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Blood pressure systolic and diastolic</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.subject" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.subject.reference" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Patient/bh-patient-example</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.subject.display" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">James Wolff</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.effective" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">effectiveDateTime</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2024-02-01</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.performer" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">performer</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.performer.reference" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Practitioner/pcp-provider-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.performer.display" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Dr. Doc Family</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">performer</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">component</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.coding" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.coding.system" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://loinc.org</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.coding.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">8480-6</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.coding.display" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Systolic blood pressure</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.text" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Systolic blood pressure</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.value" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">valueQuantity</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.value.value" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">157</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.value.unit" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">unit</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">mmHg</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.value.system" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://unitsofmeasure.org</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.value.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">mm[Hg]</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">valueQuantity</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">component</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">component</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.coding" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.coding.system" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://loinc.org</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.coding.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">8462-4</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.coding.display" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Diastolic blood pressure</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.code.text" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Diastolic blood pressure</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.value" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">valueQuantity</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.value.value" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">92</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.value.unit" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">unit</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">mmHg</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.value.system" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://unitsofmeasure.org</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-blood-pressure.json&amp;tab=details#Observation.component.value.code" title="US Core Blood Pressure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-blood-pressure.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">mm[Hg]</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">valueQuantity</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">component</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Observation</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="e8a9736c-6c71-4c9e-9a7e-78e1d8514c19">
+    <div class="stu3-treetable" id="38e62d2d515a4dcba16003fe85916c0c" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="3006b1ec5fbc4b39a4e6d0d19313030a"><td class="instance"><span class="baseIcon primitive"></span><b>Observation</b></td></tr><tr class="collapsed" data-id="782164d58abf47d5ac8dc2646a938511" data-parentid="3006b1ec5fbc4b39a4e6d0d19313030a"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>blood-pressure-example-1</span></td></tr><tr class="collapsed" data-id="d1231905859c42c48bbcf3c07c8827d0" data-parentid="3006b1ec5fbc4b39a4e6d0d19313030a"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="2899989221a94aa6bdb94420be9c6d81" data-parentid="d1231905859c42c48bbcf3c07c8827d0"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure|6.1.0</span></td></tr><tr class="collapsed" data-id="8fa44b66328c4c068f39d3c0ddbb1d68" data-parentid="3006b1ec5fbc4b39a4e6d0d19313030a"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>final</span></td></tr><tr class="collapsed" data-id="455aaf02aa914856a0875478113d0a0f" data-parentid="3006b1ec5fbc4b39a4e6d0d19313030a"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="6bd03b37c5ce4afdb037d045c708161e" data-parentid="455aaf02aa914856a0875478113d0a0f"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="313108e52f3f4e438ae4b9d1eb717ebc" data-parentid="6bd03b37c5ce4afdb037d045c708161e"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/observation-category</span></td></tr><tr class="collapsed" data-id="d5bc555047534e3496e2c4a2a68da771" data-parentid="6bd03b37c5ce4afdb037d045c708161e"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>vital-signs</span></td></tr><tr class="collapsed" data-id="6ace6434596946de8190ec8225e21652" data-parentid="6bd03b37c5ce4afdb037d045c708161e"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Vital Signs</span></td></tr><tr class="collapsed" data-id="2fd8a3021c21443bb5a79207c4e12ed6" data-parentid="455aaf02aa914856a0875478113d0a0f"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Vital Signs</span></td></tr><tr class="collapsed" data-id="5fda80b9f7cb48fc883c13a5c816cb21" data-parentid="3006b1ec5fbc4b39a4e6d0d19313030a"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="75478af01b334c078fb9c42f249ccc25" data-parentid="5fda80b9f7cb48fc883c13a5c816cb21"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="90f7891a04b9461b8c7e618fc510c088" data-parentid="75478af01b334c078fb9c42f249ccc25"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="7c0eaf9fadb344d3b78f0d63bcef17d9" data-parentid="75478af01b334c078fb9c42f249ccc25"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>85354-9</span></td></tr><tr class="collapsed" data-id="367678260902409fa32ecf77be0a1113" data-parentid="75478af01b334c078fb9c42f249ccc25"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Blood pressure panel with all children optional</span></td></tr><tr class="collapsed" data-id="152f950a22d54aab8e66be162d0bf8b5" data-parentid="5fda80b9f7cb48fc883c13a5c816cb21"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Blood pressure systolic and diastolic</span></td></tr><tr class="collapsed" data-id="0f596bf7aa8645d48f76a2711dd62118" data-parentid="3006b1ec5fbc4b39a4e6d0d19313030a"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="34dfbabb93af481e81793c54fa6263be" data-parentid="0f596bf7aa8645d48f76a2711dd62118"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="fe07d1fa2bd04b1e94185fe6f8097b8e" data-parentid="0f596bf7aa8645d48f76a2711dd62118"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="a324cef1a31d4f65aea78999e2243817" data-parentid="3006b1ec5fbc4b39a4e6d0d19313030a"><td class="instance"><span class="baseIcon primitive"></span><b>effective : </b><span>2024-02-01</span></td></tr><tr class="collapsed" data-id="a9ee79c75a074bd28f865f2a467c195b" data-parentid="3006b1ec5fbc4b39a4e6d0d19313030a"><td class="instance"><span class="baseIcon primitive"></span><b>performer</b></td></tr><tr class="collapsed" data-id="1f98586af414482a8681203a4f457abc" data-parentid="a9ee79c75a074bd28f865f2a467c195b"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Practitioner/pcp-provider-example-1</span></td></tr><tr class="collapsed" data-id="893de7d012ef4c7e9a884608bdfc24a1" data-parentid="a9ee79c75a074bd28f865f2a467c195b"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Dr. Doc Family</span></td></tr><tr class="collapsed" data-id="43f9bfcbbcee4257a4cfcfde1eb16ca1" data-parentid="3006b1ec5fbc4b39a4e6d0d19313030a"><td class="instance"><span class="baseIcon primitive"></span><b>component</b></td></tr><tr class="collapsed" data-id="bf73e5da35f8414dbd35fff7e4a481cf" data-parentid="43f9bfcbbcee4257a4cfcfde1eb16ca1"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="30e5bc2dcfc949ba9c3ec012e9161459" data-parentid="bf73e5da35f8414dbd35fff7e4a481cf"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="f973743484e345b5a2871d2bdd39db72" data-parentid="30e5bc2dcfc949ba9c3ec012e9161459"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="238d34add7c04897a3a3b4343911e2df" data-parentid="30e5bc2dcfc949ba9c3ec012e9161459"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>8480-6</span></td></tr><tr class="collapsed" data-id="e8544cd86b99472387f5074480b43f98" data-parentid="30e5bc2dcfc949ba9c3ec012e9161459"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Systolic blood pressure</span></td></tr><tr class="collapsed" data-id="6e6cceee520d48eba20bcc9b55d93533" data-parentid="bf73e5da35f8414dbd35fff7e4a481cf"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Systolic blood pressure</span></td></tr><tr class="collapsed" data-id="3313dd9ae14643ccb09ecb35cc1c9155" data-parentid="43f9bfcbbcee4257a4cfcfde1eb16ca1"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="9e555f1530c043138bf6a5c7cc10bcc6" data-parentid="3313dd9ae14643ccb09ecb35cc1c9155"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>157</span></td></tr><tr class="collapsed" data-id="0f836b2e5e334eff82b28dd08a61873a" data-parentid="3313dd9ae14643ccb09ecb35cc1c9155"><td class="instance"><span class="baseIcon primitive"></span><b>unit : </b><span>mmHg</span></td></tr><tr class="collapsed" data-id="aa24d036bcea45c5984412104e5270b2" data-parentid="3313dd9ae14643ccb09ecb35cc1c9155"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://unitsofmeasure.org</span></td></tr><tr class="collapsed" data-id="c08b08dc48e84bcf89268000dc16710e" data-parentid="3313dd9ae14643ccb09ecb35cc1c9155"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>mm[Hg]</span></td></tr><tr class="collapsed" data-id="f3d2156105c349ba9d1826a80aa46045" data-parentid="3006b1ec5fbc4b39a4e6d0d19313030a"><td class="instance"><span class="baseIcon primitive"></span><b>component</b></td></tr><tr class="collapsed" data-id="1d9b701a90494ff381c7a468a80b830e" data-parentid="f3d2156105c349ba9d1826a80aa46045"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="7cb3f6f3b7984eada9bdefdd42ce3000" data-parentid="1d9b701a90494ff381c7a468a80b830e"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="d189c1651ca048dca24b809940f11ea8" data-parentid="7cb3f6f3b7984eada9bdefdd42ce3000"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="1d64e19633bb41d5b292e88b62dc7d99" data-parentid="7cb3f6f3b7984eada9bdefdd42ce3000"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>8462-4</span></td></tr><tr class="collapsed" data-id="61208dbb0a4b4cfe982bc4c0a593820f" data-parentid="7cb3f6f3b7984eada9bdefdd42ce3000"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Diastolic blood pressure</span></td></tr><tr class="collapsed" data-id="2e8f0ec6829b423fb7a01b5c6445e4ad" data-parentid="1d9b701a90494ff381c7a468a80b830e"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Diastolic blood pressure</span></td></tr><tr class="collapsed" data-id="12d35b2a45be406b93cf3cca612ea60f" data-parentid="f3d2156105c349ba9d1826a80aa46045"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="76ed01876bfa452dab9251810d78de7f" data-parentid="12d35b2a45be406b93cf3cca612ea60f"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>92</span></td></tr><tr class="collapsed" data-id="35771b7bf59d4bcf9b8d80c48464580d" data-parentid="12d35b2a45be406b93cf3cca612ea60f"><td class="instance"><span class="baseIcon primitive"></span><b>unit : </b><span>mmHg</span></td></tr><tr class="collapsed" data-id="79672ed1931f4ffbba129d092f1c5dfb" data-parentid="12d35b2a45be406b93cf3cca612ea60f"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://unitsofmeasure.org</span></td></tr><tr class="collapsed" data-id="9ef2f817dcad422f9d55832378badea8" data-parentid="12d35b2a45be406b93cf3cca612ea60f"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>mm[Hg]</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable38e62d2d515a4dcba16003fe85916c0c = new InstanceTree();
+resourceTreeTable38e62d2d515a4dcba16003fe85916c0c.init("38e62d2d515a4dcba16003fe85916c0c");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="1a489885-0426-4c6d-b394-c102176cece1">
+    <div class="path"><table><tbody><tr><td>Observation.<span class="field">id[0]</span></td><td>blood-pressure-example-1</td></tr><tr><td>Observation.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure|6.1.0</td></tr><tr><td>Observation.<span class="field">status[0]</span></td><td>final</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/observation-category</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">code[0]</span></td><td>vital-signs</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">display[0]</span></td><td>Vital Signs</td></tr><tr><td>Observation.category[0].<span class="field">text[0]</span></td><td>Vital Signs</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">code[0]</span></td><td>85354-9</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">display[0]</span></td><td>Blood pressure panel with all children optional</td></tr><tr><td>Observation.code[0].<span class="field">text[0]</span></td><td>Blood pressure systolic and diastolic</td></tr><tr><td>Observation.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>Observation.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>Observation.<span class="field">effective[0]</span></td><td>2024-02-01</td></tr><tr><td>Observation.performer[0].<span class="field">reference[0]</span></td><td>Practitioner/pcp-provider-example-1</td></tr><tr><td>Observation.performer[0].<span class="field">display[0]</span></td><td>Dr. Doc Family</td></tr><tr><td>Observation.component[0].code[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>Observation.component[0].code[0].coding[0].<span class="field">code[0]</span></td><td>8480-6</td></tr><tr><td>Observation.component[0].code[0].coding[0].<span class="field">display[0]</span></td><td>Systolic blood pressure</td></tr><tr><td>Observation.component[0].code[0].<span class="field">text[0]</span></td><td>Systolic blood pressure</td></tr><tr><td>Observation.component[0].value[0].<span class="field">value[0]</span></td><td>157</td></tr><tr><td>Observation.component[0].value[0].<span class="field">unit[0]</span></td><td>mmHg</td></tr><tr><td>Observation.component[0].value[0].<span class="field">system[0]</span></td><td>http://unitsofmeasure.org</td></tr><tr><td>Observation.component[0].value[0].<span class="field">code[0]</span></td><td>mm[Hg]</td></tr><tr><td>Observation.component[1].code[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>Observation.component[1].code[0].coding[0].<span class="field">code[0]</span></td><td>8462-4</td></tr><tr><td>Observation.component[1].code[0].coding[0].<span class="field">display[0]</span></td><td>Diastolic blood pressure</td></tr><tr><td>Observation.component[1].code[0].<span class="field">text[0]</span></td><td>Diastolic blood pressure</td></tr><tr><td>Observation.component[1].value[0].<span class="field">value[0]</span></td><td>92</td></tr><tr><td>Observation.component[1].value[0].<span class="field">unit[0]</span></td><td>mmHg</td></tr><tr><td>Observation.component[1].value[0].<span class="field">system[0]</span></td><td>http://unitsofmeasure.org</td></tr><tr><td>Observation.component[1].value[0].<span class="field">code[0]</span></td><td>mm[Hg]</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+{
+  "resourceType": "AllergyIntolerance",
+  "id": "penicillin-allergy-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance|6.1.0"
+    ]
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "active",
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "code": "confirmed",
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
+      }
+    ]
+  },
+  "category": [
+    "medication"
+  ],
+  "criticality": "high",
+  "code": {
+    "coding": [
+      {
+        "code": "764146007",
+        "system": "http://snomed.info/sct",
+        "display": "Substance with penicillin structure (substance)"
+      }
+    ],
+    "text": "Penicillin"
+  },
+  "patient": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "reaction": [
+    {
+      "manifestation": [
+        {
+          "coding": [
+            {
+              "code": "56018004",
+              "system": "http://snomed.info/sct",
+              "display": "Wheezing"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

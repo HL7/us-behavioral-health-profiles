@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | example-bupropion-dispense-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-bupropion-dispense-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="example-medicationdispense-bupropion-dispense-example">Example MedicationDispense: bupropion-dispense-example</h2>
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#e6e9c782-bac0-4b11-8ba0-6edc64e83ace" aria-controls="e6e9c782-bac0-4b11-8ba0-6edc64e83ace" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#fc2c7ae4-19b2-4322-9759-cc0e6cd9ff78" aria-controls="fc2c7ae4-19b2-4322-9759-cc0e6cd9ff78" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#6f7a254f-dc5e-46ef-815e-bca56420fde1" aria-controls="6f7a254f-dc5e-46ef-815e-bca56420fde1" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#ed4cda56-af8e-4c2d-9e91-b78c2c5f0eb3" aria-controls="ed4cda56-af8e-4c2d-9e91-b78c2c5f0eb3" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="e6e9c782-bac0-4b11-8ba0-6edc64e83ace">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.resourceType" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">MedicationDispense</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.id" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">bupropion-dispense-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.meta" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">meta</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.meta.profile" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">profile</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense|6.1.0</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.status" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">status</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">completed</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.medicationCodeableConcept" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">medicationCodeableConcept</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.medicationCodeableConcept.coding" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.medicationCodeableConcept.coding.system" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://www.nlm.nih.gov/research/umls/rxnorm</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.medicationCodeableConcept.coding.code" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">993532</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.medicationCodeableConcept.coding.display" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">bupropion hydrochloride 200 MG</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.subject" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">subject</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.subject.reference" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Patient/bh-patient-example</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.subject.display" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">James Wolff</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.quantity" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">quantity</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.quantity.value" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">value</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">30</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.quantity.unit" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">unit</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">pills</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.quantity.system" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://unitsofmeasure.org</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.whenHandedOver" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">whenHandedOver</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2016-12-08T06:38:52Z</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.dosageInstruction" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">dosageInstruction</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.dosageInstruction.text" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">200 mg daily</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="fc2c7ae4-19b2-4322-9759-cc0e6cd9ff78">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">MedicationDispense</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.id" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">bupropion-dispense-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.meta" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.meta.profile" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense|6.1.0</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.status" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">completed</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.medication" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">medicationCodeableConcept</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.medication.coding" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.medication.coding.system" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://www.nlm.nih.gov/research/umls/rxnorm</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.medication.coding.code" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">993532</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.medication.coding.display" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">bupropion hydrochloride 200 MG</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">medicationCodeableConcept</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.subject" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.subject.reference" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Patient/bh-patient-example</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.subject.display" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">James Wolff</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.quantity" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">quantity</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.quantity.value" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">30</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.quantity.unit" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">unit</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">pills</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.quantity.system" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://unitsofmeasure.org</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">quantity</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.whenHandedOver" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">whenHandedOver</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2016-12-08T06:38:52Z</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.dosageInstruction" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">dosageInstruction</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationdispense.json&amp;tab=details#MedicationDispense.dosageInstruction.text" title="US Core MedicationDispense Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationdispense.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">200 mg daily</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">dosageInstruction</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">MedicationDispense</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="6f7a254f-dc5e-46ef-815e-bca56420fde1">
+    <div class="stu3-treetable" id="fe87c4b4ad1f486cb87470700a215c75" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="1e2d68aecddd4801827c6a83a5123a1f"><td class="instance"><span class="baseIcon primitive"></span><b>MedicationDispense</b></td></tr><tr class="collapsed" data-id="199254e5a44a493fb804b937e6aa5ae8" data-parentid="1e2d68aecddd4801827c6a83a5123a1f"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>bupropion-dispense-example-1</span></td></tr><tr class="collapsed" data-id="f5b52790ae33405e8e6febe4e32de65f" data-parentid="1e2d68aecddd4801827c6a83a5123a1f"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="ea6ed699438d4f0dbcfeb8d26cdd9398" data-parentid="f5b52790ae33405e8e6febe4e32de65f"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense|6.1.0</span></td></tr><tr class="collapsed" data-id="5d02097492954386adaca702d7098c09" data-parentid="1e2d68aecddd4801827c6a83a5123a1f"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>completed</span></td></tr><tr class="collapsed" data-id="1ded807459724effad4bd655f11d5420" data-parentid="1e2d68aecddd4801827c6a83a5123a1f"><td class="instance"><span class="baseIcon primitive"></span><b>medication</b></td></tr><tr class="collapsed" data-id="d3d56343e345489581b365ce93b83ddc" data-parentid="1ded807459724effad4bd655f11d5420"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="3b2a1601660640f3a129bf942a9ff7ea" data-parentid="d3d56343e345489581b365ce93b83ddc"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://www.nlm.nih.gov/research/umls/rxnorm</span></td></tr><tr class="collapsed" data-id="351de2b32f834d7b834d4a9c7931af61" data-parentid="d3d56343e345489581b365ce93b83ddc"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>993532</span></td></tr><tr class="collapsed" data-id="21a8f00b15524858aa46727a08ca6cd6" data-parentid="d3d56343e345489581b365ce93b83ddc"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>bupropion hydrochloride 200 MG</span></td></tr><tr class="collapsed" data-id="d8dccbd1ab2b4ad9b96528c2d8ef5135" data-parentid="1e2d68aecddd4801827c6a83a5123a1f"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="fa272949acad4ebcb1c14899e9066521" data-parentid="d8dccbd1ab2b4ad9b96528c2d8ef5135"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="089a697ec801463792c87e230f5e999b" data-parentid="d8dccbd1ab2b4ad9b96528c2d8ef5135"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="8793f800512e4404a9ebd09aff74c42b" data-parentid="1e2d68aecddd4801827c6a83a5123a1f"><td class="instance"><span class="baseIcon primitive"></span><b>quantity</b></td></tr><tr class="collapsed" data-id="8e2f298c27cd4e79b38054c9a1269100" data-parentid="8793f800512e4404a9ebd09aff74c42b"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>30</span></td></tr><tr class="collapsed" data-id="84ab27b3fbc44fcd9e876c9d235ed23a" data-parentid="8793f800512e4404a9ebd09aff74c42b"><td class="instance"><span class="baseIcon primitive"></span><b>unit : </b><span>pills</span></td></tr><tr class="collapsed" data-id="2992fee27c304d279d0366bdcaa45547" data-parentid="8793f800512e4404a9ebd09aff74c42b"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://unitsofmeasure.org</span></td></tr><tr class="collapsed" data-id="75bc0679d3384593beef566ed30f1834" data-parentid="1e2d68aecddd4801827c6a83a5123a1f"><td class="instance"><span class="baseIcon primitive"></span><b>whenHandedOver : </b><span>2016-12-08T06:38:52Z</span></td></tr><tr class="collapsed" data-id="aa9159d1e08e4fe48eadfce2c6c30111" data-parentid="1e2d68aecddd4801827c6a83a5123a1f"><td class="instance"><span class="baseIcon primitive"></span><b>dosageInstruction</b></td></tr><tr class="collapsed" data-id="af881f6a7fff450484dc6df2445cf46d" data-parentid="aa9159d1e08e4fe48eadfce2c6c30111"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>200 mg daily</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTablefe87c4b4ad1f486cb87470700a215c75 = new InstanceTree();
+resourceTreeTablefe87c4b4ad1f486cb87470700a215c75.init("fe87c4b4ad1f486cb87470700a215c75");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="ed4cda56-af8e-4c2d-9e91-b78c2c5f0eb3">
+    <div class="path"><table><tbody><tr><td>MedicationDispense.<span class="field">id[0]</span></td><td>bupropion-dispense-example-1</td></tr><tr><td>MedicationDispense.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense|6.1.0</td></tr><tr><td>MedicationDispense.<span class="field">status[0]</span></td><td>completed</td></tr><tr><td>MedicationDispense.medication[0].coding[0].<span class="field">system[0]</span></td><td>http://www.nlm.nih.gov/research/umls/rxnorm</td></tr><tr><td>MedicationDispense.medication[0].coding[0].<span class="field">code[0]</span></td><td>993532</td></tr><tr><td>MedicationDispense.medication[0].coding[0].<span class="field">display[0]</span></td><td>bupropion hydrochloride 200 MG</td></tr><tr><td>MedicationDispense.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>MedicationDispense.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>MedicationDispense.quantity[0].<span class="field">value[0]</span></td><td>30</td></tr><tr><td>MedicationDispense.quantity[0].<span class="field">unit[0]</span></td><td>pills</td></tr><tr><td>MedicationDispense.quantity[0].<span class="field">system[0]</span></td><td>http://unitsofmeasure.org</td></tr><tr><td>MedicationDispense.<span class="field">whenHandedOver[0]</span></td><td>2016-12-08T06:38:52Z</td></tr><tr><td>MedicationDispense.dosageInstruction[0].<span class="field">text[0]</span></td><td>200 mg daily</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

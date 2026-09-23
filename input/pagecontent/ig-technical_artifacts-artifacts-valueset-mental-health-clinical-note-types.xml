@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | valueset-mental-health-clinical-note-types - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">valueset-mental-health-clinical-note-types</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="mental-health-clinical-notes-types">Mental Health Clinical Notes Types</h2>
+<p></p><table class="table meta-table">
+  <tbody><tr>
+    <td colspan="2">
+      <i>Official URL:</i> <code>http://fhir.org/guides/onc/bhp/ValueSet/mental-health-clinical-note-types</code>
+    </td>
+    <td>
+      <i>Version:</i> 0.2.0
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <i>ResourceType:</i> <p>ValueSet</p>
+
+    </td>
+    <td>
+      <i>Computable Name:</i> <p>MentalHealthClinicalNoteTypes</p>
+
+    </td>
+  </tr>
+</tbody></table>
+
+<p></p><p>This ValueSet defines the LOINC codes for Mental Health Clinical Note types.</p>
+
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#3b37c3df-5ac1-4fec-bf1c-b37bca1f1b93" aria-controls="3b37c3df-5ac1-4fec-bf1c-b37bca1f1b93" role="tab" data-toggle="tab">Rendered view</a>
+</li><li role="presentation" class="">
+    <a href="#e0dcb74b-f158-4687-9e2d-8e036b24a434" aria-controls="e0dcb74b-f158-4687-9e2d-8e036b24a434" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#31c53f5d-4331-4d9c-b792-19ec5d3d8b8c" aria-controls="31c53f5d-4331-4d9c-b792-19ec5d3d8b8c" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#9a200dba-5e0a-43d3-ad7b-09a2eed35690" aria-controls="9a200dba-5e0a-43d3-ad7b-09a2eed35690" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#eda2b02f-76df-47eb-81bd-b8796062a8ce" aria-controls="eda2b02f-76df-47eb-81bd-b8796062a8ce" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="3b37c3df-5ac1-4fec-bf1c-b37bca1f1b93">
+    <div class="rendered-resource" xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes from the following code systems:</p><ul><li><p>The following codes from system: <code><a href="http://loinc.org" target="_blank">LOINC</a></code></p><table class="regular"><colgroup><col class="w-auto"/><col/></colgroup><thead><tr><th>Code</th><th>Display</th></tr></thead><tbody><tr><td class="nowrap"><a href="https://loinc.org/34785-6/" target="_blank">34785-6</a></td><td>Mental Health Consult Note</td></tr><tr><td class="nowrap"><a href="https://loinc.org/78263-1/" target="_blank">78263-1</a></td><td>Mental Health Discharge Summary Note</td></tr><tr><td class="nowrap"><a href="https://loinc.org/78306-8/" target="_blank">78306-8</a></td><td>Mental Health History and Physical Note</td></tr><tr><td class="nowrap"><a href="https://loinc.org/78472-8/" target="_blank">78472-8</a></td><td>Mental Health Procedure Note</td></tr><tr><td class="nowrap"><a href="https://loinc.org/34904-3/" target="_blank">34904-3</a></td><td>Mental Health Progress Note</td></tr></tbody></table></li></ul></div>
+</div><div role="tabpanel" class="tab-pane " id="e0dcb74b-f158-4687-9e2d-8e036b24a434">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.resourceType" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">ValueSet</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.id" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">mental-health-clinical-note-types</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.url" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">url</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://fhir.org/guides/onc/bhp/ValueSet/mental-health-clinical-note-types</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.version" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">version</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">0.2.0</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.name" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">name</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">MentalHealthClinicalNoteTypes</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.title" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">title</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Mental Health Clinical Note Types</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.status" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">status</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">draft</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.experimental" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">experimental</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">true</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.description" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">description</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">This ValueSet defines the LOINC codes for Mental Health Clinical Note types.</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">compose</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">include</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.system" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://loinc.org</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">concept</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.code" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">34785-6</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.display" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Mental Health Consult Note</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.code" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">78263-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.display" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Mental Health Discharge Summary Note</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.code" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">78306-8</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.display" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Mental Health History and Physical Note</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.code" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">78472-8</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.display" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Mental Health Procedure Note</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.code" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">34904-3</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.display" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Mental Health Progress Note</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="31c53f5d-4331-4d9c-b792-19ec5d3d8b8c">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">ValueSet</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.id" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">mental-health-clinical-note-types</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.url" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">url</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://fhir.org/guides/onc/bhp/ValueSet/mental-health-clinical-note-types</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.version" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">version</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">0.2.0</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.name" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">name</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">MentalHealthClinicalNoteTypes</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.title" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">title</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Mental Health Clinical Note Types</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.status" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">draft</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.experimental" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">experimental</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">true</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.description" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">description</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">This ValueSet defines the LOINC codes for Mental Health Clinical Note types.</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">compose</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">include</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.system" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://loinc.org</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">concept</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.code" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">34785-6</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.display" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Mental Health Consult Note</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">concept</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">concept</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.code" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">78263-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.display" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Mental Health Discharge Summary Note</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">concept</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">concept</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.code" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">78306-8</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.display" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Mental Health History and Physical Note</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">concept</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">concept</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.code" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">78472-8</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.display" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Mental Health Procedure Note</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">concept</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">concept</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.code" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">34904-3</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.r4.examples@4.0.1&amp;filepath=package/StructureDefinition-ValueSet.json&amp;tab=details#ValueSet.compose.include.concept.display" title="ValueSet&#10;hl7.fhir.r4.examples 4.0.1&#10;StructureDefinition-ValueSet.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Mental Health Progress Note</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">concept</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">include</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">compose</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">ValueSet</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="9a200dba-5e0a-43d3-ad7b-09a2eed35690">
+    <div class="stu3-treetable" id="6782afacc5f84657a61293a84b52aaef" data-level="2"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="95d3c28cc0884810a9ed742051936b98"><td class="instance"><span class="baseIcon primitive"></span><b>ValueSet</b></td></tr><tr class="collapsed" data-id="201d2a6ff98c4689a178938ed37d4662" data-parentid="95d3c28cc0884810a9ed742051936b98"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>mental-health-clinical-note-types</span></td></tr><tr class="collapsed" data-id="d495a52f1c5b4a7fb8b68517286a4082" data-parentid="95d3c28cc0884810a9ed742051936b98"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>http://fhir.org/guides/onc/bhp/ValueSet/mental-health-clinical-note-types</span></td></tr><tr class="collapsed" data-id="ca6aa7a29633455f93c3eddf52d17270" data-parentid="95d3c28cc0884810a9ed742051936b98"><td class="instance"><span class="baseIcon primitive"></span><b>version : </b><span>0.2.0</span></td></tr><tr class="collapsed" data-id="aac648ef77d44a1e9ec9f3f9b863a8bc" data-parentid="95d3c28cc0884810a9ed742051936b98"><td class="instance"><span class="baseIcon primitive"></span><b>name : </b><span>MentalHealthClinicalNoteTypes</span></td></tr><tr class="collapsed" data-id="ab2c6f5bb8f94958994dbc934b5fdbeb" data-parentid="95d3c28cc0884810a9ed742051936b98"><td class="instance"><span class="baseIcon primitive"></span><b>title : </b><span>Mental Health Clinical Note Types</span></td></tr><tr class="collapsed" data-id="b7bc399839a6490ea005b7b9fa9d7689" data-parentid="95d3c28cc0884810a9ed742051936b98"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>draft</span></td></tr><tr class="collapsed" data-id="05f11cf315cb4928b4bf1f22b3f49956" data-parentid="95d3c28cc0884810a9ed742051936b98"><td class="instance"><span class="baseIcon primitive"></span><b>experimental : </b><span>True</span></td></tr><tr class="collapsed" data-id="3ef596fce900474b8e11fa132f036f86" data-parentid="95d3c28cc0884810a9ed742051936b98"><td class="instance"><span class="baseIcon primitive"></span><b>description : </b><span>This ValueSet defines the LOINC codes for Mental Health Clinical Note types.</span></td></tr><tr class="collapsed" data-id="7eb70e310c3b41679e770d991e736406" data-parentid="95d3c28cc0884810a9ed742051936b98"><td class="instance"><span class="baseIcon primitive"></span><b>compose</b></td></tr><tr class="collapsed" data-id="a1b67967d5454542834819c58bb92059" data-parentid="7eb70e310c3b41679e770d991e736406"><td class="instance"><span class="baseIcon primitive"></span><b>include</b></td></tr><tr class="collapsed" data-id="9a891bdb5df640fcb7a055394b01bcfd" data-parentid="a1b67967d5454542834819c58bb92059"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="20fedd3121f243ada603ad109128ad59" data-parentid="a1b67967d5454542834819c58bb92059"><td class="instance"><span class="baseIcon primitive"></span><b>concept</b></td></tr><tr class="collapsed" data-id="c06d81500eea44369a615217145f608a" data-parentid="20fedd3121f243ada603ad109128ad59"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>34785-6</span></td></tr><tr class="collapsed" data-id="10d90aba45a64a87b6fd676294b5faa1" data-parentid="20fedd3121f243ada603ad109128ad59"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Mental Health Consult Note</span></td></tr><tr class="collapsed" data-id="8492650eac8549fba424339734a3177c" data-parentid="a1b67967d5454542834819c58bb92059"><td class="instance"><span class="baseIcon primitive"></span><b>concept</b></td></tr><tr class="collapsed" data-id="6298a3e732ff481198723d850c29d3f5" data-parentid="8492650eac8549fba424339734a3177c"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>78263-1</span></td></tr><tr class="collapsed" data-id="0fa20d400031448b9f3957d6cc600ab7" data-parentid="8492650eac8549fba424339734a3177c"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Mental Health Discharge Summary Note</span></td></tr><tr class="collapsed" data-id="420953cf92c84068863f7dfbe0d937fd" data-parentid="a1b67967d5454542834819c58bb92059"><td class="instance"><span class="baseIcon primitive"></span><b>concept</b></td></tr><tr class="collapsed" data-id="2cf575916a9847459689c8a87d955fb8" data-parentid="420953cf92c84068863f7dfbe0d937fd"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>78306-8</span></td></tr><tr class="collapsed" data-id="1b6784856fb4416783bd96bff443a3eb" data-parentid="420953cf92c84068863f7dfbe0d937fd"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Mental Health History and Physical Note</span></td></tr><tr class="collapsed" data-id="3cc9a49c020049f68a4a8d1af22edfbf" data-parentid="a1b67967d5454542834819c58bb92059"><td class="instance"><span class="baseIcon primitive"></span><b>concept</b></td></tr><tr class="collapsed" data-id="5a2c0c3d29ca46a1810d22553aac3187" data-parentid="3cc9a49c020049f68a4a8d1af22edfbf"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>78472-8</span></td></tr><tr class="collapsed" data-id="7d25dd299abf45cdb60d46b8e73f4f7a" data-parentid="3cc9a49c020049f68a4a8d1af22edfbf"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Mental Health Procedure Note</span></td></tr><tr class="collapsed" data-id="a5d9528a43f14c0a8baf76dbd094ff98" data-parentid="a1b67967d5454542834819c58bb92059"><td class="instance"><span class="baseIcon primitive"></span><b>concept</b></td></tr><tr class="collapsed" data-id="386f07bf4ec64f5896acc7551ae7d22f" data-parentid="a5d9528a43f14c0a8baf76dbd094ff98"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>34904-3</span></td></tr><tr class="collapsed" data-id="8a83c2823c9a49c18edcd9948aa94dea" data-parentid="a5d9528a43f14c0a8baf76dbd094ff98"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Mental Health Progress Note</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable6782afacc5f84657a61293a84b52aaef = new InstanceTree();
+resourceTreeTable6782afacc5f84657a61293a84b52aaef.init("6782afacc5f84657a61293a84b52aaef");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="eda2b02f-76df-47eb-81bd-b8796062a8ce">
+    <div class="path"><table><tbody><tr><td>ValueSet.<span class="field">id[0]</span></td><td>mental-health-clinical-note-types</td></tr><tr><td>ValueSet.<span class="field">url[0]</span></td><td>http://fhir.org/guides/onc/bhp/ValueSet/mental-health-clinical-note-types</td></tr><tr><td>ValueSet.<span class="field">version[0]</span></td><td>0.2.0</td></tr><tr><td>ValueSet.<span class="field">name[0]</span></td><td>MentalHealthClinicalNoteTypes</td></tr><tr><td>ValueSet.<span class="field">title[0]</span></td><td>Mental Health Clinical Note Types</td></tr><tr><td>ValueSet.<span class="field">status[0]</span></td><td>draft</td></tr><tr><td>ValueSet.<span class="field">experimental[0]</span></td><td>True</td></tr><tr><td>ValueSet.<span class="field">description[0]</span></td><td>This ValueSet defines the LOINC codes for Mental Health Clinical Note types.</td></tr><tr><td>ValueSet.compose[0].include[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>ValueSet.compose[0].include[0].concept[0].<span class="field">code[0]</span></td><td>34785-6</td></tr><tr><td>ValueSet.compose[0].include[0].concept[0].<span class="field">display[0]</span></td><td>Mental Health Consult Note</td></tr><tr><td>ValueSet.compose[0].include[0].concept[1].<span class="field">code[0]</span></td><td>78263-1</td></tr><tr><td>ValueSet.compose[0].include[0].concept[1].<span class="field">display[0]</span></td><td>Mental Health Discharge Summary Note</td></tr><tr><td>ValueSet.compose[0].include[0].concept[2].<span class="field">code[0]</span></td><td>78306-8</td></tr><tr><td>ValueSet.compose[0].include[0].concept[2].<span class="field">display[0]</span></td><td>Mental Health History and Physical Note</td></tr><tr><td>ValueSet.compose[0].include[0].concept[3].<span class="field">code[0]</span></td><td>78472-8</td></tr><tr><td>ValueSet.compose[0].include[0].concept[3].<span class="field">display[0]</span></td><td>Mental Health Procedure Note</td></tr><tr><td>ValueSet.compose[0].include[0].concept[4].<span class="field">code[0]</span></td><td>34904-3</td></tr><tr><td>ValueSet.compose[0].include[0].concept[4].<span class="field">display[0]</span></td><td>Mental Health Progress Note</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

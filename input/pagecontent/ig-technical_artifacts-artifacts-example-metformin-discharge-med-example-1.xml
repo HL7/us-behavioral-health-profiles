@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | example-metformin-discharge-med-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-metformin-discharge-med-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="example-medicationrequest-metformin-discharge-med-example">Example MedicationRequest: metformin-discharge-med-example</h2>
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#07805174-1b67-41bc-a1cb-40f13b273afb" aria-controls="07805174-1b67-41bc-a1cb-40f13b273afb" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#717dbbac-77b9-4008-9df9-ccb6ac6e0d1e" aria-controls="717dbbac-77b9-4008-9df9-ccb6ac6e0d1e" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#38288e0e-1828-4a17-b8d5-0ea4f6cf4bd1" aria-controls="38288e0e-1828-4a17-b8d5-0ea4f6cf4bd1" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#5228da52-74fa-45bd-9660-09e794f4d472" aria-controls="5228da52-74fa-45bd-9660-09e794f4d472" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="07805174-1b67-41bc-a1cb-40f13b273afb">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.resourceType" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">MedicationRequest</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.id" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">metformin-discharge-med-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.meta" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">meta</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.meta.profile" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">profile</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest|6.1.0</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.status" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">status</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">completed</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.intent" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">intent</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">order</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.category" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">category</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.category.coding" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.category.coding.system" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/medicationrequest-category</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.category.coding.code" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">discharge</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.category.coding.display" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Discharge</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.medicationCodeableConcept" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">medicationCodeableConcept</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.medicationCodeableConcept.coding" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.medicationCodeableConcept.coding.system" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://www.nlm.nih.gov/research/umls/rxnorm</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.medicationCodeableConcept.coding.code" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">1043563</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.medicationCodeableConcept.coding.display" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">24 HR metformin hydrochloride 1000 MG / saxagliptin 2.5 MG Extended Release Oral Tablet</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.subject" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">subject</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.subject.reference" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Patient/bh-patient-example</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.subject.display" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">James Wolff</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.encounter" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">encounter</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.encounter.reference" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Encounter/ed-encounter-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.encounter.display" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Emergency Department</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.requester" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">requester</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.requester.reference" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Practitioner/ed-physician-example-1</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="717dbbac-77b9-4008-9df9-ccb6ac6e0d1e">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">MedicationRequest</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.id" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">metformin-discharge-med-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.meta" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.meta.profile" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest|6.1.0</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.status" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">completed</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.intent" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">intent</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">order</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.category" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.category.coding" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.category.coding.system" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/medicationrequest-category</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.category.coding.code" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">discharge</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.category.coding.display" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Discharge</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.medication" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">medicationCodeableConcept</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.medication.coding" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.medication.coding.system" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://www.nlm.nih.gov/research/umls/rxnorm</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.medication.coding.code" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">1043563</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.medication.coding.display" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">24 HR metformin hydrochloride 1000 MG / saxagliptin 2.5 MG Extended Release Oral Tablet</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">medicationCodeableConcept</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.subject" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.subject.reference" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Patient/bh-patient-example</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.subject.display" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">James Wolff</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.encounter" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">encounter</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.encounter.reference" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Encounter/ed-encounter-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.encounter.display" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Emergency Department</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">encounter</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.requester" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">requester</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-medicationrequest.json&amp;tab=details#MedicationRequest.requester.reference" title="US Core MedicationRequest Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-medicationrequest.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Practitioner/ed-physician-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">requester</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">MedicationRequest</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="38288e0e-1828-4a17-b8d5-0ea4f6cf4bd1">
+    <div class="stu3-treetable" id="280d812323944fa2acda8ed32c5bbc3b" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="9c6b33c0be7049928001824e0d08f4ce"><td class="instance"><span class="baseIcon primitive"></span><b>MedicationRequest</b></td></tr><tr class="collapsed" data-id="9746ce8625614c5da3c018148a865e61" data-parentid="9c6b33c0be7049928001824e0d08f4ce"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>metformin-discharge-med-example-1</span></td></tr><tr class="collapsed" data-id="e73dda475d324a058433e918ef0684c5" data-parentid="9c6b33c0be7049928001824e0d08f4ce"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="0421cc4aace14b0984848e2e94cef993" data-parentid="e73dda475d324a058433e918ef0684c5"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest|6.1.0</span></td></tr><tr class="collapsed" data-id="283e28bf7f89445998db1a26ae9856cf" data-parentid="9c6b33c0be7049928001824e0d08f4ce"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>completed</span></td></tr><tr class="collapsed" data-id="3d4fec78d8e8480ead86ab6a4e1ef0d9" data-parentid="9c6b33c0be7049928001824e0d08f4ce"><td class="instance"><span class="baseIcon primitive"></span><b>intent : </b><span>order</span></td></tr><tr class="collapsed" data-id="fd74b5cac24646848da8fe05bbdf3c9d" data-parentid="9c6b33c0be7049928001824e0d08f4ce"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="58074289c9b849b88d62dd09e0612879" data-parentid="fd74b5cac24646848da8fe05bbdf3c9d"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="026fa91a9aeb470e80476d2d05921976" data-parentid="58074289c9b849b88d62dd09e0612879"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/medicationrequest-category</span></td></tr><tr class="collapsed" data-id="f25d307de8f247be8bc5b6e9eda235a4" data-parentid="58074289c9b849b88d62dd09e0612879"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>discharge</span></td></tr><tr class="collapsed" data-id="8eb68fae7d9f4586aa8aed947cb72de7" data-parentid="58074289c9b849b88d62dd09e0612879"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Discharge</span></td></tr><tr class="collapsed" data-id="fa9a0ea5fe5c4430bbe5e390e554bb6c" data-parentid="9c6b33c0be7049928001824e0d08f4ce"><td class="instance"><span class="baseIcon primitive"></span><b>medication</b></td></tr><tr class="collapsed" data-id="d90f8950a1384478ae4f7a10e21fd747" data-parentid="fa9a0ea5fe5c4430bbe5e390e554bb6c"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="d02c777ef2eb4c28bcb6071102388fbb" data-parentid="d90f8950a1384478ae4f7a10e21fd747"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://www.nlm.nih.gov/research/umls/rxnorm</span></td></tr><tr class="collapsed" data-id="a3d9f325daff4a3eb7ddb675fce764a8" data-parentid="d90f8950a1384478ae4f7a10e21fd747"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>1043563</span></td></tr><tr class="collapsed" data-id="e881b1a6ea014e1380db48854fd2c824" data-parentid="d90f8950a1384478ae4f7a10e21fd747"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>24 HR metformin hydrochloride 1000 MG / saxagliptin 2.5 MG Extended Release Oral Tablet</span></td></tr><tr class="collapsed" data-id="7342ea82617442cea8a56e02e4832264" data-parentid="9c6b33c0be7049928001824e0d08f4ce"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="ba14f17bdc644d43a86ab32c9ba36409" data-parentid="7342ea82617442cea8a56e02e4832264"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="6be01c015e5843e8a4e34f174edc30c1" data-parentid="7342ea82617442cea8a56e02e4832264"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="2983074ab0294864a774eca31cd6558d" data-parentid="9c6b33c0be7049928001824e0d08f4ce"><td class="instance"><span class="baseIcon primitive"></span><b>encounter</b></td></tr><tr class="collapsed" data-id="3a35dfec4f7549079950f130ff71c8d4" data-parentid="2983074ab0294864a774eca31cd6558d"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Encounter/ed-encounter-example-1</span></td></tr><tr class="collapsed" data-id="4e264e04e0ee43f58fd01ae080ca17ef" data-parentid="2983074ab0294864a774eca31cd6558d"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Emergency Department</span></td></tr><tr class="collapsed" data-id="0706338813244747bc64b504cf9f4be1" data-parentid="9c6b33c0be7049928001824e0d08f4ce"><td class="instance"><span class="baseIcon primitive"></span><b>requester</b></td></tr><tr class="collapsed" data-id="e561d250dade4ca292db3fd511445d0d" data-parentid="0706338813244747bc64b504cf9f4be1"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Practitioner/ed-physician-example-1</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable280d812323944fa2acda8ed32c5bbc3b = new InstanceTree();
+resourceTreeTable280d812323944fa2acda8ed32c5bbc3b.init("280d812323944fa2acda8ed32c5bbc3b");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="5228da52-74fa-45bd-9660-09e794f4d472">
+    <div class="path"><table><tbody><tr><td>MedicationRequest.<span class="field">id[0]</span></td><td>metformin-discharge-med-example-1</td></tr><tr><td>MedicationRequest.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest|6.1.0</td></tr><tr><td>MedicationRequest.<span class="field">status[0]</span></td><td>completed</td></tr><tr><td>MedicationRequest.<span class="field">intent[0]</span></td><td>order</td></tr><tr><td>MedicationRequest.category[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/medicationrequest-category</td></tr><tr><td>MedicationRequest.category[0].coding[0].<span class="field">code[0]</span></td><td>discharge</td></tr><tr><td>MedicationRequest.category[0].coding[0].<span class="field">display[0]</span></td><td>Discharge</td></tr><tr><td>MedicationRequest.medication[0].coding[0].<span class="field">system[0]</span></td><td>http://www.nlm.nih.gov/research/umls/rxnorm</td></tr><tr><td>MedicationRequest.medication[0].coding[0].<span class="field">code[0]</span></td><td>1043563</td></tr><tr><td>MedicationRequest.medication[0].coding[0].<span class="field">display[0]</span></td><td>24 HR metformin hydrochloride 1000 MG / saxagliptin 2.5 MG Extended Release Oral Tablet</td></tr><tr><td>MedicationRequest.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>MedicationRequest.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>MedicationRequest.encounter[0].<span class="field">reference[0]</span></td><td>Encounter/ed-encounter-example-1</td></tr><tr><td>MedicationRequest.encounter[0].<span class="field">display[0]</span></td><td>Emergency Department</td></tr><tr><td>MedicationRequest.requester[0].<span class="field">reference[0]</span></td><td>Practitioner/ed-physician-example-1</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

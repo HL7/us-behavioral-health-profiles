@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | example-SDOHCC-ConsentInformationDisclosure-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-SDOHCC-ConsentInformationDisclosure-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="example-consent-sdohcc-consentinformationdisclosure-example">Example Consent: SDOHCC-ConsentInformationDisclosure-example</h2>
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#3902bb60-5c73-4b60-8f44-be5681d0107e" aria-controls="3902bb60-5c73-4b60-8f44-be5681d0107e" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#ec66c898-0793-4ff7-8e2e-b84d04fd63b5" aria-controls="ec66c898-0793-4ff7-8e2e-b84d04fd63b5" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#1dfa7432-88fb-4dad-a10d-b5f1f2345eb4" aria-controls="1dfa7432-88fb-4dad-a10d-b5f1f2345eb4" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#21dc2ea6-8bda-4b7f-965a-cd02b2077915" aria-controls="21dc2ea6-8bda-4b7f-965a-cd02b2077915" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="3902bb60-5c73-4b60-8f44-be5681d0107e">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.resourceType" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Consent</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.id" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">SDOHCC-ConsentInformationDisclosure-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.meta" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">meta</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.meta.profile" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">profile</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.status" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">status</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">active</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.scope" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">scope</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.scope.coding" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.scope.coding.system" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/consentscope</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.scope.coding.code" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">patient-privacy</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.scope.coding.display" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Privacy Consent</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.category" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">category</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.category.coding" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.category.coding.system" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/v3-ActCode</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.category.coding.code" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">IDSCL</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.category.coding.display" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">information disclosure</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.patient" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">patient</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.patient.reference" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Patient/bh-patient-example</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.patient.display" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">James Wolff</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.dateTime" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">dateTime</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2024-02-01</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.organization" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">organization</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.organization.reference" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Organization/mh-provider-example-1</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.sourceAttachment" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">sourceAttachment</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.sourceAttachment.contentType" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">contentType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">text/plain</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.sourceAttachment.data" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">data</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Tm8gYWN0aXZpdHkgcmVzdHJpY3Rpb24sIHJlZ3VsYXIgZGlldCwgZm9sbG93IHVwIGluIHR3byB0byB0aHJlZSB3ZWVrcyB3aXRoIHByaW1hcnkgY2FyZSBwcm92aWRlci4=</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.policyRule" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">policyRule</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.policyRule.coding" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.policyRule.coding.system" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/consentpolicycodes</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.policyRule.coding.code" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">hipaa-auth</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.policyRule.coding.display" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">HIPAA Authorization</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="ec66c898-0793-4ff7-8e2e-b84d04fd63b5">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">Consent</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.id" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">SDOHCC-ConsentInformationDisclosure-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.meta" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.meta.profile" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.status" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">active</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.scope" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">scope</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.scope.coding" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.scope.coding.system" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/consentscope</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.scope.coding.code" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">patient-privacy</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.scope.coding.display" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Privacy Consent</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">scope</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.category" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.category.coding" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.category.coding.system" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/v3-ActCode</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.category.coding.code" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">IDSCL</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.category.coding.display" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">information disclosure</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.patient" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">patient</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.patient.reference" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Patient/bh-patient-example</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.patient.display" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">James Wolff</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">patient</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.dateTime" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">dateTime</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2024-02-01</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.organization" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">organization</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.organization.reference" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Organization/mh-provider-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">organization</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.source" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">sourceAttachment</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.source.contentType" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">contentType</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">text/plain</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.source.data" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">data</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Tm8gYWN0aXZpdHkgcmVzdHJpY3Rpb24sIHJlZ3VsYXIgZGlldCwgZm9sbG93IHVwIGluIHR3byB0byB0aHJlZSB3ZWVrcyB3aXRoIHByaW1hcnkgY2FyZSBwcm92aWRlci4=</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">sourceAttachment</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.policyRule" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">policyRule</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.policyRule.coding" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.policyRule.coding.system" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/consentpolicycodes</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.policyRule.coding.code" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">hipaa-auth</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.sdoh-clinicalcare@2.3.0&amp;filepath=package/StructureDefinition-SDOHCC-Consent.json&amp;tab=details#Consent.policyRule.coding.display" title="SDOHCC Consent&#10;hl7.fhir.us.sdoh-clinicalcare 2.3.0&#10;StructureDefinition-SDOHCC-Consent.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">HIPAA Authorization</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">policyRule</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Consent</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="1dfa7432-88fb-4dad-a10d-b5f1f2345eb4">
+    <div class="stu3-treetable" id="70f5c35ac9b7459eacb05af07e34d3b8" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="5684e4489077412c94b50f8b0fb93b57"><td class="instance"><span class="baseIcon primitive"></span><b>Consent</b></td></tr><tr class="collapsed" data-id="cbb5a618e71d45919e2f61154c7c59db" data-parentid="5684e4489077412c94b50f8b0fb93b57"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>SDOHCC-ConsentInformationDisclosure-example-1</span></td></tr><tr class="collapsed" data-id="dd8559237668423e8ba6fc2f1ba5f8c1" data-parentid="5684e4489077412c94b50f8b0fb93b57"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="2c5064aa516547de8e5b49e360e7ca1a" data-parentid="dd8559237668423e8ba6fc2f1ba5f8c1"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent</span></td></tr><tr class="collapsed" data-id="a6d55bc64e824189a98e397deb42f605" data-parentid="5684e4489077412c94b50f8b0fb93b57"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>active</span></td></tr><tr class="collapsed" data-id="a2301c64c0bc4354ae6731bee4eaa3a0" data-parentid="5684e4489077412c94b50f8b0fb93b57"><td class="instance"><span class="baseIcon primitive"></span><b>scope</b></td></tr><tr class="collapsed" data-id="c8fb32bcd7644475a670aa5d616555be" data-parentid="a2301c64c0bc4354ae6731bee4eaa3a0"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="f45932cca8a8450487707c6c78a648a1" data-parentid="c8fb32bcd7644475a670aa5d616555be"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/consentscope</span></td></tr><tr class="collapsed" data-id="e5b73902503d497a9e932274f1e242c0" data-parentid="c8fb32bcd7644475a670aa5d616555be"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>patient-privacy</span></td></tr><tr class="collapsed" data-id="f135cd06dd954830ae5ef1f6760e35ea" data-parentid="c8fb32bcd7644475a670aa5d616555be"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Privacy Consent</span></td></tr><tr class="collapsed" data-id="1f6240b182bf4fe6a2b22823918517d9" data-parentid="5684e4489077412c94b50f8b0fb93b57"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="fc73ccd0a48945019b09a08b9f3b02ce" data-parentid="1f6240b182bf4fe6a2b22823918517d9"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="5baed673b4ea47d5a4e7dd60fcd12ceb" data-parentid="fc73ccd0a48945019b09a08b9f3b02ce"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/v3-ActCode</span></td></tr><tr class="collapsed" data-id="c507a1c91555449a8e0f778092c8fe3b" data-parentid="fc73ccd0a48945019b09a08b9f3b02ce"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>IDSCL</span></td></tr><tr class="collapsed" data-id="6a7701f30bdf40668537d6f7418ed345" data-parentid="fc73ccd0a48945019b09a08b9f3b02ce"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>information disclosure</span></td></tr><tr class="collapsed" data-id="ccc44241a9f04f028802854df64614a3" data-parentid="5684e4489077412c94b50f8b0fb93b57"><td class="instance"><span class="baseIcon primitive"></span><b>patient</b></td></tr><tr class="collapsed" data-id="e7673eefc7e545f7bbc3e1f621f413ec" data-parentid="ccc44241a9f04f028802854df64614a3"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="31e692981eaf4294841bb99470c8f6fa" data-parentid="ccc44241a9f04f028802854df64614a3"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="efc2c2337fc14d178271d4ff0b32a459" data-parentid="5684e4489077412c94b50f8b0fb93b57"><td class="instance"><span class="baseIcon primitive"></span><b>dateTime : </b><span>2024-02-01</span></td></tr><tr class="collapsed" data-id="4d72542a4f6e40d883f76ae9ad546299" data-parentid="5684e4489077412c94b50f8b0fb93b57"><td class="instance"><span class="baseIcon primitive"></span><b>organization</b></td></tr><tr class="collapsed" data-id="2b6b2be25df44ea2a1eb20bf29fc198b" data-parentid="4d72542a4f6e40d883f76ae9ad546299"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Organization/mh-provider-example-1</span></td></tr><tr class="collapsed" data-id="bb67bcf791db42ed819b4b73db9bd480" data-parentid="5684e4489077412c94b50f8b0fb93b57"><td class="instance"><span class="baseIcon primitive"></span><b>source</b></td></tr><tr class="collapsed" data-id="5cf36dcb8cca475c8110f5a0f1658641" data-parentid="bb67bcf791db42ed819b4b73db9bd480"><td class="instance"><span class="baseIcon primitive"></span><b>contentType : </b><span>text/plain</span></td></tr><tr class="collapsed" data-id="d2ebf76d0ae84f36a6ba4d050b66c9b5" data-parentid="bb67bcf791db42ed819b4b73db9bd480"><td class="instance"><span class="baseIcon primitive"></span><b>data : </b><span>Tm8gYWN0aXZpdHkgcmVzdHJpY3Rpb24sIHJlZ3VsYXIgZGlldCwgZm9sbG93IHVwIGluIHR3byB0byB0aHJlZSB3ZWVrcyB3aXRoIHByaW1hcnkgY2FyZSBwcm92aWRlci4=</span></td></tr><tr class="collapsed" data-id="3ee16b866cf14ab59b9de37f0aa4dcfc" data-parentid="5684e4489077412c94b50f8b0fb93b57"><td class="instance"><span class="baseIcon primitive"></span><b>policyRule</b></td></tr><tr class="collapsed" data-id="4058441763444eeeb47867497b1b92bb" data-parentid="3ee16b866cf14ab59b9de37f0aa4dcfc"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="fe41638cd55f499db3f0578522f6ea1e" data-parentid="4058441763444eeeb47867497b1b92bb"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/consentpolicycodes</span></td></tr><tr class="collapsed" data-id="d97ca3c0a0634c8481caf0e0dd9339b0" data-parentid="4058441763444eeeb47867497b1b92bb"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>hipaa-auth</span></td></tr><tr class="collapsed" data-id="042088b587f5405eacfb0ed80a623af3" data-parentid="4058441763444eeeb47867497b1b92bb"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>HIPAA Authorization</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable70f5c35ac9b7459eacb05af07e34d3b8 = new InstanceTree();
+resourceTreeTable70f5c35ac9b7459eacb05af07e34d3b8.init("70f5c35ac9b7459eacb05af07e34d3b8");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="21dc2ea6-8bda-4b7f-965a-cd02b2077915">
+    <div class="path"><table><tbody><tr><td>Consent.<span class="field">id[0]</span></td><td>SDOHCC-ConsentInformationDisclosure-example-1</td></tr><tr><td>Consent.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent</td></tr><tr><td>Consent.<span class="field">status[0]</span></td><td>active</td></tr><tr><td>Consent.scope[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/consentscope</td></tr><tr><td>Consent.scope[0].coding[0].<span class="field">code[0]</span></td><td>patient-privacy</td></tr><tr><td>Consent.scope[0].coding[0].<span class="field">display[0]</span></td><td>Privacy Consent</td></tr><tr><td>Consent.category[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td></tr><tr><td>Consent.category[0].coding[0].<span class="field">code[0]</span></td><td>IDSCL</td></tr><tr><td>Consent.category[0].coding[0].<span class="field">display[0]</span></td><td>information disclosure</td></tr><tr><td>Consent.patient[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>Consent.patient[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>Consent.<span class="field">dateTime[0]</span></td><td>2024-02-01</td></tr><tr><td>Consent.organization[0].<span class="field">reference[0]</span></td><td>Organization/mh-provider-example-1</td></tr><tr><td>Consent.source[0].<span class="field">contentType[0]</span></td><td>text/plain</td></tr><tr><td>Consent.source[0].<span class="field">data[0]</span></td><td>Tm8gYWN0aXZpdHkgcmVzdHJpY3Rpb24sIHJlZ3VsYXIgZGlldCwgZm9sbG93IHVwIGluIHR3byB0byB0aHJlZSB3ZWVrcyB3aXRoIHByaW1hcnkgY2FyZSBwcm92aWRlci4=</td></tr><tr><td>Consent.policyRule[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/consentpolicycodes</td></tr><tr><td>Consent.policyRule[0].coding[0].<span class="field">code[0]</span></td><td>hipaa-auth</td></tr><tr><td>Consent.policyRule[0].coding[0].<span class="field">display[0]</span></td><td>HIPAA Authorization</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

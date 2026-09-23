@@ -1,0 +1,53 @@
+{
+  "resourceType": "Observation",
+  "id": "provider-preference-observation-example-2",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "care-experience-preference",
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+          "display": "Care experience preference"
+        }
+      ],
+      "text": "Care Experience Preference"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "95541-9",
+        "system": "http://loinc.org",
+        "display": "Care experience preference"
+      }
+    ],
+    "text": "Care Experience Preference"
+  },
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "effectiveDateTime": "2024-02-01",
+  "performer": [
+    {
+      "reference": "Practitioner/pcp-provider-example-1",
+      "display": "Dr. Doc Family"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "314433002",
+        "system": "http://snomed.info/sct",
+        "display": "Preference for health professional (finding)"
+      }
+    ],
+    "text": "Preference for health professional"
+  }
+}

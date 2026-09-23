@@ -1,0 +1,82 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "hark-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|6.1.0"
+    ]
+  },
+  "questionnaire": "https://www.etsu.edu/institute/child-family-health/documents/mahf_dv_hark_c.pdf",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "authored": "2024-02-01T20:50:32.718Z",
+  "author": {
+    "reference": "Practitioner/ed-physician-example-1"
+  },
+  "item": [
+    {
+      "linkId": "/76499-3",
+      "text": "Within the last year, have you been humiliated or emotionally abused in other ways by your partner or ex-partner?",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA32-8",
+            "system": "http://loinc.org",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/76501-6",
+      "text": "Within the last year, have you been afraid of your partner or ex-partner?",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA32-8",
+            "system": "http://loinc.org",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/76502-4",
+      "text": "Within the last year, have you been raped or forced to have any kind of sexual activity by your partner or ex-partner?",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA32-8",
+            "system": "http://loinc.org",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/76503-2",
+      "text": "Within the last year, have you been kicked, hit, slapped, or otherwise physically hurt by your partner or ex-partner?",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA32-8",
+            "system": "http://loinc.org",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/76504-0",
+      "text": "Total score [HARK]",
+      "answer": [
+        {
+          "valueInteger": 0
+        }
+      ]
+    }
+  ]
+}

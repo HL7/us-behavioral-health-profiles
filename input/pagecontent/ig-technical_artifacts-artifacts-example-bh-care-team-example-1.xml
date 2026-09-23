@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | example-bh-care-team-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-bh-care-team-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="example-careteam-bh-care-team-example">Example CareTeam: bh-care-team-example</h2>
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#9d767521-67d8-4803-9cd4-84151d40a432" aria-controls="9d767521-67d8-4803-9cd4-84151d40a432" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#ce93dabe-5077-4c5c-9227-e08304c389c1" aria-controls="ce93dabe-5077-4c5c-9227-e08304c389c1" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#f1eab172-97df-4769-a068-1436d8006364" aria-controls="f1eab172-97df-4769-a068-1436d8006364" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#6e0ba8d6-c811-4644-98c9-2148f5d629a8" aria-controls="6e0ba8d6-c811-4644-98c9-2148f5d629a8" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="9d767521-67d8-4803-9cd4-84151d40a432">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.resourceType" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">CareTeam</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.id" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">bh-care-team-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.meta" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">meta</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.meta.profile" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">profile</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam|6.1.0</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.status" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">status</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">active</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.name" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">name</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Example CareTeam</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.subject" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">subject</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.subject.reference" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Patient/bh-patient-example</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.subject.display" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">James Wolff</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">participant</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">role</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role.coding" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role.coding.system" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://snomed.info/sct</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role.coding.code" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">309339007</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role.coding.display" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Adult intensive care specialist (occupation)</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.member" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">member</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.member.reference" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Practitioner/ed-physician-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.member.display" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Wise Owl, MD</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">role</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role.coding" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role.coding.system" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://snomed.info/sct</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role.coding.code" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">310190000</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role.coding.display" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Mental health counselor (occupation)</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.member" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">member</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.member.reference" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Practitioner/mental-health-provider-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.member.display" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Dr. Lazslo Cravensworth</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="ce93dabe-5077-4c5c-9227-e08304c389c1">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">CareTeam</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.id" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">bh-care-team-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.meta" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.meta.profile" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam|6.1.0</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.status" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">active</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.name" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">name</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Example CareTeam</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.subject" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.subject.reference" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Patient/bh-patient-example</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.subject.display" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">James Wolff</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">participant</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">role</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role.coding" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role.coding.system" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://snomed.info/sct</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role.coding.code" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">309339007</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role.coding.display" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Adult intensive care specialist (occupation)</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">role</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.member" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">member</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.member.reference" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Practitioner/ed-physician-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.member.display" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Wise Owl, MD</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">member</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">participant</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">participant</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">role</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role.coding" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role.coding.system" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://snomed.info/sct</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role.coding.code" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">310190000</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.role.coding.display" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Mental health counselor (occupation)</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">role</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.member" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">member</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.member.reference" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Practitioner/mental-health-provider-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-careteam.json&amp;tab=details#CareTeam.participant.member.display" title="US Core CareTeam Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-careteam.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Dr. Lazslo Cravensworth</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">member</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">participant</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">CareTeam</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="f1eab172-97df-4769-a068-1436d8006364">
+    <div class="stu3-treetable" id="fe127058a488498a82b2963c1f111534" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="d416168515ca4abf9ff567a391b0c361"><td class="instance"><span class="baseIcon primitive"></span><b>CareTeam</b></td></tr><tr class="collapsed" data-id="95cc89288fcd4ffa818dda8de4275ac1" data-parentid="d416168515ca4abf9ff567a391b0c361"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>bh-care-team-example-1</span></td></tr><tr class="collapsed" data-id="41dc309268f342d4a809e06c8757a177" data-parentid="d416168515ca4abf9ff567a391b0c361"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="0309f2b8f3f54dbd8e8ebc30356cfb2f" data-parentid="41dc309268f342d4a809e06c8757a177"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam|6.1.0</span></td></tr><tr class="collapsed" data-id="de6a75048c974690b2ef247c5018554c" data-parentid="d416168515ca4abf9ff567a391b0c361"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>active</span></td></tr><tr class="collapsed" data-id="6ce80ce7dcbb478bab3012204d9ce840" data-parentid="d416168515ca4abf9ff567a391b0c361"><td class="instance"><span class="baseIcon primitive"></span><b>name : </b><span>Example CareTeam</span></td></tr><tr class="collapsed" data-id="24fc79106b9d40f095bb635b52e20261" data-parentid="d416168515ca4abf9ff567a391b0c361"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="071fc9c0f0e14460924196c779d33a2f" data-parentid="24fc79106b9d40f095bb635b52e20261"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="4941604f95174c7c9f0d786c21cd4241" data-parentid="24fc79106b9d40f095bb635b52e20261"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="baf54c7443df413a828b462da5d75066" data-parentid="d416168515ca4abf9ff567a391b0c361"><td class="instance"><span class="baseIcon primitive"></span><b>participant</b></td></tr><tr class="collapsed" data-id="d84b9d87470c473591853f35cc81e73a" data-parentid="baf54c7443df413a828b462da5d75066"><td class="instance"><span class="baseIcon primitive"></span><b>role</b></td></tr><tr class="collapsed" data-id="3fd428b25e67425fb513222a2b293c5d" data-parentid="d84b9d87470c473591853f35cc81e73a"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="b7e70d78bce94035bc12e29f5ccf2a78" data-parentid="3fd428b25e67425fb513222a2b293c5d"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://snomed.info/sct</span></td></tr><tr class="collapsed" data-id="17499e8a004d474a9c5877a27075ee19" data-parentid="3fd428b25e67425fb513222a2b293c5d"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>309339007</span></td></tr><tr class="collapsed" data-id="2312ae21b0294b94a0f7440b6cf4ee5c" data-parentid="3fd428b25e67425fb513222a2b293c5d"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Adult intensive care specialist (occupation)</span></td></tr><tr class="collapsed" data-id="2f35ad12702544a187e791470b2b097d" data-parentid="baf54c7443df413a828b462da5d75066"><td class="instance"><span class="baseIcon primitive"></span><b>member</b></td></tr><tr class="collapsed" data-id="c71fb956e8154991985e773d4f8ded2d" data-parentid="2f35ad12702544a187e791470b2b097d"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Practitioner/ed-physician-example-1</span></td></tr><tr class="collapsed" data-id="e8c6db4b54ff4069812e6820efc30d17" data-parentid="2f35ad12702544a187e791470b2b097d"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Wise Owl, MD</span></td></tr><tr class="collapsed" data-id="2d5c79f08770497eadbe7b297477c1e6" data-parentid="d416168515ca4abf9ff567a391b0c361"><td class="instance"><span class="baseIcon primitive"></span><b>participant</b></td></tr><tr class="collapsed" data-id="21c9da13f6ec410e9079da53fa2d5b5c" data-parentid="2d5c79f08770497eadbe7b297477c1e6"><td class="instance"><span class="baseIcon primitive"></span><b>role</b></td></tr><tr class="collapsed" data-id="5418a13fe80f421197795d5f743d19ff" data-parentid="21c9da13f6ec410e9079da53fa2d5b5c"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="83a2aecce7784dcfa1be5183fe14789b" data-parentid="5418a13fe80f421197795d5f743d19ff"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://snomed.info/sct</span></td></tr><tr class="collapsed" data-id="082883054e6846b1b225437f3ec4b976" data-parentid="5418a13fe80f421197795d5f743d19ff"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>310190000</span></td></tr><tr class="collapsed" data-id="fd746517f7a841c2a299ace7b9ad50bc" data-parentid="5418a13fe80f421197795d5f743d19ff"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Mental health counselor (occupation)</span></td></tr><tr class="collapsed" data-id="b28fa8d19b9f4566b240c6eaae2811ac" data-parentid="2d5c79f08770497eadbe7b297477c1e6"><td class="instance"><span class="baseIcon primitive"></span><b>member</b></td></tr><tr class="collapsed" data-id="7872f8307bdd47f0a96ae5cba1221fc5" data-parentid="b28fa8d19b9f4566b240c6eaae2811ac"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Practitioner/mental-health-provider-example-1</span></td></tr><tr class="collapsed" data-id="78c9063553724e67b2de9622966af722" data-parentid="b28fa8d19b9f4566b240c6eaae2811ac"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Dr. Lazslo Cravensworth</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTablefe127058a488498a82b2963c1f111534 = new InstanceTree();
+resourceTreeTablefe127058a488498a82b2963c1f111534.init("fe127058a488498a82b2963c1f111534");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="6e0ba8d6-c811-4644-98c9-2148f5d629a8">
+    <div class="path"><table><tbody><tr><td>CareTeam.<span class="field">id[0]</span></td><td>bh-care-team-example-1</td></tr><tr><td>CareTeam.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam|6.1.0</td></tr><tr><td>CareTeam.<span class="field">status[0]</span></td><td>active</td></tr><tr><td>CareTeam.<span class="field">name[0]</span></td><td>Example CareTeam</td></tr><tr><td>CareTeam.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>CareTeam.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>CareTeam.participant[0].role[0].coding[0].<span class="field">system[0]</span></td><td>http://snomed.info/sct</td></tr><tr><td>CareTeam.participant[0].role[0].coding[0].<span class="field">code[0]</span></td><td>309339007</td></tr><tr><td>CareTeam.participant[0].role[0].coding[0].<span class="field">display[0]</span></td><td>Adult intensive care specialist (occupation)</td></tr><tr><td>CareTeam.participant[0].member[0].<span class="field">reference[0]</span></td><td>Practitioner/ed-physician-example-1</td></tr><tr><td>CareTeam.participant[0].member[0].<span class="field">display[0]</span></td><td>Wise Owl, MD</td></tr><tr><td>CareTeam.participant[1].role[0].coding[0].<span class="field">system[0]</span></td><td>http://snomed.info/sct</td></tr><tr><td>CareTeam.participant[1].role[0].coding[0].<span class="field">code[0]</span></td><td>310190000</td></tr><tr><td>CareTeam.participant[1].role[0].coding[0].<span class="field">display[0]</span></td><td>Mental health counselor (occupation)</td></tr><tr><td>CareTeam.participant[1].member[0].<span class="field">reference[0]</span></td><td>Practitioner/mental-health-provider-example-1</td></tr><tr><td>CareTeam.participant[1].member[0].<span class="field">display[0]</span></td><td>Dr. Lazslo Cravensworth</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

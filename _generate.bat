@@ -1,10 +1,13 @@
 @ECHO OFF
-REM Regenerate everything derived from the FSH sources and the guide pages:
+REM Regenerates everything derived from the FSH sources:
 REM   1. SUSHI  -> fsh-generated/
 REM   2. artifact index page (reads fsh-generated + example page frontmatter)
 REM   3. IP statements block on the downloads page
 REM   4. per-page tables of contents
-REM Run this before committing / before _build.bat.
+REM
+REM Steps 2-4 write into guides/, which is the Simplifier source. So run this
+REM FIRST, then sync to Simplifier, then export-ig.ps1 (which also imports the
+REM export into input/), then _build.bat.
 
 ECHO === SUSHI ===
 CALL sushi build .

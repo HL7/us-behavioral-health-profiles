@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | example-ed-physician-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-ed-physician-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="example-practitioner-ed-physician-example">Example Practitioner: ed-physician-example</h2>
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#18628e1f-7b75-4acd-8f91-c0f42f2227d5" aria-controls="18628e1f-7b75-4acd-8f91-c0f42f2227d5" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#a217fcc5-b430-4a2d-a289-0007116f9c77" aria-controls="a217fcc5-b430-4a2d-a289-0007116f9c77" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#3cad74c4-0d6a-4e5a-8bf7-c32d1fd57fc5" aria-controls="3cad74c4-0d6a-4e5a-8bf7-c32d1fd57fc5" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#edb6ab97-a890-4ef9-8196-f812282486ff" aria-controls="edb6ab97-a890-4ef9-8196-f812282486ff" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="18628e1f-7b75-4acd-8f91-c0f42f2227d5">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.resourceType" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Practitioner</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.id" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">ed-physician-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.meta" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">meta</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.meta.profile" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">profile</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.identifier" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">identifier</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.identifier.system" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://hl7.org/fhir/sid/us-npi</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.identifier.value" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">value</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">9941339100</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.identifier.system" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://ncsbn.org/identifier/example-system</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.identifier.value" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">value</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">9941339100</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.name" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">name</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.name.family" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">family</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Owl</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.name.given" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">given</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">Wise</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.name.prefix" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">prefix</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">Dr</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.telecom" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">telecom</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.telecom.system" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">email</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.telecom.value" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">value</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Wise.owl@MassGenExample.net</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.telecom.use" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">use</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">work</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.address" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">address</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.address.use" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">use</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">work</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.address.line" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">line</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">1003 HEALTHCARE DR</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.address.city" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">city</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Miami</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.address.state" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">state</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">FL</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.address.postalCode" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">postalCode</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">01002</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="a217fcc5-b430-4a2d-a289-0007116f9c77">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">Practitioner</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.id" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">ed-physician-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.meta" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.meta.profile" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.identifier" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">identifier</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.identifier.system" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/sid/us-npi</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.identifier.value" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">9941339100</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">identifier</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.identifier" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">identifier</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.identifier.system" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://ncsbn.org/identifier/example-system</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.identifier.value" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">9941339100</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">identifier</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.name" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">name</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.name.family" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">family</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Owl</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.name.given" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">given</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Wise</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.name.prefix" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">prefix</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Dr</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">name</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.telecom" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">telecom</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.telecom.system" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">email</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.telecom.value" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Wise.owl@MassGenExample.net</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.telecom.use" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">use</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">work</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">telecom</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.address" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">address</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.address.use" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">use</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">work</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.address.line" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">line</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">1003 HEALTHCARE DR</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.address.city" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">city</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Miami</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.address.state" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">state</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">FL</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-practitioner.json&amp;tab=details#Practitioner.address.postalCode" title="US Core Practitioner Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-practitioner.json" target="_blank">postalCode</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">01002</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">address</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Practitioner</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="3cad74c4-0d6a-4e5a-8bf7-c32d1fd57fc5">
+    <div class="stu3-treetable" id="e4508cd5f5a9416cb8bfcded635898a9" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="8223ce52416a40c4b19178e93e392ceb"><td class="instance"><span class="baseIcon primitive"></span><b>Practitioner</b></td></tr><tr class="collapsed" data-id="bafd3d95a3ae4a9fb540a3b4cbe0c9a7" data-parentid="8223ce52416a40c4b19178e93e392ceb"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>ed-physician-example-1</span></td></tr><tr class="collapsed" data-id="085719d84cc84dfb925b4e454db9db60" data-parentid="8223ce52416a40c4b19178e93e392ceb"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="4f3f3c9a9cb04c239f004aa1d0e10b36" data-parentid="085719d84cc84dfb925b4e454db9db60"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0</span></td></tr><tr class="collapsed" data-id="effdbe2dd96f4da5b461409df1a6416e" data-parentid="8223ce52416a40c4b19178e93e392ceb"><td class="instance"><span class="baseIcon primitive"></span><b>identifier</b></td></tr><tr class="collapsed" data-id="e097e2c8c7c543a888b260670c5a9c14" data-parentid="effdbe2dd96f4da5b461409df1a6416e"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://hl7.org/fhir/sid/us-npi</span></td></tr><tr class="collapsed" data-id="3742c5d2b7104719b8aeccb4f292d3a3" data-parentid="effdbe2dd96f4da5b461409df1a6416e"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>9941339100</span></td></tr><tr class="collapsed" data-id="9736d8dc54124f7092fc525c09ef6a9c" data-parentid="8223ce52416a40c4b19178e93e392ceb"><td class="instance"><span class="baseIcon primitive"></span><b>identifier</b></td></tr><tr class="collapsed" data-id="b9f4bd80cf464b909877d75756cb697d" data-parentid="9736d8dc54124f7092fc525c09ef6a9c"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://ncsbn.org/identifier/example-system</span></td></tr><tr class="collapsed" data-id="6e22ee9b5aef4c599750dbecce80bf13" data-parentid="9736d8dc54124f7092fc525c09ef6a9c"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>9941339100</span></td></tr><tr class="collapsed" data-id="ee45d794881046c4b1fb578925ad6f1b" data-parentid="8223ce52416a40c4b19178e93e392ceb"><td class="instance"><span class="baseIcon primitive"></span><b>name</b></td></tr><tr class="collapsed" data-id="72453f256b3942ef90ef82818717fd85" data-parentid="ee45d794881046c4b1fb578925ad6f1b"><td class="instance"><span class="baseIcon primitive"></span><b>family : </b><span>Owl</span></td></tr><tr class="collapsed" data-id="63a1d657dab84cc89667240d45bb99c3" data-parentid="ee45d794881046c4b1fb578925ad6f1b"><td class="instance"><span class="baseIcon primitive"></span><b>given : </b><span>Wise</span></td></tr><tr class="collapsed" data-id="3393f10bffed40bdab0014122e88e077" data-parentid="ee45d794881046c4b1fb578925ad6f1b"><td class="instance"><span class="baseIcon primitive"></span><b>prefix : </b><span>Dr</span></td></tr><tr class="collapsed" data-id="ca4531161b8f447db061812d25fe3328" data-parentid="8223ce52416a40c4b19178e93e392ceb"><td class="instance"><span class="baseIcon primitive"></span><b>telecom</b></td></tr><tr class="collapsed" data-id="92db455e6d814c06a43c34809c1e0134" data-parentid="ca4531161b8f447db061812d25fe3328"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>email</span></td></tr><tr class="collapsed" data-id="c3c8d18075494453a40675da4d5fa443" data-parentid="ca4531161b8f447db061812d25fe3328"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>Wise.owl@MassGenExample.net</span></td></tr><tr class="collapsed" data-id="56d3de97eb3a4fdda493075fa6a9a118" data-parentid="ca4531161b8f447db061812d25fe3328"><td class="instance"><span class="baseIcon primitive"></span><b>use : </b><span>work</span></td></tr><tr class="collapsed" data-id="f6a0f528ebe34229941fa563caabd219" data-parentid="8223ce52416a40c4b19178e93e392ceb"><td class="instance"><span class="baseIcon primitive"></span><b>address</b></td></tr><tr class="collapsed" data-id="1f43ab732e444941acd4d907b37d27a5" data-parentid="f6a0f528ebe34229941fa563caabd219"><td class="instance"><span class="baseIcon primitive"></span><b>use : </b><span>work</span></td></tr><tr class="collapsed" data-id="08fa9623aad84bb3a0fbc710b8e633b5" data-parentid="f6a0f528ebe34229941fa563caabd219"><td class="instance"><span class="baseIcon primitive"></span><b>line : </b><span>1003 HEALTHCARE DR</span></td></tr><tr class="collapsed" data-id="56fec3ce4cfd4b2f9395011899164c78" data-parentid="f6a0f528ebe34229941fa563caabd219"><td class="instance"><span class="baseIcon primitive"></span><b>city : </b><span>Miami</span></td></tr><tr class="collapsed" data-id="c024bf119ffa41f087b95251056d7929" data-parentid="f6a0f528ebe34229941fa563caabd219"><td class="instance"><span class="baseIcon primitive"></span><b>state : </b><span>FL</span></td></tr><tr class="collapsed" data-id="8ac02570123f4239bd3a036dd77a5d55" data-parentid="f6a0f528ebe34229941fa563caabd219"><td class="instance"><span class="baseIcon primitive"></span><b>postalCode : </b><span>01002</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTablee4508cd5f5a9416cb8bfcded635898a9 = new InstanceTree();
+resourceTreeTablee4508cd5f5a9416cb8bfcded635898a9.init("e4508cd5f5a9416cb8bfcded635898a9");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="edb6ab97-a890-4ef9-8196-f812282486ff">
+    <div class="path"><table><tbody><tr><td>Practitioner.<span class="field">id[0]</span></td><td>ed-physician-example-1</td></tr><tr><td>Practitioner.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0</td></tr><tr><td>Practitioner.identifier[0].<span class="field">system[0]</span></td><td>http://hl7.org/fhir/sid/us-npi</td></tr><tr><td>Practitioner.identifier[0].<span class="field">value[0]</span></td><td>9941339100</td></tr><tr><td>Practitioner.identifier[1].<span class="field">system[0]</span></td><td>http://ncsbn.org/identifier/example-system</td></tr><tr><td>Practitioner.identifier[1].<span class="field">value[0]</span></td><td>9941339100</td></tr><tr><td>Practitioner.name[0].<span class="field">family[0]</span></td><td>Owl</td></tr><tr><td>Practitioner.name[0].<span class="field">given[0]</span></td><td>Wise</td></tr><tr><td>Practitioner.name[0].<span class="field">prefix[0]</span></td><td>Dr</td></tr><tr><td>Practitioner.telecom[0].<span class="field">system[0]</span></td><td>email</td></tr><tr><td>Practitioner.telecom[0].<span class="field">value[0]</span></td><td>Wise.owl@MassGenExample.net</td></tr><tr><td>Practitioner.telecom[0].<span class="field">use[0]</span></td><td>work</td></tr><tr><td>Practitioner.address[0].<span class="field">use[0]</span></td><td>work</td></tr><tr><td>Practitioner.address[0].<span class="field">line[0]</span></td><td>1003 HEALTHCARE DR</td></tr><tr><td>Practitioner.address[0].<span class="field">city[0]</span></td><td>Miami</td></tr><tr><td>Practitioner.address[0].<span class="field">state[0]</span></td><td>FL</td></tr><tr><td>Practitioner.address[0].<span class="field">postalCode[0]</span></td><td>01002</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

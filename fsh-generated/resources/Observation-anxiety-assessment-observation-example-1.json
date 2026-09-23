@@ -1,0 +1,67 @@
+{
+  "resourceType": "Observation",
+  "id": "anxiety-assessment-observation-example-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|6.1.0"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "survey",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Survey"
+        }
+      ],
+      "text": "Survey"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "71891-6",
+        "system": "http://loinc.org",
+        "display": "M3 Checklist - follow-up [M3]"
+      }
+    ],
+    "text": "M3 Checklist"
+  },
+  "subject": {
+    "reference": "Patient/bh-patient-example",
+    "display": "James Wolff"
+  },
+  "effectiveDateTime": "2024-02-01",
+  "performer": [
+    {
+      "reference": "Practitioner/mental-health-provider-example-1",
+      "display": "Dr. Lazslo Cravensworth"
+    }
+  ],
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "71816-3",
+            "system": "http://loinc.org",
+            "display": "I have attacks of anxiety or panic since I took my last screen [M3]"
+          }
+        ],
+        "text": "I have attacks of anxiety or panic since I took my last screen [M3]"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "LA14734-0",
+            "system": "http://loinc.org",
+            "display": "Most of the time"
+          }
+        ],
+        "text": "Most of the time"
+      }
+    }
+  ]
+}

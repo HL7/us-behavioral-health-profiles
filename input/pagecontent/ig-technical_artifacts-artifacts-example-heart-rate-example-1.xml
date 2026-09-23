@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | example-heart-rate-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-heart-rate-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="example-observation-heart-rate-example">Example Observation: heart-rate-example</h2>
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#e19cd7ca-3639-4da8-92d6-b76c7dca1784" aria-controls="e19cd7ca-3639-4da8-92d6-b76c7dca1784" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#b61f2dae-ec19-4911-ab3c-7f8294aa090b" aria-controls="b61f2dae-ec19-4911-ab3c-7f8294aa090b" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#cc559460-bea2-4d1c-9d5c-4a35d4c53a35" aria-controls="cc559460-bea2-4d1c-9d5c-4a35d4c53a35" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#325a3366-438b-4ab3-a2ea-fba6515e2f44" aria-controls="325a3366-438b-4ab3-a2ea-fba6515e2f44" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="e19cd7ca-3639-4da8-92d6-b76c7dca1784">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.resourceType" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Observation</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.id" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">heart-rate-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.meta" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">meta</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.meta.profile" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">profile</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate|6.1.0</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.status" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">status</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">final</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.category" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">category</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.category.coding" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.category.coding.system" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/observation-category</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.category.coding.code" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">vital-signs</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.category.coding.display" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Vital Signs</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.category.text" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Vital Signs</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.code" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.code.coding" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.code.coding.system" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://loinc.org</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.code.coding.code" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">8867-4</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.code.coding.display" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Heart Rate</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.code.text" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">heart_rate</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.subject" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">subject</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.subject.reference" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Patient/bh-patient-example</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.subject.display" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">James Wolff</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.effectiveDateTime" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">effectiveDateTime</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2024-02-01</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.performer" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">performer</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.performer.reference" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Practitioner/pcp-provider-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.performer.display" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Dr. Doc Family</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.valueQuantity" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">valueQuantity</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.valueQuantity.value" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">value</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">110</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.valueQuantity.unit" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">unit</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">beats/min</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.valueQuantity.system" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://unitsofmeasure.org</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.valueQuantity.code" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">/min</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="b61f2dae-ec19-4911-ab3c-7f8294aa090b">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">Observation</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.id" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">heart-rate-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.meta" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.meta.profile" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate|6.1.0</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.status" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">final</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.category" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.category.coding" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.category.coding.system" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/observation-category</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.category.coding.code" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">vital-signs</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.category.coding.display" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Vital Signs</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.category.text" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Vital Signs</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.code" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.code.coding" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.code.coding.system" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://loinc.org</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.code.coding.code" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">8867-4</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.code.coding.display" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Heart Rate</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.code.text" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">heart_rate</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.subject" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.subject.reference" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Patient/bh-patient-example</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.subject.display" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">James Wolff</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.effective" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">effectiveDateTime</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2024-02-01</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.performer" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">performer</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.performer.reference" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Practitioner/pcp-provider-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.performer.display" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Dr. Doc Family</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">performer</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.value" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">valueQuantity</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.value.value" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">110</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.value.unit" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">unit</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">beats/min</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.value.system" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://unitsofmeasure.org</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-heart-rate.json&amp;tab=details#Observation.value.code" title="US Core Heart Rate Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-heart-rate.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">/min</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">valueQuantity</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Observation</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="cc559460-bea2-4d1c-9d5c-4a35d4c53a35">
+    <div class="stu3-treetable" id="0ee1caae16b74764b5864d7285547498" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="9c394ce7313e4a75b846533fadcf10a9"><td class="instance"><span class="baseIcon primitive"></span><b>Observation</b></td></tr><tr class="collapsed" data-id="d7aa4e90d80843ff8945171144942060" data-parentid="9c394ce7313e4a75b846533fadcf10a9"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>heart-rate-example-1</span></td></tr><tr class="collapsed" data-id="fdc8ead268f645ff9b2a8618dc34eab1" data-parentid="9c394ce7313e4a75b846533fadcf10a9"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="5b786eddb9404a938c1832de722e384b" data-parentid="fdc8ead268f645ff9b2a8618dc34eab1"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate|6.1.0</span></td></tr><tr class="collapsed" data-id="e8f2ff5d2801407ab2d0782de49be635" data-parentid="9c394ce7313e4a75b846533fadcf10a9"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>final</span></td></tr><tr class="collapsed" data-id="51c12a990b7440559f468e8e2fcb03d3" data-parentid="9c394ce7313e4a75b846533fadcf10a9"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="590e37c655394ea1b6bad54cdbbcf767" data-parentid="51c12a990b7440559f468e8e2fcb03d3"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="66998a2abcf14a5883c624fb6c88b40c" data-parentid="590e37c655394ea1b6bad54cdbbcf767"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/observation-category</span></td></tr><tr class="collapsed" data-id="3c53a4b5d1494c8aacbcccd81325a8a4" data-parentid="590e37c655394ea1b6bad54cdbbcf767"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>vital-signs</span></td></tr><tr class="collapsed" data-id="3836feffd59d4da59eaa050b04b2dcd3" data-parentid="590e37c655394ea1b6bad54cdbbcf767"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Vital Signs</span></td></tr><tr class="collapsed" data-id="1d9359b08d704d59b8497ebad33f7328" data-parentid="51c12a990b7440559f468e8e2fcb03d3"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Vital Signs</span></td></tr><tr class="collapsed" data-id="803e9eb3bf364f30a185ffef9b81c65f" data-parentid="9c394ce7313e4a75b846533fadcf10a9"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="78b0a89215d6466a9a35e70002953bed" data-parentid="803e9eb3bf364f30a185ffef9b81c65f"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="6b7abb1cd11c417ab503c45e033bcb14" data-parentid="78b0a89215d6466a9a35e70002953bed"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="9f8649c1af8b433781eee0c120f67c2b" data-parentid="78b0a89215d6466a9a35e70002953bed"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>8867-4</span></td></tr><tr class="collapsed" data-id="bc24990a4ad54bd78c4bb082b36c5ecf" data-parentid="78b0a89215d6466a9a35e70002953bed"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Heart Rate</span></td></tr><tr class="collapsed" data-id="9af53407a69a4632825e7bf437e8385d" data-parentid="803e9eb3bf364f30a185ffef9b81c65f"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>heart_rate</span></td></tr><tr class="collapsed" data-id="a0a26b501993409dbe3ef111afbfaa40" data-parentid="9c394ce7313e4a75b846533fadcf10a9"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="8df3a2db890e4719a2c7ba121ba55aca" data-parentid="a0a26b501993409dbe3ef111afbfaa40"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="c895063c6cde4157956f7c6b83f902ef" data-parentid="a0a26b501993409dbe3ef111afbfaa40"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="140aedd349eb426abd046e339d7852af" data-parentid="9c394ce7313e4a75b846533fadcf10a9"><td class="instance"><span class="baseIcon primitive"></span><b>effective : </b><span>2024-02-01</span></td></tr><tr class="collapsed" data-id="7ad97d237b1a443e91a515c580851a0a" data-parentid="9c394ce7313e4a75b846533fadcf10a9"><td class="instance"><span class="baseIcon primitive"></span><b>performer</b></td></tr><tr class="collapsed" data-id="f578a16865c24fa4b9ba9ecfdaf247eb" data-parentid="7ad97d237b1a443e91a515c580851a0a"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Practitioner/pcp-provider-example-1</span></td></tr><tr class="collapsed" data-id="afef41f4e81d41f2ab0daf921209a69e" data-parentid="7ad97d237b1a443e91a515c580851a0a"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Dr. Doc Family</span></td></tr><tr class="collapsed" data-id="ba8a22a2496e418db378b41e784aa686" data-parentid="9c394ce7313e4a75b846533fadcf10a9"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="b2058f0490334688a96050da7c87ce74" data-parentid="ba8a22a2496e418db378b41e784aa686"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>110</span></td></tr><tr class="collapsed" data-id="71c20697d2384f7a8626b83b3464cca7" data-parentid="ba8a22a2496e418db378b41e784aa686"><td class="instance"><span class="baseIcon primitive"></span><b>unit : </b><span>beats/min</span></td></tr><tr class="collapsed" data-id="a2d26523d35c4f53bb5e4f1a841f1968" data-parentid="ba8a22a2496e418db378b41e784aa686"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://unitsofmeasure.org</span></td></tr><tr class="collapsed" data-id="80be1faf32ec455ba42b85cecd089c4b" data-parentid="ba8a22a2496e418db378b41e784aa686"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>/min</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable0ee1caae16b74764b5864d7285547498 = new InstanceTree();
+resourceTreeTable0ee1caae16b74764b5864d7285547498.init("0ee1caae16b74764b5864d7285547498");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="325a3366-438b-4ab3-a2ea-fba6515e2f44">
+    <div class="path"><table><tbody><tr><td>Observation.<span class="field">id[0]</span></td><td>heart-rate-example-1</td></tr><tr><td>Observation.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate|6.1.0</td></tr><tr><td>Observation.<span class="field">status[0]</span></td><td>final</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/observation-category</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">code[0]</span></td><td>vital-signs</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">display[0]</span></td><td>Vital Signs</td></tr><tr><td>Observation.category[0].<span class="field">text[0]</span></td><td>Vital Signs</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">code[0]</span></td><td>8867-4</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">display[0]</span></td><td>Heart Rate</td></tr><tr><td>Observation.code[0].<span class="field">text[0]</span></td><td>heart_rate</td></tr><tr><td>Observation.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>Observation.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>Observation.<span class="field">effective[0]</span></td><td>2024-02-01</td></tr><tr><td>Observation.performer[0].<span class="field">reference[0]</span></td><td>Practitioner/pcp-provider-example-1</td></tr><tr><td>Observation.performer[0].<span class="field">display[0]</span></td><td>Dr. Doc Family</td></tr><tr><td>Observation.value[0].<span class="field">value[0]</span></td><td>110</td></tr><tr><td>Observation.value[0].<span class="field">unit[0]</span></td><td>beats/min</td></tr><tr><td>Observation.value[0].<span class="field">system[0]</span></td><td>http://unitsofmeasure.org</td></tr><tr><td>Observation.value[0].<span class="field">code[0]</span></td><td>/min</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>

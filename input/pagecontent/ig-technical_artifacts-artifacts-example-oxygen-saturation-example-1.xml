@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>package:fhir.onc.bhp@0.2.0 | example-oxygen-saturation-example-1 - FHIR R4</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <!-- FAVICONS -->
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-144.png" sizes="144x144"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-114.png" sizes="114x114"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-72.png" sizes="72x72"/>
+    <link rel="fhir-logo" href="static/styles/custom-simplifier-hl7-fhir/images/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="static/styles/custom-simplifier-hl7-fhir/images/favicon.png"/>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+    <link href="static/styles/dependencies/bootstrap@3.4.1/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/jqueryui@1.11.1/jquery-ui.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/prism@1.21.0/prism.css" rel="stylesheet"/>
+    <link href="static/styles/dependencies/rendering/rendering.min.css" rel="stylesheet"/>
+
+    <script src="static/styles/dependencies/jquery@3.7.0/jquery.min.js"></script>
+    <script src="static/styles/dependencies/bootstrap@3.4.1/bootstrap.min.js"></script>
+    <script src="static/styles/dependencies/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
+     
+    <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+    <!-- HEADER -->
+    <div id="segment-header" class="segment">
+        <div class="container">
+
+            <div id="hl7-nav">
+                <a id="hl7-logo" no-external="true" href="http://hl7.org">
+                    <img height="50" alt="Visit the HL7 website" src="static/styles/custom-simplifier-hl7-fhir/images/ONC_Primary-Vertical_Full_Color@4x.png"/>
+                </a>
+            </div>
+
+            <div id="family-nav">
+                <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="static/styles/custom-simplifier-hl7-fhir/images/fhir-logo-www.png"/> </a>
+            </div>
+
+            <div id="ig-status">
+                <p>
+                    <span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+                    <br/>
+                    <span style="display:inline-block;">
+                        0.2.0
+                        <!-- <img alt="TODO:jurisdiction-name" flag" src="static/styles/custom-simplifier-hl7-fhir/images/nl.svg" height="16" title="TODO:jurisdiction-name"/> -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-navbar" class="segment">
+        <div id="stripe"> </div>
+        <div class="container">
+            <div class="header" role="banner" aria-label="Header">
+                
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ig.html">
+                            Table of Contents
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ig-home.html">
+                                IG Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Background <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-background-uscdi_bh_elements.html">
+                                            USCDI+ BH Elements
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                User Story <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-user_story-summary_story.html">
+                                            Summary Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-full_story.html">
+                                            Full Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-user_story-quick_facts.html">
+                                            Quick Facts
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technical Artifacts <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_examples.html">
+                                            +BH to FHIR Examples
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-bh_to_fhir_profiles.html">
+                                            +BH to FHIR Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ig-technical_artifacts-artifacts.html">
+                                            Artifact Index
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ig-downloads.html">
+                                Downloads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-change_log.html">
+                                Change Log
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ig-license.html">
+                                License
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="segment-breadcrumb" class="segment">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+
+<ol class="breadcrumb">
+
+            <li><a href="ig.html">Table of Contents</a></li>
+            <li><span>Technical Artifacts</span></li>
+            <li><a href="ig-technical_artifacts-artifacts.html">Artifact Index</a></li>
+
+    <li class="active">example-oxygen-saturation-example-1</li>
+
+</ol>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <a name="top"> </a>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="segment-content" class="segment">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+                        
+
+<h2 id="example-observation-oxygen-saturation-example">Example Observation: oxygen-saturation-example</h2>
+<p></p><div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#49529759-19af-4383-bf80-554902479260" aria-controls="49529759-19af-4383-bf80-554902479260" role="tab" data-toggle="tab">JSON view</a>
+</li><li role="presentation" class="">
+    <a href="#fd002fca-638a-4213-8575-d43bdef10de7" aria-controls="fd002fca-638a-4213-8575-d43bdef10de7" role="tab" data-toggle="tab">XML view</a>
+</li><li role="presentation" class="">
+    <a href="#5746af00-5408-4ba0-bf94-2f2972e5569c" aria-controls="5746af00-5408-4ba0-bf94-2f2972e5569c" role="tab" data-toggle="tab">Tree view</a>
+</li><li role="presentation" class="">
+    <a href="#1649221f-a85c-439e-9cb3-9de2489240eb" aria-controls="1649221f-a85c-439e-9cb3-9de2489240eb" role="tab" data-toggle="tab">Table view</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="49529759-19af-4383-bf80-554902479260">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.resourceType" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Observation</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.id" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">id</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">oxygen-saturation-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.meta" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">meta</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.meta.profile" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">profile</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="string">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|6.1.0</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">]</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.status" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">status</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">final</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.category" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">category</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.category.coding" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.category.coding.system" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://terminology.hl7.org/CodeSystem/observation-category</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.category.coding.code" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">vital-signs</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.category.coding.display" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Vital Signs</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.category.text" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Vital Signs</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code.coding" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">coding</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code.coding.system" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://loinc.org</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code.coding.code" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2708-6</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code.coding.display" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Oxygen saturation in Arterial blood</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code.coding.system" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://loinc.org</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code.coding.code" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">59408-5</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code.coding.display" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Oxygen saturation in Arterial blood by Pulse oximetry</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code.text" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">text</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">oxygen_saturation</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.subject" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">subject</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.subject.reference" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Patient/bh-patient-example</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.subject.display" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">James Wolff</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.effectiveDateTime" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">effectiveDateTime</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">2024-02-01</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.performer" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">performer</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">[</span></div>
+<div class="indent">
+<div class="line"><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.performer.reference" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">reference</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Practitioner/pcp-provider-example-1</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.performer.display" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">display</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Dr. Doc Family</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">]</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.valueQuantity" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">valueQuantity</a></span><span class="element">"</span><span class="symbol">: </span><span class="brace">{</span></div>
+<div class="indent">
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.valueQuantity.value" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">value</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">97</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.valueQuantity.unit" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">unit</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">%O2</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.valueQuantity.system" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">system</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">http://unitsofmeasure.org</span><span class="string">"</span><span class="symbol">,</span></div>
+<div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.valueQuantity.code" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">code</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">%</span><span class="string">"</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+<div class="line"><span class="brace">}</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="fd002fca-638a-4213-8575-d43bdef10de7">
+    <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">Observation</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.id" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">oxygen-saturation-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.meta" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">meta</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.meta.profile" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|6.1.0</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.status" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">final</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.category" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">category</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.category.coding" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.category.coding.system" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://terminology.hl7.org/CodeSystem/observation-category</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.category.coding.code" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">vital-signs</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.category.coding.display" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Vital Signs</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.category.text" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Vital Signs</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">category</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">code</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code.coding" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code.coding.system" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://loinc.org</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code.coding.code" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2708-6</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code.coding.display" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Oxygen saturation in Arterial blood</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code.coding" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">coding</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code.coding.system" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://loinc.org</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code.coding.code" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">59408-5</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code.coding.display" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Oxygen saturation in Arterial blood by Pulse oximetry</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">coding</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.code.text" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">text</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">oxygen_saturation</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">code</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.subject" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">subject</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.subject.reference" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Patient/bh-patient-example</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.subject.display" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">James Wolff</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.effective" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">effectiveDateTime</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">2024-02-01</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.performer" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">performer</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.performer.reference" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Practitioner/pcp-provider-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.performer.display" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">display</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">Dr. Doc Family</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">performer</span><span class="brace">&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.value" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">valueQuantity</a></span><span class="brace">&gt;</span></div>
+<div class="indent">
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.value.value" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">97</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.value.unit" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">unit</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">%O2</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.value.system" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://unitsofmeasure.org</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+<div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-pulse-oximetry.json&amp;tab=details#Observation.value.code" title="US Core Pulse Oximetry Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-pulse-oximetry.json" target="_blank">code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">%</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">valueQuantity</span><span class="brace">&gt;</span></div>
+</div>
+<div class="line"><span class="brace">&lt;/</span><span class="element">Observation</span><span class="brace">&gt;</span></div>
+</div>
+</div><div role="tabpanel" class="tab-pane " id="5746af00-5408-4ba0-bf94-2f2972e5569c">
+    <div class="stu3-treetable" id="fce6880e0b5e4280b99defa845290a81" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="3692dc599a4e41498861c0d6eb65e9ac"><td class="instance"><span class="baseIcon primitive"></span><b>Observation</b></td></tr><tr class="collapsed" data-id="0621327d92264488b78d1dd6290528e2" data-parentid="3692dc599a4e41498861c0d6eb65e9ac"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>oxygen-saturation-example-1</span></td></tr><tr class="collapsed" data-id="ab8a77d2b9eb40fe818568ca187bd539" data-parentid="3692dc599a4e41498861c0d6eb65e9ac"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="51e9ba60e3114b9fbe037321eeff8379" data-parentid="ab8a77d2b9eb40fe818568ca187bd539"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|6.1.0</span></td></tr><tr class="collapsed" data-id="24d684c75b1c419396b8e272315090fb" data-parentid="3692dc599a4e41498861c0d6eb65e9ac"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>final</span></td></tr><tr class="collapsed" data-id="1dcbc7ad4c694331bc1f9162baa1ee1f" data-parentid="3692dc599a4e41498861c0d6eb65e9ac"><td class="instance"><span class="baseIcon primitive"></span><b>category</b></td></tr><tr class="collapsed" data-id="fadb42e178394049b7b66e0c3a50b829" data-parentid="1dcbc7ad4c694331bc1f9162baa1ee1f"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="f82d917f0aa346a1bc0cf561ccdcfb80" data-parentid="fadb42e178394049b7b66e0c3a50b829"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://terminology.hl7.org/CodeSystem/observation-category</span></td></tr><tr class="collapsed" data-id="ea28f601fedc41b6a72585bc78aabf5c" data-parentid="fadb42e178394049b7b66e0c3a50b829"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>vital-signs</span></td></tr><tr class="collapsed" data-id="b98e7bbb18234f3597a9b35f90378095" data-parentid="fadb42e178394049b7b66e0c3a50b829"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Vital Signs</span></td></tr><tr class="collapsed" data-id="25090ad681834897abf9bb06c13c603c" data-parentid="1dcbc7ad4c694331bc1f9162baa1ee1f"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Vital Signs</span></td></tr><tr class="collapsed" data-id="d795b9a762654bc3a6d63c5733fab4b6" data-parentid="3692dc599a4e41498861c0d6eb65e9ac"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="df5671de069f436c828c2ce88e0c2f19" data-parentid="d795b9a762654bc3a6d63c5733fab4b6"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="f961cb91e6cd4ed3bf611273b67db157" data-parentid="df5671de069f436c828c2ce88e0c2f19"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="0e90bdfbacb44772a6f508628e0dc511" data-parentid="df5671de069f436c828c2ce88e0c2f19"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>2708-6</span></td></tr><tr class="collapsed" data-id="95334d75c3064b0cbf277f0631abb744" data-parentid="df5671de069f436c828c2ce88e0c2f19"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Oxygen saturation in Arterial blood</span></td></tr><tr class="collapsed" data-id="2f67741df145454da4b3e99d530d3141" data-parentid="d795b9a762654bc3a6d63c5733fab4b6"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="d8420baf022445bd8ca67a725c5c6d46" data-parentid="2f67741df145454da4b3e99d530d3141"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://loinc.org</span></td></tr><tr class="collapsed" data-id="05455a10309d4945bbfdf609cf804351" data-parentid="2f67741df145454da4b3e99d530d3141"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>59408-5</span></td></tr><tr class="collapsed" data-id="28c38afcf4294d44b3f79eb75e8d576e" data-parentid="2f67741df145454da4b3e99d530d3141"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Oxygen saturation in Arterial blood by Pulse oximetry</span></td></tr><tr class="collapsed" data-id="2a98ef27924843428796cc80ca935170" data-parentid="d795b9a762654bc3a6d63c5733fab4b6"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>oxygen_saturation</span></td></tr><tr class="collapsed" data-id="4dddb98186ee4b308706fbbf2031b0e5" data-parentid="3692dc599a4e41498861c0d6eb65e9ac"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="938d692721934065812f7aac595f090e" data-parentid="4dddb98186ee4b308706fbbf2031b0e5"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="28fd095a9c034029ae20d7a6a943fce8" data-parentid="4dddb98186ee4b308706fbbf2031b0e5"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="7492a72013a0449d8875f36016c20102" data-parentid="3692dc599a4e41498861c0d6eb65e9ac"><td class="instance"><span class="baseIcon primitive"></span><b>effective : </b><span>2024-02-01</span></td></tr><tr class="collapsed" data-id="25536e1563354778a53d98604285fe59" data-parentid="3692dc599a4e41498861c0d6eb65e9ac"><td class="instance"><span class="baseIcon primitive"></span><b>performer</b></td></tr><tr class="collapsed" data-id="de7e43da04154fc59070d3a1b445fd8a" data-parentid="25536e1563354778a53d98604285fe59"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Practitioner/pcp-provider-example-1</span></td></tr><tr class="collapsed" data-id="56350ada60e94c08aa782617586d5bcc" data-parentid="25536e1563354778a53d98604285fe59"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Dr. Doc Family</span></td></tr><tr class="collapsed" data-id="0d9d47c5112144609747a93618aab4aa" data-parentid="3692dc599a4e41498861c0d6eb65e9ac"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="25dc81f13a42440aa75679ec00c5f824" data-parentid="0d9d47c5112144609747a93618aab4aa"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>97</span></td></tr><tr class="collapsed" data-id="7aa77117e54248b5a5c1a96c7bff94f4" data-parentid="0d9d47c5112144609747a93618aab4aa"><td class="instance"><span class="baseIcon primitive"></span><b>unit : </b><span>%O2</span></td></tr><tr class="collapsed" data-id="4ec922e5de0a4f148c06bc2dd14471c6" data-parentid="0d9d47c5112144609747a93618aab4aa"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://unitsofmeasure.org</span></td></tr><tr class="collapsed" data-id="dadef4a8f57540a3b50911899c26b82a" data-parentid="0d9d47c5112144609747a93618aab4aa"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>%</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTablefce6880e0b5e4280b99defa845290a81 = new InstanceTree();
+resourceTreeTablefce6880e0b5e4280b99defa845290a81.init("fce6880e0b5e4280b99defa845290a81");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="1649221f-a85c-439e-9cb3-9de2489240eb">
+    <div class="path"><table><tbody><tr><td>Observation.<span class="field">id[0]</span></td><td>oxygen-saturation-example-1</td></tr><tr><td>Observation.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|6.1.0</td></tr><tr><td>Observation.<span class="field">status[0]</span></td><td>final</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">system[0]</span></td><td>http://terminology.hl7.org/CodeSystem/observation-category</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">code[0]</span></td><td>vital-signs</td></tr><tr><td>Observation.category[0].coding[0].<span class="field">display[0]</span></td><td>Vital Signs</td></tr><tr><td>Observation.category[0].<span class="field">text[0]</span></td><td>Vital Signs</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">code[0]</span></td><td>2708-6</td></tr><tr><td>Observation.code[0].coding[0].<span class="field">display[0]</span></td><td>Oxygen saturation in Arterial blood</td></tr><tr><td>Observation.code[0].coding[1].<span class="field">system[0]</span></td><td>http://loinc.org</td></tr><tr><td>Observation.code[0].coding[1].<span class="field">code[0]</span></td><td>59408-5</td></tr><tr><td>Observation.code[0].coding[1].<span class="field">display[0]</span></td><td>Oxygen saturation in Arterial blood by Pulse oximetry</td></tr><tr><td>Observation.code[0].<span class="field">text[0]</span></td><td>oxygen_saturation</td></tr><tr><td>Observation.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>Observation.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>Observation.<span class="field">effective[0]</span></td><td>2024-02-01</td></tr><tr><td>Observation.performer[0].<span class="field">reference[0]</span></td><td>Practitioner/pcp-provider-example-1</td></tr><tr><td>Observation.performer[0].<span class="field">display[0]</span></td><td>Dr. Doc Family</td></tr><tr><td>Observation.value[0].<span class="field">value[0]</span></td><td>97</td></tr><tr><td>Observation.value[0].<span class="field">unit[0]</span></td><td>%O2</td></tr><tr><td>Observation.value[0].<span class="field">system[0]</span></td><td>http://unitsofmeasure.org</td></tr><tr><td>Observation.value[0].<span class="field">code[0]</span></td><td>%</td></tr></tbody></table></div>
+</div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="bottom"> </a>
+
+    <!-- FOOTER -->
+
+    <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+        <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>
+            IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
+            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
+                <span>2026-09-23</span>
+            </span>
+            <br/>
+            <span style="color: var(--footer-highlight-text-color)">
+                Links: 
+                <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                <!-- FROM HL7 FHIR BASE TEMPLATE -->
+                <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.org/guides/onc/bhp/history.html">Version History</a> |
+                <a style="color:var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">Propose a change</a>
+            </span>
+            </p>
+        </div>  <!-- /inner-wrapper -->
+        </div>  <!-- /container -->
+    </div>  <!-- /segment-footer -->
+
+    <div id="segment-post-footer" class="segment hidden">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <!-- HL7 BASE TEMPLATE DEPENDENCIES -->
+
+    <script src="static/styles/dependencies/prism@1.21.0/prism.min.js"></script>
+    <script src="static/styles/dependencies/anchorjs@4.1.0/anchor.min.js"></script>
+    <script src="static/styles/dependencies/clipboard@2.0.0/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        anchors.options.visible = 'hover'
+        anchors.add()
+    </script>
+
+    <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->
+    <script src="static/styles/dependencies/hl7-custom/custom.js"></script>
+
+
+    <!-- IMAGES REFERENCED FROM CSS -->
+    <style>
+
+        a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:not([no-download^="true"]):after, a[href$=".json"]:not([no-download^="true"]):after, a[href$=".csv"]:after, a[href$=".ttl"]:not([no-download^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/download.png);
+        }
+
+        p a[href^="http://"]:not([no-external^="true"]):after, p a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        li a[href^="http://"]:not([no-external^="true"]):after, li a[href^="https://"]:not([no-external^="true"]):after {
+            content: url(static/styles/custom-simplifier-hl7-fhir/images/external.png);
+        }
+
+        .btn-copy {
+            background-image: url('static/styles/custom-simplifier-hl7-fhir/images/noun_copy to clipboard_1669410.png');
+        }
+
+        .watermark {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/watermark.png);
+        }
+
+        li.nselected {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/strip.png);
+        }
+
+        .dragon::before {
+            background-image: url(static/styles/custom-simplifier-hl7-fhir/images/dragon.png);
+        }
+
+        a.to-top {
+            background: url(static/styles/custom-simplifier-hl7-fhir/images/theme/up.png) no-repeat;
+        }
+
+    </style>
+
+</body>
+</html>
