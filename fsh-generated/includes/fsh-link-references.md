@@ -28,7 +28,6 @@
 [ed-location-example-1]: Location-ed-location-example-1.html
 [ekg-observation-example-1]: Observation-ekg-observation-example-1.html
 [ekg-impression-report-example-1]: DiagnosticReport-ekg-impression-report-example-1.html
-[expansion-parameters-bhir]: Parameters-expansion-parameters-bhir.html
 [fall-adverse-event-example-1]: AdverseEvent-fall-adverse-event-example-1.html
 [fl-medicaid-example-1]: Organization-fl-medicaid-example-1.html
 [flu-vaccine-example-1]: Immunization-flu-vaccine-example-1.html

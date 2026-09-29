@@ -4,10 +4,10 @@ Notes from wiring the Simplifier-generated **US Behavioral Health Profiles**
 guide up as *input* to the HL7 IG publisher, so the publisher runs over it and
 passes our pages through rather than us handing over a finished site.
 
-This path works today, but it took a custom template and four non-obvious
-workarounds to find. Each item below is something that cost real time, with the
-code path where it happens, so it can be judged as "works as intended, document
-it" or "fix the tool".
+This path works today, but it took a custom template and a handful of
+non-obvious workarounds. Each item below is something that cost real time, with
+the code path where it happens, so it can be judged as "works as intended,
+document it" or "fix the tool".
 
 Tested with **IG Publisher 2.3.4**, **SUSHI 3.20.0**, `fhir.base.template#current`,
 FHIR R4, on Windows.
@@ -21,17 +21,19 @@ For the record, the working setup is small:
 ```
 ig.ini                     template = #ig-template
 input/pagecontent/*.xml    complete XHTML documents, one per page
+input/page-map.json        resource url -> the page that renders it (item 5)
 ig-template/package/
   package.json             { "base": "fhir.base.template", "dependencies": {...} }
-  $root/config.json        pre-process without the pagecontent transform
+  $root/config.json        pre-process without the pagecontent transform, and
+                           defaults that stop the publisher's resource pages
   includes/template-page.html   emits the page content unwrapped
-  content/static/          assets, copied verbatim to the output root
+  content/                 assets and raw resources, copied verbatim to the output root
 ```
 
 `template-page.html` is the whole trick: it emits `{% include %}` and nothing
 else, so a page that is already a complete document lands in `output/`
-untouched. Of our 113 pages, 100 come out byte-identical and 13 are
-re-serialised by the publisher's own link fixer.
+untouched. All 100 of our pages come out identical to the input, apart from
+the publish box the publisher swaps in.
 
 ---
 
@@ -177,7 +179,43 @@ A clearer error, and ideally an earlier one, would help.
 
 ---
 
-## 5. SUSHI silently drops `-intro`, `-notes` and `-summary` pages
+## 5. The publisher makes its own resource pages, and links to those
+
+**Severity: blocker for publication** (Grahame's main finding).
+
+Even with every page passed through, the publisher still generates a page —
+plus format, history and testing pages — for every resource, and records
+*those* as each resource's location. So every link it generates, and the path
+map in the package (`other/spec.internals`) that other IGs use to link here,
+point away from the pages we ship.
+
+**Our workaround:** `ig-template/package/$root/config.json` overrides the base
+template's `defaults` for each resource type we have: every `template-*` empty
+(the trick the base itself uses for `ImplementationGuide`), and `base` — plus
+`defns` for profiles, which the generated profile narrative links to — set to
+our page name pattern, e.g.
+`ig-technical_artifacts-artifacts-valueset-{{[id]}}.html`. Result: no resource
+pages, 0 broken links, and `spec.internals` points every canonical at our pages.
+
+**What is left:**
+
+- Every artifact page is now both a page in the page tree and a resource's
+  page, which draws 78 `ToC: The ToC contains the page ... more than once`
+  errors.
+- A name pattern breaks as soon as a page name departs from it. One of ours
+  does (item 6), so the prepare script ships that page a second time under the
+  pattern name.
+
+**Proposal:** the prepare script writes `input/page-map.json`, a flat
+`{ "<resource url>": "<page>.html" }` read from the artifact pages'
+frontmatter. Examples have no url of their own, so they get
+`<canonical>/<Type>/<id>`. If the publisher read that map (and treated those
+pages as the resources' pages rather than ToC entries), the `defaults`
+override, the duplicate page and the ToC errors would all go away.
+
+---
+
+## 6. SUSHI silently drops `-intro`, `-notes` and `-summary` pages
 
 SUSHI reads `input/pagecontent/<x>-intro.*` and `<x>-notes.*` as fragments to
 splice into resource `<x>`'s page. A page whose slug merely *ends* in one of
@@ -187,8 +225,7 @@ with **no warning at any log level**.
 Our export contains a page called
 `ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes.html`.
 It vanished. There is no diagnostic anywhere; we found it by diffing the
-pagecontent folder against the generated page tree. On a 113-page guide that is
-a page quietly missing from the published IG.
+pagecontent folder against the generated page tree.
 
 A warning when a pagecontent file is skipped for this reason would be enough.
 
@@ -199,18 +236,19 @@ Related, and reasonable but undocumented: SUSHI auto-registers only `.md` and
 
 ---
 
-## 6. SUSHI's `pages:` is all-or-nothing
+## 7. SUSHI's `pages:` is all-or-nothing
 
-The obvious fix for item 5 is to declare the one dropped page in
+The obvious fix for item 6 is to declare the one dropped page in
 `sushi-config.yaml`. Declaring `pages:` at all switches off auto-detection
-entirely, so the page tree collapsed from 113 to 2. There is no way to say
+entirely, so the page tree collapsed to 2 pages. There is no way to say
 "everything found automatically, plus this one".
 
-We renamed the file and rewrote the inbound links instead.
+We renamed the file to `...-clinical-notes-page` and rewrote the inbound links
+instead.
 
 ---
 
-## 7. `license` is required, but you learn that four minutes in
+## 8. `license` is required, but you learn that four minutes in
 
 A missing `license` is fatal:
 
@@ -225,42 +263,7 @@ initialisation, alongside the template load.
 
 ---
 
-## 8. `history.html` is reserved, and the message is easy to miss
-
-The publication process generates `history.html` itself and rejects an IG that
-supplies one:
-
-```
-This IG generates a page named 'history.html'.
-That file name is reserved by the publication process
-```
-
-Fair enough — but see item 9, because on Windows that message arrives wrapped in
-an unrelated internal error, which makes it read like noise rather than a
-publication blocker.
-
----
-
-## 9. On Windows, real messages are buried in a FHIRPath parse error
-
-Every QA message comes out wrapped like this:
-
-```
-Internal error in location for message: 'Error @1, 3: Premature ExpressionNode
-termination at unexpected token ":"', loc = 'c:\...\output\ig-home.html',
-err = 'Illegal HTML: illegal html element: time (2026)'
-```
-
-The publisher parses the message's *location* as a FHIRPath expression. On
-Windows the location is an absolute path, so the drive-letter colon in `c:\...`
-terminates the expression and every message is reported as an internal error.
-The real message survives in `err =`, but the output is unreadable and the
-severity is lost — a publication blocker (item 8) looks exactly like a cosmetic
-HTML warning. It presumably does not happen on the CI build.
-
----
-
-## 10. Pass-through pages must be valid as XML *and* as HTML
+## 9. Pass-through pages must be valid as XML *and* as HTML
 
 Not a publisher bug, but the sharpest trap in this whole exercise, and worth
 documenting for anyone else taking this path.
@@ -281,23 +284,29 @@ non-void element is self-closed would catch this for everyone.
 
 ---
 
-## 11. Smaller things
+## 10. Smaller things
 
+- **Fragment checks assume the publisher renders the pages.** QA warns that
+  `ip-statements.xhtml`, `dependency-table*.xhtml`, `cross-version-analysis*.xhtml`
+  and `globals-table.xhtml` are "not included anywhere". A pass-through IG
+  cannot include them; ours has its own IP statements and dependency list on
+  the Downloads page. Pass-through IGs could skip this check.
 - **`<time>` and `<details>` are rejected as illegal HTML.** The allow-list in
   `XhtmlNode` is `a abbr blockquote br code div h1-h6 img li p pre span table
-  ul` — no `<time>`, `<details>`, `<summary>`, `<section>` or `<figure>`. All
-  are standard HTML5. We rewrite `<time>` to `<span>` on import, but `<details>`
-  stays: it is how IP statements are rendered across HL7 IGs, and the publisher
-  emits `<details>` itself in the `qa-ipreview.html` it generates. Its own
-  checker warns about an element its own generator produces.
+  ul` — no `<time>`, `<details>`, `<summary>`, `<section>` or `<figure>`, all
+  standard HTML5. We rewrite `<time>` to `<span>` on import, and render the IP
+  statements with the publisher's own `Show Usage` span-and-div toggle rather
+  than `<details>` — although the publisher emits `<details>` itself in the
+  `qa-ipreview.html` it generates.
 - **The publish box is swapped in by literal string match.** `PublisherGenerator`
   replaces the exact string
   `<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->`,
   while `HTMLInspector` only checks that a page contains
   `<!--ReleaseHeader--><p id="publish-box">` … `</p><!--EndReleaseHeader-->`.
   A page that carries the markers around its own text therefore passes the
-  check but never receives the real publish box. Matching between the markers,
-  as the inspector does, would let pre-rendered pages take part.
+  check but never receives the real publish box. We hand it the exact
+  placeholder; matching between the markers, as the inspector does, would let
+  pre-rendered pages keep their own text until publication.
 - **The missing-publish-box message names an arbitrary page.** It is emitted
   once for the whole IG ("this is only reported once, but applies for all
   pages") but attached to one filename, which is not necessarily a page that
@@ -306,76 +315,80 @@ non-void element is self-closed would catch this for everyone.
   output\package.tgz (The system cannot find the file specified)` appears on
   every run, before the step that creates `package.tgz`. Looks like an ordering
   issue; the build then completes and the file exists.
-- **Pass-through is not byte-exact.** 13 of our 113 pages come back with a BOM
-  added and attribute order normalised. Harmless, but worth stating in the
-  documentation so nobody builds a checksum-based workflow on top.
 - **`input/` root is silently ignored.** Dropping pre-rendered pages in
   `input/*.html` produces no message at all — they are simply never read. A
   note about unrecognised files under `input/` would have saved us a build cycle.
+- **On Windows, QA messages came out wrapped in a FHIRPath parse error**
+  (`Internal error in location for message: 'Error @1, 3: Premature ExpressionNode
+  termination at unexpected token ":"', loc = 'c:\...'`): the location is parsed
+  as FHIRPath, and the drive-letter colon ends it. The real message survived in
+  `err =`, but its severity was lost. We saw it on the HTML checker's messages;
+  we no longer produce any, so we have not seen it since.
 
 ---
 
 ## For the Simplifier side (not IG publisher issues)
 
-Recorded here so the two sets do not get confused. These are export bugs we
-currently patch in `scripts/prepare_export_for_ig_publisher.py` on the way in:
+Recorded here so the two sets do not get confused. These are export problems we
+currently handle in `scripts/prepare_export_for_ig_publisher.py` on the way in,
+or in the Simplifier style:
 
 - The page footer emits `<span title="<time datetime='...'>...</time>">` — a
   whole element inside an attribute value. This makes **every** generated page
   fail XML parsing.
 - `<br>`, `<link>`, `<meta>` unclosed and a bare `&nbsp;` — the export is HTML5,
   but `input/pagecontent` is parsed as XML.
-- Element links pointed at `staging.simplifier.net`, and `/resolve?...` links
-  were host-relative. (Staging was used because production cannot yet hold two
-  versions of one package in scope.)
-- Links into the raw resource files are broken twice over. The pages link to
-  `artifacts/package/<file>.json`, but the export ships those files under
-  `artifacts/fsh-generated/resources/` — so all 363 of them 404. That path
-  moved between two exports of the same version, which is worth pinning down.
-- On top of that, the links carry an element anchor:
-  `artifacts/.../StructureDefinition-bh-grant-info.json#Observation.category`.
-  No browser can honour an anchor inside a `.json`. We now repoint all 352 at
-  the rendered artifact page, which does carry `id="Observation.category"`
-  anchors. 144 resolve; the other 208 do not, because the example renderer
-  emits a link for **every** node it draws — `Observation.category.coding.code`,
-  `DocumentReference.author.display`, the synthetic `Observation.resourceType` —
-  and the profile page only has ids for elements in the snapshot tree. Either
-  the profile page needs anchors that deep, or the example renderer should link
-  only to elements that have one.
-- Bare links to the raw files (binding value sets, extension URLs, the codes
-  in a value set's CLD) opened the JSON file. We send them to the rendered
-  artifact page too, and fall back to the raw file only when there is no page.
+- **Staging exports** (0.2.0 was exported from staging, because production
+  cannot yet hold two versions of one package in scope): every link points at
+  `staging.simplifier.net`, and resolve links and page titles are scoped to the
+  project (`project:bh-ig`) where production uses the package
+  (`package:fhir.onc.bhp@<version>`). The project links 404 on production. We
+  repoint the host, rescope to the package, and send links to this guide's own
+  resources (`?canonical=` ours, `?reference=` an example) to the rendered page.
+  `/resolve?...` links are also host-relative, so they resolved against fhir.org.
+- **Links into the raw resource files.** Profile and example pages link element
+  rows, bindings and extension URLs to the raw file —
+  `artifacts/fsh-generated/resources/StructureDefinition-bh-grant-info.json#Observation.category`.
+  No browser honours an anchor inside a `.json`, and a reader expects the
+  rendered page. We send all 363 to the artifact page. Of the 352 with an
+  anchor, most still go nowhere: the example renderer links **every** node it
+  draws (`Observation.category.coding.code`, the synthetic
+  `Observation.resourceType`), but the profile page only has ids for its
+  snapshot elements. We drop the anchor where the page lacks it; the renderer
+  should link only elements that have one.
 - LOINC codes and the LOINC system link to Simplifier's page for
   `hl7.terminology`'s `CodeSystem-v3-loinc.json`, i.e. a JSON file. We rewrite
   them the way the IG publisher renders them: `http://loinc.org` for the system,
   `https://loinc.org/<code>/` for each code.
-- `static/styles/*/master.html` — three Simplifier style-template *sources* ship
-  inside the assets, still holding `{{variable:publisher-url}}` and
-  `{{content}}/{{style-folder}}/images/...` placeholders. Nothing links to them.
-  We drop them on import. Relatedly, the assets contain a duplicated path:
-  `static/styles/next-level-custom-styling/styles/styles/hl7-fhir-template/`.
 - Links to the FHIR core spec are relative, so they resolve against the guide:
   `extensibility.html`, `observation.html`, `datatypes.html`,
   `resource-definitions.html`, `provenance-definitions.html`,
   `questionnaireresponse.html` — 44 links that need the `hl7.org/fhir/R4/` host.
-- The downloads page links 25 dependency packages as `packages/<id>@<ver>.tgz`,
-  but `export-ig.ps1` strips `packages/` out of the zip to
-  keep it small. Either ship them or drop the links.
-- A staging export scopes resolve links and page titles to the project
-  (`project:bh-ig`, earlier the test project `project:bh-ig-test`) where
-  production uses the package (`package:fhir.onc.bhp@<version>`). The project
-  links 404 on production, so we rescope them to the package. Those that point
-  at this guide's own resources (`?canonical=` ours, `?reference=` an example)
-  then go to the rendered page here, as the raw-file links do.
-- Twelve `ig-_pagetemplates-*` internal pages are included in the export.
-- `href=""`, `href="#"` and a bare `href="artifacts"` directory link.
-- The clinical-notes profile page emits `id="DocumentReference.context"` twice —
-  `The html source has duplicate anchor Ids`.
-- The export ships its own `history.html`, which the publication process
-  reserves (item 8). Nothing links to it relatively, so we drop it on import.
+  We add it, and fail the import on any other relative link to a page the
+  guide does not have.
+- The Downloads page links its 25 dependency packages as local
+  `packages/<id>@<ver>.tgz` files, which we strip from the zip to keep it small.
+  We point them at `packages.fhir.org` instead.
+- **Inline event handlers are stripped.** The `Show Usage` toggle in the IP
+  statements (`scripts/build_ip_statements.py`) needs a click handler, and
+  Simplifier removes `onClick` from page content. The handler lives in the
+  style's `master.html` instead.
+- `static/styles/*/master.html` — three Simplifier style-template *sources* ship
+  inside the assets, still holding `{{variable:publisher-url}}` and
+  `{{content}}/{{style-folder}}/images/...` placeholders. Nothing links to them.
+  We drop them on import. Relatedly, the assets contain a duplicated path:
+  `static/styles/custom-simplifier-hl7-fhir/styles/styles/hl7-fhir-template/`.
+- Twelve `ig-_pagetemplates-*` internal pages are included in the export. We
+  drop them.
+- The export has no `index.html`, and its pages carry no `<!--ReleaseHeader-->`
+  marker, so the publisher could not inject the HL7 publish box. We generate an
+  `index.html` redirect to `ig-home.html` and put the publisher's placeholder in
+  every page.
 - Page titles in `definition.page` are derived by SUSHI from the filename, so
   the guide's nav and TOC read "Ig Background Uscdi Bh Elements". The export
   should carry real titles.
-- `index.html` is a meta-refresh to `ig-home.html` rather than the home page
-  itself, and pages carry no `<!--ReleaseHeader-->` marker, so the publisher
-  cannot inject the HL7 publish box.
+- **A stale project exports stale resources, silently.** The export renders
+  whatever resources the Simplifier project holds. When a sync was missed, it
+  shipped an old example and the page for the current one failed to render,
+  with nothing but an error `<div>` in the page. The prepare script now refuses
+  an export whose resources differ from `fsh-generated/resources`.

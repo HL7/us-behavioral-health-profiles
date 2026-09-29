@@ -27,7 +27,7 @@
     <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
      
     <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
-    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4b8059794200" rel="stylesheet"/>
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4ff33d97fd00" rel="stylesheet"/>
 
 </head>
 
@@ -225,17 +225,17 @@
 <p></p><div class="cool-tabs">
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active">
-    <a href="#6322d99b-befd-4472-ae5f-67f7fdd3aa51" aria-controls="6322d99b-befd-4472-ae5f-67f7fdd3aa51" role="tab" data-toggle="tab">JSON view</a>
+    <a href="#d3869e10-690a-40aa-b716-1fd6f7e11616" aria-controls="d3869e10-690a-40aa-b716-1fd6f7e11616" role="tab" data-toggle="tab">JSON view</a>
 </li><li role="presentation" class="">
-    <a href="#853a49b9-d9af-48e4-a271-f6660b49c6a2" aria-controls="853a49b9-d9af-48e4-a271-f6660b49c6a2" role="tab" data-toggle="tab">XML view</a>
+    <a href="#11bc7d1c-002d-4d20-9601-d462cff157fb" aria-controls="11bc7d1c-002d-4d20-9601-d462cff157fb" role="tab" data-toggle="tab">XML view</a>
 </li><li role="presentation" class="">
-    <a href="#dc37547a-81b4-4747-ad77-b5d2dbb4ff1f" aria-controls="dc37547a-81b4-4747-ad77-b5d2dbb4ff1f" role="tab" data-toggle="tab">Tree view</a>
+    <a href="#0819598d-9412-48a5-bcd2-db6d8e4e9e36" aria-controls="0819598d-9412-48a5-bcd2-db6d8e4e9e36" role="tab" data-toggle="tab">Tree view</a>
 </li><li role="presentation" class="">
-    <a href="#81dca950-0e07-4c61-88f8-705fa3aa722d" aria-controls="81dca950-0e07-4c61-88f8-705fa3aa722d" role="tab" data-toggle="tab">Table view</a>
+    <a href="#6ed3273f-4af1-41d9-af21-8c6fcd8c3fea" aria-controls="6ed3273f-4af1-41d9-af21-8c6fcd8c3fea" role="tab" data-toggle="tab">Table view</a>
 </li>
   </ul>
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="6322d99b-befd-4472-ae5f-67f7fdd3aa51">
+    <div role="tabpanel" class="tab-pane active" id="d3869e10-690a-40aa-b716-1fd6f7e11616">
     <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
 <div class="indent">
 <div class="line"><span class="element">"</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-procedure.json&amp;tab=details#Procedure.resourceType" title="US Core Procedure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-procedure.json" target="_blank">resourceType</a></span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Procedure</span><span class="string">"</span><span class="symbol">,</span></div>
@@ -276,7 +276,7 @@
 </div>
 <div class="line"><span class="brace">}</span></div>
 </div>
-</div><div role="tabpanel" class="tab-pane " id="853a49b9-d9af-48e4-a271-f6660b49c6a2">
+</div><div role="tabpanel" class="tab-pane " id="11bc7d1c-002d-4d20-9601-d462cff157fb">
     <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-procedure.json&amp;tab=details#Procedure" title="US Core Procedure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-procedure.json" target="_blank">Procedure</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
 <div class="indent">
 <div class="line"><span class="brace">&lt;</span><span class="element"><a href="https://simplifier.net/resolve?scope=package:hl7.fhir.us.core@6.1.0&amp;filepath=package/StructureDefinition-us-core-procedure.json&amp;tab=details#Procedure.id" title="US Core Procedure Profile&#10;hl7.fhir.us.core 6.1.0&#10;StructureDefinition-us-core-procedure.json" target="_blank">id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">alcohol-prevetion-education-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
@@ -308,17 +308,17 @@
 </div>
 <div class="line"><span class="brace">&lt;/</span><span class="element">Procedure</span><span class="brace">&gt;</span></div>
 </div>
-</div><div role="tabpanel" class="tab-pane " id="dc37547a-81b4-4747-ad77-b5d2dbb4ff1f">
-    <div class="stu3-treetable" id="d6bad352d0464fa68435dc138ad81621" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="8e99788528e64673a4ea2c81e4b10049"><td class="instance"><span class="baseIcon primitive"></span><b>Procedure</b></td></tr><tr class="collapsed" data-id="f47aa63d2c5b47c4a653b52827ea6bf7" data-parentid="8e99788528e64673a4ea2c81e4b10049"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>alcohol-prevetion-education-example-1</span></td></tr><tr class="collapsed" data-id="be6c7fc47dd04a3cb6a5f79e1f600ac4" data-parentid="8e99788528e64673a4ea2c81e4b10049"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="6fb88472794f4e3989fa3c9916c9f801" data-parentid="be6c7fc47dd04a3cb6a5f79e1f600ac4"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure|6.1.0</span></td></tr><tr class="collapsed" data-id="9037e25ae41f4184826f0504d262c363" data-parentid="8e99788528e64673a4ea2c81e4b10049"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>completed</span></td></tr><tr class="collapsed" data-id="2134e577452747b3a95ac69b3c58cb54" data-parentid="8e99788528e64673a4ea2c81e4b10049"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="514b16c29c9d446c801483dbffe19853" data-parentid="2134e577452747b3a95ac69b3c58cb54"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="7e5a7e766f5f43b0bfb09796730fbeb3" data-parentid="514b16c29c9d446c801483dbffe19853"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://snomed.info/sct</span></td></tr><tr class="collapsed" data-id="7e99d4bc9eca4db4993b95f61fd376be" data-parentid="514b16c29c9d446c801483dbffe19853"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>424407005</span></td></tr><tr class="collapsed" data-id="46a0da5f4a1c46849f047d28063a506c" data-parentid="514b16c29c9d446c801483dbffe19853"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Substance use cessation education, guidance, and counseling (procedure)</span></td></tr><tr class="collapsed" data-id="c6db799f628c4c7f8cafc1d31a4e2da9" data-parentid="2134e577452747b3a95ac69b3c58cb54"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Substance use cessation education, guidance, and counseling (procedure)</span></td></tr><tr class="collapsed" data-id="426605a2fc71450198ae36691cf6627f" data-parentid="8e99788528e64673a4ea2c81e4b10049"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="7f25d0ff5dde46e7b0031d32ef6d48de" data-parentid="426605a2fc71450198ae36691cf6627f"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="cff98c9bec5d472fa1a957265eb0d595" data-parentid="426605a2fc71450198ae36691cf6627f"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="c15c90fd5c6e41b8bb56729c1cbf42ae" data-parentid="8e99788528e64673a4ea2c81e4b10049"><td class="instance"><span class="baseIcon primitive"></span><b>performed : </b><span>2024-03-23</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+</div><div role="tabpanel" class="tab-pane " id="0819598d-9412-48a5-bcd2-db6d8e4e9e36">
+    <div class="stu3-treetable" id="6445a62dec9240a78db3a63b820ae91b" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="f3c1cd86fc224b889be3f424300b7623"><td class="instance"><span class="baseIcon primitive"></span><b>Procedure</b></td></tr><tr class="collapsed" data-id="3fac168c5f0747cb8f2643ea000ee16b" data-parentid="f3c1cd86fc224b889be3f424300b7623"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>alcohol-prevetion-education-example-1</span></td></tr><tr class="collapsed" data-id="01bfb79b522348fc82946db3f847ae56" data-parentid="f3c1cd86fc224b889be3f424300b7623"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="c35e740b0e754d11a8b94b2071959f9c" data-parentid="01bfb79b522348fc82946db3f847ae56"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure|6.1.0</span></td></tr><tr class="collapsed" data-id="bed061ead0454c369f6703b0cc0566c9" data-parentid="f3c1cd86fc224b889be3f424300b7623"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>completed</span></td></tr><tr class="collapsed" data-id="47f5490e53214d4b99904faaa09d2f73" data-parentid="f3c1cd86fc224b889be3f424300b7623"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="2871250586e8434a8d4e22c279b85ce5" data-parentid="47f5490e53214d4b99904faaa09d2f73"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="ca52a11ddcf441569f6ed03a15a1f498" data-parentid="2871250586e8434a8d4e22c279b85ce5"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://snomed.info/sct</span></td></tr><tr class="collapsed" data-id="617939a9088f49a2bf319fb1d57a7ce8" data-parentid="2871250586e8434a8d4e22c279b85ce5"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>424407005</span></td></tr><tr class="collapsed" data-id="8a7529a5651248a3ac1083d23e530c96" data-parentid="2871250586e8434a8d4e22c279b85ce5"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Substance use cessation education, guidance, and counseling (procedure)</span></td></tr><tr class="collapsed" data-id="f3fef07969e0404a9b66bac3527c7448" data-parentid="47f5490e53214d4b99904faaa09d2f73"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Substance use cessation education, guidance, and counseling (procedure)</span></td></tr><tr class="collapsed" data-id="97e7eab465ec4b16bf6d0bfe6375339b" data-parentid="f3c1cd86fc224b889be3f424300b7623"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="3be9375429b54a999c78100f20f2c99c" data-parentid="97e7eab465ec4b16bf6d0bfe6375339b"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="a2d0173597a34e55ba7b649b52330974" data-parentid="97e7eab465ec4b16bf6d0bfe6375339b"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="37d4c18baf5a430d982c3d6649e67666" data-parentid="f3c1cd86fc224b889be3f424300b7623"><td class="instance"><span class="baseIcon primitive"></span><b>performed : </b><span>2024-03-23</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
 (function() {
 var isTreetableVisible = document.querySelector(".treetable") != null;
 if (isTreetableVisible) {
-var resourceTreeTabled6bad352d0464fa68435dc138ad81621 = new InstanceTree();
-resourceTreeTabled6bad352d0464fa68435dc138ad81621.init("d6bad352d0464fa68435dc138ad81621");
+var resourceTreeTable6445a62dec9240a78db3a63b820ae91b = new InstanceTree();
+resourceTreeTable6445a62dec9240a78db3a63b820ae91b.init("6445a62dec9240a78db3a63b820ae91b");
 }
 })();
 </script>
-</div><div role="tabpanel" class="tab-pane " id="81dca950-0e07-4c61-88f8-705fa3aa722d">
+</div><div role="tabpanel" class="tab-pane " id="6ed3273f-4af1-41d9-af21-8c6fcd8c3fea">
     <div class="path"><table><tbody><tr><td>Procedure.<span class="field">id[0]</span></td><td>alcohol-prevetion-education-example-1</td></tr><tr><td>Procedure.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure|6.1.0</td></tr><tr><td>Procedure.<span class="field">status[0]</span></td><td>completed</td></tr><tr><td>Procedure.code[0].coding[0].<span class="field">system[0]</span></td><td>http://snomed.info/sct</td></tr><tr><td>Procedure.code[0].coding[0].<span class="field">code[0]</span></td><td>424407005</td></tr><tr><td>Procedure.code[0].coding[0].<span class="field">display[0]</span></td><td>Substance use cessation education, guidance, and counseling (procedure)</td></tr><tr><td>Procedure.code[0].<span class="field">text[0]</span></td><td>Substance use cessation education, guidance, and counseling (procedure)</td></tr><tr><td>Procedure.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>Procedure.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>Procedure.<span class="field">performed[0]</span></td><td>2024-03-23</td></tr></tbody></table></div>
 </div>
   </div>
@@ -340,8 +340,8 @@ resourceTreeTabled6bad352d0464fa68435dc138ad81621.init("d6bad352d0464fa68435dc13
         <div class="inner-wrapper">
             <p>
             IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
-            <span title="&lt;time datetime='2026-09-23T17:27:41.5487707+00:00'&gt;9/23/2026 5:27:41 PM +00:00&lt;/time&gt;">
-                <span>2026-09-23</span>
+            <span title="&lt;time datetime='2026-09-29T09:17:38.9758420+00:00'&gt;9/29/2026 9:17:38 AM +00:00&lt;/time&gt;">
+                <span>2026-09-29</span>
             </span>
             <br/>
             <span style="color: var(--footer-highlight-text-color)">
@@ -371,6 +371,13 @@ resourceTreeTabled6bad352d0464fa68435dc138ad81621.init("d6bad352d0464fa68435dc13
     <script type="text/javascript">
         anchors.options.visible = 'hover'
         anchors.add()
+
+        // IP statements' "Show Usage" (scripts/build_ip_statements.py): Simplifier
+        // strips inline onClick from page content, so the handler lives here.
+        $(document).on('click', '[id^="ipp_"]', function () {
+            $('#ipp2_' + this.id.slice(4)).show();
+            $(this).hide();
+        });
     </script>
 
     <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->

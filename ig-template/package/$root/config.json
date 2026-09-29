@@ -20,5 +20,67 @@
       "folder": "input/pagecontent",
       "relativePath": "_includes"
     }
-  ]
+  ],
+  "defaults": {
+    "_documentation": "No resource gets a page of its own: the Simplifier export already has one for every artifact. Empty templates stop the publisher generating pages, and 'base' is where it records each resource's page, so its links and the package's path map land on ours.",
+    "Any": {
+      "java": false,
+      "list-types": "CodeSystem|ValueSet|NamingSystem",
+      "template-base": "",
+      "template-format": "",
+      "template-change-history": "",
+      "base": "ig-technical_artifacts-artifacts-{{[id]}}.html"
+    },
+    "example": {
+      "java": false,
+      "template-base": "",
+      "template-format": "",
+      "template-change-history": "",
+      "base": "ig-technical_artifacts-artifacts-example-{{[id]}}.html"
+    },
+    "ImplementationGuide": {
+      "template-base": "",
+      "template-format": "",
+      "template-change-history": "",
+      "base": "index.html"
+    },
+    "StructureDefinition": {
+      "template-base": "",
+      "template-defns": "",
+      "template-mappings": "",
+      "template-testing": "",
+      "template-examples": "",
+      "template-profile-history": "",
+      "template-format": "",
+      "template-change-history": "",
+      "base": "ig-technical_artifacts-artifacts-structuredefinition-{{[id]}}.html",
+      "defns": "ig-technical_artifacts-artifacts-structuredefinition-{{[id]}}.html"
+    },
+    "StructureDefinition:extension": {
+      "template-base": "",
+      "template-defns": "",
+      "template-mappings": "",
+      "template-testing": "",
+      "template-examples": "",
+      "template-profile-history": "",
+      "template-format": "",
+      "template-change-history": "",
+      "base": "ig-technical_artifacts-artifacts-structuredefinition-{{[id]}}.html",
+      "defns": "ig-technical_artifacts-artifacts-structuredefinition-{{[id]}}.html"
+    },
+    "CodeSystem": {
+      "template-base": "",
+      "template-format": "",
+      "template-testing": "",
+      "template-change-history": "",
+      "base": "ig-technical_artifacts-artifacts-codesystem-{{[id]}}.html"
+    },
+    "ValueSet": {
+      "template-base": "",
+      "template-format": "",
+      "template-testing": "",
+      "template-change-history": "",
+      "base": "ig-technical_artifacts-artifacts-valueset-{{[id]}}.html"
+    }
+  }
 }

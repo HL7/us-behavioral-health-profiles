@@ -134,6 +134,13 @@
     <script type="text/javascript">
         anchors.options.visible = 'hover'
         anchors.add()
+
+        // IP statements' "Show Usage" (scripts/build_ip_statements.py): Simplifier
+        // strips inline onClick from page content, so the handler lives here.
+        $(document).on('click', '[id^="ipp_"]', function () {
+            $('#ipp2_' + this.id.slice(4)).show();
+            $(this).hide();
+        });
     </script>
 
     <!-- HL7 BASE TEMPLATE CUSTOM JS + FIXES FOR COLLISIONS WITH SIMPLIFIER STYLE -->

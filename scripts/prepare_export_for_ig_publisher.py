@@ -16,6 +16,7 @@ Idempotent. export-ig.ps1 runs it straight after downloading the zip; run it on
 its own to reimport the zip already in simplifier-export/. Nothing under
 input/pagecontent or ig-template/package/content should ever be hand-edited.
 """
+import json
 import re
 import shutil
 import sys
@@ -141,7 +142,19 @@ REGEX_FIXES = [
      '<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p>'
      "<!--EndReleaseHeader-->"),
     (LOINC_LINK, loinc_link),
+    # Element descriptions copied from the base spec keep the spec's relative
+    # links (extensibility.html#modifierExtension, datatypes.html#Duration), so
+    # they resolve against this guide. Point them at the R4 spec.
+    # ponytail: the pages the export links today; the relative-link check in
+    # main() fails on a new one, so add it here when it does.
+    (re.compile(r'href="((?:extensibility|observation|datatypes|resource-definitions|'
+                r'provenance-definitions|questionnaireresponse|extension-bodysite|'
+                r'extension-observation-focuscode)\.html)'),
+     r'href="http://hl7.org/fhir/R4/\1'),
 ]
+
+# Pages the IG publisher writes itself, which the export may link to.
+PUBLISHER_PAGES = {"qa.html", "toc.html", "artifacts.html"}
 
 # Links into the raw resource files are wrong twice over. The export links to
 # artifacts/package/<file>.json but ships the files under
@@ -156,6 +169,7 @@ REGEX_FIXES = [
 RAW_LINK = re.compile(r'"artifacts/[^"#]*?([^"/#]+\.json)(#[^"]*)?"')
 ARTIFACT_PAGE = "ig-technical_artifacts-artifacts-"
 EXPORTED_RESOURCES = "artifacts/fsh-generated/resources/"
+ARTIFACT_SOURCES = ROOT / "guides" / "us-behavioral-health-profiles" / "ig" / "technical_artifacts" / "artifacts"
 
 # Bindings, extension URLs and example references to this guide's own resources
 # can also come as Simplifier resolve links (?canonical=<ours>/<Type>/<id> or
@@ -247,6 +261,79 @@ def artifact_link_fixes(pages: list[Path], shipped: set[str]) -> dict[str, str]:
     return fixes
 
 
+LOCAL_ANCHOR_LINK = re.compile(r'href="([^"#:/?]+)\.html#([^"]+)"')
+ANCHOR_ID = re.compile(r'\s(?:id|name)="([^"]+)"')
+
+
+def drop_dangling_anchors(pages: list[Path]) -> int:
+    """Link to the page itself where the anchor is not on it.
+
+    The example renderer links every node it draws to the profile page's element
+    anchor - Observation.category.coding.code, the synthetic .resourceType - but
+    the profile page only has anchors for its snapshot elements, so most of them
+    go nowhere and the publisher reports each as broken.
+    ponytail: loses the deep link; the fix is for the renderer to link only
+    elements that have an anchor (ig-publisher-quirks.md).
+    """
+    ids = {p.stem: set(ANCHOR_ID.findall(p.read_text(encoding="utf-8"))) for p in pages}
+
+    def fix(m: re.Match) -> str:
+        stem, anchor = m.group(1), m.group(2)
+        return m.group(0) if stem not in ids or anchor in ids[stem] else f'href="{stem}.html"'
+
+    return sum(rewrite_re(p, LOCAL_ANCHOR_LINK, fix) for p in pages)
+
+
+def copy_renamed_pages(renamed: dict[str, str]) -> None:
+    """Keep the name the publisher expects for a page SUSHI made us rename.
+
+    The template's 'base' pattern gives mental-health-clinical-notes the page
+    ...-clinical-notes.html, but it ships as ...-clinical-notes-page.html. A copy
+    under the old name in the template content (copied to the output root, so
+    SUSHI never sees it) keeps the publisher's links to it working, element
+    anchors included - which a redirect would not.
+    ponytail: the page ships twice; goes away once the publisher reads
+    page-map.json instead of the 'base' pattern.
+    """
+    for old in CONTENT.glob("*.html"):
+        old.unlink()
+    for old, new in renamed.items():
+        shutil.copyfile(PAGES / f"{new[:-len('.html')]}.xml", CONTENT / old)
+
+
+def write_page_map(pages: list[Path], renamed: dict[str, str]) -> int:
+    """Write input/page-map.json: every resource's url -> the page that renders it.
+
+    So the publisher can link to our pages rather than
+    derive them from a name pattern. Read from the artifact pages' frontmatter
+    (canonical: for conformance resources, subject: for examples), so it holds
+    whatever page Simplifier actually renders each resource on. Examples have no
+    url of their own; they get <canonical>/<Type>/<id>.
+    """
+    base = sushi_config("canonical")
+    stems = {p.stem for p in pages}
+    urls = {}
+    for md in sorted(ARTIFACT_SOURCES.glob("*.page.md")):
+        m = re.search(r"^(canonical|subject):\s*(\S+)", md.read_text(encoding="utf-8"), re.M)
+        if not m:
+            continue  # an index page
+        page = f"{ARTIFACT_PAGE}{md.name[:-len('.page.md')]}.html"
+        page = renamed.get(page, page)
+        if page[:-len(".html")] not in stems:
+            sys.exit(f"{md.name} renders {m.group(2)}, but the export has no {page}")
+        urls[m.group(2) if m.group(1) == "canonical" else f"{base}/{m.group(2)}"] = page
+
+    ig = f"{base}/ImplementationGuide/{sushi_config('id')}"
+    urls[ig] = "index.html"
+    for f in sorted((ROOT / "fsh-generated" / "resources").glob("*.json")):
+        r = json.loads(f.read_text(encoding="utf-8"))
+        if r.get("url", f"{base}/{r['resourceType']}/{r['id']}") not in urls and r["resourceType"] != "ImplementationGuide":
+            sys.exit(f"no page renders {r['resourceType']}/{r['id']} - page-map.json would be incomplete")
+    (ROOT / "input" / "page-map.json").write_text(
+        json.dumps(dict(sorted(urls.items())), indent=2) + "\n", encoding="utf-8")
+    return len(urls)
+
+
 def parses(p: Path) -> bool:
     try:
         etree.parse(str(p))
@@ -320,14 +407,19 @@ def main() -> int:
         # the project was not synced after SUSHI ran, it ships stale resources
         # and the pages for the missing ones fail to render - all silently, in
         # the zip. Check before anything is written.
-        exported = {n[len(EXPORTED_RESOURCES):] for n in zf.namelist()
+        exported = {n[len(EXPORTED_RESOURCES):]: n for n in zf.namelist()
                     if n.startswith(EXPORTED_RESOURCES) and not n.endswith("/")}
-        local = {p.name for p in (ROOT / "fsh-generated" / "resources").glob("*.json")}
-        if exported != local:
+        local_dir = ROOT / "fsh-generated" / "resources"
+        local = {p.name for p in local_dir.glob("*.json")}
+        stale = sorted(n for n in exported.keys() & local
+                       if json.loads(zf.read(exported[n]))
+                       != json.loads((local_dir / n).read_text(encoding="utf-8")))
+        if exported.keys() != local or stale:
             sys.exit("the export's resources do not match fsh-generated/resources - sync "
                      "the project to Simplifier and export again\n"
-                     f"  only in the export: {sorted(exported - local)}\n"
-                     f"  only local:         {sorted(local - exported)}")
+                     f"  only in the export: {sorted(exported.keys() - local)}\n"
+                     f"  only local:         {sorted(local - exported.keys())}\n"
+                     f"  content differs:    {stale}")
         print(f"the export's {len(exported)} resources match fsh-generated/resources")
 
         if PAGES.exists():
@@ -346,6 +438,10 @@ def main() -> int:
     links = artifact_link_fixes(pages, shipped)  # after the rename, so it sees final page names
     print(f"{sum(rewrite(p, links) for p in pages)} artifact links repointed "
           f"({len(links)} distinct targets)")
+    print(f"{drop_dangling_anchors(pages)} links to missing element anchors now go to the page")
+    copy_renamed_pages(renamed)
+    print(f"{len(renamed)} renamed page(s) also copied under their old name -> {CONTENT.relative_to(ROOT)}")
+    print(f"{write_page_map(pages, renamed)} resources -> input/page-map.json")
     print(f"{len(pages)} pages -> {PAGES.relative_to(ROOT)}")
 
     # the whole point of the conversion: every page must now parse as XML
@@ -381,6 +477,17 @@ def main() -> int:
     if dangling:
         sys.exit(f"links point at artifacts the export does not ship: {sorted(dangling)[:3]}")
     print("every artifacts/ link resolves")
+
+    known = {p.stem + ".html" for p in pages} | set(renamed) | PUBLISHER_PAGES
+    unknown = {
+        target
+        for p in pages
+        for target in re.findall(r'href="([^"#:/?]+\.html)', p.read_text(encoding="utf-8"))
+        if target not in known
+    }
+    if unknown:
+        sys.exit(f"relative links to pages this guide does not have: {sorted(unknown)[:5]}")
+    print("every relative page link resolves")
     return 0
 
 
