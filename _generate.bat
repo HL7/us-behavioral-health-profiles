@@ -10,6 +10,9 @@ REM FIRST, then sync to Simplifier, then export-ig.ps1 (which also imports the
 REM export into input/), then _build.bat.
 
 ECHO === SUSHI ===
+REM SUSHI never deletes what it no longer generates, and the sync would carry
+REM that leftover to Simplifier, so start from an empty folder.
+IF EXIST fsh-generated RMDIR /S /Q fsh-generated
 CALL sushi build .
 IF ERRORLEVEL 1 GOTO fail
 

@@ -66,7 +66,7 @@ The table provides a comprehensive list of the USCDI+ Behavioral Health elements
   </tr>
   <tr>
     <td class="tg-0lax">Clinical Notes</td>
-    <td class="tg-1wig">Mental Health Discharge Summary Note</td>
+    <td class="tg-1wig">Mental health Discharge summary</td>
     <td class="tg-0lax">Synopsis of a patient’s admission and mental health course in a hospital or post-acute care setting.<br> Usage note: Must contain admission and discharge dates and locations, discharge instructions, and reason(s) for hospitalization.</td>
   </tr>
   <tr>

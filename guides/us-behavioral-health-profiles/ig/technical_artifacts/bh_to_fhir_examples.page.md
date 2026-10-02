@@ -64,9 +64,9 @@ This table provides a correlation between USCDI+ behavioral health data elements
   </tr>
   <tr>
      <td class="tg-0lax">Clinical Notes</td>
-     <td class="tg-1wig">Mental Health Discharge Summary Note</td>
+     <td class="tg-1wig">Mental health Discharge summary</td>
      <td class="tg-zzem">{{pagelink:example-mental-health-discharge-summary-example-1}}</td>
-     <td class="tg-0lax">Example of a mental health discharge summary note. Clinical details of note content are encoded (base64)</td>
+     <td class="tg-0lax">Example of a Mental health Discharge summary. Clinical details of note content are encoded (base64)</td>
   </tr>
   <tr>
      <td class="tg-0lax">Clinical Notes</td>

@@ -27,7 +27,7 @@
     <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
      
     <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
-    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4ff33d97fd00" rel="stylesheet"/>
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd52438940e580" rel="stylesheet"/>
 
 </head>
 
@@ -225,12 +225,17 @@
 <table class="tg"> <thead>
   <tr>
      <th class="tg-w98d">USCDI+ BH <br/> Data Class</th>
-     <th class="tg-w98d"><span style="color: rgba(255, 255, 255, 1); background-color: rgba(21, 96, 130, 1)">USCDI+ BH </span><br/><span style="color: rgba(255, 255, 255, 1); background-color: rgba(21, 96, 130, 1)"> Data Element</span></th>
-     <th class="tg-w98d"><span style="color: rgba(255, 255, 255, 1); background-color: rgba(21, 96, 130, 1)">Proposed FHIR Profile</span></th>
-     <th class="tg-w98d"><span style="background-color: rgba(21, 96, 130, 1)">Proposed FHIR Data Element</span></th>
+     <th class="tg-w98d"><span style="color:white;background-color:#156082">USCDI+ BH </span><br/><span style="color:white;background-color:#156082"> Data Element</span></th>
+     <th class="tg-w98d"><span style="color:white;background-color:#156082">Proposed FHIR Profile</span></th>
+     <th class="tg-w98d"><span style="background-color:#156082">Proposed FHIR Data Element</span></th>
   </tr></thead>
 <tbody>
-  
+  <!-- <tr>
+      <td class="tg-ktyi">Adverse Event</td>
+      <td class="tg-1wig">Adverse Event</td>
+     <td class="tg-zzem"><a href="https://www.hl7.org/fhir/adverseevent.html">Adverse Event -Base FHIR</a></td>
+     <td class="tg-ktyi">n/a</td>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Allergies and Intolerances</td>
      <td class="tg-1wig">Reaction</td>
@@ -275,7 +280,7 @@
   </tr>
   <tr>
      <td class="tg-0lax">Clinical Notes</td>
-     <td class="tg-1wig">Mental Health Discharge Summary Note</td>
+     <td class="tg-1wig">Mental health Discharge summary</td>
      <td class="tg-zzem"><a href="ig-technical_artifacts-artifacts-structuredefinition-mental-health-clinical-notes-page.html" title="ig/technical_artifacts/artifacts/structuredefinition-mental-health-clinical-notes.page.md">US Behavioral Health Mental Health Clinical Notes Profile</a></td>
      <td class="tg-0lax">documentReference.type</td>
   </tr>
@@ -609,7 +614,12 @@
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-medicationdispense.html">US Core Medication Dispense Profile</a></td>
      <td class="tg-0lax">medicationDispense.</td>
   </tr>
-  
+  <!-- <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Name to Use</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient Profile</a></td>
+     <td class="tg-0lax">patient.name.use</td>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Current Address</td>
@@ -640,7 +650,12 @@
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.name.given</td>
   </tr>
-  
+  <!-- <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Gender Identity</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-0lax">patient.genderIdentity</td>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Last Name</td>
@@ -689,7 +704,12 @@
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.sex</td>
   </tr>
-  
+  <!-- <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Sexual Orientation</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-sexual-orientation.html">US Core Observation Sexual Orientation Profile</a></td>
+     <td class="tg-0lax">observation.value</td>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Patient Demographics/Information</td>
      <td class="tg-1wig">Tribal Affiliation</td>
@@ -708,7 +728,12 @@
      <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
      <td class="tg-0lax">patient.identifier</td>
   </tr>
-  
+  <!-- <tr>
+     <td class="tg-0lax">Patient Demographics/Information</td>
+     <td class="tg-1wig">Pronouns</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient</a></td>
+     <td class="tg-ktyi">n/a</td>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Patient Summary and Plan</td>
      <td class="tg-1wig">Assessment and Plan of Treatment</td>
@@ -865,7 +890,12 @@
      <td class="tg-zzem"><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-average-blood-pressure.html">US Core Average Blood Pressure (STU7)</a></td>
      <td class="tg-0lax">observation.code</td>
   </tr>
-  
+  <!-- <tr>
+     <td class="tg-0lax">Work Information</td>
+     <td class="tg-1wig">Farmworker Status</td>
+     <td class="tg-zzem"><a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-occupation.html">US Core Observation Occupation Profile</a></td>
+     <td class="tg-0lax">observation.code</td>
+  </tr> -->
   <tr>
      <td class="tg-0lax">Work Information</td>
      <td class="tg-1wig">Veteran Status</td>
@@ -889,8 +919,8 @@
         <div class="inner-wrapper">
             <p>
             IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
-            <span title="&lt;time datetime='2026-09-29T09:17:38.9758420+00:00'&gt;9/29/2026 9:17:38 AM +00:00&lt;/time&gt;">
-                <span>2026-09-29</span>
+            <span title="&lt;time datetime='2026-10-02T07:56:46.4236923+00:00'&gt;10/2/2026 7:56:46 AM +00:00&lt;/time&gt;">
+                <span>2026-10-02</span>
             </span>
             <br/>
             <span style="color: var(--footer-highlight-text-color)">

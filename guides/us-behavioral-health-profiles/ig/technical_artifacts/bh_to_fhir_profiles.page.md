@@ -64,7 +64,7 @@ This table serves as a crosswalk between USCDI+ behavioral health data elements 
   </tr>
   <tr>
      <td class="tg-0lax">Clinical Notes</td>
-     <td class="tg-1wig">Mental Health Discharge Summary Note</td>
+     <td class="tg-1wig">Mental health Discharge summary</td>
      <td class="tg-zzem">{{pagelink:structuredefinition-mental-health-clinical-notes, text: US Behavioral Health Mental Health Clinical Notes Profile}}</td>
      <td class="tg-0lax">documentReference.type</td>
   </tr>

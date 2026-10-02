@@ -119,9 +119,10 @@ eventually be fixed in the Simplifier exporter instead.
 **`ig-template/`** is a pass-through template, selected by
 `template = #ig-template` in `ig.ini`. It extends `fhir.base.template` but drops
 the `processPages.xslt` pre-process and emits page content unwrapped, so a page
-that is already a complete document reaches `output/` unchanged. Pages the base
-template generates itself (`toc.html`, `artifacts.html`) still get the base
-chrome.
+that is already a complete document reaches `output/` unchanged. The one page
+the base template generates itself, `toc.html`, still gets the base chrome. Its
+own "Artifacts Summary" page is dropped (`scripts/onGenerate.final.xslt`), since
+the export already has a page for every artifact.
 
 The guide's CSS, JavaScript and images live in the Simplifier style
 `guides/us-behavioral-health-profiles/styles/custom-simplifier-hl7-fhir/` and

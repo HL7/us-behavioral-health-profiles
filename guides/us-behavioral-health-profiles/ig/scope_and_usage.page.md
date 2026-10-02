@@ -156,13 +156,13 @@ The USCDI+ Behavioral Health (BH) initiative is designed to facilitate the seaml
   </tr>
   <tr>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:windowtext">Clinical Notes</span></td>
-    <td class="tg-0lax"><span style="font-weight:700;text-decoration:none;color:windowtext">Mental Health Discharge Summary Note</span></td>
+    <td class="tg-0lax"><span style="font-weight:700;text-decoration:none;color:windowtext">Mental health Discharge summary</span></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black">Synopsis of a patient’s admission and mental&nbsp;&nbsp;&nbsp;health course in a hospital or post-acute care setting.</span><br><span style="font-weight:400;text-decoration:none;color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Usage note: Must contain admission and discharge dates and locations,&nbsp;&nbsp;&nbsp;discharge instructions, and reason(s) for hospitalization.</span></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black;background-color:#CAEDFB"> </span></td>
     <td class="tg-0lax"><span style="font-weight:700;text-decoration:none;color:black">US Behavioral Health Mental Health&nbsp;&nbsp;&nbsp;Clinical Notes Profile</span></td>
     <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black">documentReference.type</span></td>
     <td class="tg-0lax"><a href="https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/DocumentReference-mental-health-discharge-summary-example-1.html">mental-health-discharge-summary-example</a></td>
-    <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black">Example of a mental health discharge summary note. </span>Clinical details of note content are encoded (base64)</td>
+    <td class="tg-0lax"><span style="font-weight:400;text-decoration:none;color:black">Example of a Mental health Discharge summary. </span>Clinical details of note content are encoded (base64)</td>
     <td class="tg-0lax"></td>
   </tr>
   <tr>

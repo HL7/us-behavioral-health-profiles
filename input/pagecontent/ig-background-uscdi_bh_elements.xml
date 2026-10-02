@@ -27,7 +27,7 @@
     <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
      
     <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
-    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd4ff33d97fd00" rel="stylesheet"/>
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd52438940e580" rel="stylesheet"/>
 
 </head>
 
@@ -222,15 +222,29 @@
 
 <h1 id="uscdi-bh-elements">2.1. USCDI+ BH Elements</h1>
 <p>The table provides a comprehensive list of the USCDI+ Behavioral Health elements used to model this implementation guide. The table includes various data classes such as clinical notes, encounter information, health status assessments, and vital signs. Each data element includes specific descriptions that outline the type of data captured, its purpose, and examples where applicable, contributing to a structured approach to managing and sharing health information.</p>
-
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-w98d{background-color:#156082;color:#FFF;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-ktyi{background-color:#FFF;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
 <table class="tg"><thead>
   <tr>
     <th class="tg-w98d">USCDI+ BH <br/> Data Class</th>
-    <th class="tg-w98d"><span style="color: rgba(255, 255, 255, 1); background-color: rgba(21, 96, 130, 1)">USCDI+ BH </span><br/><span style="color: rgba(255, 255, 255, 1); background-color: rgba(21, 96, 130, 1)"> Data Element</span></th>
-    <th class="tg-w98d"><span style="color: rgba(255, 255, 255, 1); background-color: rgba(21, 96, 130, 1)">USCDI+ BH Data Element Description</span></th>
+    <th class="tg-w98d"><span style="color:white;background-color:#156082">USCDI+ BH </span><br/><span style="color:white;background-color:#156082"> Data Element</span></th>
+    <th class="tg-w98d"><span style="color:white;background-color:#156082">USCDI+ BH Data Element Description</span></th>
   </tr></thead>
 <tbody>
-  
+  <!-- <tr>
+    <td class="tg-ktyi">Adverse Event</td>
+    <td class="tg-1wig">Adverse Event</td>
+    <td class="tg-0lax">An event that may be related to unintended effects on a patient or research participant.</td>
+  </tr> -->
   <tr>
     <td class="tg-0lax">Allergies and Intolerances</td>
     <td class="tg-1wig">Reaction</td>
@@ -268,7 +282,7 @@
   </tr>
   <tr>
     <td class="tg-0lax">Clinical Notes</td>
-    <td class="tg-1wig">Mental Health Discharge Summary Note</td>
+    <td class="tg-1wig">Mental health Discharge summary</td>
     <td class="tg-0lax">Synopsis of a patient’s admission and mental health course in a hospital or post-acute care setting.<br/> Usage note: Must contain admission and discharge dates and locations, discharge instructions, and reason(s) for hospitalization.</td>
   </tr>
   <tr>
@@ -546,7 +560,11 @@
     <td class="tg-1wig">Medications Dispensed</td>
     <td class="tg-0lax">Description/list of medications supplied to a patient with the intention that it is subsequently consumed by the patient.</td>
   </tr>
-  
+  <!-- <tr>
+    <td class="tg-0lax">Patient Demographics/Information</td>
+    <td class="tg-1wig">Name to Use</td>
+    <td class="tg-0lax">Name that should be used when addressing or referencing a person.</td>
+  </tr> -->
   <tr>
     <td class="tg-0lax">Patient Demographics/Information</td>
     <td class="tg-1wig">Current Address</td>
@@ -572,7 +590,11 @@
     <td class="tg-1wig">First Name</td>
     <td class="tg-0lax">A personal name used before a family name.</td>
   </tr>
-  
+  <!-- <tr>
+    <td class="tg-0lax">Patient Demographics/Information</td>
+    <td class="tg-1wig">Gender Identity</td>
+    <td class="tg-0lax">A person’s internal sense of being a man, woman, both, or neither.</td>
+  </tr> -->
   <tr>
     <td class="tg-0lax">Patient Demographics/Information</td>
     <td class="tg-1wig">Last Name</td>
@@ -613,7 +635,11 @@
     <td class="tg-1wig">Sex</td>
     <td class="tg-0lax">Documentation of a specific instance of sex.</td>
   </tr>
-  
+  <!-- <tr>
+    <td class="tg-0lax">Patient Demographics/Information</td>
+    <td class="tg-1wig">Sexual Orientation</td>
+    <td class="tg-0lax">A person’s identification of their emotional, romantic, sexual, or affectional attraction to another person.</td>
+  </tr> -->
   <tr>
     <td class="tg-0lax">Patient Demographics/Information</td>
     <td class="tg-1wig">Tribal Affiliation</td>
@@ -629,7 +655,11 @@
     <td class="tg-1wig">Patient Identifier</td>
     <td class="tg-0lax">An identifier for the patient.</td>
   </tr>
-  
+  <!-- <tr>
+    <td class="tg-0lax">Patient Demographics/Information</td>
+    <td class="tg-1wig">Pronouns</td>
+    <td class="tg-0lax">Words that can replace a person’s name when addressing or referring to a person</td>
+  </tr> -->
   <tr>
     <td class="tg-0lax">Patient Summary and Plan</td>
     <td class="tg-1wig">Assessment and Plan of Treatment</td>
@@ -760,7 +790,11 @@
     <td class="tg-1wig">Average Blood Pressure</td>
     <td class="tg-0lax">Arithmetic average of systolic and diastolic components of two of more blood pressure readings in a specified time period or according to a specified algorithm or protocol.<br/> Examples include but are not limited to 3-day morning and evening home monitoring, clinical encounter repeat average, and 24-hour ambulatory measurement.</td>
   </tr>
-  
+  <!-- <tr>
+    <td class="tg-0lax">Work Information</td>
+    <td class="tg-1wig">Farmworker Status</td>
+    <td class="tg-0lax">Data element capturing seasonal or migrant farm work status.</td>
+  </tr> -->
   <tr>
     <td class="tg-0lax">Work Information</td>
     <td class="tg-1wig">Veteran Status</td>
@@ -783,8 +817,8 @@
         <div class="inner-wrapper">
             <p>
             IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
-            <span title="&lt;time datetime='2026-09-29T09:17:38.9758420+00:00'&gt;9/29/2026 9:17:38 AM +00:00&lt;/time&gt;">
-                <span>2026-09-29</span>
+            <span title="&lt;time datetime='2026-10-02T07:56:46.4236923+00:00'&gt;10/2/2026 7:56:46 AM +00:00&lt;/time&gt;">
+                <span>2026-10-02</span>
             </span>
             <br/>
             <span style="color: var(--footer-highlight-text-color)">

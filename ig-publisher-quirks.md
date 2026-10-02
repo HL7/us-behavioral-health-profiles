@@ -27,6 +27,7 @@ ig-template/package/
   $root/config.json        pre-process without the pagecontent transform, and
                            defaults that stop the publisher's resource pages
   includes/template-page.html   emits the page content unwrapped
+  scripts/onGenerate.final.xslt the base's, minus the "Artifacts Summary" page (item 5)
   content/                 assets and raw resources, copied verbatim to the output root
 ```
 
@@ -200,8 +201,12 @@ pages, 0 broken links, and `spec.internals` points every canonical at our pages.
 **What is left:**
 
 - Every artifact page is now both a page in the page tree and a resource's
-  page, which draws 78 `ToC: The ToC contains the page ... more than once`
-  errors.
+  page. The base template's `onGenerate.final.xslt` then adds an "Artifacts
+  Summary" page (`artifacts.html`) with every resource's page beneath it, so the
+  ToC lists each artifact twice and QA reports 78 `ToC: The ToC contains the
+  page ... more than once` errors. There is no parameter to turn that step off
+  (`artifactsOnRoot` only moves the list to the root), so `ig-template` ships a
+  copy of the script without it. Only our page tree is left in `toc.html`.
 - A name pattern breaks as soon as a page name departs from it. One of ours
   does (item 6), so the prepare script ships that page a second time under the
   pattern name.
