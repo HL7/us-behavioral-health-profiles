@@ -46,24 +46,24 @@ the cycle below.
 ## Making a change
 
 ```powershell
-_generate.bat                            # SUSHI, and regenerate the derived guide pages
+_simplifier_generate.bat                 # SUSHI, and regenerate the derived guide pages
 fhir project sync --strategy TakeLocal   # push guides/ to Simplifier
-.\export-ig.ps1                          # download the export AND import it into input/
+.\_simplifier_export.ps1                 # download the export AND import it into input/
 _build.bat                               # IG publisher -> output/
 ```
 
 Then read `output/qa.html` and open `output/index.html`.
 
-Each step feeds the next: `_generate.bat` writes into `guides/`, the sync carries
-that to Simplifier, the export brings the rendered result back, and the build
-turns it into the guide. Skip `_generate.bat` if you only changed page text or
-styling — nothing derived from the FSH has moved.
+Each step feeds the next: `_simplifier_generate.bat` writes into `guides/`, the
+sync carries that to Simplifier, the export brings the rendered result back, and
+the build turns it into the guide. Skip `_simplifier_generate.bat` if you only
+changed page text or styling — nothing derived from the FSH has moved.
 
 To pull someone else's Simplifier edits down instead:
 `fhir project sync --strategy TakeRemote`.
 
-`export-ig.ps1` uses your browser's Simplifier session, so be logged in at
-simplifier.net first. It writes
+`_simplifier_export.ps1` uses your browser's Simplifier session, so be logged in
+at simplifier.net first. It writes
 `simplifier-export/us-behavioral-health-profiles@<version>.zip`, where
 `<version>` is the one in `sushi-config.yaml`, strips the bundled `packages/`
 cache, and then runs `scripts/prepare_export_for_ig_publisher.py` over it. Commit that

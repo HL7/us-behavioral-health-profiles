@@ -77,7 +77,7 @@
 <text class="lbl mono" x="762" y="301">fhir project sync</text>
 <text class="lbl" x="762" y="316">Firely Terminal · Forge</text>
 
-<text class="note" x="200" y="350"><tspan class="mono">_generate.bat</tspan> runs SUSHI and the page scripts —</text>
+<text class="note" x="200" y="350"><tspan class="mono">_simplifier_generate.bat</tspan> runs SUSHI and the page scripts —</text>
 <text class="note" x="200" y="366">both arrows above. The sync carries both folders,</text>
 <text class="note" x="200" y="382">so run it before the sync, not after.</text>
 
@@ -90,14 +90,14 @@
 <text class="band" x="44" y="456" fill="var(--build)">2 · BUILD &amp; QA</text>
 
 <path class="edge" d="M722,388 L722,410 L470,410 L470,484" marker-end="url(#a)"/>
-<text class="lbl mono" x="600" y="404" text-anchor="middle">export-ig.ps1 (downloads)</text>
+<text class="lbl mono" x="600" y="404" text-anchor="middle">_simplifier_export.ps1 (downloads)</text>
 
 <rect class="box" x="290" y="484" width="360" height="56" rx="7"/>
 <text class="nt mono" x="306" y="508">us-behavioral-health-profiles@&lt;version&gt;.zip</text>
 <text class="ns" x="306" y="526">the export, committed per release</text>
 
 <path class="edge" d="M470,540 L470,594" marker-end="url(#a)"/>
-<text class="lbl mono" x="486" y="564">export-ig.ps1 → prepare_export_for_ig_publisher.py</text>
+<text class="lbl mono" x="486" y="564">_simplifier_export.ps1 → prepare_export_for_ig_publisher.py</text>
 <text class="lbl" x="486" y="579">to XHTML · repairs export bugs · stops on a stale export</text>
 
 <rect class="box" x="230" y="594" width="480" height="72" rx="7"/>

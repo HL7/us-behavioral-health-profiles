@@ -12,8 +12,8 @@ On top of converting the format it repairs what the export gets wrong; every
 such repair is listed in ig-publisher-quirks.md and should eventually be fixed
 in the Simplifier exporter instead.
 
-Idempotent. export-ig.ps1 runs it straight after downloading the zip; run it on
-its own to reimport the zip already in simplifier-export/. Nothing under
+Idempotent. _simplifier_export.ps1 runs it straight after downloading the zip;
+run it on its own to reimport the zip already in simplifier-export/. Nothing under
 input/pagecontent or ig-template/package/content should ever be hand-edited.
 """
 import json
@@ -399,7 +399,7 @@ def main() -> int:
     archive = EXPORT_DIR / f"us-behavioral-health-profiles@{version}.zip"
     if not archive.is_file():
         sys.exit(f"no export for {version}: {archive}\n"
-                 f"run .\\export-ig.ps1 first")
+                 f"run .\\_simplifier_export.ps1 first")
     print(f"importing {archive.name}")
 
     with zipfile.ZipFile(archive) as zf:

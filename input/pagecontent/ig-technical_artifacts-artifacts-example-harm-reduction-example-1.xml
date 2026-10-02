@@ -27,7 +27,7 @@
     <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
      
     <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
-    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd52438940e580" rel="stylesheet"/>
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd524a2b63cc00" rel="stylesheet"/>
 
 </head>
 
@@ -225,17 +225,17 @@
 <p></p><div class="cool-tabs">
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active">
-    <a href="#56210207-c2e1-432d-a251-0d078fcf3a4f" aria-controls="56210207-c2e1-432d-a251-0d078fcf3a4f" role="tab" data-toggle="tab">JSON view</a>
+    <a href="#711e53fc-c35c-438f-8f76-690effeb0007" aria-controls="711e53fc-c35c-438f-8f76-690effeb0007" role="tab" data-toggle="tab">JSON view</a>
 </li><li role="presentation" class="">
-    <a href="#aa3b1001-c455-49fc-9ab9-69755851711c" aria-controls="aa3b1001-c455-49fc-9ab9-69755851711c" role="tab" data-toggle="tab">XML view</a>
+    <a href="#aaaab3b8-a4df-470a-8b0a-4e1ebf60833a" aria-controls="aaaab3b8-a4df-470a-8b0a-4e1ebf60833a" role="tab" data-toggle="tab">XML view</a>
 </li><li role="presentation" class="">
-    <a href="#c7ff1534-fe95-40a6-8da1-3b883839a745" aria-controls="c7ff1534-fe95-40a6-8da1-3b883839a745" role="tab" data-toggle="tab">Tree view</a>
+    <a href="#9cecc000-8f04-4586-8c78-766e92a0b545" aria-controls="9cecc000-8f04-4586-8c78-766e92a0b545" role="tab" data-toggle="tab">Tree view</a>
 </li><li role="presentation" class="">
-    <a href="#0a8f2d73-f269-4bab-bfc2-ff1bd8abae2d" aria-controls="0a8f2d73-f269-4bab-bfc2-ff1bd8abae2d" role="tab" data-toggle="tab">Table view</a>
+    <a href="#eb43bec2-e858-423a-b287-34a68ccdfee3" aria-controls="eb43bec2-e858-423a-b287-34a68ccdfee3" role="tab" data-toggle="tab">Table view</a>
 </li>
   </ul>
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="56210207-c2e1-432d-a251-0d078fcf3a4f">
+    <div role="tabpanel" class="tab-pane active" id="711e53fc-c35c-438f-8f76-690effeb0007">
     <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
 <div class="indent">
 <div class="line"><span class="element">"</span><span class="element">resourceType</span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Procedure</span><span class="string">"</span><span class="symbol">,</span></div>
@@ -276,7 +276,7 @@
 </div>
 <div class="line"><span class="brace">}</span></div>
 </div>
-</div><div role="tabpanel" class="tab-pane " id="aa3b1001-c455-49fc-9ab9-69755851711c">
+</div><div role="tabpanel" class="tab-pane " id="aaaab3b8-a4df-470a-8b0a-4e1ebf60833a">
     <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element">Procedure</span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
 <div class="indent">
 <div class="line"><span class="brace">&lt;</span><span class="element">id</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">harm-reduction-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
@@ -308,17 +308,17 @@
 </div>
 <div class="line"><span class="brace">&lt;/</span><span class="element">Procedure</span><span class="brace">&gt;</span></div>
 </div>
-</div><div role="tabpanel" class="tab-pane " id="c7ff1534-fe95-40a6-8da1-3b883839a745">
-    <div class="stu3-treetable" id="d9ed733179564c328531de9a84449783" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="9f248a28a3e441c79d17d8945a560cdd"><td class="instance"><span class="baseIcon primitive"></span><b>Procedure</b></td></tr><tr class="collapsed" data-id="9a98a64b2ca5479981f5c7d6b2f96da9" data-parentid="9f248a28a3e441c79d17d8945a560cdd"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>harm-reduction-example-1</span></td></tr><tr class="collapsed" data-id="d4f0a9e18d3b4867b98056e5af79196d" data-parentid="9f248a28a3e441c79d17d8945a560cdd"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="760acaab78ab456eaf83a7dba2e77f75" data-parentid="d4f0a9e18d3b4867b98056e5af79196d"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure|6.1.0</span></td></tr><tr class="collapsed" data-id="01a6bfa094bf4be4817bd815bc11786d" data-parentid="9f248a28a3e441c79d17d8945a560cdd"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>completed</span></td></tr><tr class="collapsed" data-id="86f88294a8974115b48826c7f01d7df9" data-parentid="9f248a28a3e441c79d17d8945a560cdd"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="a4b37cfe6331446a986410455231c06b" data-parentid="86f88294a8974115b48826c7f01d7df9"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="b05a61743db343f8a7f81b9fdd14802b" data-parentid="a4b37cfe6331446a986410455231c06b"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://snomed.info/sct</span></td></tr><tr class="collapsed" data-id="732c1240d64c4880b92e383b41ce508c" data-parentid="a4b37cfe6331446a986410455231c06b"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>720175009</span></td></tr><tr class="collapsed" data-id="bc02be1f82af46058f52807bf639f614" data-parentid="a4b37cfe6331446a986410455231c06b"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Alcohol harm reduction program (regime/therapy)</span></td></tr><tr class="collapsed" data-id="6bcf5b330bee453e89f511818e2c4f67" data-parentid="86f88294a8974115b48826c7f01d7df9"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Alcohol harm reduction program (regime/therapy)</span></td></tr><tr class="collapsed" data-id="3694592f4cd5462c93a8024ec499496c" data-parentid="9f248a28a3e441c79d17d8945a560cdd"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="a8ceb3bba67c41a5860c138cb2ff27e5" data-parentid="3694592f4cd5462c93a8024ec499496c"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="b30adafda5f942b18e1dfde538c24bdd" data-parentid="3694592f4cd5462c93a8024ec499496c"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="356b57c6940e478dbd1363f73f51906f" data-parentid="9f248a28a3e441c79d17d8945a560cdd"><td class="instance"><span class="baseIcon primitive"></span><b>performed : </b><span>2024-03-23</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+</div><div role="tabpanel" class="tab-pane " id="9cecc000-8f04-4586-8c78-766e92a0b545">
+    <div class="stu3-treetable" id="4cfeedd759af41b092f525039fbf4eb4" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="d5302e4206b74e3d95d42d6262fb8118"><td class="instance"><span class="baseIcon primitive"></span><b>Procedure</b></td></tr><tr class="collapsed" data-id="37d69eb7639a4297bde8fd8895539d5c" data-parentid="d5302e4206b74e3d95d42d6262fb8118"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>harm-reduction-example-1</span></td></tr><tr class="collapsed" data-id="08b80a9bafae43aeb1adfa36d8a81c9f" data-parentid="d5302e4206b74e3d95d42d6262fb8118"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="42d2148231454b28beefa660a95bb6de" data-parentid="08b80a9bafae43aeb1adfa36d8a81c9f"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure|6.1.0</span></td></tr><tr class="collapsed" data-id="dc8e4ff002c04ca4ab7d6dff91d420ac" data-parentid="d5302e4206b74e3d95d42d6262fb8118"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>completed</span></td></tr><tr class="collapsed" data-id="b77178e1545f4a97bce055fa714beeff" data-parentid="d5302e4206b74e3d95d42d6262fb8118"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="32abf1e8f8904a429eb64b9bcd1a4056" data-parentid="b77178e1545f4a97bce055fa714beeff"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="0411ae294c4c403ea230b7c04b8cbb43" data-parentid="32abf1e8f8904a429eb64b9bcd1a4056"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://snomed.info/sct</span></td></tr><tr class="collapsed" data-id="36860f7668934b578f9d036c7a0bd0f2" data-parentid="32abf1e8f8904a429eb64b9bcd1a4056"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>720175009</span></td></tr><tr class="collapsed" data-id="05e9962fcf5348e2ba80512a5d6d63d6" data-parentid="32abf1e8f8904a429eb64b9bcd1a4056"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>Alcohol harm reduction program (regime/therapy)</span></td></tr><tr class="collapsed" data-id="ae59a2a2ffaa4628a73366660b1e6e9c" data-parentid="b77178e1545f4a97bce055fa714beeff"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>Alcohol harm reduction program (regime/therapy)</span></td></tr><tr class="collapsed" data-id="cc7423aa49024e6eb9e819d037181282" data-parentid="d5302e4206b74e3d95d42d6262fb8118"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="a5e15c36644345e8be6f5cdb615e2644" data-parentid="cc7423aa49024e6eb9e819d037181282"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/bh-patient-example</span></td></tr><tr class="collapsed" data-id="91adb3812641405cb67eff68275edab6" data-parentid="cc7423aa49024e6eb9e819d037181282"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>James Wolff</span></td></tr><tr class="collapsed" data-id="c45df8053ddd4c4783ac4663224bbd17" data-parentid="d5302e4206b74e3d95d42d6262fb8118"><td class="instance"><span class="baseIcon primitive"></span><b>performed : </b><span>2024-03-23</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
 (function() {
 var isTreetableVisible = document.querySelector(".treetable") != null;
 if (isTreetableVisible) {
-var resourceTreeTabled9ed733179564c328531de9a84449783 = new InstanceTree();
-resourceTreeTabled9ed733179564c328531de9a84449783.init("d9ed733179564c328531de9a84449783");
+var resourceTreeTable4cfeedd759af41b092f525039fbf4eb4 = new InstanceTree();
+resourceTreeTable4cfeedd759af41b092f525039fbf4eb4.init("4cfeedd759af41b092f525039fbf4eb4");
 }
 })();
 </script>
-</div><div role="tabpanel" class="tab-pane " id="0a8f2d73-f269-4bab-bfc2-ff1bd8abae2d">
+</div><div role="tabpanel" class="tab-pane " id="eb43bec2-e858-423a-b287-34a68ccdfee3">
     <div class="path"><table><tbody><tr><td>Procedure.<span class="field">id[0]</span></td><td>harm-reduction-example-1</td></tr><tr><td>Procedure.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure|6.1.0</td></tr><tr><td>Procedure.<span class="field">status[0]</span></td><td>completed</td></tr><tr><td>Procedure.code[0].coding[0].<span class="field">system[0]</span></td><td>http://snomed.info/sct</td></tr><tr><td>Procedure.code[0].coding[0].<span class="field">code[0]</span></td><td>720175009</td></tr><tr><td>Procedure.code[0].coding[0].<span class="field">display[0]</span></td><td>Alcohol harm reduction program (regime/therapy)</td></tr><tr><td>Procedure.code[0].<span class="field">text[0]</span></td><td>Alcohol harm reduction program (regime/therapy)</td></tr><tr><td>Procedure.subject[0].<span class="field">reference[0]</span></td><td>Patient/bh-patient-example</td></tr><tr><td>Procedure.subject[0].<span class="field">display[0]</span></td><td>James Wolff</td></tr><tr><td>Procedure.<span class="field">performed[0]</span></td><td>2024-03-23</td></tr></tbody></table></div>
 </div>
   </div>
@@ -340,7 +340,7 @@ resourceTreeTabled9ed733179564c328531de9a84449783.init("d9ed733179564c328531de9a
         <div class="inner-wrapper">
             <p>
             IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
-            <span title="&lt;time datetime='2026-10-02T07:56:46.4236923+00:00'&gt;10/2/2026 7:56:46 AM +00:00&lt;/time&gt;">
+            <span title="&lt;time datetime='2026-10-02T08:44:09.6617284+00:00'&gt;10/2/2026 8:44:09 AM +00:00&lt;/time&gt;">
                 <span>2026-10-02</span>
             </span>
             <br/>

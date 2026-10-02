@@ -6,8 +6,8 @@ REM   3. IP statements block on the downloads page
 REM   4. per-page tables of contents
 REM
 REM Steps 2-4 write into guides/, which is the Simplifier source. So run this
-REM FIRST, then sync to Simplifier, then export-ig.ps1 (which also imports the
-REM export into input/), then _build.bat.
+REM FIRST, then sync to Simplifier, then _simplifier_export.ps1 (which also
+REM imports the export into input/), then _build.bat.
 
 ECHO === SUSHI ===
 REM SUSHI never deletes what it no longer generates, and the sync would carry

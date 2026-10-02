@@ -3,9 +3,9 @@
 # stripped, and then converts it into IG publisher input under input/pagecontent/
 # and ig-template/. Run _build.bat next.
 #
-# Run _generate.bat and sync to Simplifier BEFORE this: the artifact index, the IP
-# statements and the page TOCs are generated into guides/, and only reach the guide
-# by way of Simplifier.
+# Run _simplifier_generate.bat and sync to Simplifier BEFORE this: the artifact
+# index, the IP statements and the page TOCs are generated into guides/, and only
+# reach the guide by way of Simplifier.
 #
 #
 # Uses your browser's existing Simplifier login (the export endpoint is cookie-authed),
