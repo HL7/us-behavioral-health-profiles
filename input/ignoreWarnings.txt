@@ -3,8 +3,26 @@
 # INFORMATION: Asserted the 'pin-canonicals' parameter, ignoring associated comments
 %Pinned the version of http://hl7.org/fhir/us/core/StructureDefinition/%
 %Pinned the version of http://hl7.org/fhir/us/core/ValueSet/%
-%Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/%
 %Pinned the version of http://terminology.hl7.org/ValueSet/%
+
+# WARNING: This guide is meant to communicate UCSDI+ V3, so this guide is rooted in US Core 6.1.0
+%The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is%
+
+# WARNING: us-core-5 is inverted in US Core 6.1.0 (it fails when an NDC coding is present); fixed in 7.0.0
+%Constraint failed: us-core-5: 'SHOULD have a translation to the NDC value set%
+
+# WARNING: Constraint consistent with US Core Document Reference in 6.1.0
+%The slice 'uscore' on path 'DocumentReference.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+
+# INFORMATION: Discriminator type inherited from US Core
+%The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+
+# INFORMATION: The funding type CodeSystem is experimental until the codes are agreed
+%Reference to experimental CodeSystem http://fhir.org/guides/onc/bhp/CodeSystem/bh-funding-type-codes%
+
+# WARNING: Code systems not available on the terminology server (NUBC discharge status, HCPCS)
+%A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PatDischargeStatus' could not be found, so the code cannot be validated%
+%A definition for CodeSystem 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets' could not be found, so the code cannot be validated%
 
 # WARNING: Example identifier URLs are not expected to be defined
 %No definition could be found for URL value 'urn:oid:2.16.840.1.113883.19.5.1.698.8'
@@ -12,43 +30,16 @@
 %No definition could be found for URL value 'http://ncsbn.org/identifier/example-system'
 %No definition could be found for URL value 'http://hospital.smarthealthit.org'
 
-# INFORMATION: Drafted CodeSystems found in US Core
-%Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-ver-status|4.0.1%
-%Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationrequest-category|1.0.0%
-%Reference to experimental CodeSystem http://fhir.org/guides/onc/bhp/CodeSystem/bh-funding-type-codes%
-%A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PatDischargeStatus' could not be found, so the code cannot be validated%
-%Binding http://fhir.org/guides/onc/bhp/ValueSet/mental-health-clinical-note-types could not be expanded
-%Error from https://tx.fhir.org/r4: Unable to provide support for code system http://loinc.org version 2.77%
+# WARNING: Example identifiers that are not one of the US Core slices
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|6.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # WARNING: Questionnaires used in examples are PDFs and do not have formal FHIR definitions
 %A definition could not be found for Canonical URL 'https://www.cms.gov/files/document/cssrs-screen-version-instrument.pdf'
 %A definition could not be found for Canonical URL 'https://www.acesaware.org/wp-content/uploads/2022/07/ACE-Questionnaire-for-Adults-Identified-English-rev.7.26.22.pdf'
 %A definition could not be found for Canonical URL 'https://www.sralab.org/sites/default/files/2017-07/barthel.pdf'
 %A definition could not be found for Canonical URL 'https://www.etsu.edu/institute/child-family-health/documents/mahf_dv_hark_c.pdf'
-%The questionnaire 'https://www.cms.gov/files/document/cssrs-screen-version-instrument.pdf' could not be resolved, so no validation can be performed against the base questionnaire 
-%The questionnaire 'https://www.acesaware.org/wp-content/uploads/2022/07/ACE-Questionnaire-for-Adults-Identified-English-rev.7.26.22.pdf' could not be resolved, so no validation can be performed against the base questionnaire 
-%The questionnaire 'https://www.sralab.org/sites/default/files/2017-07/barthel.pdf' could not be resolved, so no validation can be performed against the base questionnaire 
-%The questionnaire 'https://www.etsu.edu/institute/child-family-health/documents/mahf_dv_hark_c.pdf' could not be resolved, so no validation can be performed against the base questionnaire 
-
-# HCPCS is a valid code system for US Core Procedure codes
-%A definition for CodeSystem 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets' could not be found, so the code cannot be validated%
-%Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|6.1.0' because the code system https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets| was not found%
-
-# Examples include identifiers that are not defined in base specification
-%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|6.1.0 (this may not be a problem, but you should check that it's not intended to match a slice) 
-%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-%Constraint failed: us-core-5: 'SHOULD have a translation to the NDC value set'%
-
-
-# INFORMATION: Discriminator type inherited from US Core
-%The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-
-# INFORMATION: Extension inherited from US Core 6.1
-%The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
-
-# WARNING: This guide is meant to communicate UCSDI+ V3, so this guide is rooted in US Core 6.1.0
-%The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 8.0.0. This reference is getting old and the more recent version should be considered
-
-# WARNING: Constraint consistent with US Core Document Reference in 6.1.0
-%The slice 'uscore' on path 'DocumentReference.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
-
+%The questionnaire 'https://www.cms.gov/files/document/cssrs-screen-version-instrument.pdf' could not be resolved, so no validation can be performed against the base questionnaire%
+%The questionnaire 'https://www.acesaware.org/wp-content/uploads/2022/07/ACE-Questionnaire-for-Adults-Identified-English-rev.7.26.22.pdf' could not be resolved, so no validation can be performed against the base questionnaire%
+%The questionnaire 'https://www.sralab.org/sites/default/files/2017-07/barthel.pdf' could not be resolved, so no validation can be performed against the base questionnaire%
+%The questionnaire 'https://www.etsu.edu/institute/child-family-health/documents/mahf_dv_hark_c.pdf' could not be resolved, so no validation can be performed against the base questionnaire%
