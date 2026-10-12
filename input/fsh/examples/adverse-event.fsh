@@ -5,6 +5,7 @@
 Instance: fall-adverse-event-example-1
 InstanceOf: AdverseEvent
 Usage: #example
+Description: "Example of a patient fall recorded as an adverse event"
 * actuality = #actual
 * event = $sct#1912002 "Fall (event)"
 * event.text = "Fall"

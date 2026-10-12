@@ -2,7 +2,7 @@
 topic: resource-view-tree
 ---
 
-## Formal Views of Profile Content
+### Formal Views of Profile Content
 
 <tabs>
 	<tab title="Tree view">

@@ -27,7 +27,7 @@
     <script src="static/styles/dependencies/rendering/baseTreetable.min.js"></script>
      
     <!-- HL7 BASE TEMPLATE THEME + FIXES FOR COLLISION WITH SIMPLIFIER STYLE -->
-    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd524a2b63cc00" rel="stylesheet"/>
+    <link href="static/styles/custom-simplifier-hl7-fhir/style.css?v=1dd5a428a8fb880" rel="stylesheet"/>
 
 </head>
 
@@ -225,17 +225,17 @@
 <p></p><div class="cool-tabs">
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active">
-    <a href="#2751264a-9f5b-4316-8aef-f5e123d3a2d2" aria-controls="2751264a-9f5b-4316-8aef-f5e123d3a2d2" role="tab" data-toggle="tab">JSON view</a>
+    <a href="#794ef555-a6e8-4702-91a0-5db0d05aa2d5" aria-controls="794ef555-a6e8-4702-91a0-5db0d05aa2d5" role="tab" data-toggle="tab">JSON view</a>
 </li><li role="presentation" class="">
-    <a href="#edba5372-b92b-4407-ab16-2858e04eb9e0" aria-controls="edba5372-b92b-4407-ab16-2858e04eb9e0" role="tab" data-toggle="tab">XML view</a>
+    <a href="#8f462507-dbd2-4906-90b1-38ce4efc977e" aria-controls="8f462507-dbd2-4906-90b1-38ce4efc977e" role="tab" data-toggle="tab">XML view</a>
 </li><li role="presentation" class="">
-    <a href="#b0bacd1d-7ed5-454f-9bd1-9fbf0376ed61" aria-controls="b0bacd1d-7ed5-454f-9bd1-9fbf0376ed61" role="tab" data-toggle="tab">Tree view</a>
+    <a href="#f20bdccb-4c90-430b-a924-1b3030d8be4f" aria-controls="f20bdccb-4c90-430b-a924-1b3030d8be4f" role="tab" data-toggle="tab">Tree view</a>
 </li><li role="presentation" class="">
-    <a href="#50d04ce5-8d63-43eb-bbe6-cac76622a24d" aria-controls="50d04ce5-8d63-43eb-bbe6-cac76622a24d" role="tab" data-toggle="tab">Table view</a>
+    <a href="#f530ed1c-bf3c-4fc6-8878-9b3cc5e8f9f3" aria-controls="f530ed1c-bf3c-4fc6-8878-9b3cc5e8f9f3" role="tab" data-toggle="tab">Table view</a>
 </li>
   </ul>
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="2751264a-9f5b-4316-8aef-f5e123d3a2d2">
+    <div role="tabpanel" class="tab-pane active" id="794ef555-a6e8-4702-91a0-5db0d05aa2d5">
     <div class="resource-validation-xml"><div class="line"><span class="brace">{</span></div>
 <div class="indent">
 <div class="line"><span class="element">"</span><span class="element">resourceType</span><span class="element">"</span><span class="symbol">: </span><span class="string">"</span><span class="string">Medication</span><span class="string">"</span><span class="symbol">,</span></div>
@@ -268,7 +268,7 @@
 </div>
 <div class="line"><span class="brace">}</span></div>
 </div>
-</div><div role="tabpanel" class="tab-pane " id="edba5372-b92b-4407-ab16-2858e04eb9e0">
+</div><div role="tabpanel" class="tab-pane " id="8f462507-dbd2-4906-90b1-38ce4efc977e">
     <div class="resource-validation-xml"><div class="line"><span class="brace">&lt;</span><span class="element">Medication</span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">http://hl7.org/fhir</span><span class="symbol">"</span><span class="brace">&gt;</span></div>
 <div class="indent">
 <div class="line"><span class="brace">&lt;</span><span class="element">id</span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">"</span><span class="string">benzo-medication-example-1</span><span class="symbol">"</span><span class="brace"> /&gt;</span></div>
@@ -292,17 +292,17 @@
 </div>
 <div class="line"><span class="brace">&lt;/</span><span class="element">Medication</span><span class="brace">&gt;</span></div>
 </div>
-</div><div role="tabpanel" class="tab-pane " id="b0bacd1d-7ed5-454f-9bd1-9fbf0376ed61">
-    <div class="stu3-treetable" id="898b3cb0f064420c887f57fec55b2dad" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="d28d189e527147f2a12e46af9095737d"><td class="instance"><span class="baseIcon primitive"></span><b>Medication</b></td></tr><tr class="collapsed" data-id="ae2720c162bd41a7a2d624aeecef5a8f" data-parentid="d28d189e527147f2a12e46af9095737d"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>benzo-medication-example-1</span></td></tr><tr class="collapsed" data-id="93293709f80a484aaadb1f0edec04259" data-parentid="d28d189e527147f2a12e46af9095737d"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="c605c55e8f274b79b8105f4c9d107785" data-parentid="93293709f80a484aaadb1f0edec04259"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|6.1.0</span></td></tr><tr class="collapsed" data-id="e11f801eeac349fc81ac24a03e5afe12" data-parentid="d28d189e527147f2a12e46af9095737d"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="a24cdb23f11246528e46ad6a3193a868" data-parentid="e11f801eeac349fc81ac24a03e5afe12"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="94ac28d4d6c54dc48a2bc5baf4e78270" data-parentid="a24cdb23f11246528e46ad6a3193a868"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://www.nlm.nih.gov/research/umls/rxnorm</span></td></tr><tr class="collapsed" data-id="45097e26999a475f951f4fe7eea6f03c" data-parentid="a24cdb23f11246528e46ad6a3193a868"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>206821</span></td></tr><tr class="collapsed" data-id="93523a41e25541a9935157b1bc80aa77" data-parentid="a24cdb23f11246528e46ad6a3193a868"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>lorazepam 0.5 MG Oral Tablet [Ativan]</span></td></tr><tr class="collapsed" data-id="5c186330766d482495ab637efa028786" data-parentid="e11f801eeac349fc81ac24a03e5afe12"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>lorazepam 0.5 MG Oral Tablet [Ativan]</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
+</div><div role="tabpanel" class="tab-pane " id="f20bdccb-4c90-430b-a924-1b3030d8be4f">
+    <div class="stu3-treetable" id="91edcb0ce5394a688e5eaf8b368df1d9" data-level="-1"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tbody><tr data-id="621fcd30f782422db7f1e74da1d57e27"><td class="instance"><span class="baseIcon primitive"></span><b>Medication</b></td></tr><tr class="collapsed" data-id="37362712ea134da2ad41419e3158f12d" data-parentid="621fcd30f782422db7f1e74da1d57e27"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>benzo-medication-example-1</span></td></tr><tr class="collapsed" data-id="9bee433c334a4255b3f4a261876903bd" data-parentid="621fcd30f782422db7f1e74da1d57e27"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="ab68e43b4a7a4defb2196c04e49c5130" data-parentid="9bee433c334a4255b3f4a261876903bd"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|6.1.0</span></td></tr><tr class="collapsed" data-id="92e3df2b8c61436786f14f2ae10fed7b" data-parentid="621fcd30f782422db7f1e74da1d57e27"><td class="instance"><span class="baseIcon primitive"></span><b>code</b></td></tr><tr class="collapsed" data-id="eb7a6c06262341b8b62ed5f120369493" data-parentid="92e3df2b8c61436786f14f2ae10fed7b"><td class="instance"><span class="baseIcon primitive"></span><b>coding</b></td></tr><tr class="collapsed" data-id="fc65f15924974819b56a8821d98d35de" data-parentid="eb7a6c06262341b8b62ed5f120369493"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://www.nlm.nih.gov/research/umls/rxnorm</span></td></tr><tr class="collapsed" data-id="2a8dc8474b4f489690b2b881d53e4863" data-parentid="eb7a6c06262341b8b62ed5f120369493"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>206821</span></td></tr><tr class="collapsed" data-id="a444352b4a1b40c68b625d7cb96f1b55" data-parentid="eb7a6c06262341b8b62ed5f120369493"><td class="instance"><span class="baseIcon primitive"></span><b>display : </b><span>lorazepam 0.5 MG Oral Tablet [Ativan]</span></td></tr><tr class="collapsed" data-id="650ad22ed01a46f193983a619804b34a" data-parentid="92e3df2b8c61436786f14f2ae10fed7b"><td class="instance"><span class="baseIcon primitive"></span><b>text : </b><span>lorazepam 0.5 MG Oral Tablet [Ativan]</span></td></tr></tbody></table></div></div></div><script type="text/javascript">
 (function() {
 var isTreetableVisible = document.querySelector(".treetable") != null;
 if (isTreetableVisible) {
-var resourceTreeTable898b3cb0f064420c887f57fec55b2dad = new InstanceTree();
-resourceTreeTable898b3cb0f064420c887f57fec55b2dad.init("898b3cb0f064420c887f57fec55b2dad");
+var resourceTreeTable91edcb0ce5394a688e5eaf8b368df1d9 = new InstanceTree();
+resourceTreeTable91edcb0ce5394a688e5eaf8b368df1d9.init("91edcb0ce5394a688e5eaf8b368df1d9");
 }
 })();
 </script>
-</div><div role="tabpanel" class="tab-pane " id="50d04ce5-8d63-43eb-bbe6-cac76622a24d">
+</div><div role="tabpanel" class="tab-pane " id="f530ed1c-bf3c-4fc6-8878-9b3cc5e8f9f3">
     <div class="path"><table><tbody><tr><td>Medication.<span class="field">id[0]</span></td><td>benzo-medication-example-1</td></tr><tr><td>Medication.meta[0].<span class="field">profile[0]</span></td><td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|6.1.0</td></tr><tr><td>Medication.code[0].coding[0].<span class="field">system[0]</span></td><td>http://www.nlm.nih.gov/research/umls/rxnorm</td></tr><tr><td>Medication.code[0].coding[0].<span class="field">code[0]</span></td><td>206821</td></tr><tr><td>Medication.code[0].coding[0].<span class="field">display[0]</span></td><td>lorazepam 0.5 MG Oral Tablet [Ativan]</td></tr><tr><td>Medication.code[0].<span class="field">text[0]</span></td><td>lorazepam 0.5 MG Oral Tablet [Ativan]</td></tr></tbody></table></div>
 </div>
   </div>
@@ -324,8 +324,8 @@ resourceTreeTable898b3cb0f064420c887f57fec55b2dad.init("898b3cb0f064420c887f57fe
         <div class="inner-wrapper">
             <p>
             IG © <span>2026</span> <a style="color:var(--footer-hyperlink-text-color)" href=""></a>.  Package package:fhir.onc.bhp@0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7.org/fhir/R4">FHIR R4</a>. Generated
-            <span title="&lt;time datetime='2026-10-02T08:44:09.6617284+00:00'&gt;10/2/2026 8:44:09 AM +00:00&lt;/time&gt;">
-                <span>2026-10-02</span>
+            <span title="&lt;time datetime='2026-10-12T12:11:42.4784895+00:00'&gt;10/12/2026 12:11:42 PM +00:00&lt;/time&gt;">
+                <span>2026-10-12</span>
             </span>
             <br/>
             <span style="color: var(--footer-highlight-text-color)">
